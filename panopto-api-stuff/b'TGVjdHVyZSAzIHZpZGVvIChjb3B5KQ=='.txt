@@ -1,0 +1,676 @@
+ID: 0c2416e2-656e-4f23-904c-ae2901762e75
+Title: Lecture 3 video (copy)
+Category: COMP40005 - Introduction to Computer Architecture (Spring 2021-2022)
+Lecturer: Wayne Luk
+Let us start today with a new idea about memory addressing and how that can lead to the evolution of architectures in the last 70 80 years.
+0:02
+OK, so let us begin with today's architecture and you could see that when we are dealing with a lot of computations, as you know,
+0:22
+a lot of what we are doing now, when you do a search and so on is actually very seldom happen on your local machine.
+0:38
+Obviously, some of that would be on your local machine, but a lot of the data and computation could actually take place in the cloud.
+0:46
+OK, now you may always wonder what the cloud looks like.
+0:55
+Well, here is the picture of a cloud, so you can record a cloud as a very nice name for what we used to call the machine room.
+1:00
+OK? A scene room doesn't sound very exciting, but cloud or datacentre song a lot more exciting.
+1:14
+But what is actually in there? Well, you walk into a cloud, you see that there are racks of server in the cloud,
+1:22
+and it is the great amount of parallel processing that allow us to have that very fast response.
+1:32
+So if there are only. Hundreds of server in the cloud.
+1:42
+You might have to wait for a while. OK. But no big datacenters have maybe tens of thousand, maybe hundreds of thousands.
+1:48
+This high speed server in the cloud so that they could respond when you type a query
+1:59
+asking where is the nearest café or so on that it would actually be able to tell you,
+2:07
+OK? But Paolo, something actually happens at multiple levels.
+2:13
+So if you log into each server in the cloud, you'll find that in each server there is the processor,
+2:19
+which itself has multiple processing unit, and we notice a cold call.
+2:27
+So it's a multicultural medical system. And then in each call, there would also be multiple instruction units or indeed arithmetic units as well.
+2:34
+So they could process instructions and data in parallel.
+2:47
+OK. And then we could look a little bit further inside each unit and so on.
+2:54
+Ultimately, you see, there are logic gates inside the logic gates.
+3:01
+There will be transistors and so on, and many of them are actually running in parallel.
+3:08
+And indeed, one could say that hardware is naturally parallel.
+3:14
+What's hard is actually make them run systematically. One after the other.
+3:21
+So how can you marshal the data through the right tools at the right time in the right space?
+3:27
+OK. That's actually the thing. OK. But that is the hardware.
+3:35
+That's where physically happen. And then the other question is that, well, we want to link that with software, right?
+3:42
+Because ultimately, software is where we could get the machine to do what we want.
+3:50
+So at the highest level, you can imagine the multiple requests and this requests would then become multiple threats onto the multiple course.
+3:57
+And then the course would then be decomposed into a pile of instructions into this instruction units and then get the data as well.
+4:08
+OK, so you could almost see that there are one-to-one levels of correspondence between the multiple levels of hardware and software descriptions.
+4:19
+OK. So if we go back to the MIPS instruction set, we'll see that how data could be fetch from memory into the processor.
+4:33
+Well, later on, we'll explain how things could be done in parallel, but let us start from the straightforward things first.
+4:52
+OK. So we all know the MIPS and so inform it.
+5:02
+Hopefully, by now, you might just remember it is actually extraordinarily simple because, well, at least for now,
+5:08
+we only need to worry about three types of instructions the outside the AI type and the type, as shown on this diagram.
+5:17
+OK, and I'll correspond to register related.
+5:27
+I correspond to immediate copy data to be addressed and then Jay obviously related to each other.
+5:31
+OK. So what the MIPS addressing most?
+5:39
+Well, this is probably pretty obvious.
+5:44
+If it is related to registers, then it would be register addressing because the data would be stored in the registers.
+5:49
+It might be immediate where the data would be stored in the 16 bit in an AI type instruction.
+5:58
+OK. So there was a question about the example at the end of the first lecture that if we want to put 32 bits into a given register,
+6:07
+why do we need two instructions? OK. Well, the answer, I hope, would be pretty obvious because as you could see from the eye instruction,
+6:22
+there's only 16 bits, so we could only put 16 bits in a night of instruction.
+6:34
+But we know a register has 32 bits.
+6:41
+OK, so we would therefore will need two instructions.
+6:45
+And the first one would put the 16 bits at the most risk and 16 bits of the register,
+6:52
+and then you add that to the second 16 bits in order to initialise the given register to a given value.
+6:58
+OK. And there is something called a base addressing a show on this slide,
+7:08
+and that is basic forward is simply means that you get the value from the eye type instruction to a given register.
+7:15
+OK. And that is specified by the source, but just a few.
+7:31
+The combined value will then be used as an address to access the memory.
+7:36
+OK. And it can then be used to load a data from memory into the register on the CPU or store value from the CPU.
+7:42
+Register to the memory. OK. So hopefully this now should become obvious on the diagram.
+7:53
+And then there's another one which.
+8:04
+May not be used very often, but it's useful to know and it helps your relatives,
+8:09
+and what it does is simply that instead of a given register, you just take the face value from the CPU programme counter.
+8:14
+OK, so instead of registering that diagram, you just replace it by the programme counter.
+8:31
+OK. Well, if we look again, the MIPS architecture and the sixty thousand architecture and MIPS, as you might remember,
+8:37
+is a typical risk architecture in probably one of the simplest risk architecture because there are armed,
+8:50
+there are smart, they're PowerPC and so on, and they are slightly more complicated.
+9:01
+OK, so that's one of the reasons why we use MIPS because it allows us to illustrate the principles using the simplest possible example.
+9:06
+What it is still a real process. OK, now we will look at this.
+9:19
+6000 is actually a.
+9:25
+Typical complex construction process. So there are obviously more complex processes like the Vortex is also a cis processor is more complex,
+9:30
+but the instructions that have some regularities in that x86 is also assist.
+9:45
+But it is a little bit irregular as well because a lot of features are added later on rather than be starting from scratch.
+9:52
+OK. And then a lot of the differences between MIPS and 68000 is, to some extent, reflect the technology evolution.
+10:03
+So, for example, MIPS has more registers because it has the latest technology, which allow us to put more registers onto the chip.
+10:16
+They also could have a bigger chip. And don't forget that we might have a bigger chip.
+10:24
+It tends to be more expensive. It requires better technology could also be more expensive.
+10:31
+And then the other major reason the bosses insist is that when we have simple instructions,
+10:40
+we might need smarter compilers to map High-Level programmes into the instruction set.
+10:48
+And it used to be called something as a semantic gap,
+10:56
+and that means the gap between Hollywood description and the corresponding instruction level description.
+11:02
+OK, so we could imagine that in the early days when compilers are not very smart,
+11:13
+it would help if the processor has instructions which are similar to what high level programme would support.
+11:19
+So that would make the compiler write a little bit easier. OK.
+11:31
+So there are processes which will address that.
+11:35
+But then later on, it is found that the instructions of such processes could actually become rather complicated.
+11:40
+Well, imagine the High-Level pilgrims tend to be quite complicated, and if you want to directly support the high level descriptions into HeartWare,
+11:52
+that actually could get the instructions that quite complex as well.
+12:06
+And therefore, if it is complicated, it might get slower.
+12:11
+And what's more, if some of the high level programme features are not used very often, then it might not be very efficient.
+12:14
+OK, so remember, one of the ideas of the MIPS or any risk instruction set is to make the common case false.
+12:24
+OK, if you know something that is going to occur very often, then try to make that run quickly, which obviously make a lot of sense.
+12:34
+OK, so let's have a very quick look at this.
+12:43
+Six thousand, well, what actually is it? OK? So in contrast to the general purpose, registers a MIPS.
+12:47
+The 30 to 32 bit registers in maps in the 68000, they actually separate registers to store data and registers that would still address.
+12:59
+OK, so there are eight data registers and eight are just red registers.
+13:11
+And then there are 12 addressing Moat. So you could begin to see the complication so you could have data registered.
+13:16
+All right. You can have address registered, direct or indirect and so on.
+13:25
+And then the limited number of arbitrary instructions that would operate directly on the address registers.
+13:31
+So you want to manipulate addresses, you might have to mute around the data register and put it back and so on.
+13:38
+Now, if you know the performance, OK, and probably the.
+13:46
+Easiest way to compare performance is to look at the benchmarks.
+13:53
+So we mentioned spec benchmarks in the previous lectures.
+13:58
+So if we have the spec integer and floating point benchmarks, OK?
+14:02
+Of the sixty thousand and the and the MIPS, you could see that it is for the.
+14:09
+Integer benchmark is 4.2 times slower, while for the floating point, it is six times slower than the MIPS architecture.
+14:24
+OK, now there's one more thing as you've done the first exercise.
+14:38
+We also should compare the cores as well because they say six thousand is also cheaper than the MIPS.
+14:45
+OK, and it's cheaper than the MIPS for four point seven times.
+14:53
+OK. So the question is, well, which one is more cost effective?
+14:58
+So when you face these questions, the easiest way is to think about when you compare two of processes.
+15:02
+They would be the same if the performance and the cost would be a straight line would be linear.
+15:12
+OK, so that would mean that if the 68000 is 4.2 times cheaper than the MIPS,
+15:19
+then if everything is also scaled down by 4.2 times, then they are equally cost effective.
+15:27
+Yeah, that's right.
+15:36
+OK. So why is it cheaper to make this? It's a. Well, it isn't.
+15:44
+This is the cost of the user. OK?
+15:51
+It doesn't necessarily mean that it is that close to mic.
+15:55
+The other reason is, say, six 6000 actually around for a long time.
+16:01
+OK, so the calls had been made for generations before that, whereas for the new processor.
+16:06
+And therefore, it needs to be more expensive or Old Testament.
+16:18
+All right, thank you. So if you look at this example, you see that for cost effectiveness.
+16:25
+MIPS is 4.2 times faster. OK, so integers and six point five times faster than floating point.
+16:33
+So it is less effective for integer, but more effective for a floating point.
+16:42
+OK, so so that could be OK by comparing the cost.
+16:47
+I think if someone should mute the microphone, please do so.
+16:57
+I think it's not me. OK.
+17:02
+No, you may say that well, you know, there must be something good for the six thousand,
+17:07
+OK and give an example here, which is actually the case when we compare MIPS.
+17:14
+Well, compare risk and sits the place where complex instructions usually win.
+17:22
+And that is when we look at the code density of the compile code.
+17:30
+OK, so what? Obviously, this particular example it can use of what is called the auto increment mode of the six thousand.
+17:35
+OK, so if you happen to need to execute the two statements inside a loop and so on.
+17:47
+OK. Then in six thousand, you'll actually need just one instructions.
+17:57
+OK. It has different Mr. Addressing more than six thousand and one of them just happened to capture this particular addressing.
+18:06
+And it only takes 16 bits because it's a 64 bit instruction.
+18:19
+OK, now if you look at, well, how many instruction lipstick turns out that if we want to do this, we need three instructions.
+18:23
+And then remember that each instruction in MIPS will take 32 bits.
+18:34
+OK. Then three would take 96 bits.
+18:41
+So in other words, the six thousand. If you happen to have this particular kind of statement very often,
+18:47
+then the 68000 would be six times more efficient than the corresponding MIPS inspection.
+18:57
+OK, and obviously six times is quite a lot. But but obviously the question is, well, how often do you use this particular inspection?
+19:08
+OK. If it doesn't, then maybe the same thing might not be so extensive.
+19:18
+And on this slide, there are multiple and better processes.
+19:27
+So these are not the test processes which tend to make use of Intel x86 instruction set.
+19:34
+So to enter the processes are those using washing machines or in your shoes or your mobile phone and so on.
+19:44
+And you could see that for those processors, most of them are making use of the risk architecture.
+19:54
+In fact, all of them on this slide, which consists of either MIPS or the PowerPC architecture, they're all built on the risk processes.
+20:05
+And you could see that there's quite a variety of them. They have different costs because some of them have different amount.
+20:22
+Of course, on their processors, some of them have different amounts of on chip memories and so on.
+20:29
+And you mentioned L2 cache.
+20:36
+It mentions super scalar and so on. Some of these ideas would be covered in your third year advance architecture costs.
+20:40
+So not going to mention the details here, but just make a note that even for these embedded processors,
+20:49
+a lot of them actually contain relatively advanced features. Why can they do that?
+20:59
+Well, that is because they adopt the reduced instruction set,
+21:05
+which will get both simpler and there will be more space on the chip so that they could adopt more advanced parallel processing techniques.
+21:09
+OK, so how can we classify different architectures in addition to CIS or MIPS?
+21:22
+OK. So one way is to base the classification on how memory is address, and these are relatively straightforward.
+21:31
+And I think you are familiar with most of them. So it could be stack addressing and in stack addressing with instructions do not actually
+21:43
+need to specify the address because we know that is specified by the stack pointer.
+21:54
+And then there could be accumulator architectures.
+22:01
+And in those instructions that would address memory, we all needed to specify one address because the other, the other register is the accumulator.
+22:08
+So the processor only has one register and therefore we do not need to specify which one it is.
+22:21
+OK. And then we could obviously have a register based instructions.
+22:27
+And just as if I remember for the outline and socially MIPS.
+22:35
+The disadvantage is that, well, we need to specify what the source and the destination of the registers.
+22:40
+And if we if we have instruction that would address memory, then we would need to also specify the memory as well.
+22:50
+OK. Why is it? This advantage, well, because remember that each instruction unit would have so many bits.
+22:58
+So if you use up some bits to specify righteousness, then you might lose some bits to do something else.
+23:10
+OK. And if you run out of space to specify registers or memory, well, that might actually limit the capability of your processes.
+23:19
+OK. So as we mentioned earlier, that register processing would be false foster memory and so on.
+23:33
+But you need to be specific about which register we are dealing with.
+23:41
+And if we look at different architectures in the past, you could see that there are some examples like the Belrose 50 500.
+23:53
+These are relatively early processes, so they are stack processing because stack processes, what have the sensors code?
+24:07
+Because you do not need to specify the registers of memory within the instruction.
+24:17
+OK, first, and then the next comes of the cumulate.
+24:25
+Well, you need to specify one address, whether it's the register or external memory.
+24:30
+And then more recently, there are the richest base architectures.
+24:38
+So if we look at the evolution of instruction set in the last eight years and we could see that at the very,
+24:45
+very, very beginning, we tend to either have snack based processes or accumulator based processes.
+24:59
+OK. So one of the earliest processes called the ET seq.
+25:10
+It is accumulate based processors. It only has one in one.
+25:18
+Register the accumulator. OK. And because at that time, it's actually very hard to figure out how to store information in a reliable way.
+25:23
+So people think of all these ingenious methods like this,
+25:35
+like a tank full memory full of mercury in order to try to send information to the Mercury and look at the reflection and so on.
+25:39
+Or, well, they actually use the cathode ray to light your screen and try to store information in in those tonics within the tube and so on.
+25:51
+So obviously, those they are not very tense, so you could not.
+26:11
+You cannot store a lot of data using those methods.
+26:18
+And secondly, it might not always be very reliable. OK.
+26:23
+But but that was what happened so many years ago. And then some of you may know the history.
+26:27
+It becomes better when the next step.
+26:35
+Was invented and the processes with the memories would be based on vacuum tubes.
+26:42
+And then later on, with the invention of transistors and integrated circuits, then we could now store so much memory inside.
+26:54
+If in your mobile phone, which is much more than a supercomputer 20 or 30 years ago would not be able to store.
+27:06
+OK, so the capability of your mobile phone will come to the side,
+27:19
+that is largely because you could store so much data and also process it in a very fast way.
+27:24
+So one could see that the earliest computers based on accumulators and then and then at the same time, a programming model at the very,
+27:34
+very beginning involved the programmer actually putting in zeros and ones into the memory to get the thing to work.
+27:48
+OK, so that wasn't a problem before when you have relatively simple programmes.
+28:00
+So imagine that things get more complicated that is not very reliable and very tedious and so on.
+28:06
+And then. But then emerge the assembly language, and that would make things a little bit easier.
+28:15
+But that is still machine dependent.
+28:27
+And then the colourful programming languages start coming out in the late fifties, early sixties, and then that would make things a lot easier.
+28:30
+OK, so you could say that the processes that was a high level programme starting from the early sixties, like the Pirro's B 5000 and so on.
+28:40
+And then there are also machine systems that are not just designed for just one computer, but have a range, have a whole family of processes.
+28:56
+Well, why is that? Well, because then they begin to understand that the cost of computing is not just the heart with.
+29:13
+OK, so at the beginning, they all think, well, you only need to buy the hardware, and that's the most expensive thing.
+29:26
+Well, later on, those programmes get more complicated.
+29:32
+It then becomes obvious that software would also become one of the most expensive, expensive items in in in computing.
+29:36
+OK. And when we have a family of computers, then the point would be that the same programme,
+29:50
+which was designed for each one processor could be migrated, hopefully in a seamless way to future processes within the family.
+29:59
+OK. And that will help lower the associated costs.
+30:13
+And then while all this is taking place at the same time, there are development of supercomputers.
+30:19
+And that was the beginning of the risk architecture at that time, the early supercomputer based on wretchedness and so on.
+30:29
+Those are very expensive.
+30:40
+But of course, if such computers do in defence or some of the government operations, then well, they don't care about the costs.
+30:42
+OK, so such techniques would gradually become usable for microprocessors as intel gradually
+30:53
+provide the earliest microprocessors and then once they meet the x86 instruction set,
+31:05
+it keep evolving until today.
+31:14
+And you can see this. You could think of it as a very successful instruction set because it's been used for so many years.
+31:17
+So this is history. And if we actually look at the timeline of this evolution, you can see that at the beginning there was the asset,
+31:25
+which was one of the earliest stored programme computer back in the 50s.
+31:41
+And then there was a time when there are the stack based architectures and then also at the same time,
+31:50
+the general purpose registers architectures were invented, and those are mainly like the CDs CDC 60 600.
+32:01
+These are actually supercomputers in those states. OK.
+32:11
+And then created a mini computer slide. The vacs and so on start appearing at the same time,
+32:16
+low cost mobile processors like the Intel 464 for which was one of the earliest processors also start emerging.
+32:23
+The observation is that when the first local processors came out,
+32:33
+they are actually also accumulator bits, OK, because memory at that time was too expensive.
+32:40
+So that's why the earliest processors, local processors are stack based, so accumulator based, and then one could then move on.
+32:48
+And the general purpose, which is architecture, which are easier to programme and so on,
+33:00
+start to become more dominant until there was a time in around just after 2000 mid 2000s.
+33:06
+Then there was a debate for comparison between the risk and the cis processor.
+33:21
+OK, so the complex processors are represented by Intel 86 and others as well.
+33:32
+And then the MIPS instructions. So the risk instructions were represented by MIPS and SPARC and ARM and so on.
+33:42
+And then, as you may remember,
+33:53
+one of the slides in the previous lecture that we could see the risk architecture provides an increment of performance, which is a very steep slope.
+33:55
+So there was a golden age of risk architectures until the late before 2010 or so on that is found that the speed cannot just rely.
+34:07
+On the clock. OK, so further improvement in performance has to come either from parallelism or customisation.
+34:25
+OK, so if you now look at some of the latest processes,
+34:37
+you could see that they are all have the capability of being specialised to a specific element of
+34:42
+application like the TPU that we saw in the first lecture that it has optimisations for machine learning.
+34:52
+OK. And if you look at GQ stun, obviously it is designed to execute graphics very quickly and so on.
+35:03
+OK. So that is actually an interesting observation.
+35:15
+It seems like we've come a full circle such that in the latest architectures,
+35:20
+we need to have a capability to customise to the needs of specific applications.
+35:28
+Well, happens. It happened that many years ago, even before the exact, the very earliest computers were also specialised for specific applications.
+35:35
+OK, well, if you remember. Around 80 years ago, what would happen?
+35:50
+Well, that was the time of the Second World War, and if some of you have watched the movie The Imitation Game,
+35:57
+we know that at that time there was this great need of developing machines that could break the encryption.
+36:09
+OK. Excuse me. Next question? Somebody say something, you can ask the question, yeah, and ask the question.
+36:19
+So this kind of data about history of architecture is this kind of data something you have to remember?
+36:27
+This can be tested upon. Do you need to remember?
+36:32
+Yes. Do we need to open book exam so you don't need to remember anything?
+36:37
+OK? So in the exam, you could look at the notes or you could search the internet.
+36:43
+OK, well, if you have access to the internet at that time. So I don't have to worry about that.
+36:51
+OK, OK. So my question was, will it be tested?
+36:58
+Would it be tested? I mean, the architecture, the Switzerland, the history of architecture.
+37:03
+Well, I think it would be a mistake to say which one would actually be tested, which one will not,
+37:11
+but but remember that the whole point of the of of the examination is to test your understanding rather than your memory.
+37:20
+OK, so, so so don't worry about remember details, but focus on understanding what is happening about that's more important.
+37:29
+All right. So if you look at the very, very left hand side of this slide, you see that at that time,
+37:41
+there were also two specific computers there are called upon, then the colossus, and these are designed to break the code.
+37:53
+And if I could tell you very quickly this story, which I am really fond of,
+38:04
+is that at that time they did, they saw a machine that will break the latest code.
+38:10
+And by the way, the most complex code was not the enigma.
+38:19
+As described in the movie, it's actually called the Lawrence OK, because I think the enigma only got three to four rotors.
+38:24
+The Lawrence had 12 rotors, so it really can produce more complex code so well at that time.
+38:34
+One of the petitions, they a machine and it's called the Heath Robinson, and you've got two paper tapes.
+38:48
+OK, well, one of them contained a message to Decrypt.
+38:56
+The other one contains some random numbers because we want to do statistical analysis to do the decryption.
+38:59
+We all need to have all these random numbers, OK.
+39:08
+But if you talk to our neighbours in the mechanical engineering, they'll tell you that synchronising paper tapes isn't the easiest thing to do.
+39:13
+OK, so even if it runs at 2000 characters, basically, which doesn't sound too bad, it's actually quite hard to synchronise the.
+39:24
+And what's more, it is not very reliable, we are not always correct.
+39:33
+And of course, when you run people tapes and so single know some from time to time,
+39:41
+it might actually cause friction or other things that I'm actually prone to overheat.
+39:48
+And therefore you might see smoke coming out, which obviously is not very desirable.
+39:55
+So I think this story is exciting, partly due to us because the solution was designed not very far away from here.
+40:03
+It was designed by Tommy Flowers, who was at police who in London.
+40:14
+OK. And what he did is he developed a way to generate these random numbers electronically rather than produce them on a paper tape.
+40:22
+OK, so now there's only one pivot there on two.
+40:37
+OK, so you could see that that was extracted from his notebook so that one could then use the tropics to generate this random numbers,
+40:41
+which can then be compare with the message on the paper tape.
+40:52
+OK, now of course, you may sit well, but it's so obvious, right?
+40:59
+Well, the point would be that at that time, the Electronic Arts that are based on vacuum tubes were not very reliable.
+41:03
+So the genius of Tommy Flowers is to find a way to make vacuum to reliably enough in order to do that.
+41:15
+OK. In any case, he managed to do that. That's machine that was built.
+41:23
+And I think the billion dollar sue and then ship to Battery Park for the thought that those who tried
+41:29
+to decrypt the messages for them to use and the prototype actually operating just before D-Day.
+41:38
+And apparently they managed to figure out many key messages.
+41:49
+And again, that helped to shorten the world for months or even years.
+41:58
+OK, now if you look at this particular system, it actually has various features that sounds quite often slow.
+42:05
+It has five processes. OK. It take multiple input from the tape, and it got some sort of almost like pipeline inputs and outputs,
+42:14
+so you could load data from one tape while pressing the other tape and so on.
+42:29
+OK. And what's more, it could process more than 10 times faster.
+42:36
+So instead of two or something characters, it can process twenty five thousand characters and runs more reliable.
+42:43
+OK, now programming this thing is a little bit complicated because there wasn't compilers at the time.
+42:51
+So you need to plug cables and so on in order to get that programme that was enabled by using thousands of these vacuum tubes.
+42:58
+What's hard was that we told me followers everybody for vacuum tubes were unreliable to run in long time in this way.
+43:10
+But Tom iFollow exec, are a way to study more carefully and so on.
+43:21
+And don't power them down and so on,
+43:26
+so that it managed to make this phone come to run reliably enough so that you could
+43:30
+actually make this computer work in such a way that it would produce key results.
+43:38
+OK. And by the way, this machine wasn't built by Alan Turing, built by Tommy Force.
+43:46
+OK, so answering, wasn't it?
+43:53
+I think L.A. was involved because I think he did introduce Tommy Flowers to this project, but after that, he wasn't involved anymore.
+43:55
+So if some of you become a movie maker in the future?
+44:05
+Well, the thing about making this movie, I think, would be just as exciting.
+44:10
+So let me finish by describing another important result when we have this customisation capability.
+44:15
+So, for example, if we just want to compute this squared plus y square repeatedly and therefore we may want a special instruction to do that.
+44:25
+OK, well, the different possibilities. Well, the if you do not have that, then you could just use the at instruction.
+44:36
+If you want to have something a bit more specialised,
+44:48
+you could have a square of instruction because you could see square happening
+44:52
+or you could have a special instruction just to do x squared plus y square.
+44:56
+OK, so that would cover this operation within one instruction.
+45:01
+So that would be obviously the most effective. But then there's this advantage is that this instruction could only do just that.
+45:06
+OK, so if you have other programmes which would not need this square, then it is completely wasted.
+45:15
+OK? And you can see that for the square and suction, well, it might be more useful than a square.
+45:23
+So these cranes suction is sort of halfway between a general purpose instruction and this very specialised instruction.
+45:31
+And so there is a trade-off that the more specialised instruction, you could do things faster.
+45:40
+But then you might not be able to use it very often. OK.
+45:47
+And there is a key law that describes how much we could accelerate a programme.
+45:52
+OK. Well, because in many cases, we could only accelerate particular parts of the programme rather than the whole thing.
+46:05
+So if we assume the programme with a freshman alpha with runtime to old can be make faster by B the Times.
+46:14
+OK. Woman could actually work out that the friction that could be accelerated would be Alpha.
+46:29
+OK, and the improved speed would be key,
+46:39
+also divided by beats because it's that portion could be speeded up by better times
+46:42
+and then the rest would be one minus alpha is the friction that is not accelerated.
+46:49
+And then that friction would still run given the time to time.
+46:56
+All right. So that's a very simple equation, but this simple equation could sometimes give, perhaps not very obvious results.
+47:03
+So an example would be if 90 percent of the coal is make faster by 100 times 90 percent.
+47:15
+So that sounds pretty good, right? And if that 90 percent could be accelerated by 100 times, then then what's the effect on the entire cobra?
+47:24
+OK, now if you substitute the value into that formula, you'll find that the overall improvement is actually slightly more than nine times.
+47:36
+OK. So despite the fact that you could accelerate 90 percent by 100 times,
+47:48
+the whole thing is actually faster, not even 10 times, only slightly faster than light.
+47:54
+So that's very useful. You also show that you really need to accelerate as much as possible of the entire programme because otherwise,
+48:01
+as a part of the programme, the overall effect may not be as fast as you would expect.
+48:15
+OK, so this is just a summary of what we've got so far.
+48:22
+So you can see definition of CPI and also from the definition of CPI, the execution time equation.
+48:28
+And then we could see the effect of risk and risk on each component of the execution type equation.
+48:38
+And so the major effect of risk, as you could imagine, is the reduction of CPI, OK?
+48:49
