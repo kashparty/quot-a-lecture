@@ -11,3 +11,7 @@ body {
 main {
   background: white;
 }
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -1,10 +1,8 @@
 {% extends "seapanapp/base.html" %}
 {% block content %}
 
-<h1> {{ q.question }} </h1>
-
-{{q.answer}}
-
+<h1 class="QuestionHeader"> {{ q.question }} </h1>
+    <div class="Answer">{{q.answer}}</div>
 <hr />
 
 This was asked at <a href="{{q.to_url}}"> {{q.timestamp.isoformat}} </a> in {{q.recording.name}}

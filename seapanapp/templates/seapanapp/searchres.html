@@ -6,13 +6,13 @@
 <!-- TODO: Dont dupe with index.htmlj -->
 
 {% if results %}
-<ul>
+<ul class="ListHolder">
     {% for q in results %}
-    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    <li class="ListElement"><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
     {% endfor %}
 </ul>
 {% else %}
-<p>No results</p>
+<p><i>Nothing was found :(</i></p>
 {% endif %}
 
 {% endblock %}
