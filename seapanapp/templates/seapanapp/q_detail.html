@@ -7,6 +7,11 @@
 
 <hr />
 
-This was asked at <a href="{{q.to_url}}"> {{q.timestamp.isoformat}} </a> in {{q.recording.name}}
+This was asked at <a href="{{q.to_url}}"> {{q.timestamp.isoformat}} </a> in
+
+<a href="{% url 'seapanapp:lecture_detail' q.recording.id %}">
+    {{q.recording.name}}
+</a>
+
 
 {% endblock %}

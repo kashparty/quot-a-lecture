@@ -1,3 +1,4 @@
+import re
 from django.db import models
 
 # Create your models here.
@@ -10,12 +11,17 @@ class Recording(models.Model):
     def __str__(self):
         return f"{self.name} {self.panopto_id[:8]}"
 
+    def to_url(self):
+        return f"https://imperial.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id={self.panopto_id}"
+
 
 class QuestionAnswer(models.Model):
     question = models.TextField()
     answer = models.TextField()
     timestamp = models.TimeField()
-    recording = models.ForeignKey(Recording, on_delete=models.RESTRICT)
+    recording = models.ForeignKey(
+        Recording, on_delete=models.RESTRICT, related_name="questions"
+    )
 
     def __str__(self):
         return self.question
