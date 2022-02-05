@@ -26,15 +26,32 @@ url = "https://imperial.cloud.panopto.eu/Panopto"
 
 url_show250 = "https://imperial.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#isSharedWithMe=true&maxResults=250"
 
-def main(showBrowser = True):
 
+def main(show_browser=True):
     chrome_options = Options()
-    if not showBrowser:
+    if not show_browser:
         chrome_options.add_argument("--headless")
     chrome_options.add_argument("--window-size=%s" % "1920, 1080")
     driver = webdriver.Chrome(executable_path="chromedriver97.exe", chrome_options=chrome_options)
     sign_in(driver)
-    print(get_video_links(driver))
+    for vid_url in get_video_links(driver):
+        save_transcript(driver, vid_url)
+
+
+def save_transcript(driver, video_url):
+    driver.get(video_url)
+    time.sleep(5)
+    driver.find_element_by_id("transcriptTabHeader").click()
+    time.sleep(1)
+    captions = driver.find_element_by_id("transcriptTabPane").find_element_by_class_name("event-tab-list").find_elements_by_class_name("index-event ")
+    print("There are: " + str(len(captions)) + " caption lines.")
+    title = driver.find_element_by_id("deliveryTitle").text
+    transcript = "\n".join(map(lambda e: e.find_element_by_class_name("event-text").find_element_by_tag_name("span").text
+                               + "\n" + e.find_element_by_class_name("event-time").text,
+                               captions))
+    file = open(title + ".txt", "w")
+    file.write(transcript)
+    file.close()
 
 
 def get_video_links(driver):
@@ -57,16 +74,9 @@ def sign_in(driver):
     time.sleep(3)
 
 
-
-
-
 input("Enter to start")
 try:
     main()
-except Exception as e:
-    print(e)
+except Exception as error:
+    print(error)
 input("End of program!")
-
-
-
-

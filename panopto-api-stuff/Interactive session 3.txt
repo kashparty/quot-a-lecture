@@ -1,0 +1,341 @@
+Right some Can people who are remote can they hear me.
+Can.
+But, but she she's still going on about it.
+Yeah, I think that's a good one.
+Um, can you remote, people can you see the whiteboard here.
+Yes we can. I think you should be able to, I was told it wasn't working, but it looks like.
+We'll go ahead and use the whiteboard.
+On that basis.
+All right, I can see what I'm saying.
+Okay, So, are there any
+questions.
+Anything
+complexity.
+Right.
+Okay.
+Feed.
+just have to hope for the best.
+Right, so I got to share this line here so it's good to
+screen.
+This is the slides that you're asking about anything in particular that you.
+Ah, so the inserts yes so well.
+So, the, The idea would be that would take log me in general to to get inserted, I suppose.
+Well we haven't really got on to where, what do I say about priority queues, let me just remind myself by going back a bit.
+Yeah. So here we also like 115.
+This is about priority queues.
+So, we that one says that all the operations or login. Apart from is empty and get two min, which is constant. So, the idea is that it's easy to find whatever is ahead of the queue in a priority queue, but other operations like inserting something into
+the queue, finding what the minimum is or decreasing the keys will take long game.
+To do that, now you're, if you're asked me why that's true.
+Well it depends on how you implement priority queue but what I'm saying is here this is implementing a priority queue via by binary heap.
+And we haven't come to binary heaps yet I will be doing those later in these lectures. So, but of course what that what you see priority queue is an abstract data type that can be implemented in various ways so binary heap is just one possible way of
+implementing it so you can imagine more naive ways of doing it but binary heaps of very good way of implementing priority queues and the art here is, you've got various operations and depending on how you implement it, they will take various amounts of
+time and you want to maybe get a good trade off between the different operations depending on how much, how often you think you're using an operation if you're going to use it a lot, then you want that to be as as low as possible in complexity something
+you don't use very much you might be happier with longer but ideally you would get it all down to sort of login or something like that. Now there are more sophisticated implementations I mentioned I think in passing Fibonacci heat but that's beyond the
+scope of these lectures, and then you will get slightly different you'll get different values for these operations. Remembering also, of course, the bigger here smuggle was in.
+Well, I should say bigger of login, really.
+That would have been better if I'd said, bigger of log in there. And sometimes I forget to say that, but whenever you see this kind of thing there's some constant factor in there, which will depend on how the thing is implemented in detail depend on all
+kinds of things, basically.
+And so you could get find something that looked better than this superficially but my very large constant value so that could be an argument against it.
+So does that more or less answer your question.
+Going back to 130. Yes. Okay, so that's so that's the answer is that the insert takes log n. So let's go back to slide 130
+reading glasses on to that so.
+Yeah.
+Yep.
+Okay, so
+we got here so this is with some weighted union. Okay.
+Where we're waiting on the size of the thing So, and the claim is that each fine takes bigger login. Now that comes from the previous slide, I think that we just look at that says that the depth of the tree will be bounded by login so you've got your.
+Each your notes belong to a tree, not necessarily binary tree. So just to sort of make it clear that it isn't necessarily binary.
+And to find your leader, the leader is up at the top here.
+Then, in, you have two records up the tree finding your parents that grandparents etc like that. And the worst case is obviously bounded by the number of the depth of the tree so the worst case will be if you're down here and you're trying to find your
+leader, whereas obviously if you are the leader. And that's a good case.
+So, so that's where that is. That's where that's coming from, from a number on the previous slide. Okay, I think that's clear. So for Chris God, you've got to do the inserts to build the priority queue.
+So we put everything in the priority queue to start with. And we're putting the arcs in the priority queue remember for Chris goals algorithm whereas for brims algorithm we put nodes in the priority queue or if we were doing Dykstra his algorithm which
+is next week, then you will be putting nodes in the priority queue.
+So we have to be clear on that, and of course the RM arcs.
+So I think that's clear and then we've got the get two mins to find. So you've got your priority queue let's know
+conceptually here is your priority queue. And this is the sort of men, maybe it's somewhere off to the, the left hand of the queue or something like that, but how the queue is implemented in detail we don't know it's a black box for us but we can apply
+the get me in operation and remove something from the to what we actually just inserted everything into the queue. To start with, so the queue. After the initialization the queue is for the arcs.
+Okay.
+And so we take out the find them in, get them in.
+So, because we've got to go through them process each arc.
+That's m times we have to do that.
+So that, or at least that's the upper bound on that. And then we've got to do the fines, as well, because we've got to.
+Once we've got we've got this art coming out. It's got here is the arc, a that's come out of the queue.
+And it's got endpoints x and y.
+Those are the nodes. So we need to know whether they are in the same equivalence class or not, basically. So that means that we have to find the leader for each of these which is the x prime, and the y prime and see whether they all the same.
+So that's the bigger them find.
+And then, in general, we will have to do some unions, if these are equal than that. But if they're not equal, then we're going to merge them basically, very cool.
+Then they're already. That's a cycle so we reject that arc. Okay.
+If they're not equal, then we need to add the ark to the, to the minimum spanning tree, and we need to merge these two the union, which means taking the two trees, you've got is the one with y prime is the one with x prime.
+And it looks like the x prime on is smaller than this. So that means that this one here will be
+green for this. So, we will basically move this x prime tree into sort of dangle below here. So, we will, that's the union being done, like that. Okay.
+And because the union is just constant time because it just means, saying that the leader of x prime instead of being itself, or now I don't know which way I did it, then, is the leader of x prime is now y prime, and obviously therefore y prime becomes
+the leader of all these ones down here as well.
+And notice that the arc that we're adding to the tree is this one here.
+These are different trees, this is not the minimum spanning tree at all. I hope that that's clear there's two different trees going on here there's a minimum spanning tree which is what we're trying to produce on the actual growth, as it were.
+And then we've got this separate thing which is the implementation in terms of non binary trees here of the Union find, basically. And as I say again union find is an abstract data type just like priority queue.
+So you can imagine different implementations This just happens to be one implementation. Okay.
+Right, so
+does that sort of cover. And, yeah, okay, right let me see what might be in the chat,
+stop sharing.
+Can you mute everyone there's a lot of feedback.
+A day let's try that. I can find where that happens.
+Participants you please mute yourself if you
+would help, I've got to mute.
+We do that. Let's be able to participate.
+Sorry, I'm just looking for where to do that
+is a way to do it more
+about this.
+Anyone will remind the health of our mutual fund it. Yeah. That was easy.
+Yep. You're.
+I think you don't have to mute the room, I think the room mic is muted room surely.
+Right.
+But.
+Yep.
+I think we might have succeeded of that so it's all quite complicated.
+Right. Okay so, Father, things you'd like to talk about. Yes.
+Um, well, I think we yeah I'm not quite sure the answer to that, really, I'm guessing that you could probably use them equally well, there is this issue on the various versions of premise algorithm we looked at that it depends on how many arcs you've
+got if you've got a spouse graph, then you're going to prefer something that that measures on the arcs whereas if it's quite a.
+It's quite a dense graph, then you'll prefer to sort of have the n squared bound or something like that so. So there is this issue to do with how many arcs you've got us to which implementation you might go down.
+I think that some yeah i mean i suppose we've seen that I mean, probably you probably going to be using these priority to Mike, but I don't see much of a reason to prefer one over the other.
+They both quite popular. Yes.
+106 Okay let's go to 106 question about the classic prim on 106.
+That.
+Let me share the screen.
+Right.
+Yes. So your question is.
+Yeah.
+Well, we're updating. I mean, the candidate docs belong to each of the nodes in the fridge, basically. So we've got bigger event nodes. So each of them has a candidate arcs that needs updating.
+So,
+um, yeah but I mean basically you've got the candidate already.
+And then you've got this, we probably need a diagram that.
+So here's the tree.
+And then here is the fringe around it.
+So if you're in the fringe, then you've got a candidate arc so here is a no that's in the fringe, the X is pointing to this, why here, and then maybe something else got added.
+So the tree.
+Because maybe this was sort of, you know, 10, but this one was eight.
+So we chose this one to join the tree. So this one, t now goings the tree.
+And then we have to look and see whether we can improve this.
+So the question is, maybe that one's better than this one maybe that's a nine let's say.
+So in that case, we convert the parent of x.
+But the moment is
+x equals y.
+And I forget what I call the weight anyway.
+So the weight
+of the candidates arc is.
+This is Prince, we're doing isn't it yep right.
+So the weight of x equals 10.
+Yep. Okay. And now we're going to go through all the fringe nodes and check whether t would be a better choice.
+Okay, so we're simply we.
+Well we this, this is already the shortest way into the tree for for x, this 10 here.
+We've got that.
+It's like an inductive hypothesis or it's like an invariant. I might be slightly anticipating the, you know, but I do, I do talk about him variants so I know I'm anticipating the reasoning about programming lectures there where they go into invariance,
+you know, in much more detail, but we already know that why is the best that we can do for getting from x into the current tree.
+Yeah. And now what we have to do at the update stage here is to see whether using tea will be better because now tea. Has
+She has joined the tree.
+So the question is, well, why is the best among the the blue elements in the tree. The question is whether this red portion gives us a better candidate arc.
+So basically all we have to do is to compare weight of x, this here with the weight of.
+We just have to see whether that, how does that compare with the weight of XT basically
+equals nine, which is better.
+So in that case we, so. So now we can week now we update basically and we say that parent.
+x equals T.
+Wait.
+x equals nine.
+So that's better. So we're going to remove that one, and we're going to say that this is a new candidate and of course the comparison could have gone the other way could be that that was worse and so we leave it unchanged.
+So that means going round everything that's in the fringe, which is bigger than nodes and doing this comparison for each of them which is constant, basically.
+So it's not like we have to, we don't have to go through all the arcs that join the tree to the fridge. Now, if we're doing that.
+Then I would agree with you that we might have to have a boundary of bigger them on that.
+I suppose, or bigger events with any which way we look at it, but because, because we've got this, we thought us, because we've got this already we know we don't have to compare this one to all the possibilities there are lots of other ways in which x
+might be joined into the tree, whatever. But those have already been rejected as at an earlier stage in the process.
+Does that answer your question.
+Yeah.
+Okay.
+So this is the adult This is obviously the improvement is to have the candidate arcs, rather than having to go through again from scratch. Each time you update the, the tree, basically.
+So that does get the complexity down a bit. As a result.
+Um, so, when I'm referring to depth.
+Yeah, I think, I think we're okay sound wise now obviously I think I'm, I knew that when I muted all I have to unmute the room so I eventually worked out how to do that across two different pieces of equipment.
+The question has been referring to depth first search is it pre order in order or or post order.
+So,
+what to say there.
+So pre order in order and postorder refer to ways of traversing a tree, as I understand it,
+and let's, so.
+And that, in the Dexter search, we are sort of creating a tree from a graph, but we start off with the graph, basically that we are exploring.
+And then we produce a tree from it so I'm not sure that I would exactly call it that, but I suppose it's.
+Can you hear me.
+Yes Can Yes. So I wanted to know if you're given like a node and you're trying to find like the child nodes, would you go to the left most or to the right most of the like a particular way, that's long.
+Well, so if you've got a.
+Well, so what was it what do we mean by the left most here presumably we mean that when you're at a node. So, so let's say that was the start and then at some point later, you've got to
+this node here so this is where we are currently here, so we are here.
+Then you've got various nodes that are in the adjacent see list.
+So, what you would do is basically follow whatever the Jason c list tells you, assuming that we're representing this thing so so this note here let's call it x has an adjacent see list
+is is equal to, you know why one. Why two, Three, up to yk let's say.
+So here are the Y ones.
+Y tu y three.
+So, there's yk well let's just make it.
+Let's just make it YYTY three okay let's make it easier.
+So there they are so we're index.
+And so what we're going to do with the depth search is to choose the first one in the list here because we will just follow this list, like that so in the code that I wrote I just said for why in a Jason see listed x do this.
+Okay.
+So it depends on what order these nodes happen to be listed in there. I've sort of probably standardized on numerical order if the nodes are numeric but it doesn't really matter.
+You just follow whatever the order is there, basically. So, you could think of that as being the sort of left most one I suppose but there isn't really any ordering here.
+Apart from that this ordering here which is not particularly sacred I mean any other order would do you, it would be the same graph, effectively, because the graph is just about where the notes are adjacent to each other or not.
+So there's nothing particularly sacred about that.
+But, yes, following the algorithm I would look at why one first. And so that means that I would recursive the move to why one and do a recursive DFS at why one and exhaust everything that I can reach from my one.
+And then I would implicitly backtrack to x, and do a DFS at y tu.
+And then once I finished everything that's reachable from there, including possibly why you know where ky one by to might have already been reached from why one, possibly so we we might have nothing to do at that point, but that's, we just follow that
+through and then go to y three. Once we finish that we go back up to x, like that.
+So, but yes i mean i think when you're talking about this. Unfortunately, computer science as well. Fortunately, I suppose, but I mean computer science is full of trees, and each time you come across a tree you have to work out what definition, are they
+use it.
+Is it, you know, a fixed entity so that each, Each node has a fixed number of children, for instance, is it significant, whether you're the left child or the right child, for instance, or isn't it.
+Basically, all of those things, their image, and the on which form of tree that you're, you're looking at basically
+you want to come back on that
+make sense. Thank you.
+Is that okay. Yep.
+So, in answer to the Which way should I go to you next. It would depend on which the next one is in the agency list here, but there's nothing particularly sacred about that.
+It's just an arbitrary choice that I made when I wrote down the graph in the adjacent see this representation.
+less representation. But I think normally we will stick to numerical order just so that we will get the same answer basically otherwise it's going
+to hear me.
+You hear me. Hello.
+Hello. Hello. Yes. Oh yeah. Okay, so I just want to know, would we be asked to calculate the complexity of a of it runs in calculating zap
+a random algorithm. Yes, in the exam yes I'm central Yes.
+Right. Okay, so in that case, can you go through what are the main criteria that could contribute towards complexity. Yes Okay so, obviously, the different algorithms have different criteria, but there is a question I think that's a bit related to that
+if you look at the, I think it's about the last question on this week's problem sheet where there's, there's something with counting in it so.
+So that might be a sort of helpful question to, to look at. And I seem to remember that something similar to that appeared on a previous exam question.
+Let me see if I can find that.
+Yeah. Okay, so here it is yes, I just happen to have it open here so let me put that on
+screen.
+So that sort of might be relevant to this question about sort of up working out complexity. But, in a sense, what you've got. There are two nested for loops, if you if you like.
+And they each have.
+So if you have a for loop.
+x.
+In nodes here.
+And then we do something here.
+Okay, and maybe there's something we do to x.
+And maybe that you know so let's say it's a graph algorithm here so we've got end nodes and arcs as usual.
+And, and let's say that the thing that you're doing to x is, is order in or bigger events bounded by.
+Okay, then obviously we've got x of these so the total complexity complexity
+is basically going to be well, you tell me.
+Bigger n squared. Yes.
+So, so it's bigger than times bigger then equals bigger events squared.
+So the idea is that we did something.
+And we've already bounded, whatever we do within the loop.
+It's probably like this is the analysis we did on the brims algorithm that we were just looking at basically we had a. We had a, an outer loop and then we, we looked at what was happening inside.
+So because we're going to this is the for loop. And we know Well actually we know that we have to go around and times in this case that so that that will be the bigger event if you like.
+But, and, and here is something we're doing inside the loop, which is a bigger event as well.
+But to me in an in a more complicated example, maybe that could be bigger event to the K.
+And then what else would we get.
+Overall,
+okay some concept. Yes.
+Um, well, the, the, the JC list itself I mean if we're dealing with weighted graph here then we know that those are bound on how many neighbors, we will have in it, because it will be a simple graph.
+Well, if you're talking about doing something with x itself, then
+you're talking about this question here. Right. Okay, I'm just talking in general down here.
+We'll come, come to that. Yeah. Okay, so in this question here I've just altered the question I'm saying that whatever we've calculated for within this for loop takes bigger into the K.
+So overall, what is it going to be.
+And the k plus one. Yeah.
+Yeah. So basically all I've done is I've said I'm going to do this at most n times here, and each time I do it it cost me this much. so obviously I then multiply by in making careful to use the big O notation.
+So that's sort of, you could do that to this one here, I suppose, but I think maybe your point is that perhaps we could do better.
+Yeah, because I mean it would be true that.
+So, so in this example here, We could see that, actually.
+How many times do we do the. So, for the exit nodes in this example here, we can see that n is a good bound for that. Okay, so, so we're going to increase the account by n times for doing that.
+But when it comes to the Y in the Jason, see List, and I think this is coming to your point, then what we're going to do basically is attack each
+arc.
+In this algorithm how many times with each arc the visited in this algorithm.
+Twice Yeah, because it we visited once from each end. Okay.
+And that's the most that we can do here. So, in this case that the count.
+We can see that what we're doing here basically is we access each node.
+Once, and we access each arc twice. So actually the, in the, in the questions and so this is now, This was just in general, okay.
+But in the question.
+12, then what we, we can actually say that the count.
+The final count
+final value
+is going to be n plus two M, which we can.
+We tend to writers bigger event plus em here because this, if you're using the agency list representation, then this is, this is our, our view of what the size of that is now it's true Adem is bounded by n squared.
+And so therefore we could recover a bigger of n squared found here, but this is slightly tighter. In the event that m is sort of significantly smaller than m squared, so we can do that.
+So I think that's really what I was encouraging you to do here. And this, if you think about what question 12 is doing it is sort of mimicking the analysis that we did on the complexity for DFS and BFS.
+So we got this slightly tighter thing by thinking about how many accesses did we do to the graph, and now it's true that we've got to sort of nested for loops there.
+So if we, if we use the sort of nested for loops argument, then we will get bigger events squared, basically because we could say that each Jason c list is bounded by length then let's say assuming that it's a simple drop.
+But that's not quite as tight as the, we got from a slightly higher level so so that meant basically that we're sort of
+with. If you bet, trying to bound the individual things here.
+Well, this will work. I mean this is guaranteed to give you a correct about this will always work as an analysis, but we can sometimes do a tighter analysis.
+And one way we can do a tighter analysis is to sort of conceptually, add up within that for loop, it's like, it's adding. Each time we we do an iteration of the polling add them all together.
+And if we look at it that way. Obviously that's still a correct way of looking at it. This is a multiplication way of looking at it sort of quick and dirty, if you like, and more sophisticated analysis would sort of add up.
+Each time you go around the for loop and then what we can see.
+And actually, because summer Jason see lists are longer than others. Then when that but what we know is, they add all up to an overall.
+Then we get a good answer.
+There are more sophisticated analysis is using amortisation that might be a word that means something to some people here we read a bit more on algorithms, where you have to basically say that some, some where you sort of have to trade off something against
+something else. And that leads to much deeper analysis of complexity, but I think it's fair to say we don't. Well, certainly we're not going to go into that in this course and you may get some of that in the second year.
+Algorithms course, because that's more advanced topic, but I don't think you particularly need it for this but, for instance, I think, when I discuss the path compression I mentioned that you can get about a complexity bound have a very slow.
+Log star about them that that kind of analysis needs more sophisticated analysis that's beyond the scope of this course.
+So right so
+he also goes through an example of an album was complexity of law.
+So they are yes so where we get the log. Yes. Well, we, we will be coming to bind research which has complexity of log.
+For instance, But the.
+I suppose the examples that we've seen so far is that where was that dilemma that was about slide two.
+Right. Well, there's there's different ways of answering this, but we know that the priority queue operations give us a log complexity don't wait. We don't know why yet because we haven't seen the binary heat yet, but it's basically it's low whenever
+you see login. That's always to do with the depth of the binary tree basically is where that login thing is coming from I think it's fair to say well, in most cases it's to do with the depth of the tree.
+So we've got some.
+So when if we are doing something in crystals algorithm, then we have to do a bound. So the individual things we might be doing might have a log bound so we might be saying for, and in nodes.
+And then there. So we going to insert.
+Sorry exit node let's say x into the Q comfortable what notation I use for that.
+But, so here we've got, They go in nodes.
+And here we've got
+a bigger of login operation.
+So the complexity.
+Overall, is going to be,
+and login. Yeah.
+Like that. Okay.
+That will be for.
+So, uh, you know, so, so that would be an example using login so it's not really that different.
+But where does the.
+Yeah, I'm trying to say, Well, we're going to come on, you can come back and answer this question again in future weeks when we've done the binary search and binary heaps and things like that.
+I mean, perhaps it's a question that's worth coming, coming back to. But for the moment, mean we if we know that these individual whatever this, you see I, I put an end to the key there but just any complexity can be put in here, but for this doing something.
+Here I've been 13 x into the priority queue.
+And I just happen to know because it costs me that in worst case bigger login.
+Because, Well, because basically we're going to be implementing that there's a binary heat. And so, we will have to the heat has a conceptual depth of login basically because it's got elements in it.
+But thank you. Yep.
+Do you know, I mean, with something we should come back to it.
+Right How we doing the questions
+you'd like me to talk about, we've got about five minutes if you want.
+Yeah, okay.
+We'll just see whether there's anything.
+because since those Austin in particular we could have a look at this question six here let me just share the
+screen.
+There is question six bail delivery circuit. So obviously, the idea is that this is so that they can deliver your post. And you have to go up each street twice because you have to go on one side for the numbers and one side for the even numbers basically
+so that's why it's called that.
+So.
+So what does this question remind you all
+Hamiltonian parks, so the Hamiltonian parties where you visit each node exactly once.
+The other one, which is the boiler calls, which is where you visit each Park exactly once. But here, because we have to deliver the post on both sides the road we have to visit each arc exactly twice.
+So what we'd like to do is to relate this to the Euler cough or boil a circuit problem.
+Okay.
+So, what do we know so that we've said that the graph has a
+has an oiler circuit connected graph.
+If and only if all nodes.
+Even degree.
+So how could we relate.
+So, but we've got sort of general graph now let me just draw a graph at random.
+We are. Okay.
+Does this one have a mail delivery circuit,
+sort of see whether it does.
+So I have to go here and I could do the same thing twice.
+and I could go along
+What that I got back to the start so I reckon it does.
+Okay.
+Anyone cause an example that doesn't have one.
+Okay, do you think autographs do. Okay, yeah.
+It says, draw, where every call.
+Yes.
+Yeah.
+Right okay so let's just take this graph here. And let's adapt it as you're suggesting which is to say that because we're visiting each arc twice, then we can just double.
+This looking a bit more like the current explode bridge problem, like that. And now. Tell us again.
+Yes, exactly. So whatever the degree is whether even the world. Once we've doubled the arcs then every node has even degree.
+And therefore, it has an oiler circuit by Oilers theorem. Yes, exactly. So that is the argument.
+I suppose the only thing to note is that the graph would have to be connected.
+Apart from possibly you, we could have isolated notes, but so mean.
+Because there is no arc that we don't have to visit that. So, but that's a bit of a trivial irritation, I suppose, but but the graph has to be connected so basically the answer is the graph has to be connected.
+So we've got this little trick here of just doubling.
+If you say you're going to visit this up twice, we can just think about the equivalent graph where you've got two parallel arcs, and then you visit each once.
+And that is a way of sort of relating.
+Your, so if we were talking about visiting some node three time summit summit three times and some four times we could again, just redo the graph on that basis.
+And then, if the degrees turn up to the even then we would indeed have a circuit for it. Okay.
+Good. Okay, I think it's time to stop for today. Thanks so much.
