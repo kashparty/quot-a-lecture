@@ -40,10 +40,10 @@ def main(show_browser=True):
     sign_in(driver, domain)
     print("Downloading lecture transcripts...")
     for vid_url in get_video_links(driver, domain):
-        save_transcript(driver, vid_url)
+        save_transcript(driver, vid_url[0], vid_url[1])
 
 
-def save_transcript(driver, video_url):
+def save_transcript(driver, video_url, date):
     driver.get(video_url)
     video_id = video_url.split("=")[1]
     print("Downloading transcript from video with id: " + video_id)
@@ -72,8 +72,8 @@ def save_transcript(driver, video_url):
 def get_video_links(driver, domain):
     driver.get("https://{0}/Panopto".format(domain) + show250)
     time.sleep(10)
-    return list(map(lambda e: e.get_attribute("href"),
-                    driver.find_element_by_id("detailsTable").find_elements_by_class_name("thumbnail-link")))
+    return list(map(lambda e: e.find_element_by_class_name("thumbnail-link").get_attribute("href"), e.,
+                    driver.find_element_by_id("detailsTable").find_elements_by_class_name("thumbnail-row draggable")))
 
 
 def sign_in(driver, domain):
