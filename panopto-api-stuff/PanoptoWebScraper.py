@@ -78,8 +78,10 @@ def save_transcript(driver, video_url, date):
 def convert_date_time(date_time):
     date_time = date_time.split(" ")
     date = date_time[1]
+    return date
     # Can easily modify later if want time as well
-    return datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%y")
+    # Conversion from MDY to DMY
+    # return datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%y")
 
 
 def get_video_links(driver, domain):
@@ -113,7 +115,7 @@ def sign_in(driver, domain):
 
 input("Enter to start")
 try:
-    main(show_browser=True)
+    main(show_browser=False)
 except Exception as error:
     print(error)
 input("End of program!")
