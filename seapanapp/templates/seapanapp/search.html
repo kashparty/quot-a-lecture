@@ -1,0 +1,12 @@
+{% extends "seapanapp/base.html" %}
+{% block content %}
+
+<h1>Search</h1>
+
+<form action="{% url 'seapanapp:search_res' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="query" placeholder="search" />
+    <input type="submit" value="search">
+</form>
+
+{% endblock %}

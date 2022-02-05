@@ -1,0 +1,18 @@
+{% extends "seapanapp/base.html" %}
+{% block content %}
+
+<h1> Search results for {{ query }} </h1>
+
+<!-- TODO: Dont dupe with index.htmlj -->
+
+{% if results %}
+<ul>
+    {% for q in results %}
+    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No results</p>
+{% endif %}
+
+{% endblock %}

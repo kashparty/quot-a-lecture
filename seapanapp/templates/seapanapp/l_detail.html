@@ -1,0 +1,14 @@
+{% extends "seapanapp/base.html" %}
+{% block content %}
+
+<a href="{{ l.to_url }}">
+    <h2> {{l.name}}</h2>
+</a>
+
+<ul>
+    {% for q in qs %}
+    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

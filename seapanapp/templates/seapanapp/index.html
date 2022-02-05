@@ -1,0 +1,14 @@
+{% extends "seapanapp/base.html" %}
+{% block content %}
+
+{% if latest_qs %}
+<ul>
+    {% for q in latest_qs %}
+    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Questions so far</p>
+{% endif %}
+
+{% endblock %}
