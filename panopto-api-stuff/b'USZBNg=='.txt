@@ -1,3 +1,5 @@
+ID: a8887cbe-fad4-4ae1-876c-ae3000c83d49
+Title: Q&A6
 Category: COMP40017 - Linear Algebra (Spring 2021-2022)
 Lecturer: Chiraag Lala
 All right. People in Zoom.

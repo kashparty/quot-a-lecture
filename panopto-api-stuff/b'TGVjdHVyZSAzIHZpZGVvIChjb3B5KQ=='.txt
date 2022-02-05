@@ -1,4 +1,6 @@
-Category: 
+ID: 0c2416e2-656e-4f23-904c-ae2901762e75
+Title: Lecture 3 video (copy)
+Category: COMP40005 - Introduction to Computer Architecture (Spring 2021-2022)
 Lecturer: Wayne Luk
 Let us start today with a new idea about memory addressing and how that can lead to the evolution of architectures in the last 70 80 years.
 0:02

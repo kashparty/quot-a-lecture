@@ -1,0 +1,604 @@
+ID: 7994b8ff-b2e8-497f-855b-ae2300e3adc4
+Title: Lecture 1: Introduction to Computer Architecture
+Category: COMP40005 - Introduction to Computer Architecture (Spring 2021-2022)
+Lecturer: Wayne Luk
+but it has certain components that are common to all the different architectures.
+0:08
+OK. And we'll have a look at those in a minute.
+0:14
+And this is the instruction set, which is relatively simple, but you could see later on we have something a bit more realistic,
+0:17
+but it still contains some of the characteristics of this particular instruction set.
+0:26
+So this is one of the latest architectures you might recognise.
+0:31
+It is Google's TPU Tensor Processing Unit.
+0:38
+Okay. Now, if you look at the box down here,
+0:45
+you'll see that the architecture is divided into components supporting different kinds of functions, such as inputs and outputs.
+0:51
+So the processing and control. So remember that we have something called ALU,
+1:00
+which you might remember is arithmetic and logic unit in the architecture you see in the introduction to Computer Systems course.
+1:09
+Now we look at this one as a whip, whereas the emu that doesn't seem to be an in this particular architecture.
+1:22
+Well, it turns out that the value is actually consists of this matrix unit and accumulators over here.
+1:32
+But why is that? Well, because.
+1:46
+General purpose architectures are good for different kinds of computation, but they may not be efficient for particular applications.
+1:51
+And the TFEU is designed to support deep learning application and Tonsley in deep learning.
+2:02
+So a lot of matrix multiplication. OK.
+2:09
+And what do they do?
+2:14
+Well, they actually put a component that is designed specially to support native fortification because that's what we need to speed up.
+2:15
+OK. So of course, matrix multiplication could be implemented on existing use.
+2:25
+It just took a long time. Okay.
+2:34
+So by having a specially designed component in the TPU, it can therefore be able to run deep learning applications very quickly.
+2:37
+And that is all but later on, we will see different kinds of such special components.
+2:49
+So for example, you look at that particular matrix multiplier.
+2:58
+It is not just a normal slow sequential matrix multiplier is a parallel pipeline matrix multiplier.
+3:03
+And sometimes this is called a historical rate. OK. Well, to differentiate.
+3:14
+But if you want to know more about systolic architectures, come to my custom computing course in two years.
+3:19
+Time for that. OK. So this is just an advertisement for two years now.
+3:26
+So let's go back to the challenge that if suddenly either your parents or your grannies,
+3:32
+or maybe some student studying aeronautics and they say, Oh, you're doing computing right?
+3:42
+You tell me, what is the computer? Can we find the simplest possible way of describing a computer?
+3:49
+Well, I guess the simplest thing is can be simpler than having two boxes, right?
+4:00
+OK, so we have two boxes. And obviously, the two boxes need to be connected.
+4:05
+OK. So what should that these two boxes?
+4:11
+Well, you probably could have guessed that a box on the left is the processor or the central processing unit CPU.
+4:14
+And on the right hand side is the memory clock that could be used to store both programmes.
+4:26
+But also the data. OK.
+4:35
+So you may say, well, this is the foundation of general purpose computers.
+4:40
+So computers were revolutionary because unlike previous calculation devices which were designed
+4:48
+to calculate particular computation of like not your calculator or the abacus or whatever.
+4:57
+OK. They're either developed relatively simple computations or they were designed to support particular calculation.
+5:05
+So a general purpose computer,
+5:19
+the really clever way is that because could different kinds of computation red-brick complex notation specified by a computer programme?
+5:23
+OK. So the genius of this architecture, which was first proposed by this person, COBOL Normal,
+5:34
+is that the instruction of that programme would be stored in the memory as well.
+5:42
+OK. And that is, if you like how it could be general purpose because the processor doesn't actually know what is happening,
+5:51
+it only knows the what needs to be executed at runtime when we go to the memory and factory instruction.
+6:01
+And it's not in a way you know all that in your introduction of computer systems.
+6:12
+But remember that this is the foundation of general purpose computation.
+6:19
+OK. But although this is a general purpose and could do everything, it doesn't mean that it could do particular things effectively.
+6:26
+OK. So there's always this trade-off that we could do things in general, but for a particular programme and of course,
+6:36
+what we care about, what really value those programmes that we want to.
+6:45
+To two runs in common.
+6:50
+OK, so for example, if you want to play games, if you want to communicate with somebody,
+6:54
+you don't really care all these other phone, you just want your particular programme to be fast enough and may be.
+7:00
+It may also reduce the power consumption. Otherwise, the battery runs out at the most exciting time.
+7:07
+Well, that would be very sad. OK, so the point of this general purpose architecture that I'm an architecture is that it is general,
+7:13
+but it may not be very efficient on running a particular programme.
+7:24
+And therefore what we want to do is to find ways to make that faster so we could put
+7:29
+in special hardware blocks like the multiplier in the CPU if we want to support,
+7:37
+for example, deep learning or any other kind of competition.
+7:42
+OK, so the inadequacy of this architecture sometimes is shown by having this relatively thin connexion between the two boxes.
+7:46
+OK. And it was sometimes called the one moment bottleneck because we need to go from the processor to the memory to fetch instructions,
+8:00
+and then we need to go back again and fetch the data to do the computation.
+8:11
+OK, so if there are ways we could remove this bottleneck, that could, for example, make things faster and also make it more efficient as well.
+8:15
+OK, now of course, we mustn't forget that there are also inputs and outputs and so on.
+8:26
+Well, I guess we should have a little bit of motivation.
+8:32
+Why do we want to study architecture?
+8:36
+OK, well, I guess one of the reasons why we are all here is that we want to do something exciting and architecture is one of the most exciting.
+8:40
+Puppets around because, well, it is really where the technology is.
+8:52
+OK. So while there are a lot of exciting development in languages and in theory and so on, which are obviously very important as well.
+8:57
+Ultimately, if you want to have a fast and effective computer, we need architecture.
+9:08
+Is this the foundation of the current civilisation, if you like without computers?
+9:15
+Well, I'm not sure what, what, what the world would be better.
+9:23
+Somebody might think, OK, so obviously is the foundation of computing, which is why we are here.
+9:28
+And there are also a lot of developments. If you think about the basic components of what implement the computer, the processor,
+9:38
+OK, you see that you go to the science museum not very far away from here.
+9:50
+You'll find that. The components for computation, the logic gates used to the this.
+9:58
+OK. And similarly, the foundational components for storage.
+10:10
+This is called the fifth floor, which I think you've come across last year.
+10:16
+Is this one of them? OK. No current computers useful should on the two.
+10:21
+Probably not a lot bigger than your fingernails. And they got millions of component transistors.
+10:31
+In fact, they go millions and billions of logic gates.
+10:40
+And it is really that increase in complexity in the last 40 years that it make the difference of what we have with it.
+10:45
+So we've have house five billion logic. Gates might be more now.
+10:59
+And what could be interesting is that this logic case could actually be programmable, so we could actually reprogramme this case.
+11:06
+So, for example, we might start with encase an all case, but later on,
+11:19
+if we want to turn and enter into a multiplier or in some of the components, we could reconfigure the function of this case.
+11:23
+And also, we could reconfigure the connexion of how these different guys are connected together to build a different view, for example.
+11:31
+OK. So the advance of programmable technology allows us to not just programme.
+11:41
+We programme the PO the the instructions targeting a particular processor,
+11:51
+but actually let us go to deeper into the hardware so that the hardware themselves can be reprogrammed.
+11:58
+OK. And that is something that is very exciting, that we are here to find ways to exploit these capabilities so that,
+12:06
+for example, we are working with the radio therapist so that we could analyse the medical images a lot faster.
+12:17
+Compare with what it's doing now in order to for the surgeons to do a better job in curing cancer, for example.
+12:29
+OK. So a lot of these things will be covered in more detail with different classes.
+12:39
+So I'm just here to give you a few, but all these architectural developments are not static.
+12:45
+These are no, this is not a course on archaeological archaeology. OK.
+12:53
+This is a close on something which is moving very fast.
+12:57
+So how do we really let the best of it understand the impact on all aspects of computer engineering and in the society?
+13:01
+And this is actually another example of how recent work has impact on cloud computing.
+13:14
+So these are some announcements which are actually a few years ago to say that both Amazon and also
+13:24
+Microsoft have put this accelerate this if programmable accelerators call FPGA esque in the cloud.
+13:33
+OK, so that whenever one come across certain deep learning computation,
+13:44
+we could programme this reconfigurable accelerators so that they could put this matrix multiply so historic
+13:52
+architectures so that we could do things a lot faster than what we could do on on a normal processor.
+14:00
+But we would need to cover, as usual, something a little bit more fundamental elements before we go into all the latest developments.
+14:11
+So there are also challenges in this call. So, for example, well, or you could see what we will look at in a few lectures time.
+14:26
+And that is if we want to support a real commercial instruction set, what would the data path looks like?
+14:36
+OK, well, this is one of them. Okay. So you would see that?
+14:47
+Well, they are actually quite a lot of Connexions have all these different blocks together.
+14:51
+So how can we understand that? OK, well. It turns out that the secret is that not all these components would be active all the time.
+14:58
+OK, so it turns out that when we run different instructions at different times,
+15:12
+then different components would be activated and therefore allow us to simplify and helping us understand how the system would work.
+15:20
+So this course would help you to understand the secret of how architectures like this would work out how to become successful.
+15:33
+Well, come to the letters, either online or in person.
+15:47
+Also, take part in your tutorials.
+15:52
+So organisation is that since we're all here, my proposal is that we will do a double lecture every Monday and Thursday CPA.
+15:55
+We will then have a tutorial. I will still be here. But since many people could not be here, they will also be online support for the tutorials.
+16:09
+And then we'll obviously have a look at the notes. So his slide has a version with notes in there that explains the material a bit more detail.
+16:23
+So have a look at that table because textbook,
+16:37
+which I'll explain in a minute and then try the exercises that will be provided for the tutorial without reading the answers.
+16:40
+OK, so the answers the solutions will be given in a week's time.
+16:51
+OK, so try them out because the whole point of those exercises is to help you to digest the material.
+16:56
+So exercise those questions all easy when you have the solutions next to them.
+17:05
+OK, but of course, during the assessment, there will be any solutions for next to them.
+17:12
+So we will need to form the habit of thinking and digesting the material for this is not going to be very difficult.
+17:19
+OK? And he's always house if you have someone to discuss with.
+17:29
+So if you have some friends living in the same residential halls or sharing a particular apartment,
+17:36
+if they are doing the same course, then be useful to discuss with them for the exercises and so on.
+17:48
+The most important thing is make sure that if it is a serious close book,
+17:55
+is still fun to discuss to make sure that when you write up, please make sure you write up independently.
+18:00
+OK. In the past, the students who shared this written solution as well and that could be seen to be paid.
+18:07
+And that would not be very, very good.
+18:19
+Yes. When will the exercises show up to assess?
+18:23
+Coursework would be given out maybe next week or the week after you would have at least two weeks to finish the assessed coursework,
+18:28
+and then it would also be returned to you after two weeks.
+18:43
+I mean, certainly for this course on cases like no published normally.
+18:47
+So when you're going through each subject, you can see like what we have.
+18:54
+We have work for this course. We can't see that.
+19:00
+It's just like A. Are you saying that this hasn't been put on yet or is that right?
+19:05
+Yeah. I'm just trying to make sure that we select would be the best time that will minimise the clash with other cosmic cases.
+19:14
+So we'll be there in due course. So there will be some somewhere that is likely to be I think they'll be around early, early February.
+19:26
+OK, any other questions at this time? So and also, it helps to explain ideas to non-specialists.
+19:38
+OK, so if you've got friends doing the kind of engineering or aeronautics?
+19:51
+Well, you know, you could try to explain what is computer to them, and they could try to explain how things fly or other exciting things.
+19:57
+And what this does is it's so easy to figure out the latest advances using Google and so on.
+20:07
+So it is try something like yourself and find out what are the latest developments.
+20:15
+So this is the plan for this particular module.
+20:21
+And you could see that at least for part one of the course, I will do a double lecture on Monday and then when our first would be exercises.
+20:26
+So what is the course textbook? Well, it's unfortunate, but it is block block the part of the site,
+20:41
+but you're going to see it on audio machine that it is a very popular textbook by Hennessey and Patterson.
+20:48
+And if you want to know what they look like, here's what they look like.
+20:59
+Actually, many years ago, actually 20 years ago, because I remember I took this picture in two thousand and two, so.
+21:04
+So this is probably one of the most widely used textbook.
+21:18
+And it is actually covering many of the key concepts very clearly.
+21:24
+And I think many of you would be able to get a copy.
+21:32
+Someone told me that they find something on the internet as well. And you could try using Google to see what you could find.
+21:39
+So the first edition is sufficient to follow this course or part one of this, OK?
+21:48
+It turns out that the sixth edition is now also available, and you could use as a reference.
+21:56
+But the fifth edition is good enough. There are also additional material like the Appendices and so on.
+22:02
+Does this actually in the course homepage? OK. So I hope you all know the length of the consultation with all the latest preferences and so on.
+22:11
+Copy of the slides and the notes would all be that.
+22:21
+We also have comparisons between different architectures, and we were talk about that flexibility more in the next lecture.
+22:25
+So what is architecture? Well, I think what we know about this already, it is the instruction set architecture,
+22:36
+which obviously covers how the instruction set is designed and also the machine organisation.
+22:44
+That's the part that particular instructions.
+22:52
+OK, so I see examples well, most of the current laptops for at least desktops will probably based on the well-known x86 architecture,
+22:55
+which is actually a relatively complex instruction set, but they're also less well known.
+23:11
+But why do you use instruction set, for example,
+23:18
+those for the processes that might be present in your mobile phone or even in your washing machine or perhaps of shoes these days?
+23:22
+OK, so there are questions. What are the advantages and disadvantages?
+23:33
+If we have a complex instructions versus simple instructions, how can we have specialised instructions to support particular operations like?
+23:40
+Going back to the matrix for the casing, for deep learning and so on?
+23:51
+And then how do we choose implementation of such instructions?
+23:56
+OK, so so it's actually an architecture could be seen to be the interface from the software applications to the hardware implementations.
+24:00
+And I think if you look back at the computer systems course, you'll have a picture of pretty much similar to this.
+24:12
+OK. So what we'll focus on is why do we have simple instruction and the architectures and also comparatively complex instruction?
+24:21
+So we have complex instruction architectures, and you can imagine that instructions are more complex.
+24:37
+Typically, they could do more, OK,
+24:44
+and therefore the actual instructions no instructions for a given programme would be fewer OK because its instruction is more powerful.
+24:48
+Now, in contrast, reduced instruction would well, as the name suggests, consists of simpler instructions,
+25:01
+but it might mean that if we want to do more complex operations, then we might need multiple of these simpler instructions.
+25:12
+OK, so it might also mean that if the instruction themselves are simpler, the compiler will need to be smarter.
+25:21
+OK, so we want to map horrible languages, programming languages into this reduce instructions.
+25:32
+The compiler needs to be smarter in order to figure out how to map relatively
+25:40
+complex operations using multiple of these reduced instruction set architecture.
+25:45
+OK, now, but let me read about it and then we'll talk more about this.
+25:54
+Is that that's a good imagine when the instructions are simpler, the architecture supporting it would also be simpler.
+25:59
+And therefore, when a machine is simpler, typically it could be run faster.
+26:06
+OK? That's obviously a good thing. And secondly, if it is simpler, then it would also be easier to redesign to catch up with the latest technology.
+26:13
+Also redesigned to support particular operations and so on.
+26:26
+So simplicity obviously has advantages. And we look more about that later.
+26:29
+So let's look at a particular instruction set for this.
+26:37
+We choose instruction set computer, you know, a bit more detail, so we will look at the instruction set of a protocol MIPS.
+26:43
+OK. And what I'm going to describe. You could find in more detail in the course textbook, which I just described.
+26:54
+You know, the pages I put in there pay 60 to 220, so have a look at those.
+27:04
+So what the what is the components of instruction?
+27:10
+Well, we could break them instruction into two parts. Part one part is the opcode.
+27:17
+OK, we specify what he does. And then there's also the upper end, which corresponds to the data on which the operation would be useless.
+27:22
+OK. So the good news is that for the MIPS architecture, because it is in reduced instruction, set system is in the risk in owning, at least for now.
+27:37
+It only has three main kinds of instructions and they are called I and J.
+27:52
+OK. And that really correspond to the principle of designing this resistance,
+27:59
+which is how to have good performance because it's simple and also it's easy to implement in the resulting architecture.
+28:06
+OK. So we'll have a look at how this MIPS processor would illustrate its design principles.
+28:16
+Well, you might say, well, we never heard of MIPS. OK, where are they?
+28:24
+Well, if you happen to have your DVD or even in some of the mobile phones or some of the printers,
+28:28
+you could actually find MIPS processors in, some of these systems might not be the most popular ones.
+28:41
+But because the MIPS instruction set is probably one of the simplest, we'll make use of it.
+28:52
+Rather than describing other risk architectures, for example, like the arm, which is also very popular, but a lot of the ideas are pretty similar.
+29:00
+And in fact, I think there is a version of this book for I think I'm not entirely sure,
+29:13
+but but they actually be rewriting this book to support different kinds of instruction sets.
+29:21
+So what are the details of the MIPS architecture?
+29:28
+Well, it really fits with folate, so we've got 32 references.
+29:34
+OK? And it's labelled zero two.
+29:38
+Thirty one and zero is usually wired to the Content zero, while the other 31 registers general purpose with the use of anything,
+29:40
+and it's sometimes called the Register Register architecture or low store architecture.
+29:51
+OK, well, why is this? Well, because it got special instructions to cut a load and salt so low means loading information
+29:58
+from the memory into the CPU and stored means storing values from the CPU to the member.
+30:12
+OK, so let's think about why we want to do that.
+30:20
+OK. One of the reasons is that the bare bones of silicon technology is much faster than the advance of memory or storage technology.
+30:27
+OK, so what we could do is a lot faster on the CPU than in the memory and in fact, that it seems to be getting larger.
+30:45
+OK. So what it means is that the cost and if you like that is one of the manifestation of the one it.
+30:57
+OK, so it's up to is the cost of getting data from the storage on the memory into the processor that could dictate the speed of the whole programme.
+31:09
+OK. So you can imagine how could we overcome this restriction?
+31:22
+Well, it would mean that we would try to minimise the amount of interaction with the memory.
+31:28
+OK, so if you have special instructions for storing and loading the data?
+31:37
+OK, we'll try to use them as little as we possibly could.
+31:45
+So once we get data from the memory into the CPU, then we have instructions on device memories on the CPU, which I'm sure you know, registers.
+31:50
+OK, so represents a very fast memory in the city.
+32:06
+You? OK. So once we got that,
+32:10
+then we could use this instruction specialised for operations on the registers to
+32:13
+do as much as we possibly could before we saw the result back into the memory.
+32:19
+OK. So this is the idea of minimising memory access in order to address this gap between the speed of the CPU and the speed of the memory.
+32:26
+So let's have a look at the first kind of instruction, which is called the all time.
+32:40
+OK. So the output, the name all comes from the fact that it deals with just this.
+32:46
+OK, so all Typekit instruction typically arithmetic operations, comparisons, logical additions, subtractions and so on.
+32:54
+So the former, as you can see, is shown in the diagram there.
+33:08
+So the first six bits of MIPS instruction would always be the code.
+33:13
+OK. And now you're like immediate as well, the set limit, the number of instructions that we have.
+33:22
+Obviously, the answer is yes, right, because it could only have to do the six number of instructions for this particular architecture.
+33:30
+But there is a trick that we will look at in a minute that allow us to have more instructions where we are dealing with our type in Brussels.
+33:41
+OK, so we have the 60.00 and then we have hybrids.
+33:52
+So remember, we have 32 registers. Therefore, five percent is sufficient.
+33:57
+So we have five, two or five in what we call field, which correspond to specifying where the source registers four for one operation will come from.
+34:02
+OK, so we assume that operation would take two inputs and that corresponds to Force one and Source three over here.
+34:17
+OK. So one and Force two. And then also we have another five bits that specify the destination register.
+34:27
+So update operations where we call, which registered, we used to store the results and then for operations that involve shifting their
+34:38
+standard of five bits to specify how much shifting we need to carry out your life.
+34:49
+Well, there are still six small bits at the end of this instruction.
+34:56
+OK, so this six bits can be used to specify different types of all type instruction.
+35:03
+OK. So it is a little bit like extending the number of instructions that the output support, not just for the optical ones.
+35:12
+Look at the object. You could also look at the six bits of yet to figure out, for example, there should be an addition or subtraction or whatever.
+35:24
+It would also depend on the last six bits as well.
+35:33
+And then we have the time I usually stands for immediate could cut the memory, access branches and so on.
+35:39
+OK. So if we are dealing with memory access, it looks a bit like that.
+35:48
+And you probably could understand what I put over there.
+35:56
+That low dollar, a stock broker thought 19 means that we go to the many locations specified by a start, which is the 16 bits constant.
+36:02
+OK. And then we take this 16 bit constant, plus the value store in register nine, she specified by the source register.
+36:19
+OK, and the sum of these two things then become the address, but then it actually can be a constant.
+36:31
+OK, that that we want to know it.
+36:42
+OK? And then the result would be still in the register given by the destinations.
+36:48
+OK, so this is the memory access instruction, which is the allow instructions.
+36:56
+It goes into memory. Figure out what is in the particular address and then get the contents into the register.
+37:04
+Eight. OK. And you could also do arithmetic with the type as well.
+37:15
+OK. So please do not confuse.
+37:21
+The only all type can do arithmetic. So I type, although the arithmetic because it could do arithmetic with a constant so in the 16 bits that.
+37:25
+OK. And then the last one, the genotype is very simple.
+37:38
+Yes. No further than 16 between the.
+37:45
+So if the council is greater than 60, OK, yes, if it's been on 60 Minutes,
+37:51
+then we'll need to have a way to extend it to be 32 bits in order to carry out that operation.
+37:57
+OK, so have you come across an operation coastline extension if you haven't?
+38:06
+Well, I will look it up. I could explain that a little bit more to you.
+38:14
+So all this means is that you would take the most adapted bits, for example, for that 16 bits and you just replicate the size.
+38:19
+OK? And you'll find that if it is a tools come from a number. If you were to replicate the most that it is still the same value.
+38:29
+It was like adding zeros to the most. A little bit of a unsealing them.
+38:37
+OK. OK, so but stay tight for Jones.
+38:45
+Very simple. We just have a Toyota. So this expense that you could jump to the places in memory, that's for instructions.
+38:50
+OK, now notice that memory is usually arranged to be addressed in bytes.
+39:01
+OK. And since instructions are 32 bits, therefore for bytes will cover each instruction and therefore its instruction.
+39:13
+But if they are still from memory location zero, then it's associated with stuff a memory zero, memory for memory eight and so on.
+39:26
+OK. Because for bytes, we will cover each instruction.
+39:35
+And then there are also variation of this from instruction because you could have common link which like doing a function call.
+39:43
+OK, so once you go in there, you do various things and then you encounter another instruction you could just go back to where you started so well.
+39:53
+There is this simple example, which I'm not going to go into detail.
+40:05
+It just demonstrates how one could translate the if then else into the corresponding instruction that that you just see over that.
+40:08
+OK, well, you so say well, because we only have 60 full instructions.
+40:18
+Two to the six. OK. So the number of instructions in this particular MIPS architecture is relatively limited.
+40:28
+So, for example, there are only two conditional branches. These instructions are any branch not equal and be equal fun.
+40:36
+So for certain kinds of computation, but branching and so on, we actually need additional instruction to do that.
+40:48
+OK. So for example, there is this L2 instruction, which is called set on lesson.
+40:59
+OK, so it depends on the value of to a given registers.
+41:08
+Then a third register will either be one or zero.
+41:15
+OK. And therefore, we could implement this front just jumping by having two instruction.
+41:20
+We just do the comparison by the SoC instruction and then we could then do the branch using the DNA of each instruction.
+41:27
+OK. So again, this it is really the principle of trade-off.
+41:36
+But when we have relatively simple instructions, then we might actually the multiple of them.
+41:40
+And this is an example, and that example is where we need to load values to a particular register.
+41:47
+We might again need to do it using tool instructions rather than a single one.
+41:55
+OK. So again, this is really again the same principle.
+42:00
+OK. So I think this is what we have for the first lecture, so I'll propose that we'll have address and we will restart a five plus.
+42:05

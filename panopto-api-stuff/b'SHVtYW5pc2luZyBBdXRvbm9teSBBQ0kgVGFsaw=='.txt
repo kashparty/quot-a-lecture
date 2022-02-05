@@ -1,3 +1,5 @@
+ID: d802f98f-f0da-46da-9e6b-ae2f00fb9feb
+Title: Humanising Autonomy ACI Talk
 Category: Applications of Computing in Industry (ACI) Talks
 Lecturer: Tom Curtin
 So, OK, Tom. There we go. OK, so welcome everybody to today's applications of computing in an industry seminar.

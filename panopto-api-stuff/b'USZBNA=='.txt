@@ -1,3 +1,5 @@
+ID: e4fa30e4-94ff-433c-a3f7-ae2900c71a4c
+Title: Q&A4
 Category: COMP40017 - Linear Algebra (Spring 2021-2022)
 Lecturer: Chiraag Lala
 You have to make sure that it's not just that we would actually look at all these things.

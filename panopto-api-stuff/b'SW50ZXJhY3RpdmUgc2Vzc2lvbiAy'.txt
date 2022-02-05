@@ -1,4 +1,6 @@
-Category: 
+ID: 7a564f0c-d5af-468a-8f79-ae2a00b7b57d
+Title: Interactive session 2
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
 Lecturer: Iain Phillips
 Is that better on seeing the board? Oh, I think it's not, that's not no good at all.
 0:43

@@ -1,3 +1,5 @@
+ID: fb527d9c-db2d-438f-9d48-ae3100b78f0d
+Title: Interactive session 3
 Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
 Lecturer: Iain Phillips
 Right some Can people who are remote can they hear me.

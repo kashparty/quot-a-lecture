@@ -7,6 +7,7 @@ from urllib.request import urlopen
 from base64 import b64encode
 from hashlib import sha256
 from lxml import html
+from SiyaDateConverter import daysAgo
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -24,7 +25,7 @@ login_url = "https://office.imperial.ac.uk/"
 
 url = "https://imperial.cloud.panopto.eu/Panopto"
 
-url_show250 = "https://imperial.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#isSharedWithMe=true&maxResults=250"
+show250 = "/Pages/Sessions/List.aspx#isSharedWithMe=true&maxResults=250"
 
 url_template = "https://{0}/Panopto"
 
@@ -34,7 +35,7 @@ def main(show_browser=True):
     chrome_options = Options()
     if not show_browser:
         chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--window-size=%s" % "1920, 1080")
+    chrome_options.add_argument("--window-size=%s" % "2560, 1600")
     driver = webdriver.Chrome(executable_path="chromedriver97.exe", chrome_options=chrome_options)
     sign_in(driver, domain)
     print("Downloading lecture transcripts...")
@@ -44,6 +45,8 @@ def main(show_browser=True):
 
 def save_transcript(driver, video_url):
     driver.get(video_url)
+    video_id = video_url.split("=")[1]
+    print("Downloading transcript from video with id: " + video_id)
     time.sleep(5)
     folder = driver.find_element_by_id("parentName").text
     driver.find_element_by_id("detailsTabHeader").click()
@@ -54,19 +57,20 @@ def save_transcript(driver, video_url):
     captions = driver.find_element_by_id("transcriptTabPane").find_element_by_class_name(
         "event-tab-list").find_elements_by_class_name("index-event ")
     title = driver.find_element_by_id("deliveryTitle").text
-    print("Downloading transcript from: " + title)
+    print("Title is: " + title)
     print("There are: " + str(len(captions)) + " caption lines.")
-    transcript = "Category: {0}\nLecturer: {1}\n".format(folder, lecturer) + "\n".join(
-        map(lambda e: e.find_element_by_class_name("event-text").find_element_by_tag_name(
-            "span").text + "\n" + e.find_element_by_class_name("event-time").text, captions))
-    file = open(title + ".txt", "w")
+    transcript = "ID: {0}\nTitle: {1}\nCategory: {2}\nLecturer: {3}\n".format(video_id, title, folder, lecturer) + \
+                 "\n".join(map(lambda e: e.find_element_by_class_name("event-text").find_element_by_tag_name(
+                     "span").text + "\n" + e.find_element_by_class_name("event-time").text, captions))
+    file_path = str(b64encode(bytes(title, encoding="utf8")))
+    file = open(file_path + ".txt", "w")
     file.write(transcript)
     file.close()
-    print("Saved to " + title + ".txt")
+    print("Saved to " + file_path + ".txt")
 
 
 def get_video_links(driver, domain):
-    driver.get("https://{0}/Panopto".format(domain))
+    driver.get("https://{0}/Panopto".format(domain) + show250)
     time.sleep(10)
     return list(map(lambda e: e.get_attribute("href"),
                     driver.find_element_by_id("detailsTable").find_elements_by_class_name("thumbnail-link")))
