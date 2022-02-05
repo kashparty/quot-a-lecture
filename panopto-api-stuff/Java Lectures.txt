@@ -1,3 +1,5 @@
+Category: Java
+Lecturer: Alastair Donaldson
 By the way, do you know where we can access these PowerPoint slides?
 0:02
 So the slides are all available on the materials website and they should all be up to date.
