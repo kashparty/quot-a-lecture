@@ -1,0 +1,9 @@
+{% if latest_qs %}
+<ul>
+    {% for q in latest_qs %}
+    <li><a href="/app/q/{{ q.id }}/"> {{ q.question }} </a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Questions so far</p>
+{% endif %}
