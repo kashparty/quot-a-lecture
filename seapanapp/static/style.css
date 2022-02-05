@@ -1,0 +1,13 @@
+body {
+    font-family: verdana, arial, sans-serif, helvetica;
+    background: #e3e3e3;
+}
+
+#root {
+  width: 810px;
+  max-width: 100%;
+}
+
+main {
+  background: white;
+}

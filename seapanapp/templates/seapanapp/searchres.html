@@ -1,14 +1,18 @@
 {% extends "seapanapp/base.html" %}
 {% block content %}
 
-{% if latest_qs %}
+<h1> Search results for {{ query }} </h1>
+
+<!-- TODO: Dont dupe with index.htmlj -->
+
+{% if results %}
 <ul>
-    {% for q in latest_qs %}
+    {% for q in results %}
     <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
     {% endfor %}
 </ul>
 {% else %}
-<p>No Questions so far</p>
+<p>No results</p>
 {% endif %}
 
 {% endblock %}
