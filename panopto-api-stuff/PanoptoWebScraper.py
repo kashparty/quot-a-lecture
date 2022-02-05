@@ -17,6 +17,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
 
+from datetime import datetime
+
 import time
 
 from getpass import getpass
@@ -32,15 +34,19 @@ url_template = "https://{0}/Panopto"
 
 def main(show_browser=True):
     domain = input("Enter Panopto domain (e.g: imperial.cloud.panopto.eu): ")
+    if domain == "":
+        domain = "imperial.cloud.panopto.eu"
     chrome_options = Options()
+    chrome_options.add_argument("--window-size=%s" % "2560,1600")
     if not show_browser:
         chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--window-size=%s" % "2560, 1600")
     driver = webdriver.Chrome(executable_path="chromedriver97.exe", chrome_options=chrome_options)
     sign_in(driver, domain)
     print("Downloading lecture transcripts...")
-    for vid_url in get_video_links(driver, domain):
-        save_transcript(driver, vid_url[0], vid_url[1])
+    vid_links = get_video_links(driver, domain)
+    print(str(len(vid_links)) + " transcripts to download.")
+    for vid_url, date in vid_links:
+        save_transcript(driver, vid_url, date)
 
 
 def save_transcript(driver, video_url, date):
@@ -59,21 +65,37 @@ def save_transcript(driver, video_url, date):
     title = driver.find_element_by_id("deliveryTitle").text
     print("Title is: " + title)
     print("There are: " + str(len(captions)) + " caption lines.")
-    transcript = "ID: {0}\nTitle: {1}\nCategory: {2}\nLecturer: {3}\n".format(video_id, title, folder, lecturer) + \
+    transcript = "ID: {0}\nTitle: {1}\nCategory: {2}\nLecturer: {3}\nDate: {4}\n".format(video_id, title, folder, lecturer, date) + \
                  "\n".join(map(lambda e: e.find_element_by_class_name("event-text").find_element_by_tag_name(
                      "span").text + "\n" + e.find_element_by_class_name("event-time").text, captions))
-    file_path = str(b64encode(bytes(title, encoding="utf8")))
+    file_path = video_id
     file = open(file_path + ".txt", "w")
     file.write(transcript)
     file.close()
     print("Saved to " + file_path + ".txt")
 
 
+def convert_date_time(date_time):
+    date_time = date_time.split(" ")
+    date = date_time[1]
+    # Can easily modify later if want time as well
+    return datetime.strptime(date, "%m/%d/%Y").strftime("%d/%m/%y")
+
+
 def get_video_links(driver, domain):
     driver.get("https://{0}/Panopto".format(domain) + show250)
     time.sleep(10)
-    return list(map(lambda e: e.find_element_by_class_name("thumbnail-link").get_attribute("href"), e.,
-                    driver.find_element_by_id("detailsTable").find_elements_by_class_name("thumbnail-row draggable")))
+    # Returns a list of (url, date) pairs
+    table = driver.find_element_by_id("detailsTable")
+    print(list(map(lambda e: e.find_element_by_tag_name("span").get_attribute("title"),
+                        table.find_elements_by_class_name("date-info"))))
+    #print(len(list(map(lambda e: convert_date_time(e.find_element_by_tag_name("span").get_attribute("title")),
+    #                    table.find_elements_by_class_name("date-info")))))
+    return list(zip(map(lambda e: e.get_attribute("href"),
+                        table.find_elements_by_class_name("thumbnail-link")),
+                    map(lambda e: convert_date_time(e.find_element_by_tag_name("span").get_attribute("title")),
+                        table.find_elements_by_class_name("date-info"))
+                    ))
 
 
 def sign_in(driver, domain):
@@ -91,7 +113,7 @@ def sign_in(driver, domain):
 
 input("Enter to start")
 try:
-    main(show_browser=False)
+    main(show_browser=True)
 except Exception as error:
     print(error)
 input("End of program!")
