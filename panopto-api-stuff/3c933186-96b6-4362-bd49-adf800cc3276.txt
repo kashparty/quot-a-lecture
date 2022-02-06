@@ -1,0 +1,257 @@
+ID: 3c933186-96b6-4362-bd49-adf800cc3276
+Title: idb-topic-19-normalisation
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+In this topic, we look at normalisation, which is the process of using functional dependencies to identify what is a good
+0:02
+relational schema and on bad relational schemas into good relational schemas.
+0:10
+First of all, let's review the bank data schema that I described before, which had many problems in terms of the functional dependency has.
+0:17
+And if you identify the functional dependencies in the schema and take the minimal cover of them,
+0:27
+you'll discover that the middle number is directly determining T type amount and no number is determining the type C named rate and so code.
+0:33
+So code determines be name cache would be named at open source code.
+0:44
+And I thought you didn't hear that. After some analysis, we find that the C name and type together can determine the account number,
+0:48
+i.e. each customer can't have more than one of the same type of account.
+0:55
+So if we have these functional dependencies analysed for our universe of discourse at the moment,
+1:01
+the schema is corresponding to these functional dependencies holding and then want to identify if I've got a good schema or not.
+1:06
+A first normal form has been proposed many years ago in this state, simply that every attribute depends on the key.
+1:18
+So, for example, schema, the question is, is it in first normal form or not?
+1:25
+The most popular answer to this is it's true. It is in third normal form and indeed it is in third normal form.
+1:34
+And that's because if I take my Ph.D. and form the closure with MIT,
+1:42
+it does determine all the attributes of the relation and hence the relation meets the rule for being in first normal form.
+1:47
+And of course, since I've already justified the bank data isn't a good structure of my information.
+1:55
+It shows that first normal form isn't good at sentiment.
+2:00
+If I've got a good structure of my relational database here, of course, an example is in customer form.
+2:04
+But the data isn't well-structured through something called second normal form, but that's simply not very good at identifying good schemas.
+2:10
+So I'm going to move on to talk about third. On the fourth of a term form, I need to introduce the notion of prime and non-prime attributes.
+2:18
+A prime attribute is one that takes part in some minimal candidate key.
+2:29
+And if I identify all the prime attributes of our election,
+2:35
+then the other attributes which don't take part in any candidate keys are called non-prime attributes.
+2:39
+Go back to my bank dates, for example, I've got the functional dependencies listed here again.
+2:46
+And from it, I can work out the 90s. In fact, the only minimal candidate key of the relation and therefore the only prime attribute of bank data is.
+2:52
+And all the other attributes are non-prime attributes.
+3:04
+Things are a little bit more complicated when you have alternative candidate keys, and that's the subject, this quiz question,
+3:09
+well, you need to work out what the alternative kind of keys is before you can determine what are the non-Prime attributes?
+3:15
+The most popular answer is D, and that is the correct answer.
+3:26
+As I hinted, we need to, first of all, identify the cards that keys one of them is quite easy to spot.
+3:32
+If you look at a determined B, C and E, you can quickly form a closure.
+3:38
+You covered all the attributes because C determines D two and indeed the set determined by A.
+3:43
+And also we have a B and D together determining F and hence font.
+3:50
+I can determine all the attributes of the relation. Then noticing BP determines a since Eisa can be key.
+3:58
+So must be a big chance, they key. And since AEF determines be effectively substitute, be here for aeons to get the Earth as a candidate key.
+4:07
+So I have tons of candidate keys on a BP or.
+4:19
+Therefore, the set of prime attributes is a, b, e and F that needs me C and D as being the non-prime attributes of the relation.
+4:26
+Now, to make sense of the definition of normal for the size of the nation is in her normal form.
+4:37
+If every non-trivial functional dependency has either X as a Super G or an attribute a as a prime on the right hand side,
+4:43
+roughly speaking, we can say this says that every none key attribute depends on the key, the whole key and nothing about the key.
+4:55
+Let's go back to the bank dates, for example, and given the functional dependencies apart from the mid one,
+5:03
+the left hand side all have none key attributes on the left hand side and none, none prior attributes on the right hand side.
+5:11
+We have four instances of third normal form being broken,
+5:22
+and so now we have at least something which corresponds with our notion of a good or bad relational schema in this particular example.
+5:27
+Because bank data is well structured and it's failing to be inferred normal for.
+5:36
+Let's try a quick question based on this, and it's about identifying which of these decomp positions is not in a third normal form.
+5:44
+And notice that this is the same relation and the same functional dependencies as you had in Quiz two.
+5:52
+So we've already worked out what other prime and non-prime attributes.
+5:58
+Well, opinions are fairly evenly split about which is the best answer.
+6:07
+And in fact, a is the correct one.
+6:11
+And the reason why a fails to be in third normal form is relation to which has as its candidate, a key either A or B e both of those in that.
+6:15
+But and therefore has C and D as non-prime attributes.
+6:29
+And because C determines D, we've got on the left hand side a nun and a nun super key.
+6:36
+And on the right hand side, a non-prime attribute and so forth are to see determines the breaks for normal form.
+6:44
+For all the other cases when you go for it, you'll notice that the third normal form is not broken.
+6:52
+This does take our frequency as a random example that does not break third
+6:59
+normal form because b d is a key of three does not kill the original relation,
+7:05
+but it is a key of the decomposed relation and therefore we have prime a key determining the non key attributes of our free.
+7:11
+Third, normal form was for a while thought to be a very useful form, but there are some cases where you have problems updating the database,
+7:28
+and so it was elaborated upon to build a new normal form called be called normal form.
+7:37
+And this changes the definition to slightly to say that for every non-trivial functional dependency,
+7:44
+you must have a key or super key on the left hand side.
+7:51
+And this can be paraphrased as saying that every attribute depends on the key, the whole key and nothing but the key.
+7:57
+Taking a schema where we have a branch account and movement with the functional dependencies,
+8:08
+Saltcoats terminals be named cash and we have some dependencies, no, the terminal type C number two.
+8:15
+So code and we have an independent to trade number and amount.
+8:21
+We see that all of the relations are in normal form and indeed is in third normal form.
+8:27
+Have not identified these different to normal forms, and the fact that sometimes a schema is in a normal form is sometimes not.
+8:38
+We need a method of decomposing the relations into to be the third normal form or the most common form.
+8:46
+The algorithms for that would be the subject of the next topic, but for the moment, we need some principles about how we can do decomposition,
+8:57
+and that focuses around this notion of a lossless join decomposition of a relation.
+9:06
+And the principle of lossless joint decomposition is if I take the relation and decompose it into a separation,
+9:13
+I find that the attributes of the original relation are found in the union of the attributes of the populations.
+9:20
+And then for all possible extents of the original relation, it's possible to rebuild by projecting down onto the sublimation,
+9:29
+the attributes of all and then joining them back together.
+9:40
+That's quite a complicated thing, and I will go for that in that and in some examples, but taken a example of the bank data, which is in a bad state.
+9:44
+And you'll recall, is that not in the third normal form? And I want to build a database where it is in a normal form.
+9:56
+What I need to do is consider how I can decompose it and decompose it.
+10:05
+I look at my functional dependencies and work out how I can structure the information into sovereign nations.
+10:10
+And let's suppose I decompose it by choosing source code, name and cache to go to branch number type C named right.
+10:18
+And so that's going to count. Am I the amount? No, I'm trying to go into movement.
+10:26
+Well, if you consider various extents of the data, you'll be able to see that for any data insert into bank data,
+10:33
+you'll be able to project out into these sub relations and build it back again from joined together for those populations.
+10:41
+Let's go through a couple of examples to see when we do and don't have this property in particular,
+10:50
+where we lose or don't have a loss of this joint decomposition.
+10:56
+Let's say after the relation, all these attributes A, B, C and D and two functional tendencies.
+11:01
+He determines B and B determined C D.
+11:08
+Let's just suppose I chose to decompose all into relation all one, not to where I have a B and C, our one and C and D in R two.
+11:12
+Now this. Meets the property that all the attributes of the original relation are found in separate nations,
+11:24
+but it has a problem with the process of taking the original data projects down to the SAP relations and joining back together.
+11:32
+And it does depend on what data you have. That's just suppose I start off with two rows in all which would project down as shown into the subrogation.
+11:41
+So take the first row because I've got one, one, two and six as the values of the different attributes.
+11:51
+The one one, two of eight B and C going to R one and the two and six go into two.
+11:59
+And if I joined together these two tables, I get back the original data.
+12:06
+So so far it looks like I've got a lost joined decomposition. I don't want to row and things suddenly go wrong,
+12:11
+projecting down who always works in terms of I can put the data into the sovereign
+12:21
+nations as the process of joining those populations back together means I get,
+12:25
+in this case, something that does not contain the same data as the original nation.
+12:30
+And the reason why that is. It's because the two nations only share at sea.
+12:37
+And in this case, the value of three appears in two rows of the original relation.
+12:44
+And that means the second row of our one can join with both.
+12:52
+The second row of our two and the third rows are two.
+12:56
+And the third row of our one can join with both the second row of ATA and third row of ATA two.
+13:00
+And of course, I don't want that to happen because in the original relations, the second and third row have nothing to do with each other.
+13:08
+So I end up with this problem that I've got free with five and free with four in two cases where
+13:16
+I have the different values that belong to the very and be for the second and third rows.
+13:25
+The reason why this has occurred is because there's no functional dependency for determining anything and therefore have no way of doing things back,
+13:33
+so I get particular values of deep. And to make decomposition work, you need to, in essence, decompose on the functional dependencies.
+13:43
+And that's going to be the subject of the work sheet for this.
+13:53
+But before the worksheet, let's try and work out what is a not a loss the decomposition of AH.
+13:57
+And as a hint, you should be thinking about this idea of decomposing relations on functional tendencies.
+14:05
+So the sub relations are connected to the super relation via a key or a left hand side of a functional dependency.
+14:11
+Well, opinions are rather mixed, must be is not a popular answer.
+14:28
+In fact, D is the correct answer about something which is not a lossless joined decomposition of the original relation.
+14:32
+And the problem with D is all about one and are to notice that only sharing attributes E and therefore we might join them together.
+14:42
+I need something that would, depending on which way I want to look at it,
+14:54
+either determines for me a particular B and F or determines from a particular A and C so that in the combined are one and two tables.
+14:58
+I guess that matching values for all the experts together and go back to my original functional dependencies, I find no such dependency.
+15:11
+Whereas taking, for example, a B as an example, C does determine D,
+15:23
+so we're not goin back out to into one, I guess, particular values of D for any C value I find in R one.
+15:28
+And by that argument, of course, c the R two relation in C, it also c can join back to our one.
+15:39
+Then looking at the b t f relation I have here because of the B D two term is f when I have been
+15:47
+d in our free joining with the joint of one and two have particular B and D pairs together,
+15:55
+which would then determine the F value and hence that's why one can be joined back into hard to answer a.
+16:04
+OK, the worksheets now is all about performing these lossless jointly compositions and what you need to
+16:14
+be thinking about is can I use functional tendencies to get the relations back together or not?
+16:20

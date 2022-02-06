@@ -1,0 +1,191 @@
+ID: 5d3ccb41-6a00-44f6-87b7-ae16010724de
+Title: 2.2 Euler paths
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 23/01/2021
+So now I want to talk about the curling iceberg bridge problem,
+0:01
+which is the original problem in graph theory where graph theory all started back in the 18th century.
+0:06
+So Koenigsberg is a town in. It's now in Russia.
+0:14
+It was back in East Prussia back then. And it has the following geography.
+0:18
+You've got two rivers coming in from the right and a confluence here at Koenigsberg, now known as Kaliningrad.
+0:24
+And you've got the area between the Two Rivers, Maria three.
+0:31
+Then you've got the north and the south banks here, one and four. And then there's an island here, area two.
+0:36
+And you've got these bridges marked in red. And the inhabitants of Koenigsberg wondered whether you could walk around the town starting
+0:42
+anywhere and crossing each bridge exactly wants and preferably getting back to where you started,
+0:53
+obviously, if you started your walk and you'd want to get back to the original place.
+1:00
+So they wonder whether that could be done. And they tried various routes, but nothing seemed to work.
+1:06
+And then at some point, the famous mathematician oilor came along and he got interested in this problem and he turned it into a graph.
+1:14
+So here is the graph. You can see that each of the four regions is a node in the graph and the bridges are the arcs.
+1:25
+So now he's got a mathematical formulation of this problem.
+1:33
+And he could then proceed to solve it.
+1:37
+And it turned out that the key to solving this problem is to look at the degrees of the nodes, which are three, three, five and three.
+1:40
+So let's since he solve the problem, we'll call the oil apart in his honour is a path which uses each arc exactly once.
+1:51
+And we'll say it. It is an oil, a circuit or oil cycle.
+2:01
+It is also a cycle. So in other words, an oil circuit is a cycle that uses each arc exactly once.
+2:05
+So an oil a circuit is just an oil, a path which finishes where it starts.
+2:13
+OK. So what can we say about oilor parts?
+2:20
+Well, here is the general path from the start node in blue to the finish node in blue and we travel around the graph.
+2:23
+And what can we say? Well, if we go into an intermediate node, any of these nodes in black, then we must enter and leave the same number of times.
+2:32
+Otherwise we would be stuck in that node. So here we've entered once and we've left wants this one here.
+2:43
+We entered wants. Then we came back again and entered a second time.
+2:50
+But the number of times we left is the same as the number of times we entered.
+2:55
+Okay. Apart from of course, the be the blue nodes, the start and the finish node.
+3:00
+Of course, we have exited the start node one more time than we entered.
+3:05
+And for the blue one, we've entered one more time than we left. OK.
+3:10
+So that was a good insight. And now what happens if this intermediate node has an old degree?
+3:16
+Well, if we're doing an oiler path, then each time we enter or leave, we have to use a new arc.
+3:24
+So in this case, we have entered and left twice each.
+3:30
+So we've used up an even number of arcs. So there must be one arc left over.
+3:34
+So we can't use all the arcs at an intermediate node if their degree is or if its degree is old.
+3:41
+So we can summarise what we've discovered here, but it is a graph has an oiler path,
+3:51
+then the only nodes that can be odd could be the B, the BlueNotes, the start and the finish nodes.
+3:56
+So either there are two odd nodes, which would be the the starting and finishing nodes, or else they would be the same node in the case of a circuit.
+4:04
+And then there would be just zero odd nodes. But every other node must have even degree.
+4:15
+And as a particular case, if a graph has annoyed a circuit so the two blue notes are the same load, then every node must be even.
+4:22
+Well and well, then, so we can.
+4:34
+We've now solved the Koenigsberg problem, because you can see that actually all four nodes are old here.
+4:38
+And so therefore, there cannot be an oiler path in this graph, let alone an oil of circuit.
+4:45
+So that gives us the first theorem in graph theory of Oilor 1736, a connected graph has an oilor path.
+4:57
+If and only if there are zero or two of nodes and a connected graph as an oil circuit.
+5:05
+If and only if every note has even degree. Well, I say it gives us that.
+5:11
+But we've actually shown the forward implication, which is the easy if the two implications.
+5:17
+But we would like to also show the converse because this is and if and only if statements.
+5:25
+So we need to know that the right hand side implies the left as well. So I won't do all of that.
+5:30
+But let's assume that we've got exactly two nodes with all degree.
+5:37
+And let's prove that we have indeed. Well, let's show how we might get an oil a path.
+5:42
+So I'm going to be more constructive about this. And all the case where all the nights have even degree is similar.
+5:48
+Okay, so let's suppose we've got two nodes with all degree. So I'm going to use a non-deterministic algorithm, which is very simple,
+5:55
+which is to start at one of those nodes in and just travel around the graph until I get blocked, until I can't go any further.
+6:04
+And. Obviously, I have to follow the rule that I can only use an unused arc sike and then eventually I'm going to get blocked.
+6:15
+So I claim that I must therefore have got to the other old know the end prime node,
+6:23
+because if I stopped at N, then I would have used an even number of Arkes at N.
+6:28
+So there would be an espere OK, so I can't get block today.
+6:34
+And if I stopped at some end double prime. That was not either of the two old nodes then I would have used an odd number of arcs at that point.
+6:38
+And so there would be a spare arc. So therefore the only place I can stop is in prime.
+6:48
+So we have a path from end to end prime.
+6:53
+And we haven't used any arc more than once,
+6:58
+but we aren't finished yet because the might still be some spare arcs at each other node at various nodes in the graph.
+7:03
+We haven't necessarily covered the whole graph yet.
+7:12
+I should say notice that the number of unused arcs that any any node is now even by the arguments that we've made.
+7:16
+OK, so we need to go further. So let's choose any node where there are unused arcs.
+7:24
+Let's start a new journey there. And the rule again is just follow any route using unused arcs.
+7:31
+So here we are. I followed a new route like that.
+7:39
+And by similar arguments, the only place I can stop the anyplace and get blocked is when I get back to that.
+7:43
+OK, well, get back to the node that I started from. And so now I've got I've used up more of the graph here and now I can add that into my main path.
+7:50
+So I come from end to this note here. Then do the side journey.
+8:03
+Come back to that intermediate node and then carry on to unprime. So I've now got a longer path.
+8:07
+But there may still be nodes where there are unused arcs.
+8:14
+So I'm just going to choose another one of those and do another site journey. And keep on doing this until all the arcs are used up.
+8:18
+So providing that my graph is connected, obviously if the graph is not connected, I have no chance of getting an oil up path covering the whole graph.
+8:25
+Then this algorithm will give me an oil, a path for the whole graph.
+8:36
+And that proves that they're. OK, so let's take another slightly more elaborate example just to illustrate this algorithm in practise.
+8:42
+So the first step is to identify.
+8:53
+We'll look at the degrees of the nodes and see which ones are even and which are odd.
+8:58
+So I think they're all 70 is odd.
+9:02
+And four is odd, but the others are all even. So therefore, we get an oil, a path, and we know that the endpoints will be four and seven.
+9:07
+So that's what we've done to start with. And now we can start from four and follow any route.
+9:17
+Obviously, there's lots of different solutions.
+9:27
+But in this case, I've decided to go from four to eight, then to seven, then to six, and then back to four.
+9:29
+Now I'm back where I started, but I still have some more arcs so I can carry on.
+9:36
+So let's go to three and then to eight and then to seven. And now I'm blocked because and I'm at the obviously at seven by the general theory.
+9:42
+I know that that's the only place I can be blocked. Well, so that gives me the red arcs here.
+9:52
+And now I have to add some more side journeys so I could start at four and do this part two.
+10:01
+It's at six to the loop and at three do this triangle. So I just have to add in the side journeys.
+10:09
+Here they are. And now I have to integrate them into the main path.
+10:17
+So I follow the main path, the four, eight, seven, six. But I also do from four.
+10:22
+I do my side journey with the five four, then do eight, seven, six, then do the side journey and the loop at four,
+10:28
+six and then four, three and then a side journey two on three and then eight, seven.
+10:34
+And then I have the oil a path as required.
+10:40

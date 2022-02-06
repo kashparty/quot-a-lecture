@@ -1,0 +1,111 @@
+ID: 4021afd8-5232-4c64-b03a-ae2d01490046
+Title: 6.5 Lower bound
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 21/02/2021
+So let's now consider optimality and let's start with the case, any calls three.
+0:01
+So any decision tree for sorting a list of land three must have three factorial equals six leaves.
+0:06
+And such a tree cannot have depth mercenary equal to two because all binary trees have depth less than equal to two have no more than four leaves.
+0:14
+That's just. Start a diagram off.
+0:24
+So here we have. To leave steps one and then.
+0:29
+We can double that. Each time we go down. So now we've got four leaves at depth to.
+0:40
+You and. But that's not enough.
+0:49
+So we need to go down the further level. We are and now we have six leaves.
+0:53
+So depth three was required. Well, so in the worst case, we need depth's three three comparisons,
+1:00
+and that shows us the three Sorte and insertions or what are optimal for N equals three, that's just remind ourselves of the decision.
+1:10
+Tree for three. Sorte at depth three. And the one we got for insertion sort for less of LEM three was very similar to that.
+1:17
+Well, let's try and generalise. So now we're going to be sorting a list of length.
+1:28
+And so there are an factorial permutations. So the decision tree must have N factorial leaves at least.
+1:32
+So how deep must a binary tree be to get. Have N factorial leaves.
+1:40
+Well let's try and equals four. So we're looking for four factorial leaves.
+1:45
+Four factorial is 24. So we haven't got enough.
+1:53
+But let's keep on adding. So now we're up to eight leaves.
+1:57
+So now we need to go down another level and then we can dump all of that to get 16.
+2:04
+That's still not enough, so I'm going to have to go down to depth five and.
+2:14
+So now I've added another eight leaves here.
+2:24
+So now I reckon I've got 24 leaves. But I needed depth five.
+2:28
+So that tells us that sorting a list of land four will take five comparisons in the worst case by our argument.
+2:32
+Well, let's now do the general case, so pretty obviously from what I was drawing there,
+2:44
+we can see that you double the number of leaves each time you add another one to the depths of the tree.
+2:51
+So we can prove that in general very easily by induction. If a binary tree has depth D, then it has no more than two.
+2:58
+The D leaves. So by induction.
+3:06
+Equals zero. We've just got one node, one leaf node. So that's okay.
+3:10
+Let's assume that it's true for Dean. So if the depth is deep, then we have no more than two to the dean leaves.
+3:16
+Consider a tree of depth, deep loss one. Well, it's going to have a root node and then to some trees, each of which have depth.
+3:23
+No more than day. And so by our induction hypothesis, used twice, no more than two to the dean leaves on each of these sub trees.
+3:30
+So the whole tree of depth D plus one has no more than adding two to the D plus two to the D, which is just to you to the D plus one leaves.
+3:41
+So that proves the proposition. And now we can get our promised lower bound for sorting.
+3:49
+What we know is for sorting a list of length and the decision tree must have at least N factorial leaves.
+3:56
+Let's say that the depth is D then. By our previous proposition two to the D is greater than or equal to N factorial.
+4:02
+Take logs to base two as usual. D creation the equal log n factorial.
+4:10
+Well because d the depth has to be in a whole number.
+4:16
+Then we can slightly strengthen that to say that D is great and are equal to the ceiling of log N factorial.
+4:20
+So that gives us our lower bound.
+4:27
+Any algorithm for sorting by comparisons must perform at least ceiling of log n factorial comparisons in the worst case.
+4:29
+So how good is insertion sought? Now we can compare it with the lower bound.
+4:40
+And so here I have tabulated that for values of N from Bond to 12, seeing of log N factorial and then end times N minus one over two,
+4:45
+which is the worst case performance of insertion sort in terms of the number of comparisons.
+4:55
+Well, we we know already that it's optimal for Lyssa Blend three.
+5:00
+We saw that the lower bound for N equals four is actually five and insertions sort take six comparisons in the worst case.
+5:06
+So it's slightly diverging.
+5:15
+And as you can see, as N gets larger, then in fact, by the time we get up to ten, then we're more than twice as bad using insertions sort.
+5:18
+So it looks like the difference is it looks like insertions. Okay.
+5:30
+Worst case performance is growing faster than our lower bound.
+5:33
+So that means there's a gap in our knowledge. There are lower bound,
+5:38
+was not clever enough and maybe the lower bound should be higher or there could
+5:43
+be a better sorting algorithm out there that will be close to the lower bound.
+5:48
+And in fact, the latter is true because that's what we'll see when we come onto Merge thought that
+5:53
+Merge Salt will get very close to this lower bound in its worst case performance.
+5:58

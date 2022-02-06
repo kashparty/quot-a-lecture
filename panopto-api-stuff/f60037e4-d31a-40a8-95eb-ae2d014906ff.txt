@@ -1,0 +1,95 @@
+ID: f60037e4-d31a-40a8-95eb-ae2d014906ff
+Title: 3.1 MSTs
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 30/01/2021
+So now I want to introduce weighted graphs, many networks have a cost associated with each arc in their transport network,
+0:02
+that cost could be the distance, the time to be taken for that journey or the amount of fuel or the cost of the fuel.
+0:11
+And we'll call these costs weights. So on this graph on the left, the arcs have got a weight in the blue associated with them.
+0:21
+And we'll define a weighted graph, which is a graph paired with weighting.
+0:33
+Function is a simple graph g together with weight function W, which is a map from the arcs of G to the real's growth and or equal to zero.
+0:38
+Obviously, well, we tend not to want negative costs because normally getting from one place to another does not gain us money.
+0:51
+It costs us money. Basically. We shall investigate three well-known classical problems, finding a minimum spanning tree.
+1:02
+We'll look at Prem's algorithm and Chris Gall's algorithm finding shortest path.
+1:13
+So we'll look at Dijkstra's algorithm and the Floyd Warshel algorithm.
+1:18
+And finding a short its shorter circuit. The famous travelling salesman problem.
+1:23
+So we're trying to minimise cost, and so it is sensible to restrict ourselves to simple graphs.
+1:30
+Why is that? If there are two parallel arcs, then two alternative routes to choose, then we will always choose the cheaper one.
+1:37
+So we might as well get rid of the more expensive arc because we are never going to want to choose it.
+1:45
+And similarly, if there's a loop, then going around the loop is just going to cost us.
+1:50
+And so we are never going to actually want to use that loop. So we might as well be eliminated from the graph as well.
+1:55
+So when we restrict a simple grass, then an art can be specified uniquely by giving its end point.
+2:01
+So we can just write. OK, says pairs of their end points.
+2:07
+And we can regard the weight function then as acting on pairs of nodes.
+2:13
+And so we can write W of one to which, of course, since we're dealing with undirected graphs here, will be the same as W of two one.
+2:18
+So remember that every connected graph has a spanning tree, we saw how to show that.
+2:29
+And spanning tree connects all the nodes in the graph with the least number of arcs.
+2:34
+And obviously will be a sub graph of the original graph. Now, when dealing with weighted graphs,
+2:40
+we want to find a minimum spending tree that is spent spanning tree where the sum of the weights of its ox is as small as possible.
+2:47
+For instance, if you want to build a road network joining some cities,
+2:55
+a minimum spending tree would represent the cheapest or shortest or lowest cost network, which would connect all the cities.
+3:00
+So we might decide we're not going to maintain all the roads. Let's just find some subset and maintain those.
+3:09
+So let's have a look at an example. So here's a graph from the top left with a weighted graph.
+3:18
+And on the top right, we have a spanning tree.
+3:26
+Now, obviously, any spanning tree, because we have four nose here should have three arcs.
+3:30
+So that's a spanning tree. But what is the weight of that spending tree?
+3:36
+Well, we add up the weights at the ox and we see that that is weight twelve.
+3:41
+But that's not a minimum spanning tree for the graph because we can actually do better.
+3:46
+We don't really want to choose the five here because that's the most expensive grow.
+3:51
+OK, so let's see if we can avoid using the five. So here on the bottom left is a spanning tree with a cost of nine.
+3:55
+And in fact, that's the minimum as it's not hard to see because we've got to use three arcs.
+4:07
+So if we choose the three shortest, then we obviously confuse the two and the three.
+4:13
+And then we've got a choice of one for or the other four. And in fact, the other four works as well.
+4:18
+So here we've got another minimum spending tree for this original graph, which shows us that MSDS need not be unique.
+4:24
+So these both have weight 9D. And as I say, we've we've seen that that is minimum here.
+4:35
+So let's define moments, spending trees. Let Chibi awaited graph.
+4:45
+And the weight of a spanning tree. T 4G is the sum of the weights of the arcs of that tree.
+4:50
+And we'll say the T is a minimum spanning tree or MSD for short for G.
+4:58
+If T is a spanning tree for G and no other spanning tree for tree has smaller weight.
+5:03
+So we phrase that carefully so that we will allow that there could be several minimum spanning trees.
+5:09
+But of course they all have the same minimum weight.
+5:15

@@ -1,0 +1,207 @@
+ID: e3ef9a89-afdb-4209-be4e-ae2d0148fde7
+Title: 7.8 Priority queues
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 28/02/2021
+I promised earlier that we would see how to implement priority cues in an efficient way using binary heap.
+0:01
+So now we know what binary heaps are. Let's see how we can do that implementation.
+0:09
+So let's remind ourselves, first of all, about the priority queue or more precisely,
+0:15
+the main priority queue that we use, for instance, for Krims algorithm.
+0:20
+So each item X in the queue has got a priority key of X and we remove items from
+0:25
+the queue by lowest key first and the operations on our priority queue we've got.
+0:32
+We can create a queue, an empty queue and we can cheque whether queue is empty.
+0:40
+We can insert an element into the queue with a certain priority.
+0:48
+We can find that minimum element in the queue by lowest priority.
+0:53
+We can delete it from the queue. And the most subtle operation is the decreased key operation.
+0:58
+We've got something that's in the queue already and we're going to reduce the key from X to the new key value.
+1:05
+Well, we want to use a heap here and plainly we should use a min binary heap here because we the root element,
+1:13
+the one we want to remove, should have the lowest key.
+1:21
+So let's see how to do all of those operations using an array.
+1:27
+Implementation of men, binary heap. So let's do our array in the ah.
+1:32
+So we've got. Here is our array, and here is and it's indexed from one up to.
+1:40
+And we've got the heap size here in general.
+1:51
+Which may be less than the actual size of the of the array, so maybe the array has got capital N elements in it, which is some suitable number,
+1:58
+which we think is enough to accommodate our priority queue because the queue, remember, may be growing as the computation carries on.
+2:08
+Okay, so the first thing we want to do is to create an empty array so we can just initialise with heap size equals zero.
+2:18
+So that would just be the first zero elements of the array will be the priority queue.
+2:28
+We can cheque whether a queue is empty, which is just checking whether the heap size is zero.
+2:35
+So that takes constant time. We don't.
+2:40
+And and next one is to get men. Well, that's easy because we know that the main element is going to be in this position here.
+2:44
+So that's where the men. Element is. So that's fine.
+2:52
+And that just takes constant time. So it's just each of what each one is the.
+2:59
+If this is that, you're right. He is the main element.
+3:05
+Well, deleting it, that's a bit more subtle. So the first thing, what do we do when we delete that element?
+3:09
+Well, we've got a heap size. Here's the. This is the heap.
+3:16
+This region here. So what we do to get rid of this main element is we move this element at the last element here.
+3:20
+We move that over into position E one, overwriting the main element which we have already extracted from here.
+3:30
+And of course, now a heap size should go down. So now the new heap sized value is is one less basically.
+3:41
+So they. So the heap size is now here. And whatever is over here has just been destroyed.
+3:50
+Sydney. And well, how long does that take?
+4:03
+Well, then the final step. Sorry, that doesn't take any comparisons, but we need to then fix the main heap between one and the new value of heap size.
+4:08
+So that's going to take Bago of log in comparisons to do the fixed min heap, which is just sort of duel to the fixed max heap that we've already seen.
+4:17
+OK. Well, the next thing we want to do is to insert something into the queue.
+4:27
+So obviously the new thing to be inserted can go in.
+4:32
+In this position. So let's draw our diagram and just keep things straight.
+4:37
+So areas are. Keep between one and keep size just right.
+4:43
+H.S. here. So the new element is going to go into this position here and then will increase the heap size to the new value plus one.
+4:51
+And we just put the new element X in that position there and the heap is one bigger.
+5:02
+Okay. Oh well. But this no longer necessarily has them in heap property because this element here is not necessarily in the right position.
+5:08
+So what we need to do is to let this element percolate up towards the root until the property is restored.
+5:19
+So let's think about how to do that. So let's have an example.
+5:29
+So let's draw ourselves a mean heap. And so maybe here we've got to.
+5:40
+And then we go for five and then I've got a good six.
+5:47
+OK. And so now I'm going to add a new element to this heap.
+5:57
+So let's put it in this position here. And let's say that it's the one that we've added here.
+6:02
+So now we've lost our mini property that we had before.
+6:10
+The one was added and we need to let the one percolate up.
+6:15
+So obviously, we're going to compare it with the parent and see which is bigger or which is smaller.
+6:20
+And then they can have to swap over. So let's do that.
+6:26
+So that becomes a one, obviously. And then the five moved into that position there.
+6:31
+And then the one and the two are compared. And again, they swap over and like that.
+6:36
+And as after that, then we will have restored our min heap property, as one could show.
+6:43
+So that's what our procedure percolate up does.
+6:53
+We look at the position of the Olympia, you see we look at its parent and see whether it's less in its key is less than its parent's key.
+6:57
+And if so, then we swap it over.
+7:07
+And then we apply percolate up for the parent position recursively until, if necessary, gets all the way up to the root of the heap as a whole.
+7:09
+Well, so how long might that take?
+7:21
+Well, we've got to do the comparative number of comparisons we have to do here is is bounded by the depth of the tree.
+7:23
+So bounded by log in. So this is a big old log in operation.
+7:32
+So inserting log in each time. Well, just as a remark.
+7:37
+Remember when we were building the heap as a whole, we could actually do that in linear time.
+7:43
+Whereas if we do them individually like this, it would take us a log in. So it might be possible to build the priority queue in a single go in time.
+7:50
+Bigger then.
+7:58
+So, for instance, when we were doing Chris Gall's algorithm, we could just add all the edges into the priority to in a single go back rub.
+7:59
+But of course, in other applications of our priority queue,
+8:07
+you might want to create add the elements dynamically because you don't know which ones to add until they come along.
+8:11
+Right. So finally decreased key, which is the most subtle of the operations we have to do.
+8:20
+We've got an element that somewhere in the the main heat of Droits, just as a.
+8:26
+As a. Or destroy it.
+8:34
+That's just copy out the same example. And but without the crossings out for.
+8:39
+Six. Eight. Seven.
+8:52
+So now what I want to do maybe is to decrease one of these keys, so perhaps I'll take this.
+8:56
+Sorry. That should be it to their. Right.
+9:05
+Like that. Yeah. So now I might want to decrease one of them, so maybe I want to decrease the eight.
+9:10
+Perhaps so. This age, perhaps, I decide that this key here should now become a three.
+9:16
+Can they? Well, then again, I've destroyed the mean heap property, or at least I damaged it so obvious.
+9:29
+But we know how to fix that. We just let the three percolate up.
+9:39
+So that's fine. We can just do the percolate up.
+9:44
+So in this case, the three will just swap with the four. And then we're fine.
+9:49
+Then three. And that comes four.
+9:55
+And we've restored the mean heap property.
+9:58
+OK, well, the problem is that where is that element in the EAP?
+10:03
+So I want to decrease X the key of X to Newquay that where is X in the heap.
+10:10
+Well, I said it was here that in general I don't know where that is. So I might have to look all the way along the array one, three, two, etc.
+10:18
+One for two as it was in order to find it. So that would take time.
+10:27
+Bago of M. So that's slowing us down because we really like a long end performance.
+10:33
+So one way we can solve that is to suppose that each element has got an identifier I.D.
+10:39
+And suppose that these identifiers are integers in some compact range.
+10:48
+Up to maxillary a day. And then we can have a supplementary array x RF that stores the location of
+10:52
+that I.D. So then we can use X RF to look off and find where that location is.
+11:00
+So this element that we were trying to alter the reduce the key from eight to three, it will be in location one, two, three, four, five.
+11:06
+So it'll be in location five. So we could look up. So Max RF x RF sorry, I.D. would equal five here.
+11:14
+And then we can find it immediately. So that speeds that part of the operation up.
+11:24
+Of course, the downside of that is that when we do the percolate up, then we have to keep track of the location changing.
+11:32
+So every time we swap, do a swap. Then we have to update X RF as well.
+11:42
+And I suppose that would also apply to the fixed max heap operations as well.
+11:47
+But that's a simple modification that we can make to the code, and it doesn't cost us any comparisons.
+11:51

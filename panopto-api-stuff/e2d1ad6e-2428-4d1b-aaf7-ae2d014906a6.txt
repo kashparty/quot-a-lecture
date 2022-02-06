@@ -1,0 +1,325 @@
+ID: e2d1ad6e-2428-4d1b-aaf7-ae2d014906a6
+Title: 3.2 Prim's algorithm
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 30/01/2021
+So we're going to look at two algorithms for finding minimum spending trees, and the first is Prem's algorithm.
+0:01
+And so let's see an example of this in action.
+0:09
+Well, let's, in fact, take the same example we just looked at. So we're going to build a minimum spanning three and four premies algorithm.
+0:13
+We have to specify a start. So the root of our minimum spanning tree will we can take.
+0:20
+Well, let's take it. Node one, any node will do.
+0:26
+And the the motto for Prem's algorithm is that we add the shortest arc, which will extend the tree we have.
+0:30
+So what tree do we have at the moment? Well, we just have the root node basically say to extend that.
+0:37
+We need to look at one of these three arcs that are incident on node one.
+0:42
+So and we're going to add the shortest of those. So obviously we're going to add one two.
+0:47
+So let's do that. There it is. Now we need to we've got two nodes in the tree.
+0:52
+I've written an arrow there so that you can see that we're coming.
+0:57
+That one is the root node. We can extend this with any arc, which is incident on this tree.
+1:01
+So this new arc at the bottom would not do. But the four or five or four no arcs here will all would all extend the tree.
+1:08
+Obviously we want to choose the shortest. So we have to choose either one for or two or three.
+1:18
+So let's choose one for. And now we still need.
+1:24
+We are not finished yet. We've got three nodes in the tree.
+1:29
+But of course, we need the final note to be added to the tree.
+1:33
+So now how can we extend the tree with the shortest arc than any of the remaining arcs would extend the tree?
+1:37
+But obviously, the two at the bottom here is the shorter sediments at that.
+1:46
+There we are. And now we have three arcs. And so we've completed our minimum spending tree.
+1:50
+So this is algorithm is an example of the so-called greedy approach, which is a technical name in algorithms,
+1:59
+which means that we're doing whatever gives us the shortest term, short term advantage in this case to add the least cost.
+2:05
+OK, to the tree at any given stage.
+2:14
+Now, it's not obvious, though, that would be optimal globally,
+2:18
+because it might be that adding an expensive arc at some point might save us later on in the operation of the algorithm.
+2:21
+But in Prem's algorithm, we always do what gives us the short term advantage at the shortest arc that we can think of.
+2:29
+And it turns out that this will, in fact give us a minimum spanning tree.
+2:37
+So in this case, the greedy approach is successful in providing a globally optimal spanning tree.
+2:41
+So to understand Prem's algorithm in more detail,
+2:51
+it's helpful to think about how we build up the tree from our start node and at any arbitrary stage in Prem's algorithm,
+2:56
+there are three kinds of nodes. There are those that already in the tree, which is in the yellow in the diagram, including the start node, obviously.
+3:06
+So this node t here is in the tree. And then we have other nodes which are one away from the tree and we'll say that those are in the fringe.
+3:17
+So these are the candidate nodes that could join at the next stage because they're adjacent to a tree node.
+3:25
+So this node F here is a fringe node that could be added to the tree at the next stage in the algorithm.
+3:33
+And then we have the unseen nodes which are further away from the tree and therefore
+3:40
+will be added in later but cannot be added in on the next stage of the algorithm.
+3:46
+So that's the three regions. And initially, all the notes are unseen because the tree is empty.
+3:52
+So the general scheme of Prem's algorithm is we choose any node and make it the start node and the root.
+4:00
+And then we reclassify start as in the tree.
+4:09
+OK. So we've added the root to the tree.
+4:14
+And then we reclassify all the notes which are adjacent to the start as being in the fringe because they are one away from the tree now.
+4:16
+And then we process. We now go into a while loop.
+4:25
+And we process the fringe. So while the fringe is non-empty, obviously when the fringe is empty, then we have completed our tree.
+4:31
+While the fringe is non-empty, will select an arc of minimum weight between a tree node and a fringe node.
+4:41
+So we go back to our diagram.
+4:48
+Then we were basically looking for this distance between that a tree node T and a fringe node F to be the lowest possible weight.
+4:52
+So we look amongst all these arcs that joined the tree to the fringe and find the shortest.
+5:01
+OK, so that's the star process here. Select that arc.
+5:08
+And then that we now decide that this fringe node F will join the tree.
+5:12
+And so we add arc t f to the tree.
+5:18
+And then all unseen nodes adjacent to F are put in the fringe.
+5:22
+Perhaps the diagram would be helpful. So if we.
+5:27
+So here we've got treif. OK, that's the start.
+5:37
+No, here's T. And here we've got fringe node.
+5:43
+And then this is the fringe, which is one away from the tree.
+5:48
+Okay. And so this is the fringe. And then we look amongst all of these nodes here and find the one the lowest weight.
+5:53
+So maybe this is the one. So we now add this into the tree.
+6:04
+So now this joins the tree. And then that means that we extend the tree outwards to include this fringe node here.
+6:09
+Okay, so this has now joined the tree. And then, of course, if you're one away from the fringe node now, so.
+6:20
+Okay, there might be one here. Well, that was already in the fringe, but now we've got a different way in which it's in the fringe.
+6:28
+Perhaps, perhaps this one was already joined to the tree there.
+6:35
+So this is called prime. But then there could be other nodes which were actually unseen before.
+6:39
+Yes. F double crime. And this is now joined the fringe.
+6:46
+So if we we can extend the fringe now gets wider as a result.
+6:52
+OK. So the tree expands to include the node F.
+7:02
+And then other nodes which may join the fringe as a result because they're now one away from the tree.
+7:07
+So let's sum. Go back to our algorithm scheme,
+7:17
+so we we added the OK to left the tree and then we reclassify all the unseen nodes adjacent to Earth as being in the fridge.
+7:22
+So let's analyse the complexity of this algorithm.
+7:32
+So we've got. And nodes and earmarks, let's say, as usual.
+7:36
+Now, each time the while loop is executed, another node is added to the tree.
+7:43
+Because and then. And so therefore, the while loop is executed Bigo of N Times.
+7:49
+So that is clear. And the operation star, which is the operation of finding the French node, selecting the Archerd minimum wage,
+7:56
+then that involves looking for the shortest dog amongst all possible arcs between Bago of entry nodes and behove in fringe nodes.
+8:09
+So basically that in the worst case, we're looking through all possible arcs.
+8:18
+And so this basically involves looking amongst all the Trena is looking at on their adjacency lists.
+8:25
+And so the best we can do in general is to say that this is Bigo of N plus M, the same complexity that we got for, say, depth, first search.
+8:31
+So then the whole algorithm. Well, we go around the loop bigo and times each time we go round the loop.
+8:42
+It's the star, which is the limiting factor because the rest of it is just constant to actually
+8:48
+just add things into the tree and reclassify the we classify the unseen nodes,
+8:55
+Jason, to f as as being fringe. Well. Okay.
+9:02
+So that would also would also be smuggled into the big ov n plus M in in doing the the a single run of the while loop.
+9:05
+So therefore we just multiply the number of times we do the while loop by the cost of doing each iteration of the wire loop.
+9:17
+And we get bigger at end times and plus M. And so that's the complexity.
+9:24
+But we can do better than that. So this was a rather naive implementation that we had to start with.
+9:34
+So what we want to do is to improve on this.
+9:42
+We're not going to improve on the big OSV and time's going times run going around the loop.
+9:46
+Well, let's see whether we can improve on this end. Plus M here, because what we did was rather naively was just keep on going from scratch,
+9:51
+looking for the shortest arc amongst all the possible arcs that we can do better than that.
+9:59
+So let's keep track of which arcs might be used and let's call them the candidate.
+10:05
+OK, so let's go back to our example. Here is our original graph.
+10:11
+We add one to the tree and then we actually now decide for each node in the fringe, which is the two, three and the four.
+10:17
+Then we we classify them into the fringe.
+10:26
+And because we've gone through the adjacency list of one here and the candidate archaeologist's the obvious ones,
+10:29
+the the three, the five and the four. And the red dotted line is all the candidate arcs.
+10:35
+So one of those arcs is going to turn into the tree on the next iteration of the algorithm.
+10:40
+Okay. And one of those fringe nodes will join the tree.
+10:47
+So obviously we choose the shorters, which is this one here. So the one.
+10:52
+Two. Now, then. So that's we now look at from two.
+10:55
+We look around and see what we can do.
+11:03
+So what we can say is that, well, three was already in the fringe, but now we have a better distance from two to three.
+11:05
+So we can improve the candidate. OK, so the candidate after three was five before.
+11:14
+Wait five. Now we can reduce it to wait for now.
+11:18
+Four four. Four is not adjacent to two. And so four does not change.
+11:22
+So four still has the original candidate. OK. OK, so now we have our new candidate arcs.
+11:26
+And we choose the one of lowest weight. Well, it could be either, but let's say we choose the one for then the.
+11:33
+Then we add that. And now for three we had the candidate out came from two before.
+11:43
+But now that four has joined the tree, we have a better candidate up for three because we can compare this distance here with the four.
+11:51
+And we can see that the two is the one we should choose. So they are candidate up for three.
+12:00
+Started off being the five. Then it was a four. And now it's become a two.
+12:05
+Okay. And then finally, obviously, three joins the tree and we're finished.
+12:10
+So how can we implement this idea of the candidate?
+12:16
+Well, we can borrow our idea of the function parent function from graft traversal.
+12:20
+So initially parent three is one because that's the candidate Arkell on the top here.
+12:26
+Sorry, they'd make along the diagonal here. And then parent of three becomes two as to join the tree.
+12:31
+And then finally, parent of three became four and then three joined the tree keeping that parent.
+12:38
+So we can define therefore the parent function.
+12:45
+Both for tree and for fringe nodes. So let the parent of a fringe node f be the tree node.
+12:50
+T such that t f has the least weight.
+12:57
+So that Sarr idea of the candidate. OK. So we need to keep that true as we implement the algorithm.
+13:01
+OK. So here is Prem's algorithm in this improved version.
+13:09
+I will call this the classic version because we will also see a version using priority cues.
+13:14
+And so this is the classic version to distinguish the two.
+13:22
+So we choose any node start as the route. Then we initialise by adding start to the tree.
+13:26
+And then we initialise the fringe,
+13:34
+so we go through the adjacency list of of the start node and we add each of these nodes X to the fringe for injects is true.
+13:35
+We set its parent to be the start node and the weight of the the weight of X is the weight of the candidate,
+13:45
+OK, which in this case is from start to X. So we've now initialised we've got set up our fringe, we've set up our candidate arcs.
+13:53
+And here is the the outer loop.
+14:04
+While the fringe is non-empty, we select the fringe node f such the weight of F is minimum and then we move that from the fringe into the tree.
+14:07
+And then we need to update the fringe candidate docs.
+14:24
+So we look around. Let's go back to our diagram here.
+14:33
+So we've added F into the tree and now we need to look at the neighbours of F.
+14:38
+And an update the candidate asks if necessary. So if Y is in the adjacency list of F.
+14:45
+So the wise here would include the F Brime and the F double prime in my diagram.
+14:54
+Then if Y is not in the tree then then.
+14:59
+Okay. So could be either these F prime or f double prime.
+15:05
+Then we've got two cases. It's already in the French. And this is the subtle case where we have to update the candidate arc if possible.
+15:09
+So if the new weight is less than the existing candidate arc weight, then we adjust to say that F will be the new parent.
+15:17
+And we'll set the new weight of the candidate up to be w of F y.
+15:29
+So if this weight here from after F prime is better than the candidate out that F Brime already has with the previously existing tree,
+15:33
+then we'll update to be to the new candidate arc here.
+15:44
+The other possibility, which is easier, is that why is unseen like f double crime in this diagram.
+15:49
+And so I'll simply put it in the fringe and give it the obvious candidate arc coming from F.
+15:57
+OK, so now let's analyse this.
+16:08
+The classic version of the Prem's Algren has improved version with the candidate Ox and the weight of the minimus banyan tree is just adding together.
+16:13
+The weights of the notes, incidentally, I should point out.
+16:23
+So we've asked before we've got a big of an execution to the wire loop, we haven't improved that at all and that we can't really.
+16:27
+But when executing the while loop, what do we have to do? We have to test whether the fringe is empty, which is just big of.
+16:35
+And we just have to look at the fringe of the array that tells us whether something is in the fringe or not.
+16:41
+Then we have to find the fringe A.F. Such the wait F is minimum.
+16:52
+And again, bigo of N here, because we've just got N values. We have to look at them at most and then updating the candidate art for each.
+16:56
+Why is just constant time. And so that means therefore that going round the for loop is Bigo of N.
+17:04
+Because we just have to look at the nodes in the adjacency list and and go through them.
+17:15
+During our updates on. So therefore, each iteration of the while loop is just bigger then adding together.
+17:25
+These these amount.
+17:34
+And we conclude, therefore, that the algorithm is bigger and squared in with the candidate arcs.
+17:39
+So that is an improvement on our earlier bingo.
+17:45
+End times and plus M. Remembering, of course,
+17:50
+that can be as large as N squared here and so big of N times and plus M is always really big over n cute in terms of N on its own.
+17:54

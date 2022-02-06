@@ -1,0 +1,315 @@
+ID: 1d9310aa-d276-4fe5-bdde-ae2d01490523
+Title: 3.6 Union find
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 31/01/2021
+So dynamic equivalence classes can be handled using the union fined data type,
+0:01
+each set has got a leader element, which is the representative with that set.
+0:07
+And we have two operations or two main operations.
+0:13
+Fine, which is finding the leader of the equivalence class and union, which is merging two classes together.
+0:16
+So the operations in more detail. First of all, we create the initial set of equivalence classes which are addressed by the Singleton set.
+0:24
+So you f create and just creates Singleton sets one up to N and the leaders will just be the representative, the the only element in that class.
+0:34
+So find set X equals X initially and then the find operation X prime equals find sets X finds that leader X brime of X within the sets.
+0:45
+So some member of the equivalence class of X that is designated the leader and all the elements
+0:59
+within that class will have the same leader and union merges the two sets led by X and Y,
+1:05
+presuming they are different and uses one of X or Y as the new leader for everyone in both sets.
+1:13
+So we must have as a precondition that X equals find sets X and Y equals find sets Y.
+1:21
+So they must be the leaders in their class before we can merge them.
+1:29
+Now we can implement Chris Goals algorithm using the union fine data type.
+1:35
+So we'll see. You never know a number from one to N and the graph G.
+1:41
+We start by building a priority queue of the arcs of G with the weight, says Keys.
+1:46
+And then we initialise our union find weird sets equals you f create.
+1:54
+And so that just gives us the singletons and the forest we initialised to be zero.
+2:01
+So that's the initialisation part of the algorithm.
+2:07
+And now we go through all the arcs with the while loop.
+2:12
+So as long as there's still some arcs left to consider, we find the one with least wait using get men priority queue operation and delete men.
+2:19
+And then we find the leader. So if they Akis X, Y between X and Y, then we find the leaders ex prime and Y prime respectively.
+2:29
+And if they're not equal, then we know that there isn't a cycle.
+2:40
+They are different classes. And so then we add the RCC to the forest.
+2:46
+And then we finally do the union operation to merge the two components.
+2:52
+So one of ex prime or y prime is chosen as the leader for all of those.
+2:56
+And we've merged the two components.
+3:01
+Well, so that, of course, raises the question of how we would implement the union fine data type and there's various ways of doing it.
+3:05
+Well, a naive implementation will be just to maintain an array of nodes.
+3:16
+Let's call it leader and leader. X stall's the leader of the set to each node X belongs.
+3:21
+Initially, of course, Leader X equals X for all nodes. And just update that in the way that we did in the example.
+3:28
+So the final operation is now very easy because we have LIDAR stored immediately.
+3:36
+We've just got random access to that in the array. So that is constant time.
+3:41
+But the union thing, as we saw in our example, let me just remind you of that example.
+3:47
+Here we are. So finding the leader, we've got the leader stored.
+3:53
+This is the leader array here. Basically, the these values that the successive values.
+3:56
+But so seeing whether classes are different or not and finding the leaders, that's that's very easy.
+4:03
+But merging with harder work because we had to convert all the Y primes into X primes or vice versa.
+4:11
+And that meant, in the worst case, doing an operations here, going down the whole list, basically.
+4:20
+So that means that we can say that the union takes out of N in the worst case.
+4:29
+And because we have to do big OSV and unions, because we have to add an arc y minus one arcs to the forest,
+4:35
+then that means Bigo of N squared is required for the union.
+4:45
+Find part of Chris Gall's algorithm.
+4:51
+So as a different idea for doing the union find, let's use non binary trees, so instead each set will be stored as a non binary tree.
+4:58
+And so in other words, each node can have more than two children.
+5:15
+Child nodes. And the root node will be the representative of the set.
+5:22
+OK, so I'll draw a tree conceptually just as a triangle here.
+5:28
+And this is the root node in black at the top. That's the leader.
+5:32
+So all of these elements in the tree, all these nodes have this element as their leader.
+5:35
+And they can be at different depths within the tree.
+5:41
+And merging two sets is now a very simple operation because all we have to do is append one tree to the other.
+5:44
+So that the root of one tree is a child of the root of the other tree.
+5:52
+So in this case, I've got two trees.
+5:57
+I have merged them together by just saying that the root of this tree will become the child of this other tree like that.
+5:59
+And so that means that all the elements in this set now have this node as their leader, whereas previously they had that node.
+6:09
+And so we've merged the things. So this is very nice because the merging is now very rapid.
+6:17
+We just switch over. We just make this node a child of this bond.
+6:26
+So that's very fast. But of course, the downside is that we can see that that we've we've actually increased the depth overall.
+6:33
+And to find out who your leader is, you have to work your way up to the top of the tree by going through the parent function to find your leader.
+6:45
+And that could be get that. We could be getting quite slow on that.
+6:54
+So, as they say, to store this tree structure for each node X will maintain parent function or array.
+6:59
+So a parent of X is X if you are the leader. If you're at the root.
+7:08
+And initially, of course, we just said parent of X equals X, Bernie node X Unions',
+7:13
+that's Y just involves taking one of the leaders and setting Y and setting parent a Y equals X.
+7:18
+So that's this constant time, as I said.
+7:25
+But the find involves five following the parent X function all the way up to the root and the time taken is bounded by the depth of the tree.
+7:29
+And if we just do naive merging of the trees in either order, then this could be as much as N.
+7:38
+So we could have if we've got N nodes, we could have a straggly tree of depth as much as N and then the find becomes bigo of N.
+7:44
+So we have speeded up the merge, but at the expense of potentially slowing down the find quite considerably compared to our naive implementation.
+7:55
+Well, the good news is that we can do better.
+8:06
+We want obviously we want to keep the depth as low as possible.
+8:11
+And so there's a remarkably simple idea actually achieves that for us, which is to take what's called the weighted union.
+8:15
+Well, we can append the trees in either order. It doesn't matter which way we do it.
+8:22
+We still get a correct result. So let's decide that we will always append the tree of lower size to the one of greater size.
+8:28
+So if this tree has lower size on the right, then we will append it to the one with the greater size.
+8:36
+And that requires us to store the size of the tree. And to update that that that is very easy.
+8:45
+We just need to keep that with us as we go along in our implementation.
+8:50
+That's very simple to do. Well, I think it's not obvious that that would that that would keep the depth of the tree low, but in fact,
+8:54
+if we use way, she'd union the depth of a tree or size K will be bounded by the floor of Loch K.
+9:06
+And that can be proved by induction on K.
+9:13
+And I've put that in the lecture notes, so please consult the proof there.
+9:17
+OK, let's see. How that might work on our example, let's just go just to sort of see how these classes work.
+9:23
+So this is the example we did before. So I've copied it out again here.
+9:35
+So let's see how the tree implementation would work.
+9:41
+So if we start off with our dynamic opulence Garcés, we've got.
+9:47
+We've got a. The D. B.
+9:54
+F. G. H. I've put down the weights of the ox in ascending order here to keep us on the straight and narrow.
+10:00
+And so initially, the dynamic of province glasses or the trees are just singletons, as I've written there.
+10:10
+And then we add in the do the C f. So that means CnF joined together so we can put them that says Penda F to the C.
+10:18
+So that those have gone. And then the next one is the two.
+10:30
+So the E and the G. So let's put.
+10:37
+She ended to easily. And then the next one is the three B and H and H that.
+10:42
+So we've now got five classes. The eight and the D are still singletons.
+10:56
+What's the next one? The four.
+11:01
+So now it gets a little bit more interesting because we want to spend the D and the C F so we know that to keep a deathblow,
+11:04
+what we want to do is to put the lower the smallest tree below the larger one.
+11:13
+So let's put the D below the C so we can do that.
+11:19
+And that keeps the lit thing lower than if we were to put the C below the D, we would have got depth to.
+11:25
+Now we've got depth one here so we can see that this is working in our favour.
+11:30
+What's the next one? So we've done the four. And now the five.
+11:36
+So that says that the A. should join with the B h.
+11:41
+Okay. So again, rather than putting the B below the A.
+11:45
+Which would give us depth to then we'll put the A below the B like that.
+11:49
+Okay. So now we're down to three equivalence classes and the depth is still at most one, which is good for finding the leaders.
+11:55
+So if we want to find the leader of H here, we just apply the parent function and go up until we find it that the answer is B.
+12:05
+Okay. So what's the next one? The next one is the six. So that means that these two trees merge will they can go in either order.
+12:13
+So let's just put the B below the C like that.
+12:22
+OK. And we now have depth to.
+12:30
+OK, but we've got six elements here. So we're not we're not doing too badly.
+12:35
+And so that's that one.
+12:39
+And then the Sevan's, they both they both are rejected because they would cause cycles, as we can see, by checking the lead as well.
+12:42
+So let's cheque it out.
+12:53
+So the I and the H, we we cheque that the leader here is C and the leader here is C, so that took us going up the parent twice in each case like that.
+12:54
+OK. So when then we can cheque that. So that one gets rejected then the other seven.
+13:05
+We have to give the F and the D. We only have to go up one in each case to cheque that.
+13:10
+And then the eight. Well that one gets rejected. The B and the F again just going up one level up the tree.
+13:17
+And then finally this one can be added in the F and the E.
+13:24
+So we can see that they have different leaders. So then this tree obviously should be appended to that one.
+13:30
+So C is now the root for everything. And that will work.
+13:39
+And then finally, we've got to look at the remaining narks that we've got a nine here that needs to be rejected.
+13:43
+So the G and the H again, if we work up to the top of the tree, we can see that they both need a C and similarly for the other ones like that.
+13:51
+So we've got our eight nodes and the tree that we've generated here has got depth at most two.
+14:01
+So we've kept the depth nice and low for the number of nodes.
+14:09
+And it it is bounded by the floor of the lock K where K is eight here.
+14:13
+And I should say, though, of course, this is the actual result of Chris calls algorithm.
+14:21
+Is this tree here, the forest here that I've drawn in the red.
+14:26
+This is it. This is just the the implementation of the union find here using the weighted union and the non binary trees.
+14:31
+So this is not the spanning tree here, even though it might look like one.
+14:41
+OK, so. Now we can consider the complexity of this weighted union implementation of Kruskal so we can see that with the using the LEMMER,
+14:50
+which keeps let me remind you that the LEMMER keeps the depth of the tree down to log K,
+15:07
+then each find will take bigger of log N because we just have to work up to the
+15:12
+top of the tree and most log in stages in each union is just constant time.
+15:17
+So looking at crossbills algorithm, then we've got to insert all the arcs into the priority.
+15:24
+Q So there's bigger of M of those each taking big of log M so m log M over all.
+15:31
+We have to do the find them in and delete it from the priority.
+15:39
+Q Finding it is easy. Getman is easy. Delete men takes log em time.
+15:44
+So overall that's big of M log M. And then we have to do the unions and the fine.
+15:51
+So how many fines do we have to do. Bigger of M and each takes log N as we saw.
+15:57
+So that's M log in. And the unions, those big bigger than unions.
+16:05
+And so the time taken is bigger than. So we add all of this up.
+16:10
+We can see it's bigger of M log m assuming the dam is greater equal to N as is normally the case.
+16:14
+So but another thing we can note is, of course, the number of ARC's M is bounded by N squared.
+16:22
+So actually Bigo of M Log M is just the same as bigger of M log N, which is.
+16:30
+And so the overall complexity for Chris Gill's algorithm is big over M log n.
+16:37
+And that is exactly what we got for Prem's algorithm with priority queue.
+16:42
+This interests me enough. The remark is that actually the priority queue can be built faster.
+16:47
+I said M log M because we were doing the inserts to build the priority queue, just inserting the elements wanted to time.
+16:58
+But if you put them in all at once in our heap implementation, then you can build it in time.
+17:08
+Bigo of M which is. But that doesn't really help bring down the overall complexity here because we
+17:15
+still have the time taken to do the the delete bends in the heap implementation.
+17:21
+So it doesn't actually help here particularly.
+17:29
+The other thing to note is that we can improve the union, find part of the algorithm using path compression and then the complexity for the union,
+17:35
+find part of chris' goal, then reduces to bigger eventless Adam times this mysterious function log star of N,
+17:45
+which is an extremely slow growing function. And but when I say extremely good, slow growing, it does grow indefinitely as an gets larger.
+17:54
+But log star of less lesson refortify for any conceivable value of n like the number of atoms in the universe that might be used.
+18:02
+And so this certainly gives us an improvement on the union.
+18:11

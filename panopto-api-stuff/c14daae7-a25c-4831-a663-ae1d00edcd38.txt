@@ -1,0 +1,167 @@
+ID: c14daae7-a25c-4831-a663-ae1d00edcd38
+Title: 1.1.Module_Logistics
+Category: COMP40017 - Linear Algebra (Spring 2021-2022)
+Lecturer: Chiraag Lala
+Date: 14/01/2022
+Hello, everyone, and welcome to this module. Com four zero zero one seven linear algebra.
+0:01
+My name is geotag and I am your instructor for this module, for the star.
+0:08
+A little bit about myself. I joined as a teaching fellow not so long ago, only 15 months ago, I competed right after completing my PhD.
+0:15
+I've done a PhD in computer science focussed on natural language processing.
+0:26
+And prior to that, I have done a Masters in artificial intelligence.
+0:33
+And I have a background in mathematics, I've done an undergraduate in mathematics,
+0:39
+and I was also a part of the Indian National Mathematics Olympiad team.
+0:44
+I'm originally from India, which is why I have this Indian accent.
+0:51
+I hope it is. It doesn't form of communication barrier, and I hope we can communicate more efficiently.
+0:56
+In my current role as a teaching fellow, I will be teaching mat modules that are required for computing and artificial intelligence.
+1:06
+For instance, I am teaching linear algebra to the first year students and I am teaching probability and statistics to the second year students.
+1:16
+Also, I am assisting. I was assisting Dr. Paul Buildcon for the calculus module.
+1:29
+And regarding research, my focus is on various topics in natural language processing.
+1:39
+Before we begin, let's talk about module logistics. So unlike in calculus where you had like lectures,
+1:48
+this time we will have what is called flipped teaching with pre-recorded lectures and live junior sessions.
+1:57
+So the flip teaching will have four components. The pre-recorded videos are not calling it lectures.
+2:06
+And I'll explain why. So it will have pre-recorded videos and live hybrid interactive Q&A sessions
+2:13
+and MMD sessions and course works as usual late last night and office hours,
+2:24
+which is something different.
+2:30
+So in pre-recorded videos, I will be recording videos on individual topics, and these videos may last for five minutes, 10 minutes, 15 minutes.
+2:34
+They may not stretch for an entire hour. They are focussed on a specific topic that is being covered.
+2:45
+And as a result of which you will see these videos have a modular structure,
+2:55
+it's not it won't be titled lecture one lecture to lecture three and so on.
+3:00
+It will be Dyker. We media one on Richter's video, two on matrices videos, 10 or 12 on eigenvalues.
+3:04
+We do 15, 30 or whatever on singular value decomposition.
+3:19
+Things like that.
+3:26
+And I will be publishing these videos every week whenever I finished recording a video, I just published it on Panopto and I'll share a link on and.
+3:29
+Now coming to the part of the flip eating the living index, where you will be meeting me in person and interacting with me.
+3:40
+Those are the Q&A sessions that will take place on Mondays and Wednesdays every week.
+3:50
+And. Usually the the discussion in those sessions will be around videos that were published in the previous week.
+3:57
+That is because it. Once I had published videos, you will take some time to go through them.
+4:10
+Yeah, that would be the the main structure of the Q&A sessions,
+4:19
+will the discussion in the Q&A sessions will revolve around videos published in the previous week.
+4:23
+And in those Q&A sessions, if you run out of questions.
+4:30
+Then we will have. Ivan, I will be solving problems for you on the whiteboard.
+4:36
+So, yeah, it will be more problems, it will be it's it's more like a question and answer problem solving session.
+4:47
+Now, considering the size of the cohort and the available capacity of our lecture theatres.
+4:57
+I have decided to split you into two groups with groups, with first names,
+5:07
+starting with alphabets between Angel and the second group with first names starting with Alphabet between M and Z.
+5:13
+The first group to attend the Q&A sessions on Mondays, and the second group will attend the community sessions on Wednesdays.
+5:23
+Over a period of time, if the attendance in the light sessions in-person is lower,
+5:33
+then we can get rid of these rules and we can just allow anyone to join.
+5:41
+Join me in person for the rest who will be accessing the Q&A sessions remotely, we will do that on misdeeds.
+5:49
+The third part of the flip eating is the mini tutorial sessions and the coursework that goes along with it.
+6:03
+These sessions, these tutorials will take place in weeks three, five, seven and nine for one hour each.
+6:13
+You will have your same buteurs from the previous storm.
+6:22
+And they will be contacting you in week two to schedule the sessions in the following weeks.
+6:28
+The coursework deadlines will be a week after in weeks four, six, eight and 10, respectively for the four tutorials.
+6:40
+And you will be using Kate. I'm I'm asking you to publish to submit your work and to get feedback and see your marks.
+6:52
+The coursework account for only 15 percent of your total grades.
+7:05
+Finally, regarding office hours, so on Mondays and Wednesdays, on the same day when we have the lively live Q&A sessions.
+7:12
+I will be available between 10am and 4pm in my office, which is in Huxley three or six.
+7:23
+So if you have. Some questions or some doubts which have not been resolved while other mediums and you would like to meet me in person,
+7:33
+then you can do that in in this time slot.
+7:46
+There are some important links. One is aid.
+7:52
+We're a Q&A platform that I will be announcing, I'll be making announcements and answering your questions on it.
+7:56
+Number two is science, show it, I would be uploading all the resources, these are links to the videos and the textbook and slides, etc.
+8:06
+Panopto, this is where all the videos of both the pre-recorded videos and the like mini sessions,
+8:20
+which will also be recorded both will be published on Panopto.
+8:27
+And finally, Microsoft Teams, for those who will be accessing the live Q&A sessions remotely, they should do so on meetings.
+8:34
+Regarding doubts and questions, I strongly encourage you to use aid.
+8:47
+Not just to post questions, but also to answer doubts and questions raised by your friends in biofuels.
+8:55
+You can also ask your questions in the Q&A sessions. Obviously, it's just that I will be juggling between students.
+9:05
+Who are present in the lecture theatre in person and also students who are accessing remotely online.
+9:16
+So. It might be tricky, it might get a little messy, but I'll try my best to manage and the answer to questions coming from everywhere.
+9:25
+Then you also have the office hours, but. For office hours, I request you to come individually, audit at most in pairs due to COVID regulation,
+9:40
+and I think we are not allowed to gather in large numbers.
+9:54
+Just a small caveat regarding offices, I may have some urgent meetings which I cannot postpone or delay during those office hours.
+10:02
+So in in that case, I would request you to come a little later.
+10:13
+Or I'll request you to ask the same question on ED.
+10:21
+So, yeah, that's just a small caveat with officers.
+10:29
+Of course, you can also ask question to your buteurs.
+10:33
+But they may not know the answers to all questions in which case you will be again redirected to me.
+10:37
+Finally, you can also ask questions on. Microsoft Teams all are via email, but.
+10:47
+I would rather prefer if you. Post your questions on end or what in the Q&A sessions are in the office ups.
+10:56
+Next, I will be uploading videos in week two,
+11:08
+so I don't really expect you to have any questions in the live Q&A sessions in Week two because I have not yet uploaded any videos,
+11:14
+but I still encourage you to join me next week. Well, I will.
+11:26
+Present some motivating examples and get the discussion started.
+11:35
+So I'll see you in week two on Monday and Wednesday.
+11:40
+Bye bye.
+11:46

@@ -1,0 +1,335 @@
+ID: bd27be0c-2064-4aa2-9711-add0011ebeb4
+Title: L06-L07 - Live Q&A (part 1)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 29/10/2021
+So welcome once again, hopefully you had access to all the materials, as some of you saw,
+0:03
+I think there were some problems with Seigenthaler or the files were corrupted.
+0:12
+So we have to rebuild all of them also. Now, you should have access to every single lecture of the course.
+0:17
+Be aware that some of the slides and notes might change until the lecturer and until the week of the election actually happens.
+0:25
+But those changes will not be large ones.
+0:36
+Also, before we start with a Q and A, please stick around for the tutorial,
+0:41
+because this tutorial is you will see very nicely related to the coursework that starts this week.
+0:46
+Also, remember that the coursework number one and you have one more, which I cannot remember.
+0:56
+Now, let me pick it up. I think you have to sum either by the end of this week or by the end of next week.
+1:05
+So keep that in mind. And you should have that available in Incat, which should give you that month,
+1:12
+saw that this week we're going to be starting also of work a number two and there's going to be this one week of oh, OK.
+1:24
+So let's get started with the questions.
+1:32
+I don't know if you have any questions for the two lectures that we have this week, which are, remember, lecture six and seven.
+1:34
+So. Let me check on the.
+1:46
+Participial is there, and if anyone wants to ask any questions, please just speak up on this.
+1:52
+There's lots of you. Just go ahead.
+1:57
+Should I be taking that as a no questions?
+2:09
+I hope it means because everything was clear, I hope it's not because you were unable to access the materials in time for.
+2:14
+A lot of questions, I got to say that from previous years, lecture number seven is usually one that some of you struggle a bit,
+2:32
+but in your mind around how this time dependent state transitions work, but hopefully after today's tutorial, that will be very clear.
+2:46
+And then, of course, work number two is going to basically boil down to those concepts when when you do the exercises on your own to.
+2:58
+OK, so. Let's see, OK, I see there's one.
+3:16
+Yeah, OK, of hapless. Can you go through the reports, I think it was the beginning of the second part of the topic seven lecture.
+3:21
+Uh, it was about something like the relation between the voltage outputs and voltage inputs.
+3:32
+I don't really think I'm quite understanding that graph. Can you go through it again?
+3:39
+OK, let me share the screen. There we go.
+3:43
+First is this lecture number seven? Yes, it is.
+3:50
+And you're talking about the aspects of things that you have to just posit.
+3:54
+This one, the one. The next slide. Basically, yeah.
+4:00
+This one. Yeah. I don't I can't explain the voltage outputs and voltage inputs relation again.
+4:04
+I don't think I can quite getting it. So this is a model that we are really not going to be using for exercises,
+4:10
+but it's a much more close to the physics model, even though it's not 100 percent accurate.
+4:20
+And it's how are we going to how we can interpret the way in which the output voltage is going to change based on the input voltage.
+4:29
+So basically what we're saying here is that. Eventually, over time.
+4:40
+Voltages are going to stabilise on Ondes Netherland because, sure, there's going to be a switching, but according to this model,
+4:48
+the switching is going to converge to an intermediate point that so happens to be outside the thresholds that we set in in previous light.
+4:58
+I remember it was sort of her unthaw limit and.
+5:06
+Yeah, it that we set here like the zero point five.
+5:17
+If I remember correctly, OK, we said here, for example, is this noise margin aspect that we talked about,
+5:22
+like anything above three point five is going to be we are going to interpret as one anything below zero point three.
+5:30
+We are going to interpret that zero. And everything in between those two voltages is just something that we don't know.
+5:37
+So we basically want to have them well separated so that any noise which will exist in our secret,
+5:45
+there's going to be plenty of noise is so well separated that we can be very sure we know it's either one or zero.
+5:52
+And therefore, even according to the variable resistor model here,
+6:00
+what happens is what it tells us is that it's going to converge eventually to this one point, two volt.
+6:06
+Which is nothing, it means like we just don't know what it is.
+6:13
+Don't worry about it.
+6:18
+This is really more about letting you know of the existence of them rather than something that we are going to be really focussing on.
+6:19
+Because this is basically a model that is models based on the underlying physics
+6:30
+of of the of the circuit and that set these margins that I was talking about,
+6:39
+they are important. So if we look at one of the previous graphs here of transitions.
+6:46
+The reason why we need to wait from the point in which a change is,
+6:54
+let's say we want to start changing our value until we consider it changed, is because.
+7:01
+And as we wait for the signal to propagate the voltages to propagate through the circuit,
+7:09
+we might be measuring something that is in between and we don't really know what it what it is.
+7:14
+It's still transitioning. The coral is still propagating through a circuit with changes that we had on the inputs.
+7:19
+So that's why we have this time deltas in in our circuits.
+7:25
+And that is why these essentially at the end of the day limits a lot of how fast we can make our secrets go.
+7:32
+Wait, so can I understand that gruff, I said I say depiction of the times you like section of this of this graph here.
+7:44
+Yeah, like the time delay section. So basically the previous the previous graph is a depiction of the Times of Excession.
+7:52
+The previous graph. You mean the other one that we were looking at. Yeah, yeah.
+8:01
+Yeah. So this is kind of a more this is more easily understandable.
+8:05
+And in many times if you are analysing a circuit, a low level, you will see this type of time diagrams, even though in this case we try to the them.
+8:11
+So usually you will see this where you just have square signals because this is the easiest way to think about it.
+8:24
+Like, I know that after a certain time I will have a new signal.
+8:30
+And it's in this case, it's going to the output is going to go from one to zero.
+8:34
+That's the more abstract model in switch. And.
+8:38
+Now, what happens in reality is something closer to these where lines are not square signals.
+8:42
+They are this smooth wave that changes over time.
+8:49
+And therefore, we do need to wait, not only because the signal is going to appear later,
+8:56
+but also because it's going to be transitioning until that time. Right.
+9:02
+Cool. A lot of what is the T stands for Time Delta.
+9:06
+OK, thank you. Oh, and by restart time, like a little bit after we have started increasing the world, but they might not exactly at that point.
+9:15
+So you're talking about this one graph here. I know the graph.
+9:29
+Mm hmm. And why restart time after labour delay and not OK.
+9:34
+So remember, we said in a previous light that we are going to consider that the signal is a one once.
+9:42
+It is a volf, one revolt's.
+9:48
+That's why there's this like you just remember above, one point three is one below zero point three, which should be somewhere around here is zero.
+9:52
+And anything in between is is noise. It's like it's it's it's completely useless and anything in between.
+10:01
+And again, even this model that is more complicated than the previous one,
+10:11
+this is also a simplification because it's not that t these starts here because the signal will start propagating as soon as there is a change,
+10:15
+like the signal is always propagating. It's a continuous stream.
+10:24
+It's like you can think of it like a faucet of water. So the water is always running if you keep the faucet, always at the same.
+10:28
+Throughput. Water is always running, it's just the throughput doesn't change.
+10:39
+Now, once we start closing it or opening it more, that change is going to propagate over time.
+10:43
+That's exactly how the circuit is behaving with current.
+10:49
+It just that looking at it at this very low level, it's just too complicated and it's not that useful for us.
+10:55
+So it's not worth the effort, really. Unless, well, there's some weird things we want to look at,
+11:04
+like why is this happening so that we can explain why this switch and delay model makes sense and in fact,
+11:11
+these very specific circuit that has a back,
+11:20
+we will see in the next week that it actually is a building block for something very important, which is basically memory.
+11:23
+Memory is a is a is a closed loop. And that's how we maintain data, basically because we keep a voltage that is either one or zero.
+11:31
+We keep it circling around and then we have to do certain things to make sure it stays there.
+11:42
+But you will see all of these in next week. Let's not talk about it right now.
+11:48
+So I the question about nominal sides of the case.
+11:56
+So how do we calculate that? I mean, all sizes you don't there's the table.
+12:00
+I don't remember if it's this flight deck or the or No.6.
+12:09
+So do we just remember the. I will I will give them to you.
+12:14
+I honestly believe that remembering these arbitrary numbers is doesn't make a lot of sense.
+12:20
+If you ever need them, you will have them available.
+12:27
+Either I will give them to you or you will be allowed to have a piece of paper with them.
+12:31
+OK, thank you very much, sir. And these are.
+12:38
+And he really arbitrary, this is an approximate relative size between them that kind of follows what happens in reality in the physical world.
+12:45
+So let me switch back to the lecture window in case I see.
+13:00
+Yeah, I see that there's moorhens k. Is this an old hand or an Afghan or another question.
+13:06
+OK, and I am. So I just ask my question or oh, yeah, sorry, go ahead.
+13:12
+I just wanted to know if the other one was also. No, go ahead.
+13:21
+Yeah. So, um, so regarding the circuit design, um, so whenever where we were to design circuits for,
+13:25
+let's say, a relation to, we always need to draw literals table and then use the came up.
+13:33
+Our story, like we have got a set of conditions and so given to any bull, any question,
+13:41
+do we always need to draw the truth table first, the map, every single value on the table to the climate and the right question?
+13:49
+Oh, that's a good question. The answer is, unless you're explicitly asked to do so, you don't need to.
+13:56
+But those are useful tools. If you follow them in order to arrive to a decent, relatively small circuit, you can do it.
+14:05
+Just go head first and do the final circuit from the textual description of it, but usually you will find that in exams and things like,
+14:16
+OK, go step by step, she'll show them to me, show that you can you know how to do each of the steps.
+14:26
+And that's the problem has got more complicated. You really do need to go through those steps.
+14:34
+Does that does that sort of question? I don't hear anything I don't know if you're talking or not.
+14:42
+OK, I'm going to if I have some internal problem now or are you OK or having it?
+15:00
+You know, I got here my. OK, maybe I am back now.
+15:12
+So heavy. Well, yeah, I can hear you.
+15:20
+I cannot see your guy, though, so maybe I have some internal problems.
+15:24
+OK, so he's not going to. So, OK, let's go to our next question and thank you.
+15:31
+Hi. Yeah, in like seven Slate six, could you explain why increasing into voltage decreases the output voltage slide six.
+15:40
+In this one. Yeah. OK, and the question is why increasing input for those decreases output voltage this OK, this is so.
+15:57
+I think that you had some basic notion of circuit analysis, like electric circuit analysis before coming to a uni, and that's where it's coming from.
+16:13
+There's like a very quick reminder here in terms of formulas in those lives.
+16:27
+The reason is you apply the formulas and then and then that's the result that comes out of this specific circuit.
+16:33
+And that's all the things that you studied in regards to parallel and serial circuits.
+16:42
+There's a very sharp reminder. I cannot remember exactly which light here, but we used this a few formulas here.
+16:52
+That's exactly where it's coming from. To be honest, this is so that you understand how it connects to physical circuits like electric circuits.
+16:59
+How. This is connected to the digital circuits that we are building so that you see
+17:14
+how things go down the line and eventually reduce electrons and current flows.
+17:21
+Remember that like that transformation vote in the election.
+17:27
+But I can tell you now you will not be examined on circuits because that's that's not the purpose of this.
+17:32
+Of this, of course. It's the purpose of this course is not to learn how to calculate circuits and such.
+17:42
+It is necessary to know how that relationship works.
+17:50
+And, for example, it's an important thing if you later go on building circuits, you will find it.
+17:54
+But it's extremely important to know about the find out limitations that we were talking about at the end of this lecture.
+17:59
+Number seven, that the bigger you know, the more things you have connected to that, your output does lower.
+18:09
+It's going to be and also there's a limit to it. And if you are building circuits, you will have to work around this.
+18:16
+And that's something you can look into the future if you go beyond what we show here.
+18:23
+But for now, what's necessary is just to know that this link exists, roughly how and why it exists.
+18:30
+And what we want you to really know is how the logic aspect of it works and then
+18:38
+how we can build complex circuits and eventually processors using this knowledge.
+18:44
+Look at. So let me see if there's any other maybe there's some questions.
+18:53
+OK, I just saw your. No, I could not hear you.
+19:06
+I guess that that's how you know. Are there other questions?
+19:10
+Maybe we can do one more and then I think we can start at the Turrill.
+19:16
+OK, so no more questions. So, again, as a reminder, this to trial is, of course, of these two lectures, that of this week,
+19:25
+and it's going to be very helpful for you to solve it together in groups in order to later do coursework number two,
+19:35
+because it's basically the same type of things. Again, check the final four to see which group you should go to.
+19:45
+This week is going to be the same group this past week. So if you already remember just that, just one quick note.
+19:54
+If you go to your group and there's not a lot of people is if it's a less than four of you,
+20:02
+please feel free to shuffle and go to another group so that you can work together with more people.
+20:09
+If you would prefer to stay in a really, really small group that is fine by me.
+20:16
+Just know that if you would like to have more support with more of your peers, please move around if your group is already big enough.
+20:20
+Please do not move around because next week we are going to create new groups. So don't worry, you will you will get to know more of your peers.
+20:29
+So with that said, no, it's 11, 25.
+20:37
+I'm sorry yet. So let's say let's meet back here at 15 in.
+20:44
+To. Ten minutes past. So that we can all discuss if there's any points, other things that.
+20:54
+Are commonly asked during the editorial, we will keep an eye for it so that we can talk about them together,
+21:08
+or also if you there's new questions that pop up as they're doing the tutorial and you want us and we will have time for that.
+21:14
+So let's look at two of them together here in the general channel.
+21:20
+So, you know, I'm going to stop recording now. This time I will remember to the.
+21:27
+Go to Tostan.
+21:33

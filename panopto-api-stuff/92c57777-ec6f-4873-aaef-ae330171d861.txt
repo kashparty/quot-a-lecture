@@ -1,0 +1,215 @@
+ID: 92c57777-ec6f-4873-aaef-ae330171d861
+Title: Proof Style - Q1
+Category: 0 - Proof styles
+Lecturer: Mark Wheelhouse
+Date: 21/01/2021
+This court, so which version of the one with Pruett's would you like me to do happy to show a if only if C,
+0:00
+B, if only A, D or B implies A or B, some some support,
+0:08
+though,
+0:13
+just to be not if it's gonna be two dimensional on any particular preference for which one will look at any of these cases you were surprised by.
+0:13
+Perhaps I'd be the best one to look into. Can we do A if only if C could I say so.
+0:22
+A a shot to follow along.
+0:29
+One that is most popular to people. So. Proving efficiency is obviously going to break this down.
+0:33
+So A implies C and C implies a sense.
+0:45
+Let's start off then with. So let's do a implied C.
+0:52
+So if we don't do this carefully and kind of style that we use for sort of proofs, given this course we have are given.
+1:00
+So that's gonna be a. Which is going to be for all X.
+1:08
+There is some Y such that if the X and Y are friends.
+1:12
+Then. Happy X.
+1:20
+So what this means is that everybody has a friend, they are happy.
+1:25
+Well,
+1:31
+I would read that book to say what we are trying to show is what is really important in this course to make it very clear what you're trying to prove.
+1:31
+In some sense.
+1:41
+If you're trying to prove the wrong thing, then it's kind of more about what the proof does off that point to be really important for our cause.
+1:42
+You're very clear that what you're trying to prove might become more clear as we go
+1:49
+through the later parts of the course that in some sense we often give quite a few marks,
+1:51
+an exam, whatever, for setting up the proof correctly,
+1:57
+because a lot what we do in court is going to be just about getting the trying to prove the correct thing.
+2:00
+That makes sense. But the other thing, of course. So this version here is slightly different.
+2:05
+So here we're saying that for all X no, no, that the the inner for all here for a Y is going to bind quite tightly with just the friend x y.
+2:13
+So this is for everything. Everything is a has a friend.
+2:23
+We didn't be excessive. Yes, if always you are the friend of those those lies, then you're happy in some sense.
+2:31
+And what it comes down to really is kind of how we push a quantifiers around over over bracketing and third case and stuff.
+2:40
+An important thing will be the number that falsity would always imply truth.
+2:47
+So in some sense, that be quite a few cases where this one isn't true. But that's going to be okay because the implication will hold anyway.
+2:51
+But let's looking to the direction here. So the proof then. But this case would be so first of all,
+2:58
+we look at the gold and we see that we're trying to do something that has an outside for all outside anything else,
+3:05
+which means you're gonna take X one arbitrary because we always do.
+3:11
+Pretty much always do when we have strategies like this. And then we can assume.
+3:15
+A property, a cool one. We're assuming that this part here, the left hand side holds because it got out.
+3:21
+Now it's broken down inside before all we're left with an indication. So then we say for all, why, friend?
+3:29
+X one Y. That's our assumption. Now we need to show that.
+3:38
+Happy. X one memory so far, so this is gonna be fine.
+3:48
+So I sort of set up peripherally. So then we need to basically work out.
+3:55
+We can do well if we look at a map here.
+4:00
+This is a nice property that says, well, for any X, so I can substitute in my X one here.
+4:04
+And then I can also know that there exists some Y.
+4:10
+Yeah. So for. For some choice.
+4:14
+Of why? Then we can have a new property, which is that just using a.
+4:21
+Friend X1. That's cool. That sounds interesting.
+4:30
+Why one would say. Important thing here, this is not an all too twisted bill that could exist.
+4:34
+Let's be completely arbitrary. It's just we have some particular concrete. Why one?
+4:41
+So for some of it, some some choice here, I can deduce one that's from.
+4:46
+I'll give them. I'm just basically using the quantifiers in the way to be compensated through.
+4:53
+That's a subsidy. Anybody going to pay X one of X? I'm going I'm picking.
+4:58
+There's some choice of why they're. Then that means.
+5:02
+You can then also say using property one up here, there.
+5:10
+That's a for all why? So I can plug whatever I wanted to that I'm allowed to let the white one kind of carefully chosen one.
+5:15
+That is the existence for a line to live.
+5:20
+Once it holds the accidental, it's a white. So here I can say. Friend X1, why one?
+5:25
+That's from one. That makes sense.
+5:32
+And then. At that point, I can say, well, line four allows me to say, I've got friend X one.
+5:38
+Why one? And. From lines to 30.
+5:48
+So I've got this property here now that tells me that if I have a friend X one, y one, then X one is happy.
+5:56
+And I've just shown on line 30. So I've got a friend X one, Y Y one.
+6:04
+So basically I kind of I can use that to get all the applications I can break on indication like gives me the happy X one.
+6:09
+That's from line to line three of my proof.
+6:17
+Thus. We've shown you don't have to use linking words.
+6:26
+I find it helps to talk to many people to the more readable. Oh, why?
+6:33
+Friend Swan, why Claus?
+6:40
+Happy thanks. One. So especially I guess it's just kind of showing how we can get back up to up to here a bit higher.
+6:45
+So the proof because that why was. It work.
+6:57
+And therefore, then importantly, since X one was arbitrary.
+7:03
+Then. Stifler's says uses including what to be a with this.
+7:12
+This line here, like four did all the work. I'm struck a little bit more detail.
+7:20
+I'm done. Done. And here's why. From. What's your level five as well?
+7:24
+That all make sense. And then we could do the other direction, improve in a fairly similar way.
+7:31
+The proof in the direction people are looking for. Can you use case being? Absolutely.
+7:38
+I think that would be smart. Right. But I don't think I'm looking at actress in Japan.
+7:42
+So you. Yes, sir.
+7:50
+On the other. Proof proving.
+7:54
+But see implies a. Probably requires.
+8:02
+Cases. I'll leave that for you to look at in your own time, if that makes sense.
+8:09
+Everyone happy with that? Hopefully you can see how that works.
+8:16
+It's not too complicated to prove,
+8:20
+but I can break it down in the way that I would go about doing it with the stylised proofs that we use in this course.
+8:21
+So what song we up to real time that mitotic. That's a good time to basically have one more question we can break out for a few
+8:28
+minutes into into rooms and try to see if I can serve in the room this time.
+8:33
+Another people are here not joining on the fly anymore. And then what we'll do is we'll have a look, a question, three happy dragons proof.
+8:37
+So you give me one second. So I've got the slides for that over here.
+8:44
+So this is the formalisms, someone on their side, she as well. Oh, happy time.
+8:52
+Just before we start going, breaking out. Give me a chance to yourself.
+8:56
+I would like to show you quickly how this looks in natural deduction, and that might help motivate why we don't necessarily match this course.
+9:00
+So I'm not going to rush out because I don't have forever to do that sort of session.
+9:09
+But this is kind of on the outside. We are given's. We have got to show it's super easy.
+9:15
+And the action that's Dutcher Proof will look like here's one of my earlier
+9:19
+this year and it's hard to shrink the text to have it fit on the page at all.
+9:23
+So that's quite a lot, right. You can see here that there some 25 steps to this proof.
+9:28
+Overall, nearly five of those are given. So I guess a 20 steps to the proof.
+9:36
+You should be able to do it with our style as proof in a bounce.
+9:40
+I think 10 to 15 steps just because we can make bigger steps.
+9:46
+So go have a go at it. 70 groups maybe we had to go to feel free to discuss the solutions you've got in the break room.
+9:51
+So I'll try and play around them as I can and then we'll come back.
+9:55
+And I guess the important thing will be that we're going to be trying to use equivalences within the proof so we don't have to break it down.
+10:00
+Kind of piecemeal state in particular, the middle here.
+10:07
+We've got very, very small entities, things like Green Dragon, Fly Dragon, these things as well.
+10:10
+So go have a go at it for 50 minutes or discuss your answers and we'll come back, according to you.
+10:16
+And I will go through the style as proof in the last 10 minutes of the story.
+10:20
+That's OK. Feel free of questions as well. We got the catalogue Q&A up, experimenting with it today.
+10:25
+So please have a look at it if you want. I was going to stop the recording here and I'll record again later on when we go.
+10:30
+I'm going through the answer for this one for you guys.
+10:36

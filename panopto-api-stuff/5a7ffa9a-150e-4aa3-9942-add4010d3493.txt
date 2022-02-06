@@ -1,0 +1,771 @@
+ID: 5a7ffa9a-150e-4aa3-9942-add4010d3493
+Title: Netcraft ACI talk Oct 21
+Category: Applications of Computing in Industry (ACI) Talks
+Lecturer: Tom Curtin
+Date: 02/11/2021
+So welcome, everybody, to today's applications and competing in an industry seminar.
+0:03
+We're very pleased to have a very exciting company.
+0:08
+Alex from Net Krofft Nekrassov to arrange a very exciting computer security set of applications, which I'm sure we're going to learn more about.
+0:13
+And in particular, we're going to learn about how the coronavirus pandemic just was not only a biological pandemic,
+0:25
+it also launched a great wave of cybercrime.
+0:33
+So we'd love to learn more about that. Alex, please take it away.
+0:39
+Thanks very much. Well, thanks for having me. Everyone, thanks for coming.
+0:44
+My name's Alex. I've worked in that craft for about for about two months of time now since graduating from Imperial this year.
+0:49
+And I've also worked with the summer internship and my industrial placement in my third year during which I worked on rhinovirus, cybercrime.
+0:58
+And I've going to pursue a bit more about that today.
+1:10
+If you've got any questions during the talk, just feel free to say I don't know what the etiquette here.
+1:12
+The next interrupter to put up here to put up your hand, virtually anything worth.
+1:17
+I want it to be a bit more interactive. So let's get started.
+1:25
+I'm prepared to talk a little bit about who we are and what we do and then talk about.
+1:30
+Specifically, what we did was part of our cyber crime,
+1:36
+so we we deal with a lot of a lot of Internet crime and that a lot of our business protecting various types of rights,
+1:38
+apply for them to the crime and taking and taking countermeasures against them to try to get them off the Internet.
+1:45
+So that includes phishing malware, which purposes where a spy plane has been compromised system from the Prospero's,
+1:50
+which can mean, for example, that on some shopping sites that have been compromised if you type in your credit card.
+2:04
+And so not only does it go to the payment processor,
+2:08
+it also will go to the fraudster if they got a credit card scam on somebody so that people JavaScript and we be able to deal with bakeshop,
+2:11
+which I'm going to talk more about today. And can sites like server when an iPhone, by filling out the survey, that sort of thing.
+2:18
+And we'll have two other parts of the security testing as we do automated security scanning and also testing for some of our clients.
+2:27
+And we also do a lot of data mining on the Internet, including a Web server survey,
+2:39
+which I think is one of the oldest one there have there in the world the longest running.
+2:45
+And we count the number of computers that that our Internet facing, as well as the Internet, SSL and our company,
+2:50
+our clients are not mostly, but mainly in the U.K. And we also have client base in the US, Europe and elsewhere.
+3:02
+And so our customers, you can see on the right some probably some like that.
+3:11
+You recognise the largest company, the world's largest private sector,
+3:17
+largest tech companies and federal government, a country system, three trillion dollars in GDP.
+3:21
+We have offices in that. So there are our new offices in, of course.
+3:29
+But on the left, which we're expanding into the big office complex recently that we recently acquired.
+3:34
+And then and in London, we have in Victoria, just down the road.
+3:42
+That's where I am right now, just on the roof, Imperial, an office in Katherine place.
+3:48
+And so if you if you do a piece of work on a craft and you end up working with us,
+3:55
+you'll be working for probably one of these jobs if things are in person by the time, by the time your jump start.
+4:00
+So moving on to other crime, this is a classic success.
+4:08
+It doesn't require much imagination from the first year.
+4:15
+You can probably set one up if you know basic H.M.S. that maybe JavaScript, if you want it to be a bit more interactive.
+4:18
+And you can tell from that, look, there's the Phoenix House, they'll tell you it's not enough for the name.
+4:25
+And and let's say the real nice looking page change is maybe the fraudster will update it.
+4:32
+So that's kind of the extent of the input, like the the input, the closer the designs that they don't really do much of their own work.
+4:39
+But when Coronavirus came around,
+4:47
+we had to start dealing with fraudsters that the fraudsters that had a bit more of an imagination and started making up,
+4:48
+for example, a digital passport. And there's something called the digital passport in the UK anywhere,
+4:54
+I think in places in the UK where covid that can produce that not called a digital work, but the processor has made all of this up.
+5:02
+You can apply for a digital passport and they even have a few little touches that make it even more legitimate,
+5:13
+like how your data will be processed using the surface in the service and stuff like that.
+5:19
+So it looks it looks quite plausible, especially through kind of a less informed person,
+5:25
+because they've heard of some form of passport being issued and sort of QR codes.
+5:30
+So that's the sort of thing that we have, but not one of the ones they did before the government.
+5:36
+One of the things that were that we're trying to form countermeasures against to do with it.
+5:42
+But let's start off with the timeline, I think of that structure that took as things went on because the situation changed so often and so rapidly.
+5:49
+So in 2023, you should have a global health emergency.
+5:59
+But in the UK, I don't think many, very many people took much notice until March 20,
+6:04
+where eventually towards the end of the month, the UK was looked out to to prevent the spread of the virus.
+6:10
+And very suddenly, I think a lot of goods that were previously not as much the ban started being a lot of the.
+6:17
+So things like face masks and hand sanitiser and soap disinfectant, that sort of thing that people were trying to stay safe and probably were Anacapa.
+6:23
+Kind of because of the sudden. Of the sudden onset of the virus.
+6:36
+So a lot of fake shot came out like pops up, which had this sort of kind of very generic.
+6:45
+covid wording like, your safety is our top priority, and we know you you might be concerned about covid-19,
+6:53
+so shop on our site and get all the things you need. There are several of these sorts of sites.
+7:01
+This is a covid-19 that will try to sell and ninety five.
+7:05
+These are the sort of maps that government couldn't get a hold of because there weren't enough of them.
+7:09
+So it's very unlikely that around the Internet shop that has just been set up has
+7:15
+these maps and books and several governments were actually fooled by sites like this.
+7:21
+And some did end up having everybody in, some nearly handed over money to places that promised them a lot of maps that never turned up.
+7:26
+And you can see like hypnotic maps that they were selling, they were selling hand sanitiser promotor.
+7:36
+So this sort of thing and the software quite you can see right now are quite graphic design and very rapidly set up that
+7:43
+you can you can see how how quickly strength we have to take advantage of the panic that people had about covid-19.
+7:52
+The. The kind of there are also at the very start of March, I feel like right now, having you back, being around, that's normal.
+8:02
+But back in March, there was so we can talk about whether that would be possible.
+8:11
+And some some of these shots were already starting to sell vaccine to vaccine to keep you safe.
+8:16
+Again, covid. And you could buy a covid-19 vaccine for 50 euro or some current 275 euro.
+8:23
+And this sort of thing is pretty easy to tell, right. Whether or not it's fake because we know that the product doesn't exist.
+8:32
+So if if the source of this sort of thing is pretty easy to say, yeah, we should probably perform countermeasures against this sort of attack.
+8:39
+However, not all of the multiple shots from the Internet obviously are fake shot.
+8:48
+Right? There are there are small businesses. There are people who set up who who try to try to run a business on a or something or small businesses
+8:53
+that have been cleared by have been closed by the lockdown and started setting up shop online instead.
+9:00
+And so it to be tough to tell whether or not something and it's fake or not.
+9:05
+Does anyone want to get whether this particular screenshot from a shop is real or fake?
+9:10
+To me, it looks like a front end on top of Amazon or something, I'm not sure.
+9:19
+So this for this one, this particular one is real, and it was set up on a I don't think it's time that it was set up on.
+9:27
+I think it does, because he's a more generic template.
+9:34
+But we also have to use in our comfort to quickly set up Chuncho to buy things that we don't want to take.
+9:37
+We don't want to take down or perform countermeasures against shops that are that are
+9:44
+real because people might be wanting to buy from them that they say they consider.
+9:50
+So this kind of problem where. It's something there's extra stakes here, right?
+9:56
+You want to be really sure because I'm not sure often the people buying these sorts of things.
+10:01
+So we have a because of the volume of stuff that we were seeing,
+10:08
+we have to come up with a way of detecting whether or not these shots were fake without without having too many.
+10:12
+Is there any idea when. So we came up with a list of kind of criteria that maybe not individually on their own, but in combination,
+10:22
+if several of the criteria applied, then we would say that on the balance of probabilities, it was a big shock.
+10:32
+So the first the first criterion is that everything is OK, because right now or I don't know the U.K.,
+10:38
+but generally right now it's pretty normal for things to be a stock even based.
+10:46
+But back in March 2020, there weren't enough to go around.
+10:52
+So if everything's on the books, then different types of hand sanitiser promoters, that sort of thing.
+10:57
+If everything seems a bit suspicious already, especially if the cards are in place of.
+11:05
+So another red flag of lack of contact details.
+11:12
+So this is kind of saying. It's very unlikely that a legitimate.
+11:16
+covid-19 wholesale supplier is going to be offering more than Gmail address or will only have a contact
+11:22
+form and no details about where in the world they're located to go to most legitimate businesses.
+11:29
+They have like on the Internet, they have their. Physical attraction,
+11:35
+presence on the on the on the on the site and of like there's often very little
+11:41
+contact details on bakeshop because obviously they want to put their real stuff,
+11:48
+the real details there in case they were found by the authority.
+11:52
+And also they often have an explanation of why they suddenly have the best security for the nation.
+11:56
+We were a textile company and we used to make clothes, but now we started making Spacelab drink over method.
+12:02
+Right. You can tell where they got the materials, that sort of thing from the expertise, and they can take that.
+12:08
+But if it's just a shot that set up with just a Gmail address, just the contact form, then that's a little bit of a red flag, obviously, on its own.
+12:14
+It's not it's not a factor. But when combined with others, it makes the software more suspicious.
+12:21
+A lot of shops will have dinner on the page, but the big shop, so they'll describe whatever it is and they'll be simple precautions.
+12:29
+You can take that they say Panopto that while on the phone, that might sound a bit annoying.
+12:36
+The reason the fake shops do this is because they want to get higher and better track.
+12:42
+If somebody Googled how to protect yourself against covid-19,
+12:46
+they want to be one of the one of the revolt and the way that they become one of the results by personal attacks on their page.
+12:51
+And the way that you can tell that a lot of the attacks is kind of boilerplate stuff is because often have been copied, pasted from somewhere,
+12:57
+probably another shop and probably another fake shop with the same owner,
+13:05
+use the same plates and their uses because they want to set up multiple shops in case some are taken down.
+13:08
+So that's kind of generic text is, again, a suspicious sign,
+13:14
+but also if it's duplicated across several different shops, that it's probably a red flag.
+13:21
+And the final two factors are that are based in a domain of newly registered.
+13:28
+If a business has been operating for a while, their demand might be well be new.
+13:33
+But if some folks are just set up a domain and then hopefully on a platform like Shopify but not exclusively Shopify,
+13:37
+where you can set up a shop that very quickly, you can get generic templates and get up and running really fast then.
+13:46
+It's likely that it was that it was set up by a fire by foot.
+13:56
+And so none of these factors individually, but in combination, a lot of factors will tell us the company of the picture.
+14:01
+And there are a few more factors that I'm not going to go into right now for the campaign.
+14:08
+But things like Facebook, applications for for all the things that people can for like some shop,
+14:13
+upload a fake regulatory certificate for working correctly.
+14:18
+You could tell if they were fake. So that was another matter.
+14:24
+For example, there were several. So this was mostly around.
+14:29
+This was happening mostly around March, April, May 20.
+14:35
+But then the numbers started getting probably because these things started becoming more generally available again.
+14:39
+And people weren't panicking as much. When people are panicking and tend not to look out for signs of something is fake and.
+14:46
+There were also other scams that they set up around May, June, July,
+14:54
+time to do with tax refunds and business support, stuff like that that will get onto later at the book.
+14:59
+So another thing that they started doing here at the same time in March is take advantage of the schemes designed for people affected by the lockdown.
+15:07
+So people who are self-employed or people who were who were told to stay at home from their jobs and put on Furley.
+15:16
+So here's an example, email that was sent by someone who says there is an American custom there from the email,
+15:25
+I can tell it they're not on the oh, you have a tax refund for your business because you were locked down so it could get started.
+15:32
+And we'll give you some money on.
+15:40
+And when you add this is another page, is the Self Employment Income Support Scheme, which is a real thing, they started asking for personal details.
+15:43
+Another is going to continue. You're going to be asked for even more personal details and then those details can be sold online.
+15:52
+So people might want to try and might want a national insurance number of the self-employed person or something like that.
+15:59
+And here's another example of an email on the left start to claim the right to covid-19 percent,
+16:08
+which is something that doesn't exist, and it was made up by the fraudster and the kind of.
+16:16
+Most interesting part of this particular scam is that you should wait because you should wait for weeks after making an online claim to say basically,
+16:23
+if you don't have the money, wait until it's four weeks after and then contact HMRC.
+16:34
+And that means that the protesters have four weeks to play with somebody before they might get rumbled.
+16:39
+And because and this sort of tax is usually quite normal for I don't know if anyone's ever dealt with HMRC, but it's quite normal for HMRC.
+16:45
+It'll take this long for the purpose of the application it took until until this many weeks after.
+16:53
+So this sort of stuff is a bit nefarious and tried to give a bit more time to say that these.
+17:00
+For Flight 447 details. So emails are the only factor for delivering the sorts of scam,
+17:08
+some tests are sent out to try to grab the 1000 pounds of company by Texcoco stock crisis,
+17:19
+which sounds very legitimate, and they ask for something national insurance number for a private account.
+17:27
+They may not. And there were so many different schemes being floated by the government and not just in the UK,
+17:34
+but around the world, that somebody might plausibly think the crisis created something real.
+17:41
+And they even have more protests in got the UK here like the new feed that will help us improve it to try to get people to attract a bit more.
+17:47
+And obviously, if somebody's panicking or if somebody is strapped,
+17:59
+then they might not notice that this looks that this doesn't look particularly real, especially at the bottom of the page here.
+18:02
+Yeah, so we saw a lot of these come and we also see a lot of fights that might look like some might not be in a lot of kind of full report.
+18:12
+But we need to make sure that we that we because we receive a lot of them, it's impossible to quantify all of them manually.
+18:21
+And so we would want to do it automatically as some kind of focus right now,
+18:28
+how we automatically go through and quantify and then disrupt the sort of count, but also the pet shop.
+18:32
+So the first step is to find sites that are kind of candidate to be three blocks from our various inputs.
+18:40
+So the first email we ascribe to quite a few feet of spam email, we ingest millions and millions and millions of them.
+18:48
+And we can tell that email is a scam.
+18:58
+If it's. For example, the Senate confirmation of revenue, but the emails are not Asian revenue and customs,
+19:06
+and they find that they can, then it's probably not Asian revenue.
+19:13
+And so we can say that the link into the email system,
+19:18
+we should have a question and we could do that for a lot of for a lot of that in the public or to send them their own report.
+19:21
+So if you see something, you can email it to commit macropod Commonwealth automatically.
+19:28
+Have a look at the. So then another one, the maths, like I showed you earlier, people can report their recommended to us,
+19:33
+you can send a screenshot even and we'll we'll parse out the ARE and the final kind of main input more into the final main one is then file.
+19:40
+So those files are what, DNS provider. So what registrars use to kind of say which domain belongs to who and a lot of you,
+19:52
+a lot of you were top-level domains like not directed at the council will give up,
+20:06
+but will publish its own files with newly registered El-Katatney,
+20:11
+which means we can we can monitor the newly registered domain and see if something looks at estimators up on them.
+20:16
+And a lot of providers have been published and publicly will give up their own files for us to read anyway because of it.
+20:26
+So, yeah, they recommend filing.
+20:36
+You can see inside it probably doesn't fit in here,
+20:40
+but the director would have been prepared earlier and we would have been able
+20:43
+to we would have we would have been able to monitor compliance with this.
+20:46
+And so that's the kind of first that's fine. So the second one is actually determining whether or not they're.
+20:52
+And so we have a very complex system for this that has a lot of moving parts.
+20:58
+But I'm going to I'm going to briefly talk about one main aspect of it, which is patronisation.
+21:02
+So we can for example, we know that the UK.
+21:10
+The UK is the only domain where the UK logo and all content is available on the open government licence,
+21:17
+like the flare up here and the Crown copyright notice. What have I done?
+21:24
+That area where all of that stuff will only be for will only be uncovered.
+21:29
+OK, so if that isn't covered you of the text, it's like it could be a scam.
+21:35
+So we can block it out of town. And you can see the British target, the south.
+21:41
+And I think it's a little earlier. And then we are using human intervention, we build up a lot of pattern for for classifying this sort of site,
+21:46
+but we have to look for different types of scams,
+22:00
+different that the got stuck and we built up when when when we when we see from our monitoring a lot of new attacks targeting.
+22:03
+And then when we notice that we can automatically block progress to the next step, which is getting it taken down from the Internet.
+22:13
+And so we open up automated emails to a lot of people who are involved in the infrastructure for hosting a scam like this.
+22:22
+So this is an email that we would send to I think it's the hoster that we sent this email to for the directive that this is something fraudulent.
+22:31
+We think about on the surface, it might not be effective, but it's really effective,
+22:41
+especially because a lot of folks trust us to report them and they will then take them down.
+22:46
+So this is the this is that is an example of know, we don't only contact the host,
+22:54
+we contact the friends party because sometimes people don't cooperate with taking things down.
+22:58
+But then eventually you can get that majority of of these attacks taken down relatively quickly,
+23:03
+usually within a few days, I think, for the start of the attack.
+23:11
+And yeah, then but then we don't know whether it's actually been taken down.
+23:15
+So we we monitor it continuously. We like from the point that we determine that it's that it's malicious to see whether
+23:21
+or not it has been taken down by the by the various organisations you contact.
+23:29
+So here you have the impact that the page matches the hash of the page that we know is malicious and you have a two hundred response code.
+23:35
+And then eventually after a while it had a four four response code and a different hash and also redirected to a different website,
+23:46
+which means that it probably is that it probably is down now to be monitoring it.
+23:55
+The reason why this is important is that we can see whether there are any providers that are bad things that we can work on,
+24:01
+new ways of getting things done and also on the region so we can unblock it from somebody.
+24:08
+Yeah, because there's no point blocking it. The they can dump. And then at the end, she's got the.
+24:18
+And there was a human intervention required sometimes,
+24:27
+obviously there is human intervention required on a small minority of attacks that are either borderline or quite difficult to take down.
+24:30
+But the vast majority are just taking down the disease and it's quite effective.
+24:38
+So moving on back in time, line of 10 in May 2020,
+24:45
+the UK announced a test and trace of them to test people who might have covered and to contact people who were close contacts of
+24:52
+those who might have had to have it so that you could predict the spread of the virus and to help the open up Twitter again.
+25:03
+And so, as you might imagine, protesters very quickly started the trip and instead of up, start setting up Gary,
+25:14
+pay just like this and telling the people saying you've been in contact with someone who has tested positive,
+25:21
+you must follow the other procedures or you will face a fine of prosecution even if you've been vaccinated.
+25:26
+Bear in mind that this is a before the vaccine and.
+25:33
+Then they said, oh, you must order a pizza to continue,
+25:37
+you press continue and you get to please enter your payment details to pay for the Republican attack.
+25:41
+And obviously, there's no tax going to come to them and it's not going to be super mentalistic off the card,
+25:46
+probably going to sell the credit card number to somebody else.
+25:51
+But the but the this sort of thing, if if somebody is afraid of private, which most people were.
+25:53
+And you're also afraid of being prosecuted and you have all that very legally, he will be prosecuted in fines and you must do that,
+26:03
+then people might not think too much about where they got the link from or how
+26:11
+they got to the site and they'll just have to until their credit card details.
+26:15
+And so obviously, we've described the other scandals before, we have automated detection and countermeasures to get this far,
+26:20
+simpler to detect because you can look for the traits in a page and the logo and stuff like that and for other purposes.
+26:29
+The Majestic.
+26:38
+So then in June, I say that you could start to look down and and sever ties when you have proved to Pfizer and if you take a vaccine and again,
+26:42
+as before, schemata responded by setting up pages where you buy the AstraZeneca sorry,
+26:56
+the type of vaccine, it's very unlikely that they actually have any side effects because you might have 40 to them,
+27:02
+but 23 degrees Celsius or something like that. So for they'll be useful.
+27:09
+It's very unlikely that they have it, but because it requires specialised equipment and stuff like that to are the telegram channels
+27:14
+that we're trying to sell vaccine card into the vaccine court isn't a proof of that connexion.
+27:23
+It's just a medical record for you to keep the covid.
+27:29
+There were a lot of speculation about requiring governments that have to pay the Piper team later on,
+27:34
+which means that some people who didn't want to be vaccinated wants to a philosophical hand.
+27:41
+So people started telling people to discard things like telegram.
+27:46
+You can do countermeasures against this sort of thing, too, because it's because the critics are going to get it taken down.
+27:50
+And we have systems that automatically monitor ground groups like the.
+27:55
+And we even found it hard to fail by a seller on Amazon,
+28:01
+where they even were generous enough to bundle in a second boxing card so you can give on to a friend and the.
+28:07
+Yeah, this sort of this sort of say is anything different than what we told him about by third party seller,
+28:17
+but there was a lot of demand for that sort of thing and maybe they even with to cart.
+28:24
+But it's still something that.
+28:28
+One would want to sit down because people because, for example, some countries were using, even though it wasn't meant to be a vaccination.
+28:33
+Some countries were using different vaccination for entry.
+28:40
+Like I remember, I think it was Greece that started using in part, a vaccination before the NHL made to our kids in or out.
+28:43
+And this is an example of a dark market that's behind the on the dark Web site behind
+28:58
+talk so you can't find where it's being hosted or who's taking it particularly easily.
+29:04
+So you can't we can't perform countermeasures against something like this to sell it for information to have.
+29:10
+For example, AstraZeneca has been sold on the table for eight hundred ninety four dollars generic Corona vaccine for five hundred million,
+29:17
+but they're in for forty four thousand five hundred. And.
+29:26
+Probably wouldn't have received anything if he did receive something,
+29:31
+it probably would be fakes if he bought it from here, but it's still to see how quickly this sort of thing pops up.
+29:34
+And they replace any one, the government confirms that there would be private passports and they would be enforced.
+29:42
+Since then, the government has turned.
+29:49
+But at the moment, at that moment in April 2001, it was announced that there was confirmation that it would be you.
+29:50
+So there's a bit of to be sending out a digital passport.
+30:01
+Registration form to get people that it have no national insurance number and if you're
+30:08
+excited about being able to so so go to places that you're about to entitle you to go to,
+30:13
+then you might quickly think it's a good beginning.
+30:20
+And what they you out the form, you've got a QR code, and I don't know if anyone can the QR code yet,
+30:26
+but but I'm sure I could eventually lead to QR code monkey.
+30:31
+They didn't even bother to change the default, Yooralla said much the same bit of the same code.
+30:37
+And you will if they were banking on their standard.
+30:42
+There were also Instagram profiles set up to sell these sort of like the NHS,
+30:49
+but they seem they they were going to sell you a a some sort of website or something like that.
+30:54
+And there are people here and 50 people claim to get it to be shown on government systems, which seem quite dubious.
+31:03
+But it's. So we reported the cost and taken down.
+31:10
+We have software sites like Instagram, and this is another one of those which also claims to put it into the NHS database.
+31:16
+So you've been vaccinated and you would pay for hundred pounds for that.
+31:28
+And even if you knew a topic, we have live reports that if it was from because you're paying for something that's not that's not that's not legal.
+31:31
+So you wouldn't be able to go to the police afterwards and say, somebody stole my three hundred pound.
+31:43
+That kind of a perfect. But some of the programme group and there was also something called hack and trade,
+31:49
+which are set up for people who didn't want to be vaccinated but still wanted a vaccine, what it what it claims to be vaccinated.
+31:57
+And they set up a site that would that would generate a fake version of the apps in the browser with a QR code to say that you've been vaccinated.
+32:08
+And we take this site down because they infringe on the actual trademark and the.
+32:20
+The these sites are they keep popping up every so often and we keep finding them, taking them down.
+32:28
+But yeah, that's kind of messed up to say if anyone's got any question, that is a great time.
+32:37
+If you're interested in applying to work in that company, things like that, American cyber crime, email your CV to see the other comments.
+32:45
+If if you if you want more information or visit the of job.
+32:54
+William, thanks. That was absolutely fascinating. I mean, I'd be interested in these sites, you know, they get taken down.
+33:02
+Does anything ever happen to the people that are running them?
+33:09
+And do you get the impression that there was a small group of people running a lot of the
+33:13
+a lot of the sites or the or is the ownership of the of the scam is much more widespread?
+33:19
+And it's difficult to say,
+33:28
+but there are a lot of kind of kids that are sold by cameras not set up to buy and sell it to people to host on their own, on their own platform.
+33:30
+So it could be that it's very few people that it could also be that there's a lot, but a lot.
+33:40
+We see a lot of kind of closing of the site.
+33:44
+But clearly, there are kids being sold to set up your own and they have done that sort of thing in terms of anything happening to them after.
+33:47
+We have no idea really most of these artists in the U.K.,
+33:58
+they're hosted in countries where they don't really care whether they whether they're whether
+34:03
+the country or parties there don't care whether there are forces or in their country.
+34:09
+They're not part of they're not targeting. So it's not a kind of very rarely you get these people, unfortunately.
+34:13
+Yeah, that's interesting, right? Does anybody have any questions? Please post them in the chat room.
+34:22
+Raise your hand or just just ask. Maybe what people think about, I can ask another one,
+34:28
+so I saw in one of your slides there that you had the bit of Bitcoin and Ethereum involved in the in the scam there.
+34:38
+You know,
+34:47
+that's another sign of a scam when people ask you to pay in a in an irreversible kind of a transaction on some other non-traditional payment network.
+34:47
+Right. How often do you see cryptocurrency related scams?
+34:59
+So we actually have an entire kind of attack that we go after called cryptocurrency investment scam,
+35:07
+which are I don't know if you've ever seen the fake news article of Richard Branson has,
+35:14
+it's one way of making ten thousand dollars a day,
+35:22
+and it's often involves signing up with some dodgy platform that claims to be selling you cryptocurrency investments.
+35:26
+But that that that sort of thing, we see a lot of and it's very widespread.
+35:34
+And we've actually tracked down roughly where these people are operating from, mainly one group.
+35:38
+But in terms of the two we've covered, there's very I think we see very much of it because usually people are just after credit card numbers.
+35:46
+But for example, take pharmacy to places itself. Take the cell, take drugs are unlike pharmacies online.
+35:56
+A lot of them accept payments in the currency because they can't they can't take payments
+36:05
+and using credit cards because Visa or MasterCard or their payment processor can block.
+36:10
+And so, I mean, what happens to people's details after they've after they've been taken by these scams?
+36:18
+Do do do they do they find their credit cards and stuff being used for other purchases and stuff for.
+36:27
+Yes, so generally the scammers themselves, they don't tend to use the credit cards themselves of that double the number of the people involved.
+36:33
+I don't know what the going rate for credit card number is at the moment,
+36:42
+but I think I was once scammed on a traditional ATM skimmer like it was an in-person one that read my credit card details and it ended up being there,
+36:45
+ended up being withdrawals and rupee's I think about two or three months later.
+37:00
+Have halfway around the world, so I assume that's what happened, your car gets get home and people who make stability, withdrawal.
+37:08
+Great, right? Anybody else have a question?
+37:18
+This is a great opportunity, I might tell you,
+37:23
+NECROTISING are doing some of the most interesting and amazing work out there right now with regards to network security.
+37:27
+So anything you're curious about, please do ask. Anything, generally, A doesn't have to be covered, related, I'm happy to answer questions.
+37:35
+I mean, in terms of opportunities that there are for the students, are you still doing presumably industrial placements and so on,
+37:51
+and you're interested in any any graduates with with network security skills?
+38:00
+Definitely we do internships that can be a compulsive placement for people doing the image there.
+38:07
+Everyone is welcome to apply. We also are happy to work on I don't I don't know what it's like to get that final year project probably had the bumper,
+38:15
+but for final year project, we are also happy to collaborate with people.
+38:25
+We've got a lot of data, which means that you can build very interesting things with it.
+38:30
+So if people are interested in collaborating on a five year project, you get in touch as well.
+38:36
+The same email address would work for about CVN across dot com.
+38:41
+We certainly had a number of very exciting undergraduate projects and the students have then gone on to work for phone that cross, that's for sure.
+38:47
+Right. Alexa says, Do you find it common for scammers to use personalised links to circumvent your scanning?
+38:58
+That's an interesting question. What do you mean by personal, I think.
+39:04
+Do you mean if you mean like with a separate link per scan, like for each type of email,
+39:10
+you send a separate link for each person that might have a different query parameter or something like that.
+39:16
+Exactly. I think I've figured out it's relatively common because not just because they want to circumvent that common down,
+39:21
+but they just want to see which email addresses people click on from because the details are far more valuable to somebody who can be fooled.
+39:33
+The generally, it isn't very effective against our government because we will just because we get a lot of spam emails.
+39:42
+So we will just end up visiting one of these one of these sites anyway.
+39:51
+If they've got if they've got logic, I don't know, limit it to a certain number of visitors.
+39:56
+Some common fishcake might have that logic. If they do, then I think we have to have some logic to reverse directories then.
+40:02
+And the you are out to try to get to somewhere where we can see the future.
+40:09
+I mean, that's usually the personalisation is just an email and the query parameter.
+40:17
+So any any email in there will be and we will we will obviously strip that before reporting it or strip them for blocking it, but for everyone.
+40:24
+OK, Charles, how do you balance your detection criteria to avoid false alarms and legitimate uses?
+40:39
+I was going to ask if there were problem with false positives every now and then.
+40:45
+Do you simply tweak the criteria to be more stringent until you get more complaints?
+40:49
+And so with generally when not to have covered?
+40:55
+Yeah, if we see that some part of our detection policies will work on reducing that.
+41:01
+And we also have as part of our pipeline, the negative classifier,
+41:07
+the classifier that will say that's not a fish rather than that is a fish that we can try to remove common false positive,
+41:10
+like obviously we will never avoid if we're doing any kind of automation.
+41:25
+We will never avoid having we'll never get direct to do with the KOVA stuff because the stakes are a bit higher because we would probably
+41:29
+be disrupting a legitimate business if we if we started taking down if we if we were starting to take down things which are freer.
+41:38
+I think what we were doing it for a while when we were when we were creating more broadly find a
+41:47
+new type of gun will we will have to work for a while without any countermeasures against that,
+41:53
+against the like, get the shot to the head so that we can check that it isn't too noisy and that it isn't triggering too many for.
+41:59
+That's mainly what we do to avoid those, and obviously we have different.
+42:15
+Kind of pattern of sight that generally are known to be legitimate sites that are popular in the
+42:25
+country that we want to have a second look at by a human to check that they're actually done.
+42:30
+But those are some of the ways we avoid we avoid this.
+42:38
+Yeah, I mean, you do you do have quite a nice kind of like reporting front, and it's really easy for people to report suspicious sites.
+42:43
+Right. Which you can then investigate. Yeah, that's reports that an aircraft you can report there if you find enough scans.
+42:52
+Well, I think they're appropriate for people who who who give us enough Canizaro.
+43:03
+But if even if you're not interested in it, we can get something blocked in major browsers quite quickly if you report something to us.
+43:10
+Yeah, it's quite nice because you get those status updates and stuff about it as well, isn't it?
+43:19
+Well, sometimes it takes a while. It can take a while sometimes when there's a backlog, but generally it's relatively flat.
+43:24
+Yeah, know very, very useful, very good combination, I think, of like human input and automation and and so on.
+43:33
+Great. Okay, anybody got a final question? All very shy today, is the coursework starting to bite, right?
+43:42
+Yeah, a lot of stuff, too, from what I gather.
+44:06
+Yeah, I think it's getting to that time of year.
+44:10
+But listen, thank you, Alex. That was absolutely fascinating.
+44:14
+I really appreciate you taking time to come and tell us about these very interesting aspects of network security.
+44:19
+That's right. Thanks very much for having me. Great.
+44:28
+And I hope you get some good feedback from the students and lots of applications for internships, placements, graduate positions and so on.
+44:31
+Thanks a lot. Hope. Thanks. Thanks very much. Have a great day.
+44:39

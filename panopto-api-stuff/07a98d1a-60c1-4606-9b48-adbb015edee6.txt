@@ -1,0 +1,457 @@
+ID: 07a98d1a-60c1-4606-9b48-adbb015edee6
+Title: DoCSoc - Introduction to Programming Utilities (2 of 3) - Q&A - macOS
+Category: COMP 1st Year General
+Lecturer: Konstantinos Gkoutzis
+Date: 08/10/2021
+Yes, a recommendation for a text editor and so the editor that I use is Emax, I use Dumex,
+0:02
+which is pretty nasty to set up, pretty difficult to get to grips with, but very flexible for kind of long term use.
+0:16
+I actually wouldn't recommend using it. And especially for a beginner.
+0:30
+Another option is a V.I. or an.
+0:38
+Both which are a little bit more lightweight, a little bit easier to set up, and and if you want a text editor,
+0:47
+that is kind of more kind of similar to Emacs, but not as not as slow and not as a bit set up,
+0:54
+there would be that would be the recommendation for that.
+1:04
+And then the other kind of bigger ones, like VX code, I know a lot of people, I really like those.
+1:08
+And those tend to work at well, unfortunately, whichever one you pick, there's going to be a lot of configuration difficulties.
+1:17
+But yet those would be the three main ones on an one situation if and if it doesn't actually work.
+1:26
+And the other thing that I will say is I did have a look to see what the best and the software was for and what marks.
+1:36
+And from what I could see and UTM is the is the way to.
+1:47
+So I don't know if people have experience with that, but it seems to work pretty well.
+1:53
+All right, thank you. No problem. And there is a question in the chat there, if we're now planning to just use Linux on Mac with PVM, should we, uh,
+2:00
+be on this call or the Linux one and add probably the, uh, Linux one, I would imagine, and both of them will be recorded.
+2:17
+So if you do run into trouble, another thing you can switch back and forth between the two calls.
+2:35
+Um, what I'm going to focus on today is the tools that you use and in the in kind of a Mac environment external to the VMS stuff.
+2:42
+And so if you do an. Get all of that stuff set up properly, you're going to get more at the end of the next month.
+2:56
+Any other questions? What do we search for in Panopto to find these oh, I don't know.
+3:10
+And I don't know at the moment, because, I mean,
+3:24
+this is recording now and I don't know where it's going to where it's going to get, but so but I'm sure that people are told.
+3:27
+So any other questions on the stuff that was in previous lectures?
+3:41
+No. OK, um. So what I'm going to do today is I'm just going to quickly cover some of the stuff that
+3:53
+I am rushed through yesterday and then also move on to talking about in more depth the.
+4:03
+Text editors and compilers on Mac.
+4:16
+And. So, uh, yeah, so the first thing is just to talk about, um, uh, SFH and Sepi,
+4:24
+so some people were mentioning yesterday that it was about kind of using nation to get into a lot of computers and so on.
+4:38
+And so I'm going to show you, somebody goes there.
+4:50
+I'm not. The.
+5:01
+So, as I say, is a system that lets you connect to the terminal or the command line on a
+5:09
+remote computer and you'll be using it a bunch to connect to the lab computers.
+5:17
+And so those covid yesterday, the association, the SEPI, does anyone have any questions on those?
+5:21
+And in particular, actually. So you go to CBS today as a.
+5:27
+I did, and as in, they were in the video that you got and the lecture and the lecture notes in the slides and so on yesterday.
+5:38
+You talk about the video that was scheduled for like the 10 o'clock video at nine,
+5:48
+that will be the person explaining just said that they'll be covered later.
+5:54
+We won't go into the details at. It was not it was just like a brief overview.
+5:59
+Yeah, well, I mean, the the only information that I would be covering here, I mean, is just the syntax for ENSO.
+6:08
+The stuff that was on the slide, so SFP username at location, on file at local park.
+6:19
+I suppose I can ask, would you just mind introducing LCP again and then just going with it?
+6:36
+Yeah. Thank you so much for.
+6:43
+OK, so the idea with these things is that you're on a local computer and you want to access the command line on some remote computer,
+6:48
+probably the lab computer that you have. The two tools, there are multiple ones, but the two main tools that you will be relying on is SNH.
+6:55
+So at SSA is a tool that when you give it an address,
+7:06
+it will tell into that address and you'll open up a command line as if you were on the other computer.
+7:13
+So the way that you can do that is you type in your username for me.
+7:18
+I think that's OK, 20. Yeah, and then the address of the computer that you want to log into.
+7:23
+OK, and I don't I'm not quite sure what the address of your lab computers are, but.
+7:42
+You have that information on the CSG website is that shell shell, one or two, dot, dot, dot, dot, dot you get.
+7:56
+So that works, apparently, and. And so the other comment that you have, so can and open an actual terminal.
+8:17
+The other main thing that you'll want to do is transfer files between both computers and the way that you do that is with ACP.
+8:30
+So this is the same or whether this is analogous to the ACP command, which copies a file, but it works overseas.
+8:40
+And when you do, it is the same Syntaxes SSA first you do your username at the location.
+8:46
+So for me, that's OK, 20 at one for the road.
+8:52
+And then what you put in. Yeah, the slides are on Panopto, I think.
+9:00
+And and then you, uh, do a column and then it goes and the part that you want to copy and then from then to.
+9:13
+Right, so. So, yeah, so that's the basic syntax of it.
+9:29
+And again, with any of these commands,
+9:46
+the main thing that you need to bear in mind is that if you get stuck with them or if you can't remember the Fikes,
+9:48
+the first port of call is the main command, which will give you all the information that you need.
+9:55
+Another thing that I want to point out that is really useful as a kind of a replacement for Sepi is asking.
+10:02
+So asking can be use to copy files, but especially if you're copying a file that you have kind of partially on one computer so
+10:11
+that you have a big directory that you're trying to mirror on both machines and you've
+10:18
+made some updates to it on one machine you can use our for with the combination of the
+10:25
+flags to copy over that file from one machine to the other without copying duplicates.
+10:30
+So it's basically much, much faster and it gives you a little bit more information than CPUs.
+10:35
+Yep, OK. The the syntax for our it seems to be.
+10:47
+Uh. And not quite know it's a little more complex than Sepi,
+10:56
+because you have to give it Flagg's telling it whether or not it ignores duplicates or so on and.
+11:06
+I'm not going to go into it in detail, but it's just something to point out if you end up using SFP a lot.
+11:12
+So what does S&P do? So S&P copies of files, just like the CD command does, but it does it through S.H. So it copies it from or to our remote machine.
+11:19
+Can I please repeat the syntax for S&P?
+11:29
+Absolutely. So we have it here. So S&P.
+11:34
+Uh, at, uh. OK.
+11:42
+So, Sepi, the first thing is you give us your usernames.
+12:04
+This is your computer username that you use to log in to Imperial, but in general,
+12:08
+it's whatever username you have on another Unix computer so it can be used for any computer that has the same SSL enabled.
+12:12
+The address of that computer and and then this is the file that you want to copy from and the file that you want to copy to.
+12:20
+And. When I try and, hey, it won't accept my normal password.
+12:32
+OK, so there's a I'm not I don't know exactly what like what server that you have to log into for your stuff.
+12:48
+The detail guide on how to do it is on the FCC website.
+12:57
+OK. So, um, yeah, so that is the stuff they came up yesterday primarily.
+13:17
+So I just got into this is recorded so you can go back over to the stuff that we did already.
+13:29
+I was just actually recapping stuff that I didn't have time to cover yesterday.
+13:36
+So I have to move on to the text editors and compilers and stuff now.
+13:41
+OK, so. And second part is the one on our local machine.
+13:52
+Yes, the second part is the one on your local machine. So you can copy from the other machine to your.
+13:59
+Should be. OK, so.
+14:06
+And. And what I'm going to talk about now is JHC, the compiler and jati,
+14:14
+and how to use that to work with Haskell and how to interact with Haskell programmes and.
+14:23
+So there's one other question there. Do we need to install parallels, if we can just SFH using the terminal and you know,
+14:34
+in theory you could just access to a remote machine and use all of the tools on that other machine?
+14:43
+That's going to be really difficult to do. And in particular, it's going to be really slow.
+14:50
+And you will want your own kind of ed setup.
+14:55
+You want the computers that you're using installed locally so that you can compile things quickly.
+15:00
+And using SNH to do everything is them, it's going to be way too difficult.
+15:06
+OK, so am. So they come out of that you're going to use and you're going to run into, first of all, is the is GHC, the Glasgow High School Kampala's,
+15:18
+this is the compiler for high school and high school is defined as a language
+15:36
+and there are a bunch of different compilers out there that work with it.
+15:42
+But the vast majority of them are used that much anymore is really the only one that is still widely used and actively maintained.
+15:47
+And the way that you will run into it is that you will have some high profile, that you will have written your your assignment in or whatever,
+16:00
+and you can use GHC and GFCI to to tell you about to start up the ripple for any of those programmes and see the output of those programmes.
+16:10
+OK. And so I say we see what does.
+16:25
+And man and man, I think this man is a man short for manual, which gives you the manual for any command that you the supply super useful.
+16:34
+And it will, yeah, it'll help you understand any of the commands that you need to.
+16:43
+OK, so let's take a look first at.
+16:52
+So this is the read evaluate Printup for hospitals and what that means is you get this little prompt here, you get to write in a.
+16:59
+You get to write in some expression, evaluates the expression for you, and then it points out the results of the expression.
+17:16
+OK, so and it does it all in Haskell syntax.
+17:22
+So here, for instance, I write in one plus two and a result of that expression is three and it printed out for me.
+17:26
+And on the next line, this is the tool that you'll be using vast majority of your time in order to get to grips with Haskell,
+17:35
+kind of understand how it works and test out your code as it works and so on.
+17:44
+How did you download the guy onto your Mac? I tried yesterday, but it failed.
+17:53
+OK, I'll go through the recommended ways to install Haskell in one second and just after I go through the replay itself.
+17:59
+So what you can do here is you can do some commands in the sky and all of Jyoti's commands are prefixed by a colon and they're usually one letter.
+18:14
+So to get ahead of GHC, I just like to get out of the idea for them is going to go back into it now.
+18:27
+You can also then get a list of the commands with colon help and this will tell you the kind of the basic things that you have.
+18:38
+Right. So for instance, a useful one. And you often use is you do county, which will tell you the type of some expression and then say that little.
+18:47
+OK, so ABC has a list of characters or a string, as it's called.
+19:06
+Yeah, and the other thing that we can do is we can.
+19:16
+We can use GHC to load up a file in Haskell that we've written.
+19:31
+OK, so. So I've made a module there that contains one variable.
+19:38
+And. And the variable is just an end and we can load it here like a load of Rachels, OK, that's a variable it'll give me at the result of that.
+20:09
+OK, so Colleano is the load syntax. And so, as I say, when you do your like assignments and so on,
+20:26
+you'll be generally editing a file and you will use Jinky to poke around with the definitions in the file and
+20:34
+see what's going on because we have a questionnaire and how do we change the type something while using it.
+20:42
+And this is showing an error and how do I fix it? OK, so the expression put in here is this for everybody to.
+20:47
+So it's a pretty terrible error. But the problem here is that.
+20:59
+At the Hmoud, function is defined on integer types, so int or word or whatever, and this division function is defined on fractional types.
+21:06
+So double float or fractions.
+21:17
+OK, so that mod function, so this returns an integer, in other words, a whole number, that's not the same type as a fractional number.
+21:21
+So when you use this evidence, it won't work.
+21:31
+Because there are different types. Because if you have something like five divided by two, the result of that is not in.
+21:40
+It's not also an integral part. So the way that you would fix this is a couple of ways.
+21:54
+So the first thing you could do is you could use an integer division rather than this fractional division.
+22:04
+And so that would be div. Near.
+22:09
+That'll give you five and what would be the other one to vote for if you do want to get fractions?
+22:19
+You could use a conversion function. That converts between.
+22:32
+Integer is two floats. So from integer, one of those functions, you get five point zero.
+22:41
+So those are the two ways to do it. So everyone okay with that?
+22:48
+So that's just a quick intro to see and how it works and how you will use it to evaluate your own programmes.
+22:54
+Does anyone have any questions on that? Now, OK, so.
+23:01
+And. Let's get into how to actually.
+23:11
+Oh, yes, so one question that was there, how.
+23:20
+How did you compile the programme just then, was it called on out so kind of Sokolenko and loaded the programme, but it didn't actually compile it?
+23:26
+So when you compile a programme, it takes the programme text and it converts it into some lower form of machine code or something like that.
+23:34
+What we did here, instead of actually converting it to that machine code, is we just evaluated the programme as it was, and that's what JCI does.
+23:45
+So it's a. The resulting code is a lot slower than if you had compiled it, but it's a lot faster if we're just looking around and seeing what happens.
+23:56
+Any other questions on that?
+24:11
+OK, so next, we're going to talk about how you actually go about installing high school, so there are a handful of different systems out there that.
+24:20
+And that kind of hospitals that those like GHC up, there's stock there is Kaboul, there's the hospital platform,
+24:35
+there's a lot of these different things and they are kind of all a little bit different from each other.
+24:45
+And the difference between them is really quite complex and difficult to get through.
+24:53
+So what the recommendation for your course is, is just to install STAC.
+24:59
+And you have the best command to do this in your slide's.
+25:08
+Can you, Haskell, on the code as well? You can get.
+25:24
+So at this sports on Panopto, they are. You should have got a video for and for this lecture.
+25:34
+This is a Q&A on the lecture that you should have already seen.
+25:46
+So what's what's dakis is it's a system that installs the JHC, which is the Haskell compiler itself.
+25:55
+It also includes Kaboul, which is the package monitors the thing that handles installing the compiler
+26:04
+and also any other programmes that you might want to use in your programme.
+26:11
+So, for instance, if you have a programme that does some Web access or something,
+26:15
+there are a few common libraries that you can use to to to do that web to help you with
+26:21
+that web access cable is a programme that will allow you to download those libraries,
+26:26
+manage their versions and that kind of thing. COBOL is a little bit low level.
+26:31
+It's a little bit difficult to use and it's difficult to keep track of what
+26:35
+dependencies you need and what different versions of different libraries you have.
+26:38
+Stock makes that kind of wraps. A lot of that and in general makes it a little bit simpler to use.
+26:42
+Stack maintains a single repository of all of the of a bunch of libraries in
+26:50
+high school which work together so you can download any one of the libraries.
+27:00
+Not one of them will clash with any of the other ones. It's called the Stack ELT's.
+27:05
+Oh, look what the stock is again.
+27:13
+Yes, this system is something which wraps at GHC and Kaboul, and it also manages the versions of libraries that you have installed.
+27:18
+And what is the command to install the stack, the command is on your slides, I can pasted here into the.
+27:34
+Into this thing. I'm not going to run an though, because I do have stock already installed.
+27:49
+So what stock does is it, as I say, so it manages the versions of these programmes so that you're less likely to get
+27:59
+clashes between the different versions of the programmes when you use them.
+28:05
+And for somebody who is new to Haskell, stock is probably the best approach.
+28:09
+What I was told I mentioned yesterday that if you just want to install GHC and Kaboul with no kind of dependencies or anything like that,
+28:18
+the best way to do that nowadays is to use a thing called GHC yuppy.
+28:29
+GHC up, that is, and if you go to the website for that, it's available as part of the Haskell platform.
+28:36
+And it gives you the command on to install it right there. How do you assess how you type the command exit?
+28:51
+So to install GHC up, that's a system that will install Kaboul GHC, but no extra, no stack and it won't manage versions of things for you as well.
+29:08
+So. Yep, so any questions of those two things?
+29:21
+So far? Where do we find the building, where the slides and.
+29:25
+So they are on a. Panopto.
+29:42
+I'm going to guess he probably can't use the same length that I'm using.
+29:48
+Does anyone have a link to the slides that they can share in the chat, because I have a link here,
+30:17
+but I'm not sure that it's the same one that I probably don't have the same.
+30:21
+Accessibilities, fantastic. Thanks very much.
+30:34
+OK, so everyone is OK with the with the information about installing passcode recommendation is to install Stack,
+31:16
+um, through the, uh, the command that you have on the in the slides.
+31:25
+And actually, if I just, uh, check one thing, I think of that.
+31:31
+Installation instruction. Yeah.
+31:40
+OK, so. If you actually just Google Haskell stat.
+31:52
+You will get up the actual page and it'll give you the same command, so.
+32:00
+This is the this is the ground that it gets you, it pulls a script from the hospital website and runs it through S.H. and this one starlit.
+32:10
+Um. If you're on a Mac, the other thing that you probably need to do is you need to add your local binaries to your path.
+32:23
+Which in. In the lectures is given us this command.
+32:40
+The only one thing that I do want to point out about this is if you are on if your shell is Zeta's age, which most of you probably are on,
+32:49
+if your if you're on a more recent version version of Mac OS, and then this is actually the Zetas age RC.
+33:00
+It gives other commands for installing Adam and hospital platform. And do we do that, too, if you're using Adam as your text editor?
+33:16
+Yeah. Depending on which text editor you using, there are the.
+33:26
+These different things you install will give you other,
+33:39
+like functionality in the text editor that you're using so stylish Haskell will give you reformatting ability so that.
+33:43
+And it's in loyalty to the same level or whatever and that kind of thing,
+33:51
+ghc mod will give you information, light type errors and so on right in the text editor.
+33:56
+So you don't have to use GSCI to give you that information separately and it gives you the link for the the extra hassle dependencies as well.
+34:02
+And Atomism did the recommended one, whichever text editor you use, they should have a guide for how to set things up itself.
+34:23
+Adam and VX code should be relatively straightforward to set up.
+34:32
+Not totally easy, but but doable themone, Max, are going to be far more difficult.
+34:36
+And if you do go down the route of using Emacs, personally, I would recommend looking into outer space, Max or Domy Max for them.
+34:42
+And I'm not really sure what the what the best things that there are.
+34:55
+But you know that if you do use those things, you're setting yourself up for quite a lot of work.
+34:59
+To. Get it to work.
+35:05
+And any more questions on that so far, because we are actually going to run.
+35:14
+Ahead of time. Friendly only have a minute.
+35:19
+Forty four. No more questions on that.
+35:28
+And OK, yes, apparently, because I have the. Not proper version of Zoom, I'm only able to have a 40 minute long.
+35:55
+Zuman, so I'm going to. So it's going to kick us out in a minute.
+36:09
+So I don't know if I can extend the zoomer more, if I intended to end it there, but.
+36:19
+So do we need to be jugaad and potentially.
+36:25
+In less than a minute, I think, and I'm going to see if I can set up another one, uh, just for now, but I did manage to.
+36:31
+However, what I wanted to cover anyway. So do we do it or not?
+36:40
+And no, I don't think so, I don't I don't think that'll be necessary.
+36:51
+Struction.
+36:59

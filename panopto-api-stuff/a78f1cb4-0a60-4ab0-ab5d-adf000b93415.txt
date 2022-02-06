@@ -1,0 +1,1615 @@
+ID: a78f1cb4-0a60-4ab0-ab5d-adf000b93415
+Title: Kotlin Lecture (livestream) - Tues 30th Nov (in which Robert has a cold)
+Category: Week3
+Lecturer: Robert Chatley
+Date: 30/11/2021
+OK. Hopefully that's why he now, so in this, I've introduced another type just to wrap around the numbers just to give us,
+0:12
+you know, a little bit more of an accentuated, object oriented feel to this.
+0:19
+I've introduced this type called numb. A Numb has a private property called value, which is just an integer stored inside each of the numbers.
+0:23
+And then for each of the numbers, I gave these methods plus minus times and less than which are doing.
+0:33
+Basically, you know what you would expect them to do.
+0:40
+So there's nothing really added here apart from the fact that I just accentuate the use of objects in this case.
+0:43
+They think that you can see here actually is in these. Definitions of these functions here, these methods,
+0:49
+is that we're using this pattern that we talked about a little bit last week of
+0:56
+having this to correspond to this object and another object of the same type.
+0:59
+I'm going to call it that one other and that one, this one, this so we can talk about the value property of both of those objects and add them up.
+1:06
+And maybe what's interesting to note is that even though that is private, I can still do ultra dot value because it's a member of the same class.
+1:16
+So I think sometimes people think that private means you can't see it outside of the object,
+1:26
+so I wouldn't be able to do other value because that thing was private inside the object.
+1:30
+But it actually means that it's not visible outside of the class.
+1:35
+And so here, because I'm the maintainer of this class and the author, I wrote all the code.
+1:39
+I'm allowed to see and to work with the internals of it inside the same class definition,
+1:46
+because these method works, this method here works with another name.
+1:52
+I can access and use its private state there.
+1:57
+So that's possibly something that you might come across that might be slightly unintuitive to start with.
+2:00
+But that's the way to think about it is who's allowed to change this code?
+2:06
+I think this was an argument I made last week. It was about whether or not we were allowing other people to access parts of our code,
+2:10
+and that meant that if they started to use them, we couldn't change them anymore.
+2:18
+The here, I'm only using it within the class and I'm the owner, the maintainer of this class.
+2:21
+So if I change the way that you know this is specified, I can update all of these things and I have a licence to do that because this is my code.
+2:27
+So let's go back and think about the frames. So actually, let's just run this programme.
+2:37
+I'm just going to calculate factorial of four. In this case, you can probably figure out what the answer should be.
+2:42
+For my computer to compile it. OK.
+2:49
+And oh, OK. It didn't print it out very nicely.
+2:53
+It's printed this representation, the hopefully by now thinking back to what we've done in previous weeks, we know how to fix this.
+2:56
+So that's the default way of representing the object as a string with the package type name, maybe some ID or memory address.
+3:04
+So let's fix that so that it prints in a more understandable way by providing an
+3:13
+overriding implementation of the two string function that overrides cheating.
+3:21
+Do this one. And actually, what I want it to be only just to be the value inside.
+3:26
+But that's an integer. So I need to convert it into a string. But then actually, this integer has a two string method as well.
+3:33
+And the two string method of integer does what you would expect, and it converts an integer into the corresponding string.
+3:41
+So let's just do that. To no avail.
+3:47
+Running again. Now we get the kind of expected representation, so whenever you have that problem,
+3:53
+you can printing something and it doesn't look in the representation that you want.
+4:15
+That's the sense that that object doesn't know how to print itself in a meaningful, meaningful way.
+4:19
+It doesn't know how to convert itself into a string in a meaningful way. So we override that two string function.
+4:23
+Then we get that behaviour that we want. So now let's think about the execution here.
+4:29
+So what we're going to do is we're going to run this function. We've seen that it produces the right results.
+4:35
+But think about what happens on the heat and the stack as we do this.
+4:41
+So the first thing we do is on the stack.
+4:44
+We're going to make a space for this fact vow, which is going to contain the results that are going to print.
+4:47
+But when we have this. Don't yet know what the value is, the value that goes in here is going to be the results of competing dysfunction,
+4:57
+which we need to do some work for yet.
+5:10
+So actually what we're going to do is to put onto the stack this and then to go into this function and then compute this function.
+5:13
+And then when that function is complete, then we can write the value here.
+5:19
+So actually, if I go back to the slides, maybe I'll show you here how it comes out.
+5:23
+That's just the same code. So we start out with on the stack we're going to have just making a space where we declare this this value.
+5:27
+Given it a name, we've made a space for the values to come into when we know what it is.
+5:38
+But for now, we just need to go off and compute the factorial function.
+5:43
+Then inside the factory or function, it's got a parameter called DN.
+5:48
+Is here. And we're passing into that. A num of with a four inside a number representing four.
+5:55
+So this n is going to be on the stack and that's going to reference this object, which is on the heap.
+6:03
+Which we see here. And then we're going to continue to look at, OK, what happens next, but then we're going to compete OK and is not less than two.
+6:11
+So therefore, we're going to go in here.
+6:21
+I'm going to declare this variable, this value, I should say, F. And that's going to be the result of this call.
+6:22
+And then we're going to do this statement. So first of all, OK, we can have an F. onto the stack.
+6:30
+But again, we don't know the value that is associated with this yet because we need to go and do another call of factorial.
+6:35
+And so in this case, we're going to make a factorial call. With.
+6:42
+And minus one. So going to compute and minus one, we're going to make a new name on the heap and that gets passed in to another caller,
+6:49
+factorial, which also has an end parameter. So this is really why someone was asking last week about the fact that this was a stack.
+6:57
+This is why this is a stack. It's because now we've got another RN on the stack, so we've got the same variable name mentioned more than once.
+7:06
+And so when we're trying to look up, OK, what does end refer to any particular point in the programme?
+7:15
+We need to start at the top of the stack and work down until we find an end.
+7:20
+And so here? OK, well, this end represents three.
+7:25
+We can't see this one lower down.
+7:29
+Because that's, you know, lower frames of in our frame for our current function scope, which has got this slightly darker line here.
+7:32
+This is the value, and we've also got a new value of F, which is going to be computed from another recursive call factorial.
+7:40
+I'm going to go again and if I'm going to go again right through until we get to the
+7:48
+fact we're OK now we know that and it's one and we can start to unwind the stack,
+7:54
+competing these results. So at this point.
+7:59
+Right, we're not going to go around this part anymore, we're going to do this part,
+8:05
+we're going to say, OK, well, in fact, we're just going to pretend this. No.
+8:09
+So on the on the heap, now we have the one and we have and asked them is the one that becomes the value of half in the previous frame as we unwind.
+8:14
+And then we're going to do that again. We're going to do the multiplication is to one times two and it becomes this half and then two times three.
+8:26
+I'm going to make a six and that's this half.
+8:33
+And then eventually, when I pull right out to the bottom of the stack again, all of the other variable names have gone.
+8:35
+So we aren't able to reference them anymore because they are not in scope.
+8:44
+But now down here, so we can't talk about em anymore because we're not executing inside factorial.
+8:48
+We've now left that scope so we don't have an end in our programme that we can talk about and we don't have an end on the stack anymore.
+8:55
+And now that we've got the fact that foul fact has been this has been fully completed, so now this is associated to something.
+9:04
+That's the 24 that we see here that a particular memory address nominated to represent corresponding to that object.
+9:12
+That's their. And then we can go on and just print that one at the end.
+9:19
+So if I, I'll just do that once in the debugger, let's put breakpoint in.
+9:26
+And you should see that as we step through, we get the same kind of thing set up here.
+9:33
+So in this case, I went in with and it's four, so you can see the end is four here.
+9:38
+And then let's go, sweetie, that's going to go here and then we're going to go into the other call.
+9:44
+So let's got into. And then.
+9:52
+OK, so now you can see that we're on the second call, and it's maybe I should put this.
+10:13
+Break point on this line.
+10:19
+So now we've got any three, but you can actually see higher up on the stack so you can go down the stack in the left hand side and say,
+10:21
+here's the end, which is for now we're in a nested call.
+10:27
+So this one is and is three can have a look. Yeah, this is the object to reference.
+10:31
+8.3 is the entire value inside we can continue.
+10:35
+I know that it's breakpoint, his and his too. Then you've got another thing on the stack is the three he's the four that are all building up.
+10:41
+It doesn't show us the the F's, because in the way that the debugger is implemented, it doesn't show you the things that aren't yet signed.
+10:51
+And so there is a space for those on the stack. But it's just the debugger doesn't show us those shows if we come on the way out.
+11:00
+Let me go one more time, and then we're going to get.
+11:08
+The fact that we're now at once and we've got all of the stock frames stacked up on the left hand side.
+11:13
+But now this time, we should be able to come out of this branch instead.
+11:20
+And we're going to make this. Object going to pretend that I'm going to start doing the multiplication so as we come out, so let's step over this one.
+11:24
+And as we come out of here, you should see that the stack starts to unwind on the left hand side.
+11:33
+So now we haven't got as many friends, we're back into the previous frame. We're going to do this one.
+11:38
+Now the FBI is. So now we've actually got this in place.
+11:43
+They're going to come back out now and do the next one. Now we've got three and two.
+11:56
+We're going to do three times two, we're going to get six.
+12:01
+He's the sixth and then it's coming out and it was coming out of this fund and you see gradually the stack on the left hand side is reducing.
+12:08
+So we get down to here and now we've got all 24. And that's going to print,
+12:18
+so hopefully that just gives you an idea of how the state builds up and is reduced as we go into a function deeper into our function,
+12:27
+into a recursive call, into another function as we go sort of deeper and deeper into the whole hierarchy, we more and more things up on the stack.
+12:35
+As we exit those, we'll reduce the stack. But at the same time, we're actually building up quite a lot of things on the heap.
+12:43
+And you can see, as we went through that, we created objects for all of these things.
+12:53
+All of these different names on the heap. And as we were building up, they were referenced so we could go and fetch them.
+12:58
+But then as we unwound and reproduced the stack, we removed those scopes and those variable identifiers from the stack,
+13:08
+some of those objects are not referenced anymore, so they're not there's no one pointing at them, but they're still there.
+13:16
+And this is perhaps a difference between the way that languages like Kotlin and Java and c sharp work compared with, say, languages like C or C++.
+13:24
+Where in this case we don't explicitly in our programme do anything to say, remove those objects.
+13:35
+We don't want them anymore. And so the heat can and often does not contain some objects that aren't really used in our programme anymore.
+13:41
+This is not normally a problem. Talk about that in a second, because we know if we've got enough memory, you know, in our computer,
+13:51
+then actually it doesn't matter for a small programme that runs for a short time, we could make a bunch of objects.
+13:58
+And then when we're done with them, we just leave them there and then we exit the programme and then we're finished and this is OK.
+14:03
+But in a more long running programme, we might want to clean up some of these objects because we're not really using them anymore.
+14:09
+And the amount of heat space that we have is firstly limited by the amount of RAM in your computer,
+14:17
+but also may be limited by the amount of memory that's assigned to the JVM.
+14:23
+Other things might be executing on your computer at the same time.
+14:28
+And so what we'd like to do and what in fact the JVM does in the background is to run this process,
+14:32
+which I showed you the slide just previewing that which is called garbage collection.
+14:38
+And what that's going to do is periodically has a look at the heat,
+14:44
+and it finds all the objects on the heat that are not currently referenced from the stack.
+14:49
+So in this case, the only one we're referencing from the stack at the bottom here is the one at 982, which is the representation of 24.
+14:55
+All of the rest of those are not currently being used in our programme. And so they're sort of.
+15:04
+Candidates for cleaning up. And so does this process, which runs every so often, which goes through basically examines the stack,
+15:11
+goes and looks at all the objects that are referenced from the stack marks them and says,
+15:18
+OK, these ones are being used and then go through all the other ones and just cleaned
+15:22
+them up and allows that memory to be reused for other objects in the future.
+15:26
+So this is a process which it's helpful to know is that it means that you don't have
+15:32
+to worry explicitly about managing the memory for your objects in your programme.
+15:37
+So if you've written any C++ and you think about allocating an object and then destructing an object at the end,
+15:42
+and if you don't do that, then you tend to use up all the memory in JDK, JVM based languages or any garbage collected language.
+15:49
+You don't have to worry about that. You just create an object.
+15:57
+And then when the reference to it goes out of scope and we don't have a reference to it anymore,
+16:00
+the garbage collector will do its work and it will reclaim that memory for us to use for other objects in the future.
+16:04
+So that's a very nice property. It means that there is this background process that's going on, but you basically don't need to worry about that.
+16:11
+Most of the time, unless you're doing extremely high performance work.
+16:20
+But for almost every programme, you know that you would think of us writing in Java, you know, a web application,
+16:24
+a desktop thing, a command line utility, anything that's not running like incredibly intensively.
+16:30
+The garbage collection process is totally invisible to you, and you won't even notice it going on in the background.
+16:39
+Are there any questions about what I talked about there so far in terms of maybe the key publication, the garbage collection, that kind of stuff?
+16:46
+Like nothing so far, just checking the. Oh, someone's asking to go to slides back.
+17:03
+Was there a question related to the two sides back or you just wanted to have a look?
+17:30
+OK, great. So as I say, I think a lot of these things happen under the hood.
+17:48
+And so you don't need to worry about them all the time,
+17:53
+but it's useful just to have that mental model of how the execution of your programme is being carried out so that,
+17:57
+you know, you know what's happening when you write your programme, you're instructing the computer to do something.
+18:04
+And you know how it's interpreting those instructions.
+18:08
+And then also, sometimes when strange things happen, it's useful to be able to dig in and think, OK, what's happening here?
+18:11
+Now, why am I running out of memory? Or is it because I've created a load of objects and I haven't stopped referencing them?
+18:17
+Like I put all my objects in a big list,
+18:24
+and therefore I've got a reference to the list and the list has got around to all the objects and therefore nothing ever gets garbage collected.
+18:26
+I mean, that would be a pretty rare occurrence, but it could happen.
+18:33
+That's I mean, that's a useful thing to others a question here, can you define a step, frank?
+18:38
+Can I define this doctrine? So a stack frame is about the.
+18:43
+How's the right way, the right, sir, the identifiers and the values that they have for a particular function,
+18:50
+so let's have a look or rather a particular call of a particular function.
+18:57
+So in this case, we've got three frames, right? And it talks about what's in scope at that particular time.
+19:01
+So we started off by running main. And so the family that was defined in Maine was a fact.
+19:07
+And this one and then we went into the scope of Factorial.
+19:14
+So then we were here, right? And we're going to have an and then eventually going to have F as well.
+19:22
+So that's a frame for that invocation of Factorial.
+19:27
+And then we're going to actually in order to compute that we need to do another invocation.
+19:32
+And so then we have this and an F. And what's important here is that we start when we're looking something up, we say, Oh, what's the value of N?
+19:38
+We've got to start at the top. We're going to look in the current frame, can't normally see into the previous frame.
+19:46
+So you can't normally see this end because it's hidden by this in and you can't see this half.
+19:53
+But depending on and you can't actually see facts at this point, not because we are executing inside this function.
+19:59
+So unless it's passed in. As a parameter, we can't refer to fact here.
+20:05
+That's not. That's not in scope here.
+20:11
+So the frame really is correlated with the scope. So when we call into a function, what variables can we see within that function?
+20:16
+What's the space that's allocated for them on the stack? And then as we call again, we're going to get another set, maybe with the same names,
+20:25
+but with different values, meaning different ones in the programme.
+20:32
+I'll try to find yeah, I'll try to write down maybe later as sort of more pithy definition,
+20:39
+or maybe we can find something online that really gives a one sentence explanation of what it is that that's how it comes out in terms of programming.
+20:44
+OK, so let's talk about a couple of other things. I think another thing that I talked about briefly last week was this idea of aliasing.
+21:00
+So just do one more example about aliasing, just to clarify a couple of points, particularly when we combine function calls.
+21:11
+With object alienating. I'm going to define this class.
+21:20
+So in this case, class, we're going to have some mutual state insight.
+21:28
+This is not just a name that corresponds to one single value, this is the counter where we can increment it.
+21:32
+So we're going to have we're going to keep that state private.
+21:39
+So hopefully you've now got used to encapsulating and thinking about, OK, well, this is a property, but I don't need anybody else to see it.
+21:41
+So therefore, I'm going to keep it private. We want that to be our default.
+21:48
+You have a function is going to increment that and then we're going to be able to print out.
+21:52
+And what I want to do is just to do a few scenarios where we're going to create a C1 and the seating.
+21:57
+The two counties, two objects on the heap. Two references on the stack and then depending on what we say, OK, see one increment.
+22:06
+And then print out going to call. D1 increment and then C2 increment, as you would expect, is going to increment the other one.
+22:16
+So the question is, what about if we make an assignment from C1, C2 or C2 to see one, what's going to happen?
+22:25
+Then we talked about, you know, copying objects versus copying references to objects.
+22:34
+We are just doing some more engagements than. So here's an example where we make a C three, but we say that C three.
+22:41
+Points at sea one. See, three is a sign C one, it's not a new counter.
+22:50
+And what this means is, as you can see on the stack with the arrows, we've basically got two names or the object at nine three four six,
+22:56
+so we can either refer to that object by the name see one or we can refer to it by the name three.
+23:03
+And this means that if I do see three increment, it's going to cause that.
+23:09
+I didn't have a site for that. It's going to cause that particular object to increment, but that's the same as see one.
+23:15
+And so what we would say is that C3 and C1 are aliases for the same object because they both share the same.
+23:21
+They both refer to the same address in memory on the heap. So it's the same object is there.
+23:30
+So I'll just show you that one in the code just to give a quick.
+23:42
+Recap of that, so here we've got the same example. So I can do you see one increments I can do?
+23:48
+See two increments. And then I can do final see three equals C one.
+23:58
+That's the same as we had in the slides. And so let's print it here, see one.
+24:05
+The two. And here that's.
+24:15
+Z3. That was the thing.
+24:26
+So that's do you see three? So it's actually giving us a warning.
+24:35
+Yeah, or an information that these are the same. So let's run it, think about what you expect to see when we run this programme.
+24:42
+And so we printed out five things we've got first two increments, one each.
+25:05
+Then we've got an increment of C three, which was previously one.
+25:12
+To see what it is now to. C2 is still one and C3 is two as well.
+25:20
+So you can see that basically all that's happening here. Is that we are copying the address, making an alias for someone.
+25:26
+And when we do that, either name is going to refer to the same object and change its state internally.
+25:36
+So there's one more nuance to this, or rather just an extension of the same idea, which is if I make a function which is like encouragement.
+25:43
+Three times. A particular cancer, that's do you see one?
+25:54
+And I define this function. And it takes a counter, and all it's going to do is.
+26:04
+And then let's do. Then think about what's going to happen.
+26:18
+And again, think about the stack and the heap. So are we going to pass this?
+26:39
+This is C one, this is the three. Maybe we should do see three here.
+26:44
+Then I'm going to pass C3 in to here, and I'm going to get a new value on the stack, which is called see to call it.
+26:50
+Anything like X, then that X is going to have the same value as this,
+26:59
+which again is a memory reference to an object and then goes through and we do this thing three times and then we're going to continue from here,
+27:06
+we're going to unwind that stack. And then these things are going to happen.
+27:14
+So just think about what you think it's going to print. You've got one to three.
+27:18
+Six increments happening. I had a confusing one there.
+27:28
+So this is what happened, so we've got these two initial ones on one each.
+27:53
+And we've got an extra one on three.
+27:58
+Then we've got a three for call, this function, which passes in C3 C3, is then allocated to the reference X X acts on the same object.
+28:02
+Then we finish this function. We unwind the stack. We go back into the out of frame or in this scope.
+28:13
+Now C3 and C1 are back in scope and we can now sprint C1 C3, but we'll see when we print C3 or C1.
+28:19
+They're still talking to the same object as was pointed to by X.
+28:27
+So we get these fives. So hopefully that's clear.
+28:32
+You can see that at some points in your programme, you're going to have different names for the same object.
+28:36
+What you don't typically have is when I make an assignment that it copies the objects right and makes a new independent one then thrown away.
+28:42
+That doesn't happen. What happens is that we just copy the memory address.
+28:49
+And so then we're going to act on the same object and that's what we call the alias.
+28:54
+So I think as long as you have that in your mind, that's the model of what's going to happen in your programme.
+28:58
+It's not going to be unexpected that the same object states may be going to be updated by different functions when you're passing it around.
+29:03
+And that actually becomes like the most natural way, I think, to think about it as you develop in your object oriented programming.
+29:11
+So that was just a quick recap. I think we did mention that last week, but I wanted to talk about it,
+29:19
+especially in the concept that these stack frames that we've seen now where you can have those different names,
+29:24
+especially when you go into a function, you might have a different name caused by this parameter.
+29:29
+But that's it. I mean, it's still referring to the same object when we send a message that same object is going to receive it.
+29:35
+It's going to interpret it. It's going to be Typekit state inside, if that's what you've told it today.
+29:42
+So question now. And this comes on to things that we've done in the videos this week, we're going to build on those things now.
+29:56
+We've looked at these counters, so we weren't going to ask this question is one equal to see two?
+30:04
+And you see one, equal to see three. So.
+30:11
+Let's have a look at whether or not that's true. So in this case. We could say, let's try this out.
+30:17
+We created two counties. We've incremented both of them once each, and so we could say if C1 equals C2.
+30:27
+Well, from that equal. Otherwise going to print that they're not equal.
+30:41
+And think about what you would expect in this case. Timeout computers being slow compiling this morning.
+30:55
+OK, so these are not equal. According to this. And so let's think about why that is.
+31:09
+Well, what's happening when we do equals it's doing a.
+31:16
+An equality check by calling a dot equals method on counter, but we haven't defined dot equals for council,
+31:23
+and so therefore its default way of doing that is just to check that the references are equal, like are they exactly the same object?
+31:32
+And they're not. And so that's doing a referential quality check because we haven't specified how to do a structural quality check.
+31:41
+And when we want to do a structural, you know what? We want something more meaningful. Presumably, we want to say, well, these should be equal.
+31:51
+If the counts are equal in the two objects, then at this point they say, OK, well, if we wanted to do that,
+31:57
+then we have to implement it to do that by overriding this default referential or the default implementation of equals,
+32:04
+which use this referential quality to our own implementation of equals,
+32:12
+which uses the internal properties of the object to determine whether or not actually means the same thing.
+32:16
+So therefore, whether it should be equal. So if we do that, we can override in this case.
+32:22
+Equals function again, instead of just giving us a helping hand with the signature here.
+32:30
+And then at this point, they're going to define it myself.
+32:38
+I'm going to say here is, well, let's follow the pattern we saw before the count of this object.
+32:42
+Is equal to the count of the other objects.
+32:51
+Can't you? Because it says, what's the type of other arts as well, the type of other is?
+32:58
+Any question mark? And so now if you watch the rest of the videos, you know the.
+33:05
+Question mark is about the possibility of it being now. This is right.
+33:12
+OK, well, in this case, we can have. We can say, is this counter equal to something else that something else could be of any type, right?
+33:16
+It could be possible to say, is this counter equal to this string? And the answer is probably not because they're not the same type.
+33:26
+Therefore, it's probably not right to say that they're equal, but it's possible to ask that question.
+33:33
+And it's also possible to say, is it equal to no? And in that case, it's also possible to ask that question.
+33:39
+So therefore we have to have the question mark to say that. It's allowable to pass null into this function.
+33:45
+So in this case, we could define it. What should we do?
+33:54
+Let's say. Well.
+34:01
+Let's say they're equal. If, well, let's say let's go out this way, if the other one is no.
+34:08
+Then we'll return false. Let's try it up. Otherwise.
+34:22
+If the. Other is a counter.
+34:31
+Then now we know that the other thing is a counter. And so we can refer to its fields.
+34:39
+So this is an interesting feature of in which if you've done any job, the programming might be slightly well either.
+34:53
+Intriguing or puzzling? And so this says in Java, you'd have to do a thing called a cast, which I think would come on to later.
+35:03
+But you can see that intelligent hides colours in green and it goes, Oh, OK, this is called a smart cast.
+35:12
+So this is like with the null checks that we were looking at in the videos where it says, OK,
+35:18
+I know, you know, if you do, if X is not equal to null, then you can safely make a call on it.
+35:24
+So here we've said if the other thing is a counter,
+35:30
+then I know that I'm going to be able to refer to the account property of other like this and it colours it in green to say, OK, I did this smartcast.
+35:33
+Like, you've made a check to make sure this thing is a counter.
+35:42
+And in that case, that means that I'm going to let you access the properties for this thing.
+35:46
+This we already know that this is a counter because we're executing the equals method within the counter class.
+35:52
+So we're running this method. So therefore we must this object, the what we call the receiver must be a counter already.
+35:59
+So therefore I can refer to this account. And in fact, equivalently, I can just refer to you count.
+36:06
+That's the same as this account. This is the kind of redundant extra bit of information that I put in.
+36:13
+Just to be clear, perhaps, but I think in general, I might remove that.
+36:21
+I'm going to say equal to the other counts. But the interesting here is we have to check that counter.
+36:25
+The other is a counter. Otherwise, we can't refer to this property at the end.
+36:31
+Let's return full stop of that. So this is that's one way to implement that method.
+36:38
+So let's just run that one and just check that it's going to print equal now.
+36:51
+And they are equal because we've now implemented that behaviour in terms of.
+37:06
+This one and what's happened here is that it's just compared these two integers.
+37:11
+This is an integer type. And equality, four inches already defined as being in the way that you would expect.
+37:17
+There's a question in the chat this is when two objects are now by default. Are they preferentially equal?
+37:26
+Um, yes, I think that's true. So basically, if you've got no and no.
+37:32
+That would be equal. What's interesting is that it won't.
+37:37
+Yeah, let's just do that. I think that should be possible, so let's say. What do we have to do?
+37:46
+Foul. I guess what's interesting is to tell whether to check it for different types, right, so if we could have x one, which is a string question, OK?
+37:53
+Is now. And it's to which is a.
+38:09
+Into question, Mark is now and then that's.
+38:17
+Not do that here. Did I hear? OK, that's interesting, so it doesn't even let us do that.
+38:23
+Because it says, well, these are two different types. So let's try.
+38:46
+What happens if you have string question? OK, so this.
+38:55
+OK, yes. If they're if they're both null, then that's equal, but they're both now of the same type.
+39:14
+Yes, I think we could have is they could both be any question mark.
+39:20
+And then that says that as well. So, yeah, basically, I think that was a.
+39:44
+It says if the two things are now, are they preferentially equal?
+39:49
+I think that's true because basically you could say this thing is now and this thing is now think of null as being like a particular name,
+39:52
+zero address in memory that says this doesn't point to anything. So yeah, that would that would potentially a couple more questions coming in.
+40:00
+Oh, just a follow up for that. We can't access any property for a null object.
+40:09
+I believe that is true. So that sounds like.
+40:13
+Well, what will happen? Is. If you have a normal type, if I have.
+40:18
+As funny as a string. Because of the Kopplin type system, as one cannot be no, it's not allowed.
+40:31
+Only if it was another type. Could it be now?
+40:43
+And then if it's an olive oil and when we try to call it.
+40:49
+And if I tried to do as one top side length.
+40:54
+This is going to give me a compiler error to say, Oh, well, hang on, this might be no.
+41:00
+And then we either have to check. Like this, then that's allowed.
+41:05
+And then the other alternative for this is what intelligence hinting at here is to use what's called a safe access expression.
+41:20
+Let's just go with that suggestion and see what it does. So it's going to do this.
+41:30
+So we talked about this actually in the lab knowing the skeleton code for the lab.
+41:34
+There are some examples of this.
+41:38
+So this basically says if S.1 is not equal to now, it's the equivalent of this if S1 is not equal to null, then it's S1 length.
+41:44
+Else no. So that's what this is saying.
+41:58
+So it basically says, OK, well, if S1 is not null, then go and get the length.
+42:03
+But if one S1 is null, don't try and go and get the length because that won't work because it's now therefore
+42:07
+just returned now that that's what's happening with this what's called safe call.
+42:12
+So you might see that a little bit, but you'll only need to see that where you have another ball type.
+42:18
+And so in general, I try to say advise you to use non-edible types wherever you can, and then you don't have to use the safe call.
+42:23
+You don't have to do these checks, you know, in your programme that everything is going to be known now.
+42:30
+There is going to be an object there and you can work with it.
+42:35
+But at various points, particularly when you start to work with, you know, data that comes in from outside of your programme,
+42:38
+from the internet, from a file, from the user input from other libraries, then you might have some possibly null types.
+42:45
+And so when you have to work with those, yeah, either check and then the language will say, Oh, OK, right?
+42:52
+I know that say, this is again, it's a smart cost because it says, All right, you've checked that that's not null.
+42:58
+So therefore, I know that this can be a string, not a string question mark.
+43:03
+And then the other alternative is the safe call, which is just to say, OK, well, if it's not null, then call it.
+43:07
+But otherwise, that's just returned the No. OK.
+43:14
+A few other questions coming in. Is the if other equals no return Fox needs in the hour in the equals that I wrote?
+43:20
+Yeah, actually, maybe this is not needed because it would be covered by this case.
+43:36
+So in fact, no, it's not going to be off Typekit counter because counter is a non-negotiable take.
+43:43
+So no can't be of type counter and therefore this would be false and false.
+43:50
+Yes. And maybe in this case, actually. You can see that conceptually.
+43:56
+This is a useful way to think about the checks like, well, if the other thing is null, then basically we just return false from the equals.
+44:02
+But yes, it would be possible, I think, to remove this and have it do it this way.
+44:08
+I was just looking at my notes, just check. Yeah, I might mention that later on.
+44:19
+And someone's asking about hashtags I'm going to talk about after the break.
+44:39
+So is the type of S1 question at length in question?
+44:44
+No, the question mark or sorry, I would say that you are the type of.
+44:49
+Let me do your example is one question dot length.
+44:56
+So here's our S1 question. So let's make a venue for this length.
+45:03
+And if I show the type? This is in question, Mark.
+45:09
+Oh, yes, sorry. Now you're quite right, because this. Overall, if you wanted to say sign this, it could be the length.
+45:17
+Or it could be. No, because this thing could be as one could be now.
+45:28
+And therefore, if the safe call is operating on now, it can't return the length and therefore it returns null instead.
+45:34
+And that means that the entire result of this expression is either the end from length or it's null, and therefore it's in question mark.
+45:42
+Yes. Oh yes, you've got to question marks of that. Sorry, I thought I read your question without the final question mark.
+45:51
+So, yes, you're quite right. That's how it works out as ever.
+45:59
+It's very useful in the tool just to be able to say, tell me the type of that thing.
+46:04
+And in this case, that's easy to figure out, so you just say, OK, let's show it and then it'll tell you what that is.
+46:09
+OK, let's do one more thing, and then we'll take a break, and then we'll come on and talk about hash codes and related things.
+46:21
+As Adam has in the quest in his chat question.
+46:27
+So the last thing I want to talk about in this was about lists. So let's just think about equality for lists, so if we have a list of counter.
+46:32
+Or maybe let's do this do numbers, which we had in the factorial example on.
+46:48
+So I have one, which is a list of number one.
+46:58
+To. Number three. And I also have a list of these two.
+47:05
+Let me think about OK. Should these lists be equal?
+47:14
+And if Al won. He goes out to.
+47:19
+Or equal else? And so again, just think to yourself, is this going to work?
+47:32
+So what's going on and what's going to print here? L1 L2? And in this case, it says not equal.
+47:51
+And so when you have this sort of situation, you're working with a collection for all the collections,
+48:14
+especially the ones in the standard library, the equals method is implemented to do probably what you would expect.
+48:19
+But what it's going to do in this case is say, OK, well, you've got two lists.
+48:25
+They're not the same objects, and therefore let's look at their contents and see whether their contents are equal one by one.
+48:29
+And if all of the contents are equal, then we'll say the lists are equal.
+48:38
+But if the lists of if they have different contents, they should not be equal.
+48:41
+So it's going to go through and compare now against this one, this one, against this one, this one, this one.
+48:46
+And if all of those are equal, then it's going to say that I recall another one is not.
+48:52
+And so what we might expect that to work. But again, the thing that we have here is that we haven't implemented equals for nothing.
+48:59
+So if we do it instead with counter.
+49:08
+Let's let's just go back and do the same thing in the other example. I got rid of my counters.
+49:14
+But let's do something else, let's do strings. Something like this.
+49:27
+And because the ECOS method is implemented for strings. They should print equal.
+49:47
+And it does, and in fact, if we do see one. Is a counter.
+49:57
+The two is a counter and see three is a counter.
+50:08
+And then we do see one increment see.
+50:13
+To do increment the three day increments, then this time we should be able to do.
+50:20
+How about C1 C2? See, one.
+50:25
+Three. So again, because we've implemented equals to be how many what is the internal count of the counter?
+50:32
+These ones all have been incremented once, so therefore this should be.
+50:45
+There we go. So that one is equal, but if we had removed are equals implementation.
+51:03
+Now, they're not equal because the lists now contain objects where it's comparing C-1 against
+51:22
+C3 by referential equality rather than structural because we didn't override it.
+51:27
+So. Putting that back in. Makes it work, and that's the the difference, really, that.
+51:33
+Or maybe the nuance about working with a collection is that even though the collections equality is already equalled for you, already implemented for,
+51:42
+you have to implement the equality on things that you want to put in the collection in order for it to work properly in a in a full ecosystem.
+51:49
+OK, great. I think we should take a break for a few minutes. Stand up, get a drink, this kind of thing, and then we'll come back.
+52:00
+I'm going to talk about more about maps and a little book about hash codes as Adam's raced in the chat in relation to that.
+52:06
+So let's take a break for like, let's do so seven minutes.
+52:15
+So come back at 10 07 my clock and then we'll carry on from that.
+52:20
+OK. Let's carry on.
+59:19
+So in the second part of I want to talk a little bit more about maps, which are one of the collection types to be introduced in the videos this week.
+59:21
+Hopefully, you got to grips with the basic mechanics of the map by looking at those videos.
+59:30
+But what I want to think about is actually what happens now when we look something up in the map.
+59:38
+So you'll remember that the map gives us an association between keys and values so we can think of it as being
+59:43
+a set or a collection of entries where each entry has a particular key and a particular associated value.
+59:51
+And then we can look something up in the map by saying, I've got this key. What's the value that goes with it?
+59:59
+And so you can imagine that we could implement that by having a list of entries and then
+1:00:06
+we could iterate over that list and we could say for each year if we're looking for Dave,
+1:00:14
+what would this be scoring a test, for example?
+1:00:21
+Maybe his mark in a test, we could go through each of the entries and then say, is the key equal to Dave?
+1:00:23
+And so for Adam, it's not. So we move on to the next one. Eve is not equal.
+1:00:30
+And then Dave, Dave is equal. So now let's pick out the value for that one.
+1:00:35
+But you can see that this is basically an order in complexity linear search through that collection to try to find the relative, the related key.
+1:00:40
+And we'd like to do something that is more efficient than that in order to go pretty much straight or straight as we can
+1:00:50
+to the relevant value not to have to search through everything in order to increase the performance of our applications.
+1:00:57
+So especially as this is a type that's going to be used a lot,
+1:01:05
+the way that that basic or the default implementation of the MapQuest is not a linear search like that, she was in a different way.
+1:01:09
+So the way that it works is it organises the data insight into what we call buckets.
+1:01:20
+And so here you can see that I've picked some property off the data off the keys in order to put the data together into these buckets.
+1:01:26
+So what I've done here is I've said, OK, well, everyone whose name has three letters,
+1:01:35
+which in this case is only if goes into the top bucket and everyone whose name has four letters goes into the lower bucket.
+1:01:40
+And then what? I'm going to look someone up. If I'm going to look up Dave, then I think, OK, well, how many letters are in Dave's name?
+1:01:49
+Four. So, OK, let's go and look through the four buckets to find its score.
+1:01:56
+And that means that I don't need to look at each,
+1:02:02
+and I don't need to look at anybody who's got a five letter name or a six letter name or longer than that.
+1:02:04
+I can go directly to the right bucket and then I can look in that bucket.
+1:02:08
+And then basically, that's limiting my search a lot, especially if we've got a lot of data,
+1:02:13
+should get to go directly to this bucket by computing a characteristic of the key.
+1:02:18
+And this is what we call the hash function. You can see that I could have a different characteristic.
+1:02:24
+And so here I've done one, but you can probably see what's happening here, but what I've done is one based on the first letter of the person's name.
+1:02:33
+So in this case, we have even smaller buckets, right?
+1:02:42
+Previously, we had three people in the four buckets and now we've got just two people in the number one bucket,
+1:02:44
+one person in the four bucket, one person in the five buckets. So I just pick the first letter of their name in this case, deed.
+1:02:52
+And then I say, OK, is the fourth letter of the alphabet. So that's going to be bucket number four.
+1:02:59
+So if I have someone's name, then I can say, you know, if we pick out Charley, OK, well, let's get Charley score.
+1:03:04
+Well, let's see. Charley would be in Bucket C, which is bucket three and there is no bucket three here.
+1:03:12
+It's empty. So therefore I know it's not in the map. I don't need to search through everything.
+1:03:17
+And if I've got Eve, then I say, OK, what's this person's name?
+1:03:22
+Is Eve? OK, so they're going to be in bucket five.
+1:03:26
+So let's go and looking back at five, and yet there she is, and then we go directly to her school that way.
+1:03:29
+So what we're doing is allowing ourselves to speed up this look up by making this
+1:03:35
+characteristic that allows us to sort into arranged the data into these buckets.
+1:03:40
+That means that if we can compute that same function of our key or potential key,
+1:03:46
+then we can go directly to the right bucket and then we can find the one.
+1:03:52
+We might still need to look through a couple of items within that bucket.
+1:03:56
+So here we've got someone whose name begins with a there are a couple of people in that bucket,
+1:03:59
+so we might have to search through Adam and then AJ, and then we find the right person.
+1:04:05
+But it's much more efficient than searching through the whole of the list, especially when we get a much longer list.
+1:04:11
+Check that one. So the same is actually true for sets.
+1:04:23
+So you've been using some sets, I think last week in the exercise eased some sense.
+1:04:30
+And so in this case? The set internally is organised into buckets in the same way, so if we say, is this thing in the set effectively,
+1:04:36
+we just say, OK, well, let's check, you know, maybe we have the same function defined here based on first letter of name.
+1:04:45
+So we say, OK, is Adam in the set? Well, let's go and see whether he's in bucket one.
+1:04:53
+And if he is in bucket one, then we'll say he's in the set.
+1:04:58
+And if he's not in bucket, one will assume that he's not in the set and not check any of the other buckets.
+1:05:00
+And so same would be true. Like if we have Charlie, we're going to say, OK, Charlie in the sets.
+1:05:06
+Well, if he was in the set, he would be in bucket three because he's I mean, we see these number three goes to bucket three, no bucket three.
+1:05:11
+It's empty. Therefore, we know that Charlie is not in the set. We don't need to check through everything else.
+1:05:19
+And so you don't really need to know about this in terms of using the set,
+1:05:25
+but you do need to know about it in terms of knowing about the types of things that go into the sets because we might want to well,
+1:05:30
+often we want to specify how that algorithm for identifying buckets works and particularly when we are using our own types.
+1:05:39
+This can be important, so we'll come on to talk about that a little bit.
+1:05:50
+So this was built up by some stuff in the chats and things that I've talked to some people, I think in PBT as well last week about this.
+1:05:57
+So we have as well as equals, there's another function that we often want overrides on objects that we define and that is called hash code.
+1:06:07
+And what the hash code function does is for any object. It's basically giving us a number that can be used to identify a bucket.
+1:06:15
+It can be used for other things as well.
+1:06:27
+But the most common thing that it's used for is to identify a bucket in a set or in a hash map, in a map so that we can go and look.
+1:06:28
+And use this type as a key in a map. It doesn't matter so much about the values, we don't hash on the values, but on the keys.
+1:06:38
+We definitely need to be able to do this if we want to use our object together with a map or with a set.
+1:06:45
+And we want to think about a hash function that spreads relatively well.
+1:06:53
+All of our data across buckets, if we have a like a not very good hash function, then it might.
+1:07:01
+What would be not very good here? Like, you know, you could have one hash function says if it contains only.
+1:07:10
+Fouls. Then in one bucket, and if it contains other letters apart from vowels in another bucket.
+1:07:20
+So that's two categories, but there's not very much in category one.
+1:07:27
+And therefore, almost everything is going to be in Category two and therefore doesn't really give us the most efficiency.
+1:07:31
+What we'd like is really to be able to spread across the buckets as well as we can.
+1:07:37
+So in this case, we've got two people in one and one people, one person in each of the others.
+1:07:41
+That's pretty good. If we had 100 people in one, just one or two people in each of the others, that wouldn't be so great.
+1:07:46
+So we're trying to in defining our hash code to try to spread the data across the buckets.
+1:07:54
+And that really means spreading it across the range of numbers that we produce from the hash code function.
+1:08:01
+So I'll say you. Yeah.
+1:08:11
+Maybe let's show implementing it. In a piece of code, so let's do so, I've got these types that I've defined,
+1:08:17
+so I've got a student, so this match against the example that we just saw in the slides.
+1:08:28
+So we have a student and we have a score.
+1:08:34
+Ashley, maybe I'll just tell you, before we do this, imagine what would happen if we.
+1:08:40
+No, let's do that, do the hashtag first, let's do. I think that's easier.
+1:08:50
+So in this case, what we want to do is to be able to define on students perhaps the hash codes that I just suggested.
+1:08:56
+So we're going to look at their name.
+1:09:07
+We're going to take the first letter of their name and then we're going to take the numeric value that corresponds to that.
+1:09:08
+So in the same way as we would override to string or we would override equals, we can specify an override fun for hash code as well.
+1:09:24
+Again, intelligence gives us a template. And then let's delete what it thinks is the defaults.
+1:09:33
+And so what are we going to say here? So this case, the student has a name that's a private property of students, but we can refer to it here.
+1:09:43
+And so maybe we can say a name, let's convert it to.
+1:09:51
+How about lowercase? Then we could get the first character out of it.
+1:09:58
+We could subtract a and that should give us if their name starts with an A. It'll give us back zero.
+1:10:08
+If it's a B, then it'll give us bucket one and so on. So hopefully that's the right hash code.
+1:10:16
+And if we want to. Construct our map, so let's have Al of scores.
+1:10:23
+Map of. And then what should we do, let's do students.
+1:10:40
+Adam and. When you consider the amount you need to do has, so let's do per student and score.
+1:10:50
+What do we have 97 or something? And then another part? Again, that's line zero.
+1:11:03
+It. Another thing you can do.
+1:11:27
+If you want to if you find it neater is rather than constructing the pair like this is you can use a sort of syntactic sugar, which is to do.
+1:11:34
+This way, round two, that's another way of constructing a pair.
+1:11:43
+Think you might have seen that? Back in the day, which exactly was in the first lab exercise where we were constructing the roots map,
+1:11:48
+some people, I think, use this as to construct their paths. So that's another way of constructing a.
+1:12:00
+But the type of this is still. Path can. House.
+1:12:05
+So that constructs a pair of student and school. And then we can put it in.
+1:12:14
+So that's hopefully going to build a sign that an noticed us to look at my Adam.
+1:12:50
+But there's a problem with our programme and this is the fact that I go back to the slide.
+1:12:54
+What we've done is to find the hash function. That's going to find us the right buckets.
+1:13:00
+But then in some cases, we showed. The one which had.
+1:13:07
+The buckets come on the back. Yeah, at this one.
+1:13:18
+So in this case, we had two things in the same bucket.
+1:13:34
+So when we find the right bucket, we don't know that it's going to be exactly one thing in that.
+1:13:39
+So we still need to be able to search through each of the things in that bucket and check whether or not they're equal to the key.
+1:13:43
+And that's going to use dot equals. So it's not enough only to specify Housecoat.
+1:13:51
+We also need to specify equals and have these be consistent with each other.
+1:13:57
+And I explain more about that in a second. But so when we do hash codes, we also need any.
+1:14:02
+Let's come back. So I'm going to do an equals.
+1:14:10
+And let's implement this basically as we did before, so if other is a student and return, this dog name is other top name.
+1:14:17
+Else false. It's just this can be an expression.
+1:14:34
+So now we've got both halves of the puzzle, so we've got, first of all, energy when we look up this student.
+1:14:53
+This is a different object from this one. We're going to make a new object.
+1:15:00
+We're going to say, OK, let go and get Adam's skull from the map.
+1:15:05
+So it's okay. First thing we going to do is take out this student's hash code to find which bucket to look in.
+1:15:10
+That's going to do what we did up here. So that's going to say. Maybe we can even pull it out.
+1:15:16
+That's straight. So here, first of all, we will print the hash code of Haddam, which we think should be zero,
+1:15:45
+because that's going to look, it's going to take the letter A. It's going to find that, yeah, there we go.
+1:16:06
+So that's the first letter of the alphabet. So we're going to go in bucket zero. And then it goes into bucket zero.
+1:16:11
+But even if we have another person in bucket zero.
+1:16:18
+The both of these people are going to be bucket zero, and it may be that swish them around.
+1:16:29
+Then we need to look through each of the people in bucket zero and find whether or not they match, Adam said.
+1:16:36
+Then we're going to use that equals. And maybe whether we can.
+1:16:41
+How about this if we print line? We'll see whether it does.
+1:17:00
+Too many arguments. God bless.
+1:17:34
+We'll see how many of those comparison results. OK.
+1:17:41
+So it did, first of all, it checked Adam with Alice and then it Chad,
+1:17:57
+Adam with Adam down there, so it was basically going to the right bucket and looking through.
+1:18:00
+To find the right one. So the thing that we need here is that when we want to use something as a key in a map or we want to use it in a sense,
+1:18:08
+then we need to specify a way for to tell whether or not the things are equal.
+1:18:19
+But we also need to specify the hash code.
+1:18:24
+If we're doing if we do equal on its own, then what's possible is that if we don't find the right bucket to check it.
+1:18:29
+And so because there's a default implementation of hash code in the same way,
+1:18:38
+there's a default implementation of equals and to string the default implementation of hash code.
+1:18:41
+Like school, we haven't defined what score is, so let's just print on score Sept. six Dot Hash Code.
+1:18:47
+This is just going to print some number that is.
+1:19:04
+Based on the memory address within the heat of this object.
+1:19:09
+This one, and if we make another school. Of 76.
+1:19:15
+Then they have different hash codes.
+1:19:32
+This one, this number, this one is this number again just based on some internal implementation detail about that object in particular.
+1:19:33
+And so if we want to use this thing as a key and we want to identify the right bucket,
+1:19:43
+we need to make sure that if these things are expected to be equal, that they also have to have the right hash code.
+1:19:47
+So what we don't want to do is have things be equal.
+1:19:55
+So we expect to say, for example, are these two things in the set so we could do that for schools if we did these to school,
+1:19:59
+we could say, are schools equal and schools are equal if the number of marks equal.
+1:20:07
+And then if you put a score into a set, so you said, let's put score 76 into a set and say it's the score 76 already in the set.
+1:20:12
+You'd expect that I would say yes because those two things are equal and you've defined equals,
+1:20:20
+but because it's kind of divided into buckets, it might take the first score seventy six and then use our hash code function.
+1:20:25
+That is just the default one because we haven't overridden it. And it says, Oh, OK, right, that's bucket eight, for example, or 81.
+1:20:33
+Then it's going to look in that bucket, check everything in that bucket to see which thing is equal.
+1:20:42
+And it's going to say, OK, well, none of the things in this bucket are equal to 76 because the other one went into bucket 18.
+1:20:47
+And so this is why the most important thing is to have consistency between your equals
+1:20:55
+and your hash code so that if two things are equal and this is really the rule,
+1:21:01
+if two things are equal, then they must have the same hash code if they're not equal.
+1:21:06
+Doesn't matter about whether they're hash codes of the same or not. They could have the same hash code, but it's not important.
+1:21:10
+What's important is is if equals returns true for two objects, then they should have the same hash code.
+1:21:16
+And that's because if you want to use them in as a key in a map or you want to use them in a set,
+1:21:22
+then that you know that characteristic is needed in order for that functionality to work.
+1:21:29
+If you don't want to use it in a map or a. So I think this comes back to the question that was asked in the chat.
+1:21:35
+You don't have to define hash code.
+1:21:42
+It's not imperative, but if someone else in the future decided to use your class as a key in a hash, in a map or to put it into a set,
+1:21:46
+then it might behave in an unexpected way for them if you've defined equals and you haven't defined hash code.
+1:21:57
+So normally, I would say if you're going to override equals and provide your own implementation,
+1:22:04
+then you should provide a hash code which and they should be based on the same thing.
+1:22:09
+So for example, if we've got. These Himiko So.
+1:22:15
+If we added in another. Property to our students, so they had a I mean, age as well.
+1:22:27
+And then we decided that equality also defined, decided depended on age.
+1:22:40
+So we did and this stop H other H.
+1:22:48
+Then at this point, we also want to put that into our hash code, and so.
+1:22:55
+We could do that, but actually, I'll show you something different, which is that a lot of the time we can generate this code,
+1:23:02
+it becomes a little bit tedious to write these hash codes and equals functions by front by hand all the time.
+1:23:09
+And a lot of the time, I think that the tool can give you a pretty good implementation of these things.
+1:23:17
+So actually, let's let's do it for school.
+1:23:23
+So much so if I said, Oh, I'd like to. However, that's due.
+1:23:27
+Generate so I can say generate equals and hash code for school. And it's going to say, OK, what properties do you want to be included in the equals?
+1:23:39
+In this case, we only have one property to choose from, so I can say, well, listen to this one.
+1:23:48
+And then I say, OK, and what about in the hash code? And so in this case, important to choose the same set.
+1:23:54
+So if it has multiple properties and we chose a selection of them for what it meant to be equal, then we have the same ones in the hash code.
+1:23:59
+And then it's going to generate this code for us.
+1:24:07
+So basically, in this case, it's decided that the hash code is just the number of marks and then it's to create cases and equals,
+1:24:13
+which is almost the same as the one that we've written, but it's written in a slightly more general way.
+1:24:20
+This is just to make it easier for it to template so that it can generate the same code for every class, basically.
+1:24:26
+And then but at least the part where it's using the characteristics,
+1:24:33
+the properties of the object to tell whether it's equal, it's using the same ones in hash code as well.
+1:24:39
+So what this object this equals is saying is basically if these two objects that
+1:24:45
+you're comparing are actually the same by referential quality as a triple equals,
+1:24:50
+therefore a reference to quality. Then it's true. I need to check the properties because it's the same object.
+1:24:55
+Then you say this is a different way of checking the type, so every every object has an implicit property,
+1:25:01
+which is called Java Class, which is a property that refers to its type, which is not, I wouldn't say you use it very much.
+1:25:08
+But in the case that you do need an object to know what its type is, you could you could use this.
+1:25:17
+And the reason that it's called Java class rather than coddling us is as we spoke about before you compiled Java and codling code two Java cost files.
+1:25:22
+And so you can use Java types within column programmes or copying programmes with in Java programmes, got entitlement in Java programmes.
+1:25:31
+And so from within our Scotland programme, the type, it refers to the Java class type that is produced regardless of what the source languages.
+1:25:39
+So they call that Java course, they could have called it class,
+1:25:49
+but they couldn't have called it class because class is a reserved word, and that's a key word for defining a class.
+1:25:54
+So they went with top class that. But basically he was saying if there types are different, then return false,
+1:26:01
+then this is doing the equivalent of what we did with our if what we do, if other is score check.
+1:26:08
+And this says, well, basically now that we've checked this, we can say OK from now here on three other as a school.
+1:26:18
+Don't worry about it being in any question mark anymore.
+1:26:26
+I'm going to say that it's OK to treat this as a school from now on, and then we can refer to this.
+1:26:28
+And you can see again, this is a green smartcast which is caused by this.
+1:26:34
+So that's effectively just the same as saying is if other is school.
+1:26:39
+I'm putting this in a block. But it's just slightly you need an ally in this case, don't you?
+1:26:45
+If you do it in there. So I think they just want to make it slightly less nested. So they've used this other form in the standard generation.
+1:27:01
+Let's go back. It's fun, but it's basically doing the same thing.
+1:27:09
+But the thing I wanted to show you is that basically you can just generate that code using intelligence for both of these things.
+1:27:13
+And a lot of the time I would just rely on the generated equals and hash code.
+1:27:19
+So if I've got a cost, I'm defining and I want to do comparisons between instances.
+1:27:25
+I want to use it as a map key. I want to put it in a set. I would just go and say, OK, rates, let's just generate, you know, generate these things.
+1:27:31
+Just go with all of the defaults. Just don't worry about it works just fine.
+1:27:40
+And what it does do is it produces these things, which are consistent. You can actually see if we look in the type for any.
+1:27:46
+And we look at the definition of equals and hash code. You can see here.
+1:27:54
+In the documentation for the hash code. Yeah, it says if two objects are equal according to the equals method,
+1:28:01
+then calling the hash code method on each of the two objects must produce the same integer results.
+1:28:08
+That says, if you're going to implement hash code, then you should have it consistent with the equals so you don't.
+1:28:14
+And the reason for that is you don't want to cause it to go and look in the wrong bucket by having the wrong code.
+1:28:20
+So the worst possible thing would be to have a random hash code and even a random
+1:28:27
+hash code for the same object so that on different calls to the same object,
+1:28:33
+you got a different hash code because then you'd put something in a map and then you'd go and use the same key to go and look it up later,
+1:28:36
+and you might still look in the wrong pocket so you don't want that.
+1:28:43
+So real consistency in terms of hash code and equals definition is very important.
+1:28:46
+But if you use that generation,
+1:28:52
+then automatically get a set of equals and hash codes are consistent as long as you choose the right properties to base it on.
+1:28:54
+So just to summarise the hash code again, just to be really clear.
+1:29:04
+So what we're doing here? Is, let's say we are looking out for student school.
+1:29:10
+We got in our map, we've got the data arranged by buckets, and each of those buckets is labelled with a number.
+1:29:16
+We need a way of generating that number. You know, it's looking at my bucket.
+1:29:23
+So therefore, we have a new object, we want to look up,
+1:29:28
+we have a new object which has a certain students name and this and we want to go and find their school.
+1:29:30
+So we say, OK, well, which bucket should we look in? Let's compute the hash code of the object we want to use as the key.
+1:29:38
+So in this case, let's pick. A.J.
+1:29:45
+I think it's a good example. OK, well, let's pick compete the hash code, and we defined our hash code as being.
+1:29:52
+Let's take the first letter and convert that into a numbers in this case, a which is one.
+1:29:57
+And therefore, so let's go and look in bucket one. Then we'll iterate through everything in bucket one and check whether the
+1:30:03
+object that you're looking for is equal to each of the contents of bucket one.
+1:30:10
+And when you find the one that's equal. So in this case, Adam would not be equal because it would compare the names using the dot equals method.
+1:30:15
+Then we'd find A.J. And then we'd say, Yeah, OK, these ones are equal, and therefore we want to return 98.
+1:30:22
+So the hash code is the way of computing the relevant bucket number.
+1:30:30
+It's one way to think about it based on any particular object. And so what we implement?
+1:30:33
+Is. A function like this one.
+1:30:42
+So here we're going to say, OK, for our students, let's define hoshiko to be something that takes the name, turns it into lowercase.
+1:30:46
+Gets the first character, subtracts the character a and that's going to give us an integer if I want to make it consistent with the slide,
+1:30:54
+then plus one would give us that bucket one is a bucket, two is B and so on.
+1:31:02
+So that's what really what the hash code is doing. Trying to give us a characteristic of the object allows us to arrange into buckets,
+1:31:08
+but then we need to have an equals that allows us to search within that bucket to find the right method.
+1:31:15
+I find my object. Yes.
+1:31:21
+So that's quite right in the chat, so yes, they would both have the same hash code and that is what you want.
+1:31:28
+But once we find the right bucket, so we could, in theory, have a perfect hash function that would have every object have a different hash code.
+1:31:34
+So in this case, what could we do?
+1:31:44
+We could say take the first letter and multiply it by the number of the second letter and multiply it by the number of the third letter,
+1:31:45
+multiply by number the fourth letter. And that would give us like a much more a wider range of numbers, but we need many more buckets.
+1:31:54
+So if you think about the actual storage internally of a map, he would have many, many bucket lots of them wouldn't be used.
+1:32:02
+So there's some trade-offs to be made that. So the hash code is not unique for every object.
+1:32:09
+No, sir. Well, I need not be. And I would say commonly it wouldn't you wouldn't guarantee it to be unique.
+1:32:18
+So here we've said, no, there's this. Both of these objects have the same hash code.
+1:32:25
+And when they do have the same hash tag, we look in the same bucket. But if you could get a better spread, that might be better.
+1:32:30
+So if we ended up with having lots of people whose name beginning with a then our
+1:32:36
+bucket one would get very full and we end up doing a long search through bucket one.
+1:32:41
+And that might not be what we wanted, so we could have something that says,
+1:32:45
+let's go and do the same thing for the first letter, but maybe multiply it by the original value of the last letter.
+1:32:51
+And that would give us a different this one B, eight times M and eight times Y, which would give us a different bucket numbers.
+1:32:59
+But we'd have where we'd have 26 buckets.
+1:33:06
+In the first case, we might have up to 26 squared buckets in the second case, so we need to maintain more buckets in the hash.
+1:33:08
+Sorry, in the map. And then in that case, you might have a lot of those buckets which aren't being used.
+1:33:17
+So there's a trade-off to be made there. Yes, that's correct.
+1:33:23
+It's the hash code is not unique for every object, but it should be consistently identifiable and it should be the worst possible.
+1:33:27
+Hash code would be to have the same value of every object. So if we just said the hash code returns nine,
+1:33:37
+it's always going to put everything in bucket nine and then you've reduced it to the case of searching through the list.
+1:33:43
+So we don't want that, but it would be difficult to manage to have a totally unique hash code for every object.
+1:33:49
+So somewhere balancing between those is the right way to go. OK.
+1:33:56
+A couple more things to mention just related to this before we finished.
+1:34:09
+So. As we said, the problem that can happen is that you put something into a map.
+1:34:15
+And then when you come to look it up, you can't find it. And so why would that be?
+1:34:24
+So that would be, for example, if we had put, yeah, we assembled our map as we show it here.
+1:34:29
+See, if I've got two slides to talk about this, not explicitly.
+1:34:41
+OK, so let's say. Yeah, just use this one.
+1:34:46
+Get the transcript. So in this case.
+1:35:04
+If we had a hash codes that was based on the person's name and know maybe their age, let's say we based a hash code on someone's age.
+1:35:10
+Then if we put Dave into the map here and at the time that you put Dave into the map, they were 20 years old.
+1:35:24
+Then there, hash code would return 20, and then in the future, we go to look them up again.
+1:35:35
+If they had in the meantime got older and so that their hash codes had changed,
+1:35:41
+then we wouldn't be able to look them up in the same way unless we had some agreeing data.
+1:35:48
+So it generally causes problems. If you base the hash code on something that is immutable,
+1:35:52
+because then I can put something into the map under a certain key and then effectively change what that key is whilst the thing is in the map.
+1:35:58
+And then I can't look it up again consistently because it isn't effectively where I put it.
+1:36:08
+And so what I would definitely recommend to you is to base the hash code.
+1:36:14
+And probably. Yeah, definitely. Yeah. Paste the hash code on immutable properties, if you can.
+1:36:18
+So that means that when I put something into the map.
+1:36:23
+The hash code is going to be consistent, so later when I come back and I check with another object, that hash code is going to be the same.
+1:36:27
+And so it's not going to be in a different bucket later on because otherwise again, we get this possibility of.
+1:36:34
+Jumping to the wrong buckets and then looking up in the wrong bucket and then don't find the thing that we're looking for.
+1:36:42
+So I think that would be my general rule of thumb would be use the system to
+1:36:48
+generate the hash code unless you really want to specify the algorithm yourself.
+1:36:53
+Make sure if you specify the hash codes that you've specified equals in a consistent way.
+1:36:59
+So if two things are equal, then they have the same hash code, so both those on the same properties and if you can use immutable properties
+1:37:05
+for those things so that it's not possible to change in the counter example.
+1:37:13
+Obviously, we're using immutable property because that was the whole point of the counter, you know, it equals.
+1:37:18
+And so the hash code of counters should be the same.
+1:37:23
+But you can see that if you put a counter in, there's a map key and then you incremented that counter.
+1:37:27
+That would change what its hash code was, and therefore you might be looking in the wrong bucket later on if that was the case.
+1:37:32
+OK, a few more minutes left, let's just talk about one more thing that's related to this case of commonly overridden methods.
+1:37:41
+So I've shown you now that often when we define our own type, we want to define a two string.
+1:37:52
+We want to define a way of doing structural equality. And so we do a two string method.
+1:37:59
+We do an equals method in order to be able to say,
+1:38:05
+are these things equal apart from them being the same object to they actually have the same meaning the same values within.
+1:38:07
+And when we define equals and we want to use things in a map or in a set,
+1:38:13
+then we also need to define hash code and we need to make those things consistent.
+1:38:19
+And I showed you that I could generate those using intelligence.
+1:38:23
+And then it would generate some code that looks like this, which is OK, and that works pretty well.
+1:38:27
+But it's a little bit verbose.
+1:38:32
+You can see that if in every course he writes, you're going to have some functions like this that can fill up your programme quite a lot.
+1:38:34
+So another thing that we can do if we have these very simple objects.
+1:38:43
+Let's let's just reduce this down a bit now, actually. Just to show you a different example.
+1:38:48
+So if I have an object which contains student's name and the age.
+1:39:05
+It's just this. Something like this and I want to compare with.
+1:39:16
+It's. We know that this is going to say false because we haven't implemented the Eagles.
+1:39:34
+And we could go and implement it, or we could go and generate it.
+1:39:48
+But in the case that you know, we write some object or some type, that basically its job is just to contain some of the pieces of data.
+1:39:52
+And so we want to write an equals that just compares all of the properties.
+1:40:01
+And therefore, he wants a hash code that's based on all of the properties.
+1:40:07
+And maybe we'd like some kind of basic version of two string that's just going to print out
+1:40:11
+what we can actually say is like we could generate all of those if I can generate all of those.
+1:40:16
+In the body. So I could generate equals and hash codes, just say yes, I can generate two string.
+1:40:25
+It doesn't always give me the best shoestring, but, you know, some kind of tutoring that's going to thing like this.
+1:40:37
+But I can do the equivalent thing. Just by saying that this class is what we call a data class.
+1:40:42
+And so this is a Koechlin construct where we can say this is a data class where if it's a data class based on these properties,
+1:40:51
+please automatically include, for me, an equals which compares based on these properties,
+1:41:00
+a hash code which is computed based on these properties and a string which does something like what we've just seen.
+1:41:06
+So now if I print this one? That's also Prince.
+1:41:13
+As one. So we should now see that these things are equal so that we should print a true.
+1:41:18
+And then we're going to print some representation of one.
+1:41:27
+Which may not be the tutoring that you would like, and if you prefer a different implementation of two string,
+1:41:36
+then you can say, OK, let's override it in the normal way. Let's do.
+1:41:41
+Something like this, but at least the default version is taken care of for you.
+1:41:56
+And so particularly if you have something that isn't really.
+1:42:01
+You know, its basic job is to hold some data, and you might want to use it as a key in a map.
+1:42:06
+This might be the case, for example, in the maybe the URL class, perhaps in the lap this week, then you might want to define that as the data class.
+1:42:14
+And then you wouldn't have to define it as equals and hash yourself, because that's already taken care and for you with a reasonable implementation,
+1:42:28
+but if you want to customise, you can still override how ECOS works, override how, how it works, override host, how to string works.
+1:42:36
+But if you feel like the default versions are fine, then that can be a concise way of defining that.
+1:42:43
+Let me show you one more thing about data classes, and then I'll just come and pick up the last couple of questions.
+1:42:57
+So one thing that you might have seen when you are using other types is like if you're using a pair.
+1:43:03
+Like this, you may have seen that you can actually.
+1:43:13
+Do something that looks almost like a pattern match, it's not really a pattern match, it's what we call a structuring definition.
+1:43:19
+So I can say. If I have a pair.
+1:43:26
+Then I can assign it to effectively two variables at the same time to extract those components, so I can say Val A. It's P. It's in line P.
+1:43:34
+And then and he's going to be one and a is going to be.
+1:43:46
+S so one of the nice things that we can do is we can actually do this for any class.
+1:43:50
+So let's do I feel sorry, any data class.
+1:43:55
+So if we have name and age, then is S1.
+1:44:00
+To complaining about I'm sorry, not only only for public peace.
+1:44:09
+Because we are outside the class, so therefore, if we need to access those things, then we need them to be public properties.
+1:44:17
+So if I run, that's. Then we see at the bottom, these two parts are extracted.
+1:44:34
+So this is something that you can take advantage on if you write something as the data costs,
+1:44:42
+then you might find it convenient to be able to extract those component parts.
+1:44:47
+If for the public properties using this kind of structuring definition, I made a slide that says construction.
+1:44:53
+So these are the kind of characteristics of the data classes that it provides for you and equals hash code to string,
+1:45:02
+maybe the string might need some customisations, not always the best.
+1:45:10
+And it allows for this structuring definition so that you can pull apart the component parts
+1:45:14
+using this kind of multiple assignments with the bracket you pull on the left hand side.
+1:45:19
+OK, let me just have a quick look at the chat for questions before you finish off.
+1:45:27
+So someone asked when overriding the equals function, why is it not necessary to take two parameters?
+1:45:32
+Does this always refer to the object preceding? Function call.
+1:45:37
+Yes. So when we are writing our equals. We're going to compare another object to this object, and this is what we called the receiver.
+1:45:42
+So when we do S1 equals equals as to effectively what it's doing is S1 dot equals S2 like this?
+1:45:54
+And so that means the S1 inside the body of equals is going to be equals is a method of S1.
+1:46:04
+So inside the equals this is going to be S1 is going to be another name for S1 and then S2 is going to be other.
+1:46:11
+So that's how that's why we only have to pass in one other parameter.
+1:46:19
+It's because you've already got an object that's the one that we're running the method on.
+1:46:24
+And then the other is the one that we're comparing to. OK, great.
+1:46:29
+Maybe I'll stop the recording now, but I'll hang around for a little bit more to answer a few more questions next week.
+1:46:43
+We don't think we're going to have any pre-recorded videos move into kind of the last week of this section.
+1:46:51
+There's an optional app that Konstantinos is running with app, which I think has a competition involved, so you might want to try that out.
+1:46:57
+But we will have a session on Tuesday to just explore a few more features of cotton and answer any more questions that you have.
+1:47:05
+And then I think we're going to have some transition material to go from cotton in
+1:47:13
+into Java so that you're ready to start Java with Alistair after the Christmas break.
+1:47:18
+So, yes, so having enjoyed a lap this week, I think especially the extension this week is pretty fun.
+1:47:24
+If you want to try, I think once you've got the extension together with the primary part, then it makes a nice thing all together as a whole.
+1:47:30
+So I do encourage you to to try that out.
+1:47:39
+OK, so I'm going to stop recording now and then I'll just come to some of the questions that are in the chat.
+1:47:42

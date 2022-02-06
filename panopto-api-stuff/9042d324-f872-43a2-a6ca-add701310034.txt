@@ -1,0 +1,829 @@
+ID: 9042d324-f872-43a2-a6ca-add701310034
+Title: Advanced Programming - GADTS
+Category: Haskell
+Lecturer: Anthony Field
+Date: 05/11/2021
+Thank you. Yeah, so today we're going to be exploring one of GHC House calls, language extensions.
+0:04
+They're called G-d's. But before we get to that, let's just kind of recap a little simple example, which you may or may not have seen.
+0:16
+I think the account you had a course on doing calculus, which included an example similar to this one.
+0:25
+So what I had in mind is a tiny expression language. So, you know, if you want to implement your own programming language as you do,
+0:33
+you always start off with describing what expressions in your programming language look like.
+0:40
+So in order to do this can create an expression data type.
+0:45
+And for now, let's just say that expressions can be integers.
+0:50
+You know, with the end constructor, it holds an integer or addition of two expressions.
+0:55
+OK. And maybe I'll say deriving show here so that we can see what the expressions look like when we value them.
+1:04
+OK, so very simple expression language and we can construct expressions.
+1:13
+Let's say that we want to have the number 10 represented in this language.
+1:19
+Then we would say 10. It's pretty standard.
+1:23
+Or if we want to have the, you know, add two numbers together, we can also do that.
+1:28
+So let's find 10 and 20 together. OK.
+1:33
+So if you little disintegrate, can also make a little bit bigger here.
+1:37
+And you know, e to is the expression tree that represents adding together 10 in 20.
+1:42
+Now, at the moment, we only have a way to build expressions, but we don't have a way to evaluate them into actual normal values right by values.
+1:50
+I mean, high school values. So in this particular case, what we want, what we would want to do is to somehow take this expression tree.
+1:59
+And I say tree because, you know, you can imagine you can imagine it as like a tree built out of above these nodes like addition.
+2:07
+And then the integers so that the leaf you can build bigger ones E and E to be two, that's a bigger expression tree.
+2:16
+So what we want to do is go from expressions to integers.
+2:23
+So I'm going to call this function evolve because it evaluates an expression.
+2:32
+So it all is very simple. When we have a number and integer, we just return to integer.
+2:37
+OK. So E and M equals in. So in the case, we can already evaluate each one with this just 10 and in.
+2:45
+So that was the base case in the recursive case. We want to say and together a and B, we want to do well.
+2:57
+We first want to evaluate a and then added that to whatever B evaluates to, maybe I'll change the formatting here a little bit.
+3:05
+OK. So if either a placebo b and with that, we can evaluate each one,
+3:15
+evaluate two or even evaluate the and e to be two, and that behaves just as expected.
+3:25
+So. So as great. But you know, this expression language that we have so far, given that it only represents integers,
+3:33
+is probably not very general or it probably doesn't cover a lot of the use cases that you would want from from an expression language.
+3:42
+So how about we make it a little bit more interesting and add new constructs to it?
+3:50
+So what I had in mind was conditional, you know, conditional expressions.
+3:56
+So if if, then else, so if the analysis takes three expressions, one of them, the first of them is the is a condition.
+4:01
+You know, the condition, if that holds, then. So if that's true, then we evaluate the left hand side.
+4:10
+If it's false, we evaluate the right hand side. Now, right now, of course, at the moment, we don't have any way.
+4:16
+You have a way to evaluate or to represent Boolean.
+4:22
+So let's adds to our language, maybe a quality check of two integers, so equals or two expressions rather.
+4:29
+So what this does is it checks if two expressions are equal, if they are returns true, otherwise it returns false.
+4:39
+That's the kind of the intended semantics for this for this constructor. But of course, now when we go to our evaluation.
+4:48
+So, you know, the expression that does that would be if.
+4:55
+Equals E! And so if if E!
+5:05
+Two is equal to 30, which in this case it is, then we want to, you know, return E and one otherwise e and minus one.
+5:10
+OK, so that's kind of a an example of of an expression tree that would do something with these conditions.
+5:25
+So that's great. Now, of course, that's the sort of the syntactic part of this, but we now also have to.
+5:31
+Extend the evaluator to handle so that it handles these conditional expressions.
+5:40
+Now. Once once you start doing that, we'll actually.
+5:46
+It's getting to be a little bit of a trouble here,
+5:52
+because how do you evaluate equals stronger than the question, Richard, should we get the question all the way?
+5:54
+Yeah. Could you explain how you've written E3 again?
+6:02
+So what is it throwing back?
+6:06
+Oh, OK, well, so E3 is kind of an example expression that says if EA to, you know, if you were to write that in normal code, it would be if E!
+6:09
+Two equals 30, then the return one else minus one.
+6:20
+If that makes sense, it's just that I introduce this equals functioning to the expression language,
+6:27
+so that's that's taking the place of or maybe I'll write this in the comment of there.
+6:32
+So yeah, so that's this is the the programme that this expression three represents.
+6:37
+OK, so it looks a bit more worthy of being proposed because, you know,
+6:43
+these are long winded way of saying equals, but morally, these two are kind of the same.
+6:50
+So how do we evaluate E3?
+6:58
+Because right now, of course, if you run this, you know you get an exception because of course,
+7:02
+we haven't handled the evaluating quality or the expression.
+7:11
+So how do you do that? And once you start thinking about it, actually, it's not that simple because, you know,
+7:16
+in the previous two cases, we had expressions that represented numbers so we could evaluate them into numbers.
+7:25
+But now this third expression doesn't, you know, it doesn't evaluate to a number, evaluates the Boolean.
+7:34
+So. You know. If a well, if A equals develop B, they would want to return here.
+7:42
+True. Some some notion of true, true else, false or, you know, really just to get to know, do the 10000 mark error mistake just kind of this?
+7:54
+But the problem is that, of course, this is a bit too big.
+8:11
+Our evaluator returns and ends on this expression, which is a so you can say, OK, well, there are two kinds of two kinds of expressions here.
+8:17
+Once the return ends when evaluated and once that return Boolean when evaluated to particular the equals check returns,
+8:27
+a Boolean returns and returns an end and descriptors and ends as well.
+8:35
+Although if you know it could return either in samples, depending on what the two branches are.
+8:41
+But for now, let's just say that this also ends so it can do is say, OK, well, if you have two things we can return.
+8:46
+How about we implement two versions to evaluate the function, one that returns and ends?
+8:55
+And one that returns a ball? So let's just call this instead of around Cleveland, and the other one is going to be about two.
+9:00
+And the type of example is it takes an expression, it returns a Boolean and it says,
+9:15
+OK, the only expression that returns a ball is the equality check.
+9:23
+So that's the only pattern we're going to provide. And we say if, if all, if and B are equal.
+9:27
+So if they evaluate to the same number, then we return true.
+9:34
+Otherwise we return false. Thus, this is the expression.
+9:38
+Now I have this plug in in my editor turned on the worms, warns me that I have missing pattern matches.
+9:41
+So the way I'm going to get around that is just, say, error bad codes.
+9:49
+OK, so morally what this? I'm sorry, the foul ball.
+9:54
+Well, this is saying is if our ball is only defined for equality, expressions, evaluations similarly well, we can still handle the if case.
+9:59
+If all ends e if condition and foul.
+10:10
+So we have these three expressions. And we know that the if the conditional expression the condition needs to evaluate to a Boolean.
+10:16
+So we call the available on a C, we evaluate Boolean.
+10:27
+If C evaluates to true, then we return a valid T else invalid.
+10:33
+False. OK. And finally, because there's no way to evaluate the equality, check into an integer, we say anything else.
+10:41
+Here is code. OK, so now that we've done this, these two versions, the value evaluation function,
+10:51
+we can actually evaluate every available and we know, you know, we kind of know that E!
+11:03
+Three represents an expression that represents an integer.
+11:10
+So when we evaluate it as an integer, everything goes well.
+11:16
+And, you know, if you if you inspect it closely, actually returns the correct value because the quality check here checks if 20 is equal to sorry,
+11:24
+if E2 is equal to 30, but E2 is, of course, 10 plus 20.
+11:33
+So that is, of course, equal to 30. So we return one if we instead changed it to, I don't know, 20, then he returns the minus one.
+11:37
+So it kind of works, but it's not very satisfactory because, you know,
+11:49
+we just so happened to call it Val in on an expression that actually represents and what if you call it out in tone equals e three or into E2?
+11:55
+Oh, OK, we get an exception saying it's bad code.
+12:07
+The reason is bad code is because evaluations actually doesn't handle equality checks because he doesn't know how to.
+12:11
+So I guess, you know, we have ways of evaluating two integers invasive, inviting to ebullience.
+12:17
+But just looking at the expression, nothing really tells us we're looking at the type of expression.
+12:23
+Nothing really tells us which one it is ahead of time and only at runtime when we actually look at the constructor.
+12:29
+Do we find out that, oh, actually this expression?
+12:36
+Represents an integer or it represents a Boolean, but it's at that point,
+12:42
+it's too late because our programme already compiled and we get a runtime error.
+12:45
+So OK.
+12:50
+Another way to kind of. So, so there is there are different ways of of ratings in hand, by the way.
+12:56
+Sagan was another hand, by the way, Jan has a hand.
+13:04
+OK, so I want to ask if we can have a type something like object to which has to construct her one that she and another one spool air and wig?
+13:09
+Yeah. And then we can modify the return type of evaluated to be like the object.
+13:21
+OK. Yeah. Very good question. Yeah. So so the question was, can we have maybe a type that so you know, right now I said,
+13:30
+there's a version of it, all the events to an end and a version of ball that evaluates to a ball.
+13:38
+And the question was, can we have one version of it now that returns to an object?
+13:43
+The question used so. So you use the word object, you know, maybe I'll call object and it's either an end or a ball.
+13:50
+And then, you know, evolution just sort it now would take an expression and evolve into this object type.
+14:00
+Now, of course, you can introduce the object type, but there is actually a more generic way of doing this.
+14:09
+And I don't know if you've seen it, but. But there's a which I'm going to redefine here, so I'm going to hide the existing definition.
+14:15
+So there's this type called either in hospital, which reads something like this,
+14:25
+so that either data type either AB experiment parameterised by two types, and it precisely allows us to take the sum of two two types.
+14:31
+So it's like it's either a some a. So it's either left in the left case, it's in a or it's a B in the right case.
+14:43
+So you know, the example of this is either one you can say here's a value that's either an end or a bubble that is going to be a left 10.
+14:51
+But another example of of either in is right or false.
+15:05
+OK, so the I think the question was about whether you could write a version of a vowel that essentially goes expressions to either end or bool.
+15:12
+So of course, you can do that. And let's let's actually do it.
+15:26
+So we have an expression here. I'm going to k split on a or e, you know, so now we have these four cases to handle IANS.
+15:31
+OK. Now when you have an index, let's just return left.
+15:46
+And because that's the the latter case when you want and two numbers together.
+15:52
+OK, well, I could write this in a recursive way.
+15:57
+So actually, the names that this log in generates are not very good, although I don't know if and B are much better.
+16:00
+But um. OK. So you can say let's call a foul and a plus involved and b and then this is this is the left case again,
+16:08
+because you want to be in the, you know, we were still in the case.
+16:23
+Now we do if OK, so this is what did I call these CTF?
+16:28
+So you can say, OK, this is again the left, because this is going to it a number.
+16:34
+If if Val bool C then evolved into TLC, if it's F and finally in the in the equals case, we do write a vowel in a equals evolving B.
+16:39
+OK. So this version now is a version of either AL can now actually evaluate both.
+17:00
+Expressions that represent integers and expressions that represent billions.
+17:09
+So, you know, to to kind of see that it does. We just called a one eval function on the equals and yeah, and to derive derived show for this.
+17:14
+OK. So if you evaluate, you know, if you remember when I call the end, I'm equals, there was an error.
+17:28
+Now it's no longer an error. Just says, OK, well, out of the two possibilities,
+17:34
+this isn't the right case because E calls returns a ball and evaluating E three gives the left case because it's an integer.
+17:38
+And well, yes, this works when you have sort of well-formed expressions because you get on it.
+17:50
+In the previous cases where when our examples broke, they broke with well-formed expressions.
+17:57
+So now we what do you mean by, well, from the expression? Well, it's an expression that makes sense in some sense.
+18:04
+So if he is well formed because it's at every point in this expression tree, every value or every node.
+18:10
+Evaluates to something that that nobody expects. So what do I mean?
+18:24
+Well, we said if we have this condition, check with equals and we know that E causes something that produces a Boolean.
+18:27
+But what about if we had a version of EF three three prime that instead of, you know,
+18:39
+this is going to be ill formed because the in the condition which is put e instead?
+18:47
+OK, so is this still an expression syntactically? It matches the rules of being an expression.
+18:54
+Because what it means to be an expression is just being constructed out of these constructors.
+19:00
+Up here, E3 Prime is also an expression. But if you try to evaluate it, we get into an error once again.
+19:07
+And the reason we do that is because the E F is because in the condition, we really expect to receive something that evaluates into a into Boolean.
+19:18
+But of course, E End does not evaluate typically, and it evaluates to an end.
+19:31
+So this expression can all be evaluated.
+19:36
+And in fact, whereas before the errors we got were because we called the evaluator on the wrong type of expression.
+19:40
+This error is, in some sense, even deeper,
+19:49
+because it's because we were trying to evaluate an expression that shouldn't even be written down in the first place.
+19:52
+So this is just bad. OK, so there's no way to it's no way to redeem.
+19:58
+This one is just a bad expression.
+20:03
+It's it's if it's like, you know, in high school, you were, you would try to say if 10, then you no one else minus one.
+20:05
+And the error you get is no instance for no bull. And in reality, the problem is that 10 is the number 10.
+20:20
+In fact, if I provide a type signature here, there is couldn't match expected type bool with the actual type end.
+20:30
+So, you know, Haskell knows better. Haskell doesn't even allow us to write this programme down.
+20:39
+It gives us a type error, but our expression language is not, you know, it's not.
+20:45
+It doesn't have sufficient type information at the moment to rule out bad programmes or bad expressions like this.
+20:53
+So ideally, what we would want to do is to reject.
+21:00
+Such expressions before they even make it to the evaluator before they even, you know, before, before the programme runs.
+21:07
+So we're going to do this statically. And so a neat way of doing this is to use an extension to the GC Haskell language called the Gettys.
+21:17
+So if you're if you're coming from other programming languages, the way you might have seen programming language evolution is, you know,
+21:30
+if you're in Java, for example, the Java programming language gets a new release every few years where they introduce new features.
+21:40
+And you say I'm using Java 15, and that means here's a set of features that are included in Java 15 that has advantages and disadvantages.
+21:48
+The main disadvantage, I would say, is that it means every new feature that gets into the new version of the language has to be very conservative.
+21:59
+It has to be very they have to make sure that it's a conservative extension of the language.
+22:09
+Whereas in the Haskell world, the kind of the evolution procedure that they decided to go with is to introduce like language extensions,
+22:18
+which are basically flags you can supply to the compiler to say, OK, I don't care which version of Haskell I'm using.
+22:27
+All I care is give me this feature and I want to use this particular feature in my programme.
+22:35
+And so the way to do that is to say Language Gigantes.
+22:42
+So this flag at the top says, OK, this this Haskell source file is going to be not a standard.
+22:51
+Possible saucepot, it uses an additional extension, which is available in GEC called G-d's,
+23:00
+and so from now on, we can use G.O.A.T in a programme, so let's see what they are.
+23:06
+So first of all, if you look at this expression language, what I want to look at is so,
+23:11
+so so the observer domain observation here is that an expression an algebraic data type like expressions consists of a set of constructors.
+23:24
+And in this case, we have even constructed the ad constructor, et cetera.
+23:35
+And these constructors are really just fancy functions.
+23:40
+So what do I mean by that? E in the in constructor has a type.
+23:43
+Right? It's you can use as a as a function. So it goes from integers to expressions.
+23:50
+So for example, if you want to go, you know, EAS, you have the number is one to 10, you want to turn them into expressions.
+23:57
+You can map the constructor over them.
+24:05
+And if you value this actually, you know, maps the constructor of these values.
+24:10
+So constructors are are just fancy functions.
+24:17
+And the reason they're fancy is because in addition to constructing values, you know?
+24:21
+So the type again, in order in addition to to taking an instance constructing an expression,
+24:27
+you can also pattern much on them to deconstruct an expression into potentially an integer, right?
+24:34
+So they're kind of bi directional functions, so to speak,
+24:40
+although in the in a direction where you take an end and turn it into an expression, you know that you can always do that.
+24:46
+But the the other way coming from an expression to an end that may or may not succeed depending on,
+24:54
+you know, because because you give it an expression, you can't be sure that it was constructed from it.
+25:02
+It could have been constructed from equals, at which point there's no way to extract an integer out of it.
+25:07
+OK. So and similarly with either your left and right also have their own types.
+25:14
+If you look at the type of left, it says, given some value of type a, we can construct an either of A and B,
+25:23
+and then the left constructor injects into the left type parameter similar to the right constructor.
+25:32
+Given a type B, we can inject into an either AB and same thing applies here that you can always construct.
+25:39
+But deconstruction may or may not succeed because, you know, from an either a b, you can't always go to an A.
+25:46
+You can always go. You can only go to an A when the left constructor was used.
+25:54
+OK, so so constructors just fancy functions.
+25:58
+And with ATEEZ, we can actually as well GC actually provide syntax.
+26:03
+I'm going to call this extra prime actually provide syntax for writing down constructors with a more traditional function signature syntax.
+26:12
+So I don't mean extra prime. So this is going to be a G80 G80, which stands for generalised algebraic data type.
+26:29
+I don't know if it's one word or two words data type. Let's put a hyphen. So that's a GTI.
+26:46
+And this is going to be identical to the extra extra data talked for now at the beginning.
+26:52
+But I'm going to use some different syntax so you can say that e end takes some end and return is an extra prime.
+26:58
+OK? E in E odds i have to use primes here as well otherwise.
+27:09
+So I don't want to, so I don't really use the same constructor names.
+27:17
+E takes an expression prime.
+27:21
+Another expression prime and returns expression prime, etc. I could finish this and we will shortly.
+27:27
+But so far this is identical to what we had before because, you know, the type of event is in the expression.
+27:32
+The type of prime is maybe I need to load this.
+27:39
+Okay, so the type of thing in prime is in the expression prime.
+27:44
+OK, so same thing. But what this syntax allows us to do now is actually because the because we as programmers.
+27:49
+Or writing down the the types of these constructors words as opposed to the original version.
+27:59
+We didn't write down with the Typekit to construct three part or just inferred it for us because,
+28:06
+you know, it takes an end and it must return to the expression.
+28:11
+So it has to be this into expression. What were the good with the G.E.D. case?
+28:15
+We can't. We have more control. We can sit down and write down what we think the type of the expression is and a very the main.
+28:22
+The main thing of that gives us is we can annotate the expression prime data type or duty with a type index,
+28:34
+so we can say expressions also are classified by their types.
+28:44
+So what's an example of this? We can see that any the prime is an expression prime that represents an end.
+28:51
+So what is the meaning of this type parameter here is that it somehow signals to the type system.
+29:00
+That the Ian Constructeur is not just in any is not just an arbitrary expression, it's an expression that represents an end.
+29:07
+OK, so addition doesn't take to arbitrary expressions.
+29:18
+It takes two expressions that represent things.
+29:24
+OK, now if prime is an expression that takes all it takes, it doesn't just take.
+29:30
+Three arbitrary expressions it takes.
+29:43
+And the first expression has to represent a Boolean. The second expression has to represent an end.
+29:48
+The third expression also an end. And finally, the whole expression, the whole conditional expression represents an end.
+29:54
+But now, actually, because we have this well typed or we because we have this more precise type information we can.
+30:02
+We can also be a little bit more liberal and say, Well, you know, we don't really need this,
+30:09
+need these expressions to be and they can be any type as long as they're the same.
+30:16
+Right, so when you have a conditional the type of a conditional is the type of its two branches, so actually you could, you know,
+30:21
+you could you could write down something like if true or if you know, if one is equal to two, then return true else, false.
+30:29
+All right. So this is a simple example of a conditional that does not return numbers into two branches returns billions and actually it could be,
+30:40
+you know, strings as well. So conditionals and really polymorphic in this sense and this more precise type signature
+30:49
+actually allows us to to to signal this polymorphism to the type system in a safe way.
+30:59
+And I'll come back to what it means. What I mean by saving a second.
+31:07
+OK, so equals finally equals prime takes two expressions, let's say their ends and returns an expression of table.
+31:11
+And so this is the crucial bit. Now, when you look at the movie and when you look at the type of E in prime and equals prime,
+31:24
+even though they, you know they both return expressions, the types of the expressions are different.
+31:36
+So in prime and particular return, it is an expression type ends and equals prime.
+31:42
+Return is expression of type bool. So, you know, what do we gain from having this more precise Typekit type information in our expression language?
+31:47
+Well, now it means that we can write our evaluation function much more precisely.
+32:00
+Oh, and also, you know, back here with the with this either in ball, it's in addition to being a bit clunky.
+32:06
+One of the issues was that if you wanted to add C strings to the language,
+32:17
+then you have to extend this to either string or either end bool or some, you know, some other way of representing three options.
+32:22
+So it doesn't vary. It's not very scalable. Now here's a question from Jack in.
+32:32
+So this data at Haifa's polymorphic right. So why we need to use it, he said of regular polymorphic, they'd type.
+32:41
+So your question is, why do we not have to use charities for free data types?
+32:52
+So I mean, if we only have something like have tags fresh in a fight, we don't read where we are?
+32:58
+Yeah, OK. Yeah, yeah. Normal one was, yeah, yeah.
+33:05
+So it's something like, yeah.
+33:10
+So the question is, you know, I said that we here's a polymer free data type, and I claim that we need to write down the type signatures here now.
+33:13
+Why not just write something like, you know, in E?
+33:26
+If expression or expression a expression A, you know, you could you could do something like this as well?
+33:34
+Yeah. I think. But how would you use?
+33:48
+So the problem is, OK, let's let's write this down.
+33:53
+The problem is we're still at the mercy of of GC to figure out what the types of these constructors are.
+33:57
+And in fact, if we tried to ask for the type of E into prime prime, it'll just be true.
+34:03
+Polymorphic, it doesn't restrict, you know, I can say, Oh, I want an e into prime crime of type expression, end grade so that type checks.
+34:10
+I can also say, Oh, I want this to be an expression of type ball that also type checks,
+34:21
+because if you don't provide this signature by yourself, then what GC will infer is the most general type signature for that constructor.
+34:27
+And if you think about it, there isn't really anything about this constructor that signals, Oh, it should result in expression of type A.
+34:37
+You know that it should, because you have this semantic understanding of what what the you know what the meaning of this expression tree should be.
+34:44
+But as far as geeks concerned, you know, those two things are completely unrelated.
+34:52
+So the Gigliotti syntax allows us to restrict the type of this expression constructor.
+34:58
+So, you know, with the with the second version, with the normal polymorphic version,
+35:03
+e inten can be typed as an expression of type bool because the inferred type of the expert prime constructor is to polymorphic.
+35:11
+But the manually written type of the in the prime Guidetti Constructor is very clear about what that type should be.
+35:19
+So if you ask OK, I want in the prime of type expression fragment that works, but if you say, Oh,
+35:28
+I want the version of this, that is a ball, then you get a Type R saying, OK, well, these two didn't match up.
+35:36
+So, yeah, to quickly answer this question,
+35:42
+the sort of the traditional way of defining a pulling free type doesn't work because we have no ways of restricting the types of the constructors,
+35:46
+but it's a very good question. Oh, point.
+35:52
+So that's because even if I say it's like we intend to,
+35:56
+but we don't actually restricted to our expression and it can be something like expression for all our.
+36:01
+Exactly. Exactly, yeah. Yeah.
+36:07
+Um, so that's right now.
+36:12
+Um, yeah, so so but with this g d t version, we actually have a very nice restriction on the types of the of the constructors.
+36:15
+So we can say n prime is always it's always produces an expression of type.
+36:26
+And so when those signatures in hung in our hands, we can write a version of the evolve function that.
+36:30
+So if you think about it, OK, now previously, actually just just for the fun of it, let's add strings into it as well.
+36:41
+You know, this takes a string as a string just just to show that this is way more extensible.
+36:48
+Now also e! Because it can support any type that kind of comparison.
+36:56
+Yeah, yeah, that's true. So E calls can be polymorphic.
+37:03
+So it just say that it supports any two types.
+37:10
+Yes, right? It. It's pretty great to have this.
+37:14
+Yeah. And if you think about the ads can also support any two types that can be added together.
+37:19
+Right. So you know, we can generalise this, this expression tree further.
+37:27
+For now, let's just stick with your suggestion of equal supporting any two compatible types.
+37:35
+But all of these the type of ad to only support integers just because it's because it's simpler that way.
+37:41
+But we also have strings. So now with this generalisation, equality checking will work for strings as well.
+37:49
+OK, so let's actually implement the event function now.
+37:56
+Previously, if you remember and up here, where was the oh yeah, we had a similar function.
+38:00
+And because the input argument to the function was just an arbitrary expression, we have to handle the case where it's either an end or it's a ball.
+38:11
+So if you only look at the type here,
+38:22
+it's kind of you don't the type of the expression doesn't tell you anything about the underlying potential values.
+38:26
+So you have to know that expressions can only be evaluated two ends and balls and then handle the cases yourself manually.
+38:34
+Now you've got Prime, on the other hand, doesn't take an expression ordinary expression.
+38:41
+It takes an expression that has some type information A. So whatever that is, it.
+38:47
+It's it's so I mean, maybe start a bit more simple.
+38:57
+I'm going to write a version of Evolve into Prime that only takes expressions representing integers.
+39:01
+OK, so which are these expressions?
+39:06
+And so if our prime takes an expression of type ends and it always evaluates an end and we can do this in a in a safe total way.
+39:10
+OK, so maybe I can even generate the cases using this I.D. feature of, you know, the Haskell ID engine.
+39:19
+So what this did was, well, this macro did was to ask GHC what it thinks the possible cases are.
+39:31
+And if you look here, it actually didn't generate a case for strings or equality checks because based on the return type.
+39:40
+These are these don't type check. It's impossible to construct an expression of type ends with the equals constructor.
+39:48
+So let me just, you know, try let's say I tried to add that case e string.
+39:56
+Now, I get an error saying this much is redundant because it has an impossible type, so we don't.
+40:05
+In addition to having more top information, we don't even have to.
+40:14
+Well, that allows us to to not have to spell out cases that are impossible.
+40:21
+We can rule them out statically. So when we evaluate the expression that represents an integer,
+40:26
+we don't have to handle the case where the expression is a string because it's impossible to call this function with you,
+40:31
+not show you that in practise in a second.
+40:38
+So evaluating an integer that's just, you know, return the number, evaluate additions will evolve into prime a plus involved in crime B.
+40:41
+So that's good. And finally, conditionals CTF.
+40:55
+Now at this point, we will need, you know, if available, Prime C then evolved in Prime T else evolved into Prime F.
+41:00
+OK, so we don't have evolved or prime. Let's define that e maybe can proceed.
+41:14
+OK. So if our prime can come from the Julianne's can come from two different sources, either.
+41:25
+If if you know, if they're conditionals, you say if a vowel bool primacy,
+41:31
+then evolve or trying to else available Prime F and now notice that this is a version of evolving conditionals.
+41:39
+When the two branches are both billions and the quality check is OK, let's just be.
+41:48
+And here we're in a bit of a trouble because we said that E cause works for arbitrary age.
+41:58
+We don't know what that is, and we don't have a generic way of evaluating A's because we only know how to evaluate ends or bulls.
+42:02
+So we kind of get a little stuck here.
+42:13
+So instead of defining to re-evaluate, evaluate your functions for ins and bulls, what we can do is just have one which which I'll call evolve prime.
+42:16
+And the main observation here is that if our prime takes an expression that represents a value of type A and it just produces a value of type.
+42:29
+OK, so this is kind of a generic way of evaluating arbitrary expressions and what we need to do here.
+42:38
+Is just pattern matching all the possible cases and simply fill in the so, you know,
+42:46
+in the first case when we have an E and constructeur in that case, this pattern much refines the type of a.
+42:57
+It knows that, OK, well, we had an expression of like a but we were it was constructed with the Prime Constructor.
+43:07
+So it means that in this on the right hand side of of this function of this clause, we know that aid must be an integer because,
+43:14
+you know, that's what the constructor says is that it constructs an expression of Typekit.
+43:24
+So pattern matching with these, G-d's actually refines the type information as we pattern much on them.
+43:28
+So that type checks is just as just an end. And if you think about it, you substitute in it, really.
+43:35
+In this case, the Typekit developed prime is expr extra prime in two ends, right?
+43:40
+So it's a more specific version of the type signature of their let's do
+43:46
+addition AB give out Prime a plus involve Prime B now this time checks as well.
+43:51
+And why does it type track was? Because, as I said, takes two expressions of type int.
+43:58
+And returns the expression of type two once again, in this case, we know that because a is an expression of of type ends as the type of the thing,
+44:06
+then calling it vile prime on it will produce an end to the type of this expression.
+44:18
+Is it? And as I put this of expressions and as well and we can add them together and we get an end,
+44:23
+which is exactly what we expect because we expect to go from an expression of type A to an A.
+44:28
+And so this this case type checks now we can handle conditionals c t f so conditional the true branch in the fourth branch.
+44:33
+OK, so what do we have? So C is an expression of type ball. OK.
+44:45
+So what we do is if if our Prime C, then if all else, if our prime, if this just works magically,
+44:50
+once again, the reason it does is because, like I said, see the type expression bool.
+45:03
+So evaluating see will it's guaranteed to give us a ball.
+45:09
+There's no need to check, you know, whether that's a valid syntax or anything, it's guaranteed to give us a more equality check.
+45:14
+And B, I'm not sure this is going to work.
+45:22
+Oh no. Yeah. So that in the equality check case, we know when we consider matching the equality check, we know that it was constructed.
+45:29
+We don't know what the types were when you know which types because it works for arbitrary types, it works for every type that supports equality.
+45:40
+So here. We can always produce a Boolean because we know that these two things have the same type,
+45:48
+we know we can evaluate them and we also know that they support the quality. So, you know, some arbitrary for some arbitrary types.
+45:55
+So this is the case that we couldn't right before with the more precise if pool function because we didn't know we do.
+46:04
+We call the available function on the on the tour to indicate to fields in the constructor what do we call the end?
+46:11
+But here, you know, we have this generic evaluation mechanism, so we can just do.
+46:19
+You can just evaluate them, whatever those types are finally about string just in terms of string and and you know,
+46:24
+you can you could start adding more types to to this and the evaluation function really simply only changes.
+46:32
+You just have to add the new constructors. So this is the well type evaluator function.
+46:41
+Let's try to port some of these previous expressions and see how for new evaluator function affairs with them.
+46:47
+So just take all of these. Move them here.
+46:56
+And one by one. OK.
+47:00
+E one prime is now an expression of type ends.
+47:05
+OK, now let's try to evaluate it if our Prime E won prime.
+47:09
+OK, that's 10. So that works perfectly. Now, of course, e to prime.
+47:16
+Well, let's skip the time signature here. See if you can tell us what it is.
+47:25
+So what does it think?
+47:32
+The type of e to prime is?
+47:37
+Oh, it's an expression of type ends, and it knows that because it's constructed with the E and so in particular, evaluating E to prime now.
+47:40
+Gives us an inch. We know it gives us an edge. So so far, so good.
+47:51
+That's an absurd expression of. OK, let's do E3.
+47:57
+So E3 was this conditional check that all the programmes here everywhere do have duplicate signatures.
+48:03
+Oh yeah, because because I had the E3 prime, the first E3 prime I would rename to E for.
+48:17
+And then this one is going to be E3. OK. So he says, OK, we found underscore he stands for end.
+48:30
+So actually, you know, it knows that this can only be an intense and was needed.
+48:38
+OK. So if Val E3 prime if our prime E3, prime if I was to minus minus one.
+48:49
+So so far so good. The R evaluator behaves exactly as it did before.
+48:56
+But now if we try to do this bad example, the one which through an error, so we evaluate the old E for the old E four,
+49:01
+we go this expression exception at runtime, saying that that the expression was invalid.
+49:17
+Now what happens now if you try to port E for Prime Report E4 into the new expression
+49:23
+language and they're going to give you a type signature e if Prime E and 10 E is OK.
+49:30
+So this gives us type error now.
+49:39
+And the reason it does that is because in the constructor e if prime, we said this works when the condition is, it represents a Boolean.
+49:42
+But now, of course, because I plugged in something that doesn't represent a Boolean, we get a type error.
+49:53
+So, so the main advantage here is that it's not even possible to call.
+49:59
+If our prime with this E-4 prime, because the programme doesn't even compile to begin with,
+50:07
+if if your prime is now promoted into a tie power the GDC catches when you write your programme.
+50:12
+So. You don't have to do any runtime checks, you don't have to handle exceptions, you don't have to, you know,
+50:20
+write tests to make sure that you're that you're evaluator handles only correct
+50:29
+Typekit because it's guaranteed by construction the evaluation function.
+50:34
+If you look at its time guarantees that it takes an expression of Typekit and returns in a so.
+50:40
+And then also, the cases in the expression tree are also very precise about what type of expression trees they represent.
+50:49
+So together with these two components, you know,
+50:59
+with the precise type information in the constructors and the and the precise type for the evaluator function, we can rule out invalid expressions.
+51:02
+Thank you know, using GCHQ's type checker rather than any domain specific runtime that we have to implement.
+51:14
+So the takeaway here is that thanks to the J.D. extension that Haskell provides,
+51:23
+we can promote domain specific information into static type information and get all the all the power of Haskell's type checker.
+51:30
+Reuse it for our domain specific purposes. And I think that's the that's the that's the final message that I want to I wanted to convey.
+51:39
+So if there are any questions, I'm happy to take them now. That's great.
+51:50
+Thank you, challenger. And just a quick note, I think pretty much everything we're doing from now on is relates to Hezbollah's type system.
+51:59
+Yeah. So we'll know more about what you can do with the type system and be amazed,
+52:08
+then come along to the elections that are running on Thursdays between now and Christmas break.
+52:12
+Thank you, John. I'll stop the recording. Thanks so much. Thanks.
+52:17
+Thank you.
+52:22
