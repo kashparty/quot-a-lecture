@@ -20,6 +20,7 @@ class QuestionAnswer(models.Model):
     question = models.TextField()
     answer = models.TextField()
     timestamp = models.TimeField()
+    encoding = models.BinaryField()
     recording = models.ForeignKey(
         Recording, on_delete=models.RESTRICT, related_name="questions"
     )

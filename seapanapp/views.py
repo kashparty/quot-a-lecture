@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
 from sentence_transformers import SentenceTransformer
 from scipy.spatial import distance
-from numpy import argsort
+from numpy import argsort, frombuffer, single
 from django.db.models import F
 
 from .models import QuestionAnswer, Recording
@@ -52,7 +52,8 @@ def searchres(req):
     # TODO: NLP stuff
     results = QuestionAnswer.objects.all()
     similarities = [
-        1 - distance.cosine(query_encoding, model.encode(r.question)) for r in results
+        1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
+        for r in results
     ]
     ranks = argsort(similarities)[-10:][::-1]
     sorted_results = [results[int(i)] for i in ranks]

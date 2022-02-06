@@ -3,6 +3,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from os import environ, listdir
 import django
+from sentence_transformers import SentenceTransformer
 
 environ.setdefault("DJANGO_SETTINGS_MODULE", "seapan.settings")
 django.setup()
@@ -10,6 +11,8 @@ from seapanapp.models import QuestionAnswer, Recording
 
 MIN_QUESTION_LENGTH = 3
 nltk.download("punkt")
+
+model = SentenceTransformer("distilbert-base-nli-mean-tokens")
 
 
 def parse_timestamp(timestamp_str):
@@ -102,6 +105,7 @@ class Phrase:
             question=self.question,
             answer=self.answer,
             timestamp=self.timestamp,
+            encoding=model.encode(self.question).tobytes(),
             recording=self.recording,
         )
         question_answer.save()
