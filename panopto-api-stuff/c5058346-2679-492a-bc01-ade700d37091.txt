@@ -101,7 +101,7 @@ Collins square root function would like to have either a float or a double.
 7:41
 And we've got an integer because we've just multiplied together these integers so we can convert this.
 7:47
-And in fact, intensité will give us a hand with just fixing this problem.
+And in fact, intensit will give us a hand with just fixing this problem.
 7:54
 So we want to convert this expression to a double in order to make it compatible with square root.
 7:58

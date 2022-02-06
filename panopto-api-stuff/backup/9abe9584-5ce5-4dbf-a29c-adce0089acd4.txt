@@ -1,0 +1,255 @@
+ID: 9abe9584-5ce5-4dbf-a29c-adce0089acd4
+Title: L07 - Time-Dependent behaviour of digital circuits with feedback (part 2)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 27/10/2021
+All right, so welcome, everyone, and we are now back to the second part of our seventh lecture.
+0:07
+And remember that we just looked at what happens when we add feedback to our logic circuits.
+0:14
+We saw that basically our boolean equations broke down.
+0:21
+But if we look more closely at the physical or electrical level, we can see that what's happening is that the signals are changing over time.
+0:27
+So what we can do now is go back to our initial circuit.
+0:38
+So now what we can see is that if we look at it using the switch and delay model, the output that we get over here from from this gate.
+0:43
+Is not immediate and in fact, we are going to have some input suits and after a while, boom, we will have the new.
+0:54
+So now we take, for example, this to be one.
+1:02
+For example, we assume this is also one.
+1:07
+The signal will travel along the wire, then the gate is going to sense one one and after a while we will have a zero.
+1:10
+After that. This is no longer one. It is zero. So the signal will travel along.
+1:21
+And after a while, what we will have here being a zero,
+1:28
+what's the value that we are going to have is going to be a one and then he's going to try again.
+1:34
+And the same is going to happen. So what we can see here is that this circuit,
+1:40
+thanks to this feedback and in this case using these Nannygate, it basically has an oscillating behaviour.
+1:46
+And that is really interesting, as we will see. So one way to understand it instead is would be using the variable resistor model.
+1:55
+And whenever we said eight to one, this would be equivalent to a nannygate.
+2:05
+And of course, then we would have in the variable resistor model, we would have an input voltage.
+2:10
+Then the circuit that represents, uh, an inverter, given that a one is sorry,
+2:15
+given that a is one on an end, the resulting logical gait would be equivalent to an inverter.
+2:24
+And then we have the output voltage. Now, we could use some complex formulas to calculate what happens here.
+2:32
+But something very simple that we can do with this model is assume that infl input voltage is the same as output voltage.
+2:40
+And what we would have here then is this straight line that crosses across the origin,
+2:49
+both axis and what we would see over time if we took multimeter into the circuit,
+2:59
+we would see that the the signal settles at around one point, two volts,
+3:05
+which does not seem that useful because that is basically the invalid state that we were trying to avoid.
+3:11
+Now, if we look, if we were to look much closer with a very high resolution oscilloscope working at very high frequencies,
+3:19
+we would we would, in fact see some variabilities over time and even more so if you used more complex circuits.
+3:26
+So what we are going to do for them for the rest of the course, and especially for the rest of this lecture,
+3:34
+is instead look at the Sweetin DeLay model, because it's close enough to give us a useful way to reason about what happens with this feedback.
+3:41
+So remember that with a switch and delay model,
+3:51
+what we have is that we sense the inputs in the gate and after a while we change the output and then recalculate again.
+3:54
+Given this new output, what what is the fact that it occurs in inputs and then after a while when we calculate the annual output.
+4:02
+So as you can see, we are basically adding time to an axis of time into the problem,
+4:11
+not just that the boolean values that we had originally from the equation.
+4:18
+So what we are going to do is to analyse this is a sign,
+4:23
+as we were ready doing assign names to each of the input and output wires on on each of the gates.
+4:28
+And then we are going to create a table,
+4:36
+a truth table that not only accounts for the values of the inputs and outputs, but also accounts for the time.
+4:38
+And the way we are going to do that is by setting two additional groups of columns.
+4:45
+One is going to be the truth table before we update the outputs and another is going to be which we are going to call now.
+4:50
+And the other set of columns is going to be what we are going to call next,
+4:58
+which is going to update the outputs and input values accordingly after this delay in the switch and the model.
+5:03
+So what we would do is exactly this in in for example, in the Landgate, in the tour circuit that we had,
+5:15
+we are going to have these transition tables for now with the A term and the R for the result where we are going to do all the combinations.
+5:21
+And then for each one of them, we are going to calculate what happens next.
+5:33
+So as we already saw, when a zero and zero A will stay the same,
+5:37
+but R is going to change to one on the on the next, let's say, cycle after the delay of the of the gate.
+5:43
+And the same will happen again. And we just kept doing this zero.
+5:50
+And one is going to keep a as a zero and then switch R to a one and so forth.
+5:56
+So that's what we call the transition table, which is basically the truth tables that we already know.
+6:04
+But with this additional dimension of time,
+6:09
+with the now and next set of columns and another way that we can use to represent the
+6:13
+same transition table is using transition diagrams that we have here on the right side.
+6:19
+So basically what we have is taking is a graphical depiction of this same table.
+6:26
+So we are going to take the state zero zero, which is this one over here.
+6:32
+And we see that what's going to happen next after the delay is that we are going to go to state zero one,
+6:37
+which is these are all over here, and then going to zero one.
+6:44
+Then if we look at the next state, zero one, we see that it goes to zero one again.
+6:49
+So it's these are over here that goes back to itself.
+6:55
+And this leads to a stable state.
+6:59
+Basically, if we start with zero zero or zero one, we are always, after some amount of time, end up being stably at zero one state.
+7:02
+And then we just keep on going with the rest of states.
+7:12
+We take the one zero, which would be the state over here.
+7:16
+We see that after the delay of the gate, we would go to the state one which is over here.
+7:20
+And once we are at one one, we would go to one zero, which is this arrow over here.
+7:26
+And then this will keep jumping back and forth between these two states.
+7:33
+So that's what we call by stable state.
+7:38
+And we can see it because there is this cycle over here in the transition, Deborah.
+7:43
+So what we can do now is make it a bit more complicated, and instead of looking at this simple circuit,
+7:50
+we can look at something a little bit more complex, which is these two nannygate.
+7:57
+So what we did here is connect them, as you can see here.
+8:02
+And we are remember, as I said previously, we are going to need every input and every output of every single gate in the circuit.
+8:06
+So we have A and B as inputs that will be established from the outside.
+8:15
+And then as part of the circuit, we will have the resulting state R or the resulting TERMA.
+8:22
+And we are also going to have these intermediate term here, which is s now write this down using boolean equations,
+8:31
+we will have that as is a and are all negative and that R is going to be S and B all negated.
+8:39
+So as you can see, this is four variables. And if we were to build the trust table, that would give us 16 states.
+8:49
+So what we're going to do now is build this table with that new time dimension that we talk about.
+8:56
+So the transition table in this case would look as follows.
+9:03
+Here we have the two input variables that which are, let's say, fixed from the outside.
+9:09
+They are not going to change across time transitions between now and next,
+9:13
+but us sanat are going to change given enough time with the switching delay model.
+9:18
+So as you can see, we just do as we said before, if A and B are zero and that's an hour and zero,
+9:26
+if all of them are zero, then the next stage would be zero zero one one.
+9:33
+If all the initial states and the now time point were zero zero zero one, then the next day would also be zero zero one one and so forth.
+9:38
+And what is highlighted here on the transition table is some interesting states
+9:49
+where you can see that the previous state is the same as the next state.
+9:54
+So basically, if we have this state on the system, on this circuit, you circuit, the state of the circuit is not going to change given any time.
+10:00
+And this is interesting because now we are going to be looking at the transition diagram.
+10:14
+So as before, we are going to take each one of the possible states, draw a circle for them,
+10:21
+and then for each transition between now and next, we are going to draw the arrows.
+10:25
+So as you can see, there's four groups of them which have no arrows between them, and also if you look very closely at these circles,
+10:31
+you will see that the first two bits, which is A and B, are the inputs that come from the outside of the circuit.
+10:41
+Let's say. And we have these four islands of states because there's no outros between them.
+10:50
+Now, if we here we have, as you see, some stable state, another stable state, another stable state over here, another here and another here.
+10:59
+And then here we have the bi stable state, similar to the one we saw before with the simpliciter good.
+11:10
+But now if we look at the pattern here, we can if we ignore this set of states over here now,
+11:17
+try to look more closely at what's going on on on this transition there.
+11:26
+I'm going to step stop just for a few seconds so you can post a video and think about what's happening and what it could mean.
+11:33
+OK, so let's let's try to tease out what what we can see here is that given one input in each of these islands,
+11:44
+in each of these groups of of states in the transition, they are given one input.
+11:55
+Eventually, over time, we are going to have one fixed output,
+12:02
+so no matter where we start on the state of the dirham is the Amber Zero Assigner will always end up being one.
+12:06
+And then if we look at the zero one four and B, eventually, after some time, Asnar will always be one zero.
+12:16
+And similarly, we can see here even we are one zero.
+12:24
+Eventually Asnar will stabilise, will become stable on the state zero one.
+12:29
+So. Basically, we have a way to put in some state.
+12:36
+And somehow keep a unique state that could be used to represent it and and even though we will look at it more closely in the next lecture,
+12:44
+this is the basic the core basic principle on building memory, using surrogates.
+12:57
+So as I was just saying, we have these three sets of states.
+13:04
+This one is less interesting for now for this discussion so we can ignore the one one input, but for these once we have these relationships.
+13:09
+So, as I was saying, these we are going to use it to build a memory or more specifically,
+13:19
+something that later on the next lecture we will learn is called Flip.
+13:25
+And in this case, this is a specific type of flipflop.
+13:31
+So this will reach the end of this lecture.
+13:35
+Now, we not only know how to solve our how to build the best circuits, given all the techniques that we learn,
+13:38
+but we now are also able to use feedback loops so that we can build circuits that change over time,
+13:46
+which is that the basic tenet of having memory in a digital using digital circuits to pass.
+13:53
+Now, if you're a curious here, you have a link that you can watch.
+14:02
+It's a it's a video about how CPU's are built and you will see some of the connexions to what we saw.
+14:06
+But it's the talks more specifically about the physical processes that are involved from the very beginning to the very end of building.
+14:16
+Would you might be interested in looking at also,
+14:29
+it has some very epic music that I'm not exactly sure if it's the right place to have it, but well, that's what the video is.
+14:33
+And with this where it's, as I said, the end of the lecture and I will see you on the next one by.
+14:42

@@ -1,0 +1,223 @@
+ID: db05e90d-04a3-4fcd-9311-ae2d0148ffa8
+Title: 6.7 Mergesort
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 21/02/2021
+So let's talk about merge thoughts and I'll give the I'll leave the code in the lecture notes and just explain it the idea.
+0:01
+So the idea is we divide the list roughly into two.
+0:12
+Not exactly, because obviously, if the list had an even length, then one half would have to add one more element than the other.
+0:16
+And then we sort each half separate day by recursion and then we merge the two halves together to get a single sorted list.
+0:25
+So in order to calculate the worst case performance emerged, thought we need to know how many comparisons must be done to merge the two halves.
+0:34
+So how do them. How is the merging done? The merging will be done by comparing the current least elements of the lists and outputting the smaller.
+0:42
+So let's see how that works on an example. Here is on the list.
+0:51
+That's two. Zero four.
+0:59
+That's right. So this we can divide this into half in half easily enough.
+1:08
+There we are. So there are two halves. And we can sort them recursively by just applying merge or.
+1:15
+To each side and then the other half will give us zero three four eight.
+1:26
+So I'm writing them down like that so it's easier to do. You see, you have to do the merge.
+1:35
+And so let's do the merge. So I'm going to copy that right out into a separate list.
+1:40
+And the first, the current liste elements are one and zero, respectively.
+1:46
+So obviously, the zero comes out first. And so let's remove that from the second list.
+1:51
+And now the one comes out next. So notice each time I do that, I'm doing one comparison.
+1:58
+So now the current earliest elements are two and three. So let's compare them.
+2:03
+And yes, the two comes out. And then the three comes out because three is less than five.
+2:08
+And then the four comes out. And now we've got we've got five compared with eight.
+2:15
+And so the five comes out and then six compared with eight, six comes out.
+2:22
+And then finally the eight. So each of those takes one comparison apart from the eight which came out for free.
+2:28
+So that was seven comparisons. Well, what?
+2:36
+Let's see a couple more examples just to see how many comparisons we might need to take.
+2:45
+It's new. Let's try example one first, so we've got the two three, five seven.
+2:54
+And the four six, nine eleven.
+3:04
+So first of all, the two comes out.
+3:08
+One comparison, then the three comes out. Then the four.
+3:12
+And then the five. Then the six and then the seven.
+3:19
+And now this first list is empty.
+3:26
+So we can see that the nine and the eleven, we don't need any comparisons because we can just transfer them for free.
+3:28
+So that gives us six comparisons. Now, the second example, two, four, six, eight three seven nine.
+3:34
+Well, we get two, three, four, five, six, seven.
+3:46
+So at that point we're down to one in each list.
+3:52
+So the eight still needs a comparison. And then the nine comes through for free, basically.
+3:56
+So in the previous one, we got two for free. But in this case, any one for free.
+4:02
+Those seven comparisons. So generalising from that.
+4:07
+We can see that adding an element to the merge list takes one comparison until one of the lists is exhausted.
+4:17
+And in the worst case, it's only the last element that's transferred for free.
+4:23
+So the sum of the lengths of the two lists is N.
+4:27
+So the worst cases N minus one comparisons. Only one element comes for free.
+4:32
+And we've seen how that worst case can arise. So now in a position to write down the recurrence relation from Børge thought.
+4:36
+So a list of lenth one is our base case.
+4:44
+And obviously, you know, comparisons are needed. I mean, we can just go ahead and give the out list is already sorted.
+4:49
+If the list is events and then we split it into the two halves.
+4:59
+So they could be exactly equal if any is even.
+5:03
+But if any is old, then we'll have ceding of an over two on the left and floor of an over two on the right.
+5:05
+So we calling the making the two recursive calls and the worst case is w of seething over and over two plus W a floor of an over two.
+5:13
+So that's the two halves being sorted recursively. And then we have to merge together the results.
+5:23
+And that takes in the worst case and minus one comparisons. So that gives us the recurrence relation for the worst case analysis.
+5:31
+Well, we can now see that merged thought does actually perform well, substantially better than insertion sort.
+5:41
+So let's compare are lower bound of sealing of log of N factorial with w n forewords sort.
+5:47
+And I've tabulated that here from N equals one to twelve. And Merge thought.
+5:56
+Well it is actually optimal not just for two and three but also for four.
+6:01
+Okay, it's slipping a bit as we get above four.
+6:07
+But even when we get up to ten and twelve, you can see that the values remain pretty close together.
+6:11
+So. Well, that's suggestive that maybe merge thoughts rate of growth is much the same as our lower bound.
+6:18
+But that, of course, does not answer the question in general.
+6:27
+It could be that this is a bit misleading and it has a and gets up too much larger values than actually merged thought.
+6:31
+Worst case performance turns out to be of a higher order of growth than our lower bound.
+6:38
+So what we need to do now is to actually solve our recurrence relation to see what its the order is of its rate of growth.
+6:45
+So here's our recurrence relation. Let's make our life bit easier by assuming that N is a power of two, so N equals two to the K.
+6:55
+Since we are just basically looking to solve this to find the rate of growth, then that's okay to do this.
+7:03
+So now we've got our simplified recurrence relation w rainier's N minus one plus two times W of N over to.
+7:11
+And then we can solve that by repeated expansion. So let's have a go at that.
+7:22
+We've got W and is equal to and minus one, plus two W in over two, so repeated expansion and minus one, plus two.
+7:36
+Then inside here we can expand it. And if two minus one plus two W of an over.
+7:50
+Well I could write four here but I'm going to write two squared because I'm trying to find a pattern here.
+7:59
+So let's expand again. Minus one, two.
+8:04
+And over to minus one loss to expand again inside here.
+8:10
+So that will be end of it. Two squared, minus one plus two double here.
+8:16
+And the two cubed. OK.
+8:22
+And now I'm going to I'm looking for a pattern now, so let's try and gather up the terms and see what we've got.
+8:28
+Well, here's an end. Here's another end and there is another end.
+8:35
+So I'm getting three n okay. And then as a minus one here, there's a minus two there.
+8:39
+So I'm going to. Gather that up as well.
+8:46
+And then as a minus two squared here. And then finally, I've got to cubed double year and over two cubed.
+8:50
+Like that. Well, I might expand a bit further if I'm not sure what the passion is, but I think I'm beginning to see what the passion is here.
+9:04
+I can see these threes. And so I'm going to make a guess now.
+9:12
+So dot, dot, dot equals I'll go all the way to K, K and minus.
+9:16
+So this I think will be one plus two plus two squared plus all the way up to two to the K minus one.
+9:23
+And then this will be two to the K. W.
+9:32
+And two K. Right.
+9:36
+So now that is equal to K and minus.
+9:42
+Well, this expression here is just two to the K minus one, because that's just the sum of a geometric progression.
+9:46
+And this will be two to the K times because N is equal to due to the K.
+9:56
+This will be just times W of one. OK, um, and, um.
+10:02
+Well, but w one is just zero. So this gives me actually K and minus and plus one, which is what is written on the slide.
+10:10
+So and, well, Kay is just log in.
+10:29
+And so we get n log N. So the order this is order and log n log línea rate of growth.
+10:33
+Well, but how does this expression that we've just calculated compare with our lower bound seating of Log of N factorial.
+10:41
+They look a bit different. So let's see what we can do.
+10:50
+Well, log of in fact, or I'll just buy properties and logs is just the sum of the logs from log one not to log in.
+10:55
+And if we draw a graph, then we can see that this expression is just the area under the green step.
+11:03
+Curve. Step line here. And we can approximate that by saying it's roughly the same as the area under the continuous curve for log in X.
+11:13
+This red area here, because you can see, OK, they differ quite a lot.
+11:25
+To start with. But as this log curve flattens out then and a log of X gets larger then proportionately.
+11:30
+The difference being the area under the red line and under the green line gets very small.
+11:39
+So that's slightly handwaving, but that we can be that precise by actually sandwiching the results, by taking a step function below the line as well.
+11:45
+And therefore actually make this more precise. But let's assume that they are roughly the same area as is reasonable from looking at the diagram.
+11:54
+So in order to calculate this expression here, the green under the green line, then we can simply find the area under the red curve.
+12:06
+We know how to do that. That's just an integration. So and well, integrating log at the base, too, might be a little bit awkward.
+12:14
+So let's change by a constant factor to natural logs. And we know how to integrate our land of X.
+12:23
+It's just integration by parts.
+12:30
+And the answer comes out to be N natural log of N minus N plus one, which is strikingly similar to our worst case W of N that we've just computed.
+12:33
+And remembering that the log in the natural log just differ by this constant factor.
+12:47
+Then we can see that our worst case performance emerged thought.
+12:52
+And the lower bound are of the same order.
+12:57
+And the conclusion from that is that Merge thought is indeed an optimal sorting algorithm.
+13:01
+In the worst case.
+13:06

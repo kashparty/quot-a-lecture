@@ -1,0 +1,1293 @@
+ID: 457ce06b-bbb5-4512-a535-adb70114bab5
+Title: DoC - Welcome to the First Year
+Category: COMP 1st Year General
+Lecturer: Konstantinos Gkoutzis
+Date: 04/10/2021
+OK, so welcome everyone to the first here.
+0:01
+Now, this is a strange start to the year a the hybrid, as we call it, but it's going to get better, they say.
+0:04
+So fingers crossed. You may have received the video with a few faces welcoming you to the department.
+0:12
+One of them is Michael Fouth, who is the director, the head of the department.
+0:21
+And you should have already seen this video.
+0:26
+You have received it. Let me know and I can send it to you now.
+0:30
+Together, we have Tony here who has a message.
+0:35
+So, Tony, I just need introductions to you. Thank you, Konstantin's I need to share my screen, that's going to be OK.
+0:40
+Yes, of course. Please go ahead. Bear with me one moment.
+0:50
+OK, so so first thing to say who I am, I'm Tony Stewart on the director of undergraduate studies in the department.
+0:52
+So so I'm the person who I'm working with.
+0:59
+The many colleagues, some of whom you're going to meet today,
+1:04
+are responsible for the curriculum that we're teaching you and who teaches it and how they teach it.
+1:07
+And we're very keen on monitoring how well people teach and how well received they are by students like yourself.
+1:13
+So throughout that time and know, we're going to be asking you for feedback and be very, very helpful if you could provide that,
+1:21
+because feedback from past students has helped to form the curriculum and form the course that we have that you can enjoy today.
+1:27
+So without that feedback, we never we never make any progress.
+1:35
+So please see yourself selves as part of the community, which is helping to develop the course,
+1:37
+develop the materials and make things better for future future students.
+1:47
+So I'm not going to say a huge amount to just have a couple of things or words of wisdom
+1:51
+that might help you to get started and think about life as a university student.
+1:57
+And the reason I'm not going to spend too long talking to you,
+2:02
+because I will be teaching you for four hours a week for the next five or six weeks starting tomorrow.
+2:04
+So you'll be sick of the sight of me in a few weeks time, no doubt.
+2:10
+So tomorrow we're starting our little induction introduction to Functional Programming High School, which I think Constantinidis tomorrow afternoon.
+2:14
+At some point I'm Konstantin's will give you all the details when he comes back in just a moment.
+2:22
+So I will see you tomorrow and you'll have me, as I say, for the next four or five weeks.
+2:31
+So I just thought before I pass back to Constantinos, that would be useful to give you a few pieces of advice,
+2:38
+some useful facts and advice, something that's nothing to do with the curriculum.
+2:45
+It's nothing to do with school.
+2:49
+Congratulations. Just some just some useful facts and advice about how to be a successful student.
+2:53
+And I'd be happy to guess.
+3:00
+So you're all fantastically bright people, and I'm sure that most of you are used to being at or near the top of class, your class at school.
+3:03
+Well, the first thing you have to understand is that only one student can be top of the class.
+3:16
+So what you will do is you'll find yourself surrounded by people who are just as well, as opposed to being equally equally talented as you.
+3:21
+Only one of them, unfortunately, could be top of the class, but you're surrounded by really bright, super motivated people.
+3:31
+And so in the first place, I give the gift to you is don't think of this as a competition because unfortunately,
+3:38
+only one of you is going to win the competition. Think of it as an opportunity to cooperate with your classmates and learn from them.
+3:44
+It doesn't matter how much brighter you think the person sitting next to you is,
+3:55
+the chances are they're probably not bright or they just might be better at some things than you.
+3:59
+And when they look at you, they'll realise that you're better at some things than them.
+4:03
+So it's a wonderful opportunity for you to get together as a class, as a cohort and to bounce ideas off each other.
+4:08
+What we want to see you doing is learning, you know, almost amongst yourselves as much as you're learning, but being taught.
+4:16
+We want to see you arguing in the corridors. That's the fun part of being part of a cohort and learning together.
+4:23
+So it's an opportunity, not a competition. As soon as you think of these things as competitions, you start comparing yourselves with others.
+4:30
+It's very easy to get stressed out and there's no need for that like it's an opportunity.
+4:39
+Now, the next thing, a little piece of advice is about Marks. Now, you're you're probably used to getting marks.
+4:46
+I don't know what you can I I guess your students pretty much across the board.
+4:52
+So here's a piece. The next piece of wisdom, the first thing you understand about universities.
+4:58
+We have very high standards. Imperial College, as you know, is one of the world's leading academic institutions.
+5:02
+We have very high standards. Sixty percent is a good mark.
+5:08
+All right. So you're all used to getting, I guess, 80s and 90s, I don't know,
+5:13
+some of you may be not satisfied until you get close to one hundred sixty percent is a perfectly good mark.
+5:18
+It means you're doing just fine. Yeah. And here's another piece of wisdom in relation to marks.
+5:24
+Just the way I want you to perceive marks, if you're lucky enough to get a 70 set, it means you've earned what we think is a first class mark.
+5:30
+That's an indication that you are possibly or whatever it is you're studying, you know,
+5:38
+you classify yourself, we classify you as a first class student in that topic or in that exercise.
+5:44
+Right. So you earn a first class. It doesn't mean you've lost 30 percent.
+5:49
+Right. I mean, it's actually not very helpful, it's not particularly productive to come bouncing back,
+5:55
+clutching your piece of art coursework, saying, how come I lost 30 percent?
+6:00
+It simply means that when we assessed the course would be the exam. Whatever we're doing, we think you're good enough to get a first class.
+6:05
+And I guess what that materially means in this particular example is the you know,
+6:13
+if we look to how we as presumably the experts who are teaching, we could find an extra 30 master, which you didn't.
+6:16
+That's fine. Doesn't mean to say you've done badly, just lost 30 miles.
+6:24
+It means you've gained 70. So think of it positively all.
+6:28
+What's next? Right. So this is a phrase that people often use, busy people are happy people.
+6:34
+It is true and we are going to keep you busy. We certainly keep ourselves busy keeping you busy.
+6:39
+But it's immensely enjoyable and very satisfying when you're just busy and you're doing things which you find fun and productive.
+6:47
+And I hope that what we get you to do in your time period is interesting and challenging and fun and productive.
+6:53
+Counter to that, overworked people are not typically very happy people,
+7:02
+and my guess thing I'd like to sort of warn you about is what I think some students treat
+7:08
+marks and assessment and performance so seriously that they tend to overwork themselves.
+7:18
+It's very easy for them to overwork insults, trying to strive for absolute excellence.
+7:23
+And students who who do that are often the ones that are the most stressed and find it most difficult to cope with.
+7:29
+A good example in just a minute. So here's the tip, my first next tip, I guess, is don't chase down every single mark, OK?
+7:35
+That's 100 percent to be had in every assessment you'll ever do.
+7:47
+And if you think you can chase down those one hundred percent, you're just going to look very miserable for yourself.
+7:51
+So just step back, try the first thing I think you need to learn to do as a university student is to manage
+7:59
+your time and time spent trying to gain every single market is not time well spent.
+8:06
+What you should be doing is finding those parts of the subject that you really love and spending time and effort on.
+8:13
+Those are not worrying about every single market everywhere else because you simply
+8:21
+can't do it and you're just going to burn yourself out if you worry about every
+8:25
+single last month long enough to tell you a little story about a student who I consider
+8:29
+to be one of the very best students I've had the privilege of ever supervising.
+8:35
+He was an undergraduate student. He was my Chitti. He was my project student.
+8:41
+He was my great project student is now doing a deal with one of my colleagues and I work with him regularly.
+8:45
+But I was talking to him just not so long ago. He started out in his first year, was a very bright student.
+8:51
+He was extremely good programme. He did very well in his first year, but his second year in the city wasn't done quite so well academically,
+8:57
+his excitement about where that great they that were good,
+9:07
+but they weren't anywhere near as good as they were his first year and his course where Marks was starting to slip.
+9:10
+And in the third year, he went down again. So I said to him, I said, is it are you are you OK?
+9:16
+Know, should I be worried that, you know, you seem to be sort of losing motivation?
+9:23
+He said, oh, no, no, no, no. He said, I've realised what I really love about the subject.
+9:28
+And he said I decided to focus my time on that.
+9:33
+And if I get a 60 percent and of course, if I get to fifty three and an exam,
+9:38
+I'm not going to worry about it because I know overall I'll be just fine. All right.
+9:43
+I noticed by looking up in preparation for this, I was just looking at his individual.
+9:48
+I met just a 38. This is a this is a genuinely very bright first class student.
+9:52
+Came in with pride. Think top of his class when he was at school and he got a 38 in his fourth year.
+9:57
+Are you worried about this? No. No, I wasn't really interested in.
+10:04
+What I was interested in was I won't to give it away was subject X come his fourth year.
+10:09
+As I said, there was a sprinkling of not such great marks that there were some very good marks because
+10:17
+those very good marks were the most aligned with his his core interest in the subject.
+10:22
+What did he do in his individual project, which is the thing that carries the most weight in everything he did.
+10:28
+He got 95 percent right. He won one of the most prestigious project prises, the work that he did for his project that I was a co supervisor.
+10:35
+He got that published in one of the world's top international conferences on the subject.
+10:46
+And he sailed out with a first class degree by a considerable margin, and at no point did he stress himself,
+10:52
+despite the fact he could have done that, he could have got close to 100 percent, I guess, in all the stuff.
+11:01
+He just decided to prioritise his time and his efforts on the thing he loved the most.
+11:05
+So my advice to you, I guess, is fall in love with the subject, fall in love with something or some aspect the subject.
+11:10
+And don't worry so much about chasing down every single market with liberals.
+11:18
+And if you do that, well, success will follow.
+11:23
+And most importantly, happiness will follow because you'll be focussing most of your time on the things, the thing or the things you most enjoy.
+11:26
+Right. My final piece of advice is kind of relates to that is it's very easy to get too busy to get overworked.
+11:36
+And here's my take. This is that this is what I do myself. And I'll tell you, if I don't do this, it doesn't happen.
+11:45
+Book time off. When I was an undergraduate student, there were two days a week or two evenings away.
+11:50
+It doesn't matter what I do, it doesn't matter how busy. I don't know how much coursework I've got.
+11:56
+That's my time off. And that kind of enabled me to cope with the stresses of being a student.
+12:01
+I had a very happy time as an undergraduate student myself. It was a very long time ago, of course, but nothing's changed in terms of time.
+12:08
+Management took time off.
+12:14
+Don't wait for it to happen, and I still exercise this today, and if I if I feel it, I'm talking to friends and I say let's let's do something.
+12:17
+And it's very easy to talk about doing something. Isn't it like going to a concert, of going to a gallery or taking a walk in the park?
+12:27
+If you said, well, let's just see how it goes, it never happens. So my advice is to book tour in the first year.
+12:34
+You should fund your weekends of yours and the second year and you'll find that you MIFA
+12:39
+because you're managing your own time more in the second year than you are on the first year.
+12:47
+It's going to be more difficult to to manage your time.
+12:50
+So try to do things like book the weekends off or book a day off or book something or book an evening off,
+12:54
+because as soon as it's in your diary, it's going to happen. Whereas if you wait, I'll see tomorrow.
+13:00
+I'll see how busy I am to work for free. I'll come to the public. You're never going to go to the pub with your friends,
+13:04
+so book it off so there will be people talking to you in the next few days and weeks and
+13:10
+probably months about time management and prioritising your activities and being happy.
+13:16
+And actually my boss is being happy. And with the odd 40, 50, 60 percent know that you're probably not used to from school,
+13:24
+because in the grand scheme of things, it ain't going to make a lot of difference. Constantinos, I think I'm done.
+13:33
+So I have to guess if there are any questions on that.
+13:40
+I mean, absolutely feel free to check in, but I don't know how you want to run the rest of the session,
+13:44
+but they want to leave to leave it to you at the end. Yes.
+13:49
+Yes. That's Gary. So you stop sharing.
+13:53
+Allow you to take over. That was a great Tony, thanks very much.
+13:58
+Very practical and useful advice. So, as Tony said, you have a session with him tomorrow, Tuesday at two o'clock.
+14:01
+It's your first session, Introduction to High, which is the first programming language of the computer practicum module.
+14:11
+And the links should be on SALEKHARD. So you can find the link there, please.
+14:18
+Not just because we're on a subject Selcuk is not working through.
+14:22
+Chrome today, hopefully will be fixed by tomorrow. But please use Firefox for a different browser and it should work just fine and brief introduction.
+14:27
+Before we move on to that, we have a computing interest scholarship for 2021.
+14:38
+Here are the 12 names who wants to get the scholarship for this year?
+14:45
+A brief virtual round of applause to these 12 students.
+14:50
+And please note, you will be receiving a message from us with further information about this class.
+14:55
+Now, a different deduction due to me, the first year coordinator.
+15:03
+My name is Constantinos for this year. I'm responsible for your Stobie.
+15:07
+So if you have any questions at all about anything related to the first year, please message me, email me whatever you want.
+15:13
+I'm always available for more or less.
+15:23
+We have our own session this week on Thursday at four o'clock and spend an hour describing what the first year really is.
+15:25
+So please don't miss that. It's quite important, I would say.
+15:32
+And in the meantime, what I have to suggest is make sure that you have completed the online registration.
+15:36
+So you should have received an email about this until you complete this.
+15:42
+You're not officially a student here, so you need this now to access all our services correctly.
+15:46
+Join me for the session on Thursday. Take your student email account.
+15:54
+So this is on the Microsoft Outlook system.
+16:00
+You can access things online, web browser or via programme if you have one.
+16:04
+And you can also access Edstrom, which is a forum that we use specifically for module questions.
+16:09
+Most of the questions you may have at this point are probably already answered on our website.
+16:16
+This is the one class computing, but feel free to ask anyway, so don't be afraid to ask.
+16:22
+It's fine. And that's my email. So it's KDKA. And then you are seeing CDK at the end or you can find me on microfilms.
+16:27
+So on screen still teams, you login with your Imperial College account and then you have access to all the teams there but modules
+16:36
+and you have access to everyone at imperially you just start typing my name and I will show up.
+16:45
+Now, before we move on, let me introduce the Jamesy director, Michael Heartwell, who is on the other side of the session live from Imperial.
+16:52
+Mark, you might say a few words to me in the Bible.
+17:03
+Yes, you will see students, we've got a proposition for about three students, a critical to travel to all starting to stream.
+17:06
+Information is available in selkowitz of the students who are here with me in room one four five will just carefully will be in here as well.
+17:14
+So we'll welcome I'll talk to you probably in a few minutes in our own. Thank you, Mark.
+17:22
+So you may have noticed that the Demsey students, well, they are less in size, so they could fit in a room.
+17:30
+But when it comes to the entire cohort computing and JAMESY combined, it's more than two hundred and thirty of you.
+17:37
+So right now, with the current limitations, we can't fit you all in a single room.
+17:44
+Hence why we are doing this in a hybrid mode. Hopefully eventually these limitations will be lifted and we'll be able to put everyone
+17:50
+in a single room and we can say hello face to face some further introductions.
+17:58
+Maybe you've heard these names, maybe not. But don't worry, you see them many times going forward.
+18:05
+If you have any questions about anything administrative, you can contact Hanah.
+18:10
+So Hanasaki, she's our student administration officer and you can email her at this email address here,
+18:15
+maybe have already received an email from Hahndorf. So please ask your questions about your enrolment.
+18:22
+Anything that has to do with joining MPL more or less.
+18:30
+Usually you can find here at the Huxley Building 370 like a reception desk kind of set up.
+18:34
+But right now we're on email on me until, you know, the limitations are lifted.
+18:42
+We also have our own librarian just for computing. So, Miss Sandbrook, so she has a session with you this Friday.
+18:49
+What next? Next week, actually, next Friday at ten o'clock in the morning.
+18:56
+And she will be introducing you to the library, how you can access it remotely and physically.
+19:01
+The library is open. You just need to book a session there.
+19:07
+And you can also access most of the material online in a digital format.
+19:11
+So don't miss a session. We also have our own support group.
+19:16
+So C is D is like our own ICP kind of thing.
+19:22
+The college also has a nice city department, but the computer has their own as well because they're computing.
+19:27
+So and you can email and he has a dog that's helping people ask you about anything computer related,
+19:35
+like some system breaking down or something like that.
+19:43
+They have physical presence in the Huxley building.
+19:47
+If you are around, there's usually someone there in three or five to greet you, but you can also email them so you don't have to go there.
+19:50
+The college also has a nice city bait where you can submit a ticket, but it's better to start from CSG and then moved away to a city if needed.
+19:58
+Now we have a courier service. So if you're thinking of applying to internships for the summer, for example,
+20:09
+you can start building your SUV right now so you can make an appointment with our car service and they can
+20:16
+describe how this process goes and how to improve your CV if you have one or how to create one from scratch.
+20:24
+So don't miss out on this opportunity. They have multiple appointments throughout the year.
+20:30
+You just need to go to this website and book one. We also have the deputy senior tutor who is also the disability officer for the department.
+20:34
+So Thomas Lancaster, that's his email and he can get you in contact with the Colditz D.a.'s Disability Advisory Service.
+20:45
+This is the link here. And the goal is for you to identify any disabilities that you may have, whether you know it or not, early on.
+20:56
+So if you know this or if you find out now, then you can let us know and we can attach to your study experience accordingly.
+21:06
+If you if you don't bother to check or if you think you fine.
+21:15
+Well, yes, you could do that, but maybe it won't help you with your studies.
+21:21
+So I suggest if you think that you could benefit from someone Testament's in your studies,
+21:26
+reach out to Thomas either by using this email or by going directly to the college level disability service on this website.
+21:32
+We also have a well-being advisor. So counting dollars.
+21:42
+That's your email here. She has a session with you today at four fifteen and the link will be available is already available on Selcuk.
+21:46
+So don't miss out on this because during this session you will find out what the
+21:56
+well-being of our students is all about and what you can get from Caroline.
+22:02
+So she offers one to one meetings to talk about wealth, not your studies, but your feelings about your studies.
+22:07
+So Carolyn, even though she works for DOCS, is not officially like a lecturer here.
+22:14
+So you can tell her anything without worrying about your marks or anything.
+22:19
+So consider meeting with Carolyn if you have any worries or stress or anxiety or anything about your studies or student experience in general.
+22:24
+And Carolyn will be happy to meet with you and discuss further. We also have a senior tutor currently for and he's covering for this year.
+22:32
+We have a Maria. So for now, for us is available.
+22:43
+That's the email address you can reach. And if you're worried about writing this down, don't worry.
+22:47
+I will share the PowerPoint with you at the end of this session. And Stephane's will join Caroline today at four fifteen.
+22:53
+The role of CNN tutors quite important. So please don't miss out on watching this presentation later today.
+23:02
+It's like you can ask them questions and you can find out what this tutor can do for you, which is a lot of things.
+23:08
+Now, we also have student reps. So some of you have volunteered bravely to represent everyone else.
+23:17
+The entire Department of Computing is represented by Godwyn, who is the academic rep, and Argin,
+23:26
+who is the wellbeing rep specifically for the well-being aspect and the Demsey students.
+23:34
+They have Nesse, who is the academic rep, but the well-being rep is currently open.
+23:40
+So if you are interested, do apply and eventually they will be your rep elections.
+23:45
+So you will be asked to participate in an election and they will vote to elect you as the year rep for year one, two, three, four.
+23:50
+Yes. And there's also Doxa Darksmoke, is the society specifically for the palm of computing students, even though there is one for the entire college?
+24:01
+We have specifically one for the department and the president, Sebastian, and the vice president's car.
+24:13
+So these are the information here. And you have the website, the Twitter and Facebook.
+24:19
+You may have heard from them already. They are very active on this court and I think there is some WhatsApp group, but they know this best.
+24:23
+So I would leave this to them to reach out to you. Now, this is the Q&A part, as I said, this this wouldn't take long, it's only 30 minutes.
+24:32
+We still have about 30 minutes of Q&A. And I hope that you have many questions to ask.
+24:42
+After this session. They will be at Zaim C session.
+24:48
+It's supposed to start at three twenty, but it could start sooner if we finish earlier.
+24:53
+So don't worry about that. The link is on that for Team C students, everybody else and Jameses as well.
+24:57
+We have it in the next session at four 15, which is the welfare and support with Carol and us.
+25:05
+And then at five after five you will meet with your personal tutor.
+25:11
+Now on to tutor is one academic staff member who has been assigned to talk to you.
+25:15
+We'll talk with you for the rest of your studies with us.
+25:23
+Three or four years.
+25:26
+So they have probably already reached out to you to ask you to meet with them online, probably with themes or resume or some other application.
+25:27
+If they haven't done so, you can email them and ask them about this,
+25:37
+but you'll be meeting with them definitely either today or during this week just to say hello and see who they are.
+25:42
+And basically the role is to help you if you don't know who to talk to or to have any concerns and then they can, which is the right person.
+25:49
+If you have any more specific queries, then they will know where to send you to.
+26:01
+So at this point, I would like to stop the presentation and just ask you four questions.
+26:09
+You can either take them in the chat or you can just on you to raise your hand, then mute and we can proceed with this.
+26:15
+The first question I received a direct message is how can we come to campus for any lectures?
+26:31
+So there is a system called office space and that will allow you to go to a lab room and connect your laptop there or use a computer there,
+26:40
+physical computer so you can book a space using office space for one of the lab rooms to work from the college.
+26:53
+If you want to attend a lecture on campus for the first year cohort,
+27:02
+there aren't any lectures to be attended on campus because we don't have a room to fit you off.
+27:07
+So it wouldn't be fair at this point to say, well, first come, first serve.
+27:13
+But eventually we hope that we will have some lectures being offered online and
+27:18
+then that will find a way to get everyone or at least most of you on campus,
+27:24
+either by taking turns based on your username or something.
+27:32
+So we'll figure out a way as soon as we have lectures taking place on campus.
+27:37
+We hope that this will start in the autumn term. So next week, just take your emails for more information.
+27:42
+Um, there was a question about the recession this morning, the careers teams meeting.
+27:51
+So the teams link was broken and no one could enter.
+27:58
+So the careers team said they would just send you a recording and you can ask them many questions via email.
+28:02
+So apologies for that. That was the careers theme. The they had an issue with the teams this morning.
+28:09
+Um, so the DMC students ask on blackboard, my upcoming courses are not showing, only the maths courses are showing my mark.
+28:17
+Anything about this coming up later on in the seems to be I think that is blackboards as only maths courses.
+28:29
+And that's true. So computing and jamesy students use Kate, which is our own valy blackboard, is only used by Demsey students.
+28:37
+And there is an exception for computing. We use it for a single exercise.
+28:49
+But this question can be answered later on the Jamesy sex session afterwards.
+28:54
+So what? What. Why can't I access the dark cloud?
+29:01
+You will need to wait to receive permission from CSC usually for a project so you
+29:08
+can get permission to do so by email and the doc help address as long as you have,
+29:14
+um, like a school college related project to carry out.
+29:21
+If it's your own personal project, then they will ask you to take it elsewhere.
+29:26
+Like for example, um,
+29:31
+adjure you have free credits on Microsoft as you're using the imperial account and you can use those free credits to run your personal projects,
+29:34
+or you can keep them for your individual project in year three or four and use
+29:43
+a different service depending on the project Google column for learning stuff.
+29:49
+There are a few online service you can use for free, um, and then doesn't show any modules.
+29:56
+Please email me if you have any questions about people not connecting to staff.
+30:05
+So if you can't access heds then or you can't access Selcuk,
+30:10
+just email me directly and I can get that fixed for you somehow by contacting the right people.
+30:14
+Uh, where can we find records, lectures like this one?
+30:21
+So everything will be on the service called Panopto. And if it's a general session like this one, it will be under the year.
+30:24
+One general thing, if it's a more specific one and it will be in the same folder of that specific module.
+30:32
+But anything like this, it's just tell you one.
+30:40
+Will someone share with us how to use tools at the gate so there are some guides and the dogs will also be sharing with you?
+30:45
+Three questions this week about how to use the Linux system and get tools and similar systems like that.
+30:55
+Gate has its own PDF guide, which was emailed to you.
+31:04
+So it should be in your introductory material. If you haven't received this, please email me and I can get this to you.
+31:09
+Will everything be recorded? We try to record everything. Yes.
+31:17
+And upload it on Panopto so everything should be recorded.
+31:21
+If something is missed. If we forget to press the record button, for example, please remind us and we will get that fixed on.
+31:26
+Silcott I saw that sometimes there are in-person classes immediately after online ones.
+31:36
+So right now it depends on the lecture.
+31:43
+Some lecturers may be able to offer a physical session which will also be transmitted live in a hybrid manner, which we are yet to decide how.
+31:47
+We're going to invite you for that session. So take your emails for more information on that.
+31:58
+Until then, there's no specific answer to this.
+32:05
+Some of the lapsation say see on line one, but also give room numbers, so online one means your team's channel.
+32:11
+So the team's town hall has been created for you.
+32:22
+It's a team of teams and you can find the session there.
+32:25
+Other lecturers are using what is also so accessible with your user I.D. You have single sign on using your computer IP.
+32:30
+You just download Zoom like you did today and you can sign in with your imperial information and that will get you connected looking like a surname,
+32:40
+comma, name format, like I am on this meeting today.
+32:52
+The ones that also have a real lab room next to them means that office space can be used to book and a physical space in a lab to work.
+32:59
+During that session, we may be able to provide some lab helpers to help you on site,
+33:10
+but this is to do to be set up because we work with what we have right now.
+33:19
+The rules keep changing, but hopefully we will be able to offer you some life to support on site.
+33:26
+Yes, with sessions are going to be given on campus detention,
+33:37
+so this is on the cell that if you see something saying that it's going to be on campus, you have a room number next to it.
+33:43
+But we are going to decide how we're going to invite you to attend these sessions.
+33:52
+So if you can access it probably means that you're using chrome or that you're not added to the right course.
+34:01
+So if you use Firefox and it still doesn't work for you, email me and I will fix it for you.
+34:10
+Computing students have diagnostic test on Thursday.
+34:18
+Don't call it exam, it sounds, but it just says diagnostic test just to get the conversation started with your tutor, maths tutor, week three.
+34:23
+So there are some specific kinds of personalised group sessions that are going to take place starting next week,
+34:36
+tuning in Thursday for my session and I will explain what they are.
+34:46
+One of them is the maths tutorial. And that diagnostic test is going to be checked by your maths tutor test to highlight
+34:50
+any maths that you may need to revise in order to be prepared for what's to come.
+34:58
+Is there a competitive programming club? Yes, we have a special module just for that, you can sign up for it using the internal registration system.
+35:06
+I'm going to post a link to this on Thursday during my session.
+35:17
+And you can subscribe and you will be attending.
+35:22
+There are 10 sessions a year and then you have competitions like the upcoming U.K. IPC one.
+35:26
+So it starts this month and tune in on Thursday for more information on that.
+35:34
+Someone said explain what Kate is. Kate is like Blackboard. What is blackboard blackberries like?
+35:42
+Do not. I'm just kidding. So it's like virtual learning environment and their goal is for you to find your coursework assignments there,
+35:47
+download the specification and upload your answers when you have them, ideally before the deadline.
+35:58
+So that's what Kate does.
+36:05
+We have a different system called science here, and that's where you find everything else, like material resources, paedophiles, video links.
+36:06
+So everything that you need to read to prepare for completing your coursework is on science.
+36:15
+The actual course work is on Kate. That's our Blackpool's for computing.
+36:22
+At least you mentioned that we had to be registered for that course.
+36:27
+How do I do that? So you should have received an email from the registry asking you to complete an online station.
+36:33
+This is basically linked to your Sidhe so your kids will only be enabled and connected to this course after you complete that online registration.
+36:40
+So please do that as soon as possible.
+36:51
+If you haven't received an email from registry, please let Hannah know or email me and I'll point you to Hannah.
+36:54
+I haven't received any of my personal tutor. How do I find out who they are?
+37:02
+If you haven't received that, please email me and I can tell you who the shooter is.
+37:07
+Just on that Constantinos Leptis brain. As we've been talking,
+37:14
+there seems to be a problem with the department mailing lists which are showing
+37:19
+the current first year on the mailing lists for each and each academic.
+37:24
+However, when you send an email to them, it goes to the second year.
+37:29
+I'm just chasing this up and I will mail academics now telling them to email all students individually.
+37:32
+But what constant changes is just said is true. If you haven't heard from your tutor in the next half an hour or so, then please contact.
+37:38
+Yes, thank you. Yes, indeed. There is an issue with the mailing list that groups you up as a whole and we use them to reach everyone at the same time.
+37:46
+But the tutors can also read you individually.
+37:57
+So if you haven't heard from your tutor and you don't know who they are, just email me and I can tell you who the.
+38:00
+Um, I talked about the science. So science is where you find the material.
+38:08
+Um, when do assessments happen? That's a very long subject and I will address this on a Thursday.
+38:13
+Basically, we have tests and exams, tests take place during the academic year and exams take place for you at the beginning of the summer term,
+38:21
+which is the end of April, the beginning of May. So those are the two main types of assessments.
+38:32
+And test is like a coursework. So that's why it takes place during the term.
+38:40
+What else? Is there is there a list of servers, I assume you mean to connect by cell?
+38:46
+Yes, you can find the list and the C is the website is cell one, two, three, four, five, et cetera.
+38:57
+So if you want the full list of other servers as well,
+39:04
+just email the help and they can provide you with this list depending on what you need to to do.
+39:10
+Of course. Um, can we access recordings of previous years, I assume you mean.
+39:16
+So the goal is for students to access the recordings of their own academic year, not previous ones, because things change in computing rapidly.
+39:28
+So it's best if you just stay up to date with the latest recordings.
+39:38
+That's why you have access to these recordings this year and until you graduate for three or four years.
+39:43
+But you shouldn't be able to access the recordings of the previous cohorts because,
+39:51
+well, that's out of date or you don't need to know everything at once.
+39:56
+You will be overwhelmed. It's best if you get them one by one.
+40:05
+Am I supposed to see previous years questions and notes on Piazza Piazza is the system we used before
+40:11
+it's them now we use them so we shouldn't be seeing anything on Katsuragi because as of this year,
+40:17
+we move to the eastern platform. You should be seeing some models on.
+40:24
+These are best to go in person for lab sessions. It works either way just fine.
+40:30
+Last year we did everything online and it was great.
+40:35
+You could set your screen, have a microphone and it was fast and to the point you can go on site as well.
+40:38
+Hopefully some helpers will be available to join you.
+40:46
+We have some limitations with masks and you know, that's in keyboards and mice that we have to work around.
+40:50
+So right now, the best solution is to go remotely.
+40:58
+So the first lab session tomorrow will be Remould, maybe on Friday will be able to get some lab helpers on site, but no guarantees at this point.
+41:02
+We'll see where it takes us. Uh.
+41:11
+So another question about Kate. Kate, you to have received a guide by email about this, salekhard is just the timetabling platform.
+41:17
+Just scroll through it and you will find all the events Linux and give you'll get some introductory introduction sections from Docs this week.
+41:26
+And if you have any more questions, please do ask. Laptops is an environment that we have implemented internally.
+41:38
+And Doc, you just use this to submit your work for programming exercises specifically, and you also test your work there to see if it works.
+41:45
+And we'll talk about this on Thursday during my session there.
+41:56
+So don't need to worry about it right now. How do we take this online, so there's a system called answer book.
+42:00
+There is a short introductory video on answer book on Panopto.
+42:10
+I will email this to you if you a computing student, because you need to use this on Thursday to take that diagnostic test.
+42:15
+It's just a website with some boxes for typing in your answer or uploading a screenshot or a the image of something written.
+42:23
+So it's pretty straightforward. But yet there is a video on Panopto Aveling to.
+42:35
+When we'll be informed where we can go to campus again, that's a good thing.
+42:42
+If Silcott has a room number, it means that we will try to give you access to that room in some way.
+42:47
+So we'll try to be fair about it and divide it up somehow.
+42:54
+How are tests and I assume exams will be conducted, so tests in the autumn term will be online,
+42:59
+everything will be online, just like the previous academic year in the spring term.
+43:06
+We'll see. And in the summertime, when the exams actually take place again, we'll see.
+43:11
+It will depend on how this thing goes. Last year, everything was online.
+43:17
+This year will try to do some stuff on site as well.
+43:21
+The tall. So what are the different systems to many names, and I know so more or less right now,
+43:28
+all you need to know is that with your timetable and then tomorrow you have a session with Tony,
+43:37
+you'll talk about Tasco and we'll have a lab on teams afterwards.
+43:43
+So these are the main ones for now. You don't have to worry about Piazzi anymore.
+43:49
+We use them and tune in on Thursday for my session and we'll talk about the rest.
+43:54
+How do we find links for the lectures again, that's on Shelke!
+44:04
+Um, how do I join the talks, the introductory sessions, the links will be added today to the calendar.
+44:09
+They will be on June three sessions.
+44:15
+And. Oh, yes, I'm pointing out that you should be able to see your personal tutor on Kate,
+44:20
+so once you go on the first page, it should say with a personal tutor is.
+44:29
+So that's a good point. You can find it there. Again, a question about CATSA.
+44:35
+There is no Piazzi. It's called. That's them. It's them is a board where you can find some boards about modules.
+44:39
+So every month to get it on board and you go inside there, you ask questions, someone answers.
+44:46
+Hopefully we have to answering questions and lecturers helping with answering.
+44:54
+And your fellow classmates can also answer your questions if they can just create an online lecture recorded.
+44:59
+Yes, we try to record everything if we need to go in an offline session,
+45:07
+but have an online one test before where is the best place to go and the online one.
+45:14
+OK, that's a very specific question and a good one as well.
+45:21
+If you want to attend an online session, I would suggest booking some space and lab space using office space.
+45:24
+If you can do that, the library is also available. You can book some space in the library.
+45:32
+Otherwise, uh, anywhere on campus that has Wi-Fi, your laptop and support the battery.
+45:39
+Um, yeah. So lab space with office space and um, yeah, the library does what the best place is right now.
+45:47
+Strong enough space that we need to use Rippin for, of course, work, not necessarily.
+45:59
+You should be able to access gate without a weapon. VPN is only useful for.
+46:08
+If you can't access services without it or for specific subsystems that you shouldn't have to worry about at this point in time.
+46:16
+Is there a way to work on campus to book some space so office space for the lab rooms, a library has its own booking system.
+46:28
+You can find this on their website and other places on campus, the mines themselves.
+46:36
+So you will need to enquire individually if there's a hybrid lab session.
+46:42
+Do we need to use office space? Yes, you do.
+46:48
+But again, first of all, the the theas will be available on teams to help you there and try to have some ideas available on site,
+46:52
+hopefully by Friday using.
+47:04
+We will have any Twittering in person so that James Kofod has some in-person tutoring because they're smaller in size and can do that,
+47:09
+the entire Department of Computing plus JAMESY cannot do that.
+47:19
+So we'll try to divide you up somehow for in-person tutoring.
+47:24
+Someone says, I haven't received the guy at the gate,
+47:32
+this was linked in the email you received from Hannah on Friday, I believe it was the CSC guy to Kate.
+47:34
+So it was in a zip file that says she is the material.
+47:44
+So these are on ArchCity basically or on computing support group.
+47:49
+There is a link there. Definitely.
+47:55
+If you have received that link, though, please email me and I can send you, uh, how do workspace is there a system called Office Space,
+47:56
+which I will give you the link to afterwards, and you can start working for Friday onwards.
+48:05
+First, an exam schedule, so the test is the first test will be on week six.
+48:16
+It will be the high school interim assessment on accounts for five percent.
+48:23
+So it's not the end of the world. It's not a lot. It will be your first opportunity to see what you've learnt in the past six weeks for high school.
+48:30
+And then the next one will be after Christmas.
+48:41
+So in January. So there's plenty of time to revise high school for the high school final final tests in January.
+48:46
+So, yeah, that's the one you have to care about.
+48:54
+For now. There are a few courseware exercises taking place in turn one, so every module has at least one coursework and that also counts.
+48:59
+And then the next day, other things happen in the spring, in the summertime, the exams themselves take place in the beginning of the summertime.
+49:11
+Can you clarify what the systems are? So, Blackbaud These like the Kate the Valley we use for Demsey only Selcuk is your timetable.
+49:21
+It's them is a board like a forum like you go to ask questions and receive answers.
+49:32
+Gaete Love is a system where you submit your code from programming exercises like is where you submit your coursework for computing stuff.
+49:39
+Panopto is where you can find videos from previous lectures, as is this one.
+49:53
+And Teams is like Zoom, which is a Microsoft product and it's supported by the college.
+50:00
+So you should have a team created for everyone already. Email you have Microsoft Outlook so you can access this online via the Web browser.
+50:07
+Don't forget the Piazza keyboard. We don't use charts anymore. And answer book is the system where you take the online tests and exams.
+50:18
+In the summer time, Mark was erased from your end. So someone's asking about what we have, a centralised showing,
+50:26
+all the software you might need for the course that's written down, which I don't think we do currently,
+50:35
+but we should probably make a post on the temperature board saying,
+50:39
+but here is a list of things that you need to install on your machine to do one of those things like git and mouse to do, etc.
+50:42
+So I do cover this in my Thursday session, but it's probably worth creating a wiki page somewhere about this next time.
+50:50
+I'm just going to post the lecture notes for tomorrow. Just make sure students can see them on science.
+51:00
+You send the check to see that.
+51:05
+Let me know. Let me know. Thank you, Don.
+51:09
+Yes, your science will already be available. You should have received a link pointing to it.
+51:12
+But yes, the links would be in the chart. Now, why can't I connect to Kate using my username?
+51:17
+Maybe there's an issue. Please email me and we'll figure it out.
+51:27
+Just send me the error message.
+51:32
+Is there a precedent for this here, for the courts, it's for the entire course, so you get one now and you stay with them until you graduate?
+51:35
+Um, Succot says we have two competing practical sessions tomorrow.
+51:45
+Yes, the first one is with Tony from two to four and then you have a lab with the lab helpers from four to six.
+51:49
+And it's going to take place on teams, both of them.
+51:58
+Is that right, Tony? You're losing teams again, right? So.
+52:02
+Succession. Yeah, yeah, so I just just to my that's right, there is a chain link on the timetable, OK, which I hope works.
+52:09
+It's been set up by somebody else, so I've had nothing to do with it.
+52:17
+I assume that when I click on it, it be fine. I did test it yesterday. OK, so basically you just go to the teams and it takes you to the computing,
+52:20
+a practical one team and then you have a session there that Tony's going to start tomorrow before.
+52:29
+OK. And then at 4:00, you will have some lab helpers available on that team.
+52:38
+They will have their own channel and you can go in there and ask for help specifically from each individual.
+52:43
+It's like the real thing. Imagine if you're raising your hand and you're asking a specific lab helper for help.
+52:49
+It's the same thing with teams. Um, at STEM is a forum where you go and ask questions.
+52:55
+Science is a place where you go to preview materials from.
+53:04
+So paedophiles videos or links. So scientists, our system for giving you stuff and them is a system where you ask questions.
+53:08
+Mr. OK. How do you book space's again, lots of space, um, do I need to install any proctoring software?
+53:21
+So for online tests and exams, we use answer book.
+53:34
+This is online runs in the browser. You don't have to install anything and you will find that what we do and does work is we trust you to be ethical.
+53:38
+We ask you to sign a form that says I'm going to follow the rules and apply my ethics and be consistent.
+53:49
+So after you agree to that, the tests in the autumn term will be open book, basically,
+53:58
+and we trust that you will respect this and you will not collude in any way.
+54:06
+Um, since your book, uh, yes, OK.
+54:15
+That's correct. So someone's asking about office space, you will be sent a link to access this to bookclub space, but not yet.
+54:21
+So this will start after on or after Friday.
+54:31
+But it will it will happen. You will be able to come to campus, to the place you have booked and work from there.
+54:36
+And you don't have to do this just for a session. So you can do this outside your session.
+54:44
+If you just want to go there to study, which is fine, you don't have to wait for us to be there.
+54:50
+So Kate is fading. Yes, so you can try a different browser, you can try an incognito private time or if you're completely locked out.
+54:58
+Just email me and I can lift that log. I have some sessions in the room numbers, do I attend those on campus,
+55:10
+you're not expected to actually attend something right now until we explain how you will do that.
+55:20
+So the lecture will email you and tell you on Monday is a 2K attends on Tuesdays, Katusa Altrusa attend.
+55:27
+So we'll figure out a way to be fair with everyone because we want you to be able to experience this equally.
+55:37
+But so far, you don't have to worry about this new one.
+55:44
+Um, can I ask about Selkowitz?
+55:50
+There's a question about accessing Silcott, have the students been given a link to can they log in and can they see that timetable for this?
+55:53
+They should, yes. If they can't, it means they're not on the right course and they should email me to fix it for them.
+56:01
+OK, thank you. So I'm on the cell on that. So someone's asked about some links for the lectures.
+56:08
+The answer is it's if you go to the timetable and click on the session on the left hand side,
+56:14
+it should give you it should give you a link to the teams or channel or Zumtobel, whichever one it happens to be.
+56:20
+Correct. And just this morning, where we were, we were we were finding somewhat random activity on that left hand panel.
+56:28
+Sometimes the link was there and then five minutes later, it wasn't that that it was there again.
+56:37
+So that makes the issue with crawlin not working.
+56:41
+So I expect some inconsistency, but this will be addressed. It's only the first day hiccups.
+56:46
+But I was actually working perfectly well and crying this morning and then it stopped working on Chrome about ten minutes late.
+56:51
+So who knows? We just need to produce a few more hundreds of competent computing students to be able to fix.
+56:57
+And yes, yes, if only the world was populated by computer graduates, we had the world a better place.
+57:06
+What I'll do is I'll put the link to tomorrow's Haskell lecture and the chat just in case anybody is listening to this and can't see the timetable.
+57:12
+And if you can't find it, just email me and I can send it to you. So feel free to email me.
+57:19
+There's no silly question at this point. Anything goes, feel free to reach out to me whenever.
+57:23
+Is there a reason we're not using GitHub instead of git lab?
+57:30
+So get lab is the service we have purchased and we have been using it successfully for many years.
+57:34
+The top is an external service now owned by Microsoft. So you can create an account there, but we only use it internally for our projects here.
+57:42
+So science works for you, that's great for the programme exercises, do we need to have an idea or compilers?
+57:55
+So every lecturer on the first lecture will explain what you need.
+58:03
+Usually just a plain text editor will do just fine.
+58:07
+You just need something called the compiler, the compiler, that text.
+58:11
+But don't worry about it. Every lecturer will explain for Hask one Java and Cocklin and seeing the summer term.
+58:15
+OK, I think I've reached the end of the queue here, amazing, three o'clock, do we have any further questions at this point?
+58:26
+Links for blackbirding, so you should have received an email with a guide pointing to Kate.
+58:38
+There's there's no link for answer book at this point because this is on demand.
+58:45
+So we'll send you a link for the computing students only for the diagnostic test this Thursday.
+58:53
+And Blackbaud, that's a Jamesy thing. So you should just access Blackbaud and you will find everything there.
+59:01
+It's be DOT and Imperial, Oystein, whatever.
+59:08
+Do we need any specification specific machines for our studies?
+59:14
+Anything that can support Linux works really. So if you can install Bondurant, donate your fine.
+59:20
+If you have Windows or a Mac, that's also fine. It's best if you install a virtual machine with Linux on it.
+59:26
+It's more compatible to our systems.
+59:33
+But if not, you know, Windows is trying to become Linux friendly and they have Linux subsistent that sometimes actually works.
+59:36
+And Macs do have a command line interface because they are based on Unix or so.
+59:44
+Sometimes they're not very compatible either. So it's always best to install which seeing more on this on Thursday.
+59:52
+So come back for that. Um, is there a computer protocol on Friday?
+59:58
+Yes, there is. And it will be online. If I can get some lab helpers on site, I will be great.
+1:00:08
+If not, you can still book a space with office space.
+1:00:15
+Hopefully that will be available by then for you. But again, online is the go to until further notice.
+1:00:19
+Do we need a calculator? It's going to be open book so we don't really worry about, you know, how fast you can multiply something.
+1:00:28
+It's more about what do you remember from your school days?
+1:00:39
+And it's mostly for you to revise, not to worry about.
+1:00:44
+Why am I enrolled as an exchange student? That's a great question that I will be happy to answer once you email me about this, so please email me, OK?
+1:00:52
+Uh, so since you are looking for office space to book spaces on our laps.
+1:01:01
+Um, if I want to change course to take a year abroad, when can I do that?
+1:01:08
+You want to speak with the senior tutor about this and they can explain this process.
+1:01:18
+It really depends on many factors like your performance. So maybe you can switch immediately.
+1:01:24
+It will depend on the switching between computing and Jameses.
+1:01:31
+A whole other scenario that's not very easy. Always.
+1:01:36
+So please reach out to me and I can talk about this with you.
+1:01:40
+Do we need to put someone in the first term?
+1:01:45
+We will definitely benefit from installing one now, but you can wait until Thursday and I can explain the process then in my session,
+1:01:48
+um, will all the lecturers explain the tools they use?
+1:01:58
+Yes. On the first session, they usually explain what I did.
+1:02:02
+They expect you to use what compiler some sessions have other tools as well, depending on the module.
+1:02:06
+So yes, they should explain it. You shouldn't have to worry about it.
+1:02:13
+Right now I'm going to be guided how to install which one assumes.
+1:02:17
+So on the successive sessions this week, the three toxic ones, one of them will mention how to do that.
+1:02:22
+Yes, but I will also briefly mention this on Thursday.
+1:02:28
+It's as simple as installing applications, nothing too complicated.
+1:02:33
+Do we need to think about internships in the summer? You can you know, you can think about applying for an interest for the summer of 22.
+1:02:38
+You can apply as early as now if you want to. You don't have to do it.
+1:02:47
+You do it for fun. If you're an immense student, you will have to find a placement for the end of your third year of studies.
+1:02:51
+So plenty of time for that. But if you're an Ambiens, you don't have a placement.
+1:03:00
+So doing internships is just, you know, for your benefit.
+1:03:05
+It's not adding anything except for the extra work and the experience for your CV.
+1:03:10
+How can I think s got to outlook so it has a way for you to type in your email and send your link and it seems everything up.
+1:03:17
+If you can find that, just email me and I can send you the same thing.
+1:03:28
+Anything else? I'm glad that we used all this time, I was worried that we have nothing to talk about.
+1:03:35
+I'm happy that everything is. Can I ask a couple of questions about tomorrow?
+1:03:43
+Yes, of course, though, just to reassure everybody.
+1:03:50
+You don't need to have downloaded anything or have anything in front of you.
+1:03:54
+But tomorrow's high school introductory introductory lecture. If you've had the opportunity to download GHC I, then that would be great.
+1:03:58
+But you don't have to do it. I guess my question is, do the students know how to log into lab machines?
+1:04:08
+I mean that's as simple as typing in your credentials and they know how to do that.
+1:04:13
+They have usually the same passwords. Yes. Because some students might want to follow me to type as type as we go tomorrow.
+1:04:17
+There's no requirement to do that.
+1:04:25
+So don't worry if you haven't managed to connect yourself with anything high school, but at some point in the next few days, you will need to do that.
+1:04:26
+So I don't know whether they have enough information in front of them to to get started.
+1:04:34
+Definitely. They should already know how to access a love machine because it's just the username and password.
+1:04:40
+If you don't have this information, then please email me and I can get it to you.
+1:04:45
+Yeah, but thank you. Welcome back.
+1:04:51
+Yeah, I just noticed that you were disconnected briefly, so I have a couple of questions and then I'll wrap this up.
+1:04:54
+Do we have any extracurricular activities to do? Well, tomorrow you have the welcome I the welcome week or welcome day.
+1:05:03
+It's what we call the fresher's fair. And that's when you meet all the different clubs and societies and you decide which ones to join.
+1:05:13
+I suggest joining at least one, the one you find most interesting in some way.
+1:05:22
+Maybe it's something you already know how to do or something you want to learn how to do.
+1:05:26
+So please consider joining a society club. You should have enough time to do that in the first year or so to take advantage of that opportunity.
+1:05:31
+So how powerful do our computers need to be? Uh, not necessarily that powerful.
+1:05:43
+I mean, years one and two are five straightforward years three and four.
+1:05:48
+It depends on your projects. If you want to train, assist, and I say learning something on your machine, it's a whole different beast.
+1:05:53
+So maybe you don't even have to use your own computer.
+1:06:02
+Maybe you can use our cloud or someone else's cloud.
+1:06:06
+So maybe you can outsource everything and just complete the whole course with very basic Linux machine.
+1:06:08
+So, yeah, as long as your machine supports Ubuntu, you're fine.
+1:06:16
+You don't have to worry about it. Uh. Do you know how there's a job life account so you can end up with the career service,
+1:06:21
+make an appointment with them and they can tell you what systems you have access to?
+1:06:32
+But I will suggest in my session will be create a LinkedIn profile for yourselves
+1:06:37
+to start advertising how amazing you are for everything you've done so far.
+1:06:42
+And in the long run, you start building it up with all the different courses you complete.
+1:06:48
+Can we access remotely?
+1:06:56
+Yes, there is an application called Disassociates is text based services, etc. This is what you can use to connect to our cell service.
+1:06:58
+Instructions have been emailed to you if you can find it. Just Google Imperial SSA.
+1:07:09
+It is the first result and basically you will be connected to our cell server.
+1:07:14
+Then from there you can assist into a limousine and then you can do whatever you want using a terminal.
+1:07:20
+You can also put up a graphic environment by forwarding one step at a time.
+1:07:26
+And that's what else, uh. When I click Tony Search for one day, yes,
+1:07:34
+there is a different page for you to search the entire time table if you Google Imperial Silcott synchronised, it should be the first result.
+1:07:43
+But again, if you can't find it, just email me and I will send you the link to synchronise.
+1:07:55
+Will Max work for seven years, and that's a mark question,
+1:08:03
+but I assume that if you can run Lubutu on it in a virtual machine, you don't have to worry about anything.
+1:08:07
+It just hides the internal architecture and just uses the virtual machine so that Zaim secession will be starting soon, as Mark kinda reminded me.
+1:08:12
+Yeah. Any last minute questions? Quick ones, I hope can install additional software and love machines.
+1:08:25
+Know unless you get access from CCDs, so you'll only be able to use existing software on our machines.
+1:08:33
+That's why you also need your own if you want to install additional stuff.
+1:08:42
+But if you don't have your own machine, that's fine.
+1:08:46
+You can just use our machines because they already have all the computers and programmes you will need to work on this module,
+1:08:49
+on this course in general. So we have high school and college and SWC. Everything has been preinstalled for you.
+1:08:57
+You don't have to get your own machine as long as you are able to find space and office space for.
+1:09:03
+So the welcome fare, that's not up to us, if the instructions you have is, you know, physically attend the welcome fare, then that's great.
+1:09:13
+Last year was held on line. I'm not entirely certain how they're doing it this year.
+1:09:24
+So I will leave this for the college website to answer.
+1:09:29
+Um, yes, the personal I call links should be the one that you need for Sialkot.
+1:09:35
+He's there a month lecture tomorrow. Perhaps it does depend on yourself, but you will need to take.
+1:09:44
+You can if you have a laptop, you can bring your laptop tomorrow with you and attend the session there if you have a session tomorrow.
+1:09:58
+And the fresher's fell last for many hours, as Mark suggested, this session will be uploaded on Panopto today and will make available to you by five.
+1:10:09
+Uh, how do we choose module's you don't in the first year, everything is the same for everyone.
+1:10:22
+In the second year you get to choose one module, which is great, and third and fourth year you choose everything.
+1:10:28
+So choose wisely. So, yeah, the only thing you can add on in the first year is the programming competition module.
+1:10:34
+And I will explain the process in on Thursday. But that's Anadan.
+1:10:42
+It's not assessed for fun again, which one assumes will be discussed by docs.
+1:10:47
+OK, and later this week and I will also briefly mention this on Thursday.
+1:10:53
+And I think that's everything. Four minutes to go, Mark.
+1:11:00
+Anything else from your friend? I've got one just in terms of clarification, actually,
+1:11:04
+so normally we'd have you we would have welcomed you into the building, into the labs to get started probably tomorrow.
+1:11:11
+But my my understanding, Konstantinov says the term office space is still not quite ready yet.
+1:11:19
+I can't guarantee that office space will be functional. But if it is, everyone will know via email as soon as possible.
+1:11:24
+Right. So so there is no timetabled lab session tomorrow?
+1:11:30
+Definitely not. No, not for Friday onwards. That's before him.
+1:11:35
+So just to reassure anybody, I mean, it seems like the building is locked to you at the moment, which is probably partly true.
+1:11:39
+But it will be better as we move into the weekend and get some things organised.
+1:11:46
+So tomorrow's online and then hopefully by is it Friday? The next session was Thursday.
+1:11:52
+And that's for this week. It's Friday starting next week. It's a different timetable.
+1:11:57
+So it's Monday, Tuesday, Friday, and that's scheduled in the lab.
+1:12:02
+Well, they can attend, but everything will be online as well.
+1:12:06
+So it's definitely hybrid. Yes. OK, well, you know more about that tomorrow.
+1:12:10
+And whenever I'm teaching again, which I think is a good read.
+1:12:16
+So thank you, everyone. If you're a student,
+1:12:22
+please connect the different link for the three twenty session and then I'll see you again at four fifteen for the welfare session.
+1:12:24
+Thank you all and welcome once again. Thank.
+1:12:33

@@ -27,7 +27,7 @@ You might have to wait for a while. OK. But no big datacenters have maybe tens o
 1:48
 This high speed server in the cloud so that they could respond when you type a query
 1:59
-asking where is the nearest café or so on that it would actually be able to tell you,
+asking where is the nearest caf or so on that it would actually be able to tell you,
 2:07
 OK? But Paolo, something actually happens at multiple levels.
 2:13

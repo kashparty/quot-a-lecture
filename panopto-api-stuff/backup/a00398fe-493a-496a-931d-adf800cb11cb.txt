@@ -1,0 +1,215 @@
+ID: a00398fe-493a-496a-931d-adf800cb11cb
+Title: idb-topic-09-sql-null
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+We now look at the topic of handling no values in school.
+0:01
+Which surprisingly is much more complicated than you might first expect.
+0:07
+First of all, let's look at some possible definitions of what now exactly means.
+0:12
+And way back in the 1980s,
+0:19
+there was considerable amounts of debate and research done into what you might mean by the word no free popular definitions are can go through now.
+0:23
+NULL could represent something that's not present in the real world the universal discourse.
+0:32
+Therefore, in the bank example, when I put Noel has a value for the rate in the account table,
+0:38
+it would mean that the account did not have an interest rate.
+0:45
+In terms of definition, it would be that now represents something that might be present in the universe of discourse or might not.
+0:50
+And we do not know its value at the moment. So that would mean a null value in the account table would mean possibly the
+0:58
+account does not have an interest rate or that it does have an interest rate.
+1:05
+And we do not know its value at the moment. And a third definition of now would be that it represents something that is present in the real world.
+1:10
+The universities, schools, but we do not know its value at present in this case.
+1:18
+Now in the account table would mean that accounts do have an interest rate is simply we do not know what its value is at the moment.
+1:23
+Yes, Girl Standard is a little bit vague about the exact handling of null, but its overall closest to Option two.
+1:32
+But there are some exceptions which will be going for.
+1:40
+What is clear in the ethical standard is that Eskil handles null using a free, valued logic, and the values true,
+1:43
+false and unknown are used where unknown means you are not sure about the result of a Boolean comparison.
+1:52
+Let's try out a quiz on a very simple school statement opening operating over the accounts table.
+2:01
+So when run with the previous group of students, Option B was the most popular answer, but D is in fact the correct answer.
+2:15
+And it's all to do with this free valued logic being used.
+2:25
+Let's consider the first row. When we look at comparing the rates of value found for Account 100 now with the value in the query,
+2:33
+now we find that we are comparing two things we do not know the value of and the results of whether that's true or false is that is that fact unknown.
+2:43
+And therefore we do not return one hundred for the next row, one to one.
+2:53
+We are comparing the value to five point twenty five with null in the query.
+2:59
+And again, we do not know whether this 5.25 equals unknown value or not.
+3:05
+And so Account 101 is not returned and so on for the remaining rows, and none of the account numbers will be returned.
+3:10
+Let's now consider a more complicated query operating as the account table with a comparison that the rate equals null or not equals.
+3:21
+Now this is the way Eskimo denotes not equal.
+3:30
+And when answered, asked before a deal was the most popular answer, and the is the correct answer and the same basic principle applies.
+3:41
+I look at Account 100 testing. The value now in the table against some unknown value gives me that is unknown that the rate
+3:50
+equals know the unknown value and is also unknown if it does not equal now unsafe or rogue.
+4:00
+One hundred one hundred is not returned. When I come to five point four to five, I do not know whether it equals now or it does not equal.
+4:08
+The no value was announced here can be different and therefore it's not returned and sold the remaining rows.
+4:17
+So in high school, we have this free value logic. The basic Boolean logic still applies.
+4:26
+So if I do. True and true, the result is true overall, but true and false gives me false or false, and true gives me false.
+4:31
+Involving any unknown value with true gives me unknown as a result.
+4:42
+And similarly, for all, if either the inputs to another are true, the overall result of the OR is true,
+4:50
+if both inputs are false and we know the overall results of the oil is false.
+4:59
+But if what if one of the inputs is unknown and the other false,
+5:04
+the overall results of the other might be true or might be false, and therefore it is unknown and for negation, normal not true.
+5:09
+Being false and not false being true still holds.
+5:18
+If something is unknown, the negation of that is still unknown.
+5:22
+Therefore, if we compare anything with null or null itself, we get the result unknown,
+5:30
+if we actually want to test that particular value is the null value,
+5:37
+then we must use the is null and is not now to check that it is not a null value and hence the queries are shown you in quiz questions,
+5:43
+which would always return. The empty results set on any ancestral compliant database probably should be rewritten using the is null and is not now.
+5:54
+So the first case would list of all the account numbers which have null values stored in their right.
+6:05
+And the second one would list all the account numbers because the rate must be either a null values or I not null value.
+6:11
+You can also test for the logical truth,
+6:21
+so I can put a expression such as comparing rate equal to five point five and determine if it's true or not, so is not true.
+6:23
+Means the result of this comparison. I see that be false or unknown.
+6:33
+Let's try that out to get to the semantics of a might be in Eskimo in this quiz question.
+6:40
+So the most popular answer is A. And that is the correct answer.
+6:52
+In essence, we go through the count table looking at the right equals five point twenty five.
+6:57
+It will be unknown for the first row and therefore the account one hundredth of these terms.
+7:03
+It will be true for the second row count one to one and therefore two, of course, is not false.
+7:10
+So count one a one is returned. The rest of the novels have the same effect as Count 100.
+7:15
+Only five point five is of value. Being compared to five point twenty five will give me false.
+7:22
+And that, of course, is not the case. That is not false.
+7:28
+So it will not be returned.
+7:32
+You have enough information now to do the next worksheets, and you can carry on watching the recording afterwards or if you prefer,
+7:37
+watch the remainder of the topic recording before doing the worksheet, as does, try out some more complex queries involving the use of note.
+7:43
+So here we are using, except to compare,
+7:53
+select the rate from the account where the numbers less than 1.5 to the Smithsonian right from the account table where the Civil Code is 56.
+7:56
+So in previous tried out deals, the most popular answer and see the second most popular answer, but in fact, B is the correct answer.
+8:09
+It rather contradicts the semantics of now what we've been encountering Esquivel so far, but let me explain what goes on here.
+8:19
+First of all, the first query will give me all the right values in the first half of the table.
+8:28
+I now five point twenty five and null.
+8:34
+And the second select from work gives me the remaining rank values in the table, now five point five and null again.
+8:37
+Then, since I'm doing a set based, except Haskell will combine together.
+8:46
+The two null values have a single null in the first set and a single null in the second set.
+8:51
+And then it will take away the contents of each and will treat the null in the second
+8:58
+set as something that you cancel out or be taken away from a null in the first set,
+9:04
+leaving behind the value at five point twenty five.
+9:09
+If you think it doesn't make sense compared to the handling of null we've been encountering so far in a row, I might well agree with you.
+9:14
+Indeed, we can look at the top row of query templates and who has equivalences and think they might always hold when writing queries.
+9:23
+But in fact, they only hold if it's the case that the eight attribute in the party bill is unique, i.e. key value.
+9:35
+And if the A and B values from the table and the S table are both not Nullarbor, if it's not key,
+9:44
+all you've got, you'll be another Nullarbor, then these equivalencies do not hold for some cases.
+9:54
+So let's try out now another query, and to give you a hint,
+10:03
+this time the handling of now is more in line with what the definition of null and Eskimo is given this.
+10:07
+So D is the most popular answer and be the next most popular answer.
+10:25
+But in fact, a is the correct answer. Let me explain the logic of this.
+10:30
+So the sub query here selecting the right from the count table was so Curtis, 56,
+10:35
+gives me the value null five point five and null, and then we'll be checking whether the first four values are right.
+10:40
+Are it not in that sense, taking the value null?
+10:49
+I cannot determine that it's not in that set there because either of the rates of account 107 or 125 might be the same as the value I'm looking at.
+10:53
+So count 100 or not be returned for count 101.
+11:05
+The five point twenty five might be the value of a count one,
+11:12
+two seven and one two five might match those notes that they're not in will fail for that.
+11:16
+And, of course, null will fail again in the same way it did for count one two three as it did for Count 100.
+11:21
+So the end result is that no rows have returned.
+11:28
+So if a sub query can return a null value, you end up with a not an expression like this who is returning the empty set?
+11:32
+Because Haskell can never determine that the value being tested is not in the set of results being returned.
+11:41
+I was trying to say what might be thought of the same crew using not exists.
+11:52
+And the most popular answer is D. And this time, the popular answer is the correct answer.
+12:04
+And again, it's clear who's going to operate in line with the proper semantics of asking, well.
+12:10
+So in particular, when I look at the first row, I've got a count 100 has a rate value of null.
+12:16
+And therefore, when I do, a test of the rows are returned by this correlated sub query.
+12:25
+The rate value here comparison will always return unknown or false for all the values here, and therefore always give the empty sets of account 100.
+12:33
+I've got the right count of great value as null, and therefore it gives the empty set for count.
+12:44
+101. The value here five point twenty five will either be unknown when compared to the
+12:51
+rates of the input query or be false when comparing five point five with five to five.
+12:58
+So I always get a empty result set, so I return each of the three rows that match the condition of the account number is greater than when I was five.
+13:05

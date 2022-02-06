@@ -31,7 +31,7 @@ So clearly, whatever the total amount of cash in the bank was before this transa
 1:32
 So if you look at the Example database, add up the cash figures for branches around hundred seven.
 1:40
-And so when that transactions executes, the total amount of money will stay the same, but clearly £10000 sort of moved from 56 to 34.
+And so when that transactions executes, the total amount of money will stay the same, but clearly 10000 sort of moved from 56 to 34.
 1:47
 Notice also from this example schema that the fact that I have declared that number is a key of the account table means that I cannot have
 1:57
@@ -83,7 +83,7 @@ cash figure in another branch. And there's a second one which is trying to find 
 4:47
 Now, clearly, the second transaction should always read the same value, regardless of whether executed before or after this transaction.
 4:55
-But if I had no isolation and it happened to execute in the middle of the transaction, it would see £10000 less as a total figure.
+But if I had no isolation and it happened to execute in the middle of the transaction, it would see 10000 less as a total figure.
 5:04
 A data based system implementing isolation would ensure that this transaction transaction only sees a
 5:15

@@ -1,0 +1,207 @@
+ID: 65151a0c-83c9-4fcc-80a6-ae33016b3c21
+Title: Induction over Numbers - 5
+Category: 1 - Induction over Numbers
+Lecturer: Sophia Drossopoulou
+Date: 23/01/2021
+Welcome back. This is the fifth and penultimate instalment of induction flora numbers.
+0:01
+We will be discussing strong induction, which you might have seen that already.
+0:08
+And we will be doing it again in the principled way. So here is the motivation for strong induction.
+0:13
+I have got this function, Gene, which is the five four three cases, zero one and N.
+0:20
+And the interesting thing in the definition of, gee, for our purposes is that they're for the case where N is greater than one.
+0:28
+The function is determined in terms of its immediate predecessor and the predecessor of its predecessor.
+0:39
+And the specification is a given here.
+0:51
+And there are problems if we're trying to prove the specification by using straightforward induction over the numbers.
+0:55
+The problems you can see if you try to do the proof and that they are shown in your notes, but put succinctly when we are trying to prove the step.
+1:06
+We would like to apply the inductive hypothesis and the inductive hypothesis applied in a naive way,
+1:20
+would tell us something about the properties of G of N minus one.
+1:26
+But we would need to say it to know something about Geovanni minus two as well.
+1:32
+And then that hypothesis would not be applicable. So what can we do?
+1:39
+We can apply the same solutions as similar to those we developed for the technique.
+1:49
+But the best solution is always to have a better principle.
+1:56
+And this principle is here call strong induction. So in the strong induction, principly, again, we require that the property halts for zero.
+2:01
+But for the step, rather than say if it holds, Fourcade holds for CAPN.
+2:10
+That's one we say if it holds for all the Predecessors' of.
+2:16
+It also holds for Cabelas one. So in terms of the number line as before, we require that it holds four zero.
+2:21
+And then we say if it calls for all the predecessors of one, it will count for one.
+2:29
+If it holds for all the predecessors of two. So in the case of two,
+2:37
+we required that all the predecessors satisfy the property and that will give me that it haunts will imply that it holds for, too.
+2:42
+When we're looking at see, what we require is that it holds for all the predecessors of three.
+2:51
+And that should imply that the calls for say, then let's look at four were required that it holds for all the predecessors of four.
+2:58
+And that will give me that the court's four, four and so on. So the assumption that we make in the stack.
+3:08
+This one is stronger than the assumption that we make in the classical Proofpoint action.
+3:18
+You probably have seen the principle of strong induction in discrete structures and it looks slightly different, but it's it's the same.
+3:25
+And what I would like you to do now is apply the principle of strong induction to the proof of the assertion.
+3:40
+About our function G from earlier on. And here it is.
+3:52
+This is the property P of zero. We have replaced all occurrences of end by zero.
+4:04
+And here we save for all AK. Foran, predecessors of Kaye, as here.
+4:14
+The property quotes for those predecessors for B of J.
+4:25
+And that should imply that the property holds for K plus one,
+4:30
+which is that geocache plus one is three times three to two, K plus one, minus two to the K of minus one.
+4:34
+And if all this holds, then the property bill then holds for all natural numbers.
+4:45
+Again, here is the strong induction principle without on the scribbles from earlier.
+4:58
+Please cheque. That makes sense. And if it doesn't, please get in touch.
+5:04
+Given the mathematical and thus the strong induction principally,
+5:12
+and given how we have derived it for the particular properties of G, what is the proof schema that we obtain?
+5:16
+For the base case, we will need to show. We will need to show the first part of the conjunct.
+5:35
+So we will need to show that the G of zero is three to the power of zero, minus two to the power of zero.
+5:46
+OK. This doesn't want to have to talk to the power of zero, I cannot write, but it's not as important.
+5:57
+Let's look at the inductive step, the inductive step.
+6:06
+Corresponds to this part. We start with the arbitrary decay.
+6:10
+Then in the induction hypothesis, we copy the left hand side of the application and then we have to show that I can say the implication.
+6:17
+And this is the proof schema for the assertion as given here.
+6:33
+But they do have the definition of the function G. And now I can apply the geo zero is defined to be zero.
+6:43
+So this is zero by the definition of G.
+6:53
+And it so happens that the GOP zero is my one minus one.
+7:02
+This is by arithmetic and it so happened that three two one zero equals one and two two zero is okay.
+7:09
+It was also won. And therefore, this case has proven.
+7:18
+And here at these Netley reteam. Now we move on to the set and here is an opportunity for you to practise.
+7:24
+And now I remind you of the definition of G. The definition of Jehad, three cases, one four zero one four one and one for N.
+7:36
+And the. We are trying to prove something about Kay plus one.
+7:44
+We know that that case, a natural number, therefore, Kate plus one is either one or two.
+7:52
+And so it's definitely not zero. But we don't know whether it this one or bigger than one.
+8:04
+So what can we do? What we can do is apply case analysis.
+8:11
+So we will be applying case analysis and then our first case, we will have that.
+8:38
+Gay is equal with zero. In which case, Kate plus one is one.
+8:45
+And in the second case, gay is not is going to be not equal with zero.
+8:52
+In this case, G of Kay is going to have the value one.
+8:59
+And in this case, g of gays going to be this definition hero.
+9:06
+So it's going to be five times something.
+9:12
+Plus six times something else. And we will see the proof in more detail in the next slide.
+9:16
+So here is the first case. We said that K is zero and we want to now show that that G of one.
+9:23
+Equals three to the one minus two to the one. We know that G of one is one by definition of G.
+9:33
+And the rest is equality. I give you as an exercise.
+9:40
+Now, in the second case case, not zero, and therefore we know two things, we know that case greater equal than one.
+9:44
+This we know because a national number is not zero.
+9:53
+Also, we know that both K and K minus one are in this interbody because we know that K is not zero.
+9:58
+So it's greater than zero and equal with K and K minus one.
+10:12
+That's important because it's not zero. K minus one is great, apelike, and therefore it is in that introvert to.
+10:18
+And now we can continue, shall we?
+10:28
+We take Geof Kate plus one.
+10:34
+And because Kay is a great equal then one, we know that it's that this is equal with five times G of K minus six times G of K, minus one.
+10:36
+And No. Now we come to a super important part of the proof.
+10:54
+We want to be able to apply the induction hypothesis.
+11:03
+We want to be able to apply the infection hypothesis on Geof K and G of K minus one, and the induction hypothesis says I am applicable.
+11:09
+Or for all elements that are between Zero and K.
+11:24
+So we do need that case between zero and K and K minus one is between zero and K.
+11:28
+And luckily, this is what he tells us.
+11:37
+So because we have asked to think something about gay and gay minus one family, that they don't become negative,
+11:41
+we can apply the induction hypothesis on Geode Gay and we can apply it also on JFK minus one.
+11:48
+And then we do a lot of isometric steps which are in your notes and you shouldn't be doing when you write the proofs,
+11:56
+but they're not the focus of our discussion here.
+12:04
+And then this trophy's done to. So here we compare the mathematical and the strong induction principle.
+12:08
+And you will see that the difference is in the assumption that we make here,
+12:21
+we assume that the forms for the immediate predecessor, whereas here we assume that it holds for all the predecessors.
+12:26
+Is one better than the other? Are there more things that we can prove in one rather than the other?
+12:44
+And which one? Or are they even incomparable? Please think about this and we will be discussing this one Tuesday.
+12:52
+We can also develop a further induction,
+13:00
+principally whose conclusion allows us to say that the property calls for all numbers greater than some M rather than just the natural numbers.
+13:02
+And this would have the form that if for all k the property holds for all predecessors,
+13:14
+which however are greater equal m not all predecessors up to zero, but all predecessors up till M, then it calls for K plus one.
+13:26
+And if these two requirements hold, then we also have that the property holds for all and great equal M.
+13:37
+In your notes, you can also find what I call a well-funded like induction.
+13:49
+And the interesting thing is that in the suddenly abduction principle,
+13:55
+we separate the base case from the step and here we essentially have got only the step.
+14:01
+And if you would like to think about it, you can ask yourself, why are we allowed here to not have a base case to start with?
+14:09
+And if we have time, I can discuss it on Tuesday. But that is definitely outside the scope of our exams, so it has caused a lower priority.
+14:23
+Thank you.
+14:35

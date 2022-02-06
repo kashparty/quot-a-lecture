@@ -1,0 +1,1777 @@
+ID: ea10d575-db5f-4430-a4a2-ade900b90234
+Title: Kotlin Lecture (livestream) - Tues 23rd Nov
+Category: Week2
+Lecturer: Robert Chatley
+Date: 23/11/2021
+OK. Excuse me. Good morning, everyone. Welcome to the lecture this morning.
+0:17
+We've got a good number of people on the stream now, so I think we can get going. Hopefully,
+0:22
+you've managed to watch the videos that we released earlier in the week already and you've begun to see that we've started to move on from working
+0:28
+purely in a functional style and started to introduce some of the object oriented concepts that are available to us in a language like Caitlin.
+0:36
+And you'll also see that in other languages that you have worked with before or you'll come to work with next term.
+0:45
+I think one of the nice things about Scotland is that it really combines these paradigms,
+0:51
+so it gives you a lot of power from things that you've already done in terms of working with things functionally.
+0:56
+But it also gives this. Also gives us the way to model the world using objects and classes, which we begin to think about this week.
+1:03
+And so you can then put those together, and I think that's one of the really nice things to do.
+1:13
+So hopefully you're starting to think about that in the lab exercise that we've been doing this week, and you will continue to see that,
+1:19
+I think as we go through and I think it's one of the really nice things about, you know,
+1:26
+the way that we work on programming where we start with functional things and then we move into object oriented later.
+1:30
+It means that we can really have an object to a functional core to a lot of the way that we do.
+1:36
+Our computation helps us to think about things clearly and reason about our programmes very well.
+1:41
+But then we can have this object oriented model of the world and built up around it,
+1:47
+which gives us the ability to build new types and new building blocks that allow us to build bigger and bigger systems.
+1:53
+So I think don't think of it as a switch from we used to do functional programming and now we're doing object oriented programming.
+2:00
+Think of it really about combining the best pieces of both of those worlds and putting
+2:07
+them together in order to write the best programme at the all the different levels,
+2:12
+that helps us to model the world and to solve our problems and make extensible, maintainable code for the future as well.
+2:18
+So as I say, hopefully you've had the chance to look at the videos that we released already.
+2:26
+What I want to do today is talk about a few things,
+2:30
+a few things that people mentioned to me in the lab in the last few sessions when I was around and a few things about how the computer actually is
+2:34
+laying out in memory some of the things that you have in your programme and that I think will help to give a model of what's happening under the hood.
+2:44
+When you create certain objects and allow you to think about, you know,
+2:52
+if something slightly strange happens and it does something you're not quite expecting,
+2:57
+then to try to have a model in your mind of what's happening here and reasoning about what's going on.
+3:02
+So we'll talk about that for a bit. And then I like to think about some other aspects of object oriented design,
+3:08
+which are important and how we can use those in Kotlin and maybe move on into a slightly bigger example,
+3:15
+building up something from nothing where we design a few different classes and put them together.
+3:21
+So as always, in the live session, this is a great opportunity to ask questions.
+3:26
+So feel free to put a hand up at any point, and I'll try and keep an eye on those on the charts.
+3:31
+She is fairly empty so far, that's good.
+3:39
+So, yeah, feel free to do either of those and I will try to keep an eye and come to you and try and take any questions.
+3:41
+So the first thing that I wanted to talk about was the difference between Val,
+3:53
+which we looked at quite a lot last week, and I think almost everything that you did last week was using values.
+3:58
+And then just in one of the videos this week, we started to introduce the nature of mutable states with VAR and so on to talk a little bit about,
+4:06
+you know, the difference between those and when to use one and when to use the other.
+4:15
+And also just to clarify a few things, which I think were a little bit confusing for some people when we were discussing it.
+4:20
+So we'll talk about this a little bit to get started. We're going to show you the examples in the code.
+4:27
+So basically, Val Anvar are two keywords,
+4:34
+and for most of the time so far we've been using Val and we've been using it to declare variables or values, as we would say, within our programme.
+4:38
+So if I write a main function and I want to have a vowel which is on a name which is a string and that name is Adam, something like this.
+4:49
+Then we used the vowel to declare this valley and we can have another one.
+5:03
+Something like this, and you did this plenty of times last week. The thing that we can't do with a vowel is we can't reassign it,
+5:16
+so I can't now say that name is updated to be Steve instead because we've set it once in our programme, we've set that value of what that value is.
+5:25
+We're not allowed to change it. And so useful. Most of the time,
+5:37
+this is actually a very useful property to have because we know that there is
+5:42
+no possibility that somewhere in our programme did this value get changed.
+5:46
+So we know that if we set it to be something, then it's going to be that for the rest of the execution.
+5:50
+And that's very helpful in trying to reason about things working correctly.
+5:54
+If we have the ability for things to be modified, then especially in a more complex programme,
+5:59
+there's a lot of places for a lot of times when you say,
+6:05
+Well, this was supposed to be set to 17 because I said it at 17 earlier, but it doesn't seem to be set to 70.
+6:08
+Now it seems to be something different. I wonder how that has happened and you know which bit of code has modified that?
+6:15
+When did it run? I mean, especially in very large systems, this becomes very difficult to trace.
+6:20
+So if we've got a bug where things are behaving differently from what we would expect, then it can be very difficult to pin down.
+6:26
+So if we treat things as immutable as we say, unable to be mutated,
+6:34
+unable to be reassigned in the Scotland world, treating them as vow not reasonable,
+6:39
+then it means that once we've given it a value, it's always going to have that value and there's no way that it can vary.
+6:46
+So this rules out a big class of bugs.
+6:52
+And so I would encourage you to use Val as much as possible when you're defining a value because whenever you can in a programme,
+6:55
+try to treat it as this is the value and it's not going to change.
+7:03
+And especially if you come from a high school mindset, you have no ability to update things.
+7:06
+We always create values or create new ones. We don't change values, so that should be quite familiar to you.
+7:12
+And I think try to carry that over as much as possible.
+7:20
+Sometimes, however, though, we do need to make modifications and that's like natural in the way that we write programmes to model some situations.
+7:23
+So let's say that we had a vowel for someone's age.
+7:32
+And that their age was 21, and at some point in the future,
+7:39
+we wanted to update their age because they had their birthday and they became a year older than we would want to say.
+7:44
+Something like age equals age plus one because we want to update the age of Adam or Eve in this case.
+7:50
+So that has a new value because the old value is not relevant anymore or not correct anymore, I should say.
+7:58
+And in this case, it's not allowed.
+8:05
+Here we get an error that says if you've got a foul and is not allowed to be reassigned, you're only allowed to keep the value at the beginning.
+8:08
+And so the way to change this is to change this from being a vowel.
+8:15
+To being far, this means that this is a value, but it's a variable value, it means it can be reassigned.
+8:22
+You'll see that it gets underlined in a different way. Any kind of so that you can tell the difference.
+8:30
+And then once that's been done, then this is allowed. This is I'll just telling me I never used to.
+8:37
+And so this is just a small change, but it actually has quite a big change in the semantics of our programme because it means now.
+8:44
+OK, well, this is something where it can be updated either by this line or anywhere else that it's in scope, although we pass it around.
+8:52
+This could be updated. And so this is sometimes what you want, but it's quite often not a good idea if we can avoid it.
+9:00
+So my suggestion to you would be to when you start writing any particular value or a property for an object,
+9:09
+as we've been discussing this week, keep it as valid until you need it to be.
+9:16
+And then when you need it to be viable, then you can change it. And it's easy to change, and then you have this ability to update things.
+9:21
+And for some things, that will be very natural and will be the right thing to do.
+9:29
+But if there is a possibility to keep it as a vowel, then I think that that will help you to build programmes,
+9:33
+especially as we move into the world of picking building bigger and bigger programmes where you've
+9:40
+ruled out this class of bugs that happen by things changing in further away in the programme where,
+9:45
+you know, it's not clear what's going on. So that would be my overall guiding principle is to try to keep everything as foul as much as you can.
+9:50
+And then just occasionally when you need to vary something, for example, we might be modelling a person, the person might have an edge.
+9:59
+It might be their birthday. We might need to update their age. That makes sense to have that as a variable variable property.
+10:07
+So a property or in this case of our value or over a variable in the sense so.
+10:14
+By putting those together, you can achieve almost everything that you want in terms of defining a value or updating it.
+10:23
+But again, just to sort of drill in my general feeling would be that things should be valued where possible.
+10:29
+If you used other programming languages like Python or Java, the sort of default is that things are mutable.
+10:36
+Things are and you have to do extra work in order to make them immutable or in some language, it's not even possible.
+10:43
+So I think one of the nice things about Kotlin, especially again coming from a Haskell mindset,
+10:50
+is that it's very easy for us to treat this as the default.
+10:54
+And so we should think about that when we're writing our programme and say, Yeah, OK, this is the default.
+10:57
+And then occasionally we're going to allow mutation where we want it.
+11:02
+So it just goes over that a couple of times, but I think that's important to sort of drill in that that's what we would hope to
+11:06
+see in your training programmes is as much as possible doing things with foul.
+11:12
+And then, when necessary, opening it up to be mutual as of all.
+11:16
+Can I ask a question? Sure. Please. OK. So what is the difference between a value mutable list and a variable list?
+11:22
+I. Just say the question again.
+11:32
+I can hear it clearly. Yeah, yeah, I can hear you. Understand that.
+11:36
+Yeah. So basically, what is the difference between a musical list stored in a value or stored as a value and a variable list across your site?
+11:41
+So let's do the example. So that's a very good question. So. We could have a list of names, right, so this is.
+11:53
+Yeah, let's do this, so let's have a list of. What do we just have, Adam?
+12:06
+You. Steve, like this. So that's the list stored in a value.
+12:16
+And so if I do this, then I can't say that the list is change it to be a different list.
+12:24
+I can't stay on. Can't do this because.
+12:31
+This file cannot be reassigned, so I can't reuse this name. Basically, in order to make you reference a different list, so that's the vowel part.
+12:41
+If I wanted to do this right and switch it, so that list wasn't this list anymore, but it was this list, then I would need to make this over.
+12:50
+And then that would be OK. So in fact, in this case, now that I can print. This list here.
+13:01
+And I can print it again here.
+13:12
+And if I run this, hopefully the first time we're going to see has Adam, Eve and Steve in it, and then when we finished the second time,
+13:18
+it's going to have Fred and Mary because it's basically pointing to a different list, referring to a different list.
+13:24
+Now, the other sort of degree of stability is about having to be useful or not.
+13:32
+So at the moment, like if I do this and if I try to say list. At parents, Emma, to this list, I can't do it.
+13:40
+And that's because this method adds is not available in the type of lists when we call list of, we get something.
+13:52
+Which is a list of strings and a list of strings, as we talked about before, as they a read only version of the list.
+14:03
+So that means I can't write into I can't add anything, even though it's a far right device since I can't reuse this variable.
+14:11
+But the fact that it's a list of strain means that it's Read-Only, if I want to be able to add into it, I have to make it a useful list of strengths.
+14:20
+Change this type. So now it's a beautiful IST, and now I can add into it.
+14:34
+Let's not try to do this. And I can still do that.
+14:44
+Even if it's a foul. So the vowel says, I can't say that this list is something else.
+14:51
+I can't make it. A candidate, right, because it's it's a vowel, so it can't be reassigned.
+14:58
+I could do that now. But the fact that I can take the list like that I can add to it or not is defined by the type.
+15:12
+So this says this is a beautiful day. So when I have a beautiful list, it allows ads and other things like remove.
+15:22
+But when I don't have a beautiful list. To have a regular list.
+15:31
+And this is not allowed, and if I have a look, my list doesn't have remove, it doesn't have those options.
+15:41
+It only has the reading options from that list. Does that kind of make sense?
+15:47
+Yeah, that's a good question. It's like, what's the difference?
+15:53
+So you were saying like when I define immutable as this is a type that allows mutation of the list.
+15:56
+When I use vowel for the name of that list, then it says I can't change what the name of this list refers to,
+16:01
+even though I could possibly add into the list some more questions.
+16:08
+Sure. Oh, hi. If you have your vowels and mutable list of and you do your list or add it, then.
+16:13
+OK, so if you follow me to the list and then you print line the list and then you add something and then you find the list you'll get,
+16:23
+you'll get two different outputs for this, which I find a little bit with because the list is a vowel.
+16:30
+So I find it a bit weird that you can do print line list twice on a value and it comes out.
+16:38
+Oh, I see what you mean. Right? So let me take the outstanding attempt to see if it's.
+16:43
+So basically, I mean, this is making it more logical. So it make immutable lists, right and print out and then you can add.
+16:46
+Someone else into the list. And then you print it again.
+16:56
+Is that what you're saying, basically? Yeah, yeah, yeah.
+17:03
+I and when we print it and you say the first time, it's going to have Adam, Eve and Steve in it.
+17:07
+And then the second time we're going to add in one more person.
+17:14
+And so your intuition is that that is strange because you think of the value as being like,
+17:18
+let's freeze this structure when we've made it, it shouldn't change. Is that kind of how you're thinking about it?
+17:25
+Yeah, I was sort of thinking whenever you see a vowel,
+17:31
+the output whenever that vowel goes into a function should be the same sort of like a method of web.
+17:33
+Right? Yeah. So I think the thing is that. The thing that's the same is that it points to this list objects,
+17:39
+and then when we add something, maybe I've got a slide that shows something like this.
+17:49
+Yeah. So in this slide, you can see, like we make two lists.
+17:55
+And what happens is that we build an object for the list and inside it's going to have some contents and it's the same list object.
+18:00
+It's just it's got more contents. And so when we say foul foul for a, we're saying that a refers to this, this particular like green box,
+18:09
+but it's not saying that it refers to this green box with these contents.
+18:20
+So it says it's always this green box. It's never going to be a different green box.
+18:24
+It's never going to be a different object list object.
+18:29
+It's going to be this way is always going to be this green box.
+18:34
+But we could modify the contents of that green box if it is a mutable list, if it's not misplaced and we won't be able to.
+18:39
+So that would be. That's right.
+18:48
+That's fine, yeah, it's a vow and it's a Read-Only list, and we wouldn't be able to change it and it would always have the same contents.
+18:51
+But in this case, we've got because we defined it as being useful.
+18:57
+It's the same object, but we're building up by putting more things inside that green box.
+19:01
+Essentially, something else we could look at actually is if we debug this.
+19:06
+Then you can see, let's step over. So here we've got this, I was going to talk about this in a bit, but it's a good segue right now,
+19:21
+so you can see that what happens here is that we have the vowel list that's quite small on your screen and it's a creates a Costco to ArrayList list.
+19:29
+Don't worry about that, but it puts it and a memory location inside the vending machine of seven nine eight.
+19:38
+And it has a size of three. And then as we continue, that's step one.
+19:45
+I go to this line, go over this line,
+19:50
+and now you can see what's happened is that we've still got the same object at the same memory location list refers to that.
+19:53
+But now it's got these four things rather than just having three things in.
+20:00
+So that's kind of the reason why it's not that the whole list structure is the value,
+20:05
+it's that this memory allocation seven nine eight that sounds like we're
+20:12
+effectively like the start of the list is the object that represents the list.
+20:16
+That's that thing is constant. The question.
+20:21
+Sir, I've actually got two questions. Sure. Firstly, I understand I get that it's all involved implemented differently,
+20:30
+but I just don't really understand the point as having if you can mutate it.
+20:38
+You can't, you know, you come, you take the vow, sorry. Yeah, if you can do dig like God on that.
+20:45
+So. That means that it's.
+20:53
+Me, see? Yeah, so basically, it would mean that we couldn't.
+20:59
+We can't do this like can't do you like list equals. Can't do this.
+21:08
+I can't later on say, oh yeah, by the way, I changed a change that list, so it points to a different one.
+21:20
+That's not allowed, I could say. OK, let's add something, if it's mutable, if it's a if the type of the list is useful,
+21:26
+then it means I could like empty out and fill it up again and change the contents.
+21:35
+But I know that the actual list object that the foul points to is always going to be the same.
+21:40
+And so this means that there's no chance that. And you think what's a good example?
+21:48
+There's no chance that at two different points in the programme,
+22:01
+like it thinks that it's pointing at the same object when it isn't because it's always going to be pointing at the same object because it's foul.
+22:04
+So it basically says you can't change which object they say is that object you can
+22:11
+do stuff on so you could fill up the collection or make it smaller or whatever,
+22:17
+but you can't change which. Object says there's never any confusion about which object there might be,
+22:21
+the possibility of changing the state of it because that would be useful in order to conduct the business of your programme.
+22:27
+But it means that we, by making it foul, we can kind of cut out this class of problems where, oh, right,
+22:34
+somewhere else someone decided to make a different list and put it in here and now things are behaving strangely.
+22:40
+So I mean, it may become clearer as you write more programmes and maybe, well,
+22:49
+I'll show you a couple of examples also on the slides that kind of explain how it works.
+22:54
+I will come to see, I think, a few things this week and next week.
+22:59
+Yeah, I think it is this distinction of whether or not the name of this band, the value with this name list refers to a particular object.
+23:04
+And here we can see that it's the one two seven nine eight. That one in this case happens to be immutable list.
+23:13
+We can never get confused by this, referring to a different list.
+23:20
+We can always know it's this one. It's just that the contents might vary.
+23:24
+Does I feel like I haven't answered that very well? Yeah, no, I I actually kind of understand it.
+23:29
+I think of it the second question. Yeah. Yes, I was wondering like, we can declare a list, be new school or any school.
+23:34
+Yeah. And the list is obviously an object.
+23:42
+So I was wondering if for our own classes that we define as a way of forcing them to be declared mutable or indeed will are?
+23:44
+Interesting question. So. Well,
+23:51
+I guess the thing with your own classes is you can provide because the difference between
+23:56
+a meteorologist list and regular list is that the meteorologist has more methods in it.
+24:00
+And so the meat list has these methods that allow you to add or remove stuff because the designers chose to put it in there.
+24:06
+So if you are making a class, you could decide whether or not like if I if you make a class, let's fix this example.
+24:14
+To represent a person. And what would that person probably have a name?
+24:24
+And they have a each saying then if you make these.
+24:37
+Just vowel properties. So it's basically when you create a person record, it's sort of like a historical record of that person.
+24:46
+So it says this person at this time, at this age, but never change.
+24:54
+It can't possibly change it because there's no facility in the API to change it.
+24:58
+So if I make a person? Sorry.
+25:05
+Like, I have no possibility for them to like, you know, get older or something like this because it's not available in the API.
+25:19
+If I want to allow for that, then I could allow for that so I could write a function.
+25:27
+But it's maybe that's not the right way to put it. Celebrates birthday or something like this?
+25:32
+And then what would that do? Well, that would try to. Do this.
+25:47
+And then oh, OK, well, maybe in that case, I should make this ah.
+25:54
+And that would allow this and then I could do and then this would be allowed if I didn't provide this method.
+26:00
+Then it wouldn't be possible, so I think that's the way to think about it, at least in Scotland terms.
+26:06
+It's about providing an API that allows the user of your object to change the state if they want,
+26:11
+but also not providing that if you don't want them to do that.
+26:16
+I was kind of thinking like like if you had person at to celebrate birthday, which obviously makes a mutual type because you can change.
+26:22
+Yeah, like is there a way to end your main function?
+26:29
+Say that like, actually, I want this specific person object that I'm declaring to be immutable, like I can't do anything on how I see.
+26:33
+So they can kind of like, do both. Yeah, I see what you mean.
+26:42
+Not as a key feature of the language. So it's not possible to say, like, I don't know what would you imagine like?
+26:47
+Lucky you fashion like free speech or something like this and say, like, OK, this is never a guy that doesn't exist, you can't do that.
+26:56
+I think the way you would do it if you wanted to do it is that you would make like you'd have two variants if the cost person.
+27:04
+I like cats, I've had an immutable pass, and then this one probably might take another person.
+27:18
+And then you could like wrap it around, so it would it would be slightly well,
+27:31
+it wouldn't be strange, but it would be it would feel like quite a lot of work to do it, I think.
+27:36
+And so then you'd have to do like immutable person.
+27:40
+We all pay. Something like this and then IP.
+27:45
+Wouldn't I celebrate birthdays, so this it's the sort of more of a design mechanic,
+27:52
+I think in order to do it, it's not unlike a thing that's built into the language to do free stuff.
+27:57
+Okay, thanks. Katherine. Hello.
+28:05
+OK, sir, I understand the difference between the VAR and value a variable in value, but.
+28:18
+The reason that we should use value valuable over variable for most things is, is it idiomatic or performance or memory thing?
+28:29
+I. Let me think, is there any performance there might be a performance?
+28:40
+Benefit, I wouldn't normally think about it that way, but I guess that might be because the compiler can say,
+28:49
+Oh, OK, well, I always like, for example, if you have a vowel.
+28:55
+Age equals 18. And then, you know, it's a vowel and you know, it's always going to be set to 18,
+29:03
+the compiler can go through and any way that you use age, you can just replace it with 18.
+29:10
+So that is a small performance improvement.
+29:16
+The reason, I think, is kind of more important is to prevent the possibility of like, say that I don't ever have a bar.
+29:20
+A dump was getting a bit busy now. So then it's like, and then I have some function that's like, do some complicated stuff.
+29:29
+And then. Does it make more sense that this was a field of a property of an object, then?
+29:43
+Yeah, then I print age and that this stuff in this function maybe is written by us on another day or it's written by another person.
+29:53
+Like, if that's in a really big programme, there could be anything happening there and it might change the value of age or it might not.
+30:02
+I mean, who knows what's happening? Whereas if so, at this point, I really have very little assurance about what the funding is going to be.
+30:09
+But I know that if I do this. And I know that this is going to be.
+30:19
+I know that there's nothing that could have happened in that that would allow
+30:24
+this to be modified because the programming doesn't allow it to be modified.
+30:27
+So that means if I'm trying to find out what's going on in my programme, either to know that it's correct or to find out the cause of a problem,
+30:32
+then I can just say, OK, well, I know that at this point, that's still going to be 18.
+30:39
+There's no need to go and look. It's like this other function to try and work out what would have changed it because like,
+30:43
+I know that it can't have been changed because the programming language doesn't allow it to be varied.
+30:48
+So especially in programmes that are doing much more manipulation of data or a much bigger and have many more things moving around,
+30:53
+being able to know that you don't need to look in a certain place because something can't possibly have happened,
+31:01
+it really cuts down your kind of search space of trying to look for problems.
+31:07
+So I think that's the main reason for me. It's about helping us to reason.
+31:10
+But there is a small performance, maybe a small memory.
+31:15
+Yeah, I guess there's a probably very small memory improvement and a small performance improvements,
+31:21
+but I think the main thing is about the thinking, the reasoning and the being able to more easily reason and debug your programme.
+31:26
+David? I was going to ask.
+31:38
+Yes, a little bit crackly, but we can hear you OK? OK. I was going to ask, you know how you were doing immutable?
+31:44
+This is that polymorphic is doing. Can you take more than one data type one list?
+31:50
+Sort of let me let me let me tell you so.
+31:58
+So this is but so you make let's make sure I've got your example, right?
+32:02
+So misplaced. Oh, nice. Give you any and future list of.
+32:06
+So you want to put in like Adam. Well, let's do this first, that if we put in these things and then I say to intelligence.
+32:14
+So the thing with Colin is infers the types of things. And so here you can say, OK, what's the type of this?
+32:21
+And it's going to say, in fact, I can tell it to let's explicitly show the type in the programme.
+32:28
+Don't have to do this, but you know, it can be helpful. So this is, oh, this is a mutable list of strings.
+32:32
+So if I made a different one. And I put in, you know, two and seven, then it's going to say, Oh, that's not allowed, right,
+32:39
+because you said it was a beautiful list of strings and we're going to tell me the error.
+32:49
+It doesn't want to show me a pop up, but basically it's not happy about that because it says,
+32:57
+well, you said it's for strings and it's not this needs to be increased and that it's OK.
+33:00
+But your question is more about, is it about mixing them? Yeah.
+33:06
+So if I try to make a M3? And let's not tell what Typekit has them, let's just say this is an M3, and I put Adam on seven.
+33:10
+It's like it's happy with which seems a bit mysterious.
+33:21
+OK. What's going on there then? So can we ask it to tell us, OK, what's the time with this?
+33:26
+And this is going secretary of star, so I would say any.
+33:33
+So basically, this is saying. This is a list which can have any kind of thinking.
+33:38
+The trouble with this anything is that you don't know what the type of any of the things are.
+33:48
+So when you come to read from that list, you don't know what any of the elements is going to be.
+33:53
+So you can do things like you could say, how big is a mystery, right? Print out.
+34:00
+The size of it, and it would have two things in it, and that would be totally fine, regardless of the type of anything that you put into the list.
+34:07
+But if you want to say like, get the get all the things out and add them up, so make a leap over the list.
+34:14
+If they were all numbers, you be able to add them up. And if you were, they were all strings.
+34:22
+You'd be able to uppercase them all. Maybe it's a mixture, then you don't know what the type of any of the things he's going to be.
+34:26
+And so you don't have the ability to do anything very specific about anything because you can say,
+34:35
+Oh, Element five, and it'll tell you, I wonder what it does, actually.
+34:43
+That's two and three Element 02. Under what type it's going to tell us that it is any right, so it says, Oh, this isn't any.
+34:48
+And then, OK, well, that's fine, but then I can't do much with that any like I can't uppercase it,
+35:07
+even though even though this is a string right at this point, it just goes well, it could be anything.
+35:12
+And so it doesn't allow me very many methods.
+35:18
+Which if it was a string like if I do this on. Yeah, he is from M Zero, and this would be a string.
+35:24
+And then I would get all the string methods.
+35:35
+So, so, so you can mix, but really what you're mixing, what you're doing when you're mixing is saying, well, this is a list of a very general type.
+35:39
+It's like this sort of common. Super Typekit say you will come on to talk about more about that later on.
+35:46
+But like the only thing that you can say that they are in common is they are any.
+35:54
+So that's that's what happens when you when you mix.
+35:58
+So in general, I would say try to avoid mixing because it isn't well, unless you only want to be very general.
+36:00
+Things like took it the list as a whole. It's not very useful for when you get the elements out.
+36:06
+Instant death, thank you. OK, I see if you dummy.
+36:14
+And I'm just wondering if you have a for loop.
+36:22
+Yeah. Like executing a function within the for loops recursive.
+36:27
+How do you return the recursive function?
+36:31
+So that question again, you've got a you've got a function with a full in it or a fully know, I have a follow up of a function in that time executing.
+36:37
+Yeah. A function I have defined and I simply want to return that function.
+36:46
+How do I do that? What do you mean by you want to return the function?
+36:52
+As in like. So it's a recursive function. Yeah.
+36:58
+And I have a list I'm looping through. And each time I look for it, I just won three times results of that function by calling a recursively.
+37:03
+So what's what's the problem is the problem that it doesn't kind of like return far enough?
+37:16
+Well, it doesn't. Well, the main problem is that it's saying I need to return on the outside and apparently return for isn't a thing.
+37:22
+So I'm just wondering, how do you return from before you understand that?
+37:31
+Well, I think I understand it sounds to me, so you've got like some.
+37:36
+Let's do this one quickly, just so you've got some leap right to something like this.
+37:41
+I mean, you said it goes over a list. Is that right? Guys over. Yes, it goes over this.
+37:47
+Last year. I am, too. And then you do something like my function with passing in the eye or something like this.
+37:52
+Yeah. It's just to my own. And does this function returns something?
+38:02
+Yes. Yes, it does. So you said that might be a recursive function, so might call itself and whatever, but eventually it will return some value.
+38:16
+Yeah. And then so, yes, so you can return this.
+38:25
+Maybe not from Maine. OK. Oh, I have to put this in another function.
+38:38
+OK, we'll get that. OK, so now it's saying that this thing should return it right.
+38:52
+Is this kind of thing, so then you have this problem down here. Yes, that's exactly what I got.
+39:01
+So, yeah, so basically what you're saying is that, OK, it's going to go through each of these values and it returns this.
+39:07
+But the trouble is, the compiler isn't smart enough to know that this will always.
+39:15
+Always happen, because what if M2 was empty, it would go around zero times?
+39:27
+And then it would go here and then you wouldn't have returned anything from the function.
+39:35
+So. If the yes, like if we if we did this right.
+39:41
+So you say, Oh, OK, well, I've got into two empty list. So this loop go around zero time, so we never return.
+39:49
+So therefore we are here.
+39:55
+And it says, but your function doesn't prove anything and you're not allowed to not return anything because you declared your function to protect it.
+39:57
+So this case, you need to return.
+40:05
+You could either return like a special value to say, OK, we got to a place where, you know, this is the special value that means the list was empty.
+40:06
+Also, this or something you might want to look into, which I think we'll talk more about in the future, which is that you could throw an exception.
+40:17
+She goes something like this. And what would this be?
+40:26
+You could throw like illegal state exception, which is like she shouldn't have got here.
+40:32
+So we'll talk more about exceptions in a in a future session, but that's that's a different thing.
+40:39
+But the main problem, the reason that there is the problem is that it's possible that this line
+40:44
+doesn't ever happen and then therefore you wouldn't ever be returning anything.
+40:49
+OK. Thank you. And, OK, let's take one more question from Kai.
+40:56
+Yes, OK, so it's about list again. OK. So basically.
+41:03
+I wrote something like I brought a function that demands a list as output, but I returned a mutable list and the programme seems to be happy with it.
+41:11
+Can you explain why? Can you explain why the programme seems to like consider mutable based on this assistance thing?
+41:22
+So basically, you wrote a function that does something and it returns lists.
+41:31
+Was it a list of something like a list of string? Yeah, it doesn't really matter what it was that led.
+41:36
+I repeat, I returned a mutual list of things to progressives to seems to be happy.
+41:44
+Something like this. Yeah. OK, so that's so the reason that that's happy and this is something that we talk about, maybe more.
+41:53
+My guess, maybe more next term. But so the reason that this is the.
+42:02
+Beautiful list can do everything the list can do, because List says, I'm a list and you can read from me, right?
+42:08
+You can create me and you can reach me and meatball list says I'm a list you can read for me, write me, read for me.
+42:15
+Oh, and by the way, you can add and remove stuff as well. So it's so, it's so miserable list like a tryout class of the list.
+42:22
+Yeah, I think that's one way to think about it.
+42:32
+So it's basically you said your function promises to return something that does the things that list does.
+42:35
+List says I need to be you need to be able to get up to get hammered.
+42:45
+It's right over that kind of thing. An immutable list does all of those things.
+42:49
+And so, yeah, we would say that it is a subtype.
+42:54
+And so it's it's a more like it, we would say, substitutable, because it does everything that list candy.
+42:58
+So yeah, we don't get in these couple of weeks. We're not going to talk very much about subtyping, but you can have a look under if we open this.
+43:05
+Yeah, so this is the place where it specifies it's just like a meatball list, like it's, as you said, like a sub, a child class or a sub type of list.
+43:18
+So anywhere that you need a list, you could use a mutable list instead.
+43:26
+So it's actually an interface rather than a rather than a class.
+43:31
+But I don't need to worry about that particularly, and we'll talk more about that in future weeks.
+43:35
+But that's yeah, that's the reason is that everything, everything that you need from a list is provided by multiple list.
+43:40
+But is there a way to convert a list to a bit of a list just by like career?
+43:46
+Like do you some functions don't this?
+43:54
+I don't think that you can do so basic. What's that like if you ever get this framework right?
+44:00
+So basically, you say you have got a regular list? Yeah. And you want to say like, Oh, I'd like to make it into read immutable list.
+44:04
+Yeah, I don't think that there is a like, Oh yeah, there is here to mutable list.
+44:13
+Oh, right. Well, I was going to suggest. But now I thinking about it, it might not work.
+44:19
+I was going to suggest that you would mutable list of and then eminent, but actually.
+44:25
+That's not going to be right because. This type is going to be wrong because it's going to say, oh,
+44:32
+that's a mutable list of lists of strengths, which is not the same as this, so that doesn't work.
+44:38
+But yeah, if you do dots to multiple list.
+44:43
+That should do the trick for us. Yes.
+44:49
+One of the things that you see that and hopefully everyone takes this is that I suppose I couldn't remember.
+44:53
+So you just sort of type in roughly what you want to do.
+44:57
+And one of the nice things about the idea is they can say, Oh, yeah, probably you mean this thing?
+45:01
+And then you got, Oh yeah, that it's good to go with that one.
+45:06
+So it's very easy to explore the language, even if you know if you've got an idea of something to shoot,
+45:09
+you think probably should exist, like just have a look for it like that.
+45:14
+And that's a good way to find it. Cool.
+45:18
+OK, great, that was always the question. That's great. I was happy to take your questions.
+45:24
+Let me let me show you one more thing and then we'll take a quick break and then I'll get into talking about some other stuff.
+45:28
+So let me show you in the slides.
+45:38
+Yeah, just a follow on from this, actually, as we've been talking about lists and elements of lists and vowels and vowel.
+45:40
+So the thing that I want to talk about,
+45:47
+Catherine hinted at this a little bit like how does the memory of the programme get laid out when we create various things in the programme?
+45:50
+And so I think if you understand this as well, this will help with understanding about the nature of it being mutable or not.
+46:00
+So we have two areas of memory that are affected when we use things in our programme.
+46:07
+One of them is called the stack. And one of them is called the heap.
+46:12
+And when we make, you know, a new light, we run a new line of code and it says vowel,
+46:16
+a something like the way to think about it is, as I was saying, like, OK,
+46:20
+foul a is the name for this green box over here, which is created as an object,
+46:25
+and it's going to have some other objects in it which are the individual strings.
+46:31
+And Vowel B is a name for a different object. And that's got some different strings in it.
+46:35
+So there's a whole bunch of different objects that get created him, but they get created.
+46:40
+All the objects get created in the area of memory that's called the heap.
+46:45
+So whenever you create an object and in Coraline, almost everything is an object.
+46:50
+So whenever you create any piece of data, it's going to be on the.
+46:56
+But the reference to it, like the name, the fact the value is going to be on the stack.
+47:00
+So for example, when we create a string is a string that just says vowel, as is the string hello.
+47:06
+So when we do that on the stack, so as we execute this line, it says, Oh, right.
+47:13
+It's a new name and you value in scope. We've introduced that into the programme by running this line so that on the stack.
+47:17
+OK, well, I'm going to put the value the name s,
+47:24
+and then it's going to surprise they're going to a point where it's going to refer to well on the heap,
+47:27
+going to make the object that represents hello. And then that's going to appear at the heap at a certain memory location.
+47:31
+So the memory manager inside the virtual machine is going to create the objects.
+47:39
+It takes responsibility for that. So it says, Oh right, I need to make a string. OK.
+47:44
+Right? What's what's in it? Are these letters. I can't put those letters inside and then says, OK, right?
+47:48
+I've put that into this bit of free memory that I knew was here, and that is that location one two three in this case.
+47:53
+So it could be anywhere that it likes. And then what gets put onto the stack is, OK, this string s is that memory location one two three.
+48:00
+And therefore, whenever we need to use it, we can just go, OK, why can't we need to do something with S?
+48:09
+So we go to the stack and we look for s OK, what was s o s is that one two three?
+48:15
+So then we can traverse into the heap and find the object that we're looking for.
+48:20
+So this is the way that it works, kind of as we assign each different value.
+48:26
+And so if we do the case where we create two lists, then we're going to say, OK, well, the first one is List A.
+48:31
+And that's a list of strings and so the memory manager is going to create.
+48:39
+In fact, it's going to create four objects here. So it's going to create a string object or cat.
+48:43
+It's going to create a stream object for a dog. It's going to create a string object for bird.
+48:47
+And then it's going to create a list object and it's going to put those together. And then on the stack, it's got this.
+48:52
+OK, well, I need a new value called a so that we can refer to things by the name a further in the programme.
+48:58
+And then it says, OK, where did I put the list? I put the list at nine to three two.
+49:04
+So on the stack, I'm just going to put nine two three two as the address of the list.
+49:09
+And then whenever we're going to refer to a, it's going to follow this reference.
+49:14
+So sometimes we call it a pointer. Which goes to this area of memory and says, OK, yeah, this is where the object is.
+49:18
+So if I want to look at the second element, enlist a gun, finalist a, then ask it for the second element.
+49:25
+The same thing with B when we create the list B. Then it's going to do the same thing this time is going to create a list object.
+49:32
+It's going to create two strings. It's going to put those two strings inside the list.
+49:42
+And then in fact, it's going to be on the stack.
+49:46
+Great. This element be used the address from that green box list object that he created, which was nine four four one.
+49:50
+And that's what it puts on the stack. So you never get whole objects on the stack.
+49:58
+You get just the references to where things are in the heap.
+50:03
+And so the heap can get quite big as it expands, as more and more objects get put there as your programme runs.
+50:08
+That's totally fine. Totally normal. And then your stack will grow as more things are declared in your in scope in the programme.
+50:15
+But as they go out of scope, then they will be removed as well.
+50:24
+So let me finish a function. All the local variables within that function are then removed from the stack because they're not visible anymore.
+50:27
+Once we finish that function. And so the stack you'll see kind of goes up and down and the heat tends to grow.
+50:36
+But then after a while, it gets cleaned up automatically in the background for us when we don't need those objects anymore.
+50:44
+So I'll just show you one more thing in the debugger, and then we'll take a little break.
+50:51
+Yeah. Let's just show you this here. So let's just do like this kind of examples.
+50:56
+So yeah, this example is fine. So let's just change these back to you.
+51:01
+Matched the slight. So if I do this and I showed you a little bit in the tea bag earlier that we can see what's happening.
+51:11
+Yeah, let's call another function here, actually. It's.
+51:32
+What's wrong with that? I missed a court.
+52:15
+So let's do something that is going to run this main and then we're going to call this other function, which is called F.
+52:18
+Let's make one more thing here.
+52:26
+Something like this, so I'll debug this programme and we can just step through and see how the stack and the heat are changed as we're running it.
+52:36
+So as we go onto this first line, you'll see that here we've got a an eight points of this list and inside it's got zero.
+52:50
+Sorry, not zero one Adam and Eve at position zero one. B doesn't isn't visible yet.
+53:00
+So then when we go to the next line? Now, B is made visible, we can see that we can open it up, we can see the memory locations.
+53:06
+So this first one is ATO. The second one is that 85.
+53:15
+And then we can see that, and if you compare that to what's on the slide, so you see B with the 85, I was at 81.
+53:20
+These are the objects with what's inside. Now we're going to go into function F and so much, I'm going to use a different thing in the debugger.
+53:27
+Step into you, say, go into this call. And I can see when I went into F, the stack is now empty, and again, it's not empty.
+53:36
+You can actually go back down and see the previous ones, but we're in what we call a new stack frame.
+53:49
+So this is a frame that's just for this function. We're going to put the variables for this function into this part of the of the
+53:54
+stack might talk more about that next week in more detail if people are interested.
+54:00
+So here, let's introduce a new one. Here's a list of size two.
+54:05
+It's a eight on one. It's got these things in it. Here we go, another list.
+54:09
+And here's a value, which is just going to be 12, we're going to see that one is the 12th.
+54:15
+This one, it doesn't print the memory location that's just so that you can see things more neatly
+54:23
+in the debugger also with the strings like it doesn't print these as memory locations,
+54:29
+but they are objects just easier to see it that way.
+54:33
+So then we've got these ones. And if we look further up the stack,
+54:37
+we can see the ones that are still there from when we were in the previous function because we've now gone one level deeper.
+54:41
+And then when we go continue, get back here.
+54:47
+This is going to say, OK, right now, that functions finished.
+54:53
+So actually, all of those names were those values were removed from the stack because we can't use them anymore in the programme.
+54:56
+We're now here now. Now we're going to use this one again. Now we're going to have see you again, which we were previously used the name.
+55:03
+But now see refers to this 21 up here because now we're putting that onto the stack, even though we previously used it for something else.
+55:09
+So as we go deeper into the nesting of functions, we have more and more of these frames that we put on.
+55:19
+And then as we go back, we're going to remove those.
+55:25
+But the key thing for each these whenever we introduce a new value or a variable like, I can do the same thing with files.
+55:28
+Exactly the no change for this exactly the same thing would happen.
+55:34
+What's going to happen then, is for every name that we introduce, I'm going to put something on the stack.
+55:39
+We're also going to create the relevant object in the memory, in the heat.
+55:44
+And then we're going to get the address within the heat of that particular object.
+55:48
+I think. And then with that, click the object and then we're going to put onto the stack.
+55:56
+The name of that object so that we can refer sorry to name with the relevant memory locations.
+56:03
+So whenever we want to find that particular object by name, but in the stack, find a memory location and go across.
+56:09
+And so that's why when we have a VAR. Then I can do something like I can say, see is equal to Dean.
+56:17
+Does that make sense, maybe the studio around the sea? And this would say, OK, right now, let's change what is in memory location.
+56:31
+D on the stack and copy the van, the memory location C insert, so if I actually debug this one now.
+56:42
+Let's run that again. So now we're going to stop at this point where we see see.
+56:52
+C C, C C is 81. Now we see which is that to you, and if we open these up, then we see January,
+57:02
+February in, see Monday, Tuesday day and then when I go over this line, I say D equals C.
+57:09
+All that's going to happen is that we're going to change what's on the stack. So you'll see that D equals C.
+57:17
+Now they both point to 81, so they both point to the list that is the same object to 81.
+57:26
+And they've both now got January and February. But we didn't do, though, was like, make a copy.
+57:33
+They both just refer to the same object on the heap.
+57:39
+81. So like, how if you wanted to get the value of a but is at the bottom of the stack, do you how do you access it?
+57:43
+Do you pop everything off at the on top of it and then push it back on?
+57:56
+You don't have to as long as as long as something is visible in your function.
+58:00
+So like, say, we had this situation where we run mean fast and mean defines a and B.
+58:06
+So at this point, let me stop debugging. Maybe a second like this, but I can't do.
+58:12
+I can't print a. Because he said so I don't know what he is because he's not in this frame.
+58:18
+He's in the previous frame. So what I need to do is finish running this function.
+58:26
+And then when I finished running this function, like then we'll finish that function and we'll come back to this point.
+58:32
+And now I can print because as in this scope here, so is not visible in sight.
+58:39
+But to actively like if I'm within the frame, I don't need to act like what the compiler does or write about the runtime does.
+58:47
+It just goes and has a look in the stack. It doesn't have to work through one at a time.
+58:54
+It can have a look at anywhere further down the stack because it's just basically
+58:58
+like a list of it's almost like a list of pairs of names and addresses.
+59:02
+OK, thank you. Yes. So it doesn't have to do that work of popping off and pushing on it, that's just how it's gradually building those up.
+59:08
+Katherine. So, for example,
+59:17
+if we assign a value of something to mutable list and then assign that to a variable since they both refer to the same object in the memory,
+59:21
+if we call it like, add an element to an immutable less on the variable which devalue change like the value one.
+59:37
+Yeah, good question. Let's just try it. So basically, you're going to say we're going to have to we're going to start off going to have a mutual list.
+59:50
+For a just go, which I can't spell. You took all this and then set this one, and then the second one is just going to refer to the same object.
+1:00:01
+Is that what you meant? Let's do this, let's pretend, and then.
+1:00:13
+So that's print out this and then. Print the same thing.
+1:00:29
+So we would expect that those tools would both look the same because they both refer to the same object.
+1:00:39
+So then the question is if I add something, actually, let's just run it first.
+1:00:46
+So they're both the same age is the subject, be referred to the same object because they both refer to whatever that memory location is.
+1:00:55
+So then if I say a dog at. I'm sorry, I need to take this time out because it's not obvious.
+1:01:03
+It's a beautiful list. Then I can add Bob here, and then let's print both of them again.
+1:01:11
+So everyone have to think to yourself about what it's going to print. And so what you see is that because they both referred to the same objects.
+1:01:28
+When I add something, I say, oh yeah, adding into the one that's referred to by a.
+1:01:42
+Then that's still the same object for both of them. And if I can, then Debbie adds.
+1:01:49
+This and I'm going to print them again. So basically, because I've only got one list on the heap, it's just got two names.
+1:01:58
+It doesn't matter which name I used to refer to it. They both refer to the same object.
+1:02:12
+And so when I mutate the object by adding something, it's always the same object.
+1:02:18
+So then when I print it, I always see the contents of that list because there is only one list in this case.
+1:02:22
+So how would you make it so you can only so that you can change one of them, but not the other?
+1:02:31
+You'd have to have a different list, basically. So you could what could you?
+1:02:38
+All right. So what you could do is you could say, let's say that B is a tax plus.
+1:02:45
+He's another person, Steve. And then if we do the prince.
+1:02:56
+Let's make this a bit simpler again.
+1:03:05
+So now I'm going to create a list A and then I'm going to print a then I've got a B is a plus Steve, and then I'm going to print press A and B.
+1:03:09
+And then we get this, so basically then it's made you a new object.
+1:03:23
+When you did, plus and Plus is going to say, OK, add this one on to everything that's in a bit, don't change a make a new object.
+1:03:30
+That's a new list. So then on the heap, you're going to have two different things.
+1:03:38
+That's just debug this one so you can have a look. So now you're going to see he is a series at seven, nine, eight sets of size two.
+1:03:43
+Let's keep going. Now we've got be. Which is the result of doing aid plus, which is a different object, so this one's eight 10.
+1:03:56
+And this one's got a size three. So when we do this, this and this, but so now we've got two objects on the heap instead of one.
+1:04:06
+So that's the difference between doing plus, which creates a new object and add, which just takes the object as it is.
+1:04:14
+I assume when you do like plus the the reference, so when the list references like what's in,
+1:04:23
+for example, the first index, that reference it's not the same for both list.
+1:04:31
+Do you mean so like they did sort of like sort of like B has one more element than a, yeah, they share the first aid, first element.
+1:04:43
+So I assume like if you change the first element of a that's not going to change the first element of B.
+1:04:54
+If you change the first element of a well, let's just try and see what happens.
+1:05:05
+I think I understand what you mean and I think I agree with you.
+1:05:10
+Let's just check it so you want to say like you make these two things so that they are.
+1:05:13
+So that we have set it up like this,
+1:05:21
+so we've got a and B and you want to change things so we can print them again and then we're going to print them again.
+1:05:23
+But you want to change. Or add something in to.
+1:05:33
+One of them, but not the other one. That is even harder at.
+1:05:40
+At this point, does that do you what you want or.
+1:05:53
+Well, I was just I was just wondering like so and within the list object, when you have like elements of the list.
+1:06:00
+You do, they said the element, other elements stored like in the heap separately and then you have references to each element in the list.
+1:06:11
+Or are they like inherent properties? Oh, I understand.
+1:06:21
+Yes. So it's like the first case that you said so there. And yeah, let's just write this one example, then we'll take a break.
+1:06:25
+But yeah, so basically, you'd say this, let's pull this out. So what happens?
+1:06:34
+Yeah, well, it sort of depends what you do, really. But do you see if you do this?
+1:06:51
+So in this case, we've created.
+1:06:58
+Two objects to strings, we've got to think we've got these two things are on the stack, these two things are on the heap.
+1:07:03
+And then we've made two lists and we've said for each list, let's construct it with Adam and Eve.
+1:07:11
+But those are two references to the same object.
+1:07:18
+So we've put the same objects into both the lists.
+1:07:22
+So although I drew it as a green box with the strings inside, actually what we've done is to say, let's make two strings and let's make two lists.
+1:07:26
+And each of the lists contains a reference to the same two strings so that it's not creating extra strings.
+1:07:35
+Let's do. If I did something different, let's do.
+1:07:47
+Honestly, to do this, so if I did this and give them a name.
+1:07:54
+Like, each time I do this, I'm creating a new object because I'm calling a constructor, so that creates.
+1:08:12
+So then if I do this one? Even though this person happens to have the same name, that's a different object.
+1:08:18
+And this one? Is obviously a different object again, so it kind of depends if you put the same object into both lists,
+1:08:26
+then it will be the same one and it will be shared we referenced by the two lists,
+1:08:37
+but if you put different objects into the two lists, then they'll be different.
+1:08:42
+So it kind of depends how you create things.
+1:08:47
+OK, so when you do like the Dot Plus, it's putting the same like objects in or is it like putting in like a copies of the objects so.
+1:08:51
+If that makes sense, that makes sense, I think we should try it, because then we'll be definitely sure.
+1:09:02
+So this is person one. I think it's going to put the same ones in.
+1:09:08
+I don't think it's kind of new copies. So let's see.
+1:09:14
+So in this case, we want to have a.
+1:09:21
+Is a plus another person?
+1:09:28
+Charlie, like this and what you want to say is what so you want to say a zero?
+1:09:35
+And A0. Are they the same yet?
+1:09:42
+So that's to. Better names today.
+1:09:49
+So let's just see. I think it's going to be the same.
+1:10:06
+So we get to this point, are we going to put P1 and Peter in to list a. And then we can see that P1 is 797 and P2 is a seven, nine eight.
+1:10:17
+And then we're going to add this thing into AA, and then we're going to get the first element out of a.
+1:10:35
+And the first element of AA. And so we should have first element and second element down here.
+1:10:41
+And they are yeah, they're both the same object, so they're both this one, seven, nine seven and this one is also address seven nine seven.
+1:10:49
+So yes, it's sharing those. It's not creating new copies. OK, so does that mean like an air like linked?
+1:10:57
+So like if you. Or not that no air and air not linked.
+1:11:05
+They just happen to share the same contents.
+1:11:13
+So if you. Like, OK, so like if you change the first, OK, OK, I think, yeah, I think I understand.
+1:11:19
+Yeah. So you you changed. What for if we did that?
+1:11:29
+Can we do that? Let's do a.
+1:11:33
+Zero. Is. It's.
+1:11:41
+Has to be mutual, OK? Then in this case, we should.
+1:11:50
+Only up that should only make a difference to at least a not to list air.
+1:11:55
+So in fact, that's just both at the end. So I didn't print very nicely.
+1:12:02
+Can think about that in terms of what we saw in the videos, but.
+1:12:21
+This one? Yes. A. Previously, so you should have the new person in the first element.
+1:12:27
+So the first elements are different. But the second elements are the same because that that left from the original vision.
+1:12:40
+Yeah, that makes sense. Thank you. OK, great. OK, there are more questions coming in that which is great,
+1:12:48
+I suggest we take a quick break for five minutes so people can stand up refresh and things, but then always happy to take more questions.
+1:12:56
+I've got one more. Yeah, one more thing that I want to show you in a slightly bigger example, but that would be OK, time.
+1:13:04
+So let's take a break for five minutes. Come back and then I'll take any more questions, and then I'll show you the other example as well.
+1:13:11
+OK, so I just tidied up the example we were just doing just to make it a little bit clearer, maybe he's going to delete this pan out.
+1:19:17
+So just to run that one one more time, just so you see what's happening.
+1:19:25
+Well, we're going to start out with as we've made to people, we've put them into this list a.
+1:19:33
+Prince did this one. Then we've made List B, which is list a plus a new person called Charlie, and then I printed A and B C C A is unchanged.
+1:19:40
+B now has Charlie in it. Then we updated Element Zero off List A to B David,
+1:19:53
+and then we printed them both again and then the list a the first element is now David rather than Alice.
+1:20:01
+But in this B, it's remained unchanged as Alice, Bob and Charlie.
+1:20:08
+And then I was going to show you one more thing, which is.
+1:20:15
+If I then. Call another function.
+1:20:20
+I'm going to pass list a into another function, which says, add someone.
+1:20:31
+And then sorry, that's not the right thing I meant and not plus. So we're going to do is let me define find it like this.
+1:20:38
+We're going to make a function that takes a list, which is a mutable list, and it just adds someone to them to it.
+1:21:01
+So we're going to do that here and then we're going to print these out again.
+1:21:07
+And so the thing to think about then, is. If we know what list A and B are at this point like this, and then we call this function passing in,
+1:21:12
+list a list a just does this, then what's going to happen after we finished run functionally?
+1:21:22
+And so I'm going to run. This whole thing.
+1:21:30
+And you'll see that. What's happened is we've passed in to add someone to the reference to list a that list tiny objects.
+1:21:37
+And this is that reference.
+1:21:56
+So it's the same reference, so when we go ad, that's going to update that same objects, even though it's now got a new name.
+1:21:59
+So on the stack, we're going to have a new name as we go into the new function, but it's going to reference the same object.
+1:22:05
+And we're going to have this extra person and that's going to have already updated that object on the heap.
+1:22:13
+So then we're going to come back out onto the calling function and we're going to print them out and we'll see that that change is still there.
+1:22:19
+So that's not a temporary thing within the nested function. We've updated the same object, and that's because in Scotland and in Java,
+1:22:27
+we have this idea of a slide past by reference that says when I call another function and I pass as a parameter,
+1:22:36
+a reference to an object on the heap like I'm actively passing in B is 9:51.
+1:22:44
+Then when we read that within the function and it's going to be OK, right?
+1:22:52
+What object my operating on? Oh yeah, still, this one, 941, that's going to be this.
+1:22:56
+I'm going to add in an extra object over here. And then when we return, that magic object is going to be modified already.
+1:23:02
+So that's something to be aware of as in terms of the semantics of Kopplin and Java when we come to that is that that's how it works.
+1:23:09
+So when we pass an object reference into our function, we're not creating a copy of the object.
+1:23:16
+We're just saying, OK, use this object. And so you give them the name and the reference to it, and then it's looked up from the stack into the heap.
+1:23:22
+And then we operate on that object within the inner function.
+1:23:31
+And then when we return, that's, you know, that object is still there on the heap and it still may well be and it may well be in a mutated state.
+1:23:35
+I think I'll come back to that next week and recap it in a bit more detail. But that's a useful thing to know about.
+1:23:44
+Let's just check for us any more questions. David?
+1:23:51
+Oh, yeah, I was going to ask the thing this was about,
+1:23:58
+this is what to do with the issue with the valet in developing the same and then them being allocated to the same memory address.
+1:24:00
+Sorry, David, got cut off for a sec. Just say that again about Valve and Valve B being in the same saying the same.
+1:24:19
+Assigned to the two different names for the same object. All right.
+1:24:28
+Not hearing anything right now, let's have a quick chat.
+1:24:52
+Oh, sorry, my microphone was off. Oh, OK, sorry. Yeah, so it's here.
+1:24:56
+So I think that without value invaluable is no way to allocate. But is there a way to say the same things you create to create an array you say create
+1:25:00
+less value a save a and then is there a way to allocate B to a different memory address?
+1:25:08
+Uh. What do you mean by that last part, so you eventually say, yeah, say the List B equals list A.
+1:25:17
+Yeah, yeah. Yeah. And then. Not hearing you again now.
+1:25:26
+So basically, all you you can do is you can operate on the names that you have.
+1:25:46
+So if I have List B here, I can't say let's be equals like something else because list B is a vowel.
+1:25:50
+OK. So it's nothing.
+1:26:04
+So the reason for it is it's nothing to do with the objects. It's because I'm sorry, I just used to be.
+1:26:10
+It's because this is a foul, so you can't reassign it. So if I might be into a VAR.
+1:26:20
+Than I could. Why is it not happy? Oh, they're supposed to be person to person.
+1:26:26
+Then I could say, oh, right, yeah, reuse the name began to point to a new list that would be all right,
+1:26:35
+but only if it's a valid and it says no, because I can only.
+1:26:40
+Hi, yeah, thank you. Right.
+1:26:48
+All right. Um. Cool.
+1:26:52
+OK. So I think I should move on this one more main topic that I wanted to talk about today.
+1:26:55
+And I saw a couple of people hinting at it in the chats.
+1:27:02
+And that's the idea of encapsulation, so this is more of a design idea about when we are building idea, designing our classes and building objects.
+1:27:06
+What things do we want to make available to other people to call other objects and other classes to call?
+1:27:16
+And what things do we want to hide away inside? And there's two reasons that we would want to do this.
+1:27:23
+So the first one is about making things conceptually simpler.
+1:27:30
+Like, I'm thinking about abstraction, making it easier for people to work with our code because when they pick up a person and they think,
+1:27:34
+Oh, look good as a person, I wonder what I can do with it. We just give them just the API that they would need nothing extra.
+1:27:44
+Just the things that are the minimal set so that it's simple for them to understand.
+1:27:55
+So as soon as you come and you see, all right, this person thing, what can I do with a person?
+1:28:00
+I just want to press dots and have a list of all the things that a person has.
+1:28:06
+All right. A person has a name. OK, great. If a person doesn't have very much else other than a name.
+1:28:11
+So if there are things that are internal details that you know how to functions or something like that,
+1:28:17
+they're just they're not important for other people to be able to call in order to understand what our object is.
+1:28:23
+So I want to hide those away. I don't want to provide those to be explored.
+1:28:29
+And so I want and also I want to make sure that the things that are exposed that other people
+1:28:36
+could call match up conceptually with their idea of what a person or something else should be.
+1:28:41
+The second reason that I want to do so, that's about making it easier to model in your mind and to comprehend another
+1:28:49
+programme or to understand what's going on or to think conceptually about things
+1:28:56
+really is to make sure that we can model the world cleanly and make it make
+1:29:00
+our programme a good model of the things that actually happen in real life. The second reason is more about programme maintenance.
+1:29:04
+And so this is more about saying, if I make something that is available and someone else calls it in their part of the code,
+1:29:13
+then if I want to change it later or even delete it, that will cause a possible compilation error in someone else's programme.
+1:29:23
+And that will either cause them to be angry with me because I've broken that programme,
+1:29:30
+or it means I have to go and do some work to fix it up for them. They have to do some work.
+1:29:35
+Or maybe in a company situation, it might mean, Oh,
+1:29:39
+I can't even make that change because or say that you are making an open source library and you published it on GitHub and you said,
+1:29:42
+Oh, I want to actually in the future, I want to delete this helper method because it's not very useful.
+1:29:50
+I want to do things in a different way. If people have started to call that helper method for some reason in their code,
+1:29:55
+then you can't do that because then in your new version, all of their code will be broken.
+1:30:03
+So as soon as we've made something available, we have to think that other people are going to start calling it.
+1:30:08
+And that is like a promise that we're going to keep it there forever. And that means that we don't.
+1:30:13
+We have quite restricted in what we can change in the future,
+1:30:18
+especially in terms of renaming things, changing types, changing time signatures, deleting things.
+1:30:21
+So in order to keep the option open for us to be able to change our mind and design things, perhaps in a better way,
+1:30:28
+maybe a more optimal way, maybe a way that just in general or models develop better in future.
+1:30:34
+We'd like to have a mechanism by which we keep those things hidden away, so no one else knows about them, so they can't call them.
+1:30:41
+And then as long as we kept them what we would say encapsulated,
+1:30:48
+then we have a licence to change them in the future, and no one else needs to know about that.
+1:30:51
+That's an internal thing. And so we can change it.
+1:30:56
+And nobody, no one else needs to know, and they don't care about that. And that gives us a lot more flexibility in being able to update our code over
+1:30:59
+time because we haven't got any clients who are relying on particular elements.
+1:31:07
+But in order to make sure that that's the case, then we want to use a mechanism of the programming language to enforce that.
+1:31:13
+These two things are put in place. So firstly, to help with the modelling and secondly, to help with preserving things for future modification.
+1:31:19
+And so the main. So the overall concept about this is encapsulation, you know, talk about this a bit today.
+1:31:30
+I think we'll talk about it maybe a bit more this term and certainly next time
+1:31:35
+you'll talk more about this kind of thing as we move into Java and big our design.
+1:31:40
+But the main mechanism that we have for dealing with this in Scotland is the notion of visibility
+1:31:45
+and visibility modifiers and particularly the ones that we'll talk about are public and private.
+1:31:52
+So I think some people mentioned some of these things in the chat. So maybe they're familiar to you a little bit from other languages.
+1:31:58
+But really, there are ways of specifying a visibility for either a property or a function or
+1:32:05
+a method that means where can it be accessed in the remainder of the programme?
+1:32:11
+So I'll show you a quick, small example. And then maybe if we've got time, yeah, we should have time.
+1:32:17
+I'll build up a slightly larger example to show you how that works and how we can think about it in our design.
+1:32:22
+So. That's just.
+1:32:30
+Fix this one, it compiles, but let's make a new example. So in this case, let's make a new example.
+1:32:38
+Yeah, actually, maybe I'll start a bigger example. Let's do an example of to do with hotels.
+1:32:57
+So you can imagine if you were writing a piece of software to do with the management of hotels,
+1:33:04
+you might have a model of what things in the world need to exist.
+1:33:09
+And so you can might have something to represent a hotel, maybe something to represent a room, maybe something to represent a booking.
+1:33:14
+Lots of different conceptual things that you can think about in the design that we don't want to translate into the code to begin to write.
+1:33:21
+And at the same time, we want to think about what things are should be publicly accessible, what things, for example,
+1:33:30
+if you think about the real world, which should someone outside the hotel being able to ask from the hotel or ask them to do something.
+1:33:36
+And what things are really internal and need to be managed internally?
+1:33:43
+So if I have a hotel, that's. Define a new type, and maybe we'll give it a name.
+1:33:49
+So I'm going to define this as a new class.
+1:34:00
+I'll just put this here and then we need to be able to give it a constructor parameter that says the name of the hotel.
+1:34:01
+And then let's just try and print the hotel to start with.
+1:34:13
+And so, you know, if you've watched the recorded video is that if I just print it like this, it's not going to print very nicely.
+1:34:22
+It just prints with the name of the type. And the memory address.
+1:34:31
+And so then I want to say, OK, well, let's override the default implementation of two string to use this name that we've specified.
+1:34:39
+So do you find override? From.
+1:34:46
+To string. Returns a string, and let's do the.
+1:34:52
+Name. Hotel, but you see the OK in this case, I can't use name here because it's just defined like this, I need a property.
+1:35:01
+So that's the foul name because. I'm.
+1:35:12
+And because we could do this, all we're doing here is taking the constructive value and assigning it to the property.
+1:35:22
+I'll just do the short cuts where we do this. So just defining the property inside the construction as well.
+1:35:28
+So hopefully this prints more nicely prints down here. One thing you'll see here is an underline this says it could be done as a string template.
+1:35:38
+So this is just a neater way to not to do a string processing when we have variables without using the plus.
+1:35:47
+So he can do this. So we just reference it with a name and then it will just print the same thing.
+1:35:54
+So that can be neater in some occasions. But the thing I wanted to think about was, is the name something public or is it private?
+1:36:00
+So at the moment, we've defined it as foul name, and the default in Scotland is that everything is public.
+1:36:09
+So that means that if I have a hotel, I can refer to the name property here and if I can refer to it anywhere,
+1:36:18
+like even if I make another another file. And I.
+1:36:26
+Something like this. Right, I can see that in another file, and even if I made another package, I could see those things in there.
+1:36:44
+So the default is public, which means you can access this from anywhere.
+1:37:01
+If I want to make it private, so I want to encapsulate it and say this is not to be revealed.
+1:37:07
+Then I can. Well, first of all, I can. Let's put this back so that I.
+1:37:13
+Don't declare the valley here.
+1:37:20
+So if we do the more longhand, so I can say here, this is a private foul, and that means that I'm not allowed to access it like this.
+1:37:26
+That doesn't compile if I tried to do that. Similarly, if I did it in another file that wouldn't compile, I'm not allowed to access this.
+1:37:34
+And in fact, even if I press Dot. Don't even see this property.
+1:37:41
+Not provided to me as a way, as I'm exploring the cost, see?
+1:37:46
+Oh yeah, that's inside. I can't see that. And as I say, that gives us a licence to change these things in future.
+1:37:50
+So. The other thing that we can do is if we want to do this is,
+1:37:55
+do you ask same shortcuts where we did vow that we can actually put the private up here as well?
+1:38:01
+Automate this, so that's a shortcut way of doing it if you're defining your properties like this and you want to make them private.
+1:38:08
+You can make them private like this, and that means say.
+1:38:15
+Here it doesn't appear. This makes and in general, I think it's a good idea to make the properties private, particularly if they are immutable.
+1:38:21
+If you had a VAR property, I would definitely make that private. If you have a valid property, I'd still normally try to make it private,
+1:38:33
+although it's not always necessary because sometimes you just want to be able to read something easily.
+1:38:40
+But in general, I'd say try to make things private if you can.
+1:38:46
+That's the general rule, and you'll see that it makes more difference to the API when we talk about methods.
+1:38:49
+So let's think about two things that we might want to be able to do with the hotel.
+1:38:57
+We might want to book a room. And while some of you might be able to do a hotel, how about sight order cleaning?
+1:39:03
+So these are two things that you know, you might be able to do if you had a hotel. You might be able to book a room in the hotel.
+1:39:34
+You might be able to order cleaning of a particular room. All the rooms when the guests leave and arrive.
+1:39:40
+If we're outside the hotel, we are a customer. We're in like another another business or a private client.
+1:39:46
+Makes sense for us to be able to book a room. So if I know about the Hilton hotel, then maybe I should be able to book a room.
+1:39:52
+So it makes sense for that to be a public method in the API.
+1:39:59
+So that's something that I can do. It doesn't really make sense if I'm outside the hotel to be able to order cleaning.
+1:40:03
+I shouldn't really be able to say, Oh right, go and do cleaning and room 17.
+1:40:11
+That's something that perhaps the duty manager, someone inside the hotel ought to be able to decide when that happens.
+1:40:16
+It shouldn't be for clients outside the hotel to have access to it.
+1:40:22
+I trigger this to happen, so I'd like to hide that away and we can do that in the same way.
+1:40:26
+Or I can say that this is a private function. And now, first of all, if I tried to do it, it doesn't compile.
+1:40:31
+And as with the properties, when I try to explore the API of hotel by just pressing Dot here, I can see that.
+1:40:40
+What can I do with the hotel? I can book a room, but I don't see the option to order cleaning.
+1:40:47
+It's that hidden away. So that's a private thing. So conceptually, that's something internals.
+1:40:52
+I don't want to show that in the API, whereas this one, that's something that I would want.
+1:40:58
+If you were writing a travel website application then or a holiday booking,
+1:41:03
+you'd want to be able to say, All right, I've got a hotel, let's book a room. That's the thing I want to have in the public API to call from outside.
+1:41:09
+So again, I'd say,
+1:41:17
+be careful about what you put into the public API because once someone else writes a holiday booking application that starts to book a room,
+1:41:18
+that means I can't change the signature of this method. This is going to change what they're going to stop their code compiling.
+1:41:28
+So I need to keep this method with the signature basically from now on,
+1:41:35
+or at least after my first release of the code or the first time I've checked it
+1:41:40
+into version control because other people might be relying on that public stuff.
+1:41:44
+So if I want to keep the option open to change this so they return something different or takes a different set of parameters,
+1:41:48
+I'm best off keeping it private as much as I can because that means no one else can be depending on this.
+1:41:56
+It can only be called. Within this narrow scope.
+1:42:02
+So, for example. Here I can call can order a cleaning within sight within the hotel.
+1:42:06
+So like, let's have a function. I don't know what you have in the function.
+1:42:15
+Cleaning router or something? And here I can call order cleaning so I can call private things inside the class.
+1:42:25
+So insight, if we're going to do that, all right, maybe like. How about if this was daily cleaning?
+1:42:36
+And this was. Clean a room.
+1:42:45
+Like this thing called this, but I can't call either of those things from outside.
+1:42:50
+So if I got this? I can't do daily cleaning or how to clean a room like those things aren't available.
+1:42:55
+So that's what private is really doing for us, hiding those things away, giving us the option to change this without our calling code needing to know.
+1:43:03
+So the general rule of thumb, I think, is to make things private, if you can and then just to expose the public API,
+1:43:11
+that makes sense in terms of modelling and also in terms of just giving other objects or
+1:43:17
+other callers the functionality that they need to call on the object in your building.
+1:43:24
+That means, yeah, there's a couple more things I wanted to show, but let me pause there just in case there's any questions on that point.
+1:43:40
+That's cool. So let me just show you one more thing before we finish off them.
+1:43:53
+So the other thing that I wanted to introduce today was the idea of a neat and enumerated data type.
+1:43:58
+So let's say that we have this hotel.
+1:44:04
+And the other thing that the hotel has, as well as a name, maybe it has some rooms, is as a like a star rating to show how luxurious it is.
+1:44:06
+And so you might want to say, OK, I want to stay in only a four star hotel or a three star hotel so we could define another property for that.
+1:44:17
+So maybe we could put it into the constructor. Maybe I'll decide that that's going to be another private out.
+1:44:26
+And so this is like the rating and so that we need to think about what the type for that is.
+1:44:37
+And I could make that and it so then we could say, OK.
+1:44:43
+Could be like this, but it kind of gives too much scope, because now I can, you know,
+1:44:48
+I can define this to be the Hilton Hotel with minus 19 stars or you know this many know that I need this many stars that doesn't really make sense.
+1:44:53
+The domain that we think about really models this as a range of one two star, three star,
+1:45:02
+four star, five star, maybe potentially six star in super luxurious locations.
+1:45:07
+So I'd rather have a better type to constrain this.
+1:45:12
+That makes more sense in terms of making sure our programmes are correct to model the world correctly.
+1:45:16
+So I think that's make a new type, which is called star rating.
+1:45:21
+So what I want to make a new type, I can make a class.
+1:45:27
+But in this case, I'm going to make a particular type of class, which is an enumerated data type,
+1:45:31
+so this isn't a new class and you might have already seen one of these if you looked into the HTTP status code stuff from the lab exercise last week,
+1:45:37
+HIV status was defined like this. And so what this is, this is a class where we're going to pre define a small number of instances.
+1:45:47
+So it's not possible to make your own instances of it's not possible to just make a new start writing.
+1:45:57
+You can only pick from the set that is enumerated so we could have a set of two star.
+1:46:03
+Three star. Full stop and.
+1:46:11
+Five star like this.
+1:46:18
+And that means that when I'm going to put something in here, the way that I can do that is I say star rating and then I've got these options.
+1:46:21
+I can pick this or this I can't do.
+1:46:28
+Make a new star rating like that doesn't that's not possible because that numerator types don't like, don't allow that.
+1:46:34
+So basically, we just get this menu to pick from where we can say this is a four star hotel.
+1:46:41
+Then the other thing I wanted to show once we've got these are numerous data types, is that we can actually,
+1:46:50
+you know, they're not just a list of instances like this, it's actually a proper cost.
+1:46:56
+So we can do more stuff with it. So let's define a method. Maybe we'll have to find a method on the hotel that says, is it a luxury?
+1:47:00
+So let's make that return a Boolean. And basically, this is going to say, well, one thing we could do if we could say is the rating.
+1:47:12
+It's either Four-Star or.
+1:47:27
+Five star. That would be one way to say this. All right.
+1:47:34
+Mr. Bill. So that would be one way for us to be able to say, is it luxury?
+1:47:37
+So here I've got this. Option, I could write this a bit more neatly, I could say maybe the rating is in assets all.
+1:47:44
+Four star and five star Typekit. Makes it a little bit neater or another thing I could just say, because this is an enumerated data type.
+1:48:01
+That means it has an inbuilt ordering based on the order that these are written out.
+1:48:17
+So I can actually say that this the rating is greater than or equal to four star.
+1:48:21
+And that would actually work here because we can use these kind of comparison operators on enumerated data
+1:48:27
+types because they have this ordering that's defined in terms of the order that they are written out.
+1:48:33
+So this, because this one is five star should be luxury and four star would be luxury as well.
+1:48:39
+So that's one thing that you can do with those enumerated types, and I'll just show you actually one more version of this.
+1:48:46
+Let's say that we don't want to define this only in the hotel class, but maybe we want to define this in the writing class itself.
+1:48:54
+So maybe this is the hotel is luxury if it's rating.
+1:49:03
+His luxury. That sounds OK, well, now you need a method in star rating.
+1:49:08
+So although this is an enumerated data type, it's still a class. But I can say that this has a function called is luxury.
+1:49:14
+And then that should be, period. Then the thing I want to do is, well, how are we going to do this so we could pass in?
+1:49:25
+Parameter of raising here, and then it would take us a rating, which is a star rating,
+1:49:36
+and then we could work on that, but actually, because this is an object. We've already said, what about these objects like this object?
+1:49:44
+Is it luxury? So in this case, I want to take advantage of a special property of object oriented programming,
+1:49:53
+which is that I can refer to this particular object on which we are being called.
+1:49:59
+That's what we call the receiver. So in this case, I can say this, and this means this very object.
+1:50:03
+So when we call it on this writing, say this object?
+1:50:11
+Is this object greater than equal to four star? And basically, I can return this.
+1:50:16
+Then I can convert into an expression.
+1:50:24
+So now I have a thing that says this, which refers to the object, which we are currently running inside, is this one greater than equal to four star?
+1:50:28
+And so here we're going to say, OK, let's make a hotel. This hotel that's make I'm not sure how.
+1:50:41
+They do that. So now this method is going to say, is this hotel luxury?
+1:50:56
+Yes, it is. How is it going to do that? Well, it's going to say.
+1:51:20
+OK, let's ask the rating whether that rating is luxury, our current rating is assigned in the constructors being five star.
+1:51:24
+So we're going to come to the five star objects and we're going to say OK for this object.
+1:51:31
+Where is it like we could? Again, we could put this back, so we could say this equals four star or.
+1:51:38
+This equals five star. But the neater way to do it is just to say this is greater than or equal.
+1:51:46
+All right. Greater than or equal? To forestall, and that should give us the behaviour that we want.
+1:51:56
+What does the semicolon mean in this case? Oh yeah, sorry about that.
+1:52:04
+So just means that basically if you don't write any methods, then you're enumerated.
+1:52:08
+Data type can look like this. And it just needs.
+1:52:14
+I don't think this is a particularly great bit of the language design, as they said, Oh right, you can put functions inside of this class.
+1:52:18
+It needed a delimiter to say, OK, this is the end of the definition of the instances of the right, and you start to write the functions instead.
+1:52:26
+And so you have to put the semicolon just to say I finished listing out all the available instances in this enumerated data type.
+1:52:37
+Oh, and yeah, now here's the rest of the body of the class. So it's slightly unfortunate, I think that you have to put that back.
+1:52:44
+But otherwise, the compiler gets confused.
+1:52:51
+And so the ordering you write these like like two still three, so that determines which is greater than the other.
+1:52:54
+That's right. Yes, that's at least one example at the beginning. And that great is what is at the end.
+1:53:00
+OK, thank you. If we messed with the order, then it worked this.
+1:53:05
+Yes, this would come out differently. OK, we should probably wrap up.
+1:53:11
+Are there any other final maybe what I'll do is I'll stop the recording and
+1:53:17
+then I'll hang around for a bit to answer any questions that people have got.
+1:53:20

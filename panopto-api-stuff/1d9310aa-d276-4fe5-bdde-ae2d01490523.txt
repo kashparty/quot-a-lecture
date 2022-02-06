@@ -169,7 +169,7 @@ So this is the example we did before. So I've copied it out again here.
 9:35
 So let's see how the tree implementation would work.
 9:41
-So if we start off with our dynamic opulence Garcés, we've got.
+So if we start off with our dynamic opulence Garcs, we've got.
 9:47
 We've got a. The D. B.
 9:54

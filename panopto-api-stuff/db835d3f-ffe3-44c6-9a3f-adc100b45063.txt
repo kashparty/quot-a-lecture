@@ -479,7 +479,7 @@ Farallones, you know, it's the time of year we have fallen, so this is the probl
 25:43
 Sighs We started I started showing you this with the. And with empowering so this is time I just said that some some outcomes are linear.
 25:46
-That, in fact, that was that was that was the that was the complexity of the naïf powering algorithm to X to the end, we had to do any modifications,
+That, in fact, that was that was that was the that was the complexity of the naf powering algorithm to X to the end, we had to do any modifications,
 25:57
 if you remember that one day and by it by hook and by doing that, the splitting in half after we got it down to log.
 26:07

@@ -5,8 +5,8 @@ filenames = [f for f in listdir(".") if f.endswith(".txt")]
 
 
 def fixFile(file):
-    temp = open(file, "r")
-    data = str(bytes(temp.read(), "utf-8").decode('utf-8', 'ignore').encode("utf-8"))
+    temp = open(file, "rb")
+    data = str(temp.read().decode('utf-8', 'ignore').encode("utf-8"), "utf-8")
     temp.close()
     temp = open(file, "w")
     temp.write(data)
@@ -14,7 +14,7 @@ def fixFile(file):
 
 
 for filename in filenames:
-    # fixFile(filename)
+    #fixFile(filename)
     with open(filename, encoding="utf-8") as f:
         f.read()
 

@@ -1,0 +1,919 @@
+ID: 35a826a5-a7aa-4992-9b95-addb00d689ae
+Title: 40018 - Logic - Lecture1 (Intro + PL syntax)
+Category: Logic
+Lecturer: Dalal Alrajeh
+Date: 09/11/2021
+It recorded I'm sorry. No, you're not sharing what I think you want to share, just a screen so that you can swap between the camera app and.
+0:11
+Mm hmm. Jeff, it do you think?
+0:26
+I think. I'll be on the phone. Sorry.
+0:30
+Great, I'll just wait a couple of minutes. Oh, I think we'll start.
+1:05
+We'll start here, thanks everybody for coming. Obviously, we're going to be experimenting a little bit with this kind of hybrid aspect.
+1:34
+There was some request on ads about funding a different arrangement for Tuesday.
+1:41
+I mean, obviously is kind of a last minute thing, so I'll have to think about it.
+1:45
+I mean, I do want to have make sure that everybody does have a fair chance of attending, but I will.
+1:50
+I'll get back to you whether we're going to change the Tuesday rota, but those days will be as they are.
+1:56
+OK. So welcome everybody. My name is Dylan Roger.
+2:03
+I'll be teaching the half part of the logic, which now obviously I've done this week, Miles.
+2:07
+We've got about eight weeks which will spread over this term and next term. I'll be doing the first four weeks of this term.
+2:13
+And then you've got Alessandra. [INAUDIBLE] be joining you later on to cover the rest of the module.
+2:19
+I've got obviously so this we're joining from remotely.
+2:26
+I'm hoping that I will be able to. I mean, if you have any questions, then please just unmute yourself.
+2:30
+I'll try to make sure that I do check on you guys as we go along.
+2:37
+So in terms of the content for this module, what we're doing is I'll be covering the propositional logic.
+2:41
+So we're looking at two types of logic or two species of logic.
+2:46
+Let's say I'll be doing the preposition logic, so be looking at syntax and how we write expressions of logic and the semantics of these.
+2:50
+We'll also look at how we can translate from English sentences into this form of logic.
+2:58
+We'll also be looking at, as we are here, computer scientists want to be able to build algorithms that can help us know or evaluate these statements.
+3:04
+So what we're going to be looking is no signs of checking validity and also how to be able to do that through various methods,
+3:12
+whether that's truth tables and direct direct argument equivalence and a particular proof system that we'll focus on,
+3:19
+although the others that do exist, which is natural deduction. So as I said,
+3:26
+I'm going to be covering week six to nine last week will be taught by you'll be moving
+3:30
+on to the first order logic and this will be again following similar structure.
+3:36
+In terms of syntax semantics.
+3:41
+Looking at translations, you'll be looking at additional notions like many sorted logics, which will become clear, obviously once you've got there.
+3:42
+But also what you'll be looking at as well is how we apply this logic in terms of writing specifications per programme.
+3:51
+And given that you've been looking at how SQL, that's where the focus will be on and similar things,
+3:58
+we're looking at how we can check a notion called validity for that particular logic and that will be taught by Alessandra.
+4:03
+So last week of this term and then three weeks for next term, just a few logistics in terms of what we expect.
+4:10
+So you've got tutorial sheets, which will be released on Thursday.
+4:17
+You've got the tutorial, which is five to six. These will be spread over the three different rooms, depending on your assignment.
+4:22
+You've got to. And also, I'll be going around as well.
+4:28
+So those sheets as well, you'll be using doing the PMT sessions just like you've been doing in the discrete maths.
+4:32
+The thing that we will do in terms of assessments or in terms of feedback, at least.
+4:37
+So the the sheet will always have either one of one of either feedback questions or of course, what questions.
+4:42
+OK, so the feedback questions there won't be they will be corrected and you'll get them,
+4:50
+but they won't really contribute to the final assessment grade. So those ones will mark clearly as feedback.
+4:57
+But on week seven and week nine, some of the questions on the sheet will be coursework.
+5:02
+So you will be expected to submit these online and this will be Mark and those who contribute to your final grade.
+5:07
+These will always give you for either those types of questions. You always have a week for submission.
+5:15
+In terms of the exam, again, you've got two questions.
+5:22
+One will typically focus on the proposition logic my side and the second part one was the same question will be on the first order logic,
+5:24
+which will be on the Sandra has. Any questions on logistics so far?
+5:31
+In terms of material, everything will be as as communicated, this friendship that should obviously be on material as well automatically.
+5:39
+I forgot to mention that course looks are expected to be submitted electronically on Kate again through other modules.
+5:50
+The what we haven't done, probably in terms of the arrangements for this term,
+5:58
+is have a lab session, which typically we do the checking validity natural deduction.
+6:03
+We have to go down to the labs and and work on using a particular tool that can help us check validity automatically.
+6:09
+But what we'll do is I've put the link, I've got the instructions there.
+6:17
+You're free to use that when it comes to this material. Then we can ask questions and you can ask questions or we can answer how to use that.
+6:21
+But we won't have designated labs because I just can't accommodate for the different
+6:29
+rotas and making sure that over three weeks everybody is going to be in the lab. But that by all means we will have an extra hour on that.
+6:33
+Then we can definitely do that. The lecture notes should be self-sufficient.
+6:40
+So you know, anything that be will be examined on is is basically covered within the lecture notes and within the editorial sheets.
+6:47
+Nonetheless, for those who are interested or want more examples,
+6:55
+then these are the three books that I typically look back to the top one as it covers quite well,
+6:59
+actually the syntax semantics for proposition for certain logic and looks at natural deduction.
+7:08
+The second one also looks at very much kind of from a computational aspect of the
+7:13
+first few chapters are the ones that are particularly relevant to what we're doing. And the final one is, I would say,
+7:17
+more formal and then and kind of really does a lot of attention to the formal
+7:25
+aspects of these logics and and the slightest ambiguities that you might find.
+7:30
+But as I said, we're quite happy to stick with the lecture notes and destroy all sheets in terms of questions.
+7:34
+Again, ED, you can post everything there.
+7:41
+I do try to make sure that I do reply within the three within three days I try to as soon as I can and sooner.
+7:43
+But if for any reason, sometimes there might be periods where within the three days of the two days you find a reply from me,
+7:52
+anything urgent, then please flag that up and then you've got my email as well.
+7:59
+OK, so that's in terms of logic in logistics. Let's move now to the logic part of our course.
+8:04
+Well, teaching, you know, we are here in a sense to learn, as we said, the logic.
+8:13
+I just want a pervasive hands, at least here. How many people have studied logic at school?
+8:18
+I'm familiar with it all. Typekit, but a couple of really where we come down in terms of at least entomology of the word,
+8:23
+and since we go back to the Greek etymology and meaning of it, essentially it's down to the idea of reason, you know, an idea.
+8:32
+Words were what allows us essentially to express notions of reasoning and be able to to validate these.
+8:41
+If you look at the Oxford Dictionary, then the the definition as it is given there is logic as a science forms of
+8:49
+thinking in general and more especially of inference and scientific method,
+8:56
+symbolic techniques and mathematical methods to establish truth values in the physical sciences and language and philosophical argument.
+9:01
+You will find, for example, that actually in philosophy, for example,
+9:09
+there's a lot of study of logic and also you find in other disciplines, our interest obviously is in logic for a particular purpose.
+9:11
+We want to be able to build programmes and we want to be able to reason about
+9:19
+them very precisely and the behaviour that they allow us or they they permit.
+9:23
+So really, for us, it is the calculus of computing. Our interest generally is on how to specify and describe verify reason about programmed behaviour.
+9:28
+So when you're writing your your Java programme, your Haskell programme, you want to make sure does it actually do what you expect it to do?
+9:41
+We don't want to worry about the exact example specific functions, but I want to be able to reason about its general behaviour.
+9:48
+And that's what the logic allows us to do and gives us the language to be able to do that.
+9:54
+Our focus is on software rather than hardware. So you've probably done within the hardware modules.
+10:00
+You look at logic gates, et cetera. That is not our focus here, really looking at software behaviour and reasoning about behaviour.
+10:06
+There are lots of different logics out there.
+10:13
+You probably be. You come across them in the coming years as well,
+10:17
+and probably a few further studies afterwards that allow us to reason about or about different types of statements.
+10:22
+Some of that will allow us just to be able to search whether certain statements are true and false,
+10:30
+of course, that allow us to reason about beliefs and beliefs and others that look into a particular ethics,
+10:35
+etc. and other types of logics that we'll look at reasoning over time or over different worlds,
+10:41
+etc. I really focus is going to be on what we call the classical logic.
+10:49
+So the ones that will be focussed on in terms of of of proposition, logic and logic,
+10:56
+but with any logic that you might study and you might come across. There are three main components that are important or build that logic.
+11:03
+So we look at the syntax. So that's the formal language of how to write the expressions and how to be able to read them.
+11:11
+Just like looking at any programming language you're learning C, you need to know how to be able to build programmes within that language.
+11:19
+We look at the semantics and with semantics, what we mean is essentially the meaning.
+11:25
+So what do these symbols that we write? What meaning do they have?
+11:30
+And then we have proof theory proof systems.
+11:34
+And these are essentially syntactic methods or approaches to help us evaluate or identify valid statements that we might express in this logic.
+11:37
+Because at the end of the day, what we're trying to do is reason infer certain knowledge from what we express and what we do to do that automatically.
+11:49
+Then typically we look at these theories improve systems to enable that and within the languages,
+11:59
+as I said, we'll look at preposition logic, first order logic. Sometimes people might talk about predicate calculus.
+12:07
+Predicate logic typically mean the same thing when you talk about it in terms of First Order logic.
+12:13
+So if I use these terms interchangeably, then then don't be alarmed the sense that they'll refer to the same logic.
+12:18
+So many questions so far. So I don't think I actually can see teams questions.
+12:28
+So just because I've got sharing the screen here, but. Anything then, please do it yourself, if you have any questions, then.
+12:33
+OK, so why do we learn logic?
+12:42
+I mean, I've mentioned that the importance about being able to reason and and do accurate reasoning about programmes,
+12:46
+but we also we also see that logics are really relevant to building real world applications.
+12:53
+So when we want to be able to build an autonomous vehicle and we want to be able to ensure it does what it's supposed to do.
+13:00
+Typically, we can express that within logic. So that is a basic thing that we look at.
+13:07
+You'll probably be probably teaching in next year.
+13:11
+Of course, course symbolic reasoning where you look at something called answer set programming,
+13:16
+and that is a logic programming paradigm in a sense that has been used and applied in many industrial applications,
+13:20
+particularly when it comes to clinical decision support.
+13:29
+If you're looking for looking into that or reconfiguring railway systems that have been applied for those for those purposes.
+13:32
+For those studying databases, you want to write the queries they're expressed in a logic model.
+13:40
+Checking, which is something that we use is a class a method that you can again model
+13:47
+behaviour and be able to reason about correctness that is also reliant on logic.
+13:53
+What we will probably come across and we'll probably touch upon as well throughout this module is at least.
+13:59
+Relationship to II and what we call symbolic A.I.
+14:08
+So again, for those who have been interested in reading about explainable, I heard the term explainable AI.
+14:11
+Typically what we're referring there in many cases, how we can explain what is, for example,
+14:17
+a machine learning model doing in terms of again, often in relationship to logic.
+14:22
+So we express these to explain what a machine learning model does or how to ensure an A.I. component is safe,
+14:28
+etc. For those I don't know if you're familiar in terms of a general machine learning, probably when you look at machine learning,
+14:37
+you look at neural networks, so he'd you hear decision trees, which again through the forms of logic,
+14:44
+but also you probably come across even the smallest in the discourse, what we call logic based machine learning.
+14:51
+So this allows us to learn expressions and logic from examples and observations and also very central to AI's
+14:57
+planning and scheduling also uses logic to express tasks and how to solve them in terms of your specific modules.
+15:04
+Obviously, each of you've probably got different variations in terms of which module you that you've signed up for and specialism,
+15:12
+but at least in terms of many of the modules that you'll be studying in your degree,
+15:18
+have logic as the main components or expectation that you do know it,
+15:25
+and you might have any questions that just assume that you already obviously covered the logic.
+15:28
+So as I said, kind of the databases and those in the second year models of computation, symbolic reasoning,
+15:32
+introduction to prologue because I'll be probably teaching you the symbolic reasoning and prologue next year.
+15:39
+Third year modules again, theory of practise can come programming logic based learning,
+15:45
+which I've just talked about advanced databases with algorithms. All of these have either directly this assumption that you've kind of, you know,
+15:49
+you, you, you will you express things within logics that you've studied here,
+15:58
+or at least be able to adopt the reasoning mechanisms that we've have covered
+16:03
+here in this modules to reason about these algorithms within fourth years.
+16:08
+Then you've got knowledge, representation, scalable software verification model, multimodal logic and strategic reasoning and software reliability.
+16:12
+So this is just to kind of bring this into perspective in terms of what you'll be
+16:21
+covering over the next coming years and the logic in relation to any questions.
+16:25
+Look fantastic. So let's begin with propositional logic,
+16:34
+so I hope I know many of you are already familiar with at least writing some basic programming construction and probably something like this.
+16:38
+If then expression or snippet of a programme is something that's quite familiar to you all by now.
+16:46
+So if you have expressions like, for example, if count is greater than zero and not found,
+16:54
+then let's say you commit the count and look for the next entry and so forth.
+16:59
+So when we write these things,
+17:04
+we could we could we could extract some basic features from this that we can write within our preposition logic language.
+17:07
+So the basic sentences are going to be most atomic elements that we are reasoning about in this particular programme is,
+17:16
+for example, count as greater than zero. And we found whether, for example, a certain Boolean expression is true or false.
+17:23
+So this would be our our basic atomic, let's say,
+17:32
+elements of features within within what we write and what we might want to reason about in our programmes.
+17:35
+And this could be true or false, depending on the circumstances or the execution of the programme and the assignment of those variables.
+17:41
+Then what we have here is connectives. So you notice the top there.
+17:48
+I've got counter corrected to zero and then I've got found that also have got before the found this expression.
+17:52
+Not so. These are ecological symbols that we use to connect these different basic elements of our language here,
+17:58
+here, you know, referred to as propositional atoms.
+18:07
+And then once we have these basic proposition, the atoms of these basic sentences and we have the connectives,
+18:10
+we can then combine them in certain ways to build more complex sentences and statements to be
+18:16
+able to reason about what you probably will probably notice quite early on is that proposition.
+18:22
+Propositional logic is very limited in terms of the things that we can express.
+18:29
+Still, though very useful, I'll give you examples of why it's very useful.
+18:32
+But many of the logics that then if it's one of the first order of logic that
+18:36
+you might see later on does depend on some elements on the proposition logic.
+18:40
+So it's very useful to be able to learn.
+18:44
+However, there's expressions that we won't really be able to capture in proposition of logic, like things that every student has a tutor.
+18:47
+This distinction between every student or students is things we can't really represent preposition logic accurately.
+18:56
+But so proposition logic is useful. So why do we study it?
+19:04
+Well, as I said, many of the logics are based in some form on proposition logic.
+19:08
+They will either try to, for example, encode the returns like what they're doing in superposition logic to be able to prove certain aspects.
+19:14
+We are interested in a way where we want to be able to look at these.
+19:24
+If the target was in programming, we want to be able to evaluate or reason about these, if then statements.
+19:29
+So regardless of what if I'm using Cowen's or found, I want to be able to evaluate these complicated if sense,
+19:36
+if then statements in a coherent and accurate way, which is allowed by propositions of logic,
+19:42
+but also what we want to be able to do is in some respects,
+19:48
+I want to be able to know with a certain statement applies another or whether the certain properties
+19:53
+that hold within a loop or certain variants that are to remain true within certain groups.
+19:58
+So all of these we can actually do quite well within proposition logic.
+20:04
+So in a sense, although not as expressive as things that you might come across, they aren't extremely useful.
+20:08
+And as I said,
+20:14
+many of the computational problems that you will probably study in your algorithms or in reasoning next year are all kind of based on notions
+20:15
+within the propositional logic so they can reduce the problem to something that can be solved or can be expressed in propositional logic.
+20:25
+So as I've said, we've got three main components any logic, syntax, semantics and the proof the theory proof system.
+20:34
+What we'll be focussing on initially is the language. So what's how we can write and read expressions in a position of logic?
+20:42
+So when I say that my job is really the precise definition, which symbols we can use and in what combination is what we talk about in terms of syntax.
+20:53
+So in preposition logic, we've got three main components.
+21:03
+We've got the propositional atoms, which we'll we'll we'll look at shortly.
+21:07
+We've got what we call these Boolean connectors like the examples that we saw and not etc. And then we have punctuations.
+21:12
+These punctuations are auxiliary, says they're not logical symbols etc,
+21:19
+but they're they're also useful to help us read and write these in a way which is concise and not ambiguous.
+21:24
+So let's look at the first ingredient that we have. So.
+21:32
+We're not really we would talk about at the example of Count's greater than zero
+21:37
+and found when we talk about these propositional atoms in a way I might represent,
+21:42
+you want to be able to reason about counts is greater than zero. What really matters is I might have a representation.
+21:47
+I might use a symbol, an easy symbol to be able to represent this concept of count greater than zero.
+21:53
+But it really doesn't matter when I'm writing this logic and I'm expressing and I want to reason about whether something is true or false in a way,
+21:59
+what the symbols actually represent doesn't often matter.
+22:06
+As long as I can be able to capture correctly, the truth values whether they are true or false.
+22:10
+That's really what is important.
+22:16
+But to help us to kind of, in a sense, can find the language that we use, what we do is we fix certain symbols to represent these statements.
+22:18
+So I might be example, for example, say I'm only going to represent concepts.
+22:29
+These two concepts count and fair account greater than zero and found.
+22:36
+But to represent them,
+22:40
+I might just use a simple pin key and that will be the preposition atoms that we use in whatever express or whatever I see in Q.
+22:41
+It's just a matter of saying these represent something else, doesn't matter, but I can actually reason and use right things using the piece and the.
+22:49
+So we fix these symbols whenever we write and say, these are the ones that we're going to work with.
+22:56
+But at the same time, you know, if I if I just going to bear in mind, if I do talk about proposition atoms as I have been some so far,
+23:02
+sometimes you might come across usages like propositional variables of prop. letters.
+23:10
+I will. I will often either talk about Proposition eight atoms or atoms.
+23:16
+But in terms of representation, I mean, they're really they act in a way like what you do in maths.
+23:20
+So if he has variables, x y x can be representing zero or one,
+23:24
+etc. What we have in the logic, we might be using symbols like p, p prime or double prime.
+23:29
+Or we might see, for example, pinot p one that could be R one or two, etc. Or we might just be using different symbols.
+23:35
+So typically what we'll do is work actually tell you what those symbols are,
+23:44
+or you would define what symbols that you will be using when you're writing, expressing these things.
+23:49
+OK, so that's the first thing. So once they fixed.
+23:54
+The propositional items that were going to be used,
+23:59
+what we look at is then the Boolean connectives and the Boolean connectives, in a way they are the standard.
+24:01
+I mean, it's not that you can use different symbols. I mean, sometimes there are common ones that typically at least what they represent is standard.
+24:06
+So what we have as Boolean connectives and sometimes talk about them as operations,
+24:13
+we've got the not the top, which is often written in logic and the symbol.
+24:19
+I mean, the common one is one that I've put here is the blue, which is the one just before the brackets are the ones that we typically use.
+24:24
+So you've got knots, but sometimes you might find in books that they're represented differently.
+24:30
+You've got the and again, there might be some representations in older books in different ways,
+24:34
+but those are the ones that will kind of the double looking me.
+24:39
+And then you've got all which again means as as an English, something A or B,
+24:43
+and then we have if then which is we call implies, we've got the if and only if, which is our double by directional arrow.
+24:50
+And then we have this connected, which is truth and falsity.
+24:59
+OK, these are typically some of these symbols are, assume you know, zero arguments, one argument or two arguments.
+25:02
+So, for example, the not always assumed like a unitary connective, whereas the end and the distinctions are the ends of the or are binary.
+25:09
+But we'll discuss what they actually mean later on. But these are at least for now, important terms of how you write things.
+25:19
+So if you look at some examples of how we can express things now,
+25:26
+having defined what are the residual atoms are and having defined what these connectives are.
+25:30
+Let's look at how we can actually write expressions using these symbols.
+25:35
+So going back to the test that we had before, I could express it, like in the top right.
+25:39
+And if so, I don't have a stick with me here, but I could write as if count greater than zero.
+25:45
+I use the quotation just to say that this is one single atomic statement in a way.
+25:51
+So it's just, you know, quotations are not part of the language itself.
+25:56
+But here I just use them to represent that this is one statement to someone that's not divisible and not found.
+26:00
+Or maybe even better, actually. I just use the page to represent this fact of counts greater than zero.
+26:08
+And I use the key to represent found. So in that sense, I might just write a piece and not Q.
+26:14
+If we look at other types of connectives, then as I said to you, in this case,
+26:21
+the negate the not just takes one argument in this case, for example, the Q.
+26:27
+Other connectives like and or implies if and only if, two arguments, but typically we write or use the connect in the middle,
+26:34
+so we don't procedures, just like with the pluses and minuses of season two plus two rather than, say, plus two and two.
+26:42
+So am I right? And Q P Q P implies Q, and I'll read it as p if and only if Q, then we'll worry about meanings of these symbols.
+26:50
+Exactly. Later on, negation is it takes only one argument,
+27:00
+and typically we refer to the the symbols which we call truth and falsity, sometimes to talk about them as top and bottom.
+27:05
+They take no arguments. So often we treat them as zero argument connective connectives.
+27:13
+They behave just in the same way that you've seen pie and in lust, etc. These terms, I mean, we just have to learn them.
+27:20
+And and this is the way that we mean it.
+27:29
+Just like with any language, we must be able to write these in a way and express them.
+27:32
+So you just have to remember what each of these symbols really means.
+27:36
+We're not going to really use. I mean, if you if you write programmes in Python etc, then you might be, you know, you might come across these symbols.
+27:40
+But at least in terms of this module and when we're expressing we are going to stick to the symbols of the top that we've seen the previous night.
+27:47
+Any questions? OK.
+27:57
+So we've looked at prepositioned items,
+28:03
+we've looked at the building connectives and the final thing that we're looking at is in terms of punctuations.
+28:05
+Now if I if I write, for example, suppose I just extend the statement that we saw in the last slide and and say,
+28:11
+I say, you know, count is greater than zero and not found or count is greater than 10 now.
+28:20
+So building this complex sentences, which has as these statements now which have multiple multiple negatives.
+28:25
+The question is, how do I read it? Do I read it as count greater than zero and not found?
+28:33
+Or or do I read it as count greater than zero and not found or counted greater than 10?
+28:39
+So what we do is essentially we introduce certain punctuation, which are brackets to help us disambiguate these statements that we write in the logic.
+28:48
+So in the same way that you do the arithmetic and you just put your brackets around your expressions to be able to do is ambiguous.
+28:56
+Whether we you mean one minus two plus three or you mean by one minus two plus three.
+29:03
+So does the same thing. And in logic, in many cases, as we'll see in the coming slides,
+29:10
+it actually does make a difference to whether what you write is evaluated to true is true in the world or is not true.
+29:15
+This is very important. And so again, if I look at just an expression that I might write like P and Q,
+29:22
+or there might be, you know, you look at it, you might think, which one do I?
+29:29
+Which one do? I mean, do I mean, does this have the same or do I mean P and Q R?
+29:32
+And they have different meanings. So we really need to pay attention to when we write to be precise, so that we avoid this ambiguity?
+29:38
+OK? So what we do is we we try, you know, with brackets and then and then later on, we'll see how we can deal with these brackets.
+29:46
+But essentially always when you're writing, put in the brackets,
+29:56
+make sure that you're very precise about what you mean and then we'll see how we can break it down.
+29:59
+Make it simpler. So they're not too cluttered. OK.
+30:02
+So the expressions, you know, when we looked at these basic elements, which are the preposition items that we look for,
+30:06
+the connectors, I've said we can now start building more complex statements.
+30:13
+And what we talk about when we refer to as complex statements and logic are formulas.
+30:18
+So this is what we call them. Some people might call them sentences, other people might call them well-formed formulas or worse,
+30:24
+but we will typically just refer to them short as formulas. These complex statements that we built.
+30:32
+All right. So what is it proposition? A formula?
+30:37
+It's a string of symbols made from the proposition the atoms, the Boolean connectors and the brackets.
+30:40
+Something that I would like to say is that if somebody says, write a propositional atom, a prepositional formula, sorry.
+30:48
+These are the basic elements that you write. So if you, as you come across later on, somebody might say, you know, right,
+30:54
+so express something in first order logic or right of First Order logic formula.
+31:01
+Those have different constructs, so they might talk about as you'll see natural variables or other types of operators.
+31:08
+If you're asked to write a proposal formula, these are the only things that you're allowed to use to write statements in this logic.
+31:14
+But we'll have a look later on. So let's look at a formal definition of what a proposition of formula is.
+31:23
+So any proposition atom that you have expressed in your language is a proposition, a formula.
+31:29
+So I can write P, and that is a formula. It is a proposition atom, but I can express an entire formula just using that proposition all atom.
+31:35
+Typically, if you have a formula that only has a proposition atom,
+31:45
+we call it an atomic formula formula is written using the connectives of truth and falsity is also considered to be formulas.
+31:50
+I use here the Greek symbols, which are just like method variables representing formulas, so they're not actually part of the language.
+32:00
+They just represent formula. So I use them here just to to represent more complex formulas.
+32:06
+So if we have PHI here being a formula, then preceding that formula with a with a knot is also a formula.
+32:13
+If you have volume side being formulas that also joining those two formulas with a symbol and or joining them with the symbol or or implies,
+32:22
+or if and only if also results in a formula. Note is that what I've done here is also I've enclosed these in brackets.
+32:34
+OK, so it's quite important in terms of preciseness that when I've said not well is a formula I've said I've enclosed is a bracket.
+32:42
+OK, now anything else not covered by this definition is not considered to be a formula in this language.
+32:50
+OK, so really we are restricted to this definition as we have it here.
+32:59
+OK. Any questions? OK.
+33:03
+OK, so let's look at some examples that we have in expressing formulas.
+33:08
+So as I said to you, a formula is constructed from the Proposition eight and the formula, not p in brackets, is a formula.
+33:14
+So there's actually a typo there. There shouldn't be an R there.
+33:22
+So the third one should should just remove the R there. So should be not p within brackets and truth.
+33:27
+Then the fourth formula is a more complex one, which is again, if you see which says not again,
+33:34
+not s and falsity, and you can see if we can build much more.
+33:42
+Again, the importance here is in terms of the brackets that I use precisely according to the definition.
+33:47
+So quick thoughts on the three examples that I have the so I've got this particular first expression,
+33:52
+which is p q and show of hands in terms of whether this is a formula according to proposition of logic.
+33:58
+Hands up, if you think is a formula. Why?
+34:05
+Which which ruled as a break. Yep.
+34:14
+So sorry. So in a sense, that's what we need is basically the P and Q also enclosed within brackets here.
+34:24
+How about the second one there? P, not s. Both here.
+34:32
+Yeah, exactly. So in this, the not only takes single argument in a way, so so there's nothing that connects the P and not s, how about the final one?
+34:43
+Is that a formula? Japan's, if you think it is a formula. No, correct.
+34:54
+So the final one is, in fact, a formula. Correct. OK.
+34:59
+Fantastic. OK, so. As you've seen, I've already mentioned and studied it.
+35:05
+We've deployed with the formulas, and I've kind of been quite picky, let's say,
+35:12
+about it's important that you have the brackets because we need to make them concise, and this is the only way that you can define the formula.
+35:16
+They have to have the brackets in a certain way. But obviously, from a readability perspective, they can get quite cluttered.
+35:22
+And once it starts to lose sense of what is being said, because you're just worried about when do this?
+35:29
+I mean, this brackets opened. When did it close? What am I trying to communicate through the statement and the sentence?
+35:35
+So what we do is sometimes to ease readability is we look at abbreviations.
+35:41
+And when I talk about abbreviations, it really is just a way to represent these formulas.
+35:47
+So they're not in a sense without them. They're not really formulas, but they're just a way to make them easier for presentation.
+35:52
+So it's just important to consider removal of the brackets as just an abbreviation to the formula that is intended to represent.
+35:58
+So there are a number of kind of conventions or two to when you may drop these brackets without
+36:10
+losing and without losing preciseness and concise sense of what we're trying to express.
+36:19
+So, for example, typically the outer brackets that you might have, those are the easy drop that can easily drop.
+36:25
+So if I have, for example, in this case, if I had to just do that.
+36:31
+So, for example, I could just potentially the not be here, just drop the brackets on the not p.
+36:39
+I wouldn't I wouldn't lose. I said the top ones.
+36:45
+So if you see the outer expressions of the whole formula,
+36:50
+so the one expressing this implication could be dropped, and I wouldn't really lose ambiguity in that sense.
+36:53
+I wouldn't lose the overall. I wouldn't lose the meaning or the consistency of what for this expression is trying to say.
+37:01
+So removing the outer brackets, so if I have a then expression, which is just not p that I can also remove the outer brackets of that formula.
+37:09
+But what happens is now, I mean, so, OK, so we've got rid of the outer ones, but how about all the inner ones that we've just seen in this example?
+37:21
+So what can we do about them? Again, there are a number of conventions that we could apply to simplify an abbreviated formula.
+37:28
+What we have is this general rule about ordering.
+37:36
+So what we do is initially we order this connectives in terms of strength, which help us then find certain formulas and then we can,
+37:40
+based on that, decide which ones to drop because this obviously will become more obvious in a sense, how to read these patterns.
+37:50
+So typically, we consider the not to be the strongest. Then we've got the conjunction said.
+37:56
+Sadly, the end and then the order, the implies and then the if and only in the same way that again,
+38:03
+with arithmetic, you know, you've got the multipliers being the strong stronger than multiplication.
+38:09
+So we applied very similar concepts here in logic to help us abbreviate these complex formulas.
+38:15
+So if, for example, I have P or Q and are given that if you just follow the ordering of the Boolean connectors in terms of strength at the top,
+38:22
+then we would say that OK, so and becomes comes before the owner so I can assume that I would read it as
+38:33
+these the p and the the the Q and the are aligned to the conjunction here.
+38:40
+And then what we have is just the weaker one, which is the P so.
+38:48
+So we read as P or Q and R rather than pure Q and are similarly, if you look at the other example, not P and Q, I think is the negation.
+38:53
+Preceding the whole formula of P and Q in this case. No, but actually because we know that knot is stronger than what we read it as not pay.
+39:05
+And Q, So that's what the revelation. So how about this example here based on the convention that I've described above?
+39:14
+What do you think this is an abbreviation for?
+39:21
+How would what would the binding work? So what does it represent? So the P and Q implies are.
+39:26
+Yeah. Do you like it? Yeah, I'm not you.
+39:36
+And why would that? Not by accident.
+39:42
+Yeah. And I'm. Yeah.
+39:46
+Absolutely, so that would be BP and not Q implies, ah.
+39:55
+But again, that's the way we were can abbreviate things and it's kind of important.
+40:00
+Obviously, it's much easier to read than to read the words with all the brackets.
+40:05
+Nonetheless, I think it's generally a rule. If you have something as complex as this that you might write down,
+40:10
+it's often just easier just to have the brackets inside to make them easier for people to read.
+40:16
+Even though they might not be needed. OK, great.
+40:22
+So what do we do first in terms of if we have a mixture of these connexions,
+40:30
+but what do we do if we have the same connective repeated within a formula?
+40:33
+What we've said so far is not really I.M.F. help because obviously they have the same precedents in the same,
+40:40
+the same strength when it comes to the ordering.
+40:47
+So if we have, for example, a formula that says he implies queue implies, our question is how do I read it?
+40:49
+Do I read as then penalise you guys are? Or do I read it as p implies, Q implies ah.
+40:56
+And so the convention that we saw? I mean, you might actually there are some books that do talk about different types of bindings.
+41:03
+They might consider in the sense that if you have a binary connective, then it might be wrong associated and others that might be left associated.
+41:10
+But what we will stick is what we I mean,
+41:17
+what we will stick with in this course and is also kind of quite common is to read it in a certain way, which is which is left associative.
+41:19
+So we'll look at examples of it. So but generally, I would say, if you do have these expressions which have these repeated connectives for safety,
+41:29
+particularly with implications important to use the brackets, why?
+41:38
+Because actually does make a difference. So the meaning of the first formula is actually different than the meaning of this second formula.
+41:42
+They are not, as we will see later on, something that we say equivalent, semantically equivalent.
+41:48
+We'll talk about what semantic equivalence means later on, but essentially they mean different things.
+41:53
+Now it's slightly different, the case when we talk about repeated hands and repeated orders.
+41:58
+So this is where things are logic and being precise, but also, in a sense, things.
+42:04
+Some of these things that I say now informally will be much clearer when we talk about the more formally when you go down to the semantics.
+42:12
+But when it comes to repeated hours and repeated orders in when I say doesn't make a
+42:19
+difference or it's OK not to have the brackets there is because they mean the same thing.
+42:24
+And we'll see why they mean the same thing.
+42:29
+So, so but generally the ends of your you can you can be easy about dropping the brackets when they're in that form.
+42:31
+If it's just that one single repeated connective, but not the case if you're dealing with the implies.
+42:39
+And I would also say, if you're dealing with a bi directional implication, so the if and all, you always, always use the brackets for that.
+42:44
+OK. In terms of, as I said, just a moment ago that when we have these repeated and repeated wars,
+42:51
+we'll just interpret them that we always take the binding, strong it from the left, so it will be P and Q and then and R.
+42:58
+And the reason why it's important to be able to disambiguate this.
+43:06
+That is to imagine if you write an algorithm that's supposed to read these symbols and then make some meaning behind it,
+43:10
+you need to be able to have that sort of interpretation so you to be able to say, Well, if I have this back and what does it mean if it closes here?
+43:16
+What does it mean? So that's why we're quite precise about this usage of brackets and where we we bind, where we do the binding.
+43:22
+OK. However, just a note in the case that when it comes to negation again or not, in the sense, really.
+43:30
+I mean, having something like this, we just triple the brackets is is doesn't really introduce ambiguity here.
+43:38
+So that's going to quite safe to do not, as the implication implies, in the bi directional.
+43:44
+So let's look at an example as well here, so if we look at.
+43:53
+Suppose I write this expression, he a implies R and Q implies.
+44:00
+I mean, I mean, I might read it in a sense to think about P implies R and Q implies R,
+44:06
+but the question is that I can't really justify might that might be what what I want to be able to say, but that's not actually how I've written it.
+44:14
+So if that's what I want to say, how can I justify this reading if I go back to the convention that I've just described?
+44:21
+Because according to the convention, you'd assume that Orange Q has precedence unless they have the Q or Q,
+44:28
+and then P implies R and Q, and then that would imply the surreally, according to the convention.
+44:36
+I would have expected something like what we have here.
+44:44
+P implies R and Q implies, are there very few people that actually want this formula that I've just said as the one that we see at the top?
+44:47
+So that's again, really important reason why it's really important to have the brackets because, well,
+44:58
+you might think is obvious might not be obvious, according to the convention, that people apply.
+45:03
+Look. So one way of any questions.
+45:11
+I'm sitting as little people. Yeah. Yes.
+45:16
+I mean, I was going to say people can probably unmute themselves, let me just.
+45:24
+Let's see if I can quickly have. Smashing things, OK?
+45:31
+Yeah, probably. All right, I'm going to ask people to unmute themselves because they're going to be quite hard to scroll up and sorry.
+45:44
+Okay, that's enough. I was worried that sounded familiar. What was what was going on there?
+45:53
+Say okay. I think some was answered.
+45:58
+Basically the same thing. But to make it all better proposition, we'll have to.
+46:10
+I can't think of other formulas.
+46:21
+Yes. What we said, he can build the formula from a single proposition item or you can build it from those with connectors, is that kind of that?
+46:28
+I mean, unless somebody can kind of unmute themselves and ask more specifically, I'm happy to answer.
+46:36
+Yeah. So our themselves proposition?
+46:42
+Oh, no, no, no, no, no, you can't. So a proposition action is something that you want and cannot be broken down so they
+46:48
+can't be decomposed into anything simple and formulas can be broken down unless,
+46:56
+as I said, you can build a formula from a residual atom, but it's not the other way.
+47:00
+I mean, in a sense, I say that. But then what you don't want?
+47:06
+You might want to write an expression, which is a symbol,
+47:11
+a string of all these symbols and just say that there's a whole proposition that represents it.
+47:14
+But it's very different from using the term of saying, I'm going to use a formula in the way that we've defined it as a proposition.
+47:19
+So really, proposition acids are the most basic structures that cannot be decompose into anything smaller.
+47:27
+OK, so what? No evidence, which is true and false.
+47:35
+Exactly. Yeah. There are formulas can be true and false, but that's the distinction and which we'll look at in a bit.
+47:39
+But the distinction really is that I said a proposition to Assam is the most basic
+47:44
+element from which you can build the formulas and more complex expressions.
+47:48
+But it's really something that indivisible in a way. So it's just truth and truth.
+47:53
+So this to you. Oh yeah. Thank you.
+48:01
+You're welcome. I mean, it's almost like going back to the last line.
+48:06
+Yeah. Wait, which implies, on one hand, it's possible to do, and you guys are.
+48:14
+Can you say that again, sorry, you broke up a bit.
+48:24
+Is it possible to see and you guys are P and Q implies are heaven and bracket and then have P implies that formula i.e.
+48:27
+Yeah. I mean that that that is possible in some conventions, which are some conventions that that are that consider these to be rights associated.
+48:41
+Well, I would. What I would say is that if obviously it could be, that's what you meant.
+48:53
+But as reading it again, it makes it ambiguous. So that's why the message really from the slide is if that's what you meant,
+49:00
+meaning the R and Q Plus R is something that is implied by the P, then put the brackets in a way.
+49:07
+But but as I said, there are different conventions that might well take the expression right at the top there to mean different things,
+49:14
+and that's where it gets all ambiguous. I hope that answers your question.
+49:22
+Other. Infos, thank you know.
+49:29
+All right. Just because of time, it is it is eight minutes and 12, so we'll post up there to give you time as well to go to any lectures afterwards.
+49:37
+I will pause the recording and then put this up on Panopto.
+49:46
+What led them to censure people turn to get back to you?
+49:53
+Thanks everybody who joined remotely as well. Yes.
+50:01

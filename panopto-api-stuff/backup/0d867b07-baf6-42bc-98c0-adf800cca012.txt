@@ -1,0 +1,211 @@
+ID: 0d867b07-baf6-42bc-98c0-adf800cca012
+Title: idb-topic-22-anomalies
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+In this topic, we review what are called anomalies in transaction execution, wind Esquibel databases were first developed.
+0:03
+Transaction execution was not very well developed as a concept and problems
+0:12
+were found in the execution of transactions when permitted to be concurrent,
+0:18
+which were called anomalies. And these were later analysed and developed into database a theory where they
+0:23
+were analysed into causing problems of civilise ability and recover ability.
+0:31
+But nonetheless, it's important to understand what these anomalies are because they give you a picture of what could go wrong.
+0:36
+If you do not completely implement all of the concurrency control rules, the first anomaly is called the Lost Update Anomaly.
+0:43
+I've simplified the example transaction I've been giving you so far when talking about
+0:54
+concurrency for moving money between different branches into a store procedure called News Cash,
+0:59
+but nonetheless, it generates the same sequence of read and write operations to update the cash figure of two different branches.
+1:08
+So history one can be simplified into executing moves cash as a store procedure,
+1:15
+and that to generate the sequence of operations shown in red and then transaction
+1:21
+two can be a moving cash from 34 six and given the same sequence of read and write,
+1:26
+but this time on Branch 34 and Branch 67. And a possible contempt execution of those operations is shown, but no.
+1:32
+And this is is something called a lost update anomaly because what's happened is that both
+1:43
+History one and History two have been permitted to read the value of Branch 34 and therefore,
+1:50
+of course, read the same cache figure that's £900.
+1:57
+And then Transaction one is going to do its update, which is to add 10000 pounds to that figure and write it back.
+2:01
+And then afterwards, transaction too does its update, which is to say the same initial figure and subtract £2000 from it.
+2:08
+And the net result, of course, is that this right operation by transaction once effectively can't be ignored, and that's called a lost update.
+2:18
+So I could rewrite the execution at the same end result,
+2:27
+replacing that particular operation with the statement that I've had a lost update and it makes no difference.
+2:31
+Hence, the idea that were told that an act like that can be lost from the history.
+2:36
+So clearly, this is something which is not advisable, but in fact,
+2:41
+it is always going to be recoverable as an anomaly because the problem stems from the fact that two
+2:46
+transactions have read the same initial value and ignored the fact that each of them want to update the value.
+2:52
+The next anomaly is called inconsistent analysis,
+3:03
+and this is where one transaction reads only some of the changes that have been been produced by another transaction.
+3:07
+Let's suppose I've got the same history one, but I got a second transaction now call History four,
+3:16
+which is summing up the cash figure from all the branches.
+3:22
+Clearly, this should produce the same result, regardless of whether it is executed before or after history.
+3:26
+One. In terms of basic operations on data objects, transaction four is going to need to read all of the branches in the table.
+3:33
+So given the free branches there at present, it reads Branch 56, 34 and 67 before committing.
+3:42
+Let's suppose I have the following concurrent execution of those two histories and in particular note here this I've
+3:50
+placed the lead operations for transaction four in between the two blocks of Read White performed by transaction one,
+3:58
+and therefore the transaction four sees the change made by the first update statement of history one change in the cash figure of Branch 56,
+4:07
+but not the update statement of the second a block of updates.
+4:17
+Second update, which is change in the cash figure of Branch 34 and therefore in essence, history for season.
+4:23
+Inconsistent view of the database with some of the transfer have been produced by history one, but not all of it.
+4:31
+So again, we end up with a Nancy realisable execution because in essence,
+4:39
+history four should always see the cash figure, regardless of whether it's executed before or after 31.
+4:44
+But again, in this particular case, we have a recoverable execution.
+4:50
+The reason why it's recoverable is that History four has read the branch 56
+4:54
+value produced by a history one but waited to commit until after history one had
+4:59
+to have committed and therefore is a is exhibiting a recoverable execution in
+5:06
+persistent nemesis can sometimes be recoverable and sometimes not recoverable.
+5:12
+Dirty wreaths are something which sometimes but not always lead to a nun unrecoverable execution.
+5:20
+Let's just take a simple variance of what I've been doing before with the history one and history two.
+5:28
+And let's suppose I allowed the database to perform a read of an object that has not yet committed.
+5:34
+In this particular case, I've allowed history one to read Branch 34,
+5:42
+which has been produced by history to buy this right operational, be B34 and history too has not yet committed.
+5:47
+So this reed operation of B34 by history one is called a dirty read.
+5:56
+And if I allow history one to commit itself because history too has permitted, I end up with a none recoverable state of the database.
+6:04
+Of course, you can never tell what's going to happen in the future.
+6:15
+In this particular case, I'm illustrating the problem by saying that history to later on boats.
+6:17
+But even if this was a sea to instead of an eight to, you'd still call this a no code execution because at the time of commitment,
+6:23
+the transaction one could not be sure what those transaction two would commit or not in the future.
+6:31
+Let's analyse the history to be looking at before to see what anomalies they might suffer.
+6:42
+That's the most popular answer here is B, and indeed this is a example of a lost update.
+6:57
+It's the right Operation Olive branch thought as effectively lost because the lead and rights of Branch 34 by history two are ignoring that update.
+7:03
+Now, let's look at our history. Why? The most popular answer here is that none of the anomalies are exhibited.
+7:18
+But the answer here is D. There is a dirty red notice here.
+7:33
+You've got a right to operational Bryce, 34, which history one then reads and history two has not yet committed.
+7:38
+So this Reid operation of B34 is the dirty Reid.
+7:48
+The fact that the history one then waits until it commits means that is still a recoverable execution.
+7:52
+So dirty reads are things which can, if they're not controlled properly, lead to a non recoverable execution.
+8:02
+And so some implementations of databases ban all dirty reads as a simple way of preventing none recoverable executions.
+8:10
+But it's not the only way of preventing unrecoverable executions. Let's finish off by looking at each set and seeing what an anomaly that suffers.
+8:19
+The most popular answer here is De Dirty Read,
+8:37
+and it is that correct for the same reason as in the previous case that when lead one hair is performed,
+8:41
+I was reading the uncommitted value produced by history too.
+8:50
+By chance, the order of commitments here means it is also a none unrecoverable execution.
+8:55
+So dirty rules can sometimes lead to an unrecoverable execution and sometimes not.
+9:02
+The last anomaly I want to tell you about is called a dirty right.
+9:10
+And this is simply analogous to the dirty bead, where you have a right operation being performed,
+9:14
+where it's rotting over a value that has not yet been committed.
+9:20
+And strangely enough, this can lead to problems itself. Let's just take two different examples to illustrate this.
+9:25
+Two different examples of transactions both of a similar to one of them,
+9:32
+is trying to update all the deposit accounts to have the same interest rate of five point five percent,
+9:36
+and the other is trying to update all the accounts, which are of type deposit to have an interest rate of six per cent.
+9:43
+Clearly, in a C realisable execution, either all deposit accounts should end up with five point five percent as an interest rate,
+9:53
+or the account should end up with an interest rate of six percent, depending on what serial execution the system chooses for these two histories.
+10:00
+However, taking this concurrent execution, we end up with some rates at six percent and some five percent five percent.
+10:14
+Let's suppose we start off with the first write operation of H six,
+10:21
+so it will set the rate of account 101 to 6.0 May, maybe because the database system has loaded the record for that.
+10:27
+It chooses to then far off transaction each five doing its right to count one one, and it changes it to five point five percent.
+10:36
+And then it carries on with history to note in record for account one one nine and changing that rate to five point five.
+10:46
+And of course, that account record is now in place.
+10:53
+The right operation for history hit six because changing the rate to six point zero square we commit.
+10:56
+We end up with account one one nine being left with a rate of 6.0 and account one of one being left with a rate of five point five.
+11:03
+So we have something not equivalent to any serial execution of the two transactions.
+11:11
+But, of course, is recoverable because no transaction has reached the value produced by the other.
+11:16
+Look at this in terms of patterns, we end up with a dirty right whenever we have some second transaction right into an
+11:24
+object where a first transaction has written to it and other transaction not end ended,
+11:33
+i.e. it has not had a permit or a boat.
+11:38
+A dirty read is where you have a second transaction, reading the value of the first transaction and the first transactions not yet committed.
+11:42
+Inconsistent analysis means you have to at least two interactions between a pair of
+11:51
+transactions where one is trying to read objects and the other one's trying to write,
+11:57
+and the order of those interactions contradicts each other.
+12:02
+So one transaction right after the first transaction reads and that second transaction rights to Object B before the first
+12:06
+transaction pizza and the last updates as a pattern has some second transaction rights in object where they've read and write by.
+12:14
+The first transaction is occurring before and after that right operation.
+12:24
+With that, you've got enough information to do the worksheet associated with identifying anomalies, given concurrent executions of transactions.
+12:32

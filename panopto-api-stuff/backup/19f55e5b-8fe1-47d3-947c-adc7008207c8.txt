@@ -1,0 +1,353 @@
+ID: 19f55e5b-8fe1-47d3-947c-adc7008207c8
+Title: Wellbeing Adviser - Introduction to Student Welfare and Support
+Category: COMP 1st Year General
+Lecturer: Konstantinos Gkoutzis
+Date: 20/10/2021
+Hi, my name is Caroline Gilchrist, and I am the student wellbeing advisor in the Department of Computing.
+0:03
+Before I go any further, I just want to apologise for what happened in yesterday's session,
+0:09
+the session on Monday afternoon, my computer completely crashed. And by the time I was able to get it up and running again, the session was over.
+0:13
+So I'm recording it now. And I do hope you will have a chance to watch this presentation.
+0:20
+I'm just going to switch my come off to minimise the risk of anything further going wrong in the presentation today.
+0:27
+So what I'm going to be covering today,
+0:36
+I'm first going to talk a little bit about some of the transitions that you might be experiencing as you begin your undergraduate studies.
+0:39
+I'm going to look at some health and wellbeing issues and some techniques briefly for building resilience.
+0:45
+I'm going to spend a little bit of time talking about homesickness and some tips about what you can do if that's something you're experiencing.
+0:53
+And finally, a little bit about where you can find support. So for many of you, this will be your first experience at university.
+0:59
+It may also be your first experience of independent living.
+1:09
+And you're probably going to experience a number of transitions at this time, of course, that are going to be academic transitions,
+1:13
+because obviously studying at university is quite different to what you may be used to studying in the past.
+1:20
+There's a lot more autonomy. The workload is different, the pace is different, and I'm not going to go into that too much.
+1:28
+But all I want to say is that while some people might make this transition very seamlessly, it might take a bit longer.
+1:35
+And if you do find yourself struggling, it will please do get in touch. Your personal tutor is there to help you, the senior tutor as well.
+1:42
+I'm also here. To support you, it's also a time of financial transition for many people,
+1:49
+it's going to be the first time that you will be managing your own budget, thinking about your income and expenditure.
+1:59
+And again, I'm not going to elaborate on that too much.
+2:05
+I'm just going to say that it is a good idea to try and take a little bit of time at the start of term to work out your budget,
+2:07
+because you will find that you're going to get busy quite quickly and it's quite easy for things to spiral out of control.
+2:15
+We do have financial support mechanisms in place if you do find yourself in trouble.
+2:22
+So if that does happen, try not to get too overwhelmed and to come forward and ask for some help.
+2:27
+It's also a time of social transitions, obviously, for many people. This is a could be a new city.
+2:34
+It might be a new country. And for many people, you're going to be making new connexions and experiencing new and different living arrangements.
+2:40
+For some people, this can be a cause of a bit of anxiety because people might be worried that they're not going to make friends,
+2:50
+they're not going to find people with similar interests or who are like minded.
+2:57
+And I just wanted to reassure you that in a survey,
+3:01
+more than half of students actually found it easier to make friends that I had expected and to remember that you are all in the same position here.
+3:04
+And I'm just going to finally talk a little bit about personal transitions for most people.
+3:12
+University is about more than just studying and learning the subject matter for your degree.
+3:20
+It's also about learning about who you are. And being at university can provide you with lots of opportunities to explore new
+3:26
+experiences and try on different identities and see what fits and what doesn't.
+3:33
+And you've probably realised by now that who you are is not a static and unchanging thing,
+3:39
+but it's something that continues to evolve and change throughout life.
+3:47
+And the other thing to mention about identity, of course,
+3:53
+is that you have many different identities once you're not just one thing, but a combination of many different things.
+3:55
+And these integrate and emerge from your past experience, your personal strengths and weaknesses, your preferences, upbringing, gender, ethnicity.
+4:03
+So many different factors contribute towards this.
+4:14
+It's important to realise that this is changing and it will continue to change throughout your life.
+4:18
+And I think it's important to consider how understanding your identity can help you to understand how you experience stress,
+4:25
+why you react the way you do in certain situations, and what you might need in terms of support.
+4:33
+So, again,
+4:39
+if you are finding any of this challenging and that's perfectly understandable at this stage in life and you do want to come and have a chat about it,
+4:40
+then please do.
+4:48
+And I've got a couple of little quotes here around identity that I like, the first one is from Dr. Seuss, the author of The Cat in the Hat,
+4:52
+and he says, Be who you are and say what you feel because those women don't matter and those who matter don't mind.
+5:00
+And I really like the second one as well from Oscar Wilde yourself. Everyone else is already taken.
+5:06
+And I'll just let you read that third one. Yourself.
+5:12
+So just a couple of things about health and well-being that have probably already been covered.
+5:25
+One really important thing is that you register with the GP. We do have a health service here at Imperial.
+5:30
+You don't have to live near the campus to register with them, although you don't have to register with the Imperial Health Service.
+5:36
+You can register with something that's more local to where you're living if you want to. But they do have.
+5:42
+Quite a lot of resources, including some counselling and mental health support, independent of the college's counselling service.
+5:50
+Another important thing is to disclose any pre-existing conditions you have.
+5:57
+This could be disabilities, long term physical or mental health conditions, learning difficulties, anything at all.
+6:00
+And it is really important to come forward so that we can make sure you get the right support and seek reasonable adjustments.
+6:07
+Is much better to do this early on, because if you leave it very late in the run up to assessments and exams,
+6:13
+it can be more difficult to get these things put into place.
+6:19
+Even if you think it's something that isn't that significant or you don't think it would count
+6:23
+or be classed as eligible for any of this type of support is still worth coming forward.
+6:27
+And do you discuss any concerns at all that you have with us? I want to talk a little bit now about mental health.
+6:31
+The most recent statistics that I've been able to find is from 2015.
+6:42
+But in a survey from 2015, 78 percent of students reported experiencing a mental health issue, which is obviously quite a lot.
+6:48
+And I imagine with the recent pandemic and lockdown that may even have increased,
+6:56
+I think it's very important to distinguish and to highlight the difference between what is mental illness and what is mental health.
+7:03
+Mental health is something that we all have just lack of physical health.
+7:11
+It's what we consider to be a continuum. So sometimes your health is going to be better than at other times.
+7:15
+We all have periods in life when we feel when we feel down, when we feel challenged and when our mental health is affected.
+7:21
+That doesn't necessarily mean that we have a mental illness.
+7:29
+And on the other hand, people who do have diagnoses of mental illness will also have fluctuations in that condition.
+7:33
+So there may be periods, even long periods of time when they can be.
+7:39
+Relatively mentally, quite well, and other periods when the mental illness will be will be more evident and will present complications for them.
+7:46
+So it's important it's important to bear that in mind, to make the kind of support that you can get from me,
+7:56
+from the senior teacher, from your personal tutor and other college services is discrete and it is confidential and it's important.
+8:03
+And I'll talk a little bit more about exactly my role towards the end.
+8:11
+But it's also important to bear in mind that the support is that not just for people who are in crisis,
+8:16
+that you don't have to reach Crisis Point will be having some kind of breakdown to come forward,
+8:23
+even if it's just something really small or even if you're worried about something spiralling or getting worse.
+8:28
+Or it might even be a practical thing that you're concerned about.
+8:35
+You want some support with such as sleep hygiene or diet and exercise, then please just do come forward.
+8:38
+And and if there's anything that I can't help you with or whoever you speak to can't help you with,
+8:45
+what they will do is help you to find the right person or the right service that will be able to give you that support.
+8:53
+Moving on, obviously, it's really important, but any time in life that but this time of year, you're studying your students.
+9:03
+Do you think about looking after your well-being? And this will help you over the course of your studies to build resilience.
+9:11
+So self care is very important.
+9:16
+And one of the frameworks that you'll probably hear me going on about quite a bit is this one, which is the five ways to well-being.
+9:18
+This is an evidence, research based framework that's used by a lot of health and wellbeing organisations, including the NHS.
+9:26
+And basically the idea is that if people have these different elements in their lives, this will contribute to their mental health and wellbeing.
+9:33
+Now, it's not a one size fits all thing. It's a matter of people working out which things within each of these five areas works best for them.
+9:42
+And again, it doesn't necessarily mean that you need to do all of these things in equal measure.
+9:52
+Again, it's just about working out what's right for you, but basically going from left to right.
+9:57
+These things are one of the things is to keep learning.
+10:03
+Obviously, you're going to be doing lots of learning here at university, but it doesn't just mean academic learning.
+10:08
+Obviously, there are other things as well that you might find rewarding to learn, such as, say, new skills, new sports, languages, anything at all.
+10:13
+The second one is to connect and connect with people. And that's very important, to avoid isolation and loneliness,
+10:23
+and also because connecting with other people has been shown to improve our mental wellbeing,
+10:30
+especially if we're talking through issues and problems that we have.
+10:36
+So obviously, you can connect with your peers here, and I hope you will.
+10:40
+I hope during this welcome week you'll have a chance to go to welcome fare and find out about some of the many
+10:44
+clubs and societies that are on offer where you'll be able to find people who share similar interests to you.
+10:50
+And obviously, you can stay in touch with with people from home, with family and friends and so on as well.
+10:56
+The next one is take notice, which is also sometimes called mindfulness,
+11:03
+and this is really about being aware of what's going on in the moment, taking stock of your thoughts, your feelings, your body and soul.
+11:07
+On. Mindfulness can help people to enjoy life more,
+11:16
+and it can help people to understand themselves better and positively change the way that people feel about life and how they approach challenges.
+11:23
+I'm hoping later on in the year to do a workshop about that.
+11:30
+So you look out for that, if that's something that interests you. And another aspect of the five ways to wellbeing is giving.
+11:33
+Research suggests the act of giving in kindness can help improve your mental wellbeing.
+11:42
+And these can be small acts of kindness towards other people or larger ones, such as volunteering in the local community.
+11:47
+And then finally, we have to be active. Keep moving.
+11:55
+So being physically active causes chemical changes in the brain, which can help to positively change your mood.
+11:59
+Now, this doesn't mean that you have to go and join a sports team or the gym. That's not for everyone, for example.
+12:05
+That absolutely doesn't work for me. But it is a matter of just making sure that you have physical activity in your diet.
+12:10
+Could be going for a walk, going for a swim. But do try to avoid sitting down, especially in front of a screen for long hours every day,
+12:17
+because that will ultimately have an impact on your mental well-being.
+12:25
+OK, so moving on from there, I'm just going to talk a little bit about homesickness.
+12:31
+This is something that not everyone is going to experience, but many, if you will.
+12:36
+And it's a perfectly normal and understandable response to change.
+12:42
+And for many people, it can feel like a loss or a bit like grieving.
+12:47
+And I think it's really important here to highlight that it's not a weakness at all.
+12:53
+It's a very common and normal response, not just for students, but for anybody who's experiencing any big change.
+12:58
+And some people take longer to settle in than others. It may not be immediate.
+13:05
+A lot of people experience kind of a honeymoon period before they experience homesickness.
+13:12
+Some people won't experience it at all and it does usually resolve itself over time.
+13:17
+So you will find that things will get easier as time wears on.
+13:22
+But again, if this is something that you finding really challenging, then please do come and have a chat about it.
+13:26
+I've just got some tips here as well of things that you can do if you're feeling homesick, make a real feel as much like home as possible.
+13:33
+Try joining societies to meet new people, explore your new surroundings.
+13:42
+I mean, London, if you're not familiar with London, it's an absolutely fantastic city.
+13:47
+There's loads to offer. And the imperial campus is actually a really fabulous part of the city with loads going on.
+13:51
+They do take some time to to familiarise yourself with it home, but not too often.
+13:57
+That's very important. So obviously, it's important to keep in contact with friends and family from back home, but try to resist, if you can,
+14:04
+ringing every day, because that can sometimes sort of exacerbate feelings of homesickness, make a scrapbook or memory board.
+14:10
+I remember when I was at university, I had a big corkboard full of photos with people from back home.
+14:21
+And I found that actually really comforting to have.
+14:26
+And of course, reaching them structure can help you feel more secure as well as to try and stick to that.
+14:30
+And that can also have lots of other benefits as well, for example, for your sleep hygiene, for your study practises and so on.
+14:36
+So that's a good thing to do anyway.
+14:43
+And of course, talk to others about how you feel you're not alone and you will find that there are many of your peers who are experiencing it as well.
+14:45
+And most importantly, and not just to do with homesickness, but really about anything that you might be experiencing at this time.
+14:52
+Don't be hard on yourself, OK? Feeling homesick is natural.
+14:58
+It's very common. OK, so finally, I'm just going to move on to talk a little bit about some of the support that's available for you here at Imperial,
+15:02
+we've mentioned personal tutors and the senior tutor. I am in the department.
+15:13
+I'm solely full time in the Department of Computing. So I'm there Monday to Friday, usually 9:00 to 5:00, although that can be a bit of flexibility.
+15:19
+With that, I can offer you one to one appointment.
+15:26
+I will be on campus some days a week, but I can be fairly flexible about that if you prefer to meet face to face.
+15:30
+And I do have my own private room where we have these meetings can take place.
+15:36
+Otherwise I can meet you online. You can see my email address here and also on the Department of Computing website,
+15:41
+you'll find my contact details and also a link where you can book appointments directly as well.
+15:48
+I mentioned earlier as well that I will be carrying out workshops throughout the year.
+15:54
+So do look out for those you will find of publicised when those are and what the content is going to be.
+15:58
+And if you are interested, then please do sign up.
+16:04
+You've probably already heard about most of these other services that the student supports are in the student hub,
+16:08
+the Imperial Success Guide, we've already discussed the health centre.
+16:15
+Imperial has its own free student counselling and mental health advice service.
+16:20
+These are this is run by professional counselling counsellors and therapists.
+16:24
+And it's free for all students. You don't need to be referred.
+16:31
+You can contact them directly yourself. There's usually a bit of a wait, possibly a few weeks,
+16:35
+but they will offer you a series of sessions and they have a lot of other resources as well that you might like to have a look at on their website.
+16:41
+The Disability Advisory Service is where you would go to disclose any disabilities
+16:49
+or long term health conditions that are affecting your your studies.
+16:53
+And you can get in touch with Thomas Lancaster, who is the department's dedicated disability officer.
+16:57
+We also have chaplaincy and international student support.
+17:05
+And this is not an exhaustive list. There's actually a wealth of support options available internally here and also other external services.
+17:09
+If you go on the Department of Computing website and look under current students,
+17:18
+you will find a well-being section, which is where you'll find my contact details.
+17:23
+There's also a ton of resources on their internal and external resources.
+17:29
+There are websites where you can get information about mental health and wellbeing podcasts, apps that you can use on your phone.
+17:34
+So there's plenty there.
+17:42
+But if you need help with if there's anything you can't find or you need help accessing anything at all, then please just get in touch.
+17:43
+So that basically brings me to the end. I wish you all the very best with your studies at Imperial.
+17:51
+It's important to say that both myself and the teaching team want you to succeed and thrive here,
+17:59
+and we are here to support you at any time when you need it. Thank you.
+18:05

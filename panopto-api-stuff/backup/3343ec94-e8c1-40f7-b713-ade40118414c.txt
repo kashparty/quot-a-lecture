@@ -1,0 +1,987 @@
+ID: 3343ec94-e8c1-40f7-b713-ade40118414c
+Title: Advanced Programming - State
+Category: Haskell
+Lecturer: Anthony Field
+Date: 18/11/2021
+Welcome. OK, I'm going to try and keep an eye on the shot as we go.
+0:03
+You can also feel free to put your hands up and I should probably catch that share my car window.
+0:08
+There it is. No. They also disappeared and.
+0:18
+We got so. So what am I doing today?
+0:23
+Well, today we're going to talk about the statement as a sort of another example of burnouts
+0:27
+with Tony Universities in Ohio and you maybe I'm going to tackle the statement out,
+0:34
+which is also incredibly useful and hopefully what you're going to what you'll see here, if you can see it, I mean,
+0:39
+if anyone wants it to be bigger, it can make you think I can make it slightly bigger at the cost of losing screen space.
+0:49
+There it is. So this should look familiar to you.
+0:57
+These are Trace one and Trace two from your own systems worksheet from, I think, two weeks ago now.
+1:01
+So I've just implemented these and I've implemented these in the way in a way that you should have been
+1:10
+shown by your editors or that you should have done this function and have started this way to illustrate,
+1:17
+you know what the problem is and b to remind us about about what we're going
+1:25
+to be doing because these are great examples of the statement that inaction.
+1:31
+So just to remind ourselves of what it was all about, Trace one was concerned with generating a bunch of coloured lines from a selection of commands,
+1:37
+and these commands consisted of forwards and backwards and rights.
+1:47
+And also some pesky brackets. Now there are two versions of Trace one, trace,
+1:52
+trace one and Trace to one used direct recursion to manage the resetting behaviour that happens on these on these closed square brackets.
+1:58
+And trace to used and used an explicit stock to basically save and restore state that you passed through.
+2:08
+Now, to remind us about how horrible this tool is,
+2:18
+I have written these these solutions and I have made and trace one, I think no less than three mistakes.
+2:23
+Now these are mistakes that I legitimately made when I implemented this function and I decided to leave them in because they serve as important
+2:31
+motivation for why we want to try and move away from this style and move to a slightly more imperative way of thinking about this the same programme.
+2:39
+So and I do want to play spot the mistakes.
+2:52
+So if anyone can spot a mistake and drop down the line over the chat, we'll see if people can find where they are.
+2:56
+There are no mistakes in trace to trace, to explain that trace one has some potential problems and it.
+3:04
+The give people a few seconds to see if they can spot any. If not, I don't blame you.
+3:26
+These are going to be very hard to catch. I didn't catch them until the tests were done when passing correctly.
+3:32
+OK, looks like we have. I have no idea. So they all concern whether or not problems have been written in the right places.
+3:43
+So like 98, there is one. Yep, that looks a bit suspicious.
+3:54
+There it is. So I misnamed that it should have been Command's Pride parade.
+3:59
+Absolutely, because that's what comes out of the function. So we should see things go again.
+4:06
+This comes out that gets into the next one. This comes out and this one gets returned.
+4:12
+So that's one of the mistakes. There's another one just like that right there as well.
+4:17
+So this should have also, in fact, this one shouldn't be surprised.
+4:23
+This one actually should have been commands. So this one was done correctly and only that overturned the wrong commands from the solution as well.
+4:28
+So I've managed to screw up three times in implementing just trace one.
+4:38
+So, um, so the kind of motivation behind it to states is we want to avoid doing this little dance where we we pass things with brains.
+4:45
+We put them back in and then we get more problems.
+4:55
+We have to remember that we're starting and we keep moving the state through and through and through.
+4:58
+That's the motivation. So. What you've met so far is you have met the I.R.A. and you have met the media.
+5:03
+So the internet says we want to build in programmes that interact with the outside, with the outside world.
+5:17
+So that might mean printing, that might mean reading files, getting input from the user.
+5:30
+Stuff like that, maybe is we want to build little programmes that handle failure.
+5:35
+So this one is kind of saying, you know, programmes can sometimes go wrong.
+5:41
+We can handle that with with a nothing case, and we're going to sort of write out programmes assuming that they always succeed.
+5:46
+And writing about logic and letting the miRNA handle what happens when failure happens,
+5:52
+we're going to introduce day is state, which is build little programmes with a single variable.
+5:59
+And I mean this in a in an imperative sense of what variables, so this is something that physically changes as we go through the programme.
+6:08
+So what's how do we how do we identify state?
+6:17
+What is state? And let's remind ourselves about what moments are as well.
+6:22
+So that's a collection of things. It's have something called return and something called what you might encounter claimed in other languages
+6:28
+or other presentations being called something like concatenate or flat map or under other names for it.
+6:43
+And essentially Return says I have some value. I want to lift it into this world where I have these extra little bits of effect like,
+6:52
+oh, or failure or variables, and I never do anything at all in terms of using that fact.
+7:00
+So this doesn't print anything to the outside world that doesn't read files.
+7:07
+It doesn't fail. It doesn't change our variable. It just returns a value.
+7:11
+And Bind allows us to sequence these little programmes together.
+7:17
+So we do this one. We use its result to build a new one and then we run the new one.
+7:21
+So these two things together basically allow us to to start composing these little programmes to build bigger programmes.
+7:27
+So what is state?
+7:36
+Well, state by state has two parameters to it, so it state S.A. The S is going to be the type of the variable that we want to carry around.
+7:37
+And the A is the sort of result Typekit a computation so you can think, you know,
+7:49
+detached, maybe a we've had Io A The A is the results of the programme.
+7:53
+And in this case, we also know what the Typekit one variable that we get is.
+8:00
+And crucially, if you remember, like Io Streamline, which was strings, a unit that was one of the operations it had state has two operations.
+8:06
+So it has a gapped and get says we have a variable of time.
+8:18
+I want the variable. So it gives me the value that we're currently holding off to on site.
+8:25
+We also have cuts that says I have a value of time pass and I want to modify the state so that it contains that volume, right?
+8:30
+And it has little result. So this is unit.
+8:40
+It's used to indicate a lack of meaningful results in a way, if you know that compared to the programming, it's it's like.
+8:43
+And there's one value, it is unit. So these are the two operations and how do we identify these things?
+8:50
+Well, the things that have a shape where what do we have?
+9:02
+We have a state that goes in the value that comes out and another state that comes out.
+9:07
+And that should sound quite familiar in terms of how do we with threatening state around in these interests.
+9:14
+So we're going to see that as an example.
+9:21
+But before we go to trace, what I want to do is I want to build a few bigger programmes out of our small, our two small chunks that input.
+9:25
+So the first useful programme I'm going to build is modify and modify says is if you give me a function that can change a state into a new state,
+9:35
+we'll just apply that to the state stored by our programme.
+9:52
+So this is a way of, you know, you can take of it's like a plus equals or something like that.
+9:56
+So how the how do we actually build those programmes with state?
+10:01
+So we're going to start building blocks. Remember, Denotation is a special syntax attached to learn once, and hopefully it will become intuitive.
+10:05
+You know what it's actually doing? If not, give me a shout, but I can show what it looks like with binds instead.
+10:16
+So how was modified? What? Well, the first thing you want to do is want to ask for our variable.
+10:24
+So we want to use that and get the result of the results of get is the thing that was started in the state.
+10:29
+No, it's s s. And what do we want to do?
+10:36
+We want to change the state, so we need to put. Can anyone think what we might want to put back into the state for this function?
+10:42
+Legs, legs look good. We want to put athletics, so when we use the modify programme and the X that was in the state is changed to be f of X now,
+10:52
+give an example of this running. So let's do, let's pull this up.
+11:07
+So this how do how do we actually get a state out?
+11:16
+Well, there is a function called state and basically extracts functions of its of this type.
+11:20
+So and we give it a programme in state, let's say we get it modified plus two, we give it to a state,
+11:28
+let's say five and we get that unit, which is the result of the perks that had no meaningful result.
+11:37
+I'm going to get seven back. So five went in, seven came out.
+11:44
+I could cook more of these together. So let's say we did modify plus two and then let's do modified climbs by two.
+11:50
+What should come back? 14. So I see a hand that is the hand is commensurate with the pines.
+11:59
+Yeah, absolute conservative minus whoever put the hand up. Feel free to just shatter.
+12:10
+All right. I want to ask about the line 95, 96, about time signature.
+12:17
+Well, it's that they asked us if last day as a.
+12:24
+So this is state assets, because the result of the state for compensation.
+12:30
+I want to be the value in the state, so I'm returning the SE that is being kept behind.
+12:34
+And in this case, I am. And they're both s, and that's because I want to put something into the state.
+12:42
+So it has to have. So I asked, does that make sense? So how about a.
+12:48
+So will we stay? So you do say the thing is, right, so this is a one of the 80s right.
+12:54
+In this case was saying there is going to be result to come back and.
+13:01
+I'll show you an example of that in a second. Let me just write the modified using point.
+13:07
+So find what they run, get the X out of it and run X.
+13:14
+So the way this translates is basically whenever you have a back arrow,
+13:21
+it kind of translates to a bind with a function where the argument to that
+13:25
+function is the is the name of the thing that came out the left hand side and.
+13:29
+OK, so get some of the final function gaps that will help this question, when when might we want a different way?
+13:36
+And so what Katz says is effectively a function that can take the state and extract some, some value of Taipei from that state.
+13:46
+Then this is a little mini programme type state essay, right?
+13:56
+And how do we run this? So first we get the state and then we return.
+14:03
+F. called X. So before we put it this time, we're just going to return it back.
+14:12
+So let's let's refresh this again. We'll take that cognitive approach.
+14:17
+And so we have this programme before modified to then modified teams to when we run that unit back.
+14:25
+As the results of the programme and 14 was the final state where I could change is going to be gets off times two.
+14:33
+Can anyone think what the results of running this programme will be?
+14:41
+So 14 will be the result. Yeah. What about the final state? He was initially set up the same as the initial, so we have done a lot of fight.
+14:51
+So it's going to be at least for us, two or three, then seven, seven seven seven.
+15:08
+Yeah, exactly so. So that gets doesn't change the state. The modify does.
+15:15
+So this is an example where the return value has changed.
+15:20
+So now we're looking at 14 and you know,
+15:24
+we could do something like Gats with the show function and this would give us back the string seven and seven is the final state.
+15:27
+So that's where, you know, the type of this this programme changes,
+15:39
+and it just depends on what you want to get out the value in the state, not always the thing we care about.
+15:47
+We're trying to build something else. And so a good faith of me.
+15:52
+So solidifying that basically is. Well, let's look at Go.
+15:57
+So Go follows this this debate pattern quite precisely and with an extra thing.
+16:02
+So if we get turtle states out of the way. Hopefully, you can see that these SS actually line up.
+16:14
+So we sort of write it out like this, we should get to recognise the pattern.
+16:22
+So commands is in this position and this one.
+16:30
+So we could actually factor this up.
+16:36
+And the results of this state programme is the kind of lines the kind of is that we actually we actually cared about.
+16:40
+So what should the new top signature of go be?
+16:46
+Well, this will be a state commands with coloured lines.
+16:51
+So the results of this programme we're running, this programme should be a list of coloured lines.
+16:58
+But we're saying that for the duration of of actually trying to use this programme, our variable contains the commands to get sorted through.
+17:04
+So hopefully that helps with when one would assume a vary in state essay.
+17:13
+This is a good example here. You want to battle state battles, but I do want to ask what's next?
+17:20
+Absolutely. Thank you. And so yes, the question is we've spotted that this has the shape that state advertises it can help fix.
+17:27
+And we do know there was a lot of busy work going on behind the scenes.
+17:42
+And what state is basically going to give us is the opportunity to get rid of this nasty threat.
+17:46
+State in new state comes out and state goes in you. New state comes out, new state gets returned.
+17:53
+And so what I'm going to do now is I'm just sort of going to massage this ad to get a good sense of it.
+18:00
+And what we run into a problem where we don't really know how to solve it nicely.
+18:09
+I'm going to introduce some small programmes that work on this and I'm going to introduce a type alias to make this a bit faster to type.
+18:12
+So I'm going to stay that a trace.
+18:23
+One type is a state commands, and so I can now write this as total state to trace one list of coloured lines.
+18:26
+So that was sort of like, you know, hiding it up here.
+18:38
+But it just makes it a bit easier to to write out because I have to write out state commands every single time.
+18:41
+So. So what we're hiding in here is we're finding the commands, that's this.
+18:48
+And so the thing we need to know is the thing we kind of lose is we're going to lose the ability to pattern much.
+18:56
+We don't have it immediately available to us. So I start by introducing a couple of small programmes.
+19:02
+So I'm going to start with finished thought, Finished says is it basically says, are there any more commands to execute?
+19:12
+And the way I'm going to do this is I'm going to use gets the function we've done before.
+19:21
+So the the whole here, this house tonight and so commands, we need to return a bow.
+19:25
+So what should this be? Well, let's just ask, is that is a command empty, right or equivalently?
+19:36
+Is it the empty nest? So that's just another function. So if this is the empty list, the programme is finished, there's nothing more to do.
+19:44
+So this will return true. So I'm just going to right get no.
+19:52
+So that's the sort of simplest way of writing that.
+19:56
+And so the other thing we need is, well, let's assume that we know that the programme doesn't finish.
+20:00
+So we sort of handled this case this first. So actually, let's actually start writing and then we can run into another problem.
+20:09
+So I'm just going to call this out, leave it like that.
+20:16
+So what have we got?
+20:21
+We've got to go to Turtle State, so we start by do and we say we run the little programme finished and that gives us our brilliant back.
+20:22
+So if it is true and the programme is done, let's put it down.
+20:33
+So if we're done, then well, what do we do in the base case?
+20:40
+In the base case? We don't. We don't really care what happens to the state with sort of knowing that we did return the empty.
+20:43
+So I'm going to start by saying if we don't, then return the empty list.
+20:51
+So very base case return, just the empty list of coloured light else, the nowhere, we're a little bit stuck.
+20:58
+So we need a way to get a command. We could use gas.
+21:08
+So this I think it's better to build little obstructions and keep building more more small abstractions to horrible set.
+21:12
+So I'm going to build a programme called Fetch and Fetch is going to give us the next command.
+21:19
+And how do we do that?
+21:27
+So if anyone got any idea how we could actually get the command out of the state to begin with, what would I need to write on the right hand side?
+21:30
+Just look at. So it gets would give us the list of commands, we're actually looking for one of them, but that's yeah, that's close.
+21:42
+What can we do to the to the state to just get one command out of that?
+21:50
+Get had to head, yeah.
+21:57
+So who gets hurt is one way. Yeah, Alex also has a good suggestion, which is patent matching and sequences.
+22:01
+So that's like the equivalent of command.
+22:10
+Cons Once it gets, that is another possible implementation.
+22:15
+Either one works that lead to slightly different implementations of the fetch function, so let's show certain bikes.
+22:22
+It's no harm in that. So we'll work with this one first.
+22:31
+So we probably want to return the command of what we want to do in the middle.
+22:35
+Well, we want to get rid of that command from what's left to the state, so we have to get commands back in the steps.
+22:42
+So what does this do, in fact, is the state gets the first amount of the front,
+22:50
+puts the remaining ones back and returns the first one equivalently, and we could write this a slightly different way using its heads.
+22:56
+So what would this do this for? How would you modify the list that would suggest the function you'd use?
+23:07
+How? Yeah, good. And again, we were to come out.
+23:16
+So these are basically identical to each other. It doesn't match.
+23:21
+It doesn't matter which one we pick. But either way,
+23:25
+we now have a programme that can fetch one command from the list of commands and basically move the whole command structure along by one.
+23:28
+So we can now go back to writing gotten. What we can do next is fetch the commodities and move that down here just to make it a little less wide.
+23:40
+So we took command and in our original function, we now need to to patent much on it.
+23:50
+And if you haven't seen the case command yet, it's like a match that you can.
+23:56
+You can use it anywhere. So it's it's quite similar to what we had before.
+24:01
+So just put in these these other cases, it's just learnt so.
+24:09
+So now the now the funding, how are we going to manipulate these things?
+24:17
+So let's start with the closing bracket case. So the closing bracket case doesn't do anything very interesting in the old version.
+24:22
+It just returns the commands that are left. Well, we know those are already in the state because we put them in fetch.
+24:30
+So anything we have to do is just to return the empty list of Caroline's right
+24:37
+to the state and the job to maintain the state has already been done by fetch.
+24:43
+So the variables already been modified. What about this one? So what is this going to last?
+24:48
+Do command first? So this one is going to be very similar to how it was before.
+24:53
+So you can use let statements and do blocks. They're very similar to this comprehension aspect.
+25:02
+So I'm just going to do the same with that.
+25:09
+So I just take them and again do the same work than it did in the original one.
+25:15
+So I collect the from position American, you state a new total state and I get the two position.
+25:23
+Then what needs to happen? So then I need to go and evaluate test on this new state.
+25:31
+So I go on this new state and I don't like this original one where I have to fetch the new commands and pass the old commands in.
+25:39
+And again, we're working with state here.
+25:48
+So we're assuming that the state goes in the state that came out of fetch and the new state is just going to float its way through.
+25:50
+So the last step is to have royal family to collaborate with us.
+25:59
+Right? So the the new commands that came out of this governor are going to find their way out of this function.
+26:05
+So it is similar to the way this one was implemented.
+26:11
+You can see they have a very similar shape to each other, but we don't have to worry about fiddling.
+26:14
+So here's another here's another example. And this one.
+26:21
+So how did it look before? Well, first thing it said was barely run the test with the current commands, so we can do that right away.
+26:27
+We'll get ones back.
+26:35
+So going to test the commands are going to get fit in by the state as commands prime is going to get handled by the state and or not.
+26:38
+So what do we do next? Well, we go read lines plate. And that's just going to be go test again.
+26:46
+Right? So the the companies that came out of this one are going to find their way into this one.
+26:53
+So we don't need to do that explicitly. It just sort of looks like we're doing the same thing twice.
+26:59
+But the difference between these lines is the state has changed. And what do we need to do?
+27:03
+Well, we need to put the lines back together again.
+27:10
+So that is the whole implementation of and of trace one, the last bit is obviously calling the function isn't graphics anymore.
+27:15
+So now we can use one state. And there is a sort of better alternative.
+27:27
+So one state was give me a state asset, a programme, as is the result of the programme and the final state.
+27:34
+There's also two more of them. So there's also a state that says, Give me a state to state programme, give me an initial state.
+27:43
+I'll give you a total value. I don't care about the final state.
+27:51
+And there's also the exact state, which is a bit more less frequently used, which says, Give me a state programme,
+27:55
+give me the first state and I'll give you the final state and who cares about the result of the programme?
+28:03
+It was meaningless for this one. So we actually care about the Garden State because we don't care about this final commands.
+28:09
+We just care about the kind of lines that came out of the end of the tracks.
+28:15
+So we can just say if our state go with the initial state and feed it commands, does that work?
+28:20
+Yes, that does work. So let me just wish some stuff down a bit so that we can see it all in one place.
+28:28
+So we'll just leave that one for now today, not looking at that.
+28:40
+So just squeeze and see most of the stuff in this function.
+28:48
+Now, one of my pet peeves is I really don't like the shape of this tool.
+28:55
+It's quite formulaic in that we do one thing.
+29:00
+We get the result, do another thing to get the result, and then we would turn some way of combining those results.
+29:04
+So I'm going to give an example of a nice function here. We can build it using using our do, using our rubber notation for simplifying this pattern.
+29:11
+So take this with me and put it in a comment so we can remember what it looked like.
+29:21
+And so we're going to write a function of general letters.
+29:28
+This they called left and left for monad and Summernats, left for what it does to functions.
+29:31
+So it says, give me a function from these to these two CS and I will give you back that function so that it works on ends, whatever we're working on.
+29:41
+So this would work for my own and maybe would work the state. It would work for any of them.
+29:55
+And the way that this function works is we have an F and max and then white.
+30:01
+So I'm going to take away this brackets and it's the exact same exact same thing.
+30:07
+And how do we do it? Well, and it will give you any suggestions how we can write this, and it's quite similar to the structure that we use that.
+30:13
+We need strong support from acts and drugs and help fight and return return by.
+30:28
+Exactly. Yeah. So um, so what would be how could we factor this into that pattern?
+30:42
+Well, let's talk a little bit of fiddling. And we should hopefully see that this is the shape.
+30:50
+Is very similar to this ship, where F is basically plus plus.
+31:00
+So now that we have our left and to. What we can do is we can change this so that it is lift and to plus plus go test going to test,
+31:04
+and that just simplifies this programme a little bit so that, you know, we don't have to think it means stitch them together.
+31:15
+It's a bit more of a concise way of saying run these two little programmes and combine them as a two plus plus.
+31:24
+They're just a nicer, more concise way of writing it. And you can imagine you can make less than three and four and five and six
+31:30
+seven eight nine as many as you need in order to combine all of these results.
+31:37
+So that is one example of the statement, and I think this is quite compelling because we sort of lost that manual threading and then take this away.
+31:43
+We've lost that sort of manual threading, made the original one sort of clunky and error prone.
+31:56
+So what is in it test and headlines come from? Good question. Adeline was just the function I wrote, and to save myself the trouble.
+32:02
+It just basically says if the if the from the to the vertex of the same, just ignore it.
+32:12
+Otherwise, add the light up to the front and it say it's just a value I defined.
+32:18
+So it's like, you know, the power of forgotten what it's meant to be.
+32:24
+I think it's that one one with commodity or something. That's that's basically what I have to find, as I just put it somewhere else in the file.
+32:29
+And so they just helper functions that they're not involved with any of the goodies.
+32:38
+And so so yeah, we've basically eliminated the need to track this.
+32:46
+Now there's a few things you can comment on here. You could say, Well, what about this state here?
+32:52
+We have to remember to do that. And yes, in a if you want to take this further, you could squish the terrible state into the state as well.
+32:58
+And it's a bit more annoying because it gets fed in the same here.
+33:08
+So you have to sort of put it back to how it was that so-called local semantics to state.
+33:14
+So I haven't bothered to do that for this one. I think it's just a bit simpler without it.
+33:22
+There are other monad that can help extract this that I mentioned at the end, but I'm not going to show.
+33:26
+And I we know. You know, the state has disappeared, right, we we can't see the state anywhere in this programme, the commands are sort of hidden away.
+33:33
+We do see them a little bit in our definition of fetch. But you know, in some sense, we're finding everything behind gets and modified,
+33:42
+which is the only place where that state ever becomes apparent explicitly.
+33:52
+Yes, there's a hand. So I was right in line, I'm 40, yeah, if we do something like.
+33:58
+I'm still here, they kind of like, have to go tell those turtles to kind of spit.
+34:13
+And yes, we're running two girls with the same total state if they ever use only one state I this past week,
+34:24
+how like extract turtles state to another state? Yes.
+34:36
+Yeah. So you could push the total state into the state.
+34:43
+That is one thing we can do.
+34:47
+And because of the referential transparency of Haskell, you could actually say find this little programme and use it twice.
+34:49
+And it is. It is the same, right? It isn't. It doesn't change at all.
+35:01
+But yet you could squish the central state into the state inside to trace one.
+35:07
+It just involves a little bit more busywork because the state does actually get altered when you do that.
+35:12
+So you would actually have to alter the state here. And so part of this would be either resetting the state to how it was.
+35:20
+Which is just a bit trickier, so it's something I'm not going to show today that you can squeeze the touch and stay
+35:29
+inside and basically say my variable is a pair of turtle states and commands and.
+35:35
+If that extends that, that was the question. Yes, I mean,
+35:43
+I just think about if I kind of like put another left arm to in like 140 and this way we kind of just reference that once and this will not modify it.
+35:48
+Yes. So yes. Yes.
+36:01
+So you could say, yeah, that would be you could have pushed into the state otherwise.
+36:05
+There's. Yeah. Like I discussed, there's another mcnabb's that you could use to hide the total state.
+36:13
+And if you were using that in conjunction, this would disappear.
+36:19
+So if you if you use the other mountains as well, this would end up looking something like this,
+36:23
+which would be a more simple form where you don't have to remove it surpassed the total state in back times.
+36:30
+And because yes, this is another sort of annoying content where you have this variable, it always gets fed.
+36:35
+It never really changes. There was another that designed to help eliminate that pattern.
+36:41
+And yes, that would be subsumed into lifting to do that job for you.
+36:48
+And see a good observation.
+36:55
+Yes, you can keep squeezing and more and more and more things disappear the more you keep squeezing and juicing the lone lemon.
+36:57
+So what I want to do now is I want to show how Trace two gets changed and I'm going to take a slightly different tack with this one.
+37:07
+And just to keep building intuition for how we can build little programmes to manipulate state to help us build bigger programmes.
+37:20
+Now the thing that's been traced to is because it's terribly coercive.
+37:28
+It's not evident that there is a state known as pattern here. If I were to draw out the, you know, Esther ACORN as in here.
+37:33
+Well, this is probably the s, but we just have a right to still ask the pops up the other side.
+37:42
+So what is the comment as well?
+37:51
+We could do is we could put the total state in here.
+37:56
+It's just kind of redundant because it's just sort of going to get threaded through and it doesn't change it in any of these cases.
+38:01
+It was sort of pop up here and it would go out here.
+38:10
+But because it's a tail recursive, we kind of don't see the state trending being used at all.
+38:17
+And so it's like kind of you don't need to package it up like this, but you certainly could.
+38:22
+So if we write it in this form now, it's evident that the state that we would be carrying around Fortress two is the stack of turtle states.
+38:29
+So actually, I'm going to do I'm going to I'm going to sort of assume that we are working with Stack and let's see how we can
+38:39
+eliminate the sort of state manipulations and bookkeeping we have to perform and try to get them to disappear.
+38:46
+So the new the new type I'm going to introduce is a state list of total states.
+38:56
+And so what I'm going to do is call this out, put this title.
+39:11
+I don't want it like this. So just be pulling this out and we're going to implement the new go type commands you.
+39:17
+Traced two of the coloured lines to several coloured lines that they need to be fiddling around with now.
+39:29
+And what our state contains a list of things and we're using them like a stack.
+39:38
+We could build a few more little abstractions on top of these to make to sort of make some specialist operations.
+39:43
+So I'm actually going to introduce another synonym here and there,
+39:50
+where it's where I'm going to say that a stack of grenades with essay is a statement out where the S is actually a list of values.
+40:00
+So we're sort of using it as a as a stack. So this is actually going to be a Stack Turtles type thing.
+40:11
+So before I implement Trace, do I kind of want to build some small stack operations to sort of continue to give us the motivation about
+40:19
+how we can build small chunks of state manipulating programmes and then compose them together later?
+40:27
+So some operations that I want to build are peak pop posts, peaks and exchange.
+40:35
+I think these are all useful stack operations that we can make use of.
+40:43
+So let's start holding them, and it should be evident that they are quite like quite similar to the way that the state operations worked.
+40:49
+So what we do? What are we trying to do? So we're trying to extract the head of the stack well.
+41:01
+When we know how to do that is by saying gets hit right, it's a it's a pattern we've already seen before.
+41:09
+This was saying get the the state, which is a list of assets and extract the head from it so it doesn't change the stack.
+41:15
+This there's a peak leads the thing on the stack that they originally had, but it just tells us what that value is.
+41:23
+So what is pop? So pop is similar and any guesses on what pop might do?
+41:31
+And whether that is. This modified how.
+41:44
+Yes, so we can go to the country and return.
+41:53
+Yeah. But it's important to plot that the peak happens first.
+41:59
+If we modify the tail and then peak, we've already lost the element that we were interested in collecting from the park.
+42:04
+Now there's a slightly more concise notation for writing this.
+42:12
+And I think you were introduced to this operator, which I can access then and then.
+42:17
+It's sort of like an equivalent wonder is it's written with this dog.
+42:27
+There's also one in the other direction, so you can see that very similar type.
+42:31
+But instead of pretending to be, it returns the first page and we can use that to sort of simplify this a little bit.
+42:39
+So we can say peak then would peak and then do modify tail.
+42:47
+We're interested in the result of this peak. So the peak happens first, and this is saying I'm interested in the result in this direction.
+42:55
+So it's just a tiny bit more concise than writing it the other way.
+43:05
+So I just want to show that because it just helps make some of these programmes get a little smaller,
+43:12
+it can be quite clunky using the denotation all of the time.
+43:17
+So that's also the Gulf Coast. So what is frustrating? Well, push, given an asks, pushes that onto the stack of assets.
+43:21
+So any ideas that this was a really simple one, and the idea is how we can implement this, what do we need to do?
+43:33
+Only approved. We could use, of course, yeah, but they order to seise it, we'd have to get that right, so we need to get the current stack.
+43:51
+And there is a simpler way of doing that sort of get in the pattern, which is to modify.
+44:02
+Well, if I can just. So we're modifying the stock by closing X onto the front of it.
+44:10
+Then we have peaks well, peaks is very similar to gets in what it's supposed to do.
+44:20
+So that's saying a stack of assets and we'll get a out of it.
+44:27
+And again, Peaks is basically saying pick the stack and it's an x full x now.
+44:34
+And. That's going to come in handy as well.
+44:44
+That, again, a building very similar obstructionist to the one we had before, the final one is exchange.
+44:48
+So the exchange is very similar to the modified function on on state.
+44:55
+And this one basically just changes the top of the stack. So.
+45:03
+What are we going to do? Well, the simplest way to implement this using what we've already got is first at the start and then push
+45:08
+and pull back back onto the stack so we could build in programmes just using this language alone,
+45:18
+right? So if we wanted to build an APS programme that worked in a stack of integers,
+45:23
+this one could say, take the top two lines of the stack, add them together, put them back on.
+45:30
+This would be something like X Y and first x plus y, right?
+45:36
+So we can build little programmes that operate on stacks and using this little language, which is kind of cool.
+45:45
+So this is kind of useful in itself, but we're going to use it now that's implement Trace too.
+45:53
+So I'm going to leave out of that because it's a funny example, right? So Trace two.
+45:59
+So let's go for you to this quite quickly because I don't want to on time.
+46:05
+So what do we need to do? Well, this case is very similar to how it was before, right?
+46:11
+There's nothing to do. There's no nothing in the stack to manipulate.
+46:17
+Just want to return empty list of card lines. And then, of course, the three cases.
+46:21
+So let's write those out and we'll fill them in in a second.
+46:30
+And again, I need a new abstraction. I'm just going to go and build it and sustain with the game.
+46:37
+So notice that we don't have this stack of tests of tests and arguments anymore when we're finding them in this trace too.
+46:46
+So, um, so let's think about about this one first.
+46:56
+So the way this works before was this sort of took the state that was at the top and threw it away.
+47:02
+And so this one is quite easy. How big it is with our stock operations.
+47:07
+Well, we can put the stock and then go the rest of the commands.
+47:16
+Right. So pop and go. And alternatively, I could have written that something like this.
+47:21
+It doesn't matter too much. I prefer to use this operates out of when I've got something on one line.
+47:27
+And this is quite small, so I'll keep it on one line. What about the first one?
+47:34
+Well, the first one. The idea was that we have to get the stock and we then have to push it on price.
+47:38
+So we're going to build the abstraction for the so called save.
+47:48
+So Save is traced to the unit. And what it does is it first picks that was stuck right because we could talk about this twice,
+47:53
+but it's already on the stack, so we might as well just use that and process.
+48:05
+So now there will be two copies of ex on the stock.
+48:10
+This is again the same thing, and this twice is the bit more efficient if we just peak and then push once.
+48:12
+So this is a little programme, I'm going to try to take it out of the programme.
+48:20
+Restore just for symmetry. And just say that that's pork so we can never say restore, then go.
+48:26
+And this one is going to be safe and then go.
+48:34
+So we're sort of using save and restore in order to do that explicit results that pop up the stack.
+48:39
+We don't actually have to look at the stacks when we do it. So it's kind of hidden and we're relying on our stack operations to plug this hole.
+48:46
+A more concise way of implementing this would be take them push if you're just
+48:54
+using point because they sort of attach together quite nicely and get those out.
+49:00
+OK, I can have a look at the first one again. Yes, there's transport.
+49:09
+Anything about this one you would want us to look at? Uh, it's just really confusing for me.
+49:23
+That's fine.
+49:31
+It takes a bit of time to get used to things, and this one's particularly tricky because you kind of lose the patent matching structure of it.
+49:32
+So let's go with Trace two and then hopefully that will sort of a different outlook on the way the state gets pushed through might help you.
+49:41
+That will. And wise, I would suggest that you play around with it in your own time as well.
+49:49
+To get a sense of this is maybe quite some small programmes like this one to sort of play around with how things connect together.
+49:57
+And if we have time afterwards, we can let you talk it through bits of that as well again.
+50:07
+So I just want to finish up with this now, and this one gets a bit trickier this time because we don't have the total states anymore.
+50:15
+So you can't just look at them in order to build the lines of the forms and the tools and the moves.
+50:26
+So I'm going to build two more little programmes. One is towards us and this one returns a vertex.
+50:33
+I think Michael's so across and should look at the top of the stack, which is where our current status and extract the position from it.
+50:41
+Now we can use peaks for that. That's exactly what it was. Therefore, look at the top element and apply some function tipped.
+50:52
+So peeks at the position. So now we have that we can and we can start implementing this so we can say strong get position.
+51:01
+So that's on the eldest turtle state, then we need some way of modifying such state by doing that.
+51:11
+So I'm going to write another one for Deludes that's given the command, modifies the state and puts that command back.
+51:21
+So what should this do? Well, this is the sort of same thing as this here.
+51:33
+So we'll just take that and we need to apply this function.
+51:39
+Move command centre to the current state, to the top of the stack.
+51:47
+Do we have an operation for performing a function on the top of the stack?
+51:54
+Any ideas? I think that was someone said something, but it cost.
+51:58
+You think so and. Exchange, yes, said peaks pigs can use to fetch something that is correct,
+52:23
+but it can't modify it, so we need to put it back as well when we make a move on the state.
+52:32
+We do want to modify it.
+52:38
+So to sort of move, move the state along with it so we can exchange the top of the state stack by applying move command data onto it.
+52:40
+And that will change the state. And obviously, if we've saved the states for any previous victim calls, that's not going to affect those.
+52:52
+So it's only going to affect the state. So now that we've got that, well, we've gotten the original position.
+53:01
+Let's execute the command move. That's going to change the state and we can now ask for a position again to get the two and then what comes next.
+53:11
+I think there's one aspect which is executing the recursive call.
+53:21
+So now we can just say, let's go the rest of the commands.
+53:25
+Again, we don't need to pass in a stack and we don't need to get a stuck that's handled by the state.
+53:31
+So we're just going to run the rest of the commands, get their lines out.
+53:38
+And how do we put everything back together again? Well, headline from to come out once, right?
+53:43
+And this is the finished the finished trace to.
+53:50
+So in this version, what's disappeared isn't the commands, it's actually the turtle states.
+53:57
+So this whole stack of central states has disappeared. We're able to interact with it using, say, using we're still using get lost and move.
+54:03
+So this is very much now really like imperative to programming. You're saying get the position, modify the state position again,
+54:13
+do the rest of the programme and get the result and then combine these things together.
+54:22
+And now this is very, very almost in the shape of less than three.
+54:28
+But the degree of complicates things. So I'm not going to attempt to translate that.
+54:34
+But that is all I have to say in the matter. So this is two examples of how to use state.
+54:40
+But the best way for us to actually learn how to do this ourselves is to just play around and try our selves.
+54:47
+It's a try to recognise these patterns. Really, you're looking for functions that have this shape for some and some ask.
+54:56
+And often they'll be threading straight through.
+55:07
+And that's going to be a lot of, you know, something, then something comes out. Make sure you fit it in.
+55:11
+Make sure it comes out. And what we would hope is that that sort of busy work disappears.
+55:15
+So let's highlight that again for a recap. So in this version of Grace,
+55:23
+to explicitly the stack of turtle states was still floating around all of the time it was there
+55:28
+was there was there is that we have to fetch the right state and interact with it there,
+55:35
+there. This it changed.
+55:41
+So we have to remember from this point on, we better use this new turtle state primed and ready in their more state went through.
+55:44
+We have to remember the original save states get used outdated one personal front.
+55:53
+All states come back. We have to return them. And in this programme, all of that sort of work has disappeared.
+56:01
+Right. We're letting the state in and handle the act of threading and moving the turtle states through each line of the programme.
+56:08
+And we're just focussing on how to manipulate the states at every step.
+56:16
+That was one example. The other trace example we started off where this time the commands have to be tracked.
+56:22
+We have to keep track of the remaining commands to execute.
+56:31
+And again, we have to remember the first set of commands goes in this that comes out that we use,
+56:34
+that goes in a new set, comes out that need new set needs to be returned.
+56:40
+And that's similar here, right? There's a command set and needs to go in and it needs to come out and needs to be sorted through.
+56:46
+And each step, we always remove that top most command that gets removed, that gets removed, that gets removed.
+56:53
+That's how we built this up.
+57:01
+As we've said, well, let's build an abstraction that can get us the top command and give us the rest of it going to state.
+57:02
+So that's sort of saying, you know, in this case, the top command which happens to be an open bracket, that's the rest of them.
+57:13
+This should be the one that's fed it right. There it is. So that's kind of what fetches modelling.
+57:21
+Get the top one and then make sure that the rest is sent forward.
+57:27
+That's the new value of our variable. And we used finished to decide whether or not the commands were empty, if they're empty.
+57:31
+We're done, we can just return the empty nest of turtle states, otherwise we can fetch.
+57:40
+So this is going to get the first command in the list, then advance that list by one by saying the rest of the commands go back in the state and
+57:47
+we can start putting things together without worrying about letting that state fly through.
+57:57
+We're letting the state run at say stake goes into this one comes out, goes into this one, comes out, gets returned to the result.
+58:02
+Right. That's the general structure of the state, right? Get rid of that sort of.
+58:11
+Little bits of the bookkeeping state we don't want to handle.
+58:16
+So that never stopped. Thank you. I've got to go to another meeting, so I'm going to shove this one down, Jamie, that was fantastic.
+58:22
+Thank you very much. As Jamie said, go and practise because it is.
+58:28
+It does look a bit odd at first, doesn't it? Because you you don't explicitly have the state in your hand.
+58:33
+It's sort of hidden behind the curtain. Yeah. Well, that was a great, great, great action.
+58:37
+A great introduction. Thank you very much.
+58:42
+So I do have to show you, perhaps you can use the I did what you can, you'd maybe use, but I've got to close this meeting down.
+58:44
+So. It's just that if you leave.
+58:54
+So could you please applaud this source code to science or something?
+58:59
+So I would. Yeah, I should be able to do that if that's OK with with Tony and check with him.
+59:06
+I'm just wondering if I can hand you over the meeting. Yeah, it gets everything I do, I do that.
+59:11
+And. Yeah, I'm happy to if Tony's happy for me to upload that suit, since it's them or whatever.
+59:20
+Yeah, that's absolutely fine. Yeah, I'm sorry. I'm not sure how to do this before.
+59:36
+I can't see it, so I practise what I could do is to our personal try leaving this running.
+59:39
+If if it shuts off, then.
+59:45
+Now I'm going to have to close it down, actually, because I'm not being cool, so I just kicked out, but I bet you've got an edge you can do with some.
+59:48
+You can discuss any issues with genuine area and I guess it's the that's the stop.
+59:55
+I'm happy to start another call in the channel and just hang around for a bit in there.
+1:00:01
+OK, good. OK, thank you very much. Must leave you.
+1:00:05
+That's right. Thank you.
+1:00:10

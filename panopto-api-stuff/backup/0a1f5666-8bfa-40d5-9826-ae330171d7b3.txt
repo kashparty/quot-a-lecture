@@ -1,0 +1,369 @@
+ID: 0a1f5666-8bfa-40d5-9826-ae330171d7b3
+Title: Comparing Proof Styles
+Category: 0 - Proof styles
+Lecturer: Mark Wheelhouse
+Date: 19/01/2021
+Hi there. Welcome back again. So throughout the elections today, we've been looking at different types of troops.
+0:02
+So far, we could see the three main types looked at free proops kind of writing in English, waving a hand with a bit of room to be detrimental to it.
+0:08
+We've looked at the natural seduction style, what you should be familiar with from the first course in logical,
+0:17
+first off logical reasoning called Superagency Student.
+0:23
+And then earlier, I kind of introduced you to the idea of a stylised proof, which is slightly different way of doing things.
+0:26
+Using all the same rules and deduction allowed us to make bigger steps and make use of equivalences, for example, in our footsteps.
+0:32
+So I encourage you for a second maybe to pull the video and write down what you think and the pros and cons, all of the different styles of truth.
+0:40
+And then I'm going to flip on a second and show you when that matched up with kind
+0:49
+of my interpretation to what I think the pros and cons of these types of reform. I've had it tough to do that now.
+0:52
+So here is kind of my summary of what I think of these things.
+1:00
+But the good and the bad to the free form proofs, you can butman quite quickly.
+1:04
+You have an intuition trying to write down.
+1:08
+And I think the nice thing about free form truth is it does tend to expose the intuition about why you think that this property is true.
+1:10
+Of course, they can be quite error prone. I said before about waving your hands around.
+1:18
+Sometimes it can seem a bit like you make it up as you go along and it can be hard to be convincing sometimes with a free form proof.
+1:22
+So that's the issue that we not a deduction. One of the best things you have,
+1:29
+the total confidence in the proof that you can stick it into Panopto or your lean wheel favourites to kind of cheque in new things and be sure that,
+1:34
+yes, you are followed every rule kriv every step. It is 100 percent correct.
+1:42
+That's time. That's quite a nice promise. Hopefully you saw in the previous video we get quite long and allowed.
+1:46
+Can be quite challenging at times to get it right.
+1:52
+I think it's often the case that you have to write the rough ones and then go back and write it up neatly.
+1:54
+I don't think it's acerbity that you get the intuition out of various proofs because they reduced everything
+2:00
+basically to the base atoms of all the information that you understand and they build it up again.
+2:07
+Scrap to see if you can get to the kind of the goal of the proof.
+2:13
+I think the intuition can often be lost within that process. So what you have an issue that I think Stylez Chris last dealt with in my previous video.
+2:17
+So the structure, the object is made quite explicit, just like it would be in that production,
+2:29
+although I think it follows more informed reading sense.
+2:33
+Not doesn't you often have to think about when you make a step that goes back with rather forwards.
+2:36
+Certainly my approach never stops being very mechanical way of doing things that you can make some errors,
+2:40
+but it tends to be hopefully very few long into following the rules correctly.
+2:47
+So I think, yes, the downside is you can still make mistakes and can still make an convincing step in your proof,
+2:50
+but also be good because it means you don't believe some step. You can basically take a Alema and go and expand that stuff.
+2:56
+More detail to make sure it's correct, which I had detected a tactic would you agree to?
+3:02
+You get a lot of things. So that's kind of my opinions on how to compare these different types.
+3:07
+So I think when we think about going forward,
+3:13
+what we want to use within our kind of proof styles as we get more experience mathematics than it's worth thinking about really what we're aiming for.
+3:15
+Without that support him, we can't make a good choice. We don't know what would satisfy.
+3:24
+So first versus those things very important. Want to prove only but statements if I can prove things that aren't true.
+3:30
+That's not a very good, logical system because let me prove complete garbage and then no one has any confidence in anything that I do.
+3:36
+That's a pretty important to have. It's also important that it's possible for us to be able to cheque the proof over or someone else.
+3:43
+Also to cheque to provide a mix, too. I agree with that proof. When he writes it.
+3:52
+It's also quite important for good proof that you can come back to several days
+3:58
+or weeks or months or years later and still have the ability to read it easily.
+4:02
+I can understand that. Yes, you agree with that proof? It's definitely correct. Proof.
+4:08
+And more importantly, it's good that other people can also do that process because it proved you right.
+4:12
+You will probably remember very well and come back to it. Maybe not if it's been a long time, but higher chance that you remember what you were doing.
+4:18
+Somebody else coming completely at this cold. They haven't seen the proof as you're writing it, perhaps.
+4:25
+And it can be quite tricky to take a hold firm to understand how that the author that you've got that.
+4:29
+So you allow other people to get something important. And again, a nice thing.
+4:35
+Ideally, it's not a necessity, perhaps.
+4:39
+I think is an important thing to give you is to give you some idea of intuitions behind the arguments so that you can become more convinced,
+4:41
+we believe more. This is a decrypts or it gives you some white intuition about how to solve similar problems.
+4:48
+So with those in mind, let's take a look at our kind of three types of people seen so far.
+4:54
+So the table in earlier. The idea of free form is that you can get kind of get lost and get wronged fairly easily.
+5:00
+I've seen quite a lot of people try and things like oddments to kind of jump big
+5:11
+steps of proof by turning the page sometimes where it's just not convincing.
+5:15
+And the big step in the middle of missing, we haven't spotted that again with no proof about symptoms.
+5:18
+The first things are going to come in, some people in. Laughs That was a good argument, but actually it was missing an entire step.
+5:24
+We can even make the link between the super and the person that was actually invalid
+5:28
+when possible to do the proof until we add that extra condition in free form proofs.
+5:32
+I tend to find them very, very hard to read, particularly if you're reading somebody else's free form,
+5:38
+because words that made sense to them could be very hard to replicate what they were trying to think when you read it back to Spectrum.
+5:43
+However, they do do a good job.
+5:49
+I would say of harder intuitions behind because you really get an intuition why the author believes the situation got to.
+5:52
+That is correct. What property holds without a deduction, you get that most confidence about what is kind of valid.
+5:58
+If it did, you could stick it through a machine. You can definitely kind of verify that this thing is entirely correct.
+6:09
+That's definitely not followed. And that's a good thing to have easy readability.
+6:13
+I mean, the jury may be out date on that. I find that Russian troops can be used to be and can be very hard to beat.
+6:19
+Really depends on the proof. The bigger they get, the harder they get to read.
+6:25
+Even the group with only about 15 steps gets quite long and quite, quite tricky to handle the boxes as a grapefruit thing.
+6:29
+Once we get quite tricky to read, it becomes a completely blank without seeing it in the first place.
+6:36
+And that's kind of lost. But when you see the proof is usually given to you as a whole thing done, you don't tend to see the evolution Heigel.
+6:41
+I think that production really struggles by not having the evolution of how things go.
+6:46
+You don't just read them top to bottom. You work bottom up as well.
+6:51
+Sometimes that can be tough on people. That's a good thing.
+6:55
+And again, they can plug it straight into the kind of prove is all the tools you might use as well.
+6:59
+So you can get a confidence in them. But the intuitions. Absolutely.
+7:04
+These are lost almost entirely. Uptimes reduce everything to base elements and put it up again.
+7:08
+While in doing that, we lose the real high level linking between two concepts that you might otherwise have.
+7:14
+Come back then to our stylised prints at the end. So here pretty bad.
+7:20
+Most of the time that would be true. Obviously, we can still go wrong with my justifications aren't strong enough.
+7:25
+Perhaps we trick ourselves. So there is a slight risk that we've introduced by phones.
+7:31
+I did. However, the hope is that they are easier to read both by the author and by others.
+7:35
+That's wrong because they're being quite descriptive in how they're written out.
+7:41
+The links on the right hand side, justifications for every step that say this is one follows.
+7:46
+This is what I'm plugging to get to be.
+7:51
+What I think that keeps the readability quite high because quite a lot of things were without having all the clutter of boxes you
+7:52
+get from tax reduction and the intuitions that can be lost depending on on how we rewrite things or they can be quite clear.
+7:58
+That really comes down to the skill of the author in writing down a nice clear of proof.
+8:08
+So hopefully you can see from this why we're going to choose to focus on this stylised view for doing things,
+8:14
+not module, we think is one of the best compromise of the other cases and isn't as long winded as doing lots of stuff.
+8:21
+So there'll be a few the. I'd be happy with not doing, but it doesn't feel quite sad.
+8:27
+My hope is that by the end of the module, I would hope we could get more of you to being quite happy with doing things in this US proof
+8:32
+approach that perhaps you might take forward in later years as you kind of come more confident.
+8:39
+I want to write things aren't quite so piecemeal, kind of mechanical, as much tension, proof.
+8:43
+So there are a few rules, then, for how we're going to approach writing out a stylised proof to do it in a most consistent way.
+8:51
+So we have clarity. So the first thing, especially for these steps.
+9:00
+So first of all, we went right up, all the things that you've been given.
+9:04
+So you write to them and give them a name. We typically call the numbers. One, two, three, four, five.
+9:08
+You're going down the page. And those you've given us the information that you kind of know or properties that you know that you can work with.
+9:12
+So, yeah, our supreme sample is things like knowing Superman, the people, the super villains, the rich or the is going to top the first ticket.
+9:18
+Then we went down the bottom of the page.
+9:27
+What we want to try and show, like multiple things that like one thing, I tend to label these with great catalogue, Alpha, Beta, Gamma, Delta,
+9:30
+just to keep them distinct from my given's and to reduce the chance to accidentally end up
+9:39
+using something I'm proving somewhere in my proof is my justification site from Alpha.
+9:43
+From Beta. That's probably a I'm using something I haven't proven yet.
+9:48
+It's a good way of keeping these two given's things to show entirely separate head.
+9:51
+Then comes kind of the invented that we think about. How are we going to do the proofs to set them plan up?
+9:57
+What kind of of attack? I don't know. Buy start in the next slide and try to think about what's the structure of the thing you're trying to show.
+10:03
+Well, given that we've got that help is getting there and trying to use that kind of sketch out what our approach is going to be,
+10:11
+you're doing this proof and you can do that quite informing, forming enough before we stop and write up the real possibility.
+10:17
+Fine. Then once you've done that and you go further proof, write down top to bottom,
+10:22
+make sure that you justify every single step start as proof that doesn't have justifications.
+10:27
+On the right hand side is a bit like a tax deduction. Proof missing kind of reconcile ticks and box numbers.
+10:32
+It doesn't really mean it's done. It's not necessarily complete.
+10:38
+So you reinspect where you put the patent in otherwise just making steps and fingers crossed that you got it right.
+10:43
+So I think paladares applications are really, really improved availability of a future both yourself and also for the reader,
+10:48
+as well as become more confident with writing out these proofs.
+10:54
+Then you'll be able to vary, decides the steps you take to make make bigger steps as you go.
+10:59
+I will start off as you pretty tall long term to make small steps, do very simple things at a time.
+11:03
+And as you get more confident, you can have bigger steps or start just done to make very big steps to improve lives.
+11:09
+Second, better if you want to. And that's really where the power of the star comes in, allows you to adjust how the proofs look.
+11:14
+I present the proof is based on your own experience as you become more familiar with doing logic proofs,
+11:21
+with doing scoopers throughout this course and beautifuls as well.
+11:27
+So the trick is part of this is always about kind of thinking of what's the plan going
+11:33
+to be and how am I going to justify the steps that I'm taking within this group?
+11:38
+So. Let's think that. If we're trying to prove something such that this is kind of the going goal focussed like we were trying to prove some property,
+11:45
+then we can use the structure of that property. We're trying to prove to direct how we're going to go about laying out the structure.
+11:58
+Oh, it's important that group prove even that doesn't that's why you can things like what's the weakest connective of the go yet?
+12:05
+Is it a fraud that just nuts? And these are just rules that you should be very familiar with from tax deduction.
+12:12
+Use these. Always try to pick out kind of method of attack on this problem.
+12:19
+So if you're trying to prove something, it doesn't add it, then you're going to need to prove both left hand side and the bottom side.
+12:23
+You're trying to prove something. It's got a disjunction or in it. They only have to prove one or the other.
+12:29
+And you must try to think about which one you actually meant to try to prove in practise, making it easy.
+12:34
+What was that? But that's what's to be done. If you've got an implication, then you assume the left hand side.
+12:37
+I mean, show the violent side. They're going to alternate quite a lot.
+12:44
+The proof that I showed you in the last few days.
+12:48
+If you've got a negation, then you can assume the thing is to go to Q and try and get to a false conviction.
+12:50
+This one is not wrong. If you've got four all that we've pinnacle,
+12:58
+we've taken arbitrary elements of the X and then tried to sell the property to whole polls for that, to that arbitrary choice of.
+13:02
+If we got an existence, we had to find that there's some constant that we can use to search property.
+13:12
+We don't care what how we choose to quantify neighbour.
+13:19
+And otherwise, we can always try a context and let's assume that not Piers, to see if that gives us false.
+13:22
+And then if that doesn't mean that the assumption was invalid and actually that reasonable
+13:29
+uptick must hold those kind of a go to tactics for how we're going to go about doing things,
+13:33
+because it's kind of planning out the entire line.
+13:38
+And then conversely, when you've got some properties, either, you know, given the things that you've already established,
+13:41
+working down to the proof, you can then break apart in various ways to help you make progress towards your overall goal of their goal.
+13:46
+And again, this is just like natural deduction rules for. Q And ah, would we have both?
+13:54
+Q And separately from one to health and separately from the bigger recession, if we have Q or all that, actually we can't know for sure where.
+14:00
+We also have to recognise this one side of him. Q One was hearing, are we going through those things if we have something where.
+14:09
+Q implies R and Q Then we can then basically use the mind that we play, we've already established that side of the.
+14:20
+That us kind of break the implication and get left over with just the obvious.
+14:27
+But I now know that because I have the information left on supplication, I can deduce the right side.
+14:30
+That's what you think you have to do. And we often use that when applying certain rules about giving.
+14:36
+Similar to that is when you've got like a rule or in this case we found already,
+14:42
+if BP knows the holes rule things, that I can substitute the X for anything I want one time.
+14:47
+And often they have different rules, tend to be rule X, do X implies R, X, and that's kind be using the previous rule as well.
+14:54
+But how we can get rid of the rules if something exists and that was true for some constants, they can do it through careful.
+15:01
+Get to make sure that we don't start seeming to fill in using this since going down.
+15:09
+It can be handy. If you got false then we can deduce whatever was not because it couldn't get there.
+15:15
+And the proof and that's why the of contention approach can be useful and how we go about proving allegations as well from the previous stuff.
+15:21
+And if you've got something where we have not Q is true,
+15:29
+then we'll know if we have ever try and assume cute when we get the false hopes of breaking up cases.
+15:35
+If you got a case equal, often kill them quite quickly by saying, let's assume this off the case.
+15:40
+But I know from some of the property that I've already been given that this site can't exist.
+15:44
+That just kind of goes away. The other two things that are very powerful that we do in Starlight's groups, if they can be sublevels,
+15:48
+will quite often break down big coquet problems into problems with lots of letters that we can do the members to do steps for us and the main proof.
+15:56
+And then going through the numbers separately, the next kind of logic, a bit more modular in how we approach it.
+16:04
+So that you have big. And in particular, which allows you some logical occurrences, Mexican steps forward.
+16:09
+And that can be incredibly powerful in avoiding breaking down insertion into lots of little pieces to the outcome, which is much deduction style.
+16:15
+We can often kind of rewrite them in place by spotting things about how that phrase or using other gibbons' to rewrite the rules in place.
+16:23
+That's not before it happened for us going forward. So hopefully that gives you a bit of idea about how to work with this.
+16:31
+The tutorial this Thursday is a focus on helping you to get used to writing style troops and the end goal.
+16:38
+Let's talk. You should be able to tackle this happy Dugan's problem.
+16:44
+I'm pretty certain you will seeing a logic course in the first term and you will solve this with natural deduction or certainly that.
+16:49
+But I would like you to get the end. We'd be able to do this problem with the style life style.
+16:57
+We'll go through this at the end of the session on Thursday.
+17:04
+In the story sheet, you'll find this problem will be formalised into the following set of organs.
+17:07
+I'll leave you there for now.
+17:13
+I encourage you, please have a good for Thursday to count at least colon on Thursday to like session and try during that session.
+17:14
+We'll go through this at the end of that session.
+17:20

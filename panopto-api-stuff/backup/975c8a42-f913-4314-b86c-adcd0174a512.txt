@@ -1,0 +1,755 @@
+ID: 975c8a42-f913-4314-b86c-adcd0174a512
+Title: DM Oct 26 Lecture Recording
+Category: Discrete Mathematics
+Lecturer: Steffen van Bakel
+Date: 26/10/2021
+And it's started good.
+0:09
+We were talking about equivalence classes and the definition of that is that it is a relation on the binary relation that is reflexive.
+0:14
+So all numbers are equivalent. All things are good for themselves. It is symmetric.
+0:27
+If something is equivalent with something else, then something else is equivalent to something as well, and it is transitive.
+0:32
+So if you can step to a new element, then you can do it in one step.
+0:38
+OK, so one of you remarked last week already that this gives a petition and there's something you can show.
+0:44
+So in a petition, we need to show that we have a separation of this set into subsets and the subsets
+0:51
+are disjoint and that the collection of all these subsets covers the original set.
+0:59
+So there's two things that I need to show are three things, actually.
+1:08
+So each side the on the difficulties that each parties, each element in a position is subset picked in the petition is also a non-empty said.
+1:13
+OK, so what I do and this slide is give a very condensed version of the proof.
+1:22
+The proof requires a lot more words. And so I give you the basic steps here.
+1:28
+I hope that I'm detailed enough for you to be able to complete into a fool proof.
+1:35
+So about the first one and you take an element and then you notice that because it is a reflexive relation that a therefore is
+1:41
+in relation with itself that is equivalent to a and therefore the equivalent of A contains at least one element being a itself.
+1:53
+So it is not thereby an empty set.
+2:01
+The second part we need to show to all of A is contained in the union, so we take an element of A and we notice that A is in the.
+2:06
+So the equivalence clauses of A contains a if I take the union of all the elements in a of its equivalence clauses, then I get exactly a itself.
+2:20
+So every element of a is an element of of the equivalence classes and therefore the collection of all the equivalence classes.
+2:33
+Give us a look. But I need to show here basically is the subset relation.
+2:40
+So I need to show that as a subset of this, the converse is automatically true because these are all elements of a.
+2:46
+Last one is a bit more tricky, the or the need to show that if they do a good classes have an element in common than they are,
+2:57
+in fact, the same equivalence class. So if I assume now that the intersection of these two equivalence classes of A and B is not ended,
+3:07
+then I can pick an element in there which I called W and by definition, I know that W is equivalent to A and W is equivalent to B.
+3:17
+Yeah. So the definition says that the occurrence of W has to be on the right because that's the definition of the equivalence class.
+3:27
+But you can swap B and W around because the relation symmetric.
+3:36
+So I also have to W's equivalent to B and now I have today's equivalent to W and WS
+3:40
+given to B and therefore A and B are equivalent to some or is equivalent to be.
+3:46
+So it is enough. Not yet, because I need to show that these sets are equal.
+3:52
+So I need to show the subset relation between them now so to show that B is a subset of AA.
+3:59
+So I know that and B are equivalent in this particular case because the intersection is not empty.
+4:07
+So I take an element in the group because of B and to show that there's an equivalent
+4:12
+cos there's an element of equivalence cost for A and then I have that equivalent of B.
+4:16
+This is a subset of the equivalent of.
+4:21
+So I take an element V in that because B I notice that B's equivalent of V and age group into V by the fact that A is equivalent to be there.
+4:24
+So I have a given to be given to VS or A's equivalent of a transitivity.
+4:37
+Therefore it is vs an element of the equation of a.
+4:43
+So I have shown this for every pick,
+4:48
+every element that I pick in your credit scores would be so good because it is a subset of the equivalent because of a the converse exactly the same,
+4:51
+just you swap and B in the reasoning. So therefore we have to substitute in two directions, therefore we have the quality.
+5:01
+Yeah. So immediately from this statement here, we get that therefore and be equivalent.
+5:10
+But that's not enough to say that these sets are the same. You have to show that taken element in B and then show that the element is in a row.
+5:18
+You do that twice. Good.
+5:28
+So that's a squaddies from property, so equivalence classes,
+5:33
+so equivalent equivalence relation is a way of saying that elements in a set which are different representations are in fact the same thing.
+5:37
+Yeah. So that's the you throw things together.
+5:50
+And by doing that, you create a new view of of of looking at that set.
+5:54
+And that view is a partition of the house the first. Good.
+6:01
+So I've defined the transitive relation which you now can do is you can say, well,
+6:08
+given a particular relation, can I extend this into becoming a transitive relation?
+6:13
+So can I. For example, if I step from elementary to B and B to C, then I should be allowed to also step from A to C.
+6:19
+So all the all the paths in the set through the relation are going to be condensed into single steps.
+6:29
+But the relation that we're building is called R plus.
+6:39
+Yeah. So this just the the not for the binary and put it on the disclosure.
+6:43
+So this is called the R plus. It's not a transitive relation that contains R, it is supposed to be the smallest.
+6:50
+So you don't add the elements that you can't reach from walking through R so you it's a very algorithmic approach.
+7:00
+There's a finite relation is perfectly doable. So you define R with a superscripts and identify a number.
+7:09
+Yeah. As follows are one, you take R and R two you take our composited R and R threes are composed with R2,
+7:19
+which is by the way the same as R to compose with are now because that's in such a different operator.
+7:28
+And so you continue doing this. So you build that as as often as you need, and sometimes that as often as you need is an infinite number of steps.
+7:34
+No. So in mathematics is infinitely large, proofs are not allowed, but infinitely large constructions are allowed.
+7:45
+So we accept infinity as a concept which we don't accept infinitely long reasoning.
+7:54
+So how's our plans now defined? Well, this is the collection of all these.
+8:02
+As I said, I've got I've taken so I've taken the infinite now.
+8:06
+So it might be non terminating. So I take the the union over all the I from starting from one of our to the I.
+8:10
+Yeah, so what we have now is that if a bear is in the relation with R plus, then at a certain point it has been added to the set now.
+8:23
+So it might have been in the AA1 already or it gets added because you can go to two steps, or you can either because you can get in three steps,
+8:36
+etc. But at a certain point in this construction, every bear that is in the final result gets added at a finite stage.
+8:45
+Now, there is a particular point where case ended. We can do the opposite as well.
+8:57
+It's called transactive reduction. This is not as easy to define because it's not always doable for a set.
+9:04
+You know, for example, you can I'll give it a chance.
+9:12
+OK, so transactive reduction is so just the opposite. It says, I want to find the smallest or a smallest set and a small population of.
+9:18
+So it a relation as so.
+9:32
+So it's this subset of R so it contains pairs that are already INAH and it follows the closure of that as that a big is actually itself.
+9:34
+So we start with a transition relation and we go back to something which has just the essential pairs in them.
+9:43
+So what you do is you take all those pairs in are such that you cannot find an element you see for them.
+9:52
+Now. So if that's the case, so this is the tricky bit, because this is not always possible to fight.
+10:02
+So you're saying that does not exist at sea and that can be impossible to to find?
+10:14
+You know, so this relation is not always well defined. For example, if the relation cyclic,
+10:20
+then there is no there is no smallest SORP collection that you can pick and for example, smaller equal on on the reals.
+10:26
+That is a transitive relation, but you can't find the this relation.
+10:35
+So did the reduction of this relation at all.
+10:43
+It doesn't it's impossible to define, but it is a well-defined notion for finite and non-cyclical relations.
+10:45
+Now for those that category of religion that exist, it exists also for some infinite relations.
+10:55
+Like, for example, if you have small or equal, then unnatural natural numbers, then the these smaller equal.
+11:01
+To the miners, that is set of all the pairs of N and plus one now, that's the reduction of smaller equal on the job numbers.
+11:12
+So how do you construct a Transdev closure,
+11:27
+so you start with a binary relation and if it is already a transitive relations already satisfies all the properties to you,
+11:31
+don't do anything otherwise.
+11:41
+You can find a pair, you can find elements A, B and C, so, you know, A and B and C and R, but you also know that a C is not an R,
+11:43
+so to build it step closer, to make the relation transitive, AC has to be added to the relation.
+11:53
+And you do this until you until you're finished and of course, when know, no more plans to add that is sometimes is an infinitely long construction.
+12:03
+Now, it might be that you are working with an infinitely large sense.
+12:13
+Yeah. But sometimes the infinite construction can be summarised in a few words and then, you know what you're doing.
+12:18
+Know, every single payer that you add is because of this criterion here in the in this line.
+12:25
+And therefore it is needed to make the revelation from.
+12:32
+But I've already mentioned that, so take a small example in your on your slides, the slides that are projecting here are printed on top of each other.
+12:40
+So I opened to the clear. So we we take a a flight schedules.
+12:51
+So there are flights from one city to the other if there is an error from one city to the other.
+12:59
+And now we are trying to find out if we can go travel from from which city we can travel to another city.
+13:04
+Yeah. So of course it is completely unreasonable, the flight schedule, because you don't have return flights.
+13:12
+So everybody who goes flights from Dublin into New York has no intention of going back.
+13:18
+And so this is completely unrealistic. But that's not the issue. The issue is how do you build the transit of closure of this?
+13:24
+And then you say, OK, now I am going to add all the edges to this graph of the flights that need one stop,
+13:30
+I say is to all the two step flights and it's going to be all the Vonzell affected now.
+13:39
+All the red ones. Yeah.
+13:45
+So because you can fly from London to Edinburgh and from Edinburgh to London, you can fly from London to London and you can fly from Edinburgh to.
+13:47
+That's it. Yeah. So I've added all the two steps.
+13:55
+I now I can say OK, I can fly from Madrid to Rome.
+13:59
+Can I now also fly from Madrid to another place and three steps.
+14:05
+And the answer to that thing is going to be no, because from Paris you can only fly to Rome and back.
+14:11
+And so, for example, if you're in Dublin, you can fly to London and to Manchester and to London, to Paris, etc. So are three.
+14:18
+What are the charges that are at the start? And there's only from Manchester to Rome and from Dublin to Rome.
+14:28
+And from. Edinburgh to Rome and from Manchester to Rome, that's because there is the Intermediate of London now.
+14:37
+Now. So now you look at this graph again and say, well,
+14:47
+is it possible to have a flight of length for and this is something that you have to check by hand and the answer is no.
+14:53
+Yeah. So this is the transit disclosure of this.
+15:00
+Of the original graph, so this graph, so if you like, if you start with this graph graph, then this graph is the reduction of the two of the four.
+15:05
+So this is the underlying minimal relation from which you can build through transitive closure.
+15:16
+This particular set. A hard question. Yeah, so we already know that our four does not exist.
+15:25
+Can we actually guarantee that it's already finished the construction so we don't need to check our five and so on?
+15:34
+No, no. So if our food doesn't exist and it stops. So the path of lying for us also in the path of Langtry was the path of length five
+15:43
+gets edited because you had a path of light for the extended another step back.
+15:51
+And if it stops, it stops. Good,
+15:57
+the moment of reflection for you we take to the set are and I want you to answer
+16:07
+the questions if asked reflexive material transitive just mentioned the elements,
+16:14
+so say yes or no to each of them.
+16:20
+And if if you think it is not to mention at least one element that is that is missing, you don't need to list them all.
+16:22
+Just you give a particular element that should be in there and is not, and therefore the puppet does hold.
+16:32
+I don't want you to think about these four properties that I'm going to give you roughly how much?
+16:38
+Five minutes or so. And then we come back and we will discuss.
+16:48
+OK, so the I'll try to do this without writing, because we can look at the questions together.
+22:37
+So about the first group of questions, is this related, reflexive, symmetric or transitive?
+22:46
+Well, for reflexive, we demand that for every eh in in sort of every element in a let's say,
+22:54
+called element B, the pair B B should be in are OK for all elements, be in the said aim.
+23:05
+Is that the case? You know, you go you walk to room one. Want to do four for the one that's missing is three three.
+23:14
+So that pairs not an R and R is not reflexive is symmetric.
+23:22
+Well every pair a B in are also the pair.
+23:29
+B should be in R and you go through the set again and you'll see that the pair for two occurs in there, but the pair to four does not.
+23:35
+So the set is not the is not symmetric its relation transitive.
+23:45
+Well we see the two threes in the in R and three tours in R so three three should be an R as well.
+23:52
+And it isn't. Therefore regulation is not transitive.
+24:00
+OK, I could list other examples, but the three that have given out enough to to contradict this is the politics now for the second group of questions,
+24:04
+the we're looking for a relation in part one that is reflexive.
+24:18
+So as I've observed before, it should contain at least appear one.
+24:22
+One, two, two, three, three, four, four. OK, it should be symmetric.
+24:27
+It is that already. So with those four elements, we have a reflexive, symmetric relation.
+24:34
+But it is also transitive now because you cannot click two pairs together to come to a new pair at all.
+24:41
+Therefore, the four all property holes,
+24:48
+if the properly transitivity properties says if you can find an intermediate element such that you have two pairs that click,
+24:52
+then you add the pair and you cannot find that the third element anywhere that's impossible to find and therefore the relations transitive.
+25:01
+So if you if you cannot add a pair in the transitive construction, then the relation is transitive.
+25:13
+So that's how you can see it as well. So what we have seen to build are our plus here.
+25:20
+You would have to look at do I need to add a pair? And the answer is no.
+25:27
+And therefore the relation is already transitive. So this is not what we are looking for.
+25:30
+So we need to add a bit more. So let's add, for example, the pair to three.
+25:36
+Now, it is still reflexive because I have not removed one of the original ones.
+25:42
+Is it symmetric? No, it isn't, because two three is in there, but three to not.
+25:48
+So I also add three, two. OK, now have reflexive and symmetric.
+25:52
+How about transitive. Is this now transitive relation. And you look at it again and you see by the passage of edit through the transitive
+25:58
+construction you would have to add two pairs to two and three three and is already there.
+26:06
+So Rantes it's again it's a translation. So we have to go back, we have to add another pair.
+26:12
+So we've added two, three, let's add three, four is still reflexive.
+26:19
+It is no longer symmetric. So I need to add four, three as well.
+26:26
+I now come to the transitivity and say, ha, I succeeded because I have added two, three and three, four, but I have not added to four.
+26:30
+So it is not a transit evolution, but it is reflexive and symmetric.
+26:41
+Was that clear? No questions.
+26:48
+OK, so this is right out. As you write it out, just like the final version of what?
+26:55
+Is that possible? It is. Everything is possible thanks to modern technology.
+27:03
+There's not a thing that cannot be done. The only thing is it needs a few seconds.
+27:08
+For me to smoke. Because I've mentioned this many times before already teams is diabolical.
+27:15
+All right, you're. Yeah.
+27:27
+Good. One so far, reflexivity.
+27:37
+Yeah, at. So this is a this is a also where we put it is also symmetric and transitive.
+27:55
+Yeah. So there's not enough. So you add the pair to three, four, four effectivity.
+28:07
+So the the softwoods facilities for the reflectivity is unaffected.
+28:17
+Those four need to be in. That is all they need. So if you add two, three, four, we also have to add three to add and which is still good.
+28:25
+So it's still transitive. Yeah it is symmetrical reflection, but it's still transitive.
+28:35
+So you now add three four as well.
+28:42
+Now and again for reflectivity it's four three.
+28:46
+OK, and now I have to pair. Two, three is in.
+28:51
+Is an hour and three or four is an hour, but to four is not an hour, so not transitive.
+29:01
+Yeah, I've got yours now and fewer words because the I've given the explanation already.
+29:22
+Again, I'm trying to get my people to work on. Good, so to reflexive, so I have these four there.
+29:30
+Yeah, they are copied, it should not be symmetric.
+29:41
+So I should have so we add as before we add two, three now.
+29:45
+But not three to so we Jebba, we break symmetry, is it already not transitive?
+29:55
+The answer is no. This is transitive.
+30:03
+Yes is Transdev now, because if you look at the two possible paths, you can go from two to two and two to three.
+30:08
+So you would add two or three which are ready, and you go from two to three to three to three.
+30:18
+So you add two, three. They there really. So this is transitive relation.
+30:24
+So we add another one and we add we do the same thing as before.
+30:28
+We add three, four now. But not, not.
+30:32
+Now we can even add four, three. Doesn't matter. Well, the main thing that we have is that now two four is not an item.
+30:37
+No. So I'm not trying to do the third one, not reflective, not symmetric and transitive,
+30:44
+so not reflexive means that at least one of these four elements is not in there.
+31:01
+So let's take them all out, kick them all out so we don't have any of those bears.
+31:08
+We want something that is not symmetric. Symmetry says if it bears in there, then it's it's it's perfusionist as well.
+31:14
+So is this true for the antisemite? And the answer is yes.
+31:22
+EMT said transitive and the answer is yes, because it's necessary to pass in the Senate if you can find the element,
+31:29
+etc. Now there are no two elements in the set. So that's true for all the two pairs in this set.
+31:37
+So this and this set is both not is it not reflexive?
+31:44
+It is symmetric and it is transitive. So we have to break the symmetry.
+31:49
+So we add one element and again, it the same one, two, three, and I don't pick the other one.
+31:54
+So it is not reflexive. Yes. Because all these four pairs are not in that.
+32:02
+It is not symmetric. Yes. Because three two is not in that it is transitive.
+32:07
+Yes. Because that is only one part. Yeah, so this is not symmetric, intransitive FORTMAN, symmetric transitive and not reflexive,
+32:12
+so symmetric means that the aph appears in there, then the counterpart is a small closet if we know what it means and is not reflective.
+32:30
+So take for example, the said, it just contains the barebone one.
+32:40
+It is not reflexive because Tutut, et cetera, are not in there. It is symmetric because if this in flipped fusion is in there as well,
+32:47
+and it is transitive because there is only one element that is correct, this one.
+32:58
+OK. Good.
+33:07
+And we go back to the. To the slides now.
+33:12
+No. Guma.
+33:37
+It's incredible how much market percentages Microsoft has gained, producing absolutely great software, very.
+34:12
+Good. So those were the answer to this question. I now I can swap to a particular kind of relation, which is called an order.
+34:25
+Yeah. So we have equivalencies as a reflexive, symmetric, intransitive relation.
+34:37
+We will now look at relations that are no longer symmetric but are reflexive intransitive now.
+34:45
+And so the what they do is they they say, well, if appearance in the relation,
+34:51
+it doesn't need to be the case that the first version is in the relation as well.
+34:56
+OK, so first of all, there are some definitions we call a relation, a pre-order by relation pre-order if it is reflexive intransitive.
+35:01
+Yeah. So nothing said about symmetry that at all. We call a relation a.
+35:14
+Symmetric if this is not the same as being not symmetric because remember from the the exercise before being shown that the relation is not symmetric,
+35:19
+suffice to take one pair Beeby out of the relation.
+35:31
+Now what we're doing here is saying is a. symmetric. So it's not symmetric at all.
+35:35
+So that means that if you can find two elements in a such that A and B are in
+35:41
+the relation and B and be in A and B in relation and be A in the interrelation,
+35:46
+then A has to be the same as B now. So it is not equivalence.
+35:53
+This is equality now. So this is this says that you cannot have, for example,
+35:57
+that want to and to have both in enlisted because that would imply that symmetry that one was able to do.
+36:08
+And that's not true. OK, because something a partial order, if it is reflective, transitive and symmetric.
+36:14
+I will see examples of all of these notions in a little while, we call a relation in reflexive,
+36:24
+which means it is not reflexive at all if for every element in a it is not true that A is in relation with itself.
+36:33
+So this means that a relation is reflexive, kicks out all the bears that are one, one, two, two, three, three, four, four.
+36:44
+Now it is true for ever. If you say that the relation is not reflexive, then this for all would be there and exists.
+36:52
+Now, that's a difference we call a relation a strict partial order if it is reflexive and transitive.
+37:00
+So we no longer need sort of reflex. So it's the sort of strict partial order thereby is not a particular case of a partial order.
+37:09
+You know, the naming is confusing. I admit that it's not my choice.
+37:19
+This is the universal way of calling these things. So a strict partial order is not a partial or.
+37:24
+Now, because this one is reflective and that one is reflective, yeah, so it's a different,
+37:33
+different beast altogether and we call it partial or total order if all bears in the state are interrelated in one way or the other.
+37:39
+Good. So these are the concepts. This is part of the stuff that you have to memorise, of course.
+37:51
+So let's look at some examples.
+37:59
+So we have the well-known, smaller, equal relations on the natural numbers and integers and realise those are total orders.
+38:04
+Yeah. So for every pair of elements in those sets, they are either in smaller equal or just flipped, flipped around footedness and smaller.
+38:13
+If you take off the equality then you are you get a what is called a strict function or.
+38:24
+OK, a division, so the people no longer have that and is here and it's more equal to itself and and is not smaller than itself.
+38:31
+OK, so division over the national numbers, we take out zero.
+38:44
+That's a partial order you can write.
+38:51
+Yeah, the N divides M with the vertical bar and it's very easy to show that this is actually this is a wonderful exam.
+38:55
+Questions show that this is a bunch of water. So then you need to know what the definition of partial order is.
+39:03
+You need to to know how to check those properties in little puts and the subset relation gives a partial order.
+39:09
+But does that in the context of being a well defined in a sense that the subset relation on sets as
+39:22
+it's as it is defined officially is not a relation because the collection of all sets is not set.
+39:31
+But if you're restricted to a power set of a, then this is a very nice example of a possible.
+39:39
+Now, it's not a total order because the set containing A and the set containing B, they are not the same set of and B on both in A no,
+39:46
+but it is a very nice baseline and we can define one point of order using another partial order allows a partial order.
+39:56
+And for example, if I have so this is a notation of a relation on a I call this relation smaller equal, but you can use any symbol there at all.
+40:06
+If it is a partial order and B is a subset of A, then B inherits a smaller equal relation, which I can call this.
+40:16
+And this is the restriction of smaller equal A to B, so it's more equal.
+40:26
+B is defined as all the pairs that are in B square, such that B one is more equal in A and B to inherits the smaller equal relation.
+40:32
+We can extend to the ordering relation to more complex assets, like, for example,
+40:48
+those of products and on products, there are basically two different ways of ordering the product space.
+40:56
+Yeah, one of them is saying, well,
+41:04
+it is the order and it says the I call a bear smaller than another bear if the components are smaller in the corresponding sense.
+41:06
+Yeah. So here this is the. The subscription fee to pay for product order, I could have also written that eight times,
+41:15
+but then I would have indicated the set, which is not precise enough.
+41:27
+This is a particular kind of order on the on the product space.
+41:31
+I will see the next one has an ultra subscription.
+41:37
+And you see here that the first pairs, the first elements are compared in a in the second ones are compared in B.
+41:40
+So it's a product or a more usable order is the lexicographical order.
+41:49
+And it says that the parts are in this relation are in the smaller equal relation.
+41:56
+If you are one is smaller than a two, so strictly small and so not equal or A1 is equal to A2 and B1 is more equal than B2.
+42:04
+And if you are with a bit of venture nation, you can recognise this, the little graphic ordering,
+42:19
+because this is basically the ordering that you have in your own words in the dictionary.
+42:27
+Now, what was the difference between a partially ordered, set and strictly partially ordered that in the in the end the partial order said,
+42:33
+I have at my equality available so I can I can swap, I can split smaller equal into equal and not equal.
+42:47
+So equal and smaller then, so here I have smaller then and I have equal and together they make smaller equal.
+42:58
+So if I have a strict partial order, I don't have equality, I only have smaller then.
+43:08
+OK, thank you. Good.
+43:15
+Now, this is a relation that comes comes back when we are you can use proofs using this kind of relationship to see that in a few slides,
+43:22
+perhaps not today, but we'll see. No, no.
+43:33
+It's going to be next week or so on Thursday. Good.
+43:37
+So I can also in a in a partial order, identify certain elements that have a particular role in the set.
+43:41
+For example, I can find if an element is minimal or least or maximal or greatest.
+43:54
+So how are those things defined is defined to say?
+44:01
+Well, a minimal element in this in this set in a with small equal relation.
+44:04
+And so please, Mark, that I could put any R and a smaller equal is suggested.
+44:13
+We talk about numbers but you can talk about strings for example. Yeah.
+44:20
+So then you have to prefixes of strings. So we have a minimal element.
+44:24
+What does it mean. Well if I can find another element in a way that is smaller than or equal to a then it has to be the same as a.
+44:31
+So in words, this means that is minimal if there is not another element in a that is strictly beneath it.
+44:42
+Now, it is something that is beneath it, so not strictly but beneath it, then it has to be the same thing.
+44:52
+That's what the president says. So it was not a normal thing that a small a strictly smaller than a and also in in the centre,
+44:57
+an element is called least if all the other elements are greater or equal now.
+45:07
+So this means that for all of them, being a small equals would be a maximal again in a.
+45:13
+Yeah. If I cannot find a greater element.
+45:23
+So if a smaller equal to be.
+45:27
+So if B is another element in the set and a smaller equal to be so B sits a buffet, then they have to be the same.
+45:35
+And the same with with his counterpart, at least, it says that all the elements are smaller than this one.
+45:44
+So for all be peace, more for what's the difference between me and more and least and the difference between maximum and Chris,
+45:51
+I think they are the same. Yeah, that's because you're thinking a total orders.
+46:02
+You have to you have to step out of total orders.
+46:07
+You're thinking about everything is either small or then so you think about any smaller than a more and more smaller then, and that's not the case.
+46:11
+This is a partial order. So the represented a graph.
+46:19
+It could be a tree near the straight line and the. So this first property says if there is something beneath it, it has to be the same.
+46:23
+And this one says everything else is larger. So, for example, a small example, take they did the the finite subsets of so take to set a B,
+46:33
+you have to subset A and A subset B, if my relation is B,
+46:48
+a subset of but not be empty now, then A and B are both minimal elements,
+46:53
+instead containing a self-contained and B are both minimal elements because there's nothing beneath them.
+46:59
+But they are both,
+47:06
+not least because a subset containing A is not a subset of set that contained B and containing B is not a subset of the cell containing A.
+47:07
+So it's at least it's more powerful than many of the powerful, just different property.
+47:20
+So it must be it is it is a if if a relation has at least element, it's a different kind of relation.
+47:27
+It has the unique properties, so, for example, there is a lead element in the national numbers,
+47:40
+but there is no greatest element in the national numbers. Yeah, so it just depends on what kind of relationship you have.
+47:44
+This is no better or stronger or anything like that.
+47:50
+It's just a different property. Yeah, so we.
+47:54
+We finished today with his exercise, so the first one is it's like I said before, this is a very nice little.
+48:04
+So I'll go on on Thursday, I'll start the lecture by doing this proof.
+48:14
+The second one is is very nice.
+48:20
+So you can find the.
+48:25
+So as with the divider now, so this is a transitive relation because for no one, what is the what can I do?
+48:30
+We are five then and then divides 20 and five defines 20.
+48:40
+Yeah. So that's that's all good. So it is Transdev relation.
+48:46
+So if I bring this back to the to the minimum so I reduce it, what are the pairs that you get.
+48:51
+So that's the first thing that you need to do. So you have to ask yourself every pair that is in this relationship, do I need to add it or not?
+48:58
+Yeah. And then you can look at maximal and minimal elements.
+49:08
+Now, this will not have a least element. So it is an example where we don't have at least element.
+49:12
+We have minimal elements, for example, to divide four and five divides then.
+49:17
+So they both sit on all the elements. Nothing sits on the need to and nothing sits underneath five.
+49:24
+So these are two minimal elements and there is no loose element. No.
+49:31
+And so this set here as well, 25 in 2012, both maximal elements and 12 is the maximum element as well.
+49:38
+Now. So it's that we can only have won this tournament, but can have multiple minimum if if if a if a set has a loose element, it is unique.
+49:49
+If it has minimal elements and they are not unique and then it doesn't have at least elements.
+50:04
+OK. Now, as on the third one, you extend the one in part to into a portion in total order.
+50:12
+OK, but it's ten to 12, so it's time to stop so we don't have the time to do this exercise.
+50:24
+So think about this a little bit. And then on Thursday, I'll come back and start the lecture by doing this exercise.
+50:30
+Are there any questions? Can I just quickly.
+50:36
+So when you say minimal, but surely it should be unique because if there's anything less or equal to that, they are equal.
+50:40
+Yeah, exactly. So it just means that there is nothing can go on the neith it.
+50:50
+Yeah. So five is a minimal element because nothing can divide five.
+50:56
+But it's true for two as well. So they're both minimum.
+51:01
+Because I think because we are talking about partial,
+51:09
+so actually we can have something that's not smaller, but it's not also quater, it's not comparable.
+51:13
+Maybe you can have that. But the main thing is by the definition, the definition says it is minimal if nothing else underneath it.
+51:20
+And it is at least if everything else sits above it. Those are two different things.
+51:32
+So this set has no loose element. I know it's confusing,
+51:39
+but what I found over the years is that students have to shake off the way they think about
+51:52
+smaller equal and because it's always been a total order and everything you've done so far,
+51:58
+and it's no longer the case. So this year, this this divide relation, that's not a total order and therefore things get messy.
+52:02
+If I add to the number one to the set, for example, then yes, I would have at least elements.
+52:13
+But as part of the of the thing that you answer in three, thank you, OK,
+52:21
+I'm going to just before I finish, I can you go through the anti-Semitic definition again?
+52:27
+The anti-Semitic definition, yes. I don't think I'd quite get on it, so where are we?
+52:35
+I think it's like in a later slide, it's good, but it's really you have to get past it.
+52:47
+That area, yeah, so anti-Semitic. So this means that it is impossible to have two pairs in the relation that you can flip.
+52:56
+Yeah, so and he did the mental bridges that you think of, smaller, equal,
+53:09
+no smaller then so too is smaller than three, but three's not smaller than two if you have two elements.
+53:16
+And and so I said any smaller than M m smaller than n then they have to be the same.
+53:23
+Towards more equal, I should say, yeah, so what is that expression?
+53:32
+I feel like I'm not quite linking the expression with the definition of autism, so it is symmetric means.
+53:40
+Yeah, so if you have a pattern in the relation and the flipped version is also in the relation.
+53:48
+Yeah. For all parts, if you have a relation that is not symmetric, it says that if you have if you can find one pair of objects,
+53:55
+the flipped version is not in there then is already not symmetric. But this is stronger.
+54:05
+This is a. Symmetric. This says there is no power for which the flipped version is in relation as well.
+54:11
+Oh, OK, so none of the tests has its fifth person just in relation,
+54:17
+so so it might be that they're both in relation, but it's only if you talk about the same element.
+54:23
+Right. OK. Namco So if so, if somebody brings you to pass that are in the Malaysia and they're flight, then you could say Ha ha,
+54:31
+but you have brought me two pairs that are equal now because they are talking about the same element in both positions.
+54:39
+OK, OK, I'm going to switch off the recording now, then I'll see you on Thursday.
+54:50
+Sorry, could I just ask quickly as well? It quickly, because we are going to talk about the anti symmetric, because the definition of symmetric,
+54:57
+for example, the relation has one one in it, then it's symmetric.
+55:07
+So no, no, no, it has to have all the bears. OK, OK.
+55:11
+Yeah. Thank you. Yeah. OK, thank you.
+55:16

@@ -35,11 +35,11 @@ And this is is something called a lost update anomaly because what's happened is
 1:43
 History one and History two have been permitted to read the value of Branch 34 and therefore,
 1:50
-of course, read the same cache figure that's £900.
+of course, read the same cache figure that's 900.
 1:57
 And then Transaction one is going to do its update, which is to add 10000 pounds to that figure and write it back.
 2:01
-And then afterwards, transaction too does its update, which is to say the same initial figure and subtract £2000 from it.
+And then afterwards, transaction too does its update, which is to say the same initial figure and subtract 2000 from it.
 2:08
 And the net result, of course, is that this right operation by transaction once effectively can't be ignored, and that's called a lost update.
 2:18

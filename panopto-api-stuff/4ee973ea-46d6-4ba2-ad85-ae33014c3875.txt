@@ -469,7 +469,7 @@ OK, so the right most column you control input is the output of this block.
 33:24
 OK. So we could devise and optimise a large equation for each of the three bits.
 33:32
-Of this output, which is called Hélio Control Input. OK.
+Of this output, which is called Hlio Control Input. OK.
 33:43
 And you could just. Look at the input for each of the values in this column, and you could see that each of the input is called FCO,
 33:49
@@ -491,7 +491,7 @@ OK, so. As a result of what we describe, we are just covering this red ellipse b
 34:52
 OK, so you control, as I explained previously, that it takes the function code input, the six split from the left, and then it takes two bits.
 35:07
-€L. And there you rob. Is derive from the control unit, which have been put in there yet.
+L. And there you rob. Is derive from the control unit, which have been put in there yet.
 35:21
 OK. So this diagram summarises the control to this plot.
 35:29
@@ -575,7 +575,7 @@ No, OK? Well, because they are full multiplexes, each of which would require one
 40:52
 And then we also have these three controls Tecno's one for the rest of the file and two for the data memory.
 41:00
-OK. And then we also have the control to the €L.
+OK. And then we also have the control to the L.
 41:12
 And do not forget the air you're up. Control has two bits.
 41:16

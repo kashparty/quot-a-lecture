@@ -83,7 +83,7 @@ So the sum of the lengths of the two lists is N.
 4:27
 So the worst cases N minus one comparisons. Only one element comes for free.
 4:32
-And we've seen how that worst case can arise. So now in a position to write down the recurrence relation from Børge thought.
+And we've seen how that worst case can arise. So now in a position to write down the recurrence relation from Brge thought.
 4:36
 So a list of lenth one is our base case.
 4:44
@@ -179,7 +179,7 @@ Well, but w one is just zero. So this gives me actually K and minus and plus one
 10:10
 So and, well, Kay is just log in.
 10:29
-And so we get n log N. So the order this is order and log n log línea rate of growth.
+And so we get n log N. So the order this is order and log n log lnea rate of growth.
 10:33
 Well, but how does this expression that we've just calculated compare with our lower bound seating of Log of N factorial.
 10:41

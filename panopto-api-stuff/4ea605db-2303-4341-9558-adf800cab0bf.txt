@@ -151,19 +151,19 @@ If I, first of all, consider an answer a it says that each movement in the bank 
 9:08
 That means if you went along to an ATM machine to withdraw some cash and previously someone had withdrawn the same amount of use,
 9:17
-let's say you're trying to take £100 out.
+let's say you're trying to take 100 out.
 9:25
-You get a message from the machine saying sorry, you may not withdraw £100 because a customer has previously withdrawn £100 from the bank.
+You get a message from the machine saying sorry, you may not withdraw 100 because a customer has previously withdrawn 100 from the bank.
 9:27
 Please choose a different amount. Ask that be would mean that no one could withdraw the same amount from a particular count.
 9:37
-So now the message from the ATM would change to sorry, you have previously withdrawn £100 from your account.
+So now the message from the ATM would change to sorry, you have previously withdrawn 100 from your account.
 9:46
 Please choose a different amount to withdraw from your account.
 9:54
-Answer D means that you go to the ATM and you be told that sorry, previously a customer has tried to withdraw £100 from this bank today.
+Answer D means that you go to the ATM and you be told that sorry, previously a customer has tried to withdraw 100 from this bank today.
 10:00
-Please come back tomorrow if you wish to withdraw £100 or choose a different amount was RCC.
+Please come back tomorrow if you wish to withdraw 100 or choose a different amount was RCC.
 10:12
 C says that you may not withdraw more than one amount from this particular account to date.
 10:21

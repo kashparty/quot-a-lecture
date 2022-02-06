@@ -1597,7 +1597,7 @@ That's one of the top line.
 1:22:53
 But but anyway, what I want you to do is always difficult types of teachers in because it's at this stage in your understanding of the language,
 1:22:54
-it's good practise. So your Utøya will expect you to type in, even though if you leave them out, GHC will work them out for you.
+it's good practise. So your Utya will expect you to type in, even though if you leave them out, GHC will work them out for you.
 1:23:01
 Look, um, so here's another example. Oh, so this is actually this is a slice of pie.
 1:23:11

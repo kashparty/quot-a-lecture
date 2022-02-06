@@ -1,0 +1,841 @@
+ID: 424d3baf-8d71-4584-904a-adc800f13861
+Title: Solidatus ACI talk Oct 21
+Category: Applications of Computing in Industry (ACI) Talks
+Lecturer: Tom Curtin
+Date: 21/10/2021
+So welcome, everybody, to this application,
+0:03
+I'm competing in an industry seminar which is going to be presented by Phillip and Danielle from Solidarities,
+0:05
+and Phillip is well known to the department being a valued member of our industrial advisory board.
+0:11
+But he's here today to tell us about what remodelling the multiverse, how to visualise data flows and so on through time.
+0:22
+It sounds all very interesting. Yeah.
+0:29
+So please, Philip and Daniel do take it away.
+0:34
+So we'll just, I guess, introduce ourselves and then hopefully we'll be able to share a presentation.
+0:39
+We can work out how to make Zoom work. Yeah, but it's far away from us.
+0:47
+There we go. Right. So let's see if we can make them do what we want it to do. We've got a bit of sound.
+0:53
+So maybe at some point you'll tell us if you hear it. If you don't hear sound, then, well, we'll know, right.
+0:58
+There may be a shared computer, audio or something box you need to take.
+1:07
+We've we've checked that I'm now dry runs before today.
+1:10
+It was all working fine. But of course, today it's going to choose to do something different naturally.
+1:14
+But we'll try anyway. All right. Well, off you go when you're ready.
+1:19
+Thanks a lot. Okay. So just a quick introduction to you and Solidarity's.
+1:22
+So we are a we are quite a big Start-Up out of impaired in some way.
+1:28
+So I will introduce myself as being an NPR graduate, and I'm very happily part of the Industrial Liaison Board, but that is also an imperial graduate.
+1:34
+And I did I did a quick count. And I think that something like 28 percent of the company or Imperial College graduates,
+1:45
+most of those are from the departments of computing about a year ago was probably something like 75 percent.
+1:54
+We've grown quite a lot in the last year, which is very exciting. So as well as myself and Danny and a big engineering team,
+2:02
+we have offices now in Singapore and in the United States that's grown a lot since the beginning of last year.
+2:09
+We were very lucky to grow through covid. We do offer industrial placements and obviously this graduates stuff as well and within within the company.
+2:16
+And on top of that, we do other internships. We support a lot of women in tech stuff and we are called supporting what isn't sitting right now.
+2:27
+Unfortunately, the city of London and chief technology officer committees, which are quite big and we do we do other bits of asanti financial crime.
+2:35
+We we work predominantly in financial services, but we do have government work as well.
+2:43
+Yeah. To introduce the problem that we are trying to solve this is this is a this is a data problem.
+2:51
+We we are computer scientists, so we can actually get excited about this in the room, which is which is quite normal for us.
+3:01
+That data is data is great. There's lots of data everywhere.
+3:08
+We know data is being created. It's an ever increasing rate. I think there's there is a statistic.
+3:11
+It's almost like Moore's Law is for transistors on the days of processors.
+3:17
+I think every year there is more data created than any amount of data that existed in the previous year all the way through the whole of time.
+3:22
+So it's an increasing problem. And it's not just a technology problem, it's a people problem.
+3:29
+People create data, generally speaking,
+3:36
+either the people who are computer programmers are creating stuff in log files or they're creating data because, you know, they're sampling stuff.
+3:38
+Technology is creating data all the time. There's lots and lots of technology devices.
+3:47
+I think a rough count the other day of how many Internet enabled devices we had in our office with 20 people.
+3:50
+And that was something like 150 Internet enabled devices in the office, which is just crazy.
+3:56
+If I just look at financial services and the cost of regulation three years ago,
+4:01
+it cost both financially and an opportunity cost something like 780 billion just to look after the regulation of data.
+4:06
+That's going to have manifold. As you can imagine, there's not been many surveys in the last in the last 18 months on this stuff.
+4:14
+But I would expect that figure now to be well over, probably well over two trillion dollars,
+4:20
+given the amount of privacy legislation that's come in recently. So we are a modelling tool for intellectual property.
+4:26
+That's what we aim to do. We aim to model and the information about data.
+4:32
+So not not the data itself, a line that tells you my name and address.
+4:37
+This is interesting, but what are each of the fields that you're storing your database really mean?
+4:43
+And one of the data is being stored alongside it. So we are we are an intellectual property store.
+4:47
+And we model data and data flows from A to B. Yeah, so one of the one of the things we model is the structure of data.
+4:54
+What the data looks like. So we're not we're not talking about the records individually, but the structure of data.
+5:05
+So that schema in a database, for example. And we're trying to understand how that data is moving from system system.
+5:10
+It's not a purely technical problem. It's a people problem as well.
+5:16
+It's an organisational problem. It's how you organise data in an environment where things are changing at different rates.
+5:20
+And so we've I think we'll take you through a little bit of a journey of how we've developed Solidarity's over the years.
+5:26
+So I did my internship as part of the industrialisation programme back in 2010.
+5:33
+And shortly after that we started selling data and our Doctorow's theft team has grown since then.
+5:39
+It's it's very fortunate to be surrounded by people with similar backgrounds who find similar dry subjects about data.
+5:45
+Quite interesting.
+5:53
+And so we've we stop consolidators with the idea to try to understand how data moves from sister agencies basis and say so a graph structure,
+5:55
+a network structure is quite a natural fit. So just for some very simple revision, we have our nodes,
+6:03
+ABCDs and our edges between those nodes which are directed showing that something that moves into C and something and C moves into the effort.
+6:08
+So with a very simple structure like this, we can answer the question if A is a field in a data base.
+6:18
+And a network that looks like this, where does it end up in my in my organisation.
+6:26
+So the graph is a good fit, but we're not just talking about nodes.
+6:32
+We want to do something a bit more complicated than this. We're talking about the structure of the data in those nodes as well.
+6:37
+So on the next slide, this might push up the screen.
+6:43
+So we're also talking about the structure of data, of notes. And so we in our graph inside solidarities, we have a hierarchy with each node.
+6:48
+So we're actually talking about inside Solidarity's. We're modelling hierarchies of things.
+6:55
+So we think a database containing several tables and the tables contains several fields and so on,
+7:00
+or an XML document has various complex layers of structure.
+7:08
+And we can continue expanding our graph and showing how the flow moves between these hierarchies and within them as well.
+7:13
+And so this is one of the evolution debate over the last 10 years of developing something so slightly less than a year since we founded the company.
+7:21
+And then it's moved on to that of the journey we've made with this data model.
+7:28
+So time has been it's been quite an interesting one.
+7:33
+Because it wasn't as simple as just recording this trip data at the point in time and seeing how data is moving around,
+7:38
+kind of a snapshot because that's not quite how organisations work.
+7:45
+Things are happening at different times. We want to be able to look at what what our data flows looked like yesterday.
+7:50
+And so actually, the database that we've developed, insights for the data not only reflects flow and hierarchical structure, but also represents time.
+7:55
+And so every every entity inside the data modelling graph database that we have has a start and end time,
+8:04
+a time at which that that that data point was was applicable, was relevant.
+8:12
+So given a timestamp, we can say what was relevant at that particular time.
+8:17
+And so a database player will pull out and hide the graph of everything that was at that point in time.
+8:21
+And it's interesting to say the traditional graphs really only do time now.
+8:26
+And to get something to look like time minus some arbitrary period, you typically would have to have the whole graph saved out.
+8:31
+That's just how things are normally done. Databases can have voting records and can do this time by stuff.
+8:41
+And you kind of materialise things with complicated queries,
+8:49
+with lots of Joynes over them and you can kind of materialise a view of what things look like.
+8:52
+It's an arbitrary point in time.
+8:57
+So the novel lead with us is we kind of mixed up a graph technology with something that recognises that time is an element of the graph.
+8:59
+And actually this is quite unique for us. Yeah, so we're adding more and more dimensions into our graph,
+9:10
+going from that simple idea that a graph might be a good a good way to represent some kind of flow and then adding more
+9:15
+complexity into that graph while still trying to respect a user that maybe doesn't want to have complicated user experiences.
+9:22
+And so we're always having to this is not just a technology problem,
+9:28
+it's how we can tie that technology down to how an organisation works that might have a thousand people who are trying to model data flow.
+9:31
+It's not just one person's problem. It's not just an automation problem.
+9:37
+But with those timestamps, we can have a timeline of what metadata looked like of what these data flows look like over time,
+9:42
+so we can see what they looked like in the past.
+9:48
+And that brings us on to a slide, which I'm hoping the sound will come through here, otherwise Bill's acting job is going to we will be out of here.
+9:53
+Why is it still the latest in the multiverse?
+10:03
+Well, so there's there's a whole multiverse thing coming out right now with the marvel that that's sort of the extended Marvel universe.
+10:05
+So there's quite a good description of kind of where we're trying to get to in one of the later Avengers movies.
+10:11
+And actually, it does a reasonable job of explaining where we are, where we come from.
+10:18
+So if you think about why you might need a timeline.
+10:24
+A timeline is important because things happen in the past and they will happen in the future,
+10:29
+but sometimes you need to change what happened in the past in a simulation and see what happens.
+10:35
+So hopefully this will work. If it doesn't work, I'm sure we'll cross our fingers.
+10:44
+You can go and find the movie clip. Well, we'll post the links anyway.
+10:49
+But let's hope it works. It's only it's only a short while longer.
+10:54
+So I think you'll get the idea even if even if you come here at.
+10:57
+We can't hear it now. That's marvellous. Maybe you can. Marvellous, marvellous.
+11:03
+So I don't know whether well, you can give us a night.
+11:08
+We can't cure it. Unfortunately, we can't help think we can do it.
+11:12
+Well, there's a little bit of there's a little bit of preamble saying that this character wants something that the other character has and.
+11:17
+They are saying, well, actually, if you take it, then things will go wrong.
+11:25
+And so there will be a little bit of. Comedy, imagine comedy at this point and now say they were too effective.
+11:32
+There are two scientists. One is one is trying to say what I can take stuff in the past and if I put it back into the past, nothing will go wrong.
+11:44
+And the other one is a temple scientist. And now she's drawn a temporal timeline timeline's this is this is prime time one.
+11:52
+Now she's saying if you take something away from the prime time line, you will skew what's happening.
+12:00
+This is the multiverse. So this is alternate reality is taking place at the same time.
+12:06
+This is what you do when you know you. There's one time production and there's another timeline, which is a which is a parallel timeline,
+12:09
+which is your mind your death branch or a testing branch or something like that.
+12:18
+Now the scientist is saying, OK, so I'm going to simulate that. That's fine. You've got a box on line.
+12:22
+But what happens if I now take something and I'm going to I'm going to put it back exactly where I took it out.
+12:27
+Now facilitated some phenomenal growth to different outcomes.
+12:34
+Now, what the scientist is saying, actually, I've simulated that in the scenario I've built has brought you back and everything's now OK again.
+12:38
+So one of the sort of tricks is that we will enable people to go back in to a particular time.
+12:46
+And it could be time now, branch, make a scenario and build it, see what happens, and then effectively join it up again with some variables.
+12:55
+So that's essentially what that's showing. And we'll post a link that does almost word for word.
+13:05
+It was almost as bad as the original really was. I should have auditioned for a feature in film.
+13:10
+Yeah, yeah, yeah, yeah. That.
+13:18
+OK, so what we we've already shown that we've we've timestamped or given a time range at which our nodes in this graph are valid when they are alive.
+13:21
+So we can track versions of it over a single timeline.
+13:31
+But actually given that we have the ability to to compare two versions of a Solidarity's graph in time, why do this over, over just the one timeline?
+13:34
+We can do this over multiple timelines now. So this is our ability to have parallel timelines of.
+13:47
+Of solidarities, Graff's all moving at different rates, so we don't just have the what happened in the past,
+13:56
+we also have the what would happen if I took this version and made a slight modification to the graph.
+14:02
+What what what would that look like? Can I have a hypothesis about whether that would be a good change after change to make?
+14:07
+So in reality, that might be, hey, my data base game is going to change.
+14:13
+I've updated some some some software in my organisation. What would that look like?
+14:18
+If I did? It would be an easy change, difficult change. And it's quite analogous to this awesome job and a great repository.
+14:22
+I can take a bunch of code and I can hang around and write stuff and see see what happens because they test it and then eventually emerge out of it.
+14:28
+So if we move on one more slide, some of the changes that we have between any two versions of a Solidarity's graph.
+14:37
+So we have this picture which is showing underthings being modified, green things being added, everything's been deleted.
+14:47
+And this is how we visualise in some cases, very visual tool which visualises how and how these graphs have mutated over time.
+14:53
+So we can do this over over one hour, multiple timelines under the hood,
+15:00
+how we're actually representing these mutations with a set of what we call components.
+15:05
+And so these operations rename, delete, add, and we have a few other things.
+15:10
+You know, we've got these hierarchy, so we've got things like those commands.
+15:14
+You know, you can move nodes around with another nodes to keep integrity that way.
+15:17
+And each of those commands has an inverse command as well.
+15:21
+So we've we've put quite a lot of engineering regulations, which I hope some of the some of the audience will appreciate it.
+15:24
+And so some of the things that Imperial gets us to think about will be there.
+15:32
+And probably things have changed in the last 10 years or so. But that sort of engineering rigour that you have Imperial,
+15:36
+I think really comes through when you're trying to design a piece of software that
+15:43
+you want to survive longer than the initial project that it's been asked for.
+15:46
+This is not you know, we're not developing software, is it? For one user requirement, we creating sustainable software.
+15:50
+And so the rigour that we put into this graph is quite useful.
+15:55
+We've developed these commands that can represent algebraically, a mutation of something that is graph.
+15:58
+And using those those cameras, we can actually see what happens if we bundle all of the changes that have happened on alternate timelines and
+16:07
+bring them back into the main timeline so we can we can flatten all of the commands that happened in the sandbox,
+16:17
+for example,
+16:24
+which may be some changes that some of the plays modelled on automated processes discovered and see what effect that will have on the main timeline.
+16:25
+And this is very it the individual building blocks we put in have some simplicity and elegance.
+16:32
+But actually, when you stop putting them all together into this space now,
+16:39
+these multiple timelines and you start getting humans involved are actually modelling
+16:42
+things at different rates at different times and all merging these together, using those those commands,
+16:45
+you come up with something that is incredibly complex or would be complex if you didn't have some way of sort of formally formal modelling.
+16:51
+So why do we need to do this?
+17:03
+I'm going to I'm going to introduce a term and this is a this is a term that's got it's one of these awful terms that's got overloaded,
+17:08
+like professedly, like big data is overloaded or, you know, block chain is very overloaded.
+17:15
+Now, enterprise, what is an enterprise.
+17:21
+So an enterprise, it means different.
+17:26
+It means different things. Depending on your perspective. An enterprise is potentially a company.
+17:30
+So an organisation. And it's an organisation, a top level.
+17:37
+So if I'm the chief executive, my view of the enterprise is very high level.
+17:42
+It's basically what my board members are.
+17:47
+So if I've got five departments, I make five board members, one of each one person responsible for each of the areas.
+17:49
+And my view of the enterprise is those board members, in turn, those board members have their own departments and so on all the way down.
+17:56
+And maybe there are 10 or 20 levels, depending on the type of enterprise.
+18:04
+And maybe the enterprise is made up of blocks. So maybe the enterprise is, for example, government.
+18:10
+So government may have many departments and those departments may have many functions.
+18:16
+Potentially a function of government is something like Imperial College.
+18:21
+So all the way down at Imperial College would be an enterprise in its own right and within the enterprise,
+18:25
+the Department of Computing, which is an enterprise in its own right.
+18:30
+Each of those functions are operating semi autonomously, but they have to cooperate.
+18:34
+They are an organism. If part, the enterprise completely splits off and goes into a tangential direction that can be difficult.
+18:39
+Enterprise needs enterprise. He thinks their enterprise values would potentially enterprise policies,
+18:48
+their enterprise ways of viewing your organisation, their enterprise controls over things which need to be complied with.
+18:54
+There's also an enterprise economy, things like if we look at the globe,
+19:01
+a great version of of of an enterprise application for our world is a search engine.
+19:05
+If you type something into Google, you're going to get an enterprise results for everything that you can see,
+19:11
+which is a big view of the enterprise and a plan if you if you can take it back.
+19:16
+And did that same search on Google Appliance within your enterprise, you'll get a different set of results, no less valid, but with a different scope.
+19:20
+So enterprises are difficult. They are notoriously difficult to quantify.
+19:28
+Where is the edge? Does the industrialises on board, for example, form part of the enterprise?
+19:33
+And all those sorts of things make it complicated to understand the boundaries you get set.
+19:39
+And so modelling an enterprise by necessity isn't an exact science.
+19:46
+And you must have the sort of fuzziness around the edges in order to allow you to pull in and out people's views and people's contexts.
+19:52
+As I take one person's view may very might very well be different from another person's view, but they collaborate and it's the,
+20:03
+you know, the biggest sort of Venn diagram with overlapping concerns and things like that all the way through.
+20:10
+So one of the things that we really try to do is we we try to allow reuse and collaboration.
+20:16
+So we have almost let sitting around the can all all merge with each other around their ages.
+20:22
+While maintaining their own lifestyle, maintaining their own controls, but actually allowing them to interact with other parts of the enterprise,
+20:30
+do you think about yourself as an individual, have one enterprise, which is your family, you have your own enterprise, which is your friend.
+20:37
+You have another enterprise, which is your job or your place of study.
+20:43
+You are constantly in all of those and you interact in different ways and maybe have completely different personalities between them.
+20:46
+But the core of which is is is you interacting at the age.
+20:52
+And so it is difficult for all those reasons.
+20:58
+Sacramone, I'm wondering whether I know the reason why this isn't working, so I'm going to try and quickly get some sound on.
+21:03
+Maybe this will work this time, so we'll see how we go.
+21:11
+Let's let's let's try this time with some sound. So this is this is slightly further on or further back or something like that.
+21:17
+Doesn't really matter, because time is a time is that time is a factor in the same set of films.
+21:27
+And we going to we're going to we're going to sort of try to model scenarios over different points in time.
+21:32
+And I think this is a relatively short piece of video, isn't it? So this this may well have sound or not.
+21:38
+And it doesn't really need explanations on everything, but OK, maybe the same sentence.
+21:42
+Anyway, this is this is going through every single scenario. So in the Enterprise, we potentially have many, many millions of ways of changing things.
+21:48
+And this represents projects that are going on. The order of projects are executed.
+21:59
+So in this in this particular clip, the the the time wizard has modelled 14 something million different changes to the enterprise.
+22:04
+And he said, well, only one makes us a profit. So, again, Solidarity's is about being able to try the order of things,
+22:15
+being able to entirely different parts in different ways and getting you into a place where you can model
+22:23
+the enterprise in a fashion that enables you to build scenarios and show you which scenario is best.
+22:30
+And this is important for the enterprise, because unlike this,
+22:37
+where there's only one good outcome, there may be many good outcomes, but it may be complex.
+22:39
+In one part, the enterprise might be moving at one speed and then changing halfway through and you're going to have to remodel things.
+22:44
+So modelling the enterprise is complicated because of that.
+22:51
+We call this data lifecycle. And so conceptually, you have a business unit, so a business unit can be anything.
+22:57
+Typically, what the business means is the principal, the person requiring the change.
+23:05
+We model something called data linkage, so the connectivity of stuff and is going through the graph that we do with that data,
+23:11
+connexion connectivity with them all the lineage put together with its metadata behind the scenes models, intellectual property.
+23:20
+And really what we're trying to do is take a business is conceptual design, modelling it,
+23:27
+making sure that all the right things are being done in the right order so well.
+23:32
+Now you write that the principal implements and the principal thinker and the in the person
+23:38
+potentially paying for requiring it through to the implementor authority in this case.
+23:45
+But it could be lawyers, it could be Hijau, it could be an external, it could be an external agency.
+23:51
+If you're your government, you're making you're making regulatory changes, for example.
+23:58
+And then we implement and we check all the way through that the implementation has the outcome the business needs,
+24:03
+and this is a case of wants versus needs, right? So we've got to get we've got to cut through the rhetoric from the business.
+24:15
+So the business, they want something, but do they they need that thing implemented in exactly that way.
+24:21
+A good example of this is the business may wants a bottom up there, but what they need is the ability to put a bottom there.
+24:26
+We might provide a piece of generic functionality to put that bottom there. So this is this is the cycle.
+24:33
+And if you're if you're familiar with deadbolts plan, build the boy run sitting in all the corners and right to the heart of it is sort
+24:38
+of like it's the same metadata in their lineage neighbourhood organisation.
+24:45
+I take that further now and would say metadata consolidators in any organisation gets you to the point where you can build,
+24:49
+you can build up this taxonomy of change. I think roundly that said, I'd like to leave you with a catch phrase, Slater isn't expensive.
+24:55
+Complexity is it's our mantra that, you know, we we don't create complexity by by design.
+25:07
+It happens. The best thing you can do is to be in control of it.
+25:17
+So. All there are any questions, I think, if going to be the same questions as well.
+25:24
+Oh, absolutely, absolutely. That was finished in good times.
+25:28
+Excellent. Does anybody have a question? I mean, maybe while people are thinking, I can get it going, I mean,
+25:32
+it's obviously incredibly handy to be able to keep track of your data and its lineage,
+25:42
+but there's also a tremendous volume of data in our organisation. Right.
+25:49
+So how how do you decide what is the right data to be keeping track of the lineage of because
+25:54
+presumably it's too much overhead to do it for all the organisation or the data in an organisation?
+26:00
+Or is it in the first instance? And there is a clear answer to this and I'll give it in a second.
+26:06
+In the first instance, it is possible to connect to everything if you you do a mixture of an automated collection.
+26:12
+So we have a big framework of automated agents that the fact we're releasing today a new version of it that can collect things automatically.
+26:21
+We're collecting effectively the column headings rather than the actual data.
+26:31
+So we're looking at the change in the purpose of data, the taxonomies, and he's kind of the ontology of the organisation.
+26:35
+So we're trying to create semantic uniqueness. So this is always good stuff.
+26:42
+You know, that stuff is very relevant in today's world.
+26:45
+The glib answer comes after several pieces of legislation. So if you look at the information commissioner's office websites,
+26:51
+they have a very they have a very good page which describes something called GDP or so GDP is data protection legislation from the European Union,
+27:00
+which is enshrined in British law and will be you know, it's going to be modified over the next years.
+27:08
+But it's it's real. I think that the commissioner's office has broken it down in a significant way.
+27:13
+He says that when you create a structure, you need by default and design to control it.
+27:22
+So by design means that you actually need to track everything that is relevant for that particular legislation.
+27:28
+You don't need the beginning like what's relevant. Postcode on its own isn't personally identifiable.
+27:35
+A postcode next to a house laying next to your surname is definitely relevant.
+27:40
+So you kind of have to create a taxonomy and a registry of all information.
+27:44
+And we believe actually that a dictionary of all terms is possible.
+27:49
+The Claiborne's that follows that the bit you need to control is the bit that's going to send you to jail or get you a really big find.
+27:52
+And actually, that's the answer. If you think it's possible that it's going to send you to jail,
+27:59
+you're really different than they are, really, because then you need to be controlling it.
+28:04
+OK, great. Thank you. Does anybody else have a question? You can type in the chart, you can put your hand up, you can just speak.
+28:10
+I think one of the things I've done is try to relate a bit back to the courts.
+28:23
+One of the interesting things about this, about this application,
+28:27
+when we when we were thinking about it initially and this is this is a this is a commentary on,
+28:32
+if you like, software engineering as a as a as a discipline.
+28:39
+We fell into a trap of making it at the very beginning of making quite a bespoke piece of functionality.
+28:44
+And it became very opinionated about some things we would have checkboxes the end of the day to Mowgli's Single-Use Fields.
+28:51
+The nice thing about where the application is now is that not only did we wholeheartedly embrace the graph,
+29:02
+which I don't agree that we did on the very first day, but probably quite, quite early on, but not at the beginning.
+29:09
+It wasn't a day one thing conceptually, it was a graph. But we started out as a blob.
+29:15
+It was materialising.
+29:19
+So what we did, what we did over time was on the epiphany of software engineering uses that you can make things too flexible, of course.
+29:21
+But if you have a good structure, could you know, we do have an ontology that sits underneath.
+29:33
+It's a very simple one. But having it having a good generic answer to a question,
+29:38
+giving yourself the ability to do more than one thing with a piece of functionality has held
+29:44
+this in very good stead and analogies in an analogous kind of example of a piece of software,
+29:49
+this that is Excel Excel with double entry accounting software at the very beginning.
+29:59
+But it hasn't ontology in a taxonomy of what it is. It's, you know, columns of rows and there's nothing else.
+30:04
+But it never opinionated itself by saying you have to do accounts and it didn't prescribe the column.
+30:09
+Three had to be the debits in column four had to be the credits.
+30:14
+It just gave you the ability to put them in any way that you want, that you can have many columns of debates and credits.
+30:18
+And over a very short order, people weren't using Excel for double counting.
+30:24
+They were using it for organising their timetables or, you know, doing StaffWriters or lots and lots of other things.
+30:28
+And so from our perspective,
+30:34
+we operated on the principle that we were going to put some very good software engineering rigour against our against our underlying data structure,
+30:37
+but not opinionator. Yeah, I think we've let our computing background bleed into the software design,
+30:46
+not just the implementation, but the way that exhibits itself to use it.
+30:53
+And that's that's really paid for itself in the long run. It means we can we can answer different questions that we never expected would come
+30:56
+our way without having to upgrade the software and support new functionality. It's very generic and powerful set of capabilities that we have,
+31:02
+and that's just scratching the surface of the graphs and things we've looked at today. That's just one aspect.
+31:09
+We do have these little graphics is those called them,
+31:15
+which allows us to to grow at scale and have multiple graphs that together with the query languages and other annotations
+31:17
+we can do on these graphs and alerts and things that account so that there's tons of stuff happening in the space.
+31:23
+If we have any suggestions on the call, we are now into doing the placements. Yeah, I mean,
+31:31
+perhaps this is a good time to have opportunities for students and do we've got students at all levels from first year to
+31:37
+Masters to PhD looking for internship opportunities and exciting projects to work on for the individual and group project work?
+31:46
+Are those things? That you like to be involved in?
+32:00
+Absolutely, without a doubt.
+32:04
+We had we had seven interns last year and that was there was a six computing, one Jameses that we had on JMT five computer full time computing.
+32:06
+We had one from Tripoli as well. Oh, yeah. Yeah. So we do we don't have that rigorous dog pound that we use.
+32:18
+Stray too far from Huxley. Yeah. Great. Great.
+32:28
+Are you open to working with M.S.? Told postgraduate students we have some on staff.
+32:32
+Yeah. I mean for sure. Yeah. Yes. Is the is the actual. So we're growing still.
+32:40
+We, we've more than doubled in the last year. Four times. Four times in the last year then apparently.
+32:44
+So we have to and we are looking for really good engineers. All right, still no questions from anyone.
+32:50
+Everyone's flawed, everyone's pacing, or they're trying to get to the original video on YouTube so they can hear the actual real narration.
+33:00
+You did it just.
+33:08
+I mean, I've got a question is like how difficult it is to integrate a system like this with with with systems outside of the enterprise.
+33:10
+Is your question. Is it useful to do that and what kind of systems do you think you might be able to integrate it with?
+33:20
+So we do that in various guys.
+33:27
+It is we do have collaboration between organisations.
+33:31
+So a regulated, for example, may be interested in what's happening in an enterprise,
+33:35
+but the regulator will also have perhaps a regulation that they produce, which is an obligation on the enterprise itself.
+33:39
+So I have a particular bill or particular regulation that the enterprise needs to show that it's implementing.
+33:46
+We also do it between enterprises. So enterprises producing perhaps a payment and enterprise is consuming the payments.
+33:54
+They need to understand that they are syntactically talking about the same thing in other places.
+34:02
+So we have third parties to use the software design implementations as well,
+34:09
+and then they sell those implementations to other clients and the clients implement against them.
+34:14
+So it's design software as well as model and software in terms of the operational aspect of it is quite flexible.
+34:19
+So it you know, we we firmly believe that we were working for 20 years on the front line, that,
+34:26
+you know, those of us that those of us that had come from financial services as an industry,
+34:37
+the big the big elephant in the room with technology isn't the technology itself is incapable of of solving something.
+34:44
+It's the technology often trips over itself because it gets complex when it interacts with other technology.
+34:53
+There isn't just one application in an enterprise. Some of the enterprises we work with, I'm not joking have 100000 plus applications.
+34:58
+And that isn't just, you know, it's 100000 applications in product.
+35:07
+They have applications that have life cycles. So, you know, there's maybe 30 developers.
+35:12
+They each have an instance of the application is a test environment says these are environments, there's production environments.
+35:18
+There's the system that you can run underproduction environments as it was six years ago, because you have to go back in time to something.
+35:26
+That's the whole cyber challenge of making sure your organisation is resilient and
+35:33
+enterprises are complicated things and applications interact not only with themselves,
+35:38
+but with other applications. And so you kind of have to be able to take all of that into account when you when you're designing stuff.
+35:43
+So you might consume someone else's design while you're while you're implementing
+35:51
+yours because you're interacting with someone else's computer system. Their computer system is at any moment in time static.
+35:56
+But of course, they're going to be developing as well. So at points they will release on that point you release.
+36:02
+And is that is this complicated dance of of an enterprise operation?
+36:07
+And actually, you know, modelling and managing an enterprise is a headache and something like how software.
+36:12
+So the best example. So the best analogy I get is with source control for a blueprint.
+36:18
+And that's how that's how we kind of we kind of exist, is the blueprints always changing and will always change?
+36:24
+Now, you're always going to be doing something. If I if I go away on holiday, I might come back.
+36:30
+Something will have changed in the office. Right. Each day I would have moved or something else would have happened.
+36:35
+What you really want to do is kind of have that knowledge always being fed through to you a bit like how source code changes in control systems.
+36:40
+Right. OK, we have a question here from right here. Would you cut your hand up?
+36:48
+Would you like to go ahead and ask a question? Yeah, well, first of all, thank you for your talk.
+36:52
+Is quite interesting to hear about modelling of data dataflow,
+37:00
+but also the idea of integrating the idea of time and getting the other side of our time and getting the information in there as well.
+37:03
+I kind of mentioned this in the previous answer that you just giving, but I was kind of wondering from a technology point of view,
+37:13
+more so than anything else, what do you see in this endeavour to sort of model data flow and the structure of data and how it gets from A to B?
+37:21
+What do you think are the biggest problems that.
+37:30
+One company, for example, saw the dangers we face in that endeavour.
+37:35
+Not all clients are equally advanced or a note organisations of the same.
+37:43
+So you'll have software that's written in house, which is going to be completely unknown.
+37:48
+You'll have different versions of software. You think, you know, we're working with a bank in Malaysia.
+37:57
+This is not a sweeping statements out about Southeast Asia for computing in Southeast Asia.
+38:05
+Looks a bit more like mainframes. Now, you probably have never used my friends.
+38:13
+There's there's a certain amount of complexity between two different countries.
+38:19
+So if you have a multinational company, they might have different views of of stuff between the countries in terms of technology.
+38:24
+We've been at pains to use open standards. Now, I think we have at least I have a theory that open standards are really good, like they are essential.
+38:33
+Interoperability is essential. I am not a believer in open source because I don't think it really exists.
+38:45
+If you have open source,
+38:53
+somebody at some point and an enterprise is going to pay to get it supported and that's effectively licencing by another mechanism.
+38:55
+If you buy software from us, you should expect it to be interoperable at every point and that interoperability to be well,
+39:03
+destroyed against proper standards. And you shouldn't care that we use Longido dot net or Java or JavaScript or whatever.
+39:11
+You should expect sales because you bought us software, the software works and is fully supported,
+39:21
+and that's it from us from a technology point of view.
+39:26
+If you buy open source, you're going to have to buy support generally,
+39:30
+even if it's from your own staff supporting and contributing back to the project, which cost you money.
+39:34
+Or you have to go and get an enterprise enterprise version of the thing that you open source.
+39:39
+Technology choices are almost how you perceive them.
+39:44
+So open standards with technology is the best choice you can make an open source, caveat emptor, buyer beware.
+39:47
+You will have to get it supported at some point. You really will not seek implementation, have as long as it runs on your stuff.
+39:56
+And if you want it in the cloud, I should be able to provide it in a form that you can use it so low.
+40:03
+Common denominator accessibility, high standards and supportability of the software that we've written.
+40:08
+I think from it from a purely technical, if you can call this technical and it's certainly on the curriculum,
+40:15
+is that is the human element to what we're trying to solve,
+40:22
+the fact that we have lots of people who are involved in this and we can we can make the technical solution as allegations and theoretical as we like,
+40:26
+but without the ability for people to interact with that, use the full capabilities of it in an easy way.
+40:33
+It's not going to go anywhere. So one of the challenges we have is how can we take this stuff that is actually quite complex and and
+40:39
+expose it in a way that he wants to interact with it so that that it's called human centred design.
+40:45
+When I was there now it's designing for real people. Isn't the cost now,
+40:49
+but that it's a really valuable aspect that is difficult to appreciate until you get into the real
+40:54
+world and have those real users who stop complaining when it's not as simple as you thought it was.
+41:00
+Yeah, I'm happy to say designing for real people is still a thing. And the second is to do that.
+41:07
+But but we have very similar experiences for the students on.
+41:14
+For example, the group projects for the third year in the MSI students as well.
+41:17
+A lot of the similar principles. Good, right?
+41:22
+Anybody got the last question? That's a good question.
+41:26
+Thank you. Mangalsutra.
+41:30
+No, well, I guess you guys are off the hook then, thank you very much for that.
+41:40
+And Danielle, that was a very interesting presentation. Thank you, guys.
+41:44
+I want to thank you for your attendance, really appreciate the turnout.
+41:50
+And if people want to get in touch, the best way is through the careers of Soliday, because I think that's probably the easiest one,
+41:54
+rather than giving you a massive long email address, criticism of the latest dot com.
+42:00
+Yeah, it was funny, to be honest with you.
+42:05
+If you want to come over and just have a look, you're welcome to Welcome to Popover.
+42:08
+You should find a very familiar kind of outfit over the phone so where you can find Waterkloof.
+42:12
+So it's just a pop on the cheap from from college if you're in to get it.
+42:19
+Oh, I would just watch how we might take you up on that. Quite, quite a quite a few companies.
+42:24
+Do you like or used to do open evenings and things that people could come in and have a chat to some of the teams and stuff in the company.
+42:30
+That might be one thing to get going. Again, those used to be really insightful and really enjoyable.
+42:40
+We would definitely do that. In fact, we've just we've just moved to a much better office.
+42:44
+I mean, we've been scaling up over the last months to get to get to a slightly bigger footprint on the ground.
+42:48
+But I'll just I'll just play this out there. We're going to we work together while we work as a technology company that owns offices.
+42:54
+And they do that for free at three o'clock in the afternoon.
+43:01
+So if you want to put Shrimpton, there's a bit of free beer involved and we don't have to pay for it, but we pay for it by not using it.
+43:06
+So come and help us. Yeah, because get value for money, I think in spite of the new tax code for up so that they could do that.
+43:12
+All right, guys, thanks so much. That was so that was really insightful to.
+43:20
+Well, everybody, thank you. Have a good day. Cheers.
+43:24

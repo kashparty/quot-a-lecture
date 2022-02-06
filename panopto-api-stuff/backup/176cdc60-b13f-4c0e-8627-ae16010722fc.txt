@@ -1,0 +1,303 @@
+ID: 176cdc60-b13f-4c0e-8627-ae16010722fc
+Title: 2.5 DFS, BFS
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 24/01/2021
+So now we're going to move on to discuss graph algorithms.
+0:01
+So let's start with the problem of traversing a graph.
+0:07
+So the idea here is that we want to start at some node in the graph and visit every node using some path from our start node.
+0:11
+And we allow ourselves to backtrack. So it went.
+0:20
+We won't need to stick to Hamiltonian or Alerian path.
+0:23
+And the idea is that we aim to reach every node.
+0:29
+If the graph is connected, obviously, if it's not connected, it will only reach those net, the node in that particular connected component.
+0:33
+We would have to start a new traversal in the in.
+0:40
+In the other components. So why might we want to do this?
+0:44
+Well, in some network we might need to process each node.
+0:48
+For instance, we might want to cheque if it's working properly or calculate some functions, such as the time since the last failure at that node.
+0:51
+So two standard traversal procedures that we're going to look at are depth.
+1:02
+First search and breadth, first search. Let's start with depth, first search and let's see an example.
+1:06
+So here is the graph on the left. And I'm going to start and finish at node one.
+1:15
+There's nothing special about one here. I could choose any other node. So.
+1:22
+So from one. I've got two neighbours in the adjacency list, namely two and eight.
+1:27
+So I'm going to go to two because maybe that is the first one in my adjacency list.
+1:32
+So I will follow whatever the order is in the adjacency list. But let's take a numerical order.
+1:38
+And then I'm going to start a recursive, because this is a recursive algorithm, I going to start recursively doing a depth first search from two.
+1:44
+So let's look at its neighbours, which would be the one, the three and the four.
+1:52
+But I've been to one already, so I'm not going to go to one.
+1:56
+I'm going to go to three. And then at three, I'll start a new one.
+2:01
+But there's nowhere to go. So I'll backtrack up to two, which is the parent of three.
+2:05
+And then from two, I'll go to the next neighbour, which is four, and start another recursive search at four.
+2:10
+And then from four, I've got five, six and eight plus two parent.
+2:17
+So I'll go to five next and then backtrack then to six stores.
+2:24
+A new recursive search. Go to seven stores and you can go to eight now from eight.
+2:29
+I've obviously got neighbours one and four plus parents seven.
+2:36
+But one four have already been visited because I'm keeping track of that.
+2:41
+So at that point, I've got nowhere to go from eight. So then I backtrack to seven.
+2:45
+Then I backtrack to six. Then I backtracked four.
+2:51
+That's completed. Backtrack to two. That's completed. So now I can finally backtrack up to the start.
+2:55
+So the order of visiting is one, two, three, four, five, six, seven, eight.
+3:03
+And this graph and notice that the red arrow is the solid lines here.
+3:07
+Give us a spanning tree, which is always going to be the case with the depth first search spanning tree for that connected component.
+3:15
+Notice another feature of the depth first search is that this tree is quite deep.
+3:24
+So eight, even though it's actually only one hop away from the start node is actually five
+3:30
+away from the start node within the depth first search spanning tree that we got.
+3:37
+OK. So that's depth first search. Now let's look at the same graph and do Brentford searched to contrast.
+3:43
+So again, we'll start at one. And we're going to fan out to visit the adjacent nodes that two and eight,
+3:52
+so we can think it's in some way you could think of have if employing two subcontractors want to started two and want to start at eight.
+4:02
+And then so that has covered all the nodes which are distance one away from the start.
+4:12
+And then from where the next snow we look at is to because we'll take things in numerical order or in the adjacency list order.
+4:19
+And then again, we'll fan out from two to visit its neighbours. So that will give us the three and the four.
+4:26
+And then we'll go to eight and visit its immediate neighbours, which will be the four and the seven.
+4:32
+But four is already being visited. So we look at four, but we decide not to go there again because it's already been visited.
+4:39
+So now we've got we now we're finished processing two and eight and now we'll process three and we'll go to its neighbours.
+4:47
+But there aren't any. So then we go to four and it's got neighbours five and six, and then we'll go to seven.
+4:58
+It hasn't got any neighbours that haven't been visited. And then finally, we'll go to five and six.
+5:04
+And again, there's no new nodes to be visited. So that now gives us the the arrows in this right hand graph.
+5:09
+Give us a different spanning tree. This is the breadth, first spanning tree.
+5:17
+And notice that this has the nice property, that the deaths of any node is its distance from the start.
+5:23
+The shortest the distance of the shortest path in the graph to the start node, unlike in the depth first search tree.
+5:30
+And so this gives us a broad but shallow and not very deep.
+5:39
+Tree is as shallow as is possible for this graph.
+5:44
+So let's compare our two algorithms. Both depth, first search, Bradford search, traverse all the nose in a connected graph.
+5:51
+But the order visiting is different. And sometimes either procedure will do.
+5:59
+We just need to traverse the nodes in some order and other times.
+6:04
+One procedure is to be preferred. Well, now we need to actually formalise these algorithms.
+6:08
+And so. For our formalisation, we all will have certain features in common and certain will be different between the two algorithms.
+6:17
+So let's assume that the graph to be traversed is given as an adjacency list.
+6:26
+And let's keep track of which nodes have been visited using a boolean array.
+6:31
+Let's keep track of the parent nodes. Again, using an array and will output the nodes in the order in which they're visited.
+6:37
+Enum in applications, we would do more than that. We would process those nodes in some way, analyse them in some way.
+6:49
+And initially we will have that.
+6:57
+No nodes have been visited. OK, so let's start with depth, first search, and now this is a recursive algorithm, as I said.
+7:01
+So each time you visit a new node y you perform DFS completely at that node before backtracking up to its parent node X.
+7:09
+So here is DFS X as a recursive procedure with parameter X.
+7:19
+So the first thing we do is Mark X is visited and we'll print X out.
+7:24
+Well, that's just a proxy for whatever we might add. Interesting things we might actually want to do with that node.
+7:30
+But that will. This is the entry, as it were, into the DFS at X.
+7:36
+This bit of code here and it will be different in particular applications, depending on what precisely we want to do when we enter that node.
+7:42
+And then we look through all the Y's, which are in the adjacency list of X in order.
+7:50
+And we first will cheque whether they're visited, if they have been already.
+7:56
+Then we do nothing. If they're not visited, then we can set the parents of Y to be X and to keep track of that information.
+8:00
+And then we start our new DFS procedure recursively at Y.
+8:12
+And then that will run and obviously will in general cool other make other recursive calls and then eventually all of that finishes.
+8:17
+And then I put in a comment to say that we backtrack to X. We don't actually show that in the code here.
+8:26
+But this is basically when we exit from X, having completely processed everything that we can reach from X using DFS.
+8:35
+So this is like the exit code, if you like. So there might, in a more elaborate version, be some extra code here,
+8:45
+which we would implement when we are exiting from the node and wants DFAC is completed then every node as a parent except for the start node.
+8:52
+And of course, the parent information may or may not be needed.
+9:02
+So it can be admitted if if not needed. But if we want to build our spending tree, then we would need the parent information to do that.
+9:06
+Well, that's the procedure. So we need basically to apply DFS to each.
+9:14
+And then we just start at SAP any any arbitrary.
+9:21
+No. To start our procedure. So let's analyse how much time DFS takes.
+9:26
+Well, we can see that we apply DFS X to each.
+9:35
+No node X at most wants. And in fact, exactly once that the graph is connected, obviously the graph is not connected.
+9:40
+We're not going to reach those that are not reachable from the start node.
+9:47
+And the other thing is that each application of DFS runs through the Arcs incident on X.
+9:52
+Exactly. Once. So this is what happens in our for loop here.
+9:59
+We're going through all the Y is in the adjacency list.
+10:03
+So therefore, the running time of DFS is Bago and plus N, wherein is the number of nodes and M is the number of arcs.
+10:08
+So we get near getting the end from the fact that we're applying it to each node at most wants.
+10:18
+And then we're getting the the big O of M from going through the adjacency list.
+10:23
+So I notice here that we are just counting Access's to the graph stored as adjacency lists.
+10:30
+And so we're assuming that each access counts as one unit or some constant number of units.
+10:37
+And we're ignoring whatever overhead the might be due to recursion.
+10:43
+But this gives us a good comparison with other algorithms that might not use recursion.
+10:48
+OK, so now let's formalise Breadth first search,
+10:56
+and this is naturally expressed using a queue of nodes and by queue here, I mean FIFO queue, first in, first out.
+11:00
+And so we're going to use a queue, abstract data type and operations associated with that.
+11:10
+So the idea is basically that we process knows from the front of the queue and then for each name,
+11:18
+we visit its immediate neighbours and add them to the back of the queue, ready to be processed in due course.
+11:25
+So here is the scheme for the algorithm. So it's not a recursive scheme.
+11:33
+It's got a while looping it instead. Let's just talk a bit about the abstract data type here.
+11:39
+So. The so we can think of our cue as being.
+11:48
+It's like a list, if you like, but it's got we got access at both ends, as it were.
+11:54
+So here's the front of the queue. Let's put it on the left. Here is the back of the queue.
+12:01
+And so items will be added to from the at the back of the queue.
+12:06
+And then whatever item happens to be at the front of the queue is the one that will be processed first and removed from the queue.
+12:13
+So if we look at the code we've got here, we see that the various queuing operations,
+12:21
+we've got NQ X queue that says that we're going to add X into the queue at the back.
+12:28
+And we've got we can cheque whether the queue is empty or not.
+12:37
+And we can identify the item that's at the front of the queue with the Y in this diagram.
+12:41
+And then we've got another use of NQ here.
+12:48
+And then finally, we've got dequeue,
+12:51
+which is actually removing the front element from the queue so that there's one fewer element in the queue after that.
+12:53
+So we don't say how this is implemented in detail.
+13:02
+I mean, we could obviously do it using a less, but we might prefer to use an array or who knows what we how we're implementing it.
+13:04
+We don't need to know. That's the whole point about using an abstract data type here.
+13:12
+And OK, so let's actually now have a look at the code itself.
+13:17
+So what we do is we first of all, we start at X, so we marketers visited and printed out.
+13:24
+We add it to the back of the queue. And then while the queue is non-empty, then we look at things.
+13:32
+We process the element at the front of the queue. And processing that element means looking for all its neighbours.
+13:39
+And if they're not visited, then we mark them as visited. Mark, why is their parent and add them to the back of the queue.
+13:49
+So these Zed's here will be added to the back of the queue. And finally then we remove Y from the front of the queue.
+13:56
+And then that's the end of Y y will not appear anymore.
+14:04
+OK. So let's. Try.
+14:09
+Look, look at that in terms of our example.
+14:14
+Just to clarify, so the head of the queue, as in my diagram, will be to the left and the nose right it to the right.
+14:16
+And I'll right the queue as a list. So initially, the queue or at least after we just initialised, then the queue will have just the one.
+14:24
+The start note in it. So that's the front of the queue.
+14:33
+So we process the one and then we look at its neighbours, which are two and eight, and then to the back of the queue in that order.
+14:36
+So we get the queue is now got two and one, two, eight, if you like.
+14:43
+And then the one is taken off the front of the queue. So we get down to two and eight.
+14:48
+So now two is at the front of the queue.
+14:53
+And so we process that, which means adding the three in the four to the back of the queue and removing the two.
+14:55
+And now that you got eight, three, four in it. So now we know that eight is the next element to be processed.
+15:01
+And then from eight, we will look at four, but not go there and we will add seven to the back of the queue and remove the eight,
+15:07
+etc. So I'll leave you to write down the rest of what the queue will be.
+15:16
+And we can see that the note order is one two eight three four seven five six, which roughly follows the depth or of in the tree.
+15:20
+So we we do things in depth order and roughly speaking, and they are removed from the queue in the same order because it's the first in.
+15:31
+First out. OK.
+15:37
+So what we can see as the queue grows and shrinks during the computation,
+15:42
+the size of the queue represents the breadth of the front on which the BFD algorithm is working.
+15:47
+And if we analyse the running time, as with the DFS, each node is processed wants and each adjacency list is processed once.
+15:55
+And so again, we get linear time in the size of the graph.
+16:03
+Bego of N plus M.
+16:07

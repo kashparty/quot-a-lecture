@@ -1,0 +1,273 @@
+ID: 704b2982-ec46-4fc5-8f87-adf800cbe68e
+Title: idb-topic-17-fds
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+We now start a series of topics which are going to formally analyse what makes a good relational
+0:01
+schema and fundamental to this series of topics is the notion of functional dependencies,
+0:08
+which is what I mentioned just now. But before I introduce functional dependencies, let's just get some intuition about what makes a good schema.
+0:15
+I could store the information from the bank branch database, for example, in a single table.
+0:25
+And some might think this would make life easier because you'd be able to access your
+0:31
+information just by querying a simple single table and not need to join information together.
+0:35
+But there are a number of disadvantages to this. Firstly, there's clearly redundancy in the data.
+0:43
+Notice that for each record of Saltcoats 67, I'm going to record the name of the branch,
+0:50
+which obviously doesn't vary from 167 record to another and simply for account 100.
+0:58
+I'm recording that it has typed current and belongs to Matt Bryan.
+1:07
+I think this shouldn't vary from one record to another.
+1:11
+So the redundancy has gone to waste a lot of memory, but memory is cheap nowadays.
+1:15
+So why would we care about this? Well, there's another problem. When you come to query the data, things become rather untidy.
+1:22
+Obviously, the cache figure for a particular branch should be a unique value.
+1:30
+So if I select cache from this bank data table with some code 67, I would expect to get back a single cache figure.
+1:34
+But in fact, I get back five instances of the same value because there are currently five records for source code 67.
+1:42
+Well, you could just add distinct and then you'll get rid of that.
+1:51
+Of course, now you've got to remember to add distinct to all queries which are involved in selecting the cache for source code,
+1:55
+even though it should be a unique value for particular source code simply for rates.
+2:02
+Whenever you're fetching a value that is not directly associated with the Midea, which is the key of this table.
+2:08
+You're going to have to put distinct in front of it, and then you've got problems with updating the information.
+2:16
+That's there are two sides of that. I want to insert a new transaction for Count 100, and I want to withdraw a thousand pounds from account 100.
+2:24
+Well, that would give me a record that I've got minus 1000 going out.
+2:35
+Let's suppose it's on the 21st of January,
+2:40
+and that would reduce the total amount of cash at the branch code sixty seven from thirty four thousand to thirty three thousand pounds.
+2:43
+And I get the data updated accordingly.
+2:53
+But also, I have another transaction or another validator want to do,
+2:57
+which is to change the rate for the value associated with an idea of one of seven.
+3:01
+So making the record change here I have one point zero as the right.
+3:09
+Now, if I run the query I described before to select distinct cash figures from the bank data for selected 67.
+3:19
+I now end up with two records. I've got 34000 and 33000.
+3:28
+And that's because this record here inserting the update to the table has not changed the other records.
+3:34
+For 67, I need a second to ask who else statement to go through and update all the remaining records for 67,
+3:41
+so code 67 to change their cash figures to 33000.
+3:50
+And the second update, which was changing the value of a mighty record one 07 to change the rate,
+3:57
+is incorrect because what it's done is caused me to have two different rates recorded for count one 07.
+4:05
+So in fact, I've mis construct this query and should have set it to update an account number associated with this record of one 07.
+4:13
+And therefore, I get a correct update to all the interest rates on that account.
+4:24
+So the redundancy information makes not just the information occupy more space, but makes it much more tricky to both query and update.
+4:31
+And so we would love to avoid that in our relational databases. And this brings me back to describe now what functional dependencies are.
+4:41
+These really formalise the idea of what depends on what in the database and the
+4:51
+functional dependency over a set of acronyms x determining set of actually why say,
+4:57
+if the values of banks agree into tuples, then so must have values in why?
+5:03
+So let's just suppose we've got an example where number determines the rate and we've
+5:11
+got parts of the bank data here where I've blanked out certain information from this.
+5:16
+I know that the two records of Account one 01, the right value must be the same,
+5:23
+and therefore I know that the ixpand here must be five point twenty five because of the functional dependency.
+5:30
+However, the reverse does not hold the fact I've got five point twenty five for a mighty 1010 does not tell me
+5:37
+that Z is 101 because it could be another account number that just happens to have the same rate.
+5:46
+So the function dependency is a one way dependency, and it means if they agree on the left hand or the function dependency,
+5:53
+then they must agree on the right hand of the function dependency. And of course,
+6:01
+this tells me nothing about what values like y might take because they have nothing to do with account one to one and only account one to one.
+6:06
+I have any known information about shown in this example. OK, let's try out some quiz questions on this.
+6:14
+And first of all, let's look at what function tendencies might hold on the bank data that I've presented so far.
+6:24
+Most popular answer is B, and that is the correct answer, though D was moderately popular.
+6:37
+B does not hold for the data because of the rule here or function dependency being proposed, that B9 determines no.
+6:45
+And if I look at just the first two records I see, I've got the same branch name strand, but with different numbers.
+6:56
+And because of that, the first two records alone break the function of dependency b nine dependence number.
+7:03
+You might argue the amount determines rate doesn't make sense, and indeed,
+7:10
+it's not a very clever functional dependency to have because it wouldn't be something that holds in the real world.
+7:14
+But it's trivially true for the current data because there are not any records that
+7:20
+agree on the amount and because all the amounts happened to be different at the moment.
+7:25
+It means it's going to be true that the amount determines the right.
+7:30
+Now, the second quiz question, we have a set of functional dependencies,
+7:41
+and the question is which of the following functional dependencies might not necessarily hold,
+7:47
+given I've got the function dependencies already listed here.
+7:54
+So one of the answers does not follow from the functional dependencies listed at the top.
+7:58
+Most popular answer D is the correct answer. Let's go through and formally define why A, B and C do follow from their path and buy insurance,
+8:07
+therefore deemed to be the answer about which one might not hold.
+8:20
+And this allows me to present something called Armstrongs Axioms, which are a set of three rules which have been proved to so that a they are true.
+8:25
+But B they are everything you can say about functional dependencies and everything else that's useful to say about function.
+8:37
+Spencer can be derived from these three fundamental properties.
+8:45
+The first one reflexivity states that if I have some set of attributes y, which is a subset of some other set attributes,
+8:50
+a set of attributes x then I can write the functional dependency X determines Y.
+9:00
+So this is sometimes called a trivial function dependency because it's in many ways a statement of the obvious.
+9:06
+So for example, if I know the amount and T dates are attributes, I know that amount as an attribute.
+9:14
+As a subset of a mountain T data is a set of attributes and therefore I can say the mountain
+9:21
+t date determine the amount and indeed the amount and T dates are terming the T date.
+9:26
+Because if I know the amount and the T date, I of course therefore must know what the amount is.
+9:33
+Slightly more sophisticated is the idea of augmentation.
+9:43
+And this says that if I've got some set of attributes X to turn some other set of attributes, why then I know that X and Z determine Y and Z.
+9:48
+So in essence, I'm adding to both sides of the functional dependency.
+9:57
+Some extra attributes Z and of course,
+10:02
+say that the basic principle idea here is that Z determines itself and the X determines the Y from the functional dependency given.
+10:04
+So if I've got no C name and so code, those attributes and number determines C name,
+10:14
+then by augmentation I can add number to terms c name from number 10 C name.
+10:20
+I can add Saltcoats to both sides to get a new functional dependency. That number and so could determine seeding of sort code.
+10:27
+And then finally, transitivity says, if I know that X determines Y and Y determines said, then I can transitivity say that x determined Z?
+10:37
+So given that I know no, the term is so cold and so cold turns the branch name, it follows from a number I know of the branch name must be.
+10:48
+And I can get the number determines be named as the transitive argument.
+10:56
+And so in the free applications of Armstrong's axioms, I've proved the A,
+11:03
+B and C cases of the quiz questions and days left as the one that doesn't follow.
+11:09
+From the free Armstrong Axioms, there are a number of useful rules that follow.
+11:18
+And one way this one is called the union rule.
+11:25
+And this says that I can draw equivalence between saying X determines Y and next determine set and a single functional dependency,
+11:28
+saying X determines Y and set so I can go backwards and forwards between these two representations as being equivalent to each other.
+11:36
+Let's prove this by going from on the first case the left hand side and shown I can get the right hand side.
+11:45
+So if I know already that X determines Y and X determines set,
+11:53
+then I can use augmentation to add Z to both sides of X determines Y and also X to both sides or X
+11:57
+determined Z to get these to new functional dependencies and then by at transitivity from X determines x z.
+12:07
+And that is why is that like it? X determines y z and hence I've come from the left hand side to get the right hand side.
+12:16
+Now, starting with the right hand side, if I use reflexivity from Y Z, I can get the Rule Y is that determines y and wise that determines it.
+12:25
+And then I can use transitivity starting with the function of PNAC.
+12:37
+Given X determines y z. And then why is that determines y i get X determines y from X determines y z and was that determines z x determines set.
+12:41
+And hence I've started with the right hand side and the left hand side, and this is the classic way of proving and equivalence.
+12:53
+So the Unionville means that we can without limiting our expenses.
+13:03
+If T limit ourselves to just consider functional dependency sets,
+13:08
+which have a single attribute on the right hand side because I can always combine together words,
+13:12
+functional dependencies to get a multi attribute right hand side.
+13:17
+Let's use this the idea of Armstrong Axioms and the Union Mo to answer another quick question,
+13:27
+which is which set of PhDs follow from the set of function dependencies at the top.
+13:33
+He's the most popular answer and the correct answer.
+13:45
+Let me quickly outline how you look. Think about this.
+13:50
+If you notice the first rule here, A determines B C can be then used with the C determines F to give me a two terms.
+13:53
+B, C and death. And from that, I can use the union rule to chop away the C and have just a determines both.
+14:02
+Or I could use the union rule to chop away the B and have A determines C F or I
+14:12
+could use augmentation to add aid to both sides and end up with a determines A,
+14:19
+B, C and F. And hence all three of the functional dependency shown in a can be derived from the
+14:25
+set above that there isn't a way of getting all the functional dependencies in B,
+14:32
+C and D using Armstrongs axioms. Let's finish off this topic by looking at two other useful rules.
+14:38
+Another one based on taking the free Armstrong axioms and then applying them to do something more useful and this one's called pseudo transitive.
+14:49
+Then this says that if I know X determines Y and some other attribute W with Y determine Z,
+15:00
+then I can put the W back to the X and get a new function tendency that w x as a combination determines set and to prove that this follows.
+15:06
+Let's start with the left hand side I can use augmentation on the X determines Y to add
+15:18
+a W to both sides and therefore get a new functional term say W X determines W Y and
+15:25
+then I can use transitivity with the new functional dependency and Y to turn the Z to give
+15:32
+X determines set and hence I've gone from the left hand side to the right hand side.
+15:40
+And the last year, his laws called the decomposition bill,
+15:48
+and it's a bit like half as the union will because what we're doing is showing
+15:52
+that if I've got X determines Y and I've got some sort of attribute set,
+15:56
+which is a subset of Y,
+16:01
+then I know that X determines said that start with the premise on the left hand side and then apply reflexivity to say that given Z determines Y,
+16:02
+I know that Y determines Z Tripoli. And then I can use transitivity to say X determines Y and Y determines that to give me X determines the set,
+16:13
+and hence I come from the left hand side to the right hand side.
+16:22

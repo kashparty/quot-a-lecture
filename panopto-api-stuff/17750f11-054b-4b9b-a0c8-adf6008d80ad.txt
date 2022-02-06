@@ -583,7 +583,7 @@ And if you use, for example, select programme counter to mean the condition when
 35:36
 you find the programme contents selected and execute to.
 35:41
-If we have call or call indirect. The €L selected in execute one, if you have clear or in execute two or executed three,
+If we have call or call indirect. The L selected in execute one, if you have clear or in execute two or executed three,
 35:46
 if you have increment decrement or compare or and execute two three,
 35:58

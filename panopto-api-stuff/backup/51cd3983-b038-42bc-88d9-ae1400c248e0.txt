@@ -1,0 +1,89 @@
+ID: 51cd3983-b038-42bc-88d9-ae1400c248e0
+Title: K2J - 9 : Generic Types
+Category: KotlinToJava
+Lecturer: Robert Chatley
+Date: 05/01/2022
+One thing that you might expect to find in Japan, though, which actually doesn't exist in the standard library, is a paper class.
+0:05
+However, it's pretty easy for us to make one of our own. Let's see how we might do that.
+0:12
+So first of all, I'll create a class power. And in this case, we're going to define two fields to hold the two elements of the path.
+0:19
+Let's, first of all, create just a pair of strings and then go on to make this a more general type.
+0:30
+I can see that we've created two fields, but they've not been initialised, so we need to specify a constructor.
+0:43
+So we do that with public hat. And then this will take the two strings.
+0:50
+And in the body of the construct will assign the first to this first and second to this second.
+1:01
+At this point, let's create a test and just to make sure that everything's working correctly.
+1:14
+Now, at this point, it's difficult for us to assert anything because we haven't got any methods that allow us to extract things.
+1:37
+So let's add first and second as methods that allow us to extract the two values.
+1:44
+Public string first. Detroit's in the valley of the field first and the public string second, which was in the valley of the fields second.
+1:55
+Another thing we might want to do, which is to use the power of idiom, which we've seen for lists and sets and maps.
+2:35
+So if we wanted to do this, then we need to create a method on the class path,
+2:45
+which isn't a method of a particular object because we don't have an object yet.
+2:51
+It's the job of this method to create the object. So therefore, this is a static method that we call on cross path.
+2:55
+That's going to take these parameters and create a path for us, which is then returned.
+3:02
+So let's go and create that old method. So this is a public method, because I want to call it from outside.
+3:07
+It's a static method because it's not called on a particular instance of this class.
+3:17
+It's just a top-level function effectively that's organised inside clause pat and returns of paper.
+3:22
+And it's called all time to take a string first.
+3:29
+And the string second is going to return a new pair, which is constructed with first and second.
+3:34
+So that just gives us all familiar syntax for creating connexion objects.
+3:48
+Now, at the moment, our power only works with strings, and actually we'd like to be able to make a part of any type of two different types.
+3:54
+So we'd like this to be a generic class where we can specify type parameters for these types here so that we don't always work with strings,
+4:03
+so we can do that in an almost identical way to the way that we did it in Scotland.
+4:12
+So we're going to specify here the names of two type parameters.
+4:17
+Let's call them T and U t is going to be the type of the first element and you is
+4:21
+the type of the second element that I just need to go through and change T and you.
+4:28
+In all the corresponding places. Now you can see that one of those hasn't worked.
+4:49
+So the problem here is that T and you are specified when we create an object on Typekit,
+4:56
+so we might make a pair of string and integer or a pair of your HAL and web page.
+5:02
+Any two types that we like, but we specify what those two types are for the power when we construct the part where we have this static method.
+5:10
+We don't know what T and you are. And so we need to say that T and here are not types, but type parameters and that type parameters,
+5:20
+which are determined based on the types of the parameters parsed into this method.
+5:28
+And so in this case, we have to say here that T and you are tight parameters and they are not names of classes.
+5:32
+So we use this extra notation to say that in this particular static method to give you a tight parameters.
+5:38
+And so when we pass in a string and an integer to this method, then T will become string and you will become integer.
+5:45
+Now that we have that, we can say that this function actually returns a pair of TMU.
+5:53
+And then we could create a pair of TNG. But in fact,
+5:59
+we can see that this can be replaced with a diamond because we already know that it's apparent to you because we construct it with a T and a new.
+6:03
+So let's come back and write another test that just checks we can create a pair with two different things.
+6:17
+Let's try a string and I'm going to be in.
+6:29

@@ -751,7 +751,7 @@ Thank you. And it works, right.
 38:01
 Do you think this is the same function as the one I started with or have I broken it? Throwing your hands up is an old hand.
 38:06
-Oh, I haven't had my hand up for about five minutes and now I'm very sorry, this is just Vladimír that doesn't like to freshen up.
+Oh, I haven't had my hand up for about five minutes and now I'm very sorry, this is just Vladimr that doesn't like to freshen up.
 38:14
 Yeah, but if. And is zero. Oh, very well spotted.
 38:23
@@ -1183,7 +1183,7 @@ So what is the way to read this? What is the sum of a list which is non-empty, w
 1:07:51
 The answer is. X plus the some of the exits is almost impossible to make a mistake.
 1:08:00
-Quick question, Asunción. And it's not possible to have extracted drugs to more than one element was like, yeah, I'll come to that in just a minute.
+Quick question, Asuncin. And it's not possible to have extracted drugs to more than one element was like, yeah, I'll come to that in just a minute.
 1:08:07
 Good question. Thank you, Richard. Could you explain this pattern matching against us from the.
 1:08:19

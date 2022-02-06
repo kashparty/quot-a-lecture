@@ -1,0 +1,133 @@
+ID: 2c4be051-fc59-4305-b724-ae160107245c
+Title: 2.3 Hamiltonian paths
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 23/01/2021
+So the oil the path problem is about whether we can find a path that uses every arc exactly once.
+0:01
+Let's contrast that with the Hamiltonian path problem, which says, can we find a path that visits every node exactly once?
+0:09
+And we'll call a path of visits every node. Exactly.
+0:18
+Once a Hamiltonian path and assembly will have an Hamiltonians circuit, which is a Hamiltonian path that returns to the start node.
+0:20
+So in this example graph, we have a Hamiltonian path one, two, three, four, five.
+0:29
+And but there is pretty obviously no Hamiltonian circuit.
+0:35
+Why is that? Because if we want to get out into one and out of one again, we have to go via two.
+0:39
+So that means that two would have to be use twice. Which is not allowed. So there's no point in considering parallel arcs and loops here because.
+0:46
+You're never going to follow a loop because then you would repeat the note and you never get to follow in more than one arc between two no's again,
+0:58
+because you're not allowed to repeat notes. So let's just restrict ourselves to simple graphs for the Hamiltonian circuit problem.
+1:04
+And it says, given a graph, determine whether or not that graph has a Hamiltonian circuit.
+1:11
+Well, what can we say about Hamiltonian paths? Well, obviously, the graph must be connected for the Hamiltonian past to exist.
+1:20
+We can say that is certainly a necessary condition. What about the Hamiltonian circuit?
+1:27
+Well, we just saw that having a node degree one was bad news because that node would have to be visited before and after.
+1:33
+Well, you'd have to visit its neighbour before and after. So that would not be possible.
+1:46
+So we can say immediately, therefore, that for Hamiltonians circuit to exist, the graph must be connected.
+1:51
+And each node must have degree, at least two.
+1:57
+But that's not sufficient either. And here is the graph where it is connected.
+2:01
+Every node has degree, at least two, but it's not too hard to see that there is no Hamiltonians circuit here.
+2:07
+So, for instance, if we start at one, then we might as well go to two.
+2:15
+Then we've got a choice of three or five. But they're both symmetric. Also, let's say we go to three now.
+2:21
+Then we have to go to four and then we have to go to five.
+2:27
+And then we're stuck. So there is no Hamiltonian circuit here.
+2:32
+Of course, there is a Hamiltonian path. One, two, three, four, five. That would work.
+2:37
+Well, so, okay, we could look in more in detail into that,
+2:44
+but the best naively that we could think of doing here would be to solve this problem by brute force, by just checking every possible circuit.
+2:49
+So Hamiltonians ergy just is a permutation of the nodes which forms a path.
+3:00
+So we could go in in the case of this graph here.
+3:07
+We could go through each of the permutations. So we could try one, two, three, four, five.
+3:11
+Well, that's a path as far as five. But then we've got to get back to one. And there is no art from five to one.
+3:17
+Similarly, if I go to one, three, four, five.
+3:23
+Well, that's a permutation, but there's no arc from one to three. So that's not a valid Hamiltonian circuit either.
+3:26
+So the question is, how long with this?
+3:34
+Take us with N nodes. Well, let's just just to clarify.
+3:38
+A possible circuit corresponds to a permutation of the nodes and a permutation is a bijection from the numbers of the nodes to themselves.
+3:44
+Okay. Call that PI and to be an actual circuit.
+3:54
+We must not just have a A bijection, but we must also have that PI is adjacent to PI plus one for each of I equals one to N where
+3:58
+and plus one is taken to be one for convenience so that we get back to the start node.
+4:09
+So the possible circuit, five, four, three, one, two, five, four, three, one, two.
+4:16
+That corresponds to this permutation given, but it's not a circuit because the PI three, in other words, the three is not adjacent to the PI four.
+4:24
+In other words, the one like that. Well, checking each of these possible circuits like the five, four, three, one, two can be done quite easily.
+4:33
+You see using the Arason see Matrix. So we could say that that can be done in Big Owren.
+4:43
+So each circuit that's fine. But the bad news is that there's N factorial, possible permutations.
+4:49
+So therefore, in vectorial possible circuits.
+4:57
+And so that's much too slow because going through each of those, that's going to take us exponential time.
+5:01
+Of course, we solved this example here negatively, quite easily.
+5:09
+But in general, we might have to go to N factorial through the N factorial permutations, and that would be bad news.
+5:15
+Well, actually, it's not quite as bad as N factorial because slightly less naive method,
+5:27
+a dynamic programming method can solve the Hamiltonian circuit problem in time.
+5:33
+Bigo of N squared. Two to the N. That's still exponential.
+5:40
+But of course, it is better than N factorial. And this algorithm is due to Bellmon held in Karp.
+5:44
+And I'll discuss that later in the course. So the complexity of the Hamiltonian circuit problem, in other words, the running,
+5:50
+the time needed to solve that problem in the worst case is much greater than that of the owner path problem.
+6:01
+So there's quite a strong contrast between the two problems. I want us there and we can solve the owner path problem in polynomial time.
+6:08
+In fact, big out events squared.
+6:16
+All we have to do is to count, to look at their degrees in the adjacency matrix and cheque that they're all eve and all that are the maximum.
+6:18
+Two of them are odd. And on the other hand,
+6:27
+they held Tony in search of a problem using the Bellmon held Karpe algorithm seems to require bingo and squared two times two to the N.
+6:31
+Which is certainly not polynomial. And in fact,
+6:40
+there's good reason to think that the Hamiltonian circuit problem cannot be
+6:45
+solved in polynomial time because it has been shown to be ENPI complete ENP,
+6:48
+complete problems are believed not to be solvable in polynomial time.
+6:55
+In other words, they cannot be solved in time. Bego of to the K.
+7:01
+For any K. And I'm going to come on to discuss N.P. completeness later in the course.
+7:05

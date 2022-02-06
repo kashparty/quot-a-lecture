@@ -1,0 +1,251 @@
+ID: 8d3284bf-89ba-43a8-8752-ae1601072745
+Title: 1.3 Isomorphisms
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 16/01/2021
+So now I want to talk about Isomorphic, some between Groff's.
+0:01
+What does it mean for one Grauwe to be the same as another? So let's consider the two example graphs on the left of this slide.
+0:06
+The top the red graph has got four nodes. This is the bottom graph.
+0:16
+I've tried to make them look as different as possible. So I've label the nose one, two, three, four on the top on and ABC d at the bottom one.
+0:20
+And I've made them in different shapes,
+0:29
+but they actually old and in a sense they do have the same shape because the nodes are connected in the same way.
+0:31
+We could analyse a bit further looking at the degrees of the nodes. And you can see that we've got three no's of degree, four in the top graph.
+0:41
+And and in the bottom graph. And the other node has degree two.
+0:50
+We can also see that we've got two parallel pairs of parallel arcs in each graph.
+0:54
+And they have they sort of meet in a common node, either one or B.
+0:59
+And so we would like to explain how these two graphs correspond.
+1:06
+And indeed, we'd like to build up a correspondence between the nodes in the top graph and the bottom graph, as well as the arcs.
+1:12
+So which nodes should correspond? Well, an easy place to start would be to say, well, if they are to be the same graph,
+1:20
+then we should map the nodes at the same degree to the same degree.
+1:30
+So we would have to map map the three to the D.
+1:33
+So we would have to do that. And then we could also see that B and one are the only nodes that have got two pairs of parallel arcs.
+1:38
+So they should map to each other. And then we've got the A4 could either go to the EH or to see.
+1:52
+And because there's a symmetry, there's a vertical symmetry in both of these graphs.
+2:02
+If you think about it, we can reflect them through the vertical axis. So that's that tells us what we might be looking for in an isomorphic.
+2:06
+I mean, otherwise a mapping from the nodes of one graph to the other.
+2:17
+So that's what I said on this second slide here, that three must correspond to D.
+2:22
+One must correspond to B.
+2:28
+One is the only node that's not adjacent to three.
+2:33
+So that's another way of putting it. I said it differently. I said it was to do with having the two pairs of parallel arcs.
+2:38
+So we could go either way. And so now we've got our two mappings, which are two goes to a foregoes.
+2:44
+Three or two goes to see foregoes two, eh?
+2:53
+So let's fix on. Let's saying that two goes to A and four foregoes to C.
+2:57
+So now we have a bijection between the nodes. But we want more than a bijection, we want this bijection to keep the connectivity the same.
+3:04
+The Connexions have to be the same. And we are sort of trying to ensure that while we were developing this bijection,
+3:16
+now it's fairly obvious that they do correspond because I think you can just mentally transform the bottom graph,
+3:21
+just move the B up and then you can sort of see in your mind that they are actually the same.
+3:27
+So I think for a small graph like that, that might be fair enough.
+3:34
+But if we wanted to actually cheque that rigorously that we really have gotten isomorphic from here, then we can look at the adjacency matrices.
+3:38
+So let's do that. So in the standard order, the adjacency matrices will be as follows.
+3:45
+And, well, they look really quite different. So there's no it's not obvious that this nice isomorphic some from looking at.
+3:54
+But what we need to do is we can reorder the right matrix to correspond to our mapping.
+4:01
+And we mapped one, two, three, four to be ADC. So let's write rewrite this right and matrix in the B ADC order both for the columns and the rows.
+4:08
+And lo and behold, we get exactly the same matrix as we did for the one, two, three, four graph.
+4:20
+So that tells us that we have indeed got an isomorphic them between the two graphs.
+4:27
+So now let's actually define isomorphic then rigorously.
+4:36
+Up till now, I've just been relying on some intuition about isomorphic.
+4:41
+So nice, Morpheus, and let's define it to be a mapping both on the nodes and on the arcs.
+4:46
+So and I guess Warsan Morsan, from G to G prime,
+4:53
+where these are two to digraphs is a bijection F from the nodes of the one to their nodes at the other.
+4:55
+Together with a bijection G from the arcs of onto the arcs that the other.
+5:03
+And it has to have the preserve the connexion. So that's the property we need.
+5:08
+Is that if a is an arc of the first graph G. And it has end points and want an end to it.
+5:13
+Then when we map across the endpoints of G of a in graph G prime we'll be F of N one and F of N two.
+5:20
+So in other words, the mappings on the nose and the arcs actually go nicely together.
+5:30
+And that's what I've drawn in this diagram.
+5:38
+And in that case, we'll say if there is an isomorphic, some from tree to tree, Prime will say that tree is isomorphic to G prime.
+5:40
+And in terms of the adjacency matrix is matrices, it amounts to seeing that they are the same,
+5:48
+except that the rows and the columns may have been reordered, as we saw in our example.
+5:56
+Well, how could we test whether to Graff's or Isomorphic, the simplest thing to do would be to start with the obvious cheques,
+6:04
+such as looking at the number of nodes, the number of arcs.
+6:13
+Now we know that we need a bijection on the node, so therefore there has to be the same number of node.
+6:16
+We know we need a bijection on the. So they have to have the same number.
+6:21
+So if those were different, then obviously the graph's can't be isomorphic.
+6:26
+Beyond that, we could look for loops, maybe parallel arcs as well.
+6:31
+And because any loop has to be mapped to a loop. And we can look at the degrees of the note.
+6:36
+And again, the degrees have to be the same in the two graphs.
+6:43
+So if any of these turned up a difference, we have got an easy cheque that that tells us that the graphs can't be isomorphic.
+6:48
+But if they are the same on these, then we might begin to suspect that there is an isomorphic them.
+6:55
+And then we will be looking to try and find a bijection. Typically we do this on the node rather than the arcs.
+7:02
+It's easier to think about the bijection on the nodes and then the well,
+7:08
+the bijection on the arcs will be to some extent implicit as it was in our example.
+7:13
+They note, if we go back to our example, the bijection on the arcs here is not totally defined here because we've got parallel arcs.
+7:20
+So actually we've got two different arcs here. And so there are there is potentially they could map to either of either of these parallel arcs here.
+7:31
+So that gives us more variability in the arc mapping.
+7:43
+If if the graph so simple, then then matters are easier and basically the mapping on the arcs is fixed.
+7:47
+Okay, so. In general, this question of whether to graft their isomorphic has a quite a high complexity.
+7:58
+What we need. We've seen what we need to do. In a sense, it's very easy.
+8:07
+We just need to see whether the adjacency matrices are rearrangements of each other.
+8:12
+Now, that's something that we could easily programme a computer to do for us.
+8:18
+It would just show the way. Look at all the rearrangements and see whether are one of them is identical.
+8:21
+And then we do get our isomorphic. Some of the bad news is that there are n factorial rearrangements if there are any nodes.
+8:26
+And in fact, all is worse than exponential, i.e. two to the N.
+8:35
+So that's going to take us a very long time. So that is not a attractable algorithm for testing whether two graphs or isomorphic.
+8:39
+And indeed, it's not known whether this problem can be solved in polynomial time.
+8:48
+I should remark that quite recently.
+8:55
+Laszlo Pabbi has shown that graph isomorphic can be solved in what's called quasar polynomial time, which is exponential in poly logarithmic.
+8:57
+In other words, locate the power K of N for some K.
+9:10
+So that's better than exponential. So it's better than R n factorial naive method.
+9:16
+But it is still worse than polynomial time.
+9:22
+Well, a special case of ice and Morpheus is automatic for some, and that elsmore for some on a graph is an isomorphic, some from G to itself.
+9:28
+So if you like, you can think about creating two copies of G.
+9:38
+And talking about isomorphic essence between G and the copy of G, if you like.
+9:42
+They are, of course, the same graph. So let's look at an example.
+9:48
+Here's a square graph. One, two, three, four are the nodes. Well, there's various auto morph isms.
+9:53
+We could have. So we could do a 90 degree clockwise rotation. So one maps to two.
+9:59
+Two to three. Three to four. Four to one. That's an auto morph ism.
+10:04
+And another one would be where we flip over the one and the three, but leave the two in the four unchanged.
+10:10
+I flip across the diagonal. In other words, in it, as you can see, that the auto foursomes here are to some extent geometric all things.
+10:19
+In this particular graph, like we can map symmetric, we can flip across a diagonal using or flip across the vertical line using the.
+10:28
+There's the symmetry here and there's rotational symmetry as well.
+10:41
+So we can do a rotation by various amounts. But if we wanted to count how many or two more films were, how might we do that?
+10:46
+Well, we could say, well, let's try different rotations and then look at the flipping across the diagonal,
+10:55
+flipping across the horizontal, the vertical, etc. But then we'd have to combine them as well.
+11:02
+So we'd have to say, what about if you did a rotation followed by flipping across the diagonal,
+11:09
+followed by another rotation back the way, it all gets a bit complicated.
+11:14
+So what I recommend here, rather than trying to count them like that,
+11:20
+which is a slightly more systematic way of doing it, is to do it more combinatorial.
+11:24
+So let's say a method is, as applied to this example, is to just go through the nodes.
+11:32
+In turn, it doesn't matter which order you take the nodes in. You can choose one to suit yourself.
+11:36
+But let's start with one. Well, how many places could one map two?
+11:42
+Well, we know that it can go to any of these four. So there's four different places it can go to.
+11:46
+So then we effect's one, let's say one where it used to be easy.
+11:53
+And then look at two.
+11:57
+Now, you might think that you can go to three places because one is obviously fixed now, but two has got to stay adjacent to one.
+11:58
+So two is only got two places to go to, namely two and four.
+12:06
+So two has got two places. Let's fix two now then three has got.
+12:11
+Well that three has got to go to either three or four, but three can't go to four because three has to stay adjacent to two.
+12:19
+One and two are fixed. So three is fixed as well. And then four is only got is one place to go to.
+12:27
+So then we just multiply this together. The four times the two times the one time is the one and we get eight.
+12:34
+Notice that does include the identity mapping. In other words, where we leave one, two, three and four where they are originally.
+12:41
+For a second example, slightly different graph with a dying and awe.
+12:51
+And as you might expect, having that diagonally in reduces the amount of symmetry in the graph.
+12:57
+And so we got fewer or more physicians. But let's count them by our using our method.
+13:03
+So one as our it now. And he got two places to go to because it has to stay with a node of degree.
+13:08
+Three. OK, let's fix one then.
+13:13
+Now then two has got two places to go to because it's got to be Drayson to one.
+13:18
+So two or four. So two has got two places to go and then three and four are fixed.
+13:23
+Exactly as in the previous slide. So we get two times two times one times one, which is four, including the identity.
+13:29

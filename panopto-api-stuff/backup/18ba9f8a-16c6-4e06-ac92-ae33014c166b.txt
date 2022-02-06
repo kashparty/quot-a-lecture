@@ -1,0 +1,737 @@
+ID: 18ba9f8a-16c6-4e06-ac92-ae33014c166b
+Title: Lecture 5: Computer Architecture
+Category: COMP40005 - Introduction to Computer Architecture (Spring 2021-2022)
+Lecturer: Wayne Luk
+Date: 31/01/2022
+So today we will cover something which you already have known from again, the introduction to computer systems course in the last term last year,
+0:00
+and we will explain how we could do arithmetic,
+0:19
+but particularly how to multiply and divide using the arithmetic and logic unit that we talk about in the last lecture.
+0:24
+OK, so we, as you might remember, we could do at subtract shifting and so on.
+0:38
+But but if we cannot multiply and divide, life would be very boring.
+0:45
+So let's make life more exciting by being able to do multiplication and division.
+0:51
+Now we would also, in order to enhance our understanding, we will follow an approach which I'm sure is to be well known to you by now,
+1:00
+which is we'll start with the simplest possible description.
+1:13
+Of how this would work. And it's so obvious that you would not have any thought to see how that works,
+1:19
+and then we gradually optimise it so that it will become more efficient.
+1:28
+But it while it was still preserving the behaviour.
+1:34
+OK, so so that is how we could explain how a complex system would work.
+1:40
+We get easy first and then step by step increase the complexity.
+1:47
+OK, so we'll begin with how the old you can.
+1:54
+We connect various registers together, how it could be used to compute multiplication?
+2:00
+Then we will make use of a technique developed by Professor Andrew Pouf, who some of you may know used to be in London.
+2:08
+A while ago, and after we look at this optimise poofs algorithm, then well, let's look at something even more exciting, which is division.
+2:23
+OK, now the question is exciting, because if you live a few hundred years ago,
+2:37
+the Romans did not know how to do the mission or they do not have an algorithm to do it.
+2:46
+So the invention of division actually was not such a long time ago.
+2:55
+OK. And then there are related myths, instruction essays, so on the sly.
+3:01
+But that will probably will explicitly mention those will just look at unsettling multiplication division,
+3:08
+because that makes life a bit easy to explain.
+3:18
+But hopefully you could generalise it to cover the signed version, and some of you who might be a bit more ambitious,
+3:22
+think about how the technique could be extended to covered floating point computation as well.
+3:31
+OK. So let us start with something which was something that you learn to do quite a number of years ago.
+3:42
+OK. So how can we multiply two numbers together?
+3:53
+Now, of course, we are dealing with binary numbers, but but the principles are pretty much the same as what you would do for these 10 numbers.
+3:58
+OK. So you could see that probably the simplest way of summarising this process is to remember these four letters,
+4:11
+which are see as a standing for conditional Schiff and ET.
+4:25
+So of course, we all know that both application.
+4:35
+Contains the process of successively adding the numbers together, but doing the summation process, we need to involve shifting OK.
+4:40
+And then we do not always act. So there are occasions that we do not act.
+4:56
+We might just skip it. OK, now if you look at this very simple example in Python two times 11.
+5:05
+Well, you call, you call 222. So if we write that out in binary, so two is simply sealed through one zero and 11 is one zero one one.
+5:16
+OK, so let's do unsigned representation. That's this way.
+5:27
+OK. So how do we actually do this multiplication?
+5:31
+Now you can see that what we are doing is we successively shifting the multiplication and we just we got the first number as the multiplication.
+5:37
+OK. And the second number is the multiplier.
+5:51
+And obviously, the result is the product.
+5:58
+OK, so so what we do is we will successively shift the most broken one bit to the left.
+6:02
+OK, not well, if we're just adding all of this together in between.
+6:12
+In order to make that work. We also need to check from the least and this bit of the multiplier one bit at a time.
+6:18
+OK. If it is zero, then you don't.
+6:28
+If it is one, then you do the official. OK.
+6:35
+So because the most multiplier in this case is one three one one.
+6:41
+And we start with the least a bit of the multiplier you could see on the vertical from the top.
+6:49
+We start with a one because that is at least a different bit of the multiplier.
+6:57
+And then another one. OK, because is one zero one one.
+7:02
+So the tools that are going to be someone OK now, the third, the third bit is zero one zero one one.
+7:07
+OK. If we can from least can onwards, the first bit of the multiplier is zero.
+7:15
+Then we do not act. OK. And then the last bit again is the one, therefore we also ate.
+7:22
+OK. So hopefully this is almost too simple to follow.
+7:30
+OK, so any questions so far? OK, so remember,
+7:38
+the key thing is we just left the multi second step by step and we look at one bit
+7:42
+of the multiplier at a time in order to decide whether we want to eat or not.
+7:52
+OK, so that's where the conditional comes from is conditional on the bit of the multiplier.
+7:58
+One bit of time. OK, now. So if we try to make use of the air, you know, how can we do that?
+8:07
+OK, well, think about we obviously need to have some way to contain the the two values that we are multiplying.
+8:15
+OK, so we have a register for the multiplication and that's the one at the top.
+8:28
+And then we also need to have a register that correspond to the product.
+8:36
+And then we also have to multiply to the right of the diagram.
+8:43
+And then you could see that every time iteration, I'm adding the shift version of the multiplication.
+8:48
+And whether I do detention or not.
+9:01
+As you can see, is controlled by the product register to decide whether you could actually read the well right into the output.
+9:04
+OK. So every time every iteration, I will keep adding and we will look the multiplier one bit of time so you can see the.
+9:18
+That's why I'm shifting right off the mouth multiplier, register on the right.
+9:34
+OK, so every time I look at the list of the content and use that to decide the condition, if it is the one, then we do the addition.
+9:40
+If it is zero that we do not do the addition.
+9:49
+OK, and then we keep shifting the multiplication to the left, specify by the example you saw on the previous light.
+9:53
+OK. So again, hopefully that should be pretty obvious.
+10:05
+So this is a direct implementation of this example, as you could see over here.
+10:12
+OK. All right. So have a another more formal description of the algorithm in terms of flowchart.
+10:22
+So you could see that every time we look at the least, a little bit of the multiplier.
+10:33
+And then we add or not add so you can see that crunch.
+10:41
+OK. So we see this a one, your activity is zero, then you do not and then you keep shifting less.
+10:45
+The multiplier effect can register a bit at a time.
+10:53
+And at the same time, you also need to shift right, a bit of the multiplier register so that we could look at the least living thing again.
+10:58
+OK, so Peter, we could look at its bit of the multiplier, which will provide the condition to decide whether or not.
+11:08
+OK. And we do that because there are 32 bits, we do thirty two times.
+11:18
+All right. And then one could look an example to follow how this process works.
+11:24
+So I'm not going to go through that example,
+11:34
+but you could just look at each step at a time and then depending on the least a little bit of the multiplier,
+11:36
+you could then decide whether you ate or not. And then you go to the next stage and so, OK, all right.
+11:46
+So well, if you go back to the picture of the architecture, OK,
+11:55
+so I hope you would all agree that this is an obvious implementation of the multiplication algorithm now.
+12:02
+But is this efficient? Can someone, if we try to improve it, is the what's the obvious way of improving it?
+12:13
+Yes. All right. So again, if you want to shift.
+12:26
+Hmm. OK. No, but but but then you need to.
+12:41
+If you do all that in parallel, you also need to try all the condition and pilot, right?
+12:48
+So you need rather more eddies. So you're right that we could do everything within one cycle, but then we need rather more editors and so on.
+12:52
+OK, so so yes, you can make it faster, but then you need more resources.
+13:03
+But then we'll make you rather more complicated. All right.
+13:11
+So good idea, but then would anybody try to achieve the same?
+13:15
+But perhaps finding ways to make it more efficient.
+13:25
+And the answer is, well, don't look at the notes because all the textbook because obviously the answer is that.
+13:34
+But just look at this picture is staring at you.
+13:41
+It is staring at you. Is to Optimizely, Optimizely, which blocks us not.
+13:46
+Someone. Yes. The product.
+13:58
+OK. How would you optimise that? OK, now, so talk about the product here, right?
+14:04
+OK, now when you multiply to 32 bit numbers, you do get 64 bit results, so not so sure how.
+14:18
+So there's not much room. To optimise the product, you see what I mean.
+14:30
+Or the product register, because otherwise, how can you contain the result?
+14:41
+It has to be, I mean, unless you the smaller number of bits.
+14:47
+But but we do want to multiply probably to 32 bits, and that would give us 64 bits.
+14:53
+So I would say the product register. Perhaps is something that is difficult to.
+15:00
+Improve or two to make more efficient. They are not that many blocks in the ground.
+15:09
+OK, so if it is not the Prada registry, it must be the. Multiplication.
+15:17
+Yes. Well, no, you're right. You could improve multiplication because it was only 32 bits.
+15:24
+Right? And you have 64 bits there. So so you're quite right.
+15:31
+So there are possibilities to try to make it smaller.
+15:35
+But but. What else? Yes.
+15:41
+Control, uh. Well, you still need to control.
+15:46
+But but but how can you bucket the smaller? OK, all right, OK.
+15:52
+Well, there might be something in there, but but. But but there is one block shouting at you, staring at you, saying, why don't you optimise me?
+16:01
+Which is that block? It with the multiplier.
+16:16
+A motive. Well, it sounds like we trail all the blogs modifies only 32 bits, so how can you?
+16:24
+Make that even smaller. Right, because I mean, do you need 32 bits for the multiplication and the multiplier?
+16:33
+Yeah. Well, it was the subject of the last lecture, I think we tried all the blogs.
+16:41
+The only plot left. Yes. Let's start with you.
+16:49
+You are. You are, you know. Well, I guess you have a nation.
+16:54
+Well, OK. Why is the al you that my dear serve optimisation?
+17:00
+Well, think about how you is quite a big blob, right?
+17:07
+Because the need to add to things and produce a result.
+17:13
+And we are really dealing just 32 bit computation. But if you say, well, we have that, we need an IOU for closer.
+17:19
+We 64 bit. All right. So question is, how can we?
+17:29
+Reduce the size of the air, you know, you think about that.
+17:38
+There was an excellent suggestion, but well, the multiplication is also 32 bits from the beginning, right?
+17:43
+OK. So is there a way that, you know, we just have the multiplication and perhaps also try to reduce the L.U to 32 bits?
+17:52
+OK, now the product will still need to be successful, that's right.
+18:08
+So we could not reduce that.
+18:12
+But you could see that the multiplier the economy juiced up because they already do bits right, so not much scope to make that smaller.
+18:16
+But what could be make smaller would be the ALU.
+18:27
+Can we make it to be 32 bits the multiple can register?
+18:32
+Can we also make it to free tickets? OK, so that these are the Alo will be the big prise that that we will try to achieve?
+18:37
+All right. Oh, OK. So how?
+18:49
+How can we do that? OK, so. There's an interesting observation, though,
+18:52
+what we what we are doing now is we are shifting left the mode of bitcoin and then the we so with just successively to the product of the register.
+19:00
+OK, which is 64 bits. OK, so now the question is.
+19:16
+Instead of. Shifting left the multiplication so that well, because it need to shift all the time, therefore in this 64 bits.
+19:23
+OK, so one way you think about that very carefully is can we make the multiplication stat. So if we do not shift it, it just stay there.
+19:36
+OK, so and then we obviously keep that 32 bits. All right.
+19:50
+But instead of shifting left the Mozambican. How about we shift the product, register to the right?
+19:55
+OK. Because remember that we are just adding the shift version, the motive bitcoin, right,
+20:06
+so is of shifting the molecule and we just shift the product that should create the same effect.
+20:14
+As we shift less of the vote.
+20:23
+OK, so that if you like,
+20:28
+is the observation of an optimisation that could potentially allow us to reduce the size of the motor vehicle and also the size of the ALU,
+20:30
+which is the picture? OK. So that's where we have this second version of the multiplication.
+20:48
+So you could now see that the multiplication is only 32 bits.
+20:58
+OK. And we cannot reduce it further because we are multiplying to 32 bit numbers.
+21:04
+All right. OK. And now you could see that what the clever thing is is we are now shifting right off the product register.
+21:09
+OK. And then if you do that carefully, then we should get exactly the same results as we have before.
+21:26
+OK. And then if we look at how this works using a flow chart, you'll see that is pretty much the same as before.
+21:39
+But instead of shifting left of the multiplication, we are now shifting right off the product register.
+21:53
+OK? And we add the most bitcoin, and you need to be careful.
+22:04
+We are now adding it to the left half, OK, because your priorities are shifting right all the time.
+22:09
+So after its computation,
+22:17
+it just moves to the right so that the bit that needs to be added together would be aligned with the corresponding shift the version of the multiple.
+22:19
+OK.
+22:35
+OK, so again, as far as the control is concerned, it's pretty much the same as before, so we look at the least that going to bit of the multiplier.
+22:37
+The second value that we want to multiply together and use the least and difficult bit to decide whether we want to,
+22:50
+at which correspond to the left hand branch or if it is zero, then we don't do anything.
+22:58
+So that would correspond to the right hand branch. OK.
+23:06
+And after we've done that, then again, we pretty do what we used to do before.
+23:11
+But in this case, of course, before you write the product, register one bit.
+23:19
+OK. And also we shift the multiplier. Register right at the same time.
+23:24
+OK. And then we just keep iterating again.
+23:33
+OK, everybody happy with that. So if you don't believe me, then probably the easiest way is to try the same example as we've seen before.
+23:38
+And then you'll see that if you follow the steps of the flow chart, you get the result that you would expect.
+23:50
+OK, go so far, so good.
+24:00
+But this one further optimisation that we could do so if we go back to the second version of the.
+24:04
+Architecture for multiplication, so you look at OK and say, alright,
+24:16
+now we've managed to do this big optimisation, well, there is a small optimisation we could do and that is.
+24:22
+Yes, she. OK, very good.
+24:35
+Yeah. So. So as a result of this optimisation that we adjusted before, we are now shifting the product, which is to the right.
+24:43
+And you could see the. Just by coincidence, we are also shifting the multiplier to the right.
+24:55
+OK, so what we could do is instead of using two registers,
+25:03
+we could just put the multiplier value into the bottom right hand side of the product register because we never use it.
+25:11
+It just so every time it was just right, the what was in there will get lost anyway.
+25:26
+So why don't we make it do something useful?
+25:32
+OK, so now in this final version of the optimise file, you do multiplication.
+25:37
+We'll put the multiplier to be on the right hand half of the product register.
+25:47
+OK, and then use the bit that it drops out when it keeps shifting right at a time to decide whether we want to add or not.
+25:58
+OK. So again, if you look at the flow chart, well, it's pretty much similar to what we have before.
+26:07
+The only difference is that well is sort of shifting the product register.
+26:19
+We only need to shift well in order instead of shifting the product register and the multiply register.
+26:24
+But we only have the product register now. So we only see if right, the product register within each iteration of the loop.
+26:32
+OK, everyone happy with that. OK, so again, you could use that example to convince yourself that all this works.
+26:42
+OK. All right, so, so much is about this conditional shift and a version of multiplication.
+26:57
+So what can we make this more optimal?
+27:09
+OK, so Professor Boof, who was at both a college, make use of a well-known theorem.
+27:15
+In order to cover a particular case that.
+27:27
+When it happens that one of the numbers that you are multiplying has a success, successive ones, you get to skip that.
+27:32
+Now we know that if a number contain a string of zeros in the middle, well, it's pretty obvious, right?
+27:40
+So we could just skip the string of zeros.
+27:48
+But how about instead of a string of zero? I have a string of ones.
+27:53
+Can we also do something clever? Now we know if you have a string of ones, OK, normally we will need to.
+27:58
+We have, let's say we have key ones inside one of the numbers.
+28:07
+Then we do need to add times. OK. But adding key times we could actually replace, adding that three times by just one addition and one subtraction.
+28:13
+OK, so you can see that if it happens that I have some numbers which got long strings of ones in the middle, then this could become much faster.
+28:29
+OK. All right. So so there's an example and there are successive ones in the multiplier.
+28:40
+OK, so they multiply the Pixelbook or two once, OK?
+28:49
+So the question is, well, obviously in this case, it doesn't really give you much improvement because,
+28:57
+well, unit two attrition anyway, if you replace it by was affected.
+29:05
+One addition? Well, that's you still have to operation, but if you have a lot more than that could make a difference.
+29:08
+OK. So. If we assume that the number of ones in one of the numbers in the multiplier is OK.
+29:15
+OK, and now remember that we are adding shifted versions of the multiplier at a time, right?
+29:26
+So these conditional shift in that? OK.
+29:34
+So what we are doing is if we if we let the initial value to be, erm, then what we are adding is two times, four times, eight times and so on.
+29:39
+Because every shift correspond to multiply that number, we are adding by two.
+29:53
+OK. As you may remember, that this correspond to what is known as a geometric series.
+30:01
+So we have a two metric series of paintings.
+30:09
+Then we could replace the key addition by subtraction.
+30:16
+And in addition, I noticed that the addition is this final shift that k times of Earth that we want to add together.
+30:21
+OK. And the proof is pretty straightforward. If you just let the sum to be as a two times as you can see on the right of the term.
+30:32
+And then obviously, we know that the sum is two times Earth's minus s.
+30:44
+And you'll find that all the emitter terms cancel out and therefore you get the final answer at the right, which is two to the K minus one.
+30:50
+OK. All right. No, it was the implication for our algorithm.
+31:04
+OK. Well. So we need to divide the alcohol into four cases when we look at the values of the multiply.
+31:11
+So let's say by the time a string of ones in there, what are the sort of four cases?
+31:25
+Well, obviously let's say that there might still be some zero to zero.
+31:33
+OK. And then when we start encountering the string of ones, let's say, from the list that have gone bit.
+31:38
+So there is a case where we have zero one starting from the least a different one and then the middle, then we have one one.
+31:49
+And then when we finish the string of one, then we have one zero.
+31:59
+OK, so we have four cases. So what would these four cases be?
+32:04
+OK. Well, I summarise that at the bottom that so when we have zero zero, then we're in the middle of zero, then don't do anything.
+32:11
+We don't need to do anything. Similarly, when we have one one, we are in the middle of a string of once again, we don't need to do anything.
+32:23
+OK, so it's only when we start and when we finish that we need to do the addition and subtraction.
+32:33
+OK. So when we have zero one? OK?
+32:43
+And I'm counting from right to left from the list to live in the most significant.
+32:48
+Then it is the start of a string of ones.
+32:53
+OK, then we do the subtraction. OK.
+32:58
+And then when we have one zero. OK, which correspond to the second case over there that it is the end of a string of ones.
+33:03
+We do the some. OK. As we could see from the previous diagram that we at 2K times.
+33:14
+So after we shift the 2K times that we do the audition. So at this end of a string of ones, then we do.
+33:26
+The addition and subtraction is done at the beginning.
+33:32
+OK. So you can see that is what happened at the start of a string of one.
+33:36
+Then we do the subtraction and then at the end we do the dishes. All right.
+33:41
+And then again, one could use an example to illustrate how that works. As you can see from the.
+33:46
+OK, so this is the original paper published by Andrew Pouf.
+33:52
+And you could see that it actually appears in the quarterly Journal of Mechanics and Applied Mathematics in Nineteen Fifty One,
+34:01
+which was just over 70 years ago. OK.
+34:09
+So it's interesting we actually discovered not so long ago.
+34:14
+Well, you could imagine that is because of the onset of computers that this technique dealing with binary numbers would suddenly become very useful.
+34:20
+OK. Of course, if it is B's turn, then well.
+34:33
+Thus, less obvious how this person would become.
+34:39
+OK. So we just talk about this optimisation, which was discovered 70 years ago.
+34:44
+Well, let's look at. Another algorithm.
+34:52
+But that was this rather long time ago. That is the process of doing this.
+34:58
+OK, so it was discovered by Henry Brex, used to be in Gresham College in London.
+35:06
+And I think that was discovered in around sixteen hundred.
+35:19
+So more than 400 years ago, and as I said before, it was really produced and difficult because before that, no one really knows how to do that.
+35:25
+What they did was they just guess what the answer is and then look at the number and then curse another one and so on.
+35:38
+So there wasn't any systematic way of doing long division.
+35:47
+And it was discovered because at that time, Britain was expanding rather quickly overseas and in order to have good navigation,
+35:54
+we need tables in order to compute where one is in the ocean and then the and other things are pretty much important in order to do that.
+36:08
+OK. All right now. So let's look at the mission, which again, I'm sure you know very well.
+36:24
+But this slight change is what we now do it in binary.
+36:33
+OK. So the basic process is pretty much as you would do in base 10.
+36:40
+And let's say that that divide them, the number to be divided is equal to the product of the quotient and the device.
+36:51
+So. OK, so the question is what we want to compute device or is what we want to divide the divide them from.
+37:05
+And then, well, we sometimes have remainder. OK, so hopefully everybody will be happy with what I showed over there.
+37:17
+No, just as you can imagine, that multiplication is conditional.
+37:28
+Sure, they're not division. Well, you could imagine is conditional shift and subtract.
+37:35
+OK, so we could imagine what we're doing is we could successively subtract the device or from the divider and.
+37:46
+In order to look at each bit of the question as we carry on this iteration, OK, well,
+38:00
+one of the key observation is that in contrast to multiplication where you could see we start from the least that this going to.
+38:10
+Shifting left of the multiplication in order to get to the most significant thing in division is that way round.
+38:23
+You could see that we actually start from the most undefended.
+38:32
+And compile the most relevant bits of the quotient first and gradually iterate to get the least in this country.
+38:39
+OK, so if you look at this example of the dividing being 74, OK, which correspond to one zero zero one zero one zero,
+38:50
+the Coalition, which is the result, is neither device or estate.
+39:06
+And you could see the adviser is one zero zero zero and then, well, the remainder with two.
+39:12
+OK. So how do we do that?
+39:20
+Well, you can see that when we begin.
+39:23
+We are learning the device saw the eight to the most significant digit.
+39:28
+Of the Dubai Things.
+39:36
+OK, so you could see that we are nine one zero zero to the most that is gone for critics of the divide them, which happen to be one zero zero one.
+39:39
+All right. So you could see that is what is happening.
+39:56
+And then. The key thing, because remember that what we are doing is conditional shift in a shift and subtract.
+40:05
+OK, so what we need to do in addition, it doesn't matter.
+40:16
+We could always. OK, so if the value of that appropriate bit of the multiplier is one, then we can just tap.
+40:20
+Yeah, but. Force of attraction is slightly more complicated because we want to make sure the result is always positive.
+40:30
+OK, now you could see that once see one, which is the first four bits of the evidence and one 000, which is that you buy.
+40:41
+So now it happens that one through one is larger than one 000.
+40:55
+So. So what we could subtract the result would be positive.
+41:02
+OK. So when the result is positive, then we will do the subtraction.
+41:07
+OK. So after we have done the subtraction, we then drop the next bit of the divide and.
+41:15
+OK, so remove. The first little bit is one social one. The next bit of the divide then is now zero.
+41:27
+So we ate that zero to the result of the subtraction, which is zero one.
+41:36
+So the next number that we would consider is closer to one zero.
+41:43
+OK. No, but one zero six zero zero one zero is smaller than the divider.
+41:48
+OK, so if we do the subtraction, then zero zero one zero minus one zero zero zero will give us a negative number.
+41:59
+Whenever we encounter a negative number, then we will decide we don't want to do the subtraction.
+42:09
+OK, so we don't do this subtraction, what we'll do is we drop the next bit of the divider.
+42:17
+OK, so seal zero one zero, the next bit from the divider is the one.
+42:26
+So therefore we have zero one zero one.
+42:33
+OK, and now zero one zero one is still smaller than one zero zero zero.
+42:38
+OK, so and that means that we should not do the subtraction, either.
+42:45
+OK. So. We cut off the most a little bit one zero.
+42:53
+And we left at one zero one. OK. And then we drop the next bid, which now happened to be the last bit of the divide, then which is zero.
+43:02
+And now the number becomes one zero one two zero. OK.
+43:15
+Well, as you would all observe that one zero one zero is larger than one zero zero zero the device.
+43:21
+OK, so that means that we can now do the subtraction.
+43:30
+OK. And the result is just one zero, which, as you could observe, is to the remainder as you would expect.
+43:36
+OK. Now, in doing the process, the motion is obtained.
+43:46
+If we do the suppression, then the question would be a one.
+43:52
+And in the middle two iteration. Because the remainder that weekend is a negative number, then we do not.
+43:57
+Do the subtraction and therefore the middle two bit of the coalition would be zero.
+44:09
+OK? And then for the last iteration, we do do the subtraction and therefore we put a one in there.
+44:13
+All right. So everybody happy with that. So what we do is we compare the subtraction.
+44:24
+Or we compared the two values, oh, this is if you like the parcel remainder.
+44:35
+OK, so is the intermediate value of the remainder. And then we checked the value of the subtraction by computing out minus the S.
+44:43
+And depending if the result is negative, then we know that we should not do the subtraction.
+44:56
+So what we would do is we add the value adviser back to the to our dash.
+45:06
+OK. And then and that correspond to restoring the old value about this.
+45:14
+So we carry out the subtraction in order to figure out where the which one is the larger.
+45:21
+OK. So if ours is larger than we do, carry out the subtraction.
+45:28
+OK. So we use that for further calculation.
+45:36
+But if it is smaller than zero, then we need to restore the value by adding out with the device in order to obtain what its previous value is.
+45:41
+OK. So you could see something more complicated.
+45:55
+But if you follow just what I said, or if not, then look it again and then you see how that would work.
+45:59
+OK. So if we look at the architecture?
+46:10
+For division. You'll see that it's pretty much similar to the first architecture for multiplication.
+46:17
+OK. So we'll begin with the device or in this case, shifting, right?
+46:27
+OK. And then we also have a 64 bit l.u there.
+46:36
+And we also have the remainder, which is the result of the subtraction.
+46:41
+OK. And then in this case, you also want a potion register and the quotient is beside it.
+46:49
+Weather, so weather is zero one, depending on whether we do this subtraction or we do not do this subtraction.
+47:04
+OK, we do the subtraction,
+47:13
+then we produce a one to the quotient register and we now keep shifting left because we start with the most significant bit.
+47:15
+And we just laugh so that we could increasingly get the least a difficult bit into the quotient register.
+47:26
+OK, so on the right, most this, then there is this little body to say that we need to calculate all the or what was our test in the previous flight,
+47:37
+OK, which is to pass partial remainder if it is bigger than zero.
+47:57
+OK, then we left Shift Q and then we make the least a little bit of Q, which is the caution register to be a one.
+48:02
+If the result of the subtraction is smaller than zero and we saw the value of the remainder of the puzzle remainder by adding the device.
+48:12
+OK. So this is sometimes known as the restoring method of revision.
+48:26
+So as you could imagine, that's actually a non restoring version of revision.
+48:35
+But in this restoring version, you can see that every time we do the subtraction first, depending on whether the result is positive or negative.
+48:41
+If it is negative, then we add the number back. In order to preserve the value of the parcel remains.
+48:50
+OK. So the way to check that you're happy is first look at the flow chart,
+49:00
+and you could see that we do the subtraction and then we test the weight of the remainder, whether it's bigger than zero or smaller than zero.
+49:12
+OK, if it is bigger than zero, then you just put a one.
+49:22
+If it is smaller than zero, then you need to do a bit more work because you need to restore the value of the positive remain,
+49:26
+which is all in this case. OK. And then you put the little bit of the cushion to the to be zero in this time.
+49:37
+And then one would then shift the device or register right a bit in order to look at the next iteration of the loop.
+49:45
+OK. So again, to convince ourselves that all this works have a look at the example.
+49:57
+So follow each step at a time based on the flow chart in the previous slide, and you could see that the result is what one would expect.
+50:07
+OK, so well if we can now go back to the architecture.
+50:17
+Now you recognise something. OK. Well, this architecture is very much like the non optimised version of the multiplier.
+50:28
+We have this for bits. And the device is moving this case to the right.
+50:40
+Well, it turns out that the same optimisations can also be applied to this architecture.
+50:47
+So in this case, instead of moving the pupils up to the right, we keep it stationary and we move the remainder to the left.
+50:56
+OK. If we do that, then we could reduce the multiplier so we could reduce you to 32 bits.
+51:07
+And once you've done that, since we are now moving to the left,
+51:15
+you'll see that this is the same direction as the coast and register and therefore we could.
+51:21
+Have the Coast and Rochester combine that with the.
+51:30
+Upper half of the remainder register and so on.
+51:36
+OK, so we could imagine that what we get is because the remove the register is 32 bits at the end, we will get the remainder to be the other half.
+51:41
+And the quotient to be the lower half.
+51:57
+And each of these would be 32 bits. OK, so details, I'm sure you could rule that out,
+52:01
+but that is the optimisation that we could follow for optimising the addition and the
+52:13
+various MIPS instructions that correspond to sign in and sign multiplication and.
+52:23
+And we could also look at how we could improve or enhance this method to do some multiplication inside edition and indeed floating point as well.
+52:31
+And so. OK. All right, so we'll stop for, well, five minutes and then we will spend the next.
+52:45

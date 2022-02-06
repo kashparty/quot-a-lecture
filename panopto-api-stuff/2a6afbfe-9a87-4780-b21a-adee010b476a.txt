@@ -181,7 +181,7 @@ So we set the data in lines to extreme care zero one one extra care one one zero
 10:53
 So this instruction is loaded into the instruction register,
 10:59
-after which the Hélio output remains as a plus B. So now we are choosing this accumulation path
+after which the Hlio output remains as a plus B. So now we are choosing this accumulation path
 11:02
 where we load a from close to the results register and then select a and select result multiplexes.
 11:09

@@ -1,0 +1,335 @@
+ID: ac98473d-9942-4b2f-9622-adcf013710b8
+Title: L08 - Introduction to sequential circuits and flip flops (part 1)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 28/10/2021
+OK, welcome, everyone, to our eighth lecture.
+0:02
+In the introduction to computer systems, of course, and as you will remember, we just looked in on the previous lecture, number seven,
+0:07
+at that curiosity that had the feedback loop and that allowed us as we started hinting at to use these type of circuits as a unit for storing memory.
+0:15
+And in this lecture, we are going to look at these more closely and build more principled circuits for storing memory.
+0:28
+So as a refresher, here we have the iris flip flop that we just looked at in the previous lecture.
+0:37
+And here we have the circuit itself with the two inputs as another and then the two outputs being cute.
+0:45
+And here we have the truth table for this circuit.
+0:52
+Now, as we already saw, whenever we have zero zero as input, the output is always going to be one one.
+0:56
+Then when the input sorry is zero one, the output is going to be one zero.
+1:03
+And then when the inputs are one and zero, the outputs are going to be zero and one.
+1:10
+Now, the tricky case here is when the inputs are one and one, and in this case,
+1:16
+the output is going to depend on what was the previous output of the circuit.
+1:23
+And looking at more closely at this input combination, this is the basis of what we will use to store memory.
+1:30
+So if we look more closely at what happens with the one one inputs, we can look at the transition table here and we will have that.
+1:39
+Whenever the previous outputs were 011, the output is going to be mounting a zero one and whenever the inputs are one and zero,
+1:48
+the deal puts the previous outputs where one is zero,
+1:58
+the new outputs and the next time we look at there's some amount of time, the outputs will still be one and zero.
+2:02
+So we are we call these two states, as we already said in the previous lecture,
+2:12
+stable states because they will maintain across time these two other values.
+2:17
+Now, the more tricky part here is when the previous outputs were zero zero or one one.
+2:25
+And in this case, the state is going to be unstable because zero zero is going to switch into one one and one one is going to switch into zero zero.
+2:33
+And then all over again, zero zero is going to switch into one one and one one is going to switch into a zero zero.
+2:43
+And this is going to happen all the time, ad infinitum.
+2:49
+So that's why we call these two states unstable. And this is an issue, because that's not something that we can use to build useful circuit.
+2:54
+Now, if we look more closely at what happens at the physical layer, even though we will not use this knowledge on the rest of them, of course.
+3:07
+But from what we learnt on the previous lecture, if all the gates have the same using the switch and the models,
+3:15
+all of them have the same delay, yes, we are going to be switching until the end of time between these two states.
+3:25
+But in reality, you do manufacturing process inaccuracies.
+3:32
+Some gates will have shorter, very slightly shorter delays compared to others.
+3:37
+So eventually we will fall into one of the stable states.
+3:42
+But the problem is that we do not know ahead of time which of the states of the stable states we are going to fall into.
+3:47
+And that is not desirable because that would mean that we don't know what's going to be the end
+3:55
+result of our circuit whenever we use this type of our flipflop and we want to get rid of these.
+4:00
+So now to look at this problem in a different way.
+4:07
+Well, this is what I just said. We didn't know what the stable state is and we want to get rid of this.
+4:12
+So let's look at it more closely with a time diagram.
+4:18
+So we have the two inputs over here as an hour and we have the output queue over here.
+4:22
+So when we start this circuit, we don't know what is the value of the output and we will not know until we set some change on the SANAT values,
+4:29
+because as long as they are one, remember, we are going to maintain the output.
+4:44
+And in this case, if the output is unknown, we are going to maintain an unknown output.
+4:48
+Now, as soon as we switch signals are or input our desires, we know because of the.
+4:53
+To say all of the circuit that Q is for sure going to be one, and then once we switch our back to one,
+5:02
+we know that this one is going to be waiting so we can use it to we can use the circuit to store this value one after switching over to zero.
+5:11
+And the same happens with the signal or input.
+5:20
+S As soon as we switch it to zero, we know that Q is going to switch to zero over here.
+5:23
+And then once as goes back to one, we are simply going to maintain this value of zero in the output.
+5:32
+So this is, as you can see, the basis for using this RSA flipflop as a memory.
+5:41
+We are going to set or reset the value of using the smaller inputs to whatever value we desire.
+5:49
+And then we are going to assemble the inputs to one so that we will maintain that value that we just stored in the output.
+5:58
+Q. So very quickly, I just said that we can look at the arrest flip flop as a very simple form of memory and we,
+6:06
+in fact, are going to be having here a one bit memory where Q is either zero or one.
+6:16
+And then we are going to call these two inputs as a because they are named as Forcett and are for Brissette.
+6:25
+So this is what we call sequential circuit, because there's a notion of time, we have to look across time,
+6:34
+how did these outputs are fed back into inputs and how the circuit evolves over time?
+6:41
+So we have a set a series of sequential steps that we have to look at to identify what is the final state of the circuit.
+6:47
+And for all practical cases, we will not be using inputs as an R equals to zero because that's not a very useful setting, the two outputs to one.
+6:57
+So if we ignore this input state here, what we have is that P equals not Q So we can basically ignore the output.
+7:08
+Q Sorry, the output B and call it the two outputs as Q and not.
+7:19
+Q Because remember they are always the opposite of each other.
+7:25
+Now when we said as an hour to one, we are going to maintain that value.
+7:30
+So what we have here as a as I just said, is a one bit memory where whenever we said s to one another to zero,
+7:35
+the memory bit is going to be said to one and then we can flip back to one.
+7:43
+And we are just going to maintain this memory value over here.
+7:48
+And then whatever we said as to zero to one, we will said the memory value to zero.
+7:53
+And afterwards we can set both as an hour to one and just maintain that memory value of zero.
+7:59
+So this is how we can build our one bit memory using this type of circuit.
+8:07
+Now, as a very quick parenthesis, there's a few keywords that we should all remember when talking about circuits because we
+8:15
+already started talking about them and we are going to be using them on the rest of the course.
+8:23
+So remember that the first thing that we looked at is combinatorial circuits, where the output is a combination of only inputs.
+8:28
+So there's no feedback loops. And then we have sequential circuits where the output is a combination of inputs and previous output.
+8:36
+So we have this feedback loop that we are seeing just now with the Araz flipflop.
+8:45
+And what this means whenever we have a sequential circuit,
+8:53
+we have to look at a transition table or state diagram that is going to help us walk through all the sequence of steps to calculate the final output.
+8:56
+It means that we need some notion of time and now we can further subdivide this sequential circuits into two more subcategories,
+9:08
+which are defined according to how we keep this notion of time.
+9:17
+So the first time, which is what we just saw,
+9:22
+is asynchronous sequential circuits and asynchronous here means that the outputs will have a correct value after some undefined amount of time.
+9:25
+So we know that with the switch, the model,
+9:37
+that the gates will eventually switch their output into a stable state if we use the input combinations that we talked about.
+9:40
+But we don't know how long that's going to take, if inputs are changing.
+9:49
+And then, as we will see later at the end of this lecture,
+9:55
+we will finally be able to build synchronous sequential circuits where the output will have a correct value after a very well defined amount of time.
+9:57
+So this means that we will have some kind of clock signal that is going to be telling our sirikit this notion of time.
+10:08
+And we will see this later. So remember, we have the flipflop that is not very convenient for practical memory circuits because it has two inputs.
+10:15
+We have to decide how to set our analysis to a specific combination of values to set the contents of this one bit memory.
+10:29
+Now, ideally, what we would want is to have just some input value that we want to store into
+10:42
+memory and just translate these into using the RSU accordingly so that this input,
+10:49
+the value will be stored in memory.
+10:56
+So in fact, what we want is that whenever the input for this new data,
+11:00
+larger flipflop, whenever this disvalue zero, we will set as to zero an hour to one.
+11:06
+So we are resetting the value of that one memory of Q to zero.
+11:14
+And whenever we have an input the of one, we want to send the value of these memory to one.
+11:19
+So it means that we have to set as to one an hour to zero so that the output cube of the hour is.
+11:24
+Will be one and therefore of the bigger delites or the flipflop will also be won.
+11:34
+So as you can see, we can very easily translate the input into the as our signals of the arrest flip flop.
+11:40
+So the way in which we will construct this detailed blood is by adding these additional circuitry over here.
+11:50
+We are basically going to have the input signal,
+12:00
+which is the bit that we want to store in our one week memory and drive it via a not into us and then directly
+12:03
+into our and additionally will have these two nine gates over here with an input signal that we call a light,
+12:14
+which is going to tell us when to latch onto the including and otherwise just keep the value of the memory as it was before.
+12:27
+So basically, the light is going to tell us when to ignore these embedding.
+12:37
+And whenever we set the light to drop the value, that's the new value that we are going to store in the memory, in the one big memory that did a lot.
+12:43
+So let's look at it very quickly. So we have here then whenever that is one here, we are going to have Nodi and here we are going to have these.
+12:55
+So as an output of these NAND here, we are going to have the US as unobvious are and the outputs are going to be the furcula.
+13:07
+And of course not the four, not Q. Now, this is the way when we said the last one where we tell the circuit to latch onto this input the value,
+13:18
+and then whenever we have the large input set to zero as an art are going to be one regardless of the value.
+13:30
+So remember that this means that on the A circuit, we will just maintain the output that we had.
+13:40
+So this is how we basically ignored this input. Whenever it is zero, we ignore the input and we just maintain our memory value.
+13:46
+So this is why it's called Blatche, because we will latch on to a value when the latch is one.
+13:55
+Now, fortunately, we will not have to write this circuit over here all the time.
+14:01
+In fact, there's this representation here that we can use instead.
+14:07
+Sorry, this is just a line for signalling the equivalence. Let me circle this.
+14:14
+This would be the new representation that we can use, which, of course, is way simpler to drop.
+14:19
+We have an input we which we may want to store at some point.
+14:26
+We have the latch, which tells us when we want a story and then we have the two outputs.
+14:31
+Q And not kill. So this is going to save us a lot of drawing when we use circuits with this type of latches.
+14:36
+Now let's run through a very simple example of how this works when look when we look at it from the very outside.
+14:46
+So here we have a sequence of inputs where time goes this way.
+14:57
+So the largest one, one one for a while and then zero zero zero for another while and then one on one again.
+15:01
+And here we have the value there, which varies in some arbitrary way during this time.
+15:08
+So we have one zero one zero one zero one zero zero.
+15:16
+And look at here that we have this close just so that it's easier to identify all these three, uh, groups of values for the inputs.
+15:21
+Now, if you look at the outputs, what we will have with the data light is this.
+15:31
+Whenever the light is set to one, the output is going to be the same as the input.
+15:38
+Now, then when as soon as the latch goes down into zero.
+15:46
+So as soon as we transition from one into zero.
+15:52
+The output of the Detroit lights is going to be maintained to whatever it was, the previous input that we got.
+15:57
+So this is we are latching onto the previous video as soon as we move the lights to zero.
+16:07
+So regardless of the new values of the here,
+16:13
+we are going to be ignoring and just maintaining the input that we had when the lights move from one to zero.
+16:16
+And then as soon as the lights moves back into one, we are going to start again sensing what is the value of the and sending it as our output.
+16:25
+And then of course, we have not. Q Which is just the opposite of Q.
+16:39
+So as you can see, we have this light here that can go from one to zero and then zero to one.
+16:46
+And remember, the whole thing here is that when the lights moves from one to zero,
+16:53
+we are going to maintain the input value that was there on our lights on our last bit of time where the latch was one.
+16:58
+So we are going to basically store whatever was in this point in time here and just keep it for as long as the light is zero.
+17:10
+And then whenever it goes back up to one, we are going to again echo whatever is on the input.
+17:18
+Now. Good. So this, again, has limitations, so we will need to refine this and the limitations,
+17:24
+we can see them here on on this time diagram over here where the x axis is time.
+17:35
+And on the Y axis, we have the cue and the light various.
+17:41
+So here we have that as soon as the light goes up to one.
+17:47
+Q is going to start echoing whatever is the value of this,
+17:54
+so let's assume that you started with one because that's the value that it was previously regarding.
+17:58
+Then as soon as we moved the last one, we are going to start reading or sensing that the values that we have on Dean over here.
+18:04
+Which is, in this case, zero, so CU is going to move to zero.
+18:15
+But then if Dean the is still won, if the.
+18:20
+Changes to one in here, Q will change to one.
+18:25
+Yeah, and only after the LAT moves down to zero, we will maintain this value.
+18:33
+Of que, no matter what the values of what the input is.
+18:40
+Now this is not the best we can do.
+18:48
+This is not very good because it means that as soon as the latch goes up to one, the output queue will switch around according to the value of the.
+18:53
+So what we want ideally is to get a very,
+19:08
+very precise point in time where we can where we want to read or sense the value of the and then set that as a latch to
+19:15
+that value immediately with as little time as we can so that we will avoid all the variability in the value of queue,
+19:23
+so that even if the keeps changing after we latch onto it, we will not see all that noise going up and down.
+19:34
+So what we want is to just ring psychologist and specify one,
+19:44
+the smallest possible point in time where we want to latch onto this value instead of doing what we do know,
+19:51
+which is I would latch onto any value here as soon as I go down.
+19:57
+But right now, as soon as for the whole time, we're like this one.
+20:03
+We will keep echoing the. So what we want is to encode the only in one point of time and we will see how to do it right here.
+20:08
+But this is going to be on our second par with here.
+20:20
+We just saw how to build this asynchronous sequential circuits and then we will see how to do
+20:24
+this precise timing so that we can build we have the basis to build synchronous circuits.
+20:32
+So this is the end of the first part of this lecture.
+20:40
+And we'll see you on the next one.
+20:44

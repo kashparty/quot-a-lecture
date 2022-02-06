@@ -77,7 +77,7 @@ But they can also be implemented with the more advanced concept of Phippen, Arch
 4:08
 We can do a bit better on the operations. All the operations are constant time apart from Delete Men, which is bigo of log in.
 4:15
-And if we were to implement them with priority queues using Fabián Archie Heaps,
+And if we were to implement them with priority queues using Fabin Archie Heaps,
 4:26
 we can get the complexity down to Bigo of M Plus and Log N, which is an improvement.
 4:31

@@ -1159,7 +1159,7 @@ go off to the internet and download G-Unit version four point thirteen point two
 1:18:38
 So we haven't got the source code for it.
 1:18:47
-Just what we would call a jar file, a Java archive that contains the compiled code for units, units and then I think in interrogé.
+Just what we would call a jar file, a Java archive that contains the compiled code for units, units and then I think in interrog.
 1:18:49
 Yeah. So here, if you open this external libraries part down here,
 1:18:59

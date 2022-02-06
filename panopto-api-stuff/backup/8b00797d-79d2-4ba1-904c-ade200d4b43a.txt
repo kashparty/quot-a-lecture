@@ -1,0 +1,1661 @@
+ID: 8b00797d-79d2-4ba1-904c-ade200d4b43a
+Title: Livestreamed Lecture: 16th Nov, 9am
+Category: Week1
+Lecturer: Robert Chatley
+Date: 16/11/2021
+OK, so let's make a start. So welcome everyone to the live session for the column, of course.
+0:21
+So hopefully you've all had a chance to watch the pre-recorded video segments
+0:29
+that we put out and the beginning of the week I had a look on the Panopto stats.
+0:34
+It looks like a good number of people had worked through those, which is great.
+0:38
+So the idea of the way that we're going to run the course for this part,
+0:43
+is that each week will give you about roughly the same amount of video content on a Monday.
+0:46
+So think it comes out just under an hour or a video, but broken up into those smaller segments?
+0:51
+And that should give you enough information to make a good start on the lab for each week.
+0:57
+And we'll kind of build up a set of concepts. So moving from much more functional stuff, as we've done this week,
+1:02
+trying to match into the mindset of what you've been doing in Haskell with Tony and then over the next couple of
+1:09
+weeks will move more into an object oriented way of thinking and a way of expressing our solutions to our programmes.
+1:16
+And you'll hopefully see how we can bring these two worlds together and really make the best of both of those parts.
+1:24
+And so one of the nice things about Scotland,
+1:31
+one of the reasons that we wanted to teach in this course is it isn't a purely object oriented language or a purely functional language,
+1:34
+but really brings together possibilities of writing code in either of those styles where it feels most useful.
+1:42
+So where it seems best to use an object oriented style of expression for solving your problem?
+1:49
+You can do that and where you feel like, Oh, actually, this would be really nice with a more functional style, we can do that as well.
+1:55
+And my experience is that they fit together very nicely,
+2:02
+especially with functional stuff for the inner workings and object oriented things for the more broad scoped modelling of the domain.
+2:05
+So we'll talk more about that over the coming weeks as we build up our knowledge and have more tools in our toolbox.
+2:15
+What I wanted to do really today was not to present slides and give you more content that way,
+2:22
+because I think that works best in the pre-recorded video.
+2:29
+But to show you some live coded examples to show you some stuff more about the tooling that we've been using some more things about inteligente,
+2:31
+which you hopefully have been able to install. I've got a whole list of things that I want to talk about,
+2:40
+but also this is a great opportunity to take your questions and to answer whatever it is that
+2:45
+it's on your mind as you're working through the first material or the lack of exercise.
+2:51
+Just general questions about these early parts of Scotland.
+2:56
+So I think the first is going to be either if you put your hand up in teams, if you got a question,
+2:59
+I can try and check that out fairly frequently through the session or right in the chat.
+3:04
+And the chat doesn't get too overwhelmed and we'll try and pick up questions from that as well.
+3:10
+So, OK, great. So I think the first thing I wanted to show you.
+3:17
+I come across into intelligence, you can see that. Is to talk a little bit about the structure that we have when we work in a project.
+3:24
+And so you will have seen if you've opened the lab skeleton or maybe if you've created your own
+3:34
+project in intelligence from scratch that you get this kind of layout that you see on the left here.
+3:40
+Mainly, I think of things to talk about and the fact that what we have here at the top this is.
+3:48
+Sorry, this is a project here, so this denotes everything that goes together.
+3:54
+For example, for this week's lab exercise and then within the project, you might have different modules.
+3:59
+And so we actually have two modules here. One is for the main part of the code and one is the test part in the code.
+4:07
+You'll see those with these blue squares on them.
+4:13
+And these are things that are compiled together. And so you would compile all of the main code together and you could deploy that
+4:18
+into your application and you might compile all of the test code together,
+4:26
+but you might not ship that with your application, or you might have a whole bunch of different modules in your project.
+4:31
+And some of them are used as libraries in other projects. You want to compile those bits together and ship them out.
+4:38
+I don't think about the modules very much when I'm working in Italy.
+4:46
+I think of the projects and I think of the source directories, which I'll show you in a minute.
+4:49
+But just to give you that full context of that, that's there.
+4:54
+So when you open up our lab exercises, you typically see that kind of structure of a project and you'll probably see a couple of modules inside.
+4:57
+What you see in the lab exercise, which I don't have here because this is empty so far,
+5:07
+is that inside this we have what we would call a source directory.
+5:11
+This is where your source code is going to live. And if I create one of those, so I'll click here to say, add.
+5:15
+A new directory, I want to add a special directory where source code is going to live.
+5:23
+And here we can see that intelligence actually suggesting some possible names for these source directories.
+5:29
+So I'm going to add one for Caitlin.
+5:36
+Another thing to say is that it's very possible to have Java and codling linked together in the same project, and that's actually relatively common.
+5:40
+Java was a language that's obviously been around for a long time, and Cotchin is a relatively new language,
+5:50
+but they've been designed to work closely together so that you can easily make a transition if you've been working on a Java project for a long time.
+5:56
+You can write some parts of your code in Cochin and you can call from one into the other.
+6:04
+So there may to interoperate quite closely, and you'll see more about that as we go through the following weeks.
+6:10
+But if I choose a Kopplin directory, you'll see that I have this source main column,
+6:16
+and that is a common structure that you'll see in lots of projects.
+6:25
+And you'll see that Intel has coloured this in blue and blue means that it's recognised.
+6:28
+This is a directory where source code is going to be.
+6:34
+And so it knows that if you put a file into this directory, then it should.
+6:38
+First of all, it's expecting it to be Gotland and it's expecting to compile it.
+6:43
+And so that's it. If you don't see a blue directory probably means that something's misconfigured in your intelligence.
+6:47
+If you want it to be compiling your stuff and it compares it all the time,
+6:55
+which is very helpful, then it needs to be inside one of these blue source directories.
+6:58
+Inside the test module, this is where we're going to put our test code that's going to test our implementation.
+7:05
+We're going to have something that mirrors this. But it's going to be green and green is where tests live.
+7:11
+And so this is just an intelligent convention,
+7:19
+but it gives us a nice organisation and we're going to have these parallel hierarchies of test code and implementation code.
+7:22
+So I'm going to choose Colin tests. So you get to see and this will become very common as he work with Scotland projects.
+7:31
+And if you work in next term in Java projects and you work in intelligence, which is recommended,
+7:40
+then you'll see this kind of parallel structure of source and test with blue and green.
+7:45
+The next thing that we're going to have is ways to organise our source code so that when we have larger projects,
+7:53
+it's easy to divide these up into what we call packages that organise different areas of the code,
+8:00
+things that are to do with different things or that are written by perhaps different teams on a larger project.
+8:06
+So if you've used Java before, you might be familiar with the notion of a package.
+8:15
+And so that is very similar in. It's not exactly the same, but I'll explain a little bit about the difference.
+8:20
+But let us say that we are going to create a package to put in some code that we're going to write.
+8:27
+And the thing that we do when we name the package is that we think about, you know, who we are and where we work,
+8:33
+so that we can distinguish the code that we've written from any code that anyone else writes.
+8:40
+So for example, if I was an engineer at Google and I was working in the image search team, maybe I'd create a package.
+8:44
+With a name that's based on the domain name the company owns, so normally what we would do is put it in reverse,
+8:57
+so we'd say come first and then Google because we are on Google.com and there may be our team is the images team.
+9:03
+And so we create this kind of package here.
+9:11
+This if you were in Java, it would be the rules that you had to have three directories that corresponded to this.
+9:20
+So you'd have to have a comm directory inside,
+9:30
+which was a Google directory inside which was an image directory and inside which we would put a file in Kotlin.
+9:33
+That's not a rule. You can mismatch your folder structure with your package structure.
+9:41
+But the convention is that we match them up, partly because that makes it easier to find things, and also partly because in Java is the rule.
+9:49
+And as we said, there's often cross pollination between Java and Kopplin inside the same project, so it makes everything much.
+9:56
+So in general, what I would suggest to you is if you create a package, create a directory structure that matches that Typekit structure.
+10:05
+So here we create a common directory in Scotland. We create a Google directory inside.
+10:12
+We create an image directory inside Google and then if I create a new Kotlin file.
+10:18
+And this will be like the image search. Then you'll see that when that's created, intelligence creates because I created it inside this package.
+10:26
+We're going to have this statement to the top and it declares that all the code in this file is part of the package.
+10:40
+Com Google Images. And that means that if someone else uses that code somewhere else, they might need to import something from Kong.
+10:47
+Google Images And we're declaring that that's where this code lives.
+10:58
+So again, if you've written any Java code before, you'll be familiar with those package statements,
+11:03
+and so just make a mapping in your mind to this kind of thing,
+11:08
+but this is what we're doing is declaring the organisation of our code into these packages.
+11:11
+And I think of it as being organised around, you know, company organisational units or teams or projects.
+11:17
+But then we might go more specific and have areas of the code.
+11:24
+So we might have come Google Images indexing or come Google Images,
+11:28
+JPEGs or something like this kind of functional areas where you would organise it, perhaps in folders, you know, in your file system anyway?
+11:34
+Just check the chart for some. So the come here is just because I'm sorry, there's a question in the chat about does not mean anything in particular.
+11:44
+And it's just because if we went to Google, we would own the damn domain name Google.com.
+11:57
+So let's say if I make a different package for us here at Imperial, then I would make a package that's based on our domain name.
+12:03
+So I probably do UK or AC. Imperial, and maybe I do say you like this.
+12:11
+So that would be a package that we might create and actually typically because I'm a bit lazy,
+12:21
+I tend to you might see me as an example to this package instead of meaning the same thing.
+12:26
+But yeah, really, these are just tell these from from domain names.
+12:33
+So the other thing I was talking about here is to keep this mirrored structure, so underneath the test folder.
+12:44
+We would have the same thing, so I'll create a package.
+12:53
+Yeah, I'm going to match them up so that when we have a test for image search because image search is in, come Google Images.
+12:56
+I want the image search test to be under column Google Images as well.
+13:05
+But under the test source rates under the green folder.
+13:10
+So we're going to create the same. I could share.
+13:15
+And what this means is that it's easy for the tool to make an association between if we make a filing here.
+13:22
+So it makes it easy for it to make this easier this relation.
+13:47
+But it also means that it's easy for you as a human to think about that structure and to find where that code is would be.
+13:53
+So say, all right, well, I'm looking for the file image search. I wonder where its test is.
+14:01
+It'll be in the same package, but underneath the sorts of tests.
+14:05
+But because it's in the same package, that means that it can access anything that's in the same package.
+14:10
+So even though they're in different folders, like if I have a function here.
+14:16
+What would we have searched for? And then a query, which is a string.
+14:24
+And that returns. Well, let's just do a string now.
+14:33
+Then I can call that anywhere else that's in the same package. And so, you know, I can call it down here.
+14:40
+Let's define a function and. I can do that, but also if I've got something over here to make.
+14:50
+Yeah, I've also have access to this search for function because even though it's in a
+15:00
+different file and even though we're in a different branch of the file system,
+15:05
+we're in the same package. We declared it to be in the same package. So have access to that function.
+15:09
+If we had a function that was defined in a different package. It's embarrassing.
+15:16
+In a different package than we would need to import it.
+15:25
+So let me show you the. Capital in this.
+15:31
+So let's make. Something here, so these things are not in the same package, so I try to.
+15:41
+Police search for here. You see intelligent things.
+15:59
+Oh, right, yeah, this might be the one that you want to call, so it's helping us out, giving this assistance to try to find things.
+16:02
+And when I call it, it goes, OK, yeah, it's not one,
+16:09
+but it's automatically generated for us an import statement which is importing that function from the package and the file where it's defined.
+16:12
+So if we want to use a function from another package, then we need to import it so I can search for dinosaurs.
+16:23
+But if I don't have this line, then it's not going to be found.
+16:35
+And so then we're going to have a compiler error.
+16:39
+And then we can fix that by putting our import statement back in and then we can find the relevant function.
+16:43
+So this function?
+16:48
+Also another tip if you're using intelligence, if you hold down on a mat, I hold down command on a Windows or Linux, something it might be control.
+16:49
+And then I click on something I can go through to its definition.
+16:59
+This is very useful when navigating the code base, trying either your own code base or someone else's code base,
+17:02
+trying to find like, OK, where is this thing defined?
+17:08
+You can either hold down control and click, or I can press command B, which I think is Control B on Windows and Linux.
+17:11
+Sometimes different in different keyboard mappings, and that allows me to very easily go and find where things are to find.
+17:19
+Let me just check Chad here. Is there a way to make intelligent automatically create a directory or test in test whenever it's created in Maine?
+17:28
+Not exactly, but sort of at me.
+17:38
+I'll come back in just a minute to talk about tests a bit more, and then maybe I'll show you some of that stuff.
+17:43
+Let me make a note to talk about that. Yeah, we'll talk about Test a little bit more in this session, so I'll come back and answer that question then.
+17:48
+The other thing I wanted to show you was, I think hopefully you've discovered that you can write a main function.
+18:05
+And you can print stuff out. So let's I don't I pretend this.
+18:15
+And then you can run this by. Clicking this green run button,
+18:29
+which is just an intelligent feature that's going to basically compile the codes and invoke the main function as the entry point to the programme.
+18:34
+Takes a second to compile it, and then it's going to run. Sometimes I think people might want to experiment a little bit more and just try stuff out.
+18:45
+Maybe that's something you've been used to in Haskell using things like kind of GHC.
+18:54
+I just being able to try and run some code and see what happens rather than writing it kind of in a file for your final solution.
+18:59
+So there's a couple of things that you can do to experiment and try a little bit more freestyle coding inside intelligence.
+19:08
+The first one I'll show you is a thing called a worksheet. So when I create something, I can say.
+19:17
+I would like to create a worksheet, and that's option is down here. This is going to create something different, let's just try.
+19:29
+So my boy, I it. And this gives me a file, which I can code in,
+19:39
+but it's interpreted in a slightly different way where if I write something here, like, did I found a two?
+19:46
+Colby calls. Three.
+19:56
+And then. Then you can see on the right hand side.
+20:00
+It's actually evaluating this courage as I type it in, so I can do.
+20:10
+This kind of thing, and then if I printed. That is going to print as well.
+20:25
+So this gives you a little bit more of the interactivity that you might have to experience from like GHC.
+20:38
+If you want to just try some stuff out and see and what does this do? Can I call this?
+20:45
+But we can still do things like if I want to call my search for function. And search for my dinosaurs.
+20:49
+Then I can still do that. And when I in fact, when I started to type the name of the function and I got this import at the top,
+20:59
+that's going to import my function from the file that I've written into the work sheet.
+21:06
+And then I can call it from there sometimes. You might need to rebuild some stuff, so let me just show you.
+21:10
+So if you make an edit to your function.
+21:18
+What could we do? Well, let's just make you pretend something different. This isn't going to be noticed here.
+21:26
+This is going to still say, T. Rex,
+21:39
+because I haven't read compiles the rest of the source code in order to pull it into the worksheet, so I have to tick this box.
+21:43
+Make module before run. And then if I run it again.
+21:50
+That's kind of recompiled the rest of the code, including the changes that we made,
+21:55
+and now it's going to pull it in and it's going to have this answer.
+21:59
+So that's just a slight inconsistency with the worksheets where it's not totally life and re compiling everything all the time.
+22:02
+Most of the time, Intel is compiling and analysing your code all of the time.
+22:11
+That's why you see these red underlines and lots of helpful hints and suggestions.
+22:16
+But in this case, the it's only compounding the worksheet.
+22:21
+And so if you make a change in a function that's imported into the worksheet, you might have to take this box to say,
+22:25
+OK, before I run the worksheet, let's make or compile everything else in order that everything else is up to date.
+22:32
+So I find this worksheet kind of useful.
+22:40
+Sometimes I think I don't personally use that much, but I think it might be useful for you just to experiment a bit and also to explore the language.
+22:42
+But I find I passed the idea at the time. I just write a main function or just write a test and write some code in there.
+22:52
+But I think this worksheet can be useful, especially given what's shows on the right hand side where it's printing these things out step by step.
+22:59
+The other one I wanted to show you is something a little bit closer, perhaps to HCI,
+23:09
+which is if I go to the tools menu Kottmann and then Gotland Rachal.
+23:15
+And we start that up, you'll see at the bottom here, I got a bit bigger for you.
+23:22
+Then we've got a place where I can do it for a good cause.
+23:28
+It's not very good name. Nones is a list of and I get all of the completion that I would get in the normal ED window of intelligence.
+23:34
+And I can do this. And then I can prints the numbers and then what I want to execute on the macro command centre.
+23:46
+I know it's going to compile. I know it's going to execute my my coat so I can do that.
+23:59
+I can like, I'm stuck. Sites.
+24:05
+And then just going to printed like this, so they actually print something it'll print in green because it's outputting to the console.
+24:11
+And if I'm just evaluating something, you'll see that I get this kind of slightly more debugging output.
+24:17
+So if you, you know, are in the mindset of using these kind of interactive and raffle based tools from the Haskell tooling,
+24:24
+if you want to take that over and use that as a way to explore the language and explore different features and try stuff out,
+24:32
+then those are built in to intelligence. So you have the worksheet.
+24:40
+The worksheet is a file which you can commit and check in and save with your project at.
+24:43
+The raffle is just a transient thing where when I close it, my raffle stuff won't be there anymore, which is, I guess, what you would expect with GHC.
+24:49
+So if you want to make a kind of scratch experiment that you want to keep, then you could do that in a worksheet.
+24:58
+That might be a good way of just making some notes in code.
+25:04
+And if you just want to try some stuff out, son, if I can a terminal and then you don't care about keeping that,
+25:08
+then this scrapple, that might be a good way of working with that as well.
+25:13
+But as I say, I think once you get used to the language a bit more,
+25:18
+it becomes slightly more idiomatic to just work in the files and run things with and particularly with tests, as we'll see more later.
+25:20
+But some, yeah, I think these are useful tools, and especially for people learning the language could be useful things.
+25:30
+Let me pause there and just take any questions,
+25:38
+what sort of questions that people got so far or about things that they've been thinking about with the language.
+25:40
+Hamza's question so is kind of analogous to using the command line.
+26:05
+I think it's analogous to using, you know,
+26:12
+when you use HCI and you start it up and then you can just type in a Haskell expression and it will show you the results of that.
+26:16
+I think that's the way it starts for Reid. Evaluate print, sleep.
+26:24
+That's rebel. And so basically it says type in a line of code. I'm going to evaluate it.
+26:29
+I'm going to print the results. You can type in another line of code and so on.
+26:34
+OK, thank you. A couple of other questions in the chat here.
+26:39
+So one is, can you show us how to use the worksheet again? OK, I'll go back and do that.
+26:46
+And why is the spider? The pair is with two arrows and the decoration is OK, right?
+26:50
+So we're talking about Typekit creation. So let me show you both of those things at the same time. Maybe.
+27:00
+So let's quit the raffle. I'll go back to the worksheet, so actually, let's delete this question, economic, can you one for you?
+27:04
+So let's say we want to make a worksheet to experiment with pairs, we've got a question about pairs, so I'm going to make a new blockchain worksheet.
+27:19
+So that's another option here where we've got cut in file.
+27:28
+I've got Haskell module because I've got a Haskell plug in and that's costly and worksheet, let's call it.
+27:31
+Pair examples. And the craters of worksheets.
+27:40
+And then I can basically type into here any so let's do the final P.
+27:50
+Is a pair and this is a pair.
+27:58
+Yes. And so the question that we have here and the worksheet is showing us this is on the left,
+28:04
+this is the way that I create and construct a path and I'm passing in one and two.
+28:10
+They can think of this one as being like a function that constructs a power,
+28:17
+and it takes these two numbers to introduce as the parameters to create the power.
+28:21
+On the right hand side, we're seeing the type of the past, so he says Volpe is a pair of int it with these angle brackets.
+28:29
+Maybe we even get that. Yeah. Yeah, so you can see this is a pair of intent here.
+28:37
+And so the reason that is that's a type declaration for the past, so.
+28:46
+Maybe you can do this here. Yeah, so one of the things I can do in Scotland, if I can put in the type explicitly, if I want to,
+28:52
+I don't need it to be there because the compiler can figure this out and what we would say infer the type.
+29:04
+But if I would like it to be there because I'd like it to be a bit more explicit in the programme and I can add that in.
+29:10
+And this is saying, OK, this type is the type of a pair and the elements of that power both integers.
+29:16
+This one is saying make me a person I call a function to create a pan based on these two integers and then what it will do is then create you path,
+29:26
+which has this type. So if I was going to write a function.
+29:36
+That's the biggest elements. And it takes a tear.
+29:41
+And we're going to say, OK, return, you know, a if the star part is bigger and B if the other part is bigger,
+29:50
+when I declare it, I'm going to say this function takes a pat.
+29:56
+What's the Typekit that it's going to be paid, and let's say that it's a pair of two, it's just.
+30:03
+And it's going to return a single integer. And we have this kind of body.
+30:11
+That's right, this function just to so you can say if. At Dot, first is greater than terror, Don.
+30:18
+Second. Then we would return, so this kind of taking a slightly imp. way of doing it, a kind of stepping through bit by bit.
+30:29
+So if there is great sorrow, sorry, first his greatest and words and first.
+30:39
+Else will return. Final seconds.
+30:48
+And then when we call this function. Let's call it with pee, so pee is defined as being a pair of incidents.
+30:54
+We've constructed one like this and we can use it here.
+31:05
+And this is a type definition. So this is saying, okay, this pair works, and if I change this to being a pair of and string.
+31:10
+Then this doesn't work anymore. You can see we get a red underline. It's quite small.
+31:20
+I read underline that says this is not Typekit compatible here because you've got a pair of Indian string.
+31:25
+You've constructed a pair of string, but you're trying to pass it to a function that takes pairs of an inch.
+31:31
+So that's no good. So we should go back to this one.
+31:36
+The last thing I'll show you what, we're just here.
+31:43
+Is that this has a little on the line on it that says, oh, this return can be lifted out of the if so, this is kind of a stylistic thing.
+31:46
+And hopefully in your mind, as I was typing that you were in your high school mindset thinking Tony wouldn't like that code very much.
+31:54
+Let's see what we can do. So actually, instead of saying, return this, I can change this expression.
+32:02
+I can say lift the written out. And that's saying instead of saying, if this, then return exhales return.
+32:09
+Why it says return the result of this expression. And then actually now.
+32:15
+I think we can convert this from a block body to an expression body because really we've only got one expression now.
+32:25
+And so I can now do this instead. And it's just gone off the screen a little bit.
+32:32
+I could also I could take these bucket prices out if I wanted to. That's.
+32:38
+So that's. Not for me very nicely, but.
+32:49
+So that's another equivalent way and perhaps a more idiomatic way of doing it where we reduce it from a set of imperative steps,
+33:00
+doing one thing at a time to an expression which is more of the functional style that you would have seen in Haskell.
+33:07
+And maybe that's the way that we're thinking, and it's kind of a cleaner design as well.
+33:15
+But I think one of the things that's really nice is that the tool helps us to make the programme better,
+33:19
+basically by identifying what we've done and suggesting ways that we could improve.
+33:25
+And quite often you can just follow its suggestions and say, Oh yeah, OK, that would be better.
+33:30
+But sometimes we, as programmers know better than the tool, and so always good to think it through and think, Yeah, do I prefer that?
+33:35
+Is it actually neater? Is it easier to read? And then, you know, you make the ultimate decision that.
+33:42
+So let's come back and have a look at some more questions.
+33:51
+Someone's got a specific error with using the raffle and don't know the one off the top of my head for that, it's probably worth Googling it.
+34:00
+If not, maybe ask someone in a lab later and should be able to figure out for you.
+34:10
+Someone asked about pattern matching is the right where it was pupils of any length and not just pass rates to function and.
+34:17
+In the figures, hundreds and hundreds and. Map for function with.
+34:29
+Two. OK, so lots of questions,
+34:36
+so I think what I'll do is I'll try to cover a few of those things and then I'll show
+34:40
+you a bit more stuff from the notes I prepared and then we'll take some more questions.
+34:44
+So let's just have a look at a couple of things. I think.
+34:49
+There was a question about arrows, and so do I need to use arrows in this example?
+34:54
+I don't need to use arrows here because this is an if expression.
+35:01
+So this is just saying if this condition. This is the results else, this is the results.
+35:06
+And that is the same in Haskell, I think only generally discourages using the f construct in Haskell, preferring to use Garth's.
+35:14
+I would say in Scotland and in Java, and if it's more common than it is in high school,
+35:24
+so if you use an if contracts and use it as an expression, then this is the way that it would be laid out.
+35:28
+So you just say if this condition,
+35:35
+then evaluate the expression to this and else this from the time when we use the arrows, this when we have a weapon.
+35:37
+So if we said when? And then actually, in this case.
+35:44
+What should we do that's do when Heather Dot first is greater than adults?
+35:52
+And then we'll go with the second. And well, let's just do else.
+35:57
+That was wrong, wasn't it, you should have spotted that that was a park that's had office hours had second.
+36:08
+And then can I follow here? Yeah.
+36:25
+So, oh, that's another thing I should talk about briefly is the tool is very useful for, say, for auto formatting the code.
+36:30
+There's a couple of ways that we can do it.
+36:39
+Normally I get just tied into person these keystrokes, so normally you can do controlled ale or commands out Al if you're using a Mac.
+36:43
+And that will lay out the code according to what intelligence thinks the best style is for controlling the default state is pretty good.
+36:52
+And so it does this, for example, it does this matching up of the length of the arrow.
+37:01
+So it takes this and puts this on here, which matches against, I think, what Tony suggests for Haskell.
+37:06
+And it tends to if I miss out this space, it's going to put that space back in.
+37:12
+So it's generally good and we've got a check on lights that you've matched.
+37:17
+And I still don't spend ages fixing that by hand, either using Talegaon just to fix it yourself.
+37:21
+I mean itself, there's another tool that I can show you.
+37:29
+Maybe I'll just reference that now, which is called Katie Lint look.
+37:33
+Got my browser? Yeah, you can use this thing called Katie Lint, which is produced by Pinterest for their codling code,
+37:37
+and there's some instructions on that GitHub page about how to install it.
+37:46
+If you're using your machine, and then you can basically let me show you if you've got it installed.
+37:49
+If you open a terminal. Oh, I was doing it just now, that's open this file, so say like, I don't.
+37:59
+Style this very well. How about like that? If I run Katie lints.
+38:09
+Then it should tell me, OK, here are some style problems with your code, like you said, unexpected spacing here, unexpected indentation.
+38:18
+I've got a missing blank line at the end and I've got some extra blank lines on.
+38:27
+I don't need them. Oh, that's in the worksheet. And so I could go through each one of these.
+38:31
+I can click on it and it'll tell me where it is. I can, you know, delete them.
+38:36
+And hopefully, if I run again, OK, I have one fewer now. So either I can apply the Intel A.
+38:43
+Fix some things that fixes some things here, but in that file,
+38:52
+only I can also like click here and then apply the layout across the whole of the code base there.
+38:55
+Or the other thing I can run is Katie lint minus F and that says, OK, if you find something that's wrong, then fix it.
+39:04
+And then hopefully if I run Katie again. Now, it's totally fine.
+39:12
+So you might find some things in the style that you don't quite like or don't quite agree with,
+39:20
+but I think most of the time it does a pretty good job of laying out the code in a pretty reasonable way that looks absolutely fine to the reader.
+39:25
+So I would advise you most of the time, my reflex is just to hit the keys to full nine intelligence, and that does sound like a pretty decent job.
+39:34
+Sometimes you might want to lay things out slightly differently. But then you can reformat again and it will do something good with it.
+39:41
+Or if you just want to rely on Katie lint, that's absolutely fine as well.
+39:48
+I think that's what Lutz is running. So if Katie Lynch is happy, then you should be fine.
+39:52
+Don't get hung up on manually fixing the style by inventing things with extra spaces by hand.
+39:57
+That is kind of a waste of your time, so rely on the tool to do that stuff.
+40:04
+So, yeah, there's a few other questions about kind of more advanced functional programming
+40:14
+stuff which don't really want to cover so much of that in this lecture,
+40:19
+but maybe we'll do some extra bits. That's just, oh, just a recap and Katy Lynch, so if you install Katy Linked, which you should go to this web page.
+40:25
+And so it then once you've got it installed, then yeah,
+40:38
+the two options you need are just catching them with no options or getting it minus F, which says both fix it.
+40:41
+Those are the two things that you might need, but generally the intelligent internal will turn out well, it's OK.
+40:49
+Are there any configuration options? Yeah, that the file that we use with Caitlyn is called ED Config.
+41:00
+And so this is where I've said, OK, my intent size, it should be two and I disabled a rule called no multi-species.
+41:11
+And that gives us that ability, like Caitlyn otherwise doesn't like it when we don't when we line up the arrows.
+41:19
+But we felt like it was a good thing to do to line up the arrows. So I disabled that rule.
+41:26
+So if you want to look in edit config, you can Google for how to configure that stuff if you want to do some different things.
+41:30
+Let's have a quick look. Yeah, OK, let me show you one more thing now and then we'll take a bit of a break and we'll come back,
+41:45
+I'll take some more questions and there's some more stuff that I want to show you as well.
+42:03
+So the other thing that I wanted to show you was another way of running and interacting with your programme.
+42:09
+I'm just wondering whether this makes. Tends to do.
+42:22
+Yeah, I think it does. So we've got this main function.
+42:27
+We can run it. And it's kind of funny all the way through.
+42:31
+And they're just going to print out, hopefully the answer at the end. If we've got a longer programme and we're starting to write in this imperative
+42:36
+style where we can do one thing and then another thing and then another thing,
+42:44
+it's possible that we might want to have a look at evaluation step by step.
+42:49
+We might want to say, OK, what's happening on that line? What's the value of that variable at this point in the programme?
+42:55
+And so another thing we get with our integrated development environment is we get a tool that allows us to debug our programme by stepping through it,
+43:02
+how one line at a time or a chunk at a time and having a look at the state that's inside and then checking whether that matches with our expectations.
+43:10
+And especially when we see something strange is happening allows us to work out what's going on.
+43:18
+And so that tool in general, it's called a debugger and you'll find debug for all sorts of different languages for Catlin.
+43:24
+It's built into intelligence. So if we write a slightly longer function, how about X?
+43:32
+Just do some extra stuff here? What should we do?
+43:38
+OK, let's just do some expressions in here. Oh, come, don't need that.
+43:48
+How? Yeah, well, that will do for now.
+44:09
+So now. I can just run this programme.
+44:17
+And it will show me the output that I've printed,
+44:28
+but what about if I want to know what B is here or A. is there so I can put clicking the margin here and this is what's called a breakpoint?
+44:30
+You'll see that as a red dot, I can add more things if I want. And then if instead of clicking the green arrow to run the programme, right click it.
+44:40
+I can say debug this programme and if I debug this programme, it's going to launch it and launch it in a different view.
+44:49
+And it's going to start the execution, but it's going to stop as soon as it gets to my first break point.
+44:57
+And so here we can observe the state of the programme.
+45:05
+So here we see that in this view, down the bottom here we've got the current variables.
+45:11
+So the current variables that we've already. Defined at this point are a and it has this you have three.
+45:16
+And then here I've got a set of controls that say, OK,
+45:24
+how can I want to control the execution here so I can go on to, for example, the next statement, so I'll press this.
+45:27
+I will jump forward one line and you see me update the state.
+45:36
+OK, now we have a B, which is defined, and I can tell that the value of B is 21 here, actually.
+45:39
+Oh yeah. Also drawing them in line here on top of the IDs and showing you all of the state.
+45:46
+And then I can go forward again. And I can go forward again, I can go forward again so I can step forward.
+45:53
+If I had a slightly longer programme, I could say run to the next breakpoint.
+46:02
+Maybe we'll do that. So let's stop. That's debugging again.
+46:07
+So at this point, I hit my first break point and then I can say resume, and that's going to hit the next breakpoint.
+46:15
+So in a programme of hundreds of thousands of lines,
+46:21
+I can put my bright points suitably far apart to say I want to see what the state is here and then if once I'm happy,
+46:24
+hit play, keep going to the next breakpoint. And at this point, you can also say, OK, this is a path.
+46:30
+And if I wanted to, I can open up the power and have a look at what's inside so I can see that the pair has two properties.
+46:36
+One is the first element is the second element.
+46:43
+And so you can really begin, especially as you have a bigger programme to open these things up and have a look at the states.
+46:46
+Again, I think I. Don't use the debugger that much, but when you do have something that's very puzzling and you can't work out what's going on,
+46:54
+then it's a very useful tool to have in order to be able to just inspect the state and
+47:02
+to be able to have this controlled execution where you step through one line at a time,
+47:08
+especially in an imperative style programme where that's the way that you've designed it is
+47:14
+to do one thing and then do the next thing and then do the next thing and maybe repeat.
+47:18
+You can really step through it very slowly and say, OK, I understand what's going on at this place.
+47:23
+And so this is another useful tool that you might find in learning the language,
+47:28
+building your first programmes, understanding why they don't do quite what you think they're supposed to do.
+47:32
+Have a look at what the state is.
+47:37
+And you can really expect, and you can do other things like you can say, like, what is this the result of this thing?
+47:38
+Yes, it's right click it. And then I can say evaluate this expression.
+47:45
+It's OK, that expression is 21. OK, what would be this expression?
+47:52
+OK, let's try that instead. OK. So I can really take the state of the programme, extract little bits of it and kind of see what it is life.
+47:59
+Evaluates it. And then when I'm happy that I've understood, then I can just continue execution and then run through to the end.
+48:09
+So I think a useful tool for your toolbox, especially as you get into medium sized programmes or very large programmes.
+48:18
+We'll talk more in the second part of this session about tests and writing tests.
+48:26
+And I think overall, I find unit tests to be a more useful way of reasoning, thinking about specific parts of the programme than debugging.
+48:31
+But if in your in kind of the mode of trying to investigate,
+48:40
+trying to puzzle out why something strange is happening, then the debugger can be a very useful tool for that.
+48:44
+And also, when you're learning and understanding a little bit about how different bits of the language work,
+48:49
+then can be a useful way for exploring those programmes as well.
+48:56
+Having a look at what's inside, having a look at the current state, doing those kind of things.
+48:59
+OK, great. So I think, well, I'll suggest it if we take a break now until 10 o'clock, that gives us about eight,
+49:16
+maybe maybe two minutes past 10 minutes past tense and gives us a 10 minute break.
+49:22
+When we come back,
+49:27
+I'll talk more about tests and to talk about a couple of other language features and maybe similarities or differences with Haskell.
+49:28
+Maybe do some bigger examples as well. So let's take a 10 minute break and then we'll come back and then I'll take more people's questions as well.
+49:37
+OK, so let's get started in, I think I'll just address a couple of the questions that are in the chat and then I'll show you some of the things.
+59:10
+So there's a couple of questions about kind of Haskell idiom or translation things.
+59:18
+One is about whether this arbitrary size tuples. So we've been using a pair.
+59:23
+There isn't the possibility to create a pull of an arbitrary size, so you can't make a seven people.
+59:30
+I think there is a triple. I remember correctly. Yeah. So if you need a three element people, you can make a triple for that.
+59:37
+But I don't think that there's a quartz. No, there is no question.
+59:45
+We'll see next week how if you wanted one of those, you could build one and you could build one.
+59:50
+Maybe that wasn't a generalised cheapo, but there was actually something specific to your domain.
+59:55
+So we'll see. As I say next week and in the coming weeks after that, how to how to build those things and then use those types in your programme.
+1:00:02
+But yeah, for pairs and triples, they're built him as a general thing.
+1:00:11
+There was another question about parametric polymorphism, and yes,
+1:00:17
+that is basically the equivalent of parametric polymorphism, what we would call generic typing.
+1:00:21
+And that's how we create something that is, as we were looking at earlier, this pair is a pair of two types A and B,
+1:00:28
+and so we can when we come to create our own types, we can say, OK, let's create a quad tuple that has types A, B, C and D that's possible to do.
+1:00:37
+And then we can write functions that work on those types.
+1:00:49
+So that's something again that will come on to, but that's definitely possible in the language.
+1:00:53
+There was another question about partial application.
+1:00:59
+So, yeah, cutting doesn't have built in partial application in quite the way that you would have in Haskell.
+1:01:02
+But what you can do is he can write a function that returns a function. And so you can quite easily sort of simulate that for yourself.
+1:01:10
+So if you wanted to have. Like, have a function when you could say, like, Wow, this is my multiply function.
+1:01:19
+And then let's say let's create multiply supply.
+1:01:34
+By three, so I'm going to write this function, which is going to return me a function so then I can apply mouse play funk to for this case.
+1:01:39
+I'd expect this is going to print out 12,
+1:01:56
+because I'm going to create a function that takes an argument three and returns me a function which I can assign here,
+1:02:00
+and then I can apply that function to four. And I should make 12.
+1:02:08
+So now we need to define this function. So this is create multiply by and it takes what we call that.
+1:02:12
+Let's take X. And then what we want to return is a function that takes three and multiplies it by X, so.
+1:02:28
+Sorry, not three takes the input value of that function, multiply it by X, and that's going to be how should we define it?
+1:02:43
+How about a function that takes a y of type inputs?
+1:02:50
+And returns a extends way beyond the light that.
+1:02:58
+So this is creating a function. Using this as an argument.
+1:03:08
+And if we run this. Should print out.
+1:03:16
+Well, that's a couple of other ways to do this. It says, like we could do a lander.
+1:03:21
+Which might be neater in this case. What's it complaining about the upside?
+1:03:33
+Needs to change. OK, so this is yeah, not exactly as powerful as being able to do a partial application in Haskell, where you can just say,
+1:03:51
+like apply the function with not enough arguments and it will figure out that that should generate another function.
+1:04:06
+But if you want to create a function or create a partial function, it's something you can do that by creating an anonymous function.
+1:04:12
+We talked about that a little bit in some of the pre-recorded videos.
+1:04:21
+And that's something that you might have to do if you're doing some of the later parts of the lab this week as well.
+1:04:24
+Similarly, for questions about pattern matching,
+1:04:37
+there's not pattern matching to quite the same extent that that is in Haskell or in other languages, maybe like Scala.
+1:04:39
+But you can do things with a when that almost do that and you'll see that maybe when we move on to doing object oriented programming,
+1:04:48
+then the pattern matching becomes less of a key concern because we start to solve the same problem in a similar in a different way,
+1:04:56
+using some of the object based techniques. There's not I don't know of already a better way of well,
+1:05:04
+I guess if you're looking at carrying the last question in the chat thing to look at is some of the extension
+1:05:21
+libraries that provide you some of these functions so that you could pass in a function to another function.
+1:05:27
+Some of that functional programming stuff is kind of enriched in some libraries that some other people have written,
+1:05:34
+but there's not sort of a core concept in the the basic language of doing something like curry like like you would have high school.
+1:05:40
+That's not something that they built in this case. Someone's been compiling some stuff for a long time.
+1:05:48
+Let's just have a look. I'm not sure what that's doing if you hit the red button on the left hand side, that will stop and maybe try it again.
+1:05:56
+Well, I mean, it sounds like a long time. OK.
+1:06:10
+Let me show you some more things and. It doesn't fix it.
+1:06:17
+Hmm. OK, maybe that's something thing to grab someone in the lab and they might be able to have a look at why.
+1:06:28
+Let's, yeah, let me show you a couple more things and then hopefully we'll have time some more questions as well in between.
+1:06:35
+So I wanted to talk a little bit about tests in a bit more detail because I've mentioned that a few times and you'll see for me,
+1:06:43
+that's quite a big theme about how we go about thinking about structuring and developing correct programmes.
+1:06:50
+So I talked earlier about that mirrored structure between the implementation code and the test code with the blue and green subdirectories.
+1:06:57
+Inside those, as I say, will have a mirrored package structure,
+1:07:09
+so for any package that we create under source on the blue, we're going to create the same package in test.
+1:07:14
+We're going to put the tests for our code in the equivalent directory on this site.
+1:07:21
+So let's make a test for our if we I've destroyed image search.
+1:07:26
+Yeah, let's it this. And I'm going to put this.
+1:07:32
+Like this? So let's create a test for our search for method.
+1:07:39
+So this is in a file called image search, Katie. So the first thing I'm going to do is I'm going to create a new hotline.
+1:07:44
+This guy is going to be a class. And this is going to be a special fight, was it just a file which contains a construct which is called a class,
+1:07:50
+which you're going to talk more about next week?
+1:07:59
+But the way to think about this is just a way of grouping together all of the test functions that are going to test this particular file.
+1:08:02
+So when I name this, there's two possible conventions.
+1:08:12
+One is to call it image search test and the other is to call it test image search.
+1:08:17
+Either of those, it's fine,
+1:08:23
+but I would recommend you to go with image search test just because when you start to work in a larger project and you open,
+1:08:24
+you know you have a thousand test files and you want to open one up if you are opening up and typing in the name of it.
+1:08:31
+If they all start with the letter T, then you have to type more in order to find it.
+1:08:36
+So I think if you have image search test, then you more quickly are able to navigate to the right place.
+1:08:40
+It's going to create image tests. I'm going to add it to get so that's on this site.
+1:08:49
+You can see the intelligence ultimately given us the cost definition.
+1:08:54
+As I say, we can talk more about classes next week.
+1:08:57
+But for the moment, just think of it as a way of grouping together functions that are of the same category.
+1:09:00
+So these are all going to be. Functions that are tests for image search, and if you've looked at the lab exercise, you'll see that again,
+1:09:08
+there's a class that creates all of the tests, includes all of the tests for the webserver code.
+1:09:18
+So it's just a way really of grouping, at least for the moment.
+1:09:24
+Then inside this, I'm going to write a test function. So this is a function that we're going to run in order to test our code.
+1:09:30
+This is just a regular function, and then I give it a name. We have to think about some behaviour that we want to test of the that we're writing.
+1:09:39
+So this is why search for images. So would say returns image results, something like this.
+1:09:50
+This is a function that doesn't take any arguments,
+1:10:01
+and we're going to give you a block body as we might commonly in a test want to do a couple of different steps in order to,
+1:10:04
+first of all, set something up, then maybe trigger an action and then check a results.
+1:10:11
+So the other thing that we need to do in order to make this a test is we need to tag it with an act test.
+1:10:19
+What we would call an annotation, some annotation which starts with an act and it's something that we can tag a function with.
+1:10:25
+To give you a special kind of category, in this case, I've got two choices.
+1:10:31
+I'm going to use the G-Unit test. So this is actually using Java's G-Unit Test Library from coughing.
+1:10:36
+But as we said earlier, there's a strong integration between the two.
+1:10:44
+And so we'll quite often use rely on a Java library because very many of those exist and they work very well.
+1:10:49
+And we also have nice inter operation between the language so we can use Java types, and that's fine and we can use this Java type.
+1:10:56
+You can see that when I import it comes from Oak J unit.
+1:11:03
+So that's a package that describes the organisation that makes Unit, which is an open source code base.
+1:11:07
+And so that's the package they put their code into, and we had the opportunity to pick,
+1:11:16
+you know, J Units test as opposed to a different kind of test from a different provider.
+1:11:21
+As soon as we tagged the function with Test, do you see that then we get a green play button next to it?
+1:11:27
+So this is intelligent, noticing the fact that we've got a test, an entry point into the programme.
+1:11:32
+So we've noticed that for many. That gives us a green arrow next to Main.
+1:11:38
+Jesus gives us a green arrow next to test. It doesn't give us a green arrow next to.
+1:11:44
+Every function, this one doesn't have a green arrow, so I can only star execution from the main or from a test.
+1:11:51
+Then. What shape we let's call a function and a policy in a query.
+1:12:02
+And then I want to check something about the results, so I want to check that it gives me the results that I want, so I'm going to use an assertion.
+1:12:12
+We've got lots of assistance that we can choose from built in or the testing libraries.
+1:12:21
+I think the one that we use probably most commonly and I think we used in the lab exercises a set equals.
+1:12:27
+So, sir, equals. Takes two parameters.
+1:12:35
+It takes an expected value and an actual value. And so expected value comes first, which is possibly slightly counterintuitive,
+1:12:39
+and if you get it round the wrong way, you get a slightly confusing error message or failure message, I would say.
+1:12:52
+So let's put it this way around. So this is the expected value.
+1:12:58
+One of the nice things that you get in intelligence is it gives you these hints,
+1:13:02
+which is showing you the name of the parameter in the function we're calling.
+1:13:06
+It's not part of the source code, it's just intelligence drawing a layer over the top.
+1:13:09
+And then here, let's call the of the second argument will be the result of calling a function and then we'll close this over here.
+1:13:17
+And if I run it now. You see that it says, Oh, right, well, it's not implemented.
+1:13:29
+And that's because if I check. I implementation there.
+1:13:37
+OK, well, it's still to do. So what should we do?
+1:13:43
+Well, for now, I'm just going to make it return. And that should make it go green.
+1:13:48
+So now you can see that we've got this down here, which is a green tick.
+1:13:58
+I've got one one test here, so I can run one, I can run this, which runs everything in the file.
+1:14:04
+Again, that's only going to be one.
+1:14:08
+And one other Scotland specific idiom is to use this format to describe you to write the names of your test methods,
+1:14:12
+which is that because backed, it is a valid character in an identifier.
+1:14:23
+We can actually do this. So this is just a different functioning.
+1:14:29
+But it means that if we run it. When it prints out down here.
+1:14:35
+It's going to print out in a slightly more human readable form with the spaces.
+1:14:42
+So this is just become an idiom that many people use for writing test function names in coffin,
+1:14:46
+not for writing real code name function names, only for tests.
+1:14:53
+And. So you'll see us do that in the lab exercises, and I would yeah.
+1:14:59
+Well, if not encouragement like say like that is a common way of doing it in Scotland.
+1:15:06
+If you want to write your name to make it read like a sentence. Don't worry if it's quite long, you're not going to call this function from anywhere.
+1:15:12
+It's just going to be almost like a documentation.
+1:15:19
+So if you're a Python programmer, can think of it almost like a dock string that you're using in the function name there.
+1:15:22
+So you'll see, I think especially in our lab. Exercise tests, that kind of pattern is quite common.
+1:15:30
+So we've kind of covered the anatomy of the test a little bit here. So we've got it's a test class that groups together.
+1:15:38
+All of it has to do with image search comes in the same package. We define a function.
+1:15:44
+If we had at. A different behaviour.
+1:15:50
+We can make another test function. So maybe this is, you know, dinosaur results and this is good results.
+1:15:56
+And so if it was birds, then we'd expect goal and then we could run this.
+1:16:08
+And then we have one passing on failing, and you can see in the case of it's funny, it tells you what the difference is.
+1:16:20
+This is where if we had our equals parameters around the wrong way.
+1:16:26
+This would be the wrong way round,
+1:16:30
+and he would say the expected was what you actually got and the actual was what you expected to get, which is very confusing.
+1:16:32
+So just be careful when you pass the parameters to set equals that you do get them the right way round.
+1:16:38
+Then we could go in quite easily, you know, fix our code and make it work in this case, shall we do it?
+1:16:44
+So in this case, what should we do when the query?
+1:16:52
+It is. Dinosaurs then overturned this.
+1:16:58
+And experts will return ego and otherwise.
+1:17:10
+OK, so now that sort of passing. Are there any questions about racing of tests?
+1:17:29
+All right, where is the directory for org generator test? So there is you won't be able to find a directory for that in the project,
+1:17:52
+and the reason for that is that we're using jejuni unit as a compiled library.
+1:17:59
+Um, yeah, actually, I'll tell you about this because you'll notice this if you're using the code in the lab,
+1:18:05
+exercise in the lab and in my project here, I have this file called build.gradle.
+1:18:10
+And there are various things that you can see in here, but one of the things that you can see is that it depends on it has this dependencies.
+1:18:17
+One of the things it depends on is J Unit version four point thirteen point two.
+1:18:25
+And that means that when we load, the projects intelligently invokes Gradle, which is the build tool that we're using.
+1:18:31
+And then it says, OK,
+1:18:37
+go off to the internet and download G-Unit version four point thirteen point two and then include that in the project in a compiled form.
+1:18:38
+So we haven't got the source code for it.
+1:18:47
+Just what we would call a jar file, a Java archive that contains the compiled code for units, units and then I think in interrogé.
+1:18:49
+Yeah. So here, if you open this external libraries part down here,
+1:18:59
+you can say that see that the libraries that we have included and have access to in our projects are all of these, including the unit.
+1:19:03
+And then if you open it up, then you can see these are all of the classes that are inside the unit.
+1:19:12
+Here is a unit test, but we don't have the source code it.
+1:19:18
+We've only got the binary files back and they're not actually included in the Git repository
+1:19:21
+or that's included in the kit repository is the Gradle file and the Great Alphonsus.
+1:19:27
+When you open this project on a new computer,
+1:19:33
+go and download these libraries from the internet and fetch them and make sure that they're here for people to use.
+1:19:35
+But that way, you can define for a given project exactly what the library dependencies are.
+1:19:41
+And then if someone else uses that, you know, clones your project open,
+1:19:46
+it's on there and they don't have those libraries or they have different versions.
+1:19:50
+The tools will download exactly the right versions to match with the code that you've written.
+1:19:54
+There's another question here, this is would you recommend any documentation, libraries or documentation standards?
+1:20:04
+I don't think. Yeah, I wouldn't say.
+1:20:11
+I think the closest thing.
+1:20:16
+You'll see, as I tend to write, my colleagues and I write stuff in the lab exercises that I don't tend to write a whole bunch of comments.
+1:20:19
+I try to live by the principle that if the code is clear enough, then it shouldn't need an additional comment.
+1:20:28
+But you might want to add a comment in order to explain why something happens in a certain way.
+1:20:35
+Or if you're writing a library class that a lot of other people are going to use, then you might want to write some comments.
+1:20:40
+And then I think the best way to document that is with what's called a Java doc comment structure,
+1:20:47
+which is something that can be processed by a tool and it produces a nice web page.
+1:20:53
+So I think if we look at. Is there documentation for this online?
+1:20:58
+So all of this stuff.
+1:21:09
+If there's going to be generated, yeah, this stuff is probably generated from Java doc documentation, which is written on the code itself.
+1:21:13
+Definitely. If you look in the Java Standard Library.
+1:21:21
+All of this stuff is generated from annotations and comments that are done in a special format on the code itself.
+1:21:34
+But I think in general,
+1:21:42
+I would say my personal view is to be quite minimal on the commenting and only to include stuff if I feel like the code itself is not clear.
+1:21:44
+I feel like you can explain a lot in the code itself by writing things in a nice, clean style with very explanatory function names and variable names.
+1:21:53
+And you can also explain things in things like commit comments.
+1:22:03
+So typically, I haven't written a lot of comments in the code, but if you do need to, I think either just a standard comment.
+1:22:06
+You know this. Something like this is fine.
+1:22:17
+Yeah, I think just keep it simple would be might be.
+1:22:28
+OK, let me check. OK, so a couple of other things I.
+1:22:42
+A couple of other things I wanted to talk about.
+1:22:59
+One was, if you've been using Haskell for a few weeks, you will have got very into the concept of everything being evaluated lazily.
+1:23:02
+And so you know that if you create a very long list and then you set up a function to be mapped across it,
+1:23:13
+that evaluation doesn't actually happen until it's necessary to do it.
+1:23:21
+And that is something that is basically fundamentally different in an imperative language.
+1:23:26
+And so in Kotlin, it's not it's not lazy by default.
+1:23:31
+And so if you say, let's create a large list and then let's map the function across it and then let's just examine the one value.
+1:23:34
+It's still it's going to evaluate the map across the whole list. I mean, let's try and I'll shape that.
+1:23:44
+So let's make some examples. So here do another main so a function like create a list.
+1:23:51
+I just put some numbers into it. Something like this.
+1:24:16
+And let's create a function that's going to square the individual numbers, so I just do square.
+1:24:24
+Which takes in turns another event, and it's just x times X.
+1:24:34
+Then if I did list. My.
+1:24:47
+So here I can use a function reference to refer to that function. And then I.
+1:24:58
+Yeah, actually, let's do something else, let's create a block body.
+1:25:09
+So let's we turn it into something that's a bit more imperative if I can actually log what's happening like trend line.
+1:25:17
+And. Something like this, so we're going to say, OK, every time we call a function, let's print out the way squaring it.
+1:25:26
+Then we did the mapping and then we can say, let's print by.
+1:25:44
+So you can see here that it's done all of that mapping. Before we got to this statement, even though we only examined ELEMENTI.
+1:26:16
+And so if you were writing a high school programme, wouldn't do that if we'd say,
+1:26:28
+Oh, OK, you've configured a map function to be applied to the elements of a list.
+1:26:33
+And it was to create this class list. And then when we evaluate what we would say, we force.
+1:26:40
+The function to be evaluated because we examine squares to then the mapping would be applied.
+1:26:47
+So that's the lazy approach.
+1:26:52
+So maybe that's something just to get your head around to think about differently is that in Scotland by default is not lazy.
+1:26:54
+It's going to eagerly evaluate anything that you say.
+1:27:02
+So if you set up some transformations on a list and it happens to be a large list is going to do all of those computations.
+1:27:05
+It's not going to wait until it's necessary later on.
+1:27:15
+So this is more about it being imperative, going step by step three and saying, Do this thing, then do this thing, then do this thing.
+1:27:19
+The alternative, if you do want to make something that's lazy, is that you can do it, but you have to do some extra work and this is saying.
+1:27:42
+OK, we've got a list that's not inherently a lazy structure.
+1:27:51
+If we would like to have a lazy structure, we can create something which is called a sequence.
+1:27:54
+And so if I show you that instead, this is like, OK, we've got our list.
+1:27:59
+And it has a function that we can call code as sequence.
+1:28:05
+And then if I look at the type of this, this is a sequence event rather than a list of things,
+1:28:16
+this one's a list of, it's like we can put the types in explicitly. This one's a sequence, and if I could map on the sequence.
+1:28:21
+Then what's going to happen is that that is going to be a lazy configuration, so it's not going to do this mapping now.
+1:28:40
+What we do, though, is in order to.
+1:28:49
+Convert this back to something that we can access like this that needs to be a list so we can then say, OK, well, that's.
+1:28:53
+Did do this and at this point. Convert it into a list and then get the second element out here, so if I run this one.
+1:29:01
+Think about what you expect to see. Did I do something wrong that didn't seem to be there?
+1:29:14
+On it. Right? Here we go. So first of all, it printed out did the mapping.
+1:29:23
+Then at this point where we call to list to list is the forcing function.
+1:29:30
+So it's not going to only evaluate the square element too, because it's not this that's forcing sorry.
+1:29:35
+This isn't forcing, but this is forcing. This is saying make a list, so evaluate all the transforms.
+1:29:43
+Here we only had one, but if we'd mapped it again, say that we. And.
+1:29:50
+That's just scratching them again. So you can see here, right, OK, it says, OK, we did this line,
+1:29:58
+and then when we call this, it's doing this square, this square, this square, this girl.
+1:30:11
+And so they're all then invoked when we convert it back to a list.
+1:30:15
+So this can be useful and you may see intelligence suggest you to do this conversion to a sequence and
+1:30:20
+back to a list note when we have a single transformation to do like a single higher order to function,
+1:30:26
+to apply. But if we have lots of them to apply to the same list because what's going to happen then is that
+1:30:32
+if we take a list and we map a function and then we take the resulting list and we map a function,
+1:30:39
+then we take the resulting list and we map a function. It's going to create intermediate lists for the results of each step.
+1:30:45
+Whereas if we take it through it with a sequence, it doesn't create those intermediate lists.
+1:30:52
+So if we have multiple functional transformations to apply, we can go through all of these steps in sequence.
+1:30:57
+And then eventually we say, OK, now we need a list so that we can access it elements, and then we're going to convert it back to a list.
+1:31:04
+And that's going to be the forcing function that's going to trigger all of those evaluations to happen.
+1:31:11
+So. I think you don't need to think about a sequence as your default mode of operation.
+1:31:17
+A lot of times just doing simple transformations on the list, especially for small lists, is totally fine.
+1:31:24
+But if you were transforming very, very large collections of a lot, you in hundreds of thousands of elements.
+1:31:30
+And you had multiple steps of transformation to do on each list that might be more efficient if you could get it into a sequence.
+1:31:38
+Did all of those things and then transferred it back to a study and.
+1:31:46
+A couple of questions, one was about the double column that this one is a reference to dysfunction.
+1:32:03
+If I put this like this, it's going to say, Oh, I don't know what that is because there is no variable called Square.
+1:32:10
+So one of the things that we covered, I think in the pre-recorded video was that you could.
+1:32:19
+Let's have a different name. Have a variable, which is a function, and this is a function of X.
+1:32:27
+If I can do this and if I define my variable, my value to have a value which is a function, then I can do this.
+1:32:46
+But this one is not in the scope that this is in the scope of functions that we know about.
+1:32:53
+So then if we want to use it this way, then we have to put this double colon to distinguish the fact that this is a function we're trying to look up.
+1:33:00
+This one is here. I mean, I think we could do. This and then we could use it without a double coat on here.
+1:33:07
+So without a double carried on, he's always looking for and identify which is in scope in this function.
+1:33:15
+This is looking for what we would call a function reference, like the name of a function that's defined.
+1:33:21
+Here or in another Skype. I sold that a sequence was ordered, but the question about ordering.
+1:33:28
+864 for 16, but indeed, maybe it isn't, because it does seem to.
+1:33:58
+I've done that. That's interesting, that would be worth looking into.
+1:34:05
+I think if you look into the documentation, you can find out now that it may be that the sequence is ordered, but the computation is done in parallel,
+1:34:08
+in which case it may not be processing all of the elements in order, even though it's keeping them in order.
+1:34:17
+That would be worth something to check in the documentation. I'm going to make a note to look out for myself.
+1:34:24
+But from the caller's point of view, it shouldn't shouldn't make a difference,
+1:34:36
+because when you convert it back into a list and you're going to get something that's in order.
+1:34:40
+So the question about whether colon colon can see a function that's defined within another function.
+1:34:56
+I'm not sure I don't think so, because.
+1:35:05
+Let's try and see that so the inside function, because you can't define what I mean, you can define a function here.
+1:35:11
+So let's see, can we do that too here? No, I can't see that one, because that one's scope is inside here.
+1:35:34
+When I was talking about other scopes, I meant in another package, for example.
+1:35:50
+So here we have to find a job search for function so we could do search for.
+1:35:54
+As long as we imported it. So say it doesn't match the type signature, so it's not happy, but we can find a phone,
+1:36:03
+we can use a function with a function reference that's defined in another package or in another file.
+1:36:11
+That's fine, but we can't find something that's local inside another function because that's hidden in terms of the scope.
+1:36:17
+Cool. Have you just checked my list of things I wanted to talk about? OK, so just a couple of other things that I think would be useful.
+1:36:32
+So one of the things that you might have.
+1:36:57
+Scene, possibly, I can't remember whether we did this in the lack of exercise is the idea that when we define a function.
+1:37:01
+And let's keep this actually. Can give it a formal parameter and arguments specified, but we can also do something like.
+1:37:08
+This. And that means that we can give a default value to this function, maybe this.
+1:37:29
+Yeah, let's. That screening of that's due at.
+1:37:44
+Yes. Yes. And looks like so now we've got a function that takes two parameters.
+1:37:55
+So I can say let's print increments. Five and Increment does take a second parameter, but I've given it what we call a default value.
+1:38:31
+Yeah, and so that means if I don't specify it, use one so I can run this function.
+1:38:46
+It should print six because we're going to call increment where X is five and I, we didn't give it a value.
+1:38:53
+So therefore it's going to use the default value that specified, which in this case one.
+1:39:00
+So it should print six, which it did. And if I say increment this by two.
+1:39:04
+And hopefully now we should see seven, so this says if I don't specify the value,
+1:39:15
+if I don't specify for a particular argument, if it's defaulted, just use the form.
+1:39:21
+If it's not defaulted, it won't let me do that.
+1:39:26
+So if I say this and I haven't got the full value here, it's going to complain that you haven't passed enough stuff.
+1:39:28
+But if there's a common value. For this, we use some of most of the time, and just occasionally we want to overwrite it.
+1:39:37
+Then this is fine. The other thing that you quite often see along with default values is what's called a keyword argument.
+1:39:52
+And so this says, let's see. Let's give a default value to both of these things.
+1:40:04
+So if we don't specify anything. But is going to default extra to an eye to one?
+1:40:18
+So it should print three. Here we see three, because using the default value for both of the arguments.
+1:40:25
+But if I want to specify just one of them. Then I can say, OK, well, let's specify I.
+1:40:34
+It's five. And so this is going to take OK access to that's the default value.
+1:40:43
+But he wants only to be five, so it's going to override this one. And so we should see seven.
+1:40:49
+I guess, or I can specify exit five, in which case we should see six.
+1:40:58
+Well, I should say X is five, and I is.
+1:41:07
+For which case we should see nine. But at this point, I specified everything, so I might as well go back.
+1:41:13
+To this. But should still get me nine. To hear the difference there, so here it says X and I.
+1:41:24
+But those are just renderings on the in intelligent in the edit, just showing you.
+1:41:33
+Oh yeah, you passed five. And by the way, the name of this parameter is X, whereas it had previously was actually write code that said X equals five.
+1:41:39
+So if you committed to get like this point, it would say X equals five in your source code, like in the text as it's recorded.
+1:41:48
+In this case, it would just say bracket five comma for the ex colon and the icon on it, just rendered by the editor as hits on the top.
+1:41:58
+So those default arguments and the keyword arguments are things that you'll see some of the time,
+1:42:09
+I think, in the programmes, and it's quite useful to be able to especially default some things.
+1:42:15
+Often the last parameter of a function is something that you can default quite usefully.
+1:42:21
+And so then it's possible just to omit that or any of that.
+1:42:25
+So you put the kind of most critical parameters in at the beginning and then as you go through, you start to omit them and then just have default.
+1:42:29
+And you said, if you want to specialise, then you can just add more and more parameters into the call.
+1:42:36
+So you'll see that in some of the standard library calls that also can be a useful device for writing functions this way.
+1:42:41
+OK, I wanted to show you one more example just before we finish today,
+1:42:58
+and that is maybe just to write a slightly bigger programme to do something a slightly more sophisticated I've
+1:43:03
+done very kind of simple examples just to show you different bits of the language and how the tooling works.
+1:43:10
+Let's go through the process of, you know, thinking about and writing a slightly bigger function and see how that would be put together.
+1:43:16
+So I'm going to write a function that's going to do the word frequency counting on a certain piece of text.
+1:43:23
+So we're going to put in a certain sentence. I want to say construct a table of how many times each word appears in that piece of text.
+1:43:31
+So kind of classic algorithmic example. Not that complicated to write, but slightly more than simple examples to be done.
+1:43:41
+So the first thing I'm going to do is I'm going to write a test for it to make sure that
+1:43:49
+we get the correct answer and that we can use the test to help us think about the API.
+1:43:53
+So actually, just to make sure that it matches up, I'm going to create an icy dock package.
+1:43:58
+Oh, that was the wrong thing. Quick, the wrong thing there.
+1:44:04
+I'm going to create an IKEA package under tests as we match up.
+1:44:13
+I'm going to create a new. Test file.
+1:44:21
+I'm going to call this word. Frequency test at it to.
+1:44:25
+I'm going to start thinking about what the test cases are. Let's define the first one.
+1:44:34
+So the first one is I can count a single word.
+1:44:38
+I use the tactic notation to name the function.
+1:44:44
+There are no parameters function because it's a test, I'll define it as a block body as we might do a couple of steps.
+1:44:53
+I'll take it with test. We're going to pick that test from units.
+1:44:59
+That imports it, as we saw before, this fall is defined as being in Package IQ because it actually put in for us.
+1:45:05
+So then I want to think about, OK, what's the API? So I'm going to have a function called word frequency.
+1:45:13
+I'm going to pass in a string like, let's just start with a single word like this one.
+1:45:20
+And then if I want to get the word frequency,
+1:45:27
+perhaps for the result type that I want is something a little bit more complex than what we've done so far.
+1:45:30
+Maybe I'd like a list of paths where each pair is the word and the frequency of that word, so I should get back from this.
+1:45:35
+Something. That is a little list of heads where the first the only pair in this one is programming and one.
+1:45:48
+So this is making the assertion in the test that this is my expected results. This is calling the function.
+1:46:04
+I'm going to import this assertion. I'm going to pick this one, which is from Junior.
+1:46:11
+And then here we watch says, well, this function is not defined.
+1:46:22
+So let's create now something you know, I see doctors said new cochlear file.
+1:46:26
+That's the word frequency. And then if we come back, what's next problem are we don't have a function of that night, so we don't need a class.
+1:46:32
+So this is where it's frequency, which takes some text, which will be a string and we want to turn a list of pair of string.
+1:46:44
+And it's. And let's just say it's to do for now that should we should be able to check now in our tests,
+1:46:58
+everything compiles that means that type signatures all match up. So I run this test and it fails and it fails because that's not implemented,
+1:47:08
+and that's kind of what we expected at this point because we haven't written the code.
+1:47:20
+So now let's just go and maybe I'll add a second test, actually.
+1:47:24
+You can count. Multiple words, so how about if we impose the texts?
+1:47:32
+Something like this, then the output that I expect is what programming one?
+1:47:47
+Is one. Something like this.
+1:47:54
+So that's from these of I should fail. And then let's see how we can implement that.
+1:48:11
+So we're going to combine a few different approaches now we're going to think about some stuff that we can do with strings that we've
+1:48:24
+seen in the pre-recorded videos and some stuff we can explore and also try and think about some functional and imperative approaches.
+1:48:30
+So the first thing I've got is I've got a string and I would like to split that up into the words.
+1:48:39
+So let's see what we can do with text. So what are the nice things about intelligence that allows you to explore?
+1:48:43
+So let's scroll down this list and loads of stuff.
+1:48:49
+But actually the most useful one, I think is going to be splits.
+1:48:53
+And if I say split on space, that should give me back. Something that.
+1:48:59
+It's if I put the type in a list of strings, these are going to be the individual words and then you think, OK, right, I've got a list of words.
+1:49:07
+And then what I'd like to do is actually convert these into something where we can add it up.
+1:49:18
+So I'm going to do what I'm going to do a map across this list of words.
+1:49:24
+And so I'm going to say each word, I'm going to convert it into a pair, which is the word and the number one.
+1:49:30
+So that is going to give us like a whole bunch of pairs that each of them has the words and the number one.
+1:49:42
+So actually that might make. The first test pass.
+1:49:48
+It does, but it doesn't make the second test pass.
+1:49:57
+So this one passes, but this one doesn't because it's it's not really one and really one instead of really empty.
+1:50:00
+So we need to be able to add this up. So one thing we could do is hang with your Haskell head on.
+1:50:12
+Maybe you're thinking I could write a fold across this that would accumulate these and add them up, and we probably could do that.
+1:50:17
+And I'm sure that would be possible.
+1:50:24
+But another thing that we could do is to explore further what Scotland collection providers said, OK, what can we do with this list of paths?
+1:50:26
+One of the things we can do is group here. And so now we're taking advantage of the library and saying, OK, what do we want to group this part by?
+1:50:36
+Well, let's group it by the first thing in the palm, and that's going to give us what we call a map,
+1:50:44
+which is again something we'll come onto in the following weeks. And this is going to be a mapping from words to the list of paths.
+1:50:52
+And then once again, it's. This is it grouped, and then what I want to return is how is this going to work?
+1:51:01
+Let's think. I want to map these groups, and for each word and the list of paths,
+1:51:16
+I want to return the word and the length of that list, so let's return the groups, which then we can map.
+1:51:28
+And then we've got this is a structured definition here, so we can do this.
+1:51:38
+We've got a word and a list of paths.
+1:51:45
+And then so we want to admit then a pair of the words, and let's exercise.
+1:51:51
+How does that work?
+1:51:58
+OK, so that passes our tests, and then the thing that we could do here is we've made we thought about that in lots of subsequent steps.
+1:52:03
+But actually, we could probably stream this line this bit by saying, OK, well, let's just take this function and get rid of this variable.
+1:52:12
+Actually, I can get intelligence to do that for me so I can take this out.
+1:52:21
+Maybe I can take this out. Actually, maybe I can take this out and really just put it all into one line.
+1:52:27
+So I'm going to do text dot splits that map to group by and map again.
+1:52:33
+And now we've only got a single expression, and then maybe we could do this.
+1:52:40
+So it's really thinking about it imperatively to start with and then converting
+1:52:47
+it into what I think of as like a functional pipeline to do the transformation.
+1:52:51
+But I also used those test case examples to guide what I was doing to see when I was partly there and see what I got to the end.
+1:52:56
+There's more stuff that you could probably do with this fire with various experimentation.
+1:53:05
+But I'll leave it there for now is becoming close to the time.
+1:53:09
+I'll hang around for a few more minutes after he stopped the recording if people have got any other questions.
+1:53:13
+But otherwise you've got a lap this afternoon, I think. And then there's another lab on Friday.
+1:53:18
+Hopefully, the lab exercise this week exercises some of the stuff we talked about today and the stuff from the videos,
+1:53:22
+and then we'll do the same kind of format next week. Well, there'll be more videos that come out Monday.
+1:53:27
+More sessions like this on Tuesday and a different lab to do throughout the week.
+1:53:34
+So I think let's round up that. But as I say, I'll hang around just for a few more minutes to answer any questions.
+1:53:39

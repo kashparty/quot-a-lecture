@@ -1,0 +1,285 @@
+ID: 7552a87c-3d4f-48e4-bdd2-adf800cc749d
+Title: idb-topic-21-serialisability-and-recoverability
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+So in this topic, we review what are transactions in databases and the properties they have.
+0:01
+And then look at the two key concepts behind transactions that are serialised ability and recoverability.
+0:07
+First of all, let's define what a transaction is, and it's something which has four properties associated with it,
+0:15
+often called the asset properties of transactions that they are atomic, they're consistent, they execute in isolation, and they have durable results.
+0:22
+And the concept is that I'm able to put any number of Esquibel statements into a transaction and have them executed
+0:33
+in a way that I know there will be no problems with concurrent execution of either transactions interfere with them.
+0:42
+And there would be no problems if the transaction only gets half executed.
+0:49
+I have my database left in the inconsistent state. Let's go through the four properties.
+0:53
+But before we do so, let's look at this transaction in a little bit more depth and note that if it is executed as a whole,
+1:00
+if there is a certain amount of cash in the bank before the transaction execution, then there'll be the same amount of cash after the execution.
+1:09
+And the reason why that is it's because the first update statement is taken 10000 pounds away from the cash figure,
+1:17
+the sort code 56 and the second update statement is adding 10000 pounds to the cash figure for Saltcoats 34.
+1:24
+So clearly, whatever the total amount of cash in the bank was before this transaction executed, it must be the same afterwards.
+1:32
+So if you look at the Example database, add up the cash figures for branches around hundred seven.
+1:40
+And so when that transactions executes, the total amount of money will stay the same, but clearly £10000 sort of moved from 56 to 34.
+1:47
+Notice also from this example schema that the fact that I have declared that number is a key of the account table means that I cannot have
+1:57
+to account 100s in the database and also because I have declared a foreign key from the account sort code to the branch source code.
+2:07
+These three accounts for shortcode 56 means that there has to be a corresponding branch 56 in the branch table.
+2:16
+With that in mind, let's now go through and look at the four properties of transactions and a little bit more depth.
+2:26
+First of all, Atomic City. And this says that the database system will guarantee that the transaction gets executed as a whole.
+2:33
+So if we happen to have executed the first update statement and then the system crashes for some reason, such it's been unplugged as a power failure,
+2:42
+then the database system will guarantee that it can roll back the state of the
+2:50
+database to undo the action where I've updated the cash value of one branch,
+2:55
+but not the other branch. And clearly, this is very useful.
+3:00
+That means you don't have to worry about writing your code in a way that data can get into inconsistent state if there's some crashed
+3:04
+in the execution of it because the database systems can't guarantee that either transactions are executed as a whole or not at all.
+3:11
+Consistency is all about maintaining the integrity of the database, and in particular,
+3:22
+if the database was in a consistent state before the transaction, then it will be afterwards.
+3:27
+So if I try to execute these two statements in a transaction, they would both fail because they both violate the consistency of the database.
+3:33
+The first statement is trying to remove the branch of sort code 56 that you
+3:41
+recall from the example data that there are free accounts for Sauk for Branch.
+3:47
+So Code 56 and so remove from this branch would violate the foreign key from the accounts to branch table.
+3:52
+And then the second statement is also rejected because it's trying to insert a new account 100 with different details from the existing one 100 and
+3:59
+the fact that one hunt the account number has been declared as a primary key prevents to account one hundredth being added to the account table.
+4:09
+Isolation means that each transaction executes as if no other transactions are executing at the same time,
+4:20
+even if in fact there are concurrent executions. Let's just look an example where you'd have a problem this property was not held.
+4:27
+Let's suppose I have two transactions happened to start at the same time.
+4:35
+I've got the transaction, which I thought you'd be talking about moving money from one cash figure in one branch to another,
+4:40
+cash figure in another branch. And there's a second one which is trying to find the total amount of money in the bank by summing up the cash figures.
+4:47
+Now, clearly, the second transaction should always read the same value, regardless of whether executed before or after this transaction.
+4:55
+But if I had no isolation and it happened to execute in the middle of the transaction, it would see £10000 less as a total figure.
+5:04
+A data based system implementing isolation would ensure that this transaction transaction only sees a
+5:15
+value corresponding to what existed either before or after the execution of the left hand transaction.
+5:21
+Last year, the durability property means that if I execute a transaction and I'm told that it is finished and the system crashes afterwards,
+5:32
+the database system guarantees that whatever caching might have been done just holding information in memory,
+5:40
+sufficient information has been written to stable storage,
+5:47
+SSD drives or hard disk drives such that the database system can recover the results of your transaction.
+5:51
+So you know that a commitment of the transaction means that the data is secure permanently and
+5:58
+you're not worrying about whether information has been flushed out from caches into stable storage.
+6:04
+The way data based systems analysed the execution of transactions is to take in blocks
+6:15
+of code and convert them into basic operations on data and the basic principle,
+6:21
+this are quite straightforward.
+6:28
+You look at your assets, Vescovo statements, and you need to think about what basic operations need to occur in order to execute the transaction.
+6:30
+And in particular, what we do is look at the operations of a set of read and write on objects in the database.
+6:40
+For the purposes of this course, I'm going to assume that the objects you're dealing with are rose in the relations, taking the branch table.
+6:47
+That means I can regard that I have three objects in the database for the three different rows,
+6:56
+and I abbreviate the name of the table to a single letter and subscript it with the key.
+7:02
+So be 56 is referring to the branch row as Saltcoats, 56, and B34 is referred to the branch table row, which saw code 34.
+7:07
+Then the update statement that is executed first is trying to read and then write the branch row with Sort Code 56,
+7:20
+and the second upstate statement is attempting to read and then write to the branch row with sort code 34.
+7:30
+And the annotation I've put in here, which I will not do in all future transaction histories, is shown what the change in value occurs.
+7:39
+So in particular, the first history statement is reading In branch code fifty six,
+7:47
+it's going to read in ninety four thousand and take away 10000 from that writing back eighty four thousand and the 16.
+7:52
+That's going to be in eighty nine hundred pounds for Branch 34 and right back eighteen thousand nine hundred.
+7:59
+So the basic pattern of the transaction is that was start with a begin of the transaction,
+8:07
+and this only be put into histories where it's necessary for discussion.
+8:13
+So usually you'll be admitted and just inferred the by the fact that there was some operation, meaning the transaction must have started.
+8:17
+You have various read and write operations on different objects, which the transaction is reading and writing to.
+8:24
+And then you finish the transaction with either commitment or have bought the bought means that you want to undo all the actions
+8:33
+of the transaction and turn the take roll back the database to a state which was the same as before the history are executed.
+8:40
+And an important thing to note is that a similar pattern of skill will result in a similar pattern of read and write operations.
+8:50
+So in particular,
+9:00
+as I did another transfer between two branches say this time moving two thousand pounds from Sukkur to 34 and take and adding it to sort code 67,
+9:01
+I end up with the same pattern of read and write this time.
+9:11
+First of all, reading and writing from Branch 34 and then afterwards reading and writing to Branch 67.
+9:15
+And of course, this time, assuming the previous transaction was already executed,
+9:23
+I'm going to be reading into higher value for the cash figure of the branch,
+9:27
+34, taking two thousand pounds to write back sixteen thousand nine hundred and then Branch 67, which hasn't been changed.
+9:33
+It will have 2000 added to it. In any practical database systems we do not want to restrict,
+9:40
+the transactions are executed sequentially, we won't be able to allow concurrent execution.
+9:52
+If not, it would mean that when we have a large volume of transactions,
+9:58
+we have to wait for each one to execute in sequence and we'd end up with a very poor performance of the database system.
+10:02
+So allowing concurrent execution is essential for allowing high throughput of transactions in any of these in the busy database system.
+10:09
+And the concurrent execution of histories simply means that some interleaving of the operations so important
+10:18
+property to note here is that the order of the operations in a particular history does not change.
+10:27
+So if you notice the red coloured operations which belong to history one, the order then does not change in all of these free examples.
+10:34
+And simply for the green history to the order of the operations for history, two does not change.
+10:45
+But what does change between the three examples is where I find the different operations of each one and each to with respect to each other,
+10:51
+and this interleaving can be changed by the database system to allow it to improve its performance.
+11:01
+However, in doing so, we need to maintain the asset properties of the transaction and particularly you have the issue of isolation be an issue
+11:10
+because you do not know what has been changed by one transaction that you might be reading in another transaction.
+11:20
+And this to ensure that we have a proper concurrent execution that to maintain the asset properties requires.
+11:28
+I maintain two simple but in fact quite difficult to understand properties that are serialised ability and pickup culpability.
+11:35
+They have simple definitions, but the consequences of these simple definitions are difficult to understand and then difficult to maintain in practise.
+11:44
+And this is going to be the subject of the next few topics.
+11:54
+As lies, the execution of transactions is some concurrent executions that has the same result as some serial execution of their transactions.
+11:59
+So taking my two examples, each one next to it means I would regard them as being soon possible.
+12:11
+If the end result was equivalent to either executing each one, followed by eight to or eight to follow each one.
+12:19
+So the Sir Liability property just means that the concurrent execution is equivalent to some serial execution, but not a specific serial execution.
+12:28
+And the recoverability property says that no transaction commits depending on
+12:39
+data that has been produced by another transaction that has yet to commit.
+12:44
+And the reason why you want that to be maintained is that that second transaction has not yet committed nay abort.
+12:50
+And so you do want to have transactions made permanent in the system, which depend on data that might not ever have existed.
+12:58
+If you are forced to roll back the transaction that was not yet committed when you committed the first transaction.
+13:06
+Simple definitions, but difficult to always put correctly into practise and to identify them.
+13:14
+So let's look at three examples and identify whether they maintain the CEW liability and recoverability properties.
+13:20
+The most popular answer here is B, and indeed that is the correct answer.
+13:34
+This history is not C realisable, but it is recoverable.
+13:40
+First of all, let's justify why it's not c reliable. The key observation here is to do with the reading and writing to branch 34.
+13:45
+And in particular, you'll notice that the both transactions are going to be leading the branch 34 before they both write to it.
+13:55
+And that means, of course, that whatever value was read by transaction two must be the same value has as read by transaction one.
+14:04
+Yet transaction one then goes on to update the object independent of what transaction two is doing to the object.
+14:14
+And similarly, transaction two updates the object disregarding what transaction one might do into the object.
+14:21
+And in particular,
+14:29
+we therefore see that this is not equivalent to some serial history because any SURU history must have had either this lead operation by
+14:30
+history one reading the value produced by history two or the read operation of history to read in the value produced by history one and need,
+14:39
+as is the case in this particular example. So it's not so reliable, however,
+14:50
+is recoverable because the recoverable rule says that no transaction commits depending
+14:57
+on data read that's been produced by another transaction that is yet to commit.
+15:02
+And in fact, here neither transaction is reading data that's been produced by the other transaction and therefore trivially.
+15:07
+It is recoverable with execution. Let's try another example.
+15:14
+He is the most popular answer is D, and indeed that is the correct answer.
+15:27
+This is both a serialised of and recoverable execution going back to the interaction
+15:32
+these two transactions have on reading and writing to Branch 34 in this particular case.
+15:39
+Transaction two is writing to Branch 34.
+15:46
+And afterwards, transaction one is reading the value produced by Transaction two,
+15:50
+so the execution must be equivalent to a serial execution where history one history two has executed completely and then history one follows it.
+15:56
+So it is a super laughable concurrent execution. However, it's not recoverable.
+16:07
+It is recoverable because when you read the data in here in history, one from transaction two, you have a possibility of it not being recovered.
+16:13
+But the history one waits until the commitment of history to before it commits.
+16:26
+So when it commits all the values it's read from, other transactions have been committed and therefore its committee,
+16:33
+depending only on data produced by other committed transactions.
+16:40
+Let's finish off by looking at a third example. Most popular answer here is C, and indeed, that is the correct answer.
+16:46
+This example is little changed from the previous one, and therefore the argument thought sue likeability is the same.
+17:02
+The change here is the order of commitment and the fact I have got c one here before the commitment of history to means the transaction.
+17:09
+One has both read the value produced by another transaction that's not yet committed and then committed with that dirty value.
+17:18
+And so when that commitment occurs, history one is becoming none recoverable because it doesn't know that what will happen in the future to history.
+17:28
+Two In particular, if I aborted history to here, then all of its operations should have never existed,
+17:37
+and therefore the value read by history one would have been a value that never
+17:45
+existed and would be incorrect for it to commit with that nonexistent value.
+17:50

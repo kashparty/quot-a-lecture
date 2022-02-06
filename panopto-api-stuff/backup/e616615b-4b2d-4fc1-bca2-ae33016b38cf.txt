@@ -1,0 +1,203 @@
+ID: e616615b-4b2d-4fc1-bca2-ae33016b38cf
+Title: Induction over Numbers - 2
+Category: 1 - Induction over Numbers
+Lecturer: Sophia Drossopoulou
+Date: 23/01/2021
+Welcome back. We will not discuss a second example where we will be applying proof by induction.
+0:02
+We will want to prove that for all numbers, seven pools of N plus five is exactly divisible by three.
+0:10
+And a way to formulated these to say for all numbers and there exists an M such that seven to one and plus five is three times N.
+0:19
+So this is a property that is, again, starts with a universal quantifiers.
+0:31
+And the quantifier applies to the naturally numbers and therefore we expect to be able to be to prove it by induction.
+0:37
+Again, I would like you not to write the induction principally for this particular property.
+0:46
+In order to do that, we concentrate on what is the property we want to prove the property of an ease,
+0:57
+that there exists an M such that seven to the power of N plus five is easy times and.
+1:07
+And when we apply this to the generic principle,
+1:20
+we need to translate fee of zero to that form of here so that we say that exists an M such that seven to the power of zero plus five is three times M.
+1:25
+And now we want that. We want to assert that for all gay.
+1:43
+If Beyoncé holds, then be of one.
+1:50
+And that we look as follows, we will say, for all K out of the natural numbers.
+1:55
+B of K. So that exists, let's call it M one, so that the seven to the power of K plus five is three times and one that complies P of Cape plus one.
+2:04
+So again, I'm looking here at the property. Over N.
+2:19
+That can, of course, say there is an end to so that the seven to the K plus one plus five is three times and two.
+2:29
+And all this will imply for all an and out of the natural numbers.
+2:43
+B of. N so seven to the bottom end plus five, these three, whoops, sorry I made a mistake.
+2:52
+So for all an out of the natural numbers, there exists an M.
+3:12
+Again, out of the natural numbers of the seven to the N plus five is equal with three times N.
+3:18
+And here I have highlighted in yellow the location where we are replaced and by a particular value.
+3:29
+So here we have got the property for zero and therefore we talk about seven out of zero.
+3:36
+Here we have the property for gay and therefore in the left hand side of the implication.
+3:45
+We talk about seven to the gay, whereas here we have K plus one.
+3:52
+And therefore the rights inside of an implication, we talk about seven to the gay plus one.
+3:57
+And in the conclusion and then we talk about seven to the power of N.
+4:02
+Here I have the inductive principally for this assertion written in Neatly and Ready.
+4:10
+And it will be in the footnotes. And I would like to point out to you that here I have decided to use the same name for the existential quantifier,
+4:21
+even the base case in the left hand side of the implication.
+4:33
+And in the conclusion. And here I decided to use a different name in prime.
+4:39
+The reason is that the name that we're using here doesn't matter because the scope of this name,
+4:48
+the visibility of this name is only within the what follows the existential quantifier.
+4:55
+And therefore, what I call this one does not affect what what I call this one does not affect what I call the other one.
+5:02
+If there are any questions about that, we can discuss it in our Tuesday session.
+5:12
+Oh, we would like to develop the proof for the property that we had earlier.
+5:17
+And in order to develop it, we remember the prints that we have derived earlier on the prints to prove says.
+5:25
+There exists an M so that Saddam to the power of zero plus five equals three times N and.
+5:35
+For all, Kay, if there exists an MSO that seven does a bar of K plus five times and then there exists and then prime.
+5:42
+So that the seven to the K plus one plus five is three times in prime.
+5:52
+What I want you to do is given that we have developed the principle, I want you to develop the schema.
+5:58
+For the schema in the base case, we need to prove exactly what is written in the first part of the conjunction and for the inductive step as before.
+6:08
+For the existing, in order to prove something that has stopped with an existential quantifier, we take an arbitrary K.
+6:21
+Then we assume in the inductive hypothesis, the left hand side of the implication.
+6:29
+And we have to show the right hand side of the implication.
+6:36
+Now we have set up the schema. This is a pretty mechanical step.
+6:42
+If there are any questions, please let's discuss them either in Piazza or on Tuesday.
+6:48
+So now we move on to the proof and we will first discuss the base case and then bring back the ship again.
+6:56
+Please have a go. In the base case, what we have to show is this assertion.
+7:03
+So what I want to be able to say is at some point at the end of my proof that the there exists an M.
+7:17
+So that seven to the bottom zero plus five is three times M.
+7:25
+But they have not shown up yet. So in order to show it, we start with manipulating what I was given seven to zero plus five is one plus five.
+7:31
+And that is by definition of power. And this is, again, a six.
+7:44
+By arithmetic, and this is two times three by arithmetic.
+7:52
+And now I can prove what I wanted to prove.
+8:01
+Now. Namely because.
+8:07
+Seven to the zero plus five is two times three.
+8:16
+And if I take em to be two more, then I know that there exists an am such that seven to zero plus five is three times in.
+8:20
+So I'm now done with a base case. And here is how the base case looks in your footnotes, which you will be obtaining after this lecture on Tuesday.
+8:33
+And now we want to prove inductive step. And what we have to prove in the inductive step we already saw earlier when we developed the schema,
+8:48
+non thinking needs to happen would just write it up.
+8:57
+And we need to feel the proof for the inductive step.
+9:01
+Please try to do it and stop the video and come that come back when you have done.
+9:09
+This proof has got a little bit of a challenge because we need to deal with the existential quantifiers.
+9:18
+And if you are unclear about how to do it, we will be discussing it right now.
+9:25
+So let's start thinking again. What I want to be able to stay in the end is there exists and then prime.
+9:30
+Such that that seven to the power of Kate plus one plus five is three times and prime.
+9:40
+But the problem is that we do not know how to justify that.
+9:49
+We. We should start with the left hand side.
+9:54
+So start with seven to the game, plus one plus five.
+9:59
+Right. So this we know immediately this is seven to locate them, seven plus five.
+10:04
+And that is by definition of power.
+10:12
+Then we will apply several other RiskMetrics properties and we hope.
+10:19
+That we will reach a term that contains some elements, but it should also contain that, it should also contain seven to the K plus five.
+10:27
+The reason I wanted to contain seven to the K plus five is because I want to apply the induction hypothesis.
+10:40
+So I'm not really sure how I will reach this assertion, but once I have reached the last line, I can apply the induction hypothesis.
+10:49
+The question is, how do I apply the induction hypothesis, because the induction hypothesis is not an equation.
+11:00
+It starts with an existential quantifier. What I can do is I can apply the induction hypothesis earlier.
+11:07
+So here I can say that seven to the K plus five equals three times a particle murder and one.
+11:18
+For some AM one, and this holds by indexical hypothesis.
+11:29
+So I apply the induction hypothesis earlier, I say I know that there is some.
+11:36
+And one that will do the job for me. We call this assertion A.
+11:41
+And here I'm not applying the induction hypothesis. I am applying a.
+11:47
+So this does not will be reduced to whatever it was before.
+11:52
+Plus three times and one.
+11:57
+And then I hope to get to something that will have the form three times.
+12:02
+Something else. And this is exactly what we have in the fully written proof.
+12:08
+I'm going to go through it now again. Here in this line,
+12:15
+we apply the induction hypothesis and we find a particular order and one that has got the property that the three times and one eight seven two,
+12:24
+the K plus five. Then we start with a seven to the plus one plus five, we apply values.
+12:35
+Alex made Matic equations, which I'm not going to go through.
+12:45
+You can cheque it afterwards. But the important thing is that here we arrive at a letter that says seven to the K plus five.
+12:50
+And now we can apply our induction hypothesis through the assertion, eh, here.
+13:00
+So we apply the assertion, A, which allows me to replace this term by three times and plus one.
+13:09
+Now I have got a term that says three times to do the seven plus scale plus three times and plus one here.
+13:16
+They are both month piece of city. I can factor them out and I have got something that has got the format.
+13:25
+Three times. Something else. This is the multiple of three that I need and that allows me to arrive to the final assertion.
+13:36
+And again. I have finished the proof.
+13:48
+Any questions or comments, we can address them on Tuesday at our session or on Piazza?
+13:57
+Thank you.
+14:05
