@@ -1,0 +1,137 @@
+ID: 3050a660-67dd-49fd-9e5a-ae1400badbd4
+Title: K2J - 2 : Primitive Types
+Category: KotlinToJava
+Lecturer: Robert Chatley
+Date: 05/01/2022
+When we were looking at him, we saw what happens inside the memory of our computer as we execute our programme.
+0:05
+So we saw that every time we declare a variable and create an object, we get the object created on the heap.
+0:12
+And we also get something added to the stack, which is a reference to where that object lives on the heap.
+0:19
+So when we come to look up what is pass in this case, we look for it on the stack.
+0:25
+We find the reference into the memory,
+0:31
+address one two three and go and look on the heap for the object at one two three in order to find out string object.
+0:33
+Whenever we declared a new variable, an object, then we'd get something extra added to the top of the stack.
+0:41
+So here's an which is an int and that points into the heap to find the object with the value and so on for other types that we might define,
+0:47
+like web pages or anything else.
+0:57
+So we always get an object on the heap and we get a value added to the stack and a reference from the stack into the heap.
+0:59
+This is pretty much the same in Japan. So in Java, we have slightly different ways of declaring the variables.
+1:08
+But here we have a string s with the value hello.
+1:14
+And as we execute this line, we'll have a string object created on the heap, which contains the relevant characters.
+1:18
+And on the stack we have s, which gives a reference to this object on the heap.
+1:26
+So when we need to use s or call a method on it, we can go and find it on the heap by following this reference, which is stored in the stack.
+1:31
+We have the same for the integer type, just a different way of naming it that it works in the same way.
+1:41
+And again, for Web pages, which we could define as our own type.
+1:47
+Let's have another look, though, at the integer N we declining like this.
+1:52
+So when we declare an integer like this, using a type which starts with a capital letter, so integer here with a capital I.
+1:59
+This is saying that we want an object, so we'd like to create an object on the heap that has a three inside it.
+2:07
+So let me create an object like this like any other object. We call this a reference type or an object type.
+2:15
+And so when we do this, the way that memory is allocated is just the same as the pattern we've seen before.
+2:23
+However, in Java, there is an alternative, and we can instead specify integer like this.
+2:29
+And in this case, we're using a lowercase int rather than an uppercase integer.
+2:37
+And this causes the computer to do something different.
+2:43
+So when we do this, what we're specifying is not a reference type, but that we actually like what we call a primitive type.
+2:46
+We do this for efficiency reasons, as we'll see.
+2:53
+So if we look back as our programme, but we change integer to end, then the way that the programme executes is slightly different.
+2:57
+So when we do the first line string s, that's exactly the same as before we allocate an object on the heap with the relevant content.
+3:06
+And on the stack, we get a value for S, which allows us to go and reference the object in the heap.
+3:14
+But now when we declare n because we're now using a primitive type rather than a reference type, it doesn't create an object on the heap.
+3:20
+Instead, what we do is just to put the value directly on the stack.
+3:29
+And so because all we need here is the value three,
+3:33
+it's more efficient just to use the memory on the stack to store this value rather than creating an object on
+3:36
+the heap with this value and then another reference on the stack into the heap to go and find that object.
+3:42
+That means we use less memory and when we come to use and we don't have to first go to the
+3:49
+stack and then go to the heap to find it the values right there on the stack when we need it.
+3:54
+If you define something as a primitive type, you can still do all of the normal operations like addition multiplication,
+4:00
+assignment comparison, all of these sort of things. The only thing that you can't do is to call a method by using dots.
+4:08
+When we write in Scotland. Scotland is actually doing this optimisation for you behind the scenes,
+4:16
+so it's not apparent in the language because the language is designed to make everything look like an object.
+4:22
+But the compiler notices when this optimisation can be made and where appropriate,
+4:27
+it just was bad news on the stack as primitive types rather than creating objects.
+4:32
+But we don't have to think about it explicitly as a programmer in Java.
+4:37
+The programmer has control over this, and so we can choose whether we want to use primitive types or reference types to store some of our values.
+4:40
+This is a list of all of the available primitive types.
+4:50
+So there are different types of numbers of different representations taking up different amounts of memory.
+4:54
+So perhaps if you have a programme which needs to be very memory efficient but doesn't work with very large numbers,
+5:00
+then you might be able to use a short or even a bite to representation. Floats and doubles are the representations we normally use for floating point
+5:06
+operations or mathematics with non whole numbers Boolean you'll be familiar with.
+5:14
+This just gives us a way to represent that in a primitive type,
+5:21
+so we don't need an object to represent true or false and char to represent characters.
+5:24
+So you can use these and you'll quite commonly see them used in Java programmes.
+5:30
+So if the numbers we have the choice of whether to define them as primitive types or object types,
+5:38
+so if I define a number as an object type specifying the type as integer when the capsule high.
+5:45
+Then once I've done that, then I can call methods, because this is an object so I can compute the hash code I can call double value,
+5:52
+I can call compared to two string, et cetera, et cetera.
+6:01
+But if I define it as a primitive type. Just Intex, then I can't call methods, I don't have any options for methods here,
+6:06
+these are all just other suggestions for bits of code I want to generate, but I can't call a method on a primitive.
+6:16
+It's still pretty common to use primitive types for things like integers, doubles and a couple of other types.
+6:23
+And so it would be normal to use it where we used integer in the class before.
+6:30
+So actually, let's change those ones so we can change these. Because we don't need these to be objects in their own right.
+6:38
+Everything works fine if we use these as primitives. Let's remind our test.
+6:47
+And it would be normal to use these primitive types where we can.
+6:54
+There are cases which we'll see where you do need to turn your primitive types into objects, and then we use the types with the capital letters.
+6:58
+But a lot of the time we use the primitive types.
+7:06

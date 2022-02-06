@@ -1,0 +1,149 @@
+ID: 223a74e1-e7b9-4e0a-a551-ae2d01490661
+Title: 3.3 Correctness
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 30/01/2021
+So now I want to show that Prem's algorithm is correct.
+0:02
+So that's the content of this theorem. Let Gibeah connected weighted graph.
+0:07
+Then Prem's algorithm constructs a minimum spanning tree for G.
+0:12
+So let's say that G has N nodes. And let's give names to the trees that are constructed at each stage.
+0:16
+30 zero will be our initial tree with just the start node and no arcs.
+0:24
+And then the next form will be T1, etc. So Teekay plus one is got from Teekay by adding let's call it arc a sub K plus one and T sub K.
+0:31
+We'll have K plus one nodes in it because Ts zero has one node.
+0:44
+So there are N minus one stages because we've got N minus one node that needed to be
+0:51
+added and then T of N minus one will be the final tree returned by the algorithm.
+0:55
+So let's show by induction on K that each T K is a sub graph of a minimum spanning treaty brime of G.
+1:05
+And if you think about it, that will be enough to prove our result. Because then we will say that T of N minus one T.
+1:14
+S, then minus one is a sub graph of a minimum spanning tree.
+1:22
+But since it has N minus one arcs in it, then it must actually be spanning tree itself.
+1:26
+And therefore it is a minimum spending tree in itself. So.
+1:32
+As usual, the base case should be an easy case, so K equals zero two zero has one node and no arc.
+1:38
+So clearly, T zero is contained in any minimum spending tree of G.
+1:46
+Because he is just not a single note in it. So that's obvious.
+1:53
+So the induction step is the interesting bit. So let's assume that our induction hypothesis holds for Kay.
+1:58
+So we're assuming that T is a sub graph of T Brime.
+2:06
+Some minimum spending tree. T prime. Of G. So this is the situation we're at in Prem's algorithm.
+2:11
+We've got Teekay, which is the yellow region. And we've got the fringe, which is this region here, and we're going to add in RC a K plus one.
+2:19
+And so Y will be added to the tree. Why this fringe node Y?
+2:35
+Well, the easy case would be if a K plus one this R was already in T Brime,
+2:40
+then in that case it would be obviously true that Teekay plus one is a sub graph of T prime as well.
+2:49
+And so we would have verified the the K plus one we had have the property we need for K plus one.
+2:56
+But that might not be the case, may be a K plus one is not in the arcs of T prime.
+3:05
+Well but if you think about it, t crime is a spanning tree.
+3:12
+We have assumed that. So therefore there must be a path from X to Y within T prime.
+3:16
+So it's not this obvious path. The arc AK plus one.
+3:23
+But there must be a path from X to Y within T prime. So here this diagram shows that.
+3:28
+So this path here, the longer path here. This is within TI Prime.
+3:34
+The minimum spanning tree. But then you can see we've got a cycle here.
+3:39
+He has a cycle. OK. And well, so think about going the long way round the cycle from X to Y.
+3:43
+Well, then we must cross over from the yellow region into the fringe at some point.
+3:53
+So the first point where we cross from Teekay into the fringe.
+4:00
+B, this arc here going from X prime within the tree to Y prime in the fringe.
+4:04
+So this arc eh. Here like that. And then we carry on around to y like that.
+4:11
+OK. So what can we say about the relationship between A and well an A and AA plus one.
+4:17
+Well since they keep us warm was chosen to be the shortest. Then A cannot be any shorter than that one.
+4:30
+So let's form a new spanning tree.
+4:38
+T double prime from T prime. By removing arc.
+4:43
+Aye. And adding in a K plus once they're back to our diagram.
+4:47
+So we've taken out A from T prime which has sort of broken this cycle here.
+4:52
+But we still can get from X prime to Y prime. Because we're going to we're going to add in a K plus one here.
+5:00
+So we haven't we haven't actually. We've still got a path from X prime to Y prime within the new within our spanning tree
+5:08
+because we have replaced going directly from X prime to Y prime by going the long way round.
+5:20
+Sorry. Let's go back. Here we are. So we formed Teto Prime by removing A and adding a K plus one.
+5:28
+Well, since the algorithm chose AK Paswan,
+5:37
+rather than a we know that the weight of AK plus one is less the way to pay and therefore our new spanning tree,
+5:39
+Titova Prime has weight less than or equal to the original spanning, spanning tree.
+5:47
+Because we haven't made it any more weighty and therefore, in fact, a must be equal, of course.
+5:53
+So TDL Prime is, in fact, a minimum spanning tree. And, of course, the nice thing about you Prime is it's the same as prime,
+6:02
+apart from the fact that we've got a kapos wanted there, which is what we wanted.
+6:09
+And so therefore, Teekay plus one is a sub graph for T to whole prime as required.
+6:14
+And that completes the induction step. And now we can polish off the proof because T and minus one has N minus one
+6:20
+ARC's A. And minus one is a sub graph of some minimum spending tree T prime.
+6:27
+And all spanning trees for G have N minus one talks.
+6:36
+So it must be the case that T and minus one is actually equal to T prime and therefore T and minus one is an M s t as required for our proof.
+6:39
+So we can make some remarks on this proof, the induction hypothesis here,
+6:51
+we can regard as an invariant for all while they each time we go around the while loop.
+6:57
+We know that we have a minimum. We have got a sub graph of a minimum spanning tree.
+7:03
+Then we add an extra arc to it. And then.
+7:13
+But we we know that we at the end of doing the while loop, we still have a sub graph of the minimum spending tree, possibly a different one.
+7:17
+And so that's would that we relate star proof here to the methods that are covered for doing my loops in the reasoning about programmes course.
+7:26
+Second remark is that each Teekay constructed by Prem's algorithm is connected.
+7:41
+And the third remark is that each Teekay is a minimum spanning tree for the sum graph of G induced by its nodes, basically.
+7:48
+So if we just take the sum graph with nodes, the nodes of t.K and all the oxygen which join the nose together,
+8:00
+then Teekay is a minimum spending tree for that sub graph.
+8:08
+So these are interesting points, two and three.
+8:14
+But they I think the most interesting thing is that our proof did not actually require us to to use either two or three.
+8:16
+So we managed to get R. We managed to re-establish our invariant without using two or three.
+8:24
+But they are interesting properties that we could also approved by induction as we went along had we so decided to do.
+8:30

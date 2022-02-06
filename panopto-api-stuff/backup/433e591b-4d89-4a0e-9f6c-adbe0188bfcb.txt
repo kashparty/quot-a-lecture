@@ -1,0 +1,139 @@
+ID: 433e591b-4d89-4a0e-9f6c-adbe0188bfcb
+Title: L02 - Binary arithmetic (part 1)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 12/10/2021
+Hello and welcome to our second lecture and introduction to computer systems, so and in this case,
+0:02
+we are going to be talking about how to perform arithmetic operations on binary numbers.
+0:08
+And as you remember, we already learn how to represent binary numbers using different formats.
+0:14
+And what we will see is how to perform these operations with some of them, some of them.
+0:19
+So I'm going to start with a first part, which is doing an automatic operations and inside numbers.
+0:27
+And then on a second part of the lecture,
+0:33
+we are going to look at the same operations for assigned binary numbers and in this case, the arithmetic operations.
+0:35
+We are going to look at our addition, subtraction and multiplication.
+0:44
+And also we will see the basics of division,
+0:49
+but we will not look very deep into it because most hardware implementations use different techniques that are much more efficient.
+0:52
+So before we start, let's look at a couple of definitions for when we are performing arithmetic operations.
+1:02
+So if we first of all, we have to pass this up to him, which is what we are subtracting,
+1:11
+subtraction operation and the Menlyn, which is the number that is being subtracted form so from.
+1:19
+So if, for example, we have six, 12 minus 45 equals one 27,
+1:25
+the 45 is the going to be the to him six 12 is going to be the minimum and 127 is going to be, of course, the result.
+1:33
+So let's start with the simplest of operations on insane numbers, and that is the addition,
+1:43
+as you will see, is pretty much straightforward with the knowledge that we already have.
+1:50
+So in this example, we are going to perform an addition between the number one one one zero one one and the number one zero one zero one zero,
+1:57
+which in decimal corresponds to 59 plus 42.
+2:07
+So we're going to start by placing each of the numbers on on separate rows,
+2:12
+as we would normally do with an addition with each of the digits aligned on its number.
+2:19
+And then we are going to start from the right side. So 1.0 equals one.
+2:27
+Now, one plus one equals one zero.
+2:33
+So we are going to take the the regular zero and put it here and the rest is going to be carried over to the next column.
+2:37
+Same way we would do it with decimal addition, then one zero zero equals one.
+2:48
+And then we just keep on going until we reach the leftmost column.
+2:55
+That would be one plus zero zero because there's empty spaces.
+3:01
+They are just padded with zero simply as decimals, which gives us one.
+3:06
+And then again, as we already know from the puzzle picture,
+3:12
+the result of this solution is one one zero zero one zero one, which is the decimal number one hundred and one.
+3:18
+OK, so far, so good. So now let's look at how to do subtraction with inside numbers and again,
+3:27
+this is pretty much straightforward here we are going to look at one oh one oh one oh one minus one one one zero zero.
+3:33
+So we start again with two rows with the numbers that we want to subtract here.
+3:43
+And B, then we do one minus zero, which is one zero one zero zero one minus one.
+3:52
+Which is zero, and then here's where it gets, I think, a bit trickier here, we start by doing zero minus one,
+4:02
+but since we cannot do that, what we have to do is borrow that number from the next column and put it here together with the zero.
+4:10
+So we have one and zero and from no one since we borrowed from a following columns, as we will see, we will no longer use this number.
+4:20
+We will instead use these eight Bankier that is one zero zero. So, OK, after borrowing we have one zero minus one, which is one.
+4:30
+And then we go to the next column again, we are performing zero minus one, so we have to borrow.
+4:45
+So the result is one, then one minus zero is one and zero nine zero zero.
+4:53
+Then we again put all the numbers together and the binary result is one one one zero zero one.
+4:59
+And now let's move on to multiplication Weissenstein numbers, and as you will see, this works pretty much like decimal multiplications.
+5:07
+We have one one one zero one times one one one.
+5:18
+So we put them on separate rows and then we start with rightmost digit osby and multiply a by one.
+5:23
+So there's only one nine one one one zero one.
+5:36
+Then we do the same for the next one. She's the same as we would do or move one position to the left, same as we would do with decimals.
+5:40
+So we put them all together here. And of course, if we had a zero in one of the digits of being, all the numbers in that role would be zero.
+5:48
+And now here comes. What is slightly different from what we've seen so far is that in this case, we have to do an addition of three numbers.
+6:01
+And as you will see, it works pretty much the same. So we have one zero zero, which is one zero plus one zero is one one zero plus one is zero.
+6:10
+With a with a country of one which we put here, then one plus one equals zero plus one is again one with a carry of one.
+6:23
+And here's what it gets with a new step that we have to take care of.
+6:36
+We have one plus one plus one plus one, which would be, of course, four, which is represented as one zero zero.
+6:42
+So we are going to take the rightmost zero, put it here as the result and the other two bits are going to go Asghari.
+6:55
+So on the next step, we are going to do one plus one plus one zero.
+7:04
+So the result is zero and then we are going to take care of one zero and then one plus one zero is one three one.
+7:10
+And the answer is finally one one zero zero one zero one one.
+7:18
+And finally, let's go onto binary division.
+7:25
+So remember, we will express division as division divided by the divisions are,
+7:29
+which we can also rewrite as ocean, plus the reminder divided by division.
+7:36
+And if we play around with a formula, we will have the divide then equals the coalition times the division, plus the reminder.
+7:45
+And from here, you can basically implement that division using multiplications and additions that we already saw.
+7:55
+So we don't need any new operation. And in reality, what computers actually used to implement binary divisions is quite different.
+8:03
+They use some more optimised structures like she used registers that we are not going to learn about right now.
+8:16
+But if you want, you can just with a pen and paper, do a division, just as an example,
+8:25
+using this formula that reduces it to multiplications and additions.
+8:32
+And with that, this is the end of the next part of the first part of this lecture.
+8:38
+And it will see you on the next part. But.
+8:44

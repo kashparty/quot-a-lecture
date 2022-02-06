@@ -1,0 +1,307 @@
+ID: ec9e8cf2-5aa6-44ad-9cee-adbe0188a1b4
+Title: L01 - Data representation (part 2)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 12/10/2021
+Everyone, and welcome to the second part of our data representation like.
+0:08
+Well, as you remember, what I said on the first part is that we are going to be talking about some data types of interest or do represent individuals,
+0:14
+both unsigned, unsigned and text characters.
+0:23
+And later on, a separate lecture, we're going to talk about representing real numbers.
+0:28
+So let's see, with the first time integers,
+0:35
+we have what we know mathematically as natural numbers that we can represent by their visionary value in a computer.
+0:39
+And a representation of Sinding teachers, as we will see, is the more important than in science, which is what we already saw before,
+0:49
+and what we will see in this second part of the lecture is that there are several possibilities in order to represent San.
+0:59
+Well, let's start with what are the requirements or representation?
+1:09
+And we have some properties that we want to have fulfilled with each of these representation,
+1:18
+we want only one bit pattern for each possible value that we can represent in a binary stream.
+1:25
+We want an equal number of positive and negative values so that it's symmetric, what we can represent.
+1:33
+We have to we want to have the maximum possible range of values so that we are not wasting beats,
+1:40
+because when we build a computer that translates into cost and we won for the same reason and no
+1:47
+gaps in the range because we want to be able to represent all the numbers that we possibly can.
+1:54
+And finally, as I already started hinting at,
+2:00
+we want fast economic hardware implementation or doing arithmetic operation operations with this integer.
+2:04
+So we will see later on when the minimum number of transistors and a fast arithmetic operations if possible.
+2:14
+So let's start with the first approach, which is the simplest one, and it's called the sign and magnitude.
+2:24
+So what we are going to do here is we are going to take the leftmost or what
+2:31
+is also called the most significant bit represent the sign of the integer.
+2:36
+And the remaining Bedzin in that string are going to represent the magnitude, which is the unsigned integers that we already saw.
+2:41
+So if we have an image to represent the number, we will see that we can go from minus two to the power of nine minus one,
+2:52
+minus one as the smallest number and then the largest number that we can represent.
+3:01
+This two to the power of minus one and minus one.
+3:07
+And the reason why we are looking at this representation is that it's the simplest for humans to understand, but it has some problems.
+3:13
+First, we will see that there are two different representations for zero, which is plus and minus zero, and it is costly to implement.
+3:23
+If we have this buttons down here from zero zero zero zero all the way up to one one one one.
+3:32
+We have the inside integers that we saw on the first part of this lecture from zero to 15,
+3:41
+and then if we are saying that we used the first bit on each button as the same
+3:47
+zero is going to be a positive number and one is going to be negative number.
+3:53
+So as I said before, we are we see here that we have a and then as one, two, three, four, five, six and seven,
+4:03
+and then once we go all the way up to the binary button, one zero zero zero, that is a negative zero, which we would prefer not to have.
+4:12
+And then we have minus one, minus two all the way up to minus seven.
+4:22
+So now let's look at the different representation and there is this one is closer to what, computers?
+4:29
+But would, let's say, professor. And it's called one compliment, where negative numbers are the complement of the positive number.
+4:39
+So in this case, we are going to go from. Minus the power of minus one, minus one on the way up to to do the power of minus one, minus one.
+4:47
+So it's the same as saying no matter what you do now,
+5:00
+what we will see is that this is thing to do for humans then sine and magnitude, but as a benefit, it's less costly to implement.
+5:04
+And yet still it's a bit fiddly with bits.
+5:13
+So it's not the best we can do for computer.
+5:16
+In this case, we would have the positive numbers are represented the same way as a sign in magnitude.
+5:22
+But then once we start going to negative numbers, which are identified by the left most bit in the extreme to be putting.
+5:31
+We will see that instead of going all the way from minus zero to minus seven with Monday.
+5:42
+We are going to go from minus seven to minus zero.
+5:48
+And this is better for computers because if we are on a negative number, we add one to it.
+5:53
+If we have one zero zero zero. And we had one and therefore go to one zero zero one.
+5:59
+This is actually what we want. The system going from minus seven to minus six.
+6:08
+And then as we keep adding and we go to one one, one one, then we would just be adding one or go all the way around to Platero.
+6:16
+Oh, let's see how we can improve this, and that would be ways to complement.
+6:25
+Which is what computers use for implementing certain numbers and in this case,
+6:32
+we have that the negative of an integer is achieved by inverting each of the bits and then adding one to it.
+6:39
+But the does complement of minus three, which would be.
+6:48
+Zero zero one one if we just take the magnitude of it.
+6:54
+By inverting it, we would get one one zero zero,
+7:00
+then we would add one to it and therefore the representation in to compliment four minus three would be one one zero one.
+7:03
+So what we have here is that the range goes from all the way from minus two to the power of N minus one,
+7:13
+all the way up to two to the power of minus one. Minus one.
+7:22
+And. We see a very useful property here, is that X minus why is the same as X plus minus Y?
+7:26
+So that means that we don't need to separate logical structure to do a subtraction, which we would with the money to approach.
+7:38
+And we can just add two numbers, regardless of whether they are positive or negative, and the result will be correct,
+7:51
+and we don't need to do some carry out the adjustments, which is a problem with once complement,
+7:57
+as we will see later in the course with our medical operation.
+8:03
+So another good property of just compliment is that we only have one person to represent the number to zero, but this means that, as I said before,
+8:10
+this is an asymmetric representation, which means that we have one extra negative value,
+8:25
+but that's a mean minor price to pay for the benefits of to compliment.
+8:31
+So just to compare all the approaches, we would go for positive numbers in way that we did before and now with just compliment,
+8:39
+since we don't have a negative zero, the first negative value, that would be one zero zero zero, a response to a number of minus eight.
+8:49
+And then we go all the way up to minus one. And remember, if we add one to this number, the result would be.
+8:58
+One zero zero zero zero. And since we are only looking at the rightmost forbids that corresponds to this here, which is zero.
+9:09
+So adding one in binary to minus one does actually lead us to zero, which is exactly what we want.
+9:19
+Well, first of all. So there was another type of representation for, say, numbers, and that is called excess and or bias.
+9:28
+And the reason why this representation exists is that certain numbers in just compliment is not at all easy,
+9:41
+though, assuming that we have some piece of hardware that compares numbers.
+9:49
+And by looking just at the binary representation, we would see that this logic would always say that negative numbers are greater than the positives,
+9:54
+because the left must be is one for the negatives. And if we care about having efficient sorting, we don't want this property.
+10:04
+So what we do in Texas is basically push the numbers around by and.
+10:14
+I suppose that we wanted to represent negative numbers,
+10:23
+but we wanted to keep the same ordering where zero zero zero we will be the smallest
+10:28
+value and then one one one would be the largest possible value in Tribbett.
+10:34
+So this is basically that the idea of us and we are just shifting the negatives and positives,
+10:41
+maintaining their order all around the board representation so that the smallest
+10:47
+one is going to be all zeros and the largest number is going to be old ones.
+10:53
+So let's see a very simple example with three beats.
+11:02
+This gives us remember from the first part of the lecture, Three Beats gives us two to the power of three possible variables, which is eight in total.
+11:06
+And let's assume then that we start from quaintness for.
+11:16
+All the way up to a value three. So the does is Belial, which is minus four.
+11:23
+We want it to be zero, therefore we have to shift it around by four positions in in this table, so.
+11:32
+Every value that we are going to store in this case is going to be lost four or annexes
+11:42
+of four of the actual value that we want to start with except when using binary strings.
+11:48
+Well, just to wrap up and compare all the possible representations and put X's and in comparison with the others,
+11:58
+all that for all the zeroes in this column would represent the number minus eight in excess eight.
+12:06
+And then we would go from minus eight, minus seven, minus six on the way to zero, and then all the way up to seven.
+12:15
+And this is, as I said, remember? It's just shifting in the numbers that we have to compliment all the way up.
+12:22
+It positions. Until we have it. Right here on the smallest minority representation, which is all zero.
+12:31
+And now, finally, another important representation that some computers use is binary code,
+12:43
+that decimal where here what we're going to do is that every decimal digit that we have in decimal number,
+12:51
+we are represented by a fixed number of bits, usually four or eight.
+13:00
+And this is, as you can see, way easier to understand for humans, but takes much more space than the question, of course,
+13:06
+is why do we even need this if we were trying to be as efficient as possible in terms of space and doing operations with computers in numbers?
+13:16
+And the reason here is that in some cases we want to have a way to represent an infinitely large or small natural numbers.
+13:27
+And this is a way to do it because we just need to keep placing digits one after the other with this Forbert representation in the example here.
+13:39
+So if we have the decimal number nine eight seven six five one zero,
+13:50
+we put it on the table and we just think each of the digits and transform them as an insight into an unsigned binary number with four numbers.
+13:55
+Then once we have the binary value for each of the digits, we just pick them together.
+14:04
+And as you can see here, we have 24 bits that represent this decimal number using the BCT representation.
+14:10
+So once more again here, a comparison table.
+14:21
+Remember that I said that we are going to be using only. A few of the bits available for BCT, because more than that is just not necessary because.
+14:26
+Digits in decimal base, we only need three sorry, 10 possible values,
+14:40
+but we are going to go in basically from zero all the way up to nine and then all the other representations are not used.
+14:47
+So now let's finally go into characters, and as you know, computers need to map everything into patterns of one and zero beats,
+14:58
+and the ways in which we can represent text or characters is more commonly using either the ASCII representation or in newer systems.
+15:12
+There's a new standard that is more complex Unicode, which we are not going to see in discourse.
+15:23
+So we ask we are we are going to see that it uses seven beats, which gives us one hundred and twenty eight possible buttons.
+15:30
+And of course, since most computers work at the times of bytes, which are a bit, they extended with an extra one hundred and twenty eight bit buttons.
+15:42
+So what we have here is that all these people are going to be used to represent lowercase and uppercase letters and decimal digits as characters,
+15:53
+then we are going to have 32 punctuation marks.
+16:05
+And the remaining 34 bit patterns represent various other characters,
+16:09
+such as space or also or Taps or LAMBRIX and also some other control characters that sometimes are used in systems.
+16:17
+So, for example, to mark colours and whatnot.
+16:27
+So here we have a representation of the Askey table so that we know how to translate between ASCII characters and binary buttons back and forth.
+16:32
+So here on the x axis, we have the.
+16:47
+Pre-bid position six, five and four, and then on the Y axis on this column, we have it positions three to one and zero.
+16:53
+So what we're the way we are going to represent a sequence of characters is
+17:03
+by basically putting the representation of each of the characters together,
+17:09
+one after the other.
+17:13
+So if we want to represent a threat with a capital F., we will go into this table, look up the letter for a capital F, which is here.
+17:14
+And then we see where it falls in in this area, which is, you know, one zero zero.
+17:25
+And then on the x axis, it's zero one one zero before, if we just take these numbers, put them here.
+17:32
+Zero one zero zero zero one one zero. And that's how we represent.
+17:40
+Also, remember,
+17:47
+if we were going to use ASCII sort of hexadecimal just to encode it in a way that is easier to read instead of using all these many ones and zeros,
+17:47
+that would be the hexadecimal number four to six. Then we go on to the letter R over here, we look it up on the table here,
+18:00
+we have the letter R, which is zero one one one first and then zero zero one zero.
+18:11
+We write it down and then we just keep on going with every character in the sequence until we have them all.
+18:19
+And that is the binary representation of the word, Fred, using the ASCII characters.
+18:26
+Now, as I said, there's this newer standard called Unical that is newer and more complex.
+18:34
+And what Unicode tries to do is provide one single number for every possible character in any language that we have.
+18:42
+So this means that right now, this thunder has more than one hundred and twenty thousand characters.
+18:54
+So that is a very large number of representations and what the way in which it is
+19:02
+organised is that the first six sixty five thousand five hundred and thirty six,
+19:10
+which is what we're going to represent with the first 16 bits, will cover the majority of the alphabets of the world.
+19:15
+And then we will have additional number of representations that occupy more seats to represent other characters that are not as common.
+19:26
+So the idea with Unicode is that the length in which we will represent the number of
+19:36
+bits in which we are going to represent the single character is variable in length,
+19:43
+but that to can accommodate both common and uncommon characters.
+19:48
+And of course, in order to make it compatible with the representation,
+19:53
+the first one hundred and twenty seven characters of Unicode will actually correspond to the ASCII characters that we just.
+19:59
+Oh, well,
+20:09
+now we can see that you are binary experts and now you can play with the dogs where you can see that there are in base two one zero types of people.
+20:11
+And those are people who know binary and people who do not go see the next lecture.
+20:27

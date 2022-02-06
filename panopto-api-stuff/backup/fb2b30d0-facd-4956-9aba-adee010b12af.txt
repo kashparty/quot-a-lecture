@@ -1,0 +1,403 @@
+ID: fb2b30d0-facd-4956-9aba-adee010b12af
+Title: L16 - A Manual Processor Part Two (part 1) (lecture)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Bjoern Schuller
+Date: 28/11/2021
+Welcome to lecture 16, a manual process, and we're looking today into two parts to so last lecture we started to put together and manual processor.
+0:01
+If you remember, this is pretty much where we end it. We looked at the hardware blocks for the manual processor.
+0:11
+And if you remember, we mainly had a couple of registers in particular,
+0:19
+data registers A and B, we had an instruction register where you can store an instruction.
+0:24
+The other two registers we had were a carry out after the ale.
+0:35
+You are an author or algorithmic and logic unit and a result register to store the result.
+0:38
+Now let's look what else we got here. We have a sifter also side by side with the ACLU.
+0:47
+When we ran the course earlier, we had a slightly different layout here.
+0:53
+We had the shift to follow the ACLU. So you can, of course, do this all a little bit differently as well.
+0:58
+And then you would need some more instruction, adjust a bit as you would use the you shift as sequentially.
+1:05
+But then you could, for example, you see shifter after the you.
+1:14
+And, you know, shift, if you don't want to use it and use a shifting operation according and if you want to use it.
+1:21
+So apart from the register's shift and you, what else do we have if you have a couple of multiplexes here?
+1:29
+If you remember we have one here for the carry, should we feed into carrying the carry out, for example,
+1:34
+if you want to do a higher precision arithmetic and do it sequentially lower and upper word halves,
+1:43
+but we can also select one year as an input for the carrion, for example, if you want to increment a number or yeah.
+1:53
+Other reasons exist. And finally, if you wanted to be zero, if you remember,
+2:02
+we said we could provoke that in the carry the carry to be zero and then we can use carry out as carry in here.
+2:07
+And hence we have the full flexibility here available to the carrion. Have it loaded with zero, with one or with the lost carry out.
+2:15
+We also have a multiplex after sifter and ale you that is simply to choose where we want to get a result from.
+2:24
+So do we want it from the shift or from the air to you? And we also have a multiplex up here where we can choose if you want to use the
+2:35
+a register loaded from data in or loaded from the output of this multiplex,
+2:44
+which is essentially feeding into the result register. So basically load a from the results from the last resort.
+2:53
+How does that make sense? It was often called the Accumulator V register for that reason because you can accumulate.
+3:05
+For example, if you have sequential additions a plus B,
+3:12
+then you put it back in and can have the next B data loaded and you can at least be perceived as kind of like, right?
+3:16
+Yeah. The other thing we have here is our controller. Which we also need to design to give us clock signals to the registers,
+3:25
+to make sure we get the registered transfers happening at the right moment in time to load the data registers
+3:38
+and be the instruction registered to load the result register and the carry at the right moment in time.
+3:46
+Good. Now let's look more into this. Just remind ourselves of the building blocks.
+3:52
+First of all, we had registers with eight bit, so RBI are address.
+3:58
+Of these eight bit registers, C is one would register and if you remember, an eight bit register is formed up of one bit registers,
+4:04
+namely flip flops like your flip flops and put side by side and their order is given meaning by, whereas these significant words more significant.
+4:15
+But of course, all of the flip flops belonging to the same registers have to be fed from the same clock signal.
+4:25
+That's what we're having down here. Club goes into these eight flip-flops for the eight pitch registers.
+4:32
+And then the input is, of course, a side in the output accused side of each individual's ticket flip flop.
+4:40
+Yeah, the multiplexes just remind ourselves, can be thought of as switches,
+4:49
+the madness of selecting the input the registers see as a single one and single switch in the multiplex
+4:54
+or selecting the inputs and result have eight single switches because we have an eight bit architecture.
+5:01
+So we'll need eight of those things, which multiplexes and the multiplex internally is a control line here,
+5:07
+which selects which input to follow on the output side.
+5:15
+And in order to realise that we need the end gates here and control.
+5:21
+And it's presented once directly and once converted to those two and gates.
+5:26
+If you remember hands, it allows only one of these end gates to be different from zero at a time.
+5:32
+And the one that is different from potentially different from zero is the one that is currently being selected,
+5:40
+and then it follows A or B accordingly.
+5:47
+And there's all gate is needed here to to sort of collect these different lines here and finally have it as a result output.
+5:50
+No, the box marked was a value for arithmetic logic unit is a combination of circuit, if you remember, so no clock signal needed here.
+6:05
+We simply have the two words input here A and B, both here eight bits.
+6:19
+We have the result out.
+6:26
+You also have a carry out in the Caribbean if you have an overflow or if you need to do some processing sequentially or want to scale up,
+6:31
+of course, 16 bit later on. Carry the load always handy.
+6:40
+And we have the three select inputs here to select the kind of function.
+6:46
+If you remember, we are defined the following one constant zero for select zero zero zero or constant one is one for one one one.
+6:50
+Also, we have some logic operations exclusive or B, A or B and A and B.
+7:01
+And besides, we have B minus Eyman is B so subtraction and a plus b for addition,
+7:09
+which of course is commutative communities and hence we only need it once.
+7:17
+Whereas the subtraction isn't communities and hence we need the twice.
+7:23
+Then the sifter was also purely combination of circuit.
+7:31
+Also, no clock signal provided anywhere, and we are defined seven different shifts.
+7:36
+Why? Because we have three function selection bits here, meaning that we can have.
+7:41
+Seven shift operations, because one is of no shift and the other ones are these flavours of rotating shift was on
+7:50
+without carry and so on and so forth doesn't bother about it any longer at this point.
+7:57
+The details I just remember and be reminded that we're not using carrion.
+8:03
+We simply said two zero.
+8:08
+And we could use it, of course, if you wanted to do a higher precision shifting in this case and would do something sequentially or so,
+8:12
+but we're not doing this here. No, a third,
+8:20
+we need the controller and the controller needs to make sure that each register gets its clock falling or rising apps at the right moment in time.
+8:24
+So this is a circuit which makes the process of go through the correct steps to execute an instruction.
+8:33
+So we're now approaching something programmable and we'll be having instructions and we need to go through the steps of the instruction.
+8:38
+Obviously, it is a synchronous sequential circuit, I mean, representing clock for the edges.
+8:50
+So it's clearly as synchronous, but it's also synchronous because we're going through the micro instructions of an instruction.
+8:56
+So we're going through the steps of instruction and going through steps, of course,
+9:04
+makes us think of some circular going through the different states circular because at the end of the day,
+9:09
+we will go back to the first stage and start with the next instruction.
+9:15
+And before we can design it, we need to look at how the instructions are represented, obviously.
+9:20
+So we first need to know how do we represent instructions and then we can do the controller to guide us step by step through those instructions.
+9:25
+So let's look at the format of the instructions this was given basically from our hardware layout, so allow me to skip a little back to this one here.
+9:37
+You can see here we have been given all this instruction register bits connected
+9:48
+to the function selection of value to the function selection of the shifter.
+9:52
+And one thing that you may notice here is that they are the same instruction registered with either a four or five and six.
+9:57
+How does that make sense? Well, it does make sense because we cannot use shifter and ale you sequentially that we're using them here either,
+10:04
+or this multiple excel selects either the shifter or the ALU.
+10:13
+Hence, you don't need to waste bits here as we're only choosing.
+10:18
+And you also have to with instruction a bit. We can use the same instruction registrants to choose a shift or a value function.
+10:24
+Now other instruction register bits if you remember our phone or the other registers here or in multiplexes
+10:34
+here to select a input from a sort of accumulation mode here or data in mode and to select the carry in here,
+10:39
+from carry out or from one. So that gives us a structural edge, so zero, one two, and then we have four,
+10:50
+five six, which means that we are leaving some don't care, namely three and seven.
+11:01
+So this is how we. Come up with this year.
+11:08
+With his for the instruction register, the three and seven we said are used.
+11:13
+That's good because it means that we can soon sell the new hardware version without having to do or instruction registered all over.
+11:18
+We could add another multiplex for something, for example,
+11:25
+and hence to actually hence be ready for that because we still have to bid 70 year and used in that sense.
+11:30
+Yeah, and it's at four five six the €l of functions and zero one two of these different multiplexes.
+11:40
+Namely, SARS, a select interest for the Register Zero Select Shift to output one selects data input.
+11:51
+Actually, if you go back here. Well, this man is basically this path here, so it selects multiplexed how it would actually.
+12:05
+Then for S.A.C. not selected to the carrier of the value zero select logic,
+12:24
+one one selects carry out a human, but then we have select of SS are for the register a result?
+12:30
+Register zero selects shift a one select ALU shift a year simply means really.
+12:39
+After this multiplex here and not Sifter, that's still on the slides because it said in the previous version,
+12:47
+we had a you and then shift to what is meant is really a year after the multiplex.
+12:56
+Yeah, and if you remember for the bits four, five and six, we had our respect for the a you with the two concerns and the logic functions.
+13:07
+A or B, A or B and B and then of course, subtraction, then two flavours and addition.
+13:17
+And after you remember, we had a speck of a bigger table, no shift, and then all these different rotates shifts with or without carrier.
+13:26
+Yeah, three and seven and sat unused. And this means we now take a look at the steps.
+13:37
+So going step by step through the process of an instruction to see how we need to design the controller.
+13:45
+So we'll have five steps to execute, and this may appear confusing at first, but it will make sense in a second.
+13:54
+Why do we twice load the instruction register in those five steps, simply because we need to choose where to load aid from?
+14:04
+So before we can load the data, we need one instruction to decide how we load a remember we can load either from the data and
+14:13
+path or we can load it from after this multiplex over Twitter feeds next into the results.
+14:23
+Register for accumulation mode.
+14:29
+Also, we can, in the first instruction, prepare curry so we can sort of decide where to load from and prepare the carry register.
+14:32
+Then we are actually loading the data, so we're loading a register next, reloading the B and C register where C is simply the carry.
+14:44
+And why can't we do A and B at the same time, simply because we have one data in line,
+14:53
+so we need to one after the other load those two data registers and next to loading the instruction register.
+14:58
+Could we do it the other way round could be first load instruction, register here.
+15:06
+No, because we first had loaded instruction register to prepare a way to load aid from.
+15:10
+So this sort of sum then implicitly makes sense.
+15:16
+So this next instruction regulates the load that might be confusing.
+15:20
+Why do we load it twice? But we need it now to do the actual operation selection?
+15:24
+So we're loading the instruction that tells us something like a plus B or a zombie or whatever it is.
+15:30
+Shift. Yeah, whatever it is. And then finally, we're loading the results register.
+15:36
+So after the instruction has been carried out,
+15:44
+it's time to load the result into the results register and results strategies, of course, including the C register.
+15:47
+Now why do we load the C register here and here?
+15:54
+Here we're preparing it sort of for the instruction. To be carried out.
+15:59
+So, for example, if you want to have an addition of a to his compliment, we could, for example,
+16:06
+have here the carrying loaded was a one or something like that will assume that the data input lines will hold the correct bite at each step.
+16:14
+So at this moment, we're just assuming that the data in line has the right data available.
+16:24
+We're not looking into this now. We're just assuming that things are magically ready at data and this will be externally programmed.
+16:29
+And as a sneak preview, this is what we'll be doing next lecture when we look into how to do a memory and at least a static ram,
+16:38
+and we will be putting the pieces together their next lecture when we really put the memory together with the processor.
+16:48
+But for now, things are just ready on the data in line and we're loading.
+16:57
+Construction projects A, B and C and structures and then insolvency register that doesn't come from the data and said one moment in time.
+17:04
+We have a lot to load from the data. So those have been five steps, obviously, then we will need at least five states, but we also have a sixth state,
+17:14
+which is our idle state, so that we get a chance to move into a young, idle or no operation state.
+17:25
+Well, that we will have an input. So our.
+17:37
+Controller, no has one input and the input is idle or operate.
+17:45
+And we will be seeing also when we do this in the next lectures that this idle mode is actually needed to fetch data from memory.
+17:50
+So we're looking here at the so-called execution cycle where we're executing instruction.
+18:02
+And this is a larger instruction. It has an instruction, the data, a, b and an instruction.
+18:09
+But this larger instruction that needs to be pulled from, from memory, from the main memory.
+18:18
+So this is when we will be needing the idle state. So we will be going between fetching from a memory and executing.
+18:24
+For now, however, we do this execution cycle and we know that we have no operations data.
+18:34
+And these are the states, if you remember the numbers, one, two, three, four, five and zero,
+18:42
+you're the one where we do not have an output and the output here in our state machine is always the clock signal for the respective register,
+18:47
+which is being loaded at that very moment in time. So if you go back here, we see that instead one were loading the oil register.
+18:57
+So all we give here in state, one falling to the construction register to load it.
+19:05
+Second step below the register. So and second step three second stage.
+19:11
+We give a clock a signal or clock a sorry registry of falling acts from the clock to load into a register.
+19:17
+And if you remember, of course, in, say, three, we have to do a, b and C here.
+19:29
+Step four We need the jury instruction register load hands here and say before we give
+19:34
+the clock signal filing adds to the structure register and finally result and see,
+19:42
+register and stay five here. So we go round and circle counting up the same number one, two, three, four, five one and so on.
+19:48
+And from any stage we go into stage zero.
+19:59
+If the inputs to the controller is zero,
+20:05
+that interested zero meaning it remains and say zero whenever it goes one from here we go back into stage one.
+20:10
+And as long as we're. Having the input to operate, we keep going around in circles.
+20:18
+So the execution sort of implicitly defines the format of our programme, and at each of the five execution steps,
+20:27
+the correct data will be placed in the data input lines by some provenance research.
+20:34
+We'll be looking into that next lecture. And this is now sort of the structure here.
+20:38
+We have these macro instructions, which, if you could peek under the hood, are put together by opcode one or instruction,
+20:46
+if you will, data one data to which, of course, is our loading into A and B and C here and a third.
+20:57
+We have one unused because in this step, if you remember,
+21:05
+the only thing that happens is that we're loading into result in C, meaning that there is no.
+21:08
+Construction data used here. And after such an instruction comes the next instruction in the next, of course.
+21:15
+So let's look back into our hardware layered into the circuitry, and let's look at the execute security in detail.
+21:26
+Step one, the instruction register is loaded, if you remember from the data in lines,
+21:37
+please note that Read saved our years of reloading from data and into the instruction register.
+21:44
+Step two We have registered a loaded and if you remember this instruction you had was bit zero instruction,
+21:51
+which a but zero selected where we load a from.
+22:03
+In our example here, it's being loaded from data and. Step three, we're loading.
+22:07
+B and C. It's already loaded, but nowhere else are loading beer and decide on carrion,
+22:14
+we decided here in our example to load it why the multiplex as the constant one?
+22:26
+Hmm. Next, the instruction register as loaded again, if you remember, so the first instruction was to prepare to load a film.
+22:34
+Now we have an instruction like plus minus whatever it is we loaded from data in and.
+22:41
+And the fifth step will, if you remember the results, register and the carry register.
+22:49
+So this means that we have the full instruction executed and the next step, of course,
+22:59
+would be again to allow the instructor of the next construction block of starting the next construction look.
+23:05
+Now, here is an example where we would be in the second step of the second instruction
+23:18
+load a register from after this multiplex services accumulation mode.
+23:22
+And then we could be doing something on the previous result as a sequential processing.
+23:31
+So the cycle continues in the same way.
+23:41
+While the process of being operated, taking detailed instructions from the data in lines and putting the results on the data outlines.
+23:43
+So it's input processing output. We're sort of read, operate or, you know, process, right?
+23:52
+Repeat the design of the control unit, which implements a cycle follows our now very familiar methodology.
+24:06
+So we're putting together some stage transition tables and output tables.
+24:14
+And if you remember from the traffic lights at the end of a traffic light example,
+24:23
+we have been choosing the state assignments such that it is easy for the output logic and that worked like a charm.
+24:27
+If you remember, we're doing the same here. So we're choosing a state assignment that we hope will minimise the output logic.
+24:35
+The output logic, if you remember, has to give these clock signals to the registers at the right moment in time.
+24:41
+And what we are doing here is we select clocks see here very simple.
+24:49
+So whenever there is clocks, see here. Q1 is one year.
+24:57
+So we're choosing clock speed to be simple by choosing the state assignment such that Q one equals clock C and we're choosing construction register,
+25:06
+to be sure. Zero. So whenever construction register appears here, this is one Q zero otherwise zero.
+25:19
+Why do we choose it to be like this? Because construction register and C appear twice here,
+25:28
+so it seems intuitive to choose those who to be following one of the cues here directly and making those two very easy.
+25:36
+And then we fill in the came about four o'clock A, B and or.
+25:47

@@ -1,0 +1,125 @@
+ID: c3d7ac8a-852f-4ca9-a1e2-adee014fcab0
+Title: Kotlin - s3e5 - Exceptions
+Category: Week3
+Lecturer: Robert Chatley
+Date: 28/11/2021
+In this section, we'll look briefly at exceptions.
+0:05
+Exceptions are a language feature which we can use to deal with problems at runtime and exceptional circumstances in the flow of our programme.
+0:09
+We can use them to handle what happens in an exceptional circumstance when something goes wrong and to handle that gracefully,
+0:16
+to recover or to report the problem to the user in a graceful way.
+0:24
+Here's a fragment of code in which we read some data from a file can see what
+0:28
+happens here is we call the read file function a pass in the name of a file,
+0:32
+and then we're using that Java Io file class a class from the standard Java Library to open the file.
+0:37
+And then we're using this function to process each line of that file.
+0:44
+And for each line,
+0:48
+we're going to print it out and we're going to count up how many lines that are in total that we printed and just print that summary at the bottom.
+0:49
+You'll see here I've got a file called Data Dot Text just as an example and if we run the programme.
+0:57
+Then it works as expected, just printing each line and saying that there are 16 lines in total.
+1:07
+So this is fine, but what happens if we try a file that doesn't exist? You can see that in this case, our programme crashes.
+1:15
+We've already seen null pointer exceptions, and this is another case where an exception has been thrown by some coaches down in the Java Library,
+1:31
+and it's just caused our programme to exit at this point and gives us this stack trace showing us that something's gone wrong.
+1:39
+If we were writing a tool to be used by someone to process a particular file and they typed in a file name that didn't exist,
+1:47
+we'd rather not report this sort of error to them. We'd rather ask them to try again, maybe to try a different file or correct their spelling.
+1:54
+So we need to be able to handle this more gracefully in our programme when we have some code that might possibly throw an exception when we call it,
+2:03
+for example, this exception happens when we try to create the file object for the file that doesn't exist.
+2:10
+So a common way to handle this is to wrap it in a try catch block.
+2:17
+So this is a try catch block where we start with trying to wrap all the code and this file.
+2:22
+So we'll try to do this code. But if it throws an exception because, say the file is not present, then we'll catch that exception.
+2:33
+The exception we're going to catch in this case has the type of file not found exception.
+2:42
+And if that flow happens, then we'll drop into this block and we'll skip over any current here.
+2:49
+So here, perhaps we could just report. A message like this.
+2:56
+So now I run the programme again. We'll see if we're able to exit in a clean way.
+3:05
+Having caught the exception and printed this message. So just to recap the flow, is that execution proceed down line by line as normal.
+3:12
+But once we're inside to try catch block as soon as an exception is thrown,
+3:24
+we'll skip any further lines and jump to the catch and then we'll execute the code inside the catch block.
+3:27
+And we might use that to report to the user or try to recover from the exception in some way.
+3:34
+We can also throw exemptions from our own code if we encounter a problem or get into an inconsistent state,
+3:41
+and we want to report that to our call so that they might be able to do something about it.
+3:47
+For example, in this case, perhaps we can only process files with a doctor extension if someone passes this file and it doesn't match that pattern,
+3:52
+and perhaps we want to not even try to load and that file.
+4:01
+We'd like to report that as being something that's not an appropriate argument for this function.
+4:06
+We could specify a precondition that file name must end with doctor.
+4:11
+So if we wanted to do that, we could add some code here and say if it is not the case, that the file name ends with doc text you.
+4:16
+Then we could throw your own exception, perhaps in this case,
+4:29
+we might use an illegal argument exception, which is a common Java exception, and we can use that in.
+4:34
+We could also provide a message in the constructor of the exception to explain a little bit more to the cooler about what's happened.
+4:43
+And so here we could say file name must end with a top text you.
+4:50
+And report the funding that we received. So now if I run the example again.
+5:01
+This time we successfully passed a text file over this.
+5:10
+So this condition is not triggered, but if we try with this extension instead.
+5:16
+Then we should. Triggered this case, and this will throw out a legal document exemption,
+5:22
+and we'll get that message reported here and a caller further up the stack could try and catch this if they wanted to.
+5:29
+This pattern of placing a precondition at the beginning of a function is something that's
+5:43
+relatively common so that we can make assumptions about variables as we go further down.
+5:47
+So we try to exit early from a function if there is a problem.
+5:52
+And so that's a shorthand way of doing this in Scotland, which is to use a built in function called require.
+5:56
+And Require says we can require some condition to be true, so let's require file name and with top text.
+6:03
+And if this isn't the case. Require will throw the legal argument exception for us,
+6:15
+but the message that it gives us perhaps isn't the most specific, so we might like to add in more detail here.
+6:25
+The way this is done with requires slightly more complex than just putting in a string, but if we do that.
+6:33
+Until he can help us to fix this, and so we actually pass a lambda.
+6:49
+And so this is a lambda which is evaluated in the case that a message needs to be generated.
+6:55
+And so this lambda is triggered at the point that our message needs to be generated to include in the exemption.
+7:00
+So that's given an example of putting a try catch block around code that could throw an exception.
+7:12
+And also throwing our own exceptions in the cases where problems occur and using REQUIR as a
+7:19
+shorthand to do that at the beginning of a function to try to guard against invalid parameters.
+7:26

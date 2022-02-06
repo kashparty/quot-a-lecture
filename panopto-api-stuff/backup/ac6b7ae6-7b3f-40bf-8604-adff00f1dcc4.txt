@@ -1,0 +1,141 @@
+ID: ac6b7ae6-7b3f-40bf-8604-adff00f1dcc4
+Title: Ethics 6
+Category: Ethics
+Lecturer: Thomas Lancaster
+Date: 15/12/2021
+So hi there, everyone, welcome to this bonus lecture with Blé,
+0:02
+where he's going to look at some of the decision frameworks to help you to determine what to do in an ethical situation.
+0:07
+Sublime. Take it away. What I'm going to try and do is pull the slides off the virtual background I want.
+0:16
+I'm going to start again then and not make this into a proper recording.
+0:26
+Apart from that would involve editing, which I which is a pain.
+0:30
+So we will just continue. But I may add this.
+0:34
+I can cut this down on Panopto afterwards, and right. Because that way, you can see me on the slides.
+0:39
+Okay, well, I hope you can just see me on the slides.
+0:56
+So this lectures help from sources to help with your presentation.
+1:01
+Please note, I'm only making suggestions here and feel free to impress me with your presentations to do something innovative.
+1:10
+There's no rules against innovating, but here's some suggestions.
+1:19
+So if I were talking about the Sony hack and Sony was hacked, it was for quite a while ago now.
+1:25
+So they won't have taken your particular personal details, but they were hacked.
+1:34
+The first thing you would discuss is as far as we can tell, and that I publicised that for a reason.
+1:41
+All we've been saying about not all sources are equal and so on, and you must treat some sources with a certain degree of scepticism.
+1:49
+But as far as we can tell, what happens as part of the presentation,
+1:58
+what happened and try and distinguish guesswork media spin from more reliable information.
+2:01
+The second question you need to ask is, what could you have done differently?
+2:10
+And one thing I have to say quite loudly here is in that case, don't forget the obvious.
+2:15
+If someone hacks into your system, that's bad.
+2:22
+But don't forget the professionals are all paid to provide security.
+2:26
+So you can't you can't always blame the hackers. Modern systems are constantly under attack, so much so that some security experts,
+2:32
+particularly with a big thing like online gaming systems like Sony were running, say it's almost impossible to prevent hacks.
+2:44
+And a further twist is nowadays they talk about state actors.
+2:54
+They very rarely name the states.
+2:59
+But the implication I get from my colleagues in security is that certain states are heavily and actively involved in trying to hack online systems.
+3:01
+It's not, you know, it's part of the web that now for I.T. professionals.
+3:13
+So it's, you know, it's no longer the occasional event.
+3:19
+It's in fact you could you could ask you could simply ask if imperial or ask around.
+3:24
+And I'm sure Imperial will say they are constantly under attack if they've told me this,
+3:29
+including by other countries trying to get a particularly vaccine information.
+3:37
+But so yes, it's almost it's almost like the weather hacking now.
+3:44
+But don't forget that, you know, if you if you're running a system or even just a little website, security is something that it's your job to do.
+3:50
+Now, ethics also involves presenting your case, and in this case,
+4:02
+I think there's a good argument to say that Sony could have presented things differently, differently.
+4:07
+I'd also like to point out that what Sony did not revealing the full extent of the hack for a month is now illegal.
+4:13
+The law has changed, and you need to know about particular about what's commonly referred to as GDPR,
+4:22
+although technically it's the Data Protection Act 2018. But you need to know what the law says because again, it could just be part of your work.
+4:29
+And the third thing that you could discuss usefully on?
+4:42
+Remember, these are just suggestions. The third thing you could discuss is could it happen again?
+4:47
+To what extent is the problem fixed? And I've also made some hints about that.
+4:52
+It's also important for me to say that what would you have done? It's an interesting thing to discuss.
+4:58
+I mean, and I do hope you have a lot of discussion in your group about this, but it doesn't need to be vague and open ended.
+5:03
+Those structural approaches, one of which is the unethical leaders decision tree from a 2002 Harvard Business Review,
+5:10
+and I think I've put links up to that before. I wouldn't just cut and paste that decision.
+5:21
+Tree. Make your own decision tree and maybe make some tweaks to it.
+5:27
+Which, of course, will prove to me that you've thought about this one.
+5:33
+But the real use of a decision tree is for you to realise that there were decisions made.
+5:37
+There are decision points, things could do differently. And now we're structuring what you could do differently.
+5:43
+You could flowchart it.
+5:50
+No objections to boxes of arrows or even the gunshot or whatever saying this is what this is, what Sony did and this is what we would do.
+5:51
+Notice the differences. That's quite a structured way of answering the question What would you have done differently?
+6:03
+Books have also put up a framework for taking decisions, ethical decisions in cases like this.
+6:12
+I have to say, you know, even though Penny do Kunai, whose name is on the reference,
+6:21
+there is a student of mine and someone I really respect a lot in this area.
+6:27
+But the diode framework is probably not going to be helpful for you.
+6:37
+It's difficult to use. It's quite complex. Worth looking at, but I certainly wouldn't insist that you use it.
+6:42
+But at least I've told you about it, and that is all I've got to say in my suggestions.
+6:52
+So perhaps Thomas could stop the recording at that point unless you've got questions.
+6:59
+I'm trying to think, well, just just to sum up in any of many students in attendance, if you got any questions, feel free to to let us know.
+7:08
+But I think in terms of just completing your assignment, the take takeaway message in all these frameworks out there,
+7:17
+these are not the only ones, and you may find more of an AI type framework is appropriate to think about in some circumstances as well.
+7:24
+And also, if you were to look at the details of those frameworks and those processes,
+7:32
+then they talk about things like shareholders and maximising shareholder value.
+7:37
+But you might also think about maximising stakeholder value as it is an idea we talked about before as well, which I think is really relevant.
+7:42
+But as Blake says, these are just ideas about structured approaches because a structured approach is useful.
+7:50
+But is these are not the only ways of doing things and you can come up with with other ideas as well.
+7:56
+So at that point, I think we'll say thanks everyone just for checking out this short video about completing ethics assignment.
+8:02

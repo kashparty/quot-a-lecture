@@ -1,0 +1,1247 @@
+ID: 66ebe882-060f-4320-83d1-adcf0150ba60
+Title: DM Oct 28 Lecture Recording
+Category: Discrete Mathematics
+Lecturer: Steffen van Bakel
+Date: 28/10/2021
+Can I ask, is there a coursework due this this week or today that that is very urgent?
+0:03
+Although apart from from what you do for me. No, nothing.
+0:14
+OK. It was remarkable how few people it as about a quarter of the students now attend the lecture.
+0:24
+OK, so I'll move on it. You see the slide that I share.
+0:33
+So this is the exercise that we left off with the last lecture.
+0:37
+I will now do those exercises in in the other window.
+0:42
+Some kind of small window now. There we are.
+0:50
+So it's the extension of the one that I started on on Tuesday. Good.
+1:12
+So first question is show that this relation so you're right in vertical bar is defined as and divides them down.
+1:17
+And so I need to show that this relation is a partial order.
+1:38
+First of all, the thing that I want to stress here is that I'm using the word divides.
+1:43
+And I and I in my in my reasoning, I will use that.
+1:49
+Everybody knows what this means. I can define this. Yeah.
+1:53
+So I can define by saying there exists a gay in and such that and times gay is m yeah.
+1:57
+And reason my proof with this predicate is perfectly OK.
+2:10
+There's nothing against it, but it makes it longer. So this at the moment I just assume that I can define, I can use this.
+2:13
+Yeah. Use the word. OK, so I need to prove that is a partial order.
+2:22
+So to show. It is.
+2:34
+Reflexive. Transitive.
+2:47
+And isometric. Good, so does it Republicans need to show, so the first opportunity to show instead of this reflexive so I need to show.
+2:57
+So I'm being very explicit in all these these but I write on to show this is not
+3:08
+part of the process of just communicating with you what it is that I'm doing.
+3:13
+So I need to show that. So it is the property of safety for all and in and I have that and divides and.
+3:17
+Yeah. And and this of course, clearly true, you know.
+3:30
+Because I used to divides rather than a predicate I have to, as a human being,
+3:38
+saying does and divide and yes, yeah, and all you can say actually like and immediately jump into this.
+3:43
+OK, so take an in and.
+3:51
+Notice that anytime someone is so and defines him so little and.
+3:58
+Sonia. So these are all valid things, it's all good.
+4:22
+Yeah, so now there's that implicitly using this predicate shape there without talking about it.
+4:32
+OK, second one, I need to show you this transitive.
+4:40
+So take an M in N.
+4:45
+Yeah. Assume I remembered it in the difference transitivity assumption.
+4:51
+Assume there exists. Okay. Such that and devise gay and K defines em now.
+4:58
+Then there are P and Q, such debt and times B is gay and gay times.
+5:14
+Q So these are natural numbers, gay times.
+5:28
+Q is so and times B times.
+5:33
+Q is and so.
+5:42
+And if I say no, it's pretty straightforward.
+5:48
+It's not that nothing spectacular happening, it's just that I'm assuming that I have two pairs in the in the rotation here,
+5:52
+you know, so I have this pair here and is better than. Yeah.
+5:58
+And so I assumed it existed. Yeah. And if you want you can say that this is a number as well.
+6:02
+And then by definition of divide to confined to be in the Q I can just say well if and if it's K and K defines then obviously and divides M as well.
+6:09
+No, just a little bit spelled out. So the last thing to stick is that it is symmetric.
+6:20
+So I take an M n n so this is very similar to the previous one.
+6:26
+Yeah. So assume that N divides M and and no let me rephrase that.
+6:34
+There's no assumption. And you can read.
+6:47
+And device in OK then as so, without repeating the whole sentence, I can find A, B and Q such that so I repeat that.
+6:59
+So is that so? And times B is M and and times Q is an.
+7:12
+So and times B, times Q is and since B and Q and often this implies that B is Q is and so and is equal to M.
+7:25
+No. Good, any questions?
+7:53
+Great, so second part. And we have to set aside.
+8:03
+Uh. This is sorry. The question is never a question.
+8:11
+Yes, if you say that there is a question and ask if there's a question before I continue.
+8:18
+OK, there's a question. So, Casano and.
+8:22
+Ascona, Ijaw, if there's a question, you can ask him to explain why he was so critical, said.
+8:28
+Is that is there is that somewhere? Sorry, did you say is able to Q equals equals to N.
+8:38
+No, no, sir, I noticed that sometimes I, I what I write is ahead of what I'm thinking sorry, because I think about the next equation.
+8:47
+This should be one. OK, so issue one, right, that makes more sense than OK, good thing.
+9:00
+So this this one so the so we have, for example, the two divides four and four divides 12.
+9:07
+So and to divide Struhl. So this is a transitive relation. What I want to find are the bears that are the the, if you like,
+9:15
+the essential part of this relationship and all the bears that are in the relation that are not cannot be added as a result of transitive closure.
+9:25
+So I add, for example, the two four I deplore the pair to ten at the bear.
+9:38
+So to twelve it would be six.
+9:47
+Six is not an asset, so it is to 12 is not a pair, two and 20 is a pair with 10, but then it would be already a pair their.
+9:55
+Good. So there's this sorry, sorry.
+10:08
+Was there a question? No. OK,
+10:17
+so sorry for but I did so four and 12 is not a good thing to be added for and to end
+10:22
+this with five and six and then five comes with ten and five comes with not with 20,
+10:31
+because that is five times for instance.
+10:45
+So five point twenty five and then comes with twenty and that's it.
+10:52
+And twelve contribute not twenty with nothing good.
+11:03
+So it seems that these are the six ones that are doing it. It is easier if you draw this in in a diagram.
+11:07
+So I have to divide four. Do they fight for any rights then?
+11:15
+I have five divides, then I five divides 25.
+11:24
+I have four divides 12. And 20.
+11:30
+Ten divines, 20 and just.
+11:41
+So it's just the I've I missed one. Because the moon is on the flight of one of skippable and that it should have added so to divide 12.
+11:47
+It is not through. You have to do it.
+12:05
+No, no, I mean, you're making a grave mistake here.
+12:13
+The idea that I need to retract this, because the point is at the it is a I need to bear in s that are dividing,
+12:16
+for example, four and 12 are not dividing. Because six is not in the set, so three is not an asset, so I decided I need to to recapture this.
+12:27
+OK, that's cool, that's cool. So two and four, that's OK, because two, two times two is four.
+12:52
+OK, two and 10 are OK because five is intercept two and 12 is not OK.
+13:00
+Two in 20 is in the set. So I'm just going to say I'm going to find the.
+13:07
+I'm gonna first ride down, as with the Devinder, you know, set a whole set two and trendies into, said that's it for and then not four and 12.
+13:18
+Not four and 20. OK, four, twenty five, five and ten years, five and twenty five and twenty five,
+13:32
+and then I have 10 and 20 years and that's it, not 20, not 25, not OK.
+13:48
+So these are the the six elements, five, six, eight elements.
+13:58
+So which one of those are transitive closure of two.
+14:05
+Well I have two to four and 420 now so two.
+14:09
+Four for the twenty. So two to twenty does is the result of a disclosure.
+14:15
+I have two to ten and ten to twenty two to two just the same as before.
+14:22
+I have zero, five to ten I five to ten.
+14:27
+Ten to twenty five which is a step. OK, so what I get is two.
+14:35
+For 10. Five, 10.
+14:43
+25. 20.
+14:53
+And Toll stands on his own. There's nothing in OK, yeah, so if you now look at the second part of the question,
+15:05
+assuming that I have done this correctly, so what the emotional and the middle elements for the Mexicans.
+15:18
+So first of all, there is no loose element. Yeah. So because the the there is nothing that divides both two and five, so one is not understanding.
+15:23
+So I have two minimal elements that actually three, six to five and 12 and a half say similar.
+15:33
+There is nothing above 20 and 25. So I have three Mexican elements that are 25, 20 and 12 again.
+15:43
+Kind of a question, John, so you can only have one, these elements.
+15:56
+Does if if if there is a loose element that is unique, yes.
+16:05
+Right. So what, he can't repeat why we can't have a at least elements in the set,
+16:09
+because it tells you what you need is an element in that divides both two and five.
+16:16
+And it wasn't. Ryce needed elements itemise all that, every so Desart remarked that the set is defined, defined so the divide as defined onis.
+16:23
+So it is a relation onis and therefore you need an element in as the defining element in S.
+16:39
+Yeah, but the question here is both minimum and maximum.
+16:48
+Sorry, is 12 both minimum and maximum? Yes, it is.
+16:55
+There's nothing below and there's nothing about.
+17:02
+OK, so now if you saw the dad for the last part, we need to reason about the totality of this relation.
+17:09
+It is not total. And since and is a focus on the minimum elements down to five and five to.
+17:19
+Not in in this relation.
+17:35
+Yeah, so this is a total, total relation, total order demands that every pair is either in the order or it's reverses.
+17:42
+And I have a bed flip around the night office, so therefore it is not total.
+17:53
+OK, so how do you make this relation?
+18:00
+Well, it's very easy because you just say too small then for smaller than five smaller.
+18:05
+So do you take the natural order? Yeah, that's perfectly OK.
+18:12
+But you don't have to do that, you know, because you can also say, for example, you start with five.
+18:16
+So five is smaller than two. Yeah. So you go in and never die at an idea, so you don't need to follow the natural order.
+18:21
+Now, you can you can do what you like as long as you make it into a total of over.
+18:32
+Well, let me get to our side, because otherwise it was confusion before.
+18:37
+OK, now so many answers possible.
+18:43
+OK, good. So let me go back to the slides. Got a lot of ground to cover today.
+18:57
+Excellent. Good.
+19:20
+So the an important notion, and I'm sure you will encounter this later, not, of course, is the notion of a well founded order.
+19:26
+And it's it's very useful to show certain properties.
+19:35
+So what is a well founded order? Well, you have a binary relation on a on a set, which is a partial order.
+19:39
+And this particular order, partial is called well-founded if it is impossible to find an infinite path that goes downwards.
+19:47
+So you have to implicitly there is a relation, small right to smaller equal symbol there.
+19:55
+But of course, you can do this with R and then decreasing means that you can't go to the left end of bear in an infinitely many steps now.
+20:00
+So it is both as more readable with smaller equal because that intuitively clear but is not the only kind of relationship.
+20:11
+And you have some small equals, implicitly defined on numbers.
+20:21
+And we are dealing with a and it might be any relation and as long as it's well it just a no no.
+20:25
+Infinity isn't cheap.
+20:31
+So it does means that if you have an infinite sequence of elements such that each element in the sequence is greater than or equal than the next one,
+20:34
+so it sits above the next one in the relation.
+20:43
+So there is a bear in the relation A2A one and there is about a three year two and there's a bear, etc. Then at a certain point you had a constant.
+20:49
+So this means that form a certain index onwards, all the elements in the sequence are the same.
+21:00
+No, so that means you cannot go through an infinite amount of different elements that are in the in the relation walking,
+21:06
+walking backwards, walking downwards, if you like. OK, so we have examples of that.
+21:16
+Yes, you can ask a question. And so if we have an infinite side, can we have a well-founded part of the word?
+21:25
+I said, look, look at the line that just appeared on this line to see on.
+21:34
+Is your answer there? If you look, for example, a smaller, equal or natural numbers itself, yeah, so you can it's an infinitely large set,
+21:39
+but with a partial or a relation and there's a well founded order because you cannot find a number, any number.
+21:52
+There is only a finite amount of steps you can go downwards because at a certain point you had zero.
+21:59
+OK, yeah, so it's on finite set is straightforward, is, of course, the interest in cases, infinite sets and so infinite set is well founded.
+22:06
+OK, so that we have seen examples. I've just mentioned the small equal on initial numbers.
+22:16
+But you can also, for example, take to subsid relation on the finite subsets, you know, because you are only dealing with finance subsets.
+22:22
+If you take a subset yet then you are decreasing the number of elements that will have to stop.
+22:29
+At a certain point you had zero. No.
+22:34
+It's not a total order because subsets are not necessarily compatible, and, for example, smaller, equal natural numbers is total.
+22:39
+Yeah, but it's a well-funded ordered need not be a total order.
+22:47
+OK, so the thing that we that we want is that we get almost immediately is that if you have a smaller, equal relation on the air,
+22:52
+the product sets and B, then the the lexicographical ordering on that product space is, well, far too small.
+23:06
+The lexicographical ordering is the the the one that we find the other lecture and the so I looking at my slide.
+23:15
+Yeah. So this means that the graphical ordering is defined using the smaller equal on a and the smaller economic.
+23:27
+So it is not the same relation it the first one defined.
+23:35
+Neda Ulaby and Steve Design can be. So if I now try to reason to waterproof so I need to do it.
+23:38
+So my assumption is that R and B are both founded or well-founded.
+23:48
+So I need to show that also that for a B cell phone.
+23:53
+So I assume that it exists a decreasing infinitely long sequence and I have to show that a certain point it will become constant now.
+23:57
+So I take a sequence of pairs and I look at first are the first coordinates all the A's.
+24:06
+And I notice that by the graphing definition it is either you go down in the first component or you hit inequal.
+24:13
+It's either one of those. So that means that one is critical to critical three, etc., because this is a cell phone at all.
+24:24
+This means that at the certain point you had a constant you know, it will no longer decrease.
+24:34
+So let's assume that that happens at a point. And so then from that point onwards, all these are the same.
+24:39
+And I look at the second quarter to look at all the BS.
+24:46
+So because I have a decrease in sequence by ordering all the A's stay the same and therefore we have a decreasing sequence in the B's,
+24:50
+that also is a well-founded order. So that is a particular constant value will point.
+24:59
+So at a certain point the sequence is decreasing in the first one and it stops in and decreasing the second call and it stops.
+25:05
+So the sequence stops. So the sequence that I started with here, this none that this will hit a constant value.
+25:15
+OK, so therefore the lesson ordering on on the product space is well founded.
+25:26
+If the corresponding small relations are funded.
+25:34
+A particular example of the properties that you can show with that is that you can show that if some some very peculiar be thing.
+25:42
+So this is the actual function. It's the it's a famous example from the early 19th century when people were developing recursion,
+25:52
+theories or decide ability theory or computability theory or you name it.
+26:02
+So there was a particular definition of what is called because functions, computable, computable because functions.
+26:08
+And the people are very happy with the definition.
+26:16
+Started working with it and an argument said, well, actually I have something that is computable, but it doesn't fit that scheme.
+26:18
+So that's why his function is he's famous.
+26:24
+And of course, you have to reason that this is computable function in the sense that those states
+26:29
+represent something that you start and it stops and it gives you an answer.
+26:34
+That's the definition of computability. And you can you can show that using the well found a partial order now.
+26:38
+So remark that as a as a function,
+26:46
+it's really weird if you run Eckermann on a by a coast stratospherically in values and it's a very weird production order.
+26:49
+The intermediate values are very strange, but at a certain point it will stop and the proof that it will stop is fits on this slides is very easy.
+26:59
+Well, I want you to to recognise that in the first case you just return a value.
+27:07
+So that stops. That's nice. In the second case, you go from X plus one to X, so you decrease the first argument.
+27:14
+So that's nice. You can say, OK, I'm already working towards an answer. But then the second case, although you decrease in the first value.
+27:25
+Yeah, and you decrease in the second failure,
+27:34
+the first failure gets repeated and the first failed because we are decreasing so that the reasoning falters a bit because she can no longer say,
+27:39
+well, I'm going downwards in the order, therefore it's going to be fine. So here the lexicographical ordering kicks in.
+27:49
+And so what we're going to do now, you're going to define the order. This is a strict order.
+27:56
+So it's not a small equal, but smaller then.
+28:01
+And we say that the bears are small, equal, if not so lexicographical ordering so strictly out of order.
+28:05
+We are using and using this order.
+28:11
+You can say, well, in the first part, I'm going down in this order strictly because the Gulf nations want to annexe in the second one.
+28:13
+I'm going down because I'm going from Expo's one in the first component to the first component.
+28:21
+And what happens in the second? I don't care because I'm going down in the first place geographically, I'm going down.
+28:27
+And the third one says that you go down in the second component, although X plus one gets repeated.
+28:33
+So I repeat it here. The values that you're calling dogma function on that.
+28:43
+Say that's a decreasing chain. And so here you go down in the second part, you start with despair and you go to that better.
+28:48
+Now, so this is a calling, the outcome of function brings down this order.
+28:58
+So this particular strict lexicographer ordering,
+29:03
+we have seen that the election rhetoric bordering on pairs of numbers is is well-founded and therefore the outcome of function will terminate now.
+29:07
+So it is an example of where well-founded orders take you to an unexpected answer, for example.
+29:19
+Sorry. So where we can compare why?
+29:27
+Plus one is to call. I don't understand why you're saying you have to repeat it.
+29:30
+Well, it's not. Oh, I got that. So you have only one, although it's not true.
+29:36
+All right. I don't understand what you're saying, it's like it's a private life that, frankly, is true, but I'll only get one as a result.
+29:42
+Yeah, you got to get a grip on reality. Of course, this eventually to stop with this.
+29:56
+Eventually, it will hit the first argument hitting zero because it's a decreasing change.
+30:00
+You know, that the value goes to a constant. So eventually it will hit zero.
+30:04
+And then you your Papa John's. Good.
+30:08
+Moving on and so we have a little exercise.
+30:14
+I'm not going to dwell long on this. I'm going to give you five minutes.
+30:19
+It's very straightforward. Nothing, no proofs involved.
+30:23
+I just want you to focus on the on the essentials here now.
+30:27
+So I'll be back in five minutes. OK, I'm back.
+30:31
+I've been looking a little bit at the flight path and like I said,
+36:07
+I don't have time to interact with you on that, but David should be there to do it for me.
+36:12
+One of the things that pops up is that you do not remember all the definitions that are over so far.
+36:19
+I fully comprehend that there's nothing that I am.
+36:29
+I'm amazed that but the I have to stress that the only way in which you put it into memory is by studying.
+36:32
+So this is not just listening to them. And then, OK, now you have it in your head.
+36:41
+No, it's working with the definitions, makes you understand the definitions, and therefore makes it easier for you to remember them.
+36:45
+So, Mark, that as an example, you don't have somebody sitting next to you and tell and tell you what is the tragedy if we talk to you again?
+36:53
+Well, there's this notation me.
+37:02
+So I appreciate that you're very busy and this and it might be already an overwhelming experience to study at Imperial.
+37:05
+But the good the purpose of the notes is that you revise in between the lectures.
+37:12
+So you have to go over the material preparing for the lecture so that you don't have to look things up while I'm while I'm talking.
+37:21
+And it also puts you in the habit of studying from the notes rather than just for memory understanding, because the again,
+37:29
+studying from the notes helps you refresh your memory, helps you reinforce the understanding and the and the and your memory.
+37:38
+So you better remember where things stand now.
+37:48
+So this is very much a field where there are a lot of definitions and you apply to definitions in the context of verifying results.
+37:51
+Having said that, the particular exercise is relatively straightforward.
+38:03
+So, for example, the question two part one is intellectual graphical ordering the.
+38:09
+All the best is to start with one, because they are smaller than two or three in the first component,
+38:21
+and then you have to pass that start with two, but a smaller than two three.
+38:26
+So that's two one to two in the second part, its creator then.
+38:30
+So it's equal in in the first component and create and the second that's three, two, two, three, four.
+38:36
+And then all the pairs that start with a four.
+38:44
+OK. The.
+38:48
+Reduction of the of this lexicographer ordering on a square is there so you have to list all the parts.
+38:54
+Yeah, because this is a total order. So the graphic ordering is always a total order.
+39:05
+And the so what you have is you need to write down the pairs that are built, both of which the transitive closure will give you the rest of ordering.
+39:14
+So you need to have added one. One is more than one two one.
+39:26
+Two is more than one three and one. Three is more than one four. Yeah.
+39:30
+And then one for smaller than two. One smaller than to tatoos.
+39:33
+More than three threes, more than two, four, etc. Yeah.
+39:37
+So you get 16 elements in a row. On the left you had one, one on the right you have four four and a all smaller you know.
+39:42
+So yes, I hope so too. We also need to have like one was smaller because of one.
+39:51
+That is that is no, because that is what you need to do is you need to add the bears right on the bears that for the transit of closure will give you.
+40:01
+So you only need to you know, I understand what you're saying, that it is it is a transit.
+40:14
+If we have a city that is transit if relation.
+40:19
+And so we already know we have a little order.
+40:24
+So it is a partial order, as always, reflexive, transitive and symmetric.
+40:28
+You know, the only thing that you need to write down is are the bears that are enough to build the transit.
+40:38
+If the full relation making the transit enclosure so you don't have to add one, one is more than one want to do that,
+40:46
+which you need to write down one one, a smaller amount of those other things that are important.
+40:55
+OK, yeah. Could you think again?
+41:03
+Sorry. I to you, a very, very muffled I don't know something somebody is covering your microphone.
+41:10
+Could you explain to me again, three? This bond.
+41:24
+Yeah, that question.
+41:30
+OK, so what you need to do is you'd need to find all the bears that are in the relation that are not the result of a transitive closure step.
+41:31
+Now, so, for example, you have barebone one is smaller than the pair, one to.
+41:41
+And you have to purwanto is smaller than a pair one three.
+41:47
+You don't add, for example, one one one one is more than one three, because that would be the result of the transitive closure step.
+41:51
+So you get one to is smaller than someone wants more than one to one to more than one three one three smaller than one for.
+42:03
+And then at the end of the month, and then you go to reduce their workforce,
+42:11
+more than two one two, one smaller than two to two to smaller than two, three, etc.
+42:15
+Yeah, it's clear now. Yeah.
+42:26
+OK. So we are now moving into the penultimate argument of the of what I want to discuss with you,
+42:36
+which is the concept of functions and functions are defined as a particular kind of relation on a set on the on the set a.
+42:54
+So in particular, it is a subset of the of the product space because it is a relation,
+43:06
+but it is satisfies two very peculiar, very particular conditions.
+43:13
+So a relation as a subset of the properties of space eight times B is called a function if it satisfies these two properties.
+43:20
+OK, in words it is very easy. You say that every element of A is related to exactly one element of being.
+43:31
+So that's impossible for a in an element in a to be related to two elements and B there's only one and.
+43:41
+It is, it is. In logical notation,
+43:54
+you get that you have these two predicates that are satisfied and the first one
+44:01
+says that if you take an element in a bar and you take two elements in PNB,
+44:06
+then if the pair A, B one is in is an element of this relation and a B two is an element of this relation,
+44:12
+then B one and B do have to be the same, you know.
+44:20
+So that's the first criterion that says that if you are mapping an element in eight to an element and B, there's only one such element in B,
+44:24
+and the second condition says that every element in A has an element, then B that is associated to it now.
+44:35
+So all the elements in a half are related to an element then B and all the elements in A are related to only one element in B.
+44:45
+Yeah. So this is the the second one says they are all related and the first one says they're already the only one element in B.
+44:55
+Good, so those two criteria together make that the the thing that is called Afia, which is the relation between A and B, is called the function.
+45:05
+So now this means that if you are want to show that something is a function, you have to test these two criteria.
+45:18
+Of course, proof of these two predicates some some terminology.
+45:25
+We have a function from A to B. So this to in addition that we have four that I will explain this notation later.
+45:32
+So if it's a function from A to B, that's how it is is pronounced. So we call A in that notation the domain and B the code domain.
+45:40
+Yeah. So remark that all the elements in a map to an element in B, but not necessarily all the elements in B are mapped onto the answer.
+45:49
+This is to the difference. Good.
+46:00
+We have the notation that says that F applied to a yeah in this notation here,
+46:06
+that is the unique element in B such that a B is an F because it's unique because of the first property and it exists because of the second property.
+46:12
+So everything is defined for all elements in a. We have heard the notation.
+46:24
+So, first of all, that said B to the power, A,
+46:34
+that is the notation for the set of all the functions from A to B. I will explain in a little while why it is written like this.
+46:38
+And the thing that I would like you to remark is that it is a proper set know, because it is defined as a subset of the power set of the public space.
+46:45
+So it is a subset of all the relations on the on A and B now.
+46:56
+So it's a proper set. So therefore I can talk about function belonging to the set and I write that as I've called on Arab.
+47:01
+So it's a shorthand for this notation. So I function from A to B is written with a code on the arrow.
+47:12
+But what I mean is that it is a member of this set.
+47:20
+And of course, when I quantify over this statement, I actually mean that I quantify over the membership.
+47:24
+Yeah, so there's so when I write for all with a column that I'm not sidestepping my permitted
+47:32
+notation because there an appreciation for something that I'm allowed to write down.
+47:38
+Good. So equality between functions is a special property because it's not inherited from the equality of civilisations.
+47:45
+So we have that functions are the same.
+47:55
+So this is extensional equality if they do the same thing with all the inputs.
+47:59
+So if for all in a F of X and values are the same in B, then F is the same function as G.
+48:04
+So this is something that is very easily defined.
+48:15
+It's just a few characters, but is, for example, an implementation extremely difficult to check.
+48:20
+Yeah. So you can write down two different notions of addition and to prove that they are the same is can be incredibly
+48:26
+difficult because you have to do this for all and you have to from the both the additions to make sure it works.
+48:33
+So it's a very. So here is the mathematics is very easy because it's just a definition, but in reality is very tough to check.
+48:42
+We can call, so we have to demean the Dakota to mean we can we have observed that the Kotomi might not be mapped onto by the function,
+48:53
+not everything, and are going to need to be related to another domain.
+49:02
+I can restrict Toco domain to what is called the image of office that now.
+49:07
+So the image of a set is the collection of all the elements in B that are mapped onto.
+49:14
+So if every element so the image of the on the F is defines as the collection of all the elements in B,
+49:21
+such that I can find an element in the A switch that actually is equal to be.
+49:29
+So I this is defined for all the V. So this is a definition with respect to the function F, which has a domain and a code to me.
+49:36
+So this is not a generic definition. Has to have has to have been defined before.
+49:44
+I know it functions from A to B and the image of A on the F that's called the image of F, so the image of the full image.
+49:52
+But I can do this for an entry product.
+50:05
+So if I'm working on tuples here, then I can talk about as well.
+50:10
+And we normally drop the the pointy brackets when we are defining a function of
+50:15
+eatables because it's the way we see it as a as a function of many arguments.
+50:22
+Officially, it's a function of one argument, but we see it as a function of a mini.
+50:28
+I'm sorry, I have a question on the previous slide, because so this has the side of bracket, is the image sort of off as I do, I frocked V.
+50:35
+This one, yeah, why else is Africa in South Africa that way?
+50:53
+This is the because it is clear breaker's because is only defined on elements of of a not on subsets of a.
+50:59
+So rather than having the wrong brackets, we're right to square briga. So we it's clear that we're generalising denotation.
+51:08
+So this is the official notation, if applied to a and this is correct, would run brackets.
+51:17
+If I want to talk about all the F of A's in the set, then I don't use to run brackets.
+51:22
+I use the square brackets.
+51:28
+Oh, yes, we have square bracket A, why it's not a square bracket the in this case because you said half that amount of five is also a.
+51:32
+So I think I have square bracket. It's the same as F.
+51:46
+No, F is a function for me to be a square brackets.
+51:50
+A is a subset of of B. So don't don't confuse the function and the settlement with the work is two different things.
+51:55
+OK. And so we have is a function as a subset of the of the product space of a is a subset of B, not of the public space.
+52:07
+Now, F of A's in element of B, F of V is a subset of B of A, subset of B.
+52:26
+So why it's so wise, if they could the image itself, isn't it anyway, the codename?
+52:37
+No, because for example, after a quick example, they take the identity function.
+52:43
+So every everything gets back to itself. And you define that from natural numbers to to cue, you know, to the to the rationals.
+52:50
+Yeah, so it is a function because every number is associated.
+53:02
+Exactly one other number, but there are many elements in Cuba that are not mapped onto.
+53:06
+Ovadia, also the image of an on the on that function is seen as a subset of Q but is not view itself.
+53:13
+Yeah. Thank you.
+53:21
+Excuse me Amanda, why is it that there is a small area rather than for all a V for the definition of image because I collect all the P.
+53:23
+Yeah. If I say that all of all the elements in V on to that B that I'm insisting that f mabs all the elements in aid to the same thing.
+53:35
+Here I'm saying I'm saying we are the elements and B, that you pick well, those that are met on two by half.
+53:48
+So I can find in a city that is map two and therefore this is an axis.
+53:55
+If this would be for all, then I can only take all the BS that all the A's are made onto and this is very, very limited.
+54:01
+By, for example, the identity function, this would not be defined. Where can we just right arm F equals to F A for all A and B, can we write what?
+54:11
+Sorry, can we write the image of V to be as a four or a V?
+54:24
+Yeah, but that's abuse of notation because then you have on the left you have a right on F of A which is not an element of a set.
+54:33
+OK, yeah, so I understand that you're doing a lot of people right it like that, but this is the this is the permitted notation.
+54:45
+Anything else is, you know, shortcuts and bending corners and not not following the rules.
+54:52
+Exactly. I understand what you mean if you write it like that.
+54:58
+But it's not a correct definition. And the compiler would say no. OK.
+55:02
+Good, some examples, so I've kept them really simple and finite cases, so the I said one, two, three,
+55:11
+and be able to see a fistfight through this Diepraam or if you like, the pairs will need to be in three.
+55:20
+So you see the three maps to and one next to a.
+55:27
+That's perfectly OK. We're not contradicting it at all.
+55:32
+It's perfectly OK function. So see that every element in A is mapped onto one element in B and at every element in A.
+55:36
+So so there's every element in a is made into an element and B and every element in only to one element in B, you know, so those are the two criteria.
+55:51
+If I look at the image instead of F F brackets A, I look at B and as I said, A, B, OK.
+56:01
+And if I restrict my set A to the set just containing one three, then the set of that set is just set containing a.
+56:11
+There's an illustration of the concepts that I just presented. I've got the five o'clock, so it's time to take a break.
+56:25
+So I should have done this earlier.
+56:34
+So we've got to stop for ten minutes and I'll be back at at what is eight minutes past 5:00 and to do the rest of the lecture.
+56:36
+OK, I'm back. Let's resume the lecture, so the next example.
+1:07:01
+Is a diagram of a relation that doesn't qualify the criteria of being a function.
+1:07:15
+So if I take the subset of the product space that have relation defined by one with a one would be two would be in three every day,
+1:07:22
+then you immediately see here that one occurs twice.
+1:07:33
+And therefore the criteria of having each other in a related to only one element of B that's clearly violated.
+1:07:36
+So this is a relation, but it's not a function. So what happened to you would be that's not relevant.
+1:07:48
+What happens here with the one that's relevant? So one is to images and therefore it is not a function.
+1:07:54
+You can, of course, also extend this to the infinitely large sets.
+1:08:03
+Like, for example, we can define functions from and square to end by saying, for example, you take to some of the components does the function.
+1:08:07
+Every pair has one image and it's not meant to two images and every pair has an image.
+1:08:18
+The same holds for the next function that says X Square.
+1:08:25
+This is clearly a function where the image of N on the F is not and itself have, because not every number is a square.
+1:08:30
+You can define a function on rules that says F plus three.
+1:08:42
+There's of course the function. It is defined on the X, but it's also all the elements in our in the image.
+1:08:49
+Yeah, same here.
+1:08:58
+All the images are n are in the image because every element of the national numbers you can write as to the sum of two national numbers.
+1:09:00
+OK, he had a known example which is a bit more difficult to see.
+1:09:10
+This is not a function because for example, one one and one minus one are both in the interrelation.
+1:09:16
+Therefore one will be mapped to one in minus one, and that's another that.
+1:09:25
+Good. We can talk about the commonalities.
+1:09:33
+We have seen the cardinality, definitive Kanelli in the finite case,
+1:09:39
+and we have a property that actually explains the notation because I have this particular sobby to the power.
+1:09:45
+As I said, I would explain what you council. It comes from this property statement that the product in the in the Cartesian product
+1:09:51
+supposedly uses the Times symbol there is explained by the cardinality property.
+1:10:02
+We have the same thing.
+1:10:08
+So if this represents the sets of all the functions from A to B, if A has site and B A size and then the size of the function space is exactly.
+1:10:11
+And to the power. And so see the correspondence between B and A in this power notation.
+1:10:23
+Yeah. So this result here that justifies that notation there.
+1:10:28
+So how we do this?
+1:10:35
+Well this is the same as we've done before when we did the, the collection of all the subsets in subsets that we do this by counting.
+1:10:35
+Now we take an element in a and how many elements in B can I make this too, while there are elements and elements in A.
+1:10:44
+I think most of my friends here is element in aid, there should be an end, this would be a mistake to make now.
+1:11:05
+So so there should be an end. And then what am I doing here?
+1:11:16
+Well, I have basically have positions here.
+1:11:22
+Yeah. And I have and choices in the in the image.
+1:11:26
+And therefore I can see this as a way of representing, if you like,
+1:11:30
+numbers and position in base and sort of any symbols that represent the position and how many possible solutions to have what it was and to the end.
+1:11:33
+OK. Again, I repeat that and there should be an end. Strange.
+1:11:46
+Another important notion of a function definition kind of function is what's called the characteristic function.
+1:11:58
+We will see this pop up a little later in sort of a characteristic function is defined on a set with respect to another set.
+1:12:06
+It's not just a set by itself, a so it is always defined on B with respect to A,
+1:12:17
+and what it does is to function that characterises B with respect to H.
+1:12:24
+So every element in A you check if it is in B or not, if it is in B, your member to one it is not and B to zero.
+1:12:29
+So is called the characteristic function. There's a binary representation of the set of course is infinite and it's,
+1:12:36
+it's an infinite long string and sometimes you can't even put it in a string.
+1:12:43
+We can do the same thing with a relation, very much the same mechanism.
+1:12:51
+And you test if the of the tuple is in the relation and if it is, then you put the one and if it isn't good to see.
+1:12:54
+So character two functions, binary functions. The binary functions are hoping to zero in one and they characterise a subset within the set.
+1:13:01
+Another notion that we have to consider is the concept of partial function,
+1:13:14
+and this is where often students get confused so as have to be careful here.
+1:13:20
+So it's a function. So a partial function from A to B is a relation now.
+1:13:25
+So it's a subset of the product space. But the only criterion that is satisfies is that it maps each element in a if
+1:13:32
+it matches an element in a two and can be this element in B is unique now.
+1:13:41
+So I'm no longer demanding that all the elements in a map to an element in be.
+1:13:46
+So in that sense it's partial because only a partial amount of the information in a case is used in a function.
+1:13:52
+And we consider the function to be undefined on all the elements in a way that are not defined on the F.
+1:14:01
+Okay, you can represent that undefined value by bottom.
+1:14:11
+OK, so then if you add that value to to B then you can see a partial function from A to B is a function from A to be extended to bottom.
+1:14:15
+Yeah. So you add the extra value down. OK, I need to stress a partial function is not necessarily a function.
+1:14:25
+It's the same as the district. Partial relation is not a partial relation or partial what I should say.
+1:14:35
+Yeah. So a partial function is not necessarily function. So it looks like it is function to satisfy a predicate.
+1:14:41
+No, it is a relation that does not satisfy a particular predicate.
+1:14:49
+So as an example of a partial functioning, we have this small diagram there, you can see the two has no image, so the eye just disappears.
+1:15:00
+One and three A and two is not mapped so far at both a minimum dead.
+1:15:09
+And I would map to to the bottom and I can define the relation on on ah.
+1:15:16
+I should have added element our square there.
+1:15:24
+And so this is the, the powers that as the square root of X is Y and this is not defined when X is negative,
+1:15:28
+real, and therefore this R is a is a partial function from R to R as not defined on all the real numbers.
+1:15:40
+Good, we're now moving into some of the properties, a lot of definitions are flowing through the over the slides now,
+1:15:54
+the the very important properties of functions are how they relate the domain and the code to mean.
+1:16:04
+OK, so first of all, we call a function anta or subjective if every element in the code domain is in fact mapped onto.
+1:16:11
+And so all the elements in May and be, I can find an element in a such that that element is the one that affected me.
+1:16:21
+So this means that the image of A is actually B?
+1:16:32
+I call a function one to one or injected, and you can even write in number one, dash the number one,
+1:16:40
+when every element in be I can find only one element in a way that gets me up to it.
+1:16:50
+So in other words, as a predicate for all the pairs of elements in A F F of A of a prime is equal in B then A and a prime equal in a non.
+1:16:56
+So it is not possible to make two distinct elements in a to the same element in B.
+1:17:09
+We call a function by adjective or bijection,
+1:17:18
+if both these conditions holds and we will see that bijection are an extremely important tool in mathematics.
+1:17:21
+That's a lot of the the set theory depends on it. OK, so as an example of a bijection, it can take this diagram here sort of of a bijection.
+1:17:28
+This is a function of this On2.
+1:17:43
+So all the elements in B have an error coming into them, but it is not one to one because the number one and three are both maps to a and so they,
+1:17:46
+they share an image and therefore this function is not indicative.
+1:17:58
+And in a certain sense you can argue that this is reasonable because there are too many elements in a two
+1:18:04
+material and Zimbabwes sort of pigeonhole principle that I would say you can't do this without overlapping.
+1:18:09
+Similarly, I if if the size of a smaller than the size of B,
+1:18:19
+I can't find an on to function the subjection because no there are not not not enough elements in B.
+1:18:24
+Oh, so you can market this, be there.
+1:18:32
+I know it's not related to 9/11 today, so this gives me that the objection in a finite case,
+1:18:36
+we have that and we have exactly the same size, same amount of armaments.
+1:18:45
+And also that every element in B has in Iraq coming in. Every element in A has only one arrow going out.
+1:18:50
+And that's because it's a function. But also every element and B has only one arrow coming in and has an arrow coming in because
+1:18:56
+they're all right and has only one arrow coming in because it's an objective function.
+1:19:05
+More complicated examples in terms of infinite sets, you know,
+1:19:15
+so the function that we saw before that adds the components of a bear that is a function that's onto all the numbers are reached,
+1:19:21
+but it's not one to one. Yeah. So how do you show that? All right.
+1:19:29
+So our definition of that function type, correct? I think it should be like, yeah, you're right.
+1:19:35
+You're right. So I have these slides for years and every find mistakes.
+1:19:42
+It's remarkable. Thank you for that. Yeah. Should be on square there that saw this and should be Earnscliffe.
+1:19:48
+I'll update the slides and I got an email today that told me that the materials side has collected, all the notes are disappeared.
+1:19:54
+So I will update the new files and I make this change good.
+1:20:04
+So. So this now is a logical statement.
+1:20:09
+So I claim that it's on too. And a claim that does not want to answer this because this is translated into predicates.
+1:20:14
+I have a proof duty. I have to show that that it is true now.
+1:20:22
+So to prove that it is onto you have to show that every element in the QUARTERMAIN is related to an element in the domain.
+1:20:28
+So you'd taken that to mean in this case it's N and then you remark that F of another zero.
+1:20:36
+That is. Exactly. And so I can find a pair in N Square that is mapped onto onto and therefore I've satisfied my application
+1:20:44
+for every element and I find a pair in a square such that if matched that span to this number,
+1:20:54
+to show that it is not one to one, not injectivity.
+1:21:03
+So this is a statement that contradicts for all.
+1:21:07
+So therefore, suffice it to find one particular pair that that contradicts that.
+1:21:12
+And we take so we take we have to find two pairs such that they are not the same, but they have the same image.
+1:21:18
+Yeah. And it's easy in this particular case. Take for example, one zero zero one the different aspects, but they're both to one.
+1:21:26
+If I take to function and from national numbers, the national numbers do fine, but square, yeah, this is a objective function.
+1:21:38
+Yeah, but if I extend if I replace this end by Zent and it is not an injector function because then minus one and one both,
+1:21:49
+I'm adamant it is not the selective function.
+1:21:59
+Aydan because not every number is the square, the function X plus one from integers to integers.
+1:22:04
+That's a subjective function.
+1:22:12
+If I restrict this to an initial numbers then it is not a subjective function anymore because the number of zero is not mapped onto.
+1:22:15
+Take the function from Real's to realise we're saying for X, for X plus three,
+1:22:30
+this objective function for every numbers mapped onto in every number has a unique image.
+1:22:36
+So now these are we have this particular property, this I've already hinted at that before,
+1:22:47
+that the size of the of the domain and the size of the Kotomi, they have to be in this particular relation in order for this to work.
+1:22:54
+And the relation is that the size of the sort of number of elements in the image of a
+1:23:07
+subset X is smaller than or equal the size of the or the number of elements in X itself.
+1:23:13
+So that means that if you have a function from A to B.
+1:23:20
+So this notation stands for that is a function so that it satisfies all the properties.
+1:23:24
+I have a subset of a. So the amount of elements in the image is smaller than the amount of elements in the in the in this set.
+1:23:30
+That part is from. How do we do that.
+1:23:39
+Well, I'm going to show that it is impossible for the the the the opposite relation to hold.
+1:23:43
+So assuming that there are more elements in the image that are in the in the domain, intuitively, this is immediately clear.
+1:23:50
+That is going to be the case because the function every element says only one image,
+1:23:59
+etc. So the intuitive is clear, but of course, intuition is not a proof.
+1:24:04
+So we need to do a bit of work here. So what I'm doing now is I'm I'm constructing I'm using my pigeonhole principle
+1:24:10
+and I'm going to construct a division of of of X into IVAX into subsets.
+1:24:20
+So, yeah, the how I do that, well I'm going to map, I'm going to define A function B that goes back and so goes from the image to the to the domain.
+1:24:31
+And how do I do that and say, OK, take an element in the, in the image that I know because I a function that because I take an image that
+1:24:44
+there is an element in X that maps onto this particular thing that I've picked,
+1:24:54
+and that is the one that I relate through B so B, B of B is A, so B of B is the such that everybody is B, OK.
+1:24:59
+What I now do is I placed every Y in the image space in a pigeonhole labelled by X.
+1:25:14
+Yeah, if P of why is X? So all the all the Y in the image space gets grouped into the same set.
+1:25:21
+Yeah. So I'm going to building a petition here and put and put in this whole collection of all the way that are mapped onto X by P I put together now.
+1:25:31
+So I'm now I have a petition of F effects and I know that X is greater than X and therefore I each.
+1:25:43
+So I've built little subsets for every X and therefore I have by the pigeonhole principle, I have to have many elements.
+1:25:55
+So one of these these pigeonholes, one of these subsets has more than one element because that's the business principle.
+1:26:05
+Now, if I tried to put this many elements in so many positions, one of the positions will more than one element.
+1:26:16
+So this means that I can find an element in X such that be an element and some D in the prime in the image of X,
+1:26:24
+so set B and the prime, both the C and of course this is this is not what we want because then we get a contradiction,
+1:26:33
+because if I don't go back and see how B is defined, I know that B of D is C and therefore if of C is B is destroying and C the prime similarity.
+1:26:43
+Therefore I know that. Sort of are two, so I should have added that these are distinct young.
+1:26:57
+Yeah, so there is an element that has more than one side as one seed as it relates to two different, so these are two different elements.
+1:27:09
+So here now I have that oversee USDA and oversee the programme.
+1:27:18
+So I've have to see two different elements. And that's a contradiction with the fact it is a function that cannot be true.
+1:27:22
+And therefore, I know that my assumption doesn't hold and I get that we have the size of the image of X is smaller than the size of X itself.
+1:27:30
+It's more than. So exactly to define P, because we need to be a function, but in some cases that is a function at all.
+1:27:43
+No, no, no, no. I know I'm going to say I do.
+1:27:59
+I do say that piece of function. So, yeah. So every so every element and the image gets related to an element, the domain.
+1:28:03
+Now, so I pick so I pick B. Yeah, and I say, OK, there is an element in Texas that always B and defined it like that.
+1:28:11
+There might be more than one, but that's not the issue. I'm just building be case by case.
+1:28:22
+I pick a B beginning. Pick another B, pick another way. Pick a central.
+1:28:27
+No. So I'm not I'm not claiming here, for example, that this is the unique way that this agency cannot claim, let alone.
+1:28:32
+OK. Yeah, OK.
+1:28:44
+Good. So some exercise, and this is to make you understand what a function is.
+1:28:52
+I need you to to look at all these relations and answer the question, is this a function or partial function or not an I.D. onto or not?
+1:29:01
+OK, I'll give you 10 minutes to do this.
+1:29:13
+And then we will I will come back and do to go through them with you.
+1:29:19
+You know, so try try to to go through the whole list in those 10 minutes and then I'll come back and discuss.
+1:29:27
+Stefan, are you talking? We can't. No, no, no, I'm just thinking, oh, you're just going to tell you,
+1:37:47
+some are reasoning in my head when I'm pointing out the problems that I want to talk about.
+1:37:55
+All right. So that's. OK.
+1:37:59
+So let's look at all these different cases, so the first one, this says that all the pairs and square that have equal components.
+1:38:23
+So first of all, this is a function. And then you say, OK, well, I need to check that everything on the left belongs to a one on the right.
+1:38:32
+And it's true. And then you need to think about everything on the left is only connected to one thing.
+1:38:41
+All right. And as is true as well, because there's equal. So it's a function.
+1:38:47
+Is it a one to one function? And the answer is yes is on two and the answer is also yes.
+1:38:52
+Second one, take all the parts that are not equal in the components is immediately clear that this is
+1:39:01
+not a function because every number M is in this relation associated to an infinitely many.
+1:39:09
+And, you know, so it's therefore it's not a function. So the whole concept of injection and such action is irrelevant.
+1:39:16
+The third one is interesting because there we are dealing with a special feature of the universe of quantifier,
+1:39:26
+and that is that everything is quantified over the said said no.
+1:39:33
+So if you look at the two criteria, they say that.
+1:39:39
+For all a in a day and for all the banners in and square, if a.
+1:39:44
+If he and the first bear and a and the second are both in the relation, then the bears are there the same?
+1:39:54
+Well, the point is nothing is in the relation. So the thing on the left of the implication is, is false and therefore the implication is true.
+1:40:06
+And we have we are quantifying over an empty set. So this is true.
+1:40:17
+It's also the second statement, it says that every element in the domain should be associated to an element in the economy.
+1:40:24
+This is true as well, because there is nothing in the domain. So everything in the domain this this holds.
+1:40:31
+So the ante set is a. I don't think so.
+1:40:38
+I think that on welfare should be and so I think it's a partial function of our functio.
+1:40:45
+So what is the reason?
+1:40:52
+OK, let's let's let's hear your reasoning why this is a partial function of what is so what is the the the thing that functions should satisfy,
+1:40:53
+which doesn't hold true the USA and decide for does the south side of the square.
+1:41:02
+And I believe I believe that means the Dombi and Kotomi of it is both and the natural No.
+1:41:12
+So I think since I don't mind if I did that number, but we don't have our relations so we should have only a partial function instead of a functio.
+1:41:19
+So the property that every element in a I saw reading the.
+1:41:39
+Yeah, so this is a tricky one because I read. So what you're saying is that every element in the.
+1:41:46
+OK, no, no, I'll go go see what you mean. Yeah, yeah, ok, ok, OK. So this is a subset of square.
+1:41:54
+Yeah. So and so. The domain is and the quartermain is and and the the the four function to be well defined.
+1:42:00
+It says that every element in N should have an image in N and this is not the case.
+1:42:09
+You're absolutely right. So the second criterion I was misreading the information that I have.
+1:42:13
+You say absolutely right. So the function. So this is not a function because it doesn't satisfy the second criteria,
+1:42:20
+which means that for every and I cannot find the corresponding and m such that dysfunction and to m OK,
+1:42:26
+so therefore it is a partial function just because it satisfies the first criteria
+1:42:36
+that says that to one element cannot be mapped onto to different elements.
+1:42:40
+That's true, but it doesn't satisfy the second one. Thank you for that.
+1:42:47
+So then the fourth one will be seated. Acres, not acres not to be taken out to sea.
+1:42:53
+So it is clearly not a function here. We have to take it to A, B, to A and C to A.
+1:42:59
+So it's a function. It is not a subjective function because A,
+1:43:04
+B and C are not in the image and it is not an executive function because a catchment to A and B that I see as well.
+1:43:11
+But as such it is already enough. The third one EC is not to be B to C, C to A, B, C, it A, B and C are in the image.
+1:43:21
+So that's OK. We see that all the images are different.
+1:43:31
+So you have subjected to an injectivity and therefore this is by executive function.
+1:43:36
+The set of all the pairs in why is that square such that X is equal to Y or access equal to minus Y?
+1:43:45
+This is not a function because if I have that X and X is equal to one and X, so X,
+1:43:56
+so the by one one is in and this relation and if they have one minus one is in this relation.
+1:44:09
+So therefore one is related to one and minus one.
+1:44:17
+And therefore this is not a function.
+1:44:20
+The next one, all the pairs of the real bears, all the bears in a real space Y is equal to one over X square minus four.
+1:44:25
+This is a function because every X.
+1:44:35
+So the formula on the right produces a unique value, which is the corresponding way,
+1:44:43
+so it is mapping every X until one way the equation for X equals to an X equals negative two.
+1:44:48
+You're you're jumping you're jumping ahead here. I'm not there yet.
+1:45:00
+Oh, yeah, but I'm not I'm not there yet, I'm not there yet, I'm saying that it is it is a it is a function if I look at the shape of the formula here.
+1:45:04
+Yeah. So this is a for every X produces a unique value.
+1:45:16
+So that's fine. Is it a subjective function.
+1:45:20
+And the answer is very likely no, because this works with the square.
+1:45:25
+So it is a not all the Y sort of y will be a positive number here.
+1:45:31
+Is it ineffective. The answer is no, because there's a square there and then the last thing is a total.
+1:45:38
+So if if this is a non-objective non subjective function.
+1:45:45
+Is it a function. And the answer is no. Again, because if X is too or minus two, as you said, then I get no value.
+1:45:51
+So this is a partial function, partial function.
+1:45:59
+Not on to not inject.
+1:46:02
+So it's OK if you if you have your thoughts about what I'm saying, but please don't interrupt me until I leave this part and go to the next year.
+1:46:08
+So if you think that I misread something that wait until I start talking about the next one.
+1:46:15
+OK, so the last one says all the bears in Z squared, such an X squared is Y.
+1:46:23
+So this is a function because every X square is only one value.
+1:46:30
+It is not subjective because the negative values are not reached and it is not indicative because X of mine is produced the same way.
+1:46:38
+Now, so all this reasoning is done without any any proving and the only tricky bit, and I surprisingly made a mistake again, is this not that.
+1:46:52
+So this is a satisfies the first criteria of the function, but not the.
+1:47:01
+Good, which brings us to the end of today's lecture,
+1:47:09
+it tend to I like to respect the starting and closing times, so we have time for a few quick questions.
+1:47:13
+Otherwise, I closed the to recording and I say goodbye to you until Tuesday,
+1:47:28
+so we have two more lectures coming up and I think I just about can finish the material that I want to discuss with you.
+1:47:35
+It should about fit. Yeah, that should be good.
+1:47:45
+OK, so I'm stopping the recording now.
+1:47:50

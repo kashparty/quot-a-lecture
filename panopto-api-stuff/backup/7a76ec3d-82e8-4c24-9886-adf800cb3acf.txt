@@ -1,0 +1,225 @@
+ID: 7a76ec3d-82e8-4c24-9886-adf800cb3acf
+Title: idb-topic-10-sql-psj-extensions
+Category: COMP40007 - Introduction to Databases (Autumn 2021-2022)
+Lecturer: Peter McBrien
+Date: 08/12/2021
+In this topic, we highlight some of the extensions to the election algebra,
+0:01
+select projects and join that make Eskimo a practical language for database applications.
+0:05
+First is a facility to do pattern matching in a school.
+0:14
+High school dates from the 1970s and it has much more limited pattern matching in the standard than you might expect.
+0:19
+And it's also slightly non-standard. The way you do pattern matching is to use the like expression.
+0:28
+And then you can have a pattern which can contain characters, plus an underscore to represent a single character.
+0:34
+And the percent to match any number of characters from zero upwards.
+0:41
+Since this is so limited, many database platforms provide their own extensions.
+0:49
+Some of them provide regular expressions.
+0:55
+Transact Eskil, as used in Microsoft SQL Server and Sybase, provides the ability to express ranges of characters in square brackets.
+0:57
+For example, if you have the range of characters made to Z or selection of characters A,
+1:09
+B and C. So if I wanted to find the customers whose first issue is it was p in the database and I have one more initial,
+1:14
+I could write an essay you will query as follows, which is in fact ANSI compliant and the like.
+1:24
+Its question has a percent to me. There's any number of characters going up to a comma in the name.
+1:32
+I then have p and then an underscore to represent the second initial.
+1:37
+If I wanted to do something where I'd list all those customers whose first initials between A and L,
+1:43
+I could write a Transact Eskimo and none, that ciascuno statement where the life expression again has percent for the surname,
+1:50
+has eight people in square brackets to represent them, except in any initials may well and then percent afterwards,
+1:57
+which means there might be another initial or there might be no further initials.
+2:04
+As far as projects, statements are concerned,
+2:14
+there are a wide range of functions defined in the ANC eskdale standard and even more provided in many database platforms.
+2:15
+So for example, you use ABS to find the absolute value of a number round to round up a number upper to convert a string to
+2:25
+upper case and lower to lower case and charge lengths to find the length of a string in terms of characters.
+2:35
+This, for example, is something which is quite variable cost different platforms.
+2:43
+So you both find on Post Quest, there's a length function to find the length of the string.
+2:47
+And in transects, Pascual has supported by SQL Server and Sybase.
+2:52
+You have a linear function for strings, but Postgres also supports the ANSI standard function.
+2:57
+Wherever possible, you should use ANSI standard functions to make your queries portable from one platform to another.
+3:04
+And you can do very complex string manipulations. This is a scurrilous statement that was all over the bank database.
+3:14
+Find the surnames and give a rounded value for the rates.
+3:23
+So the ground functions is to apply and it's rounding off the boat value to one decimal place.
+3:29
+For the surname to be extracted, we need to look at the customer name and then look from the first character until
+3:35
+I find a comma in the string and extract that using the substring function.
+3:44
+So this is the ancestral way of extracting parts of strings and transact as well,
+3:49
+which doesn't support the fancy standard would have something more conventional function
+3:56
+notation where char index funds the position of a comma consigned to the C name,
+4:01
+and then the sub string function would extract from position one to the position of char index minus one.
+4:07
+Let's try out a quiz question, and slightly unusually,
+4:17
+I'm going to be showing you a none at the standard version of Eskimo because the like function here couldn't be expressed in fancy school.
+4:21
+So I've adopted the Trans-Fats Eskimo syntax in this particular query.
+4:30
+And when previously run Asia was the most popular answer, and indeed it's the correct answer for the black expression,
+4:41
+I'm going to be accepting anything which has a phone number which starts 020 eight nine and then has even a four, five, six or seven.
+4:50
+Therefore, in fact,
+4:59
+I'm looking at the last two rows of this customer table and then the substring function is going to be checking out the part of the string,
+5:00
+which is after the comma ignoring the space that follows and hence the plus two here and the char
+5:10
+index and the link function here is found in the length of the address because that's too long.
+5:16
+Eventually, it goes to the end of the string. The really powerful construct to use in Eskil statement is is the case statement.
+5:21
+And this allows you to put a series of expressions in when then expressions were in sequence.
+5:32
+The when part is evaluated and if it's true, then part is returned and there's default else clause.
+5:39
+And if you don't have an clause at the end, then null will be returned to the value.
+5:47
+So this particular example,
+5:52
+I've got something which is iterating over the bones of the account table and is going to convert the value of the right field into a string,
+5:53
+describing whether it's a low rate. If the value is between note and five point five a high rate, if it's correct,
+6:05
+then five point five and zero rates if it has the value zero or indeed null.
+6:11
+So you notice the values coming out here for this interest class over here, and the coalesce function is another example of something quite useful.
+6:17
+If I want to interpret the null value for a rate as meaning it's a zero percent rate,
+6:26
+then I can use this Kernis function and what Colette's does is return the first non null value.
+6:32
+So if the rate does not have a null value, it will be returned to the fan.
+6:38
+So notice account 101 and account number nine to have interest rates, have their respective interest rates returned.
+6:43
+And otherwise, I have the second value of the Colette's function, which is zero in this case returns and cents.
+6:51
+Instead of having null been the times for the rate, I have to value zero.
+6:57
+And now I want to come back to the issue of the topic of joins in the election in algebra, I presented four different types of joins and useful.
+7:05
+Or maybe that must be enough for all types of problems I need to address.
+7:13
+Let me motivate now a discussion where I want to introduce yet another type of joint.
+7:18
+Let's consider I want to list all the customer names with any movements that have occurred.
+7:24
+If I do, a normal joint between accounts and move into the natural joint is quite reasonable.
+7:31
+Here, I'd end up with the results showing where I list all the movements in the movement table to get all of the respective customer names,
+7:37
+but I don't list all the customer names and the reason why that is the faily can account one to five has no movements.
+7:45
+So if I'm trying to get a listing of any movements that occur for all the customers in the database,
+7:53
+and that should imply the idea that you want to include customers that have no movements.
+8:00
+I need a different type of joint and in schools is called a left join.
+8:07
+And what happens here is every row will be returned from the account table.
+8:11
+If it would, if it joins with movement and if it doesn't return, I joined with movement,
+8:17
+then it will be returned with null values from any columns that come from the movement table.
+8:23
+So you notice in the answer here we have an extra row where Bailey has been inserted
+8:29
+with null for the movement tightly because Bailey does not have any movements,
+8:33
+whereas all the other customers are being returned as they were before. And there's no extra rows being added for, say, Brian, with null values.
+8:38
+In fact, left join is a family is one of the family of three different types of join, so a left join between tables are an s.
+8:50
+All return every row can are even if it does not join the venue.
+8:59
+Roads in s simile, a right joint between our will return every in s,
+9:03
+even if there are no rows that he joins with in Typekit and an outer join between Ionis will return every row or if it doesn't join with Peart,
+9:10
+even if it doesn't join the round table. And also every road pass, even if it doesn't join with rowing table.
+9:21
+Oh, so it's in fact the union of a left join and a right to join.
+9:27
+In terms of the relation algebra, we can in fact express left,
+9:36
+join and right to an hour to join just using a rather complex expression in normal relation algebra.
+9:40
+Using the whole process I presented so far. And to understand this,
+9:47
+we notice here that the condition that we have inside the from clause of the left joint is used
+9:53
+to do a Cartesian product between two tables and select the rows which meet that condition.
+10:01
+And then I add on those rows from Table All,
+10:07
+which do not appear in the semi joint between all one and are two and not Cartesian product lines with null values covering the columns of R2.
+10:12
+So this right hand expression is doing the extra bit of the left joint,
+10:24
+adding in those extra rows and notice that the predicates associated with the where clause are done after that left joint has been performed.
+10:29
+Therefore, there's a difference between whether you put a condition in the on clause or the left left joint or in the where clause,
+10:41
+because the conditions in the upper left join on clause are going to be done as part of the joint processing,
+10:50
+whereas the the point occurs in the where clause will be then done after the joint, the joint processing.
+10:58
+Let's try out a couple of quick questions which try out that idea.
+11:07
+First of all, I've got all the conditions of this particular query been expressed inside the left joint.
+11:12
+And when Ron, previously the most popular answer was C, and indeed, that's the correct answer.
+11:23
+So notice here we've got a movement value check where we checked the amount is less than zero and that in effect narrows down the
+11:30
+moving table to consider just two rows as only two rows in the movement table that meet the condition for having a negative movement.
+11:40
+They will join with count one hundred and one to seven.
+11:47
+And the other accounts will not join, but by the rules of the left, join the accounts,
+11:52
+which do not join with the movement so restricted or returned with null values being placed in the amount.
+11:59
+Let's try a very similar query, but the condition now for checking that the movement mounts is less than zero has been moved to the where clause.
+12:09
+And when Ron, previously B was the most popular answer, and indeed B is the correct answer.
+12:21
+The reason for that is is that the left join will ensure that every row of accounts is returned,
+12:28
+regardless of whether it joins with movements at this stage or six accounts, the movement table will be present.
+12:36
+But after that has been done, the where clause is run and will eliminate all the rows where the amount is not less
+12:42
+than zero and therefore restrict myself to just the two amounts which are negative,
+12:50
+which belong to account. One hundred and one is seven. So B is the correct answer.
+12:55

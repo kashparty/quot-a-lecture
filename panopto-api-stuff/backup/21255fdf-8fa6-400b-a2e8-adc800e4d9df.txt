@@ -1,0 +1,837 @@
+ID: 21255fdf-8fa6-400b-a2e8-adc800e4d9df
+Title: DAZN ACI Talk October 21
+Category: Applications of Computing in Industry (ACI) Talks
+Lecturer: Tom Curtin
+Date: 21/10/2021
+All right, everybody, we are very pleased to have the team from Darwin day seven, have you say that zone design,
+0:03
+you are all going to tell us all about building a recommendation engine for a sports streaming platform, which sounds absolutely fascinating.
+0:12
+All right. So welcome, guys. And please take it away.
+0:23
+Thanks very much. Yeah, there's three of us here today, so I'll just hand over to Hackie, who is our head of product for personalisation,
+0:29
+and leave it to you to go check if they talk about how and why we do a recommendation engine for design
+0:38
+to make him the advocate for personalisation and content discovery and joined today by Tim and Tom,
+0:51
+who is our head of Appli Machine Learning Design.
+1:02
+So I guess first and foremost, what is design?
+1:08
+I think as an introduction, it's still not a household name in the U.K. we launched back in 2016 in a handful of countries,
+1:11
+so Germany, Austria and Switzerland.
+1:22
+And at that point in time, our ambition was to change the changing industry.
+1:26
+Basically, it's changed how people consume sport. And a lot of the time the phrase I was going around was the Netflix of sport.
+1:31
+So On-Demand on any device. And so pretty quickly after that, we launched in Japan and Canada, Italy, US,
+1:41
+Brazil and Spain, and then in 2020 we launched in over 200 countries globally.
+1:52
+And we've now changed from wanting to be that that starts up wanting to change
+2:01
+industry to being the leading global sports drink platform in the world.
+2:05
+By fence for fence is kind of the philosophy that. The next one.
+2:12
+So on the right,
+2:23
+you can see a little screenshot of what it looks like is kind of a standard streaming service with rows and tiles within on those rows.
+2:25
+And I guess going to why do we actually need a recommender?
+2:36
+So Zones has we have tens of sports within each of our markets and within each of those sports intense competitions.
+2:39
+And again, tens of teams. It's quite a wide variety and then quite a broad catalogue.
+2:47
+And then in terms of our funds, we have quite a variety of funds in terms of what they what they do with design.
+2:56
+So both in terms of how much time they want to spend with us.
+3:02
+So people that want to come in every day, that are religious fans that want to come maybe once a week.
+3:04
+So you're really quite severe, extreme, just casual to religious.
+3:11
+And then some will just only one part of their team or some will be multi league, some will be multi sport, which is quite a big variety there.
+3:15
+And the majority of our traffic will hit this one homepage, which is curated by very talented local editorial teams.
+3:23
+But clearly we we have a customer base with different needs and one size doesn't fit all.
+3:32
+That's really where the recommended comes in, how do we how do we get the content, the split people up to them?
+3:39
+And it's not just limited to these representatives, it's also our other channels.
+3:46
+So how to make sure I push notifications are relevant. Our emails are relevant.
+3:51
+So every touchpoint with that customer needs to be. It needs to be accurate.
+3:55
+Jumped in that for me. So there are some problems when you're tailoring a recommended sport.
+4:03
+We're not like other joints. Technology platform sport is quite.
+4:09
+Tribal fans love their teams, they love their leagues,
+4:14
+if you recommend the wrong or the wrong team to a fan like also to Tottenham Fan or India, 27 people get annoyed.
+4:19
+They lose trust in the recommendation and they lose trust in designing the company.
+4:28
+And that has consequences. They will turn to push notifications then we just can't put our customers first up.
+4:33
+So there are real world problems if you get this wrong.
+4:41
+The few other problems when you come to Titan into sport, so as I mentioned on its own territory,
+4:47
+we have different rights of a bull and then we need each of those territories are different preferences for those rights.
+4:55
+So where Bundesliga is huge in Germany is not in Spain, Moto is huge.
+5:01
+In Spain, baseball is really big in Japan, but not in Germany.
+5:09
+So we have to have to balance all of that. So what's true for one territories and true for another?
+5:15
+And we need to have a recommended that can handle those variations. And we also have quite radically changing rights.
+5:19
+Like we there are new events every week.
+5:26
+We can get a new competition that we've not not previously had as a minister that can do that, that rapid change.
+5:29
+In other areas, I've put up to screen screenshots here,
+5:39
+one of Netflix for the woman on the left and design on the right, if you just click for me, it's on.
+5:43
+Animation are. So if you look at the tiles on the top that you got the Blind Side, Django Unchained and their Perkovic,
+5:52
+which are 12, nine and 22 years old, respectively, and sport is really topical.
+6:01
+We could not get away with that. We cannot show you the semi-final of the Euro 20, Euro 2000.
+6:11
+What was evident last week isn't relevant this week, maybe even three days goes, I mean,
+6:19
+even today we have our show content, which is broader, but even so, it needs to be topical.
+6:23
+It needs to be based on what's popular right now as well as what your preferences are.
+6:29
+And we also have customers who are used to an appointment based viewing.
+6:33
+So I'm coming in for that live match. And you need to know what I want is not just to browse.
+6:37
+So then how do we how do we test to make sure that the recount actually works?
+6:48
+So there's basically two pillars to that we have experimentation and we have research,
+6:54
+and this is on an ongoing loop every time we make a change, every time we get to where we go through this.
+7:01
+So. I'll start by going through Wykes, what the experimentation looks like we could jump to the next one.
+7:06
+So basically every time we we build a new feature.
+7:14
+So in this case, if we're looking at a like a recommended route, we'll break the traffic up for those who have that form into two.
+7:18
+So half of the users will receive that feature. And half one.
+7:26
+So you have randomly assigned across that you have a control group and a treatment group will define our KPIs up front.
+7:31
+So, for example, does this impact the number of hours people stream or the amount of content that you choose to stream?
+7:38
+And then at the end of that, that experiment period will compare the results and be able to draw a conclusion if the test was a success or failure.
+7:46
+So experimentation is fantastic for telling you if something worked, but not as good at telling you why.
+7:55
+So that's where research comes in, so we've got really, really great research teams.
+8:03
+And these are a few of the different techniques we use with our customers. So, Imparato, with an experiment,
+8:08
+we will run things like thorough studies where we ask users to to look their perspective of the feature day after day.
+8:15
+That gives you a really detailed insight into how this impacts them in their lives.
+8:23
+We do live interviews where users will be on the platform with us and talk us through their recommendations and what they think of them.
+8:29
+And they may have tools like customer surveys, which are always really reliable for getting quite high volume feedback on people's opinions of things.
+8:35
+And over to Tim's talk about how we actually set up as teams. Thanks, Jacqui.
+8:47
+Yeah, so I was an architect for for design, actually worked on on the system, but now as VP of Engineering,
+8:54
+I have to kind of make sure that we've got the right teams in place to do all of
+9:03
+this stuff and to deliver a feature such as the one that he's been describing.
+9:07
+We actually need three different teams. And in a moment, we're going to come onto Tom, who's at least one of those teams.
+9:11
+But but to deliver it, we've actually got three teams and they are the actual client team.
+9:19
+So that's the front end or the application that you're looking at the feature on.
+9:24
+So could be your phone, could be a TV, could be a browser.
+9:28
+And that obviously is responsible for all of the code that actually executes on your device and draws the rails.
+9:33
+So you can see there on the left we've got this this the rail. And the way that we organise the app is you have rails of tiles.
+9:39
+Each rail has has a particular theme. So we've got to as you can see on there, there's the one that we're talking about recommended for Eurail,
+9:47
+which has the stuff which hopefully is the stuff you want to find quickly with a bunch of tiles on it.
+9:54
+And then there are other rails which the editors create, such as these are the things we think you shouldn't miss.
+10:00
+So how does that actually work then?
+10:06
+Well, the application responsible for rendering that, but it needs to get the data from somewhere in order to render it.
+10:09
+So the next the next teams, they get involved.
+10:14
+They need to be involved are the service teams and they're responsible for creating these superfast services that can
+10:18
+deliver streams of speeds that we might have a million people coming on the platform to watch a particular game.
+10:24
+And when they come on the platform, they see this this homepage and they see those rails.
+10:30
+They have to be essentially we have to send the data so that the client makes the call over to this personalised rail service.
+10:34
+And what that does is sends back all the data it needs.
+10:40
+So it's kind of an array of tiles with the idea, the fixture, which is used to play it back at image information,
+10:43
+titles, descriptions, all that type of stuff, sends it back to the clients so it can render it.
+10:49
+Now, that service in itself requires a bunch of skills to build as we've got teams,
+10:54
+specialised teams who built that it needs to serve the data at scale.
+10:59
+It needs to deliver all the all of the information to render the tile.
+11:04
+It also needs to account for business logic, such as, you know, the tiles change, actually.
+11:08
+So when when a match is a before match starts, it looks like in some form that it transitions to being alive and it looks slightly different.
+11:13
+So it takes a kind of all that. Plus, of course, if you've already watched the thing, we don't want to recommend it to you.
+11:20
+So it also takes account of making sure it's not showing you stuff that you've already watched.
+11:26
+None of that is really anything much to do with the actual thing that generates the recommendations.
+11:30
+And obviously it has to happen at speed, whereas training a model and figuring out who's watch what is a much slower process.
+11:36
+So that's why we then that service itself is actually served by our recommendation system, which we've called Westworld.
+11:43
+Now, the only job of that system is really to deliver for every single user,
+11:53
+essentially a score for each of the fixtures that we have on the platform, like just how how much it's likely to appeal to a particular user.
+11:58
+So that can be built completely separately and then sort of transferred over pretty much like a file.
+12:07
+Not not in real time. It can be done sort of every 24 hours.
+12:14
+And you can see both those systems, by the way, make use of the various data flows through our systems.
+12:19
+So we have metadata, which is data about the actual events and fixtures.
+12:24
+Plus, of course, we've got a flow of user data. So who's watching stuff and all those types of things.
+12:28
+So that's just to give you some context of which teams are involved.
+12:34
+And I'm going to hand over to Tom, who is responsible for actually building the recommendation system.
+12:40
+I have run, so thanks, Tim. Let's switch now to start explaining our approach to modelling the recommendation system.
+12:49
+So, yeah, so I start off today by describing a typical approach to content recommendation,
+13:02
+and then I'll use that as a bit of a jump off point to then talk through the unique challenges we had building a recommendation system and design.
+13:12
+So the approach I'm going to talk through first is a technique called Matrix factorisation.
+13:22
+So this was made famous because it was a technique that was applied to when something called the Netflix price.
+13:28
+So if you guys haven't heard of the Netflix price, I think it happened in maybe 2006.
+13:35
+And it was a it was a competition where the winner won one million dollars.
+13:42
+And the challenge was to basically improve the most upon Netflix is then internal recommendation system.
+13:49
+And yeah. And the talent that one was Matrix factorisation.
+14:03
+And the way this works is that you start off with a data set of user and Eitam interactions.
+14:07
+So in the case of the Netflix problem, the data set was was ratings that uses a given of movies.
+14:14
+And the first thing you do is basically from that data, from this user, from interaction matrix on on the right that.
+14:22
+And so in this matrix, each road is a user and each column is an item.
+14:31
+So you fill that in with the observations you have with the users that have given given ratings to the films.
+14:38
+And the idea is that you want to try and accurately predict the ratings that you hold out from mobile training.
+14:47
+So the approach you take with Matrix, Matrix, factorisation is that you essentially decompose this user right.
+14:58
+Some interaction matrix into two component matrices.
+15:05
+So you have the user matrix on the left, which has a row vector for each user, and then you have the item matrix, which has a convex for each item.
+15:09
+And an important thing to note is that these have to these factors have to have the same
+15:24
+dimensionality because what we essentially do will we'll take the product for a user,
+15:29
+its impact and the output of that will be a predictive rating for that user.
+15:37
+Not so that. Now, the the values within the Matrix are known as latent factors.
+15:43
+And what you're really doing by optimising this model is you're basically trying to
+15:53
+find the best sets of latent factors such that when you multiply this all together,
+15:58
+reconstruct the user matrix, you are trying to, as accurate as possible, reconstruct the the ratings you see,
+16:04
+and also hopefully also accurately predict the right things that you didn't feature and try to.
+16:12
+So. In the context of the classic Netflix problem, the data that was being leveraged there was what's known as explicit feedback.
+16:22
+So Netflix had a dataset of of explicit ratings that users had given its content.
+16:34
+What's much more what's much more common in modern recommendation systems is to use something called implicit feedback.
+16:42
+So this is essentially just a measurement of just simple interaction with content.
+16:49
+So it could be whether or not someone's watch them content, whether they've clicked on it, whether they've watched it for a certain amount of time.
+16:55
+And the reason that this is leveraged in in modern systems is because we simply have an abundance of this type of data.
+17:03
+A user can just engage with the service and basically generate the states for us.
+17:14
+And we don't have to go through quite a time consuming process of asking users explicitly what they think of content.
+17:19
+Now, what that does do is add some noise to the modelling problem, because if you think about the set of content that a user is engaged with,
+17:28
+that sort of content will probably most likely be content that a user has preference for.
+17:39
+But it might also be content that users watched but doesn't actually like.
+17:44
+And similarly, if we think about the negative set of interactions that's going to contain user rights and parse where
+17:48
+the user just really doesn't have a preference for content and therefore hasn't engaged with it.
+17:55
+But it's also going to contain a whole set of interactions or a whole lot of interactions
+18:00
+that simply because the user hasn't had the opportunity to consume that content.
+18:05
+So it adds noise to the modelling problem.
+18:10
+But ultimately, the fact that you have much more implicit feedback data means that it's worth that Trade-Off.
+18:13
+So another way of thinking about what we're doing with Matrix factorisation is that you can imagine that we are placing users and items in
+18:23
+this n dimensional lated space in such a way that the distance or the proximity between users of the items describes something useful to us.
+18:32
+So this this is also known as embedding and embedding has lots of of applications.
+18:47
+A classic one is something called Word Tabac, which is basically a model that is trying to get a word, given the context of what's around it.
+18:56
+So, for example, maybe the sentence,
+19:05
+the words in the sentence that surrounds the word and what you get when you do this is a seven beddings that describes something meaningful,
+19:07
+meaningful about the those those words or those concepts. So if we look at the the schematic and look at the left example,
+19:16
+you can see on the x axis as we move across, we go four months woman and also from king to queen.
+19:25
+So that X axis is telling us something about about gender.
+19:31
+And then as we move, as we move of the Y axis, we're going from one woman to king queen.
+19:37
+So it's telling us something maybe about the status of of the of the entity.
+19:43
+Similarly, on the right, as we move across the x axis, we go from country to major city.
+19:49
+But the distribution across the Y axis means that each city is closer to its to its parent country than it is to the other countries in the south.
+19:56
+So if we think about if we look back to what we're doing with Matrix factorisation,
+20:11
+what we're essentially doing is placing users and items in this embedding space
+20:17
+in such a way that when we take the DOT product between a user and an item,
+20:22
+the the the DOT product, the value of that DOT product should closely or hopefully closely match the rating or whatever it is,
+20:26
+the measurement of of of preference for that content.
+20:36
+And the advantage to this technique is that when we're trying to model, we're basically pulling users closer to the items that they've engaged with.
+20:43
+So that means that we're therefore bringing users that have watched similar similar parts of a catalogue.
+20:55
+Close in the same building space, and so that means that if we think about this,
+21:05
+this cluster of two users in the bottom right, these two uses of both watched one with that.
+21:09
+Both watched one piece of content the same. But then there are other bits of content that the other user hasn't watched.
+21:18
+But because we brought these users close together, it means that the recommendations for one user can be influenced by the viewing habits of users,
+21:26
+thus similar and therefore closer to that user in the symbolic space.
+21:37
+And this sort of sharing of content preference information across different users is why
+21:43
+Matrix factorisation is what is polyphonic techniques called collaborative filtering,
+21:48
+because is that collaborative aspect to the recommendations that people receive.
+21:54
+So, one, that there are a number of limitations with that classical approach,
+22:01
+the main issue when it comes to applying this design is something called the cold start problem.
+22:07
+So ultimately, if we have either a user or an item for which we don't have any interaction data,
+22:12
+so it might be like a new use of the housing engaged with anything or a new item that's very new to the service.
+22:19
+Ultimately, if we don't have any data for for those, then we we can't learn anything about it.
+22:25
+We have no data to actually inform where we place those concepts in our embedding space.
+22:33
+And the reason that's quite a big issue of design is because a significant
+22:39
+proportion of the of the engagement with CRM platform is with our live content.
+22:44
+And what live basically means is that it's content that prior to the fixture starting is not engaged with.
+22:49
+So we don't have any information to actually create an beddings for for those like items until really the game is finished,
+22:56
+and at which point most of the engagement with the fixture will have already happened.
+23:06
+So the way we the way we address this is that we leverage the metadata that we have on our content that Tim mentioned earlier.
+23:13
+So all of the content that we have on service and specifically a of content is is tagged with metadata.
+23:25
+So it should be the every piece content is tied with the sport, the competitions and the contestants involved.
+23:35
+So if we think about like a month, if you ask what happens in the Premier League,
+23:44
+then that should have a support type of soccer, a competition type of Premier League and Manchester City and Arsenal contestant.
+23:47
+So the approach we take is instead of learning or trying to learn a unique batting for each item,
+23:56
+we instead learn embeds for the content tags that describe the items.
+24:03
+So you can see in this in this graph that we've got beddings for Premier League, Soccer City and Arsenal.
+24:09
+Now, ultimately, we if we're going to calculate a DOT products, we still need like a single point to then take the product with an item about.
+24:18
+So we still need to do some sort of aggregation of these content tags.
+24:31
+So you could take, for example, the average embedding the max, the sum,
+24:38
+but whatever whatever it takes to ultimately get like a single point that's aggregated from from multiple tacks.
+24:43
+And it's this that we then take the DOT product against the user, a user by.
+24:55
+Now, this is known as a hybrid recommendation algorithm because we're leveraging both the user item information,
+25:02
+that sort of collaborative filtering aspect, but we're also leveraging the metadata we have on on our content.
+25:12
+So the advantage of this is that this now means we can create recommendations for pieces of content that have no instructions,
+25:22
+yet the content does have to be destroyed by at least one tank that we've seen previously in storage.
+25:31
+But as long as that's the case, we can create recommendations for. The disadvantage is that we still have the cold start problem for users,
+25:38
+so we don't really have any metadata around users that we can use as sort of like a replacement of a unique user embedding.
+25:48
+So we do still have to essentially have seen a user and historic data before we can then start creating recommendations for them.
+25:57
+But this is something that we try and at least address with our training strategy that I've mentioned briefly from.
+26:05
+Sometimes of how we actually implemented this approach, so so the approach was based on a package called La Femme,
+26:16
+which was produced by a team from List, which is an online London fashion platform.
+26:24
+And the initial PSC was done basically by just collecting design data into that life package that we essentially got off the shelf.
+26:34
+Once we were reasonably happy with the what we were seeing from that Piercey,
+26:45
+we then went on to reimplement the functionality that we were using in line, in the sand, in torch.
+26:50
+So if people on the call aren't aware of what it is, it's one of the sort of industry standard modelling frameworks for machine learning,
+26:58
+along with things like Escalon, Tensor, Flow, Carus, those sorts of those sorts of frameworks.
+27:08
+And the reason we chose to implement in Fremont Lopata, which is because if we're using one of those industry standard modelling frameworks,
+27:17
+it means that we also have the opportunity to leverage the integrations that cloud providers offer around these frameworks.
+27:27
+And that basically means that we can go from running maybe a pearcey on our on
+27:36
+our local machine to something where we're actually training in the cloud,
+27:41
+doing model, serving an inference in the cloud that that process is much easier if we're using one of these industries to.
+27:48
+So to to now talk a little bit about one of the challenges that you mentioned,
+27:59
+so the catalogue that is offered on the zone can differ significantly between different markets.
+28:05
+So just a reminder that somewhere like Germany might have we do have the Bundesliga, which is the domestic league,
+28:12
+as well as, say, La Liga, whereas in Spain we don't have either we don't have either of those.
+28:20
+And instead we have, like the Premier League, so stupid. So this naturally poses an issue for a modelling approach.
+28:26
+So if we look back to when we were talking about implicit feedback and the challenges that that presents during modelling.
+28:36
+Having these distinct contact, these distinct catalogues, makes the problem significantly worse because,
+28:45
+again, if we think about that negative set, which is this like somewhat poorly defined negative set,
+28:54
+where you have like real user item pairs where the U.S. doesn't have a preference for it as well as this this group
+28:58
+of content which the user has had the chance to interact with yet that if we have these distinct catalogues,
+29:07
+that means that the negative set in Germany might include all of these these competitions that the user actually can't even access.
+29:14
+And so that makes the noise in the problem even worse.
+29:23
+So the decision we the approach we decided to take was basically just move the issue upstream.
+29:27
+So what essentially happens is when we get user interaction data coming into our system,
+29:35
+we just simply partition that off by market and then we simply just have a unique model for each market.
+29:40
+So that means that although there's an overhead in terms of infrastructure and having to manage the operation of of multiple models concurrently,
+29:50
+it's really worth the overhead to just simplify the the the modelling, the modelling approach that we we have to take.
+30:02
+So another big factor that you mentioned is recency. So quite simply, the older sports content is the less likely user to engage with it.
+30:14
+So if you think back to the Netflix problem, the Netflix problem is a good example of why recency just isn't isn't as major an issue.
+30:22
+You could you could potentially improve the recommendation, the quality of recommendations from traditional matrix factorisation.
+30:33
+And in terms of the Netflix problem, maybe by trying to factor in recency,
+30:42
+but ultimately it doesn't actually carry that much signal for recommending movies.
+30:46
+But it's the complete opposite with sports content. So we have to take into account.
+30:51
+So the approach we take is very simple.
+30:55
+We run the recommender and our recommendation scores and we simply just adjust those scores so that older content is done weighted.
+30:58
+The strength of that down weighting is just something that is optimised at the same time as we optimise the other parameters of the model.
+31:08
+So we we at the same time as optimising things like the number of embedded dimensions, the number of training cycles,
+31:17
+whatever, it's at the same time, we're also just tuning in why constraints to get its performance out of the system.
+31:26
+Another another challenge, I think is often underappreciated when you look at sort of typical Emelle use cases is the challenge of retraining.
+31:39
+So we don't we don't have a static data set that we built a single model for.
+31:54
+This is a this is a system that is live and is influencing customer behaviour, and it's working on data that's coming in constantly.
+31:59
+One of the biggest challenges that I mentioned previously when we talk about the cold start problem is,
+32:10
+is, is that we still have to use a cold start problem. Now, basically, the easiest way to address this is just by retraining.
+32:18
+Often if we if we retrain often,
+32:26
+then that means that there hopefully shouldn't be too much of a delay between the use of joining the service, the use of watching something,
+32:28
+engaging with something,
+32:35
+and then that data feeding back to our system so that we can then use that interaction to start putting the user and create recommendations for them.
+32:37
+So on a daily basis, we we look for each market, for each market model that we have.
+32:45
+We basically pull in the public beddings from yesterday's model.
+32:52
+Those are stored. If we have any new users or any new content tags, we come up with new things that are just randomly initialised to first,
+32:57
+and then we incrementally fit the whole thing using the latest data that we put in.
+33:08
+The other thing we have to think about was was scoring, so, yeah,
+33:19
+I think we mentioned that we will give recommendations to power use cases like
+33:25
+having like recommended four year rails of personalised content on the home page.
+33:29
+But if we're talking about if we're talking about rails or roads that are generated on the home page,
+33:34
+those need to be generated in the time it takes for the home page to load.
+33:41
+So that's on the sort of millisecond time scale.
+33:46
+So rather than worry about trying to optimise how quickly the model runs, instead we just generate buckets of recommendations ahead of time.
+33:50
+Now, this is, I think, a pretty reasonable thing to do.
+34:01
+If you think about the preferences the users hold, they're unlikely to change a good, like sort of daily time scales.
+34:04
+So if you create a separate set of recommendations,
+34:11
+then they should be relevant easily for at least twenty four hours in terms of how users use preference changes over time.
+34:14
+So we create these batches of recommendations, we take all that uses,
+34:24
+we score those uses against all pre-existing plus upcoming content on a daily basis.
+34:27
+Those batches of recommendations have been ingested into no secret database,
+34:35
+and it's this no secret database that is actually queried by the backend services that are responsible for generating these Pozzallo trials,
+34:41
+for example. And the advantage of this approach, as well as the other services can interact with that no database.
+34:50
+So, as I mentioned previously, one of the things we want to try and do with a personalised rule is remove any content that they use.
+34:58
+The user has already watched. So what we can have is a service that is basically keeping track of what users are watching and then feeds that
+35:06
+information back to a service that can then remove recommendations for that content from no SQL database.
+35:14
+And then that means that the next time that that database queried, we don't return a recommendation for an item that a user has just watched an.
+35:21
+So in terms of our tech stock, everything is done in the cloud, mostly with our primary provider who's with us,
+35:34
+it's very advantageous to do anything to do with the amount involved because it basically makes it much easier to scale compute resource,
+35:47
+whether that's for model training or model scoring in such a way that the all the details about the hardware to
+35:56
+substrata from us and we don't have to worry about that in any way in terms of the major components that we're using.
+36:03
+We use technology called Snowflake Products Warehouse.
+36:12
+So this is the thing that just contains like all of our user interaction data, all of our content metadata.
+36:16
+We use Sage Maika, which is AWEX awarenesses now offering essentially,
+36:26
+which makes it pretty easy for us to do more transcoding filed with the service called A.W. Slander, which is just a small serverless tasks primary.
+36:34
+The primary use of that is just really connect to different services.
+36:47
+We have Dinamo DB, which is the Nestico database, the technology behind the database.
+36:51
+So I was just talking about we use HWC S3, which is just idle versus Cloud Storage Lab. So you can basically store like any data really on on, on S3.
+36:59
+So we use those three to store the training or the scoring data before it goes into speechmaker.
+37:13
+It's also why we stored the the artefacts that come out of training.
+37:20
+So like actually one of the binaries of the models that have been learnt.
+37:24
+And then finally we also have Awista functions, which is sort of like a workflow management tool.
+37:29
+So that functions make it really easy to define things like like daily model training processes.
+37:36
+So linking all of the calls that you have to make together to to do that, one single output of creating a new model for for today.
+37:43
+So, yeah, a very high level. This is sort of how all of these components of fit together.
+37:54
+So I mentioned that we stitch all together within a step function.
+37:59
+We have a lambda that basically sets off a bunch of queries on Snowflake, which themselves then output data to a location.
+38:05
+On those three.
+38:13
+We then trigger a model training job on stage makeup that pulls that data stream and then creates a model of Spotnitz that helps us through.
+38:15
+And we then have a scoring process where again we have a lambda calls called snowflakes scoring that goes on to S three.
+38:26
+That data is then pulled into scoring step inside to make that scoring step also pulls the model artefact that
+38:38
+we just created from the model training and then that creates a load of recommendation batch objects and then
+38:46
+a final understanding listening to when those batch batch objects pass through and then ingests each of those
+38:53
+into the Dinamo data so that they are ready for serving into the rest of the into the rest of the backend.
+39:00
+So, yeah, I think that's it from me.
+39:10
+So, yeah, I don't know how much time we've got left, if we've got any time questions, maybe, just maybe just before we get on to questions,
+39:14
+this very quick plug for the fact and I know some of you already know this because you've already applied we we are offering placement positions.
+39:20
+I know the computer science course has a six month placement from April.
+39:28
+Have a look. Are advertising, I think, in where ever these things are advertised at Imperial and we are taking applications now.
+39:35
+So you're very welcome to apply. Thanks. OK, well, thanks very much.
+39:43
+Hockeytown sentiment. That was fascinating.
+39:50
+Very interesting to hear about this kind of recommendation problem where, you know, it's the upcoming events that are really critical.
+39:52
+So you actually have to rely a lot less on history than you did before.
+40:00
+Or if you do it, you have to do it on the basis of similarity. Right. With past events.
+40:05
+It's really interesting what I was wondering.
+40:09
+It struck me while you were talking this data protection law, has that kind of hampered your ability to do this kind of recommendation in any way?
+40:14
+Are you seeing a big proportion of customers kind of opting out from any kind of data collection or and so on?
+40:24
+I actually do want to tell you that everyone on the off, not massively, to be honest,
+40:33
+we provide all of our customers ability to opt out of recommendations that that's the legal advice.
+40:41
+And they're right. But we don't see huge traffic going towards that.
+40:47
+Potentially in future, that'll be a problem, but not one we're facing today. And in regard to GDP,
+40:54
+are all of the kind of information about what people watch is stored against a kind
+41:00
+of opaque user ID so that it's not stored against an email address or anything.
+41:05
+So it's anonymized data, but they can opt out attack. He says that is one of the options in GDP.
+41:11
+You can opt out of any personalisation. Great.
+41:17
+OK, a question here from Morris who says,
+41:21
+How do you make sure the embedding space and resulting recommendations satisfy the requirements that you mentioned at the start of the talk,
+41:24
+for example, not recommending a football club for a not recommending a football club fan,
+41:31
+a competitor's club game, unless, of course, their team is playing in.
+41:39
+That's right. Do you enforce explicit constraints on the embedding space?
+41:43
+Yes, the modelling level, we we haven't done anything.
+41:49
+I think it's something that we could do within the business logic.
+41:55
+I don't know if you want to talk a little bit about the performance in paper form.
+41:59
+Yes, I guess a few things. Firstly, this is the sort of thing where the research element comes in handy,
+42:05
+being able to get that real customer feedback and then seeing whether or not this is a problem, because a lot of times it's.
+42:12
+You have to balance what is it is assumed from this was a real problem for customer. We do have kind of two pillars of personalisation.
+42:19
+We have the the implicit side and the recommendation side is what we've been talking
+42:27
+about today and then explicit where we're not customers actually define what they are,
+42:31
+who their teams are, what they like, what their conditions are, and that primarily allows them to receive push notifications for when been stopped.
+42:38
+That's one thing we have looked at bringing that into this world.
+42:46
+But I haven't seen. Amazing results over and above the work that thumbs really pulled together.
+42:51
+I think there is there's room for this to grow. That's right. We're still pretty early on in our journey and.
+42:59
+But we've had two strong feedback that this has been a problem as of yet.
+43:06
+Great, can I just ask so for the kind of students you're looking for, for the industrial placement,
+43:12
+I mean, are you also looking for students, for graduate positions and that kind of thing?
+43:19
+And what kind of areas are you most looking for students in?
+43:23
+Because I can imagine everything from network visits to data science experts would be helpful, right?
+43:28
+Yeah. I mean, currently we we are we hope we will be looking for graduates I think will be set up for that really at the end of this academic year.
+43:36
+I mean, right now our focus is, of course, on the placement students and there are by far the most opportunities.
+43:47
+If you remember that diagram I was talking about, where you've got the front end, you've got the service,
+43:55
+you've got the service teams who build the kind of immediate customer facing application,
+44:01
+and then you've got maybe some specialist services like data science. I mean, by far the majority of the teams are building those service apps.
+44:07
+So we've got more spaces available there for the placements.
+44:16
+And that's certainly my area. So that's that's what I'm looking to recruit into in in the data science area.
+44:22
+I'm not sure about that yet. We that's that's certainly something that we can we can look at when people apply.
+44:30
+But the immediate need is for the people who are building the sort of services,
+44:36
+scaling those services and all the kind of expertise that comes with serving up data to the client applications at scale with low latency and,
+44:40
+you know, in in the right way that we need it. Great.
+44:53
+OK, thank you. Nedim asks, Will the recording be available?
+44:57
+Yes, I suppose in due course it will be made available in the Panopto folder of the applications of computing and the industry will follow.
+45:01
+You find that Alex asks, how do you handle users changing their location so either by moving or, for example, by using a VPN?
+45:10
+So do you have any recommendations, insights?
+45:23
+Yeah, that's an interesting one. I thought maybe you could do.
+45:29
+Well, let me just kick off by saying the way that the design product works.
+45:33
+If you log in in a different country, I mean, the way that rights work is we have rights to show a particular sport, but only in a certain country.
+45:38
+That's the way sports rights are kind of bought and sold.
+45:47
+So that means if you've signed up to design in Italy, where you can see Styria, for example, but then you come over to the U.K., well, in fact,
+45:51
+if you go over to America, let's say you won't be able to see it, that because we don't have the right to show you Syria in that country.
+46:03
+So so what you get in the catalogue depends on on where you are now as far as the actual recommendation goes.
+46:10
+People can try and get around that with the weapons. Of course, that is one thing the people do.
+46:17
+But that's not not what our system supports, of course,
+46:22
+because we have to respect the rights holders and the contracts that we've entered into with those with those people.
+46:25
+But that this question also touches on something that Tom was talking about, some 180 of the way that we actually train the model.
+46:33
+It's actually done separately in each different country, isn't it, Tom?
+46:42
+Yeah, exactly. So if we think back to when we get user interaction that's coming in, we just partition by the market that the what we partition.
+46:46
+So we think about the content that was watched, reported by the market of that content.
+46:58
+So that means if we if we have users, because we have users, they live in Japan,
+47:04
+but then travel to somewhere else to work and watch those on both markets, then we'll simply just that they'll just be in those market models.
+47:10
+So what we can't do is any sort of like transfer learning from the average beddings between each markets.
+47:21
+We just treat them as completely independent. But the thing is,
+47:29
+is that the council decided Snicklefritz that it's up to the base whether it would even be useful to transfer information between those,
+47:32
+because that just interacts with a completely different set of content.
+47:41
+So that's the approach which has the second. All right, thank you very much.
+47:47
+That's fascinating, I must say, because all sorts of trouble,
+47:51
+don't they fall for everything from betting exchanges to to streaming services to whatever,
+47:55
+because you have to be sure to be giving the right content and or and or even allowing people to do certain things or not in different regions.
+48:02
+Right. Indeed, we have to we have to end up looking known for that very reason, otherwise we can get into a lot of trouble with our rights holders.
+48:14
+But people do use VPN to get around all these sorts of restrictions.
+48:27
+So it's kind of arms race as to which ones pop up and which ones get blocked.
+48:31
+Yeah, it is interesting. When I'm in Italy, I can't access Betfair, but sometimes when I use a VPN, I can and sometimes only use a VPN.
+48:38
+I can't. I mean. Yeah, exactly.
+48:45
+It seems to be two classes of websites. Yeah.
+48:49
+And the report is not quite so effective at changing your location.
+48:53
+You think it might be a never mind. Good. All right. Well thank you very much, guys.
+48:57
+I think that's actually unfortunately all we have time for. We've got to give the students some time to get to their next lectures.
+49:02
+But thank you very much. That was ever so fascinating and different.
+49:07
+Definitely a different kind of kind of machine learning slash recommendation problem from what we've seen before.
+49:11
+So thank you very much for those insights. And we hope you get mobbed with lots of placement applications.
+49:17
+And, yeah, please keep in touch. And we hope to have you back for Future Talk series.
+49:25
+Thanks a lot. It's a pleasure. Thank you. Thanks. Everyone goes by.
+49:30

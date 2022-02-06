@@ -1,0 +1,701 @@
+ID: a82aa197-232f-4b73-b048-adc800ee9c1f
+Title: ARM ACI Talk October 21
+Category: Applications of Computing in Industry (ACI) Talks
+Lecturer: Tom Curtin
+Date: 21/10/2021
+The machine.
+0:00
+In the late 1960s and 1970s, Kerry also refers to the instructions that extension's needed to add that capability, that access control to a host.
+0:02
+Sixty four bit architecture. So Cambridge began with the MIT architecture, moved on to arm, have now moved on to risk five.
+0:17
+And I have a sketch for six. Should Intel at some point become interested?
+0:27
+Marello is a project under UK Research and Innovations.
+0:34
+Digital Security by Design challenge the links on the slide, which will be in the PDF.
+0:39
+I provide afterwards all to public sources so you can chase them up at your leisure.
+0:46
+And that's a project to build an industrial strength.
+0:53
+Proof of concept demonstrate a board that can be configured either as a mobile phone platform that will run Android
+0:56
+or that can be configured as a low end server platform running a Linux based server stack or indeed Windows based.
+1:05
+If if Microsoft were to to be interested in this.
+1:16
+Seriously? Maurella also refers to the 64 bit architecture, which is approximately the eight point two plus Cherrix,
+1:22
+it refers to the Aztec that has developed with funding from Yukari and it also refers to the configurable development board.
+1:32
+So just beware when I use terms like Cherrix and Marella with this, quite a few meanings hidden in that you have to pick the right context.
+1:43
+So. We'll start with an introduction to memory capabilities, specifically Cherrix and Marello style.
+1:57
+There are three key references here, there's an introduction to Cherry written by the computer lab,
+2:08
+and it's a Cambridge computer lab that is that's about 40 pages.
+2:13
+There's the version eight of the cherry instruction set architecture, which is around about 600 pages.
+2:18
+That includes MIPS risk five and six, I believe.
+2:25
+And then there's the architecture reference manual supplement for Marello, and that's over twelve hundred pages.
+2:33
+Alternatively, I've got half a dozen slides that distil the essence of it.
+2:42
+But if, if you get lost along the way, please interrupt and I'll slow down.
+2:46
+So one of the capability look like in a register or on a bus, it's a one hundred and twenty nine bit value.
+2:54
+There is a one bettag and a 128 bit.
+3:06
+Thing which contains a value and some metadata.
+3:13
+On the way that it looks like a. The implementation is the lower 32 bits overlap in the register file with W. Register,
+3:18
+the lower sixty four bits for the next register and the whole hundred and twenty eight bits of you to the C Register Capability Register.
+3:30
+The tag is fragile. Lots of things destroy it.
+3:41
+It's preserved by specific instructions and ignored by others,
+3:46
+but dereference to capability with a clear tag causes a machine exception, and that's the basis of hardware enforcement of security.
+3:51
+In memory,
+4:02
+a capability is 16 byte aligned and there's a one bettag stored separately in the mobile instantiation of this that's done in a separate tag memory.
+4:03
+And in the server view of it, it's done by abusing the FCC code on s.E.C.
+4:14
+Dirham. In detail, and I'm not going to go through this slide in any detail, but.
+4:20
+The lower sixty four bits are a value most often unaddressed, the other sixty four bits of metadata,
+4:35
+which include permissions and attributes, an object type, which is an interesting thing, and some bounds on the value.
+4:42
+And we use a floating point like representation of bounds, which allows us to compress them a bit more about that in the next couple of slides.
+4:53
+There's no real significance to how these permissions are colour coded.
+5:04
+Other than that, they form natural groups, the ones that I've got a coloured background I do refer to later.
+5:12
+But don't worry about that for the moment. Sounds are quite an interesting topic and it's a bit complicated,
+5:19
+and there's a very nice Cherrix project paper on it called Cherry Concentrate Practical Compressed Capabilities, Marello is identical.
+5:30
+In essence, it's slightly difficult to difference in detail, only slightly.
+5:41
+The idea is there's an exponent field IX which controls how much the.
+5:48
+The balance are shifted, so. For the first 16 bits, the bounds utterly precise down to the bite level.
+6:00
+As you shift things up, they become less precise. They start to to measure the bounds in in units of of eight point sixteen bytes, etc.
+6:12
+So this allows us to compress the the balance field somewhat and still give us in practise the precision we need.
+6:27
+In practise, data objects have alignment and size constraints anyway.
+6:39
+Typically, the in the arm world, any any points are returned by Marlock has to be aligned to twice the point of size.
+6:46
+And this is in case you put something in there that needed to be accessed by one of the most exclusive store exclusive instructions.
+6:57
+So there are subtle alignment constraints. Generally, when you look at storage allocation at scale,
+7:11
+then you end up allocating in pages typically four kilobytes of sixty four kilobytes or even suker page sized quantities.
+7:19
+So the fact that as you go bigger and bigger, the bounds get less precise doesn't really matter.
+7:30
+That's happening anyway under the hood in all real software.
+7:38
+The conceptual view of a memory capability and actually the first actual view in
+7:47
+which the capability occupied two hundred and fifty six bits in Cheree version one,
+7:53
+there is a field, a top or limit field, a pointer on the base.
+8:01
+The pointer can be referenced anywhere in the base of major.
+8:08
+In general, it can be made to point elsewhere without fault.
+8:16
+That's not a problem in the compressed pounds scheme of things.
+8:20
+You can't make it point too far outside of the bounds range before you lose the ability to represent it.
+8:26
+In fact, they the representable range is exactly twice the range of of the bauen.
+8:36
+So you can move the pointer around a bit, but not too much.
+8:42
+If you try and so I go on.
+8:51
+Was that a question? Yeah. The second important concept, which is about field capabilities, if you see the capability with a non-zero type,
+8:57
+if you remember from a few slides ago, there was 15 bits worth of type information.
+9:12
+You can't do anything with it. There are no operations you can perform on it other than unsealing it.
+9:20
+For a particular. Type recognised by the hardware, a branch like one branch and someone is not neutered.
+9:28
+If you're in the audience, can you please call me? Thank you.
+9:46
+So a capability can't be used as the base for a load or store, you can't perform an illegal operation on it, but you can branch to it.
+9:57
+And that that means that. You can copy it into the programme counter and the act of copying it into the programme counter unseals it.
+10:08
+So code at the destination takes control, and then, for example, it can be used to construct a PC relative address.
+10:19
+And so by transferring control through this capability code at the destination is able to access data that code before the branch could not access.
+10:32
+This is the basis for augmenting what code can do in a week sort of of way.
+10:46
+And I'll talk about compartmentalisation and strong compartmentalisation later.
+10:55
+On the key thing, of course, is that before transferring control code at the brands,
+11:04
+that the nation was inaccessible to try to be the source on the data it could access was inaccessible.
+11:10
+You get weak control, flow, integrity for free in this scheme.
+11:22
+Because the. To no, to the destination node of control transfer can be locked down.
+11:28
+In an unforeseeable, immutable way, but of course, the prognosis is not locked down, so you don't get strong control,
+11:38
+flow, integrity, but that, of course, is all useful to improving the security of software.
+11:48
+Finally, we get control of what capabilities can be stored that can give us to improve safety on Stang's.
+11:58
+Rather nicely. Capabilities have a global position on a store, local capability,
+12:09
+connexion on either of those can be cleared, but not set by my code, by unprivileged code.
+12:16
+So if we let the capabilities for programmes, global data regions have stole local cab fare.
+12:25
+It follows that any derived capabilities describing data objects in those regions would also have store local comfier.
+12:35
+You then let the capability describing the stack have the globe will be clear and any
+12:45
+derived capabilities describing data objects on the stack of the globe will be clear.
+12:51
+If you then attempt to store a capability for a stock object, i.e. a local capability in global data.
+12:58
+There will be a state or local commission called. So that enables you to avoid a whole class of programming errors.
+13:07
+But unfortunately, at the expense of invalidating some code which is formally correct by the language standards.
+13:19
+This is not the only possible interpretation of local and global, its point of view, informed by saying C++,
+13:30
+other points of view might be more appropriate if one thought about dynamic languages can certainly be supported.
+13:39
+So at that point, I'm going to move on to.
+13:49
+The. The security problem, looking at it from the top, if there are any questions thus far, please pop them up.
+13:54
+OK. So in a single slide.
+14:10
+This kind of Cherry Marello technology can make software more secure in two ways, the first is it can give us fine-grained strong compartments.
+14:15
+And the real world of security today is based on strong compartments,
+14:26
+usually based on operating system processes, virtual machines and similar technology, micro Col's and the like.
+14:31
+Enclave's, they're all familiar implementations of the security compartment abstraction.
+14:43
+The notion of a strong security compartment is that whatever you do inside it, whatever code you run, control, can't escape that compartment.
+14:53
+Other than by exploiting a vulnerability in compartment management or privilege escalation and actually in the real world,
+15:06
+it works reasonably well in terms of operating system processes.
+15:16
+But not perfectly. Compared to an operating system process, Terry Marello capability based compartment gives you much finer granularity.
+15:21
+So sixteen point granularity granules instead of page granules.
+15:34
+It gives a very useful ability to relinquish your rights irrevocably.
+15:39
+So before control enters Maine, you can argue that you're dealing with a trusted software stack.
+15:45
+And therefore, you can have all sorts of rights lying around you need and then you can relinquish them.
+15:54
+Before. Control enters Maine and the application exposes itself to adversarial data.
+16:03
+And we hope that there'll be fewer overheads on creating, destroying and communicating between small compartments,
+16:14
+the back of the envelope calculation suggests the overheads for large departments are pretty much identical.
+16:22
+The other thing that this technology can give us is code resistant to remote adversaries,
+16:32
+we could choose to translate source code in a way that's efficient and gives a remote adversary
+16:38
+no more power than if the source code ran on an interpreter for the source language.
+16:47
+And that's interesting from a number of perspectives.
+16:57
+Strong compartments are important because today they're virtually the only tool we
+17:06
+have for existing exploits that give an easy to understand guarantee of containment,
+17:11
+and that guarantee is partly empirical based on having stood the test of time, and it's partly formal.
+17:18
+So some hypervisor and micro kernels come with proofs of memory, isolation.
+17:26
+Very interesting paper was published in Twenty Seventeen by Thomas Throughline called Weird Machines Excitability, IMPROVable Unexploited Ability.
+17:34
+Throughline started life as a as a hacker works for Google Project Zero these days on his paper,
+17:46
+shows just how low the bar is for exploit ability if the adversary can manage to change your chosen bit of a programme data.
+17:55
+The interesting thing is that Dooley's only considered exploit ability, not exploit ability,
+18:06
+that leads to taking over the thread of control within a strong compartment.
+18:12
+And he can be forgiven for that because in today's instruction sets, it's virtually the same thing.
+18:20
+And the way Duli approached this analysis was to observe that a programme implements an intended finite state machine,
+18:27
+that's the finite state machine the programmer intended.
+18:38
+When it's translated, there are additional states he calls transition states that arise because of the implementation using a lower level language.
+18:42
+All other states of the programme exponentially many more weird states.
+18:53
+And that those are the states that hackers exploit. The states, the weird states.
+19:01
+That's our data, so the application of code to the hacker.
+19:10
+And today, with no convincing way to describe the resistance to exploits other than in this language of strong compartments.
+19:19
+The idea of exploiting this translation, if we think about a C++ programme running under an interpreter.
+19:31
+The machine's instructions are C++ statements to reasoning applies to that machine like any other, it, too has weird states that are hackable.
+19:42
+So there's a set of remote exploits that might breach confidentiality or integrity or availability.
+19:52
+Those vulnerabilities will be in any translation of the source programme, and I'm just going to ignore them because they're uninteresting.
+20:01
+They're the responsibility of the source code programmer. Unfortunately, in translations for today's instruction sets,
+20:10
+there's an additional class of vulnerabilities that give adversaries control of the hardware.
+20:20
+And allow them to run their chosen code, and that's what we like to prevent.
+20:28
+So I'm taking a translation validation view of it, kind of inverted that we require the binary code to be no more exploitable than the source code is.
+20:34
+Why might this be important? Well, if we could eliminate the additional class of vulnerability by design of translation,
+20:52
+we could do exploit and vulnerability analysis on source code and we could do it once and for all.
+21:01
+Cherrix enabled targets, instruction sets. And reblock exploits to take over the hardware.
+21:09
+But the application could still be taken over, of course. If we harden the code running in a strong compartment,
+21:18
+we reduce the number and increase the granularity of compartments needed to mount an adequate cyber defence, that that might be more efficient.
+21:26
+Now, this is where the Marello development platform comes in.
+21:36
+We've tried to do back of the envelope calculations about what the wins and losses might be, and actually it's pretty hopeless.
+21:42
+We need experiments to determine.
+21:51
+Now, where the breakpoint would be on making bigger compartments and having fewer of them versus having more smaller ones.
+21:54
+The key observation in how to do this is that there are some data locations that belong to the programme and these,
+22:08
+broadly speaking, of the ones that are described by the programming language standard.
+22:14
+And there are some that belong to the abstract machine, to the compiled code that interprets programme, if you like,
+22:21
+I've called those locations translation impertinently and they say they hold things such as, say, register values, linkage, data, you name it.
+22:30
+There's a third class that's interesting, which is programme metadata.
+22:42
+So this is data that from one perspective is not part of the programme poster child for this is keep metadata.
+22:47
+Viewed from the application perspective that the heap is just a thing and and who knows how it's implemented.
+22:56
+Viewed from the perspective of the manager, that's just another programme written in C or C++.
+23:05
+So our intuition is, if we can maintain isolation between programme data locations and translation impediments,
+23:15
+then we can maintain it in space and time, then no remote adversary who merely controls data can take over the machine.
+23:23
+And very Marello capability should let us do that.
+23:34
+I can give a historical perspective and a little. Pretty well, not the idea.
+23:43
+The abstract idea of exploiting this translation is not new.
+23:53
+It's essentially the idea of of provably correct co-generation, plus an appropriate representation of references everywhere by all code, including.
+23:57
+All of these low level things like second assembly language and the instant you stop saying everywhere.
+24:12
+You increase the size of the base of code that you have to trust to be correct, and that's a problem.
+24:21
+So even something as simple as as as Javor sits on a trusted code base of over half a million lines of rather untrustworthy seat.
+24:30
+So. Yeah, that doesn't really solve the security problem.
+24:42
+That implementation failed in deployment, I think, for two reasons.
+24:51
+First was lack of agreement on a universal language application, binary interface.
+24:55
+And because of the need for speed and trade space, and that derives from.
+25:04
+Economics and economics, not computer science, rules the world and in the world of Google data centres, they can measure.
+25:11
+Half a percent performance regression on important applications, and they can measure the impact of half a percent.
+25:25
+So. In most environments, it's not that critical, but in many environments, the impact of one percent shows up as dollars.
+25:33
+So there's rationality behind the the need for speed. Beyond merely playing games on mobile phones.
+25:47
+The Cherry Marello architecture and cherry enabled architecture really moves a lot of that pun a boy thing into hardware,
+25:59
+so you get the pan language agreement by fiat provided everybody uses capability's.
+26:12
+Instead of rural pointis. I think the jury's out on the state's space attributes,
+26:20
+but security is becoming a bigger concern in a growing number of application
+26:29
+areas where it's a total war with adversaries and the stakes are going up.
+26:35
+I read. Last week, I think the.
+26:41
+First example of a provable death caused by ransomware affecting a hospital in the US.
+26:46
+There were rumours of such when the NHS was hit by ransomware, but they've been denied by the UK government and by the National Cyber Security Centre.
+26:58
+But doubts remain that some outcomes must have swung when access to patient data vaporised because of ransomware.
+27:08
+So this is a real life and death issue even before we get self-driving vehicles.
+27:20
+When we get self-driving vehicles, of course, it's a real life and death issue everywhere.
+27:29
+I could move on to part three or I can pose for questions.
+27:39
+I think I probably used my time in the first two parts.
+27:45
+Yeah, do we have any questions?
+27:52
+Maybe I can maybe I can also I mean, this is what we're dealing with here are essentially very tight memory access control rules.
+27:57
+Yeah, I was wondering, are there particular kinds of exploits that you have in mind, like the and so on.
+28:08
+And also, what's the overhead of actually implementing this in practise in terms of the performance
+28:15
+penalty we can expect to take for the great questions to answer the first part,
+28:20
+both Google and Microsoft have published separately.
+28:28
+That's about two thirds of the vulnerabilities that caused them to issue important.
+28:33
+Emergency security patches are caused by memory safety.
+28:42
+Defects. The proportion of spatial versus temporal safety defects varies amongst that data.
+28:50
+It varies between applications, but overall, two thirds of memory safety defects.
+28:59
+Fixing that would allow three times the effort to be focussed on the other application level.
+29:06
+Issues like cross site scripting watchers and the rest of it.
+29:16
+Plus. When it comes to what the overhead, so we don't really know.
+29:26
+We we can extrapolate from the overheads of increasing points to size from 30 to 64 bit and observe that pretty quickly,
+29:32
+machines caught up with the lost performance. Moving from 64 bit to 128 bit, we don't really know.
+29:43
+That there will be some cash pressure we could do back of the envelope.
+29:56
+Projections that suggest a few percent, but that masks the fact that there will be outliers that are much more severely impacted, just a few percent.
+30:02
+What we don't know is how important the outliers are versus how important the the mainstream is,
+30:18
+and all of it has to be balanced against what's the alternative and.
+30:26
+What are these sorts of exploits costing us anywhere in terms of performance so all of us
+30:34
+are likely running PCs that are running some kind of security software in the background?
+30:40
+Virus checkers. Things with machine learning, looking for network behaviour, anomalies, you name it.
+30:48
+There's probably the equivalent of. A whole c.p.u churning away on these all of the time.
+30:57
+It's a similar story in data centres, except that the.
+31:06
+You know, the infrastructure is more centralised and it might not hit your c.p.u, but it's hitting CPU's on your behalf.
+31:12
+There is a tax on everything we do, and so.
+31:21
+Again, this is where the Marello development.
+31:26
+System is so important it will allow and its partners and academics to do real science, that question.
+31:31
+All right, thank you.
+31:45
+There's a question of chat here, something about how this Spectre meltdown and the similar sorts of bugs come into the picture, if at all.
+31:47
+Yeah, that's another great question directly.
+31:57
+Not at all, because. The problem with the melt down, the rest is that machines are allowed to do all sorts of things that are architecturally illegal,
+32:03
+provided there's no architectural imprint of a left.
+32:16
+The problem is that there are micro architectural imprints left that can be read, for example, by doing timing measurements on cash Access's.
+32:24
+So that's that's the essence of it. To improve upon that.
+32:36
+We need to inject into our machines an awareness of when when we are crossing security domains
+32:45
+and at the moment the only security domain crossing we have is between privacy levels.
+32:55
+So in the armed world, we have four levels of privilege, essentially know this monitor level that runs the the the defence level,
+33:04
+but this virtual machine level operating system level and application level and that's it.
+33:15
+So we can notice when we're crossing.
+33:22
+Privilege boundaries, we can do something to partition the machine's resources across such boundaries and we can prevent,
+33:27
+at least in principle, cross boundary attacks.
+33:36
+The problem at the application level is without making security compartment boundaries explicit, there's no scope to do that.
+33:39
+Now, capabilities would give us an compartments based on Cherrix style capabilities.
+33:51
+Would give us the ability to do that by bringing in a slightly different type of capability.
+34:02
+Now, I didn't talk about the capabilities that define the types of operations on types with which other capabilities are sealed.
+34:09
+But we could introduce a capability for a compartment.
+34:20
+And when we swapped the compartment capability that signals to the machine that we crossed a security boundary and
+34:25
+at that point my architectural resources could be be purged or they could be partitioned according to security.
+34:33
+Compartment, we don't need to know we can leave that to the ingenuity of my crew architects to decide.
+34:43
+But this sort of. Technology certainly gives us a handle on the problem.
+34:50
+It doesn't guarantee that we will exploit that handle. OK, great.
+34:56
+And in terms of in terms of handling these errors when you detect them is the only
+35:04
+is the only way out to kind of throw an exception or whatever was going on there,
+35:09
+or is there something more graceful that can be done?
+35:14
+Because I can imagine with this, we're going to get a lot more full terminations of programmes because of illegal behaviour.
+35:18
+Right. Well, really, nothing changes because it's it's essentially in today's world if I access an invalid address.
+35:28
+What happens? Well, what happens is determined by software, how things might recover is determined by software.
+35:42
+When you dereference an invalid capability or try to do something with the capability you're not allowed to do, that will be a machine exception.
+35:52
+And it's just like an address exception and software will decide how it's handled.
+36:02
+No change. I mean, we're normally used to be the operating system trapping our memory, the servers and crushing our programme.
+36:10
+Right. That's a simple, secure way of dealing with the problem.
+36:21
+It's true, it's true, it's I'm just thinking, if it's very much more sensitive and it turns out that a good proportion of software has these problems,
+36:30
+then we could find ourselves in a situation where not much software runs for very long before falling foul of the new rules.
+36:43
+Right. I think this is a choice as to how people, you know, deploy their code,
+36:51
+but I would seriously question whether it's sane to allow such software to be deployed if it's so flaky.
+37:02
+Is that. Professionally, correct? You know, if you went and looked at, for example, the ecms code of ethics for their members.
+37:15
+Could could you defend against that code of ethics? Arguing that your flaky, insecure code should be deployed.
+37:29
+I mean, interestingly, I think the latest. ACM Queue contains an article questioning whether it is a.
+37:41
+Is now the right time to introduce professional liability for programmers in the same way that structural engineers have professional liability?
+37:52
+I mean, should we be allowed to create baby monitors?
+38:04
+There's a hackable by anyone over the Internet. It's a very good question.
+38:08
+Probably not, right?
+38:16
+Does anyone else have a question? And by the way, trade Marello technology doesn't doesn't force an answer to any of those questions.
+38:21
+You can still write in secure code.
+38:31
+You can choose. To translate code in an insecure way.
+38:35
+At the deepest level, if you really care about security. You could choose to write code that prevented the adversary being able to run Chosun.
+38:42
+Attack software. At least up to the level of the reliability of translation, which itself is pretty high the day to day use.
+38:56
+Compiler defects are not a major source of security problems in the real world, it's almost all in application code.
+39:09
+So we'd make a step forward, but it would not be perfect and we'd still need lots of strong security compartments
+39:20
+to resist our most determined adversaries and those that are state backed.
+39:28
+State funded. We probably won't be able to resist them even then.
+39:36
+Now, could we have another question for you?
+39:47
+I don't know if you're familiar with arms recruiting processes and so on, but can you tell us something about the kinds of graduates that you recruit?
+39:51
+And in particular, we have a course called the Mousy Computing Science,
+40:02
+which is a course for graduates of other degrees who want to simply convert to computer science.
+40:06
+And they do like a one year intensive degree.
+40:15
+Would would do you think that would be a suitable background or are you more looking for software engineers with a four year computer science degree,
+40:19
+for example? So. I'm going to wave my hands and talk in generalities here,
+40:30
+and I would say that the recruitment process operates at two levels, at a very concrete level.
+40:40
+All of our vacancies, including graduate vacancies, part time undergraduate intern vacancies, they all appear on our website.
+40:48
+And that's the only way in. In terms of policy and going forward in the longer term,
+41:00
+you all know that end of Moore's Law is approaching and that this is projected to change the industry in the service that we operate in.
+41:09
+So in response to that, army is trying to become a more diverse organisation.
+41:22
+So we are looking to recruit from more diverse backgrounds.
+41:30
+It's not the case that we've ever the southwest side of the business,
+41:37
+recruited exclusively computer scientists with computer science degrees, that's I doubt that's even half of our software people.
+41:42
+We have a lot of people who've crossed over computer scientists who become hardware engineers,
+41:55
+electronic engineers who've become software people, scientists, mathematicians who've become programmers.
+42:01
+So I think in that respect, it's probably never been a better time for people to do a conversion degree as Imperial College to be thinking about.
+42:11
+Well, could I make a career in your chances are as good or better than they've ever been?
+42:22
+All right, great. Thank you. You got your hand up. You want to go ahead and ask the question?
+42:30
+I know it's hard to know where to scratch.
+42:37
+That's no problem. That happens all the time. All right.
+42:41
+Has software. Yeah. Fire.
+42:47
+Kayan has asked, is Kerry or any part of it opensource?
+42:53
+So all of this research is is is open and the Cambridge I think the computer lab,
+42:58
+at least for its research, has had a policy around Cherrix of it all being unencumbered by patent.
+43:07
+So all of the coal, what's called capability essential.
+43:15
+IP is unencumbered.
+43:21
+And indeed, bought into this very early because we recognised this technology is only going to succeed if everyone can apply it without fear.
+43:24
+So it is very open, Cambridge themselves have shifted focus now from premix, which was their original vehicle to risk five.
+43:40
+For obvious reasons, it's the current darling of of academia, it's becoming real in terms of what you can do with its.
+43:55
+And it's a more modern instruction set, architecture and execution environment than the Nips, which has a few idiosyncrasies in it.
+44:06
+So, yes, it's all pretty open, all of all of the stuff I've referred to in this presentation is openly published.
+44:19
+You can go in and get it from the Web, from the.
+44:27
+Computer Labs research website from Arms website.
+44:32
+Right, and yes, the the compilers we use are LVM, which is open source, and GCSE,
+44:44
+which is also open source developments in GCSE, are lagging those in the app.
+44:53
+That's because the lab started with LVM. All that Cherrix work was done with LVM and Free BSD.
+45:00
+In fact, you can pick up a cherry enabled free BSD already from from the Web.
+45:10
+Linux is running behind that, there will be a. A Marello enabled Lennox.
+45:18
+For. The platform.
+45:26
+I think we we had such a thing internally. Routine to the busy box prompt a couple of weeks ago, so it's very new.
+45:31
+Still flushing out lots and lots of problems and issues in that.
+45:45
+But we'll get there. Right, Zach has a question about Rust and his since references are guaranteed to be safe in rust,
+45:52
+as long as you aren't writing unsafe rust, does Terry enforce that?
+46:06
+References must also be accessed by capabilities. So accountability is a reference.
+46:11
+And it's a translation choice to implement references and pointers using capabilities.
+46:22
+There is somewhat of an overlap between.
+46:30
+At that level, between what Rust offers and what Cherrix enabled instruction sex offers.
+46:39
+I think the. The big difference.
+46:47
+And in fact, if. If I just pop this slide up.
+46:53
+We can define a strong compartment as all of the capabilities and memory that are reachable from capabilities in the machine's register file.
+47:05
+And. The key thing to remember is that that can never be augmented.
+47:16
+In fact, it's never greater than when the compartment is initialised.
+47:24
+It can only ever get smaller. So.
+47:31
+The problem with Rust is that if you do breach the security, then basically you're into the only strong compartment mechanism you have,
+47:36
+which is the whole operating system process or perhaps the whole virtual machine monitor or the whole operating system as the case may be.
+47:48
+Whereas with Cherry Marello technology, there is a hope that you only get access to what, that strong compartment.
+47:59
+Gives you access to and that can be pinned down to quite a small subset of the whole process.
+48:12
+So. I think the guarantees was similar in principle, in practise, in deployment, the Cherry Morato guarantees could be much stronger.
+48:22
+Great, Zach, to answer your question, I'm not sure I communicated it entirely, precisely correctly.
+48:38
+Yes, sir. Thank you, sir. There we go. I think the best I have a colleague who's been looking at implementing Rust on top of Marello capabilities.
+48:51
+It's something that we've been playing with, but so far inconclusively.
+49:05
+OK. All right, well, I think we must end the need to let the students have planned to go to the next lectures,
+49:12
+but thank you very much for that really insightful talk.
+49:19
+Really good to get deep inside the memory system and explore what capabilities mean for architectures and machines.
+49:25
+So thank you very much for that. A pleasure. Thank you for inviting me.
+49:34
+And somebody asks, Emily asks, would it be possible to get access to the rest of the slides?
+49:40
+You see, you've inspired them. I would send a PDF to Tom immediately after this.
+49:45
+I gather that this can go on to your teaching system so anyone at Imperial can access it, but it's not accessible over the Internet otherwise.
+49:52
+Absolutely, absolutely no comment yet. Very good luck. I wish I could understand it or I apologise deeply for that.
+50:03
+I've spent the last seven years immersing myself in this. I forgotten what I didn't know.
+50:14
+It's actually it's very good, even if you just setting out some computer science to immerse yourself in this kind of lecture and so on.
+50:20
+Because when you do then come across the concepts and someone later in your lectures and stuff, it will mean so much more to you.
+50:33
+So particularly the messy computing science students. I mean, they've only had three lectures from C++.
+50:42
+Me is probably a little bit technical for them.
+50:48
+But at the same time, when we come to, for example, discuss buffer overflow attacks and so on,
+50:52
+suddenly this whole notion of why is it important to secure access to memory and someone will hopefully make a lot more make a lot more sense.
+50:59
+All right. But thank you, everybody, and have a good day.
+51:07
+Thanks so much.
+51:11

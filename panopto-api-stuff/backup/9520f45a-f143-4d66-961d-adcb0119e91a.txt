@@ -1,0 +1,1287 @@
+ID: 9520f45a-f143-4d66-961d-adcb0119e91a
+Title: Why study calculus in 21st century? (Live Recording 11/10/2021)
+Category: COMP40016 - Calculus (Autumn 2021-2022)
+Lecturer: Paul Bilokon
+Date: 24/10/2021
+All right, welcome to your first introductory lecture on calculous, actually.
+0:19
+Is this your first lecture altogether? Have you had lectures before?
+0:28
+Is this your very first lecture in the Department of Computing? No, not since you've had lectures.
+0:34
+OK, so that makes my task slightly easier. Slightly east.
+0:41
+Yeah, OK, so we will talk about calculus today and we'll talk about why it's crucially important to be very,
+0:46
+very, very good at calculus in the 21st century.
+0:59
+But before we go that, I wanted to ask you, how do you feel about calculus in the 21st century?
+1:04
+So perhaps you succumb to the mathematical. A feeling of tension, apprehension or fear that interferes with my performance,
+1:11
+some of you may have felt that you have already studied too much calculus at school,
+1:20
+whereas others will feel no doubt that you have studied too little, perhaps the feeling that is that of hesitation or doubt.
+1:24
+Why would we need calculus in the digital age? Why should a computer scientist, engineer or programmer study calculus?
+1:33
+So in order to work this out, I suggest that we do the following.
+1:42
+We do a quick survey, so we do a quick survey.
+1:47
+And what I want to ask you guys is how do you feel about calculus currently?
+1:52
+So in order to take part in the survey, you can like hopefully this works.
+2:03
+Hopefully this works. Let me just let me send you the link to it.
+2:10
+So it's that's that's that's great.
+2:15
+That's great. So I'm seeing that that you guys are actually that you guys actually like it, will love it.
+2:21
+In fact, most people love it so people don't care about it.
+2:28
+Okay, that's fine. Some people hate it. OK.
+2:32
+So people are curious about it, but the vast majority, 80 percent, 80 percent love it or like it.
+2:37
+So let me send you the link in case you haven't joined it yet.
+2:46
+OK, someone says I love it. It makes me look smart. That's great.
+2:53
+I love this audience. Love this audience. Absolutely. So have we reached the limit?
+2:57
+Have we reached the participant limit? So let me. OK.
+3:13
+OK, so it looks like we have run out of space in this fall, but there is a small number of people who are afraid of it.
+3:18
+But the vast majority of people seem if you have voted, if you have voted close to this page,
+3:27
+so hopefully other people will also be able to vote in that case. So, OK, so we'll see.
+3:34
+But the vast majority, the vast majority, that's that's a college thing.
+3:41
+That's Imperial College for you. OK, but there are some people who are afraid of it.
+3:45
+And it's natural. It's natural. Even Einstein was afraid of calculus.
+3:50
+He said, whatever your difficulties with mathematics, mind are significantly more serious.
+3:55
+So, OK, so that's great. So people have been voting and.
+4:03
+Yes, well, what can I say? My next question will be my next question will be what words come to mind when you think of calculus?
+4:10
+What do you think of when somebody mentions mentions calculus and you don't have to use a houselights,
+4:21
+but you can use a houselights so you can use a houselights if you run out of space in the houselights.
+4:28
+What stress, differentiation, integration, fun area limits areas and volumes derivatives.
+4:40
+Paid grath precision.
+4:53
+Okay, complex, beautiful. Product rule.
+4:59
+Okay, well, that's what else, gradient descent, the gradient descent.
+5:05
+Well, that's interesting, self-inflicted by the general chain rule and gradient descent.
+5:10
+So that's very interesting. So that's rather interesting and.
+5:17
+Confusion. So the confusion, they say, always precedes enlightenment.
+5:28
+OK, that's that's good to see. So that's partial differentiation.
+5:36
+What I actually the way it looks like there are too many people right now using a harsh light.
+5:41
+So it looks like I didn't realise there was this limit. And fortunately, I do apologise for this.
+5:49
+So somehow I need to deal with this limit. So I somehow I need to increase this limit.
+5:55
+So, okay. Difficult manipulation divide by the implicit powers rate of change are useful.
+6:00
+So you guys actually are much friendlier towards calculus and hopefully towards myself the night than I expected.
+6:10
+This is this is very good variables, continuous romance.
+6:19
+That's interesting. That's that's good, that's and that's the way you can probably try now,
+6:24
+because I think that some people who have left this page, but it's all very close to 50.
+6:32
+So I think it may be maybe tricky to to join this page.
+6:39
+OK, well, this is Aftermath the. OK, well, that's that's a nice word map.
+6:43
+Judith hollered back propagation. So what actually makes makes this curious?
+6:55
+It's a quite a few people have, of course, mentioned differentiation and integration. It looks.
+7:02
+So some people have mentioned specific names. And this is great.
+7:09
+So what I wanted to really ask you guys, some people have mentioned things related to neural nets.
+7:14
+So my my next and final question for this quiz is, how do you feel about neural nets?
+7:22
+Because if you ask me if you like me, then when you think of calculus, what I tend to think about, I tend to think about neural nets.
+7:29
+Have you guys here at Dock build your neural net yet?
+7:38
+Have you guys built your first neural net? And you can unmuted yourself and you can tell me basically that's not a problem.
+7:44
+So have you got eyes yet built your first neural net?
+7:53
+No. OK, so we'll do that today. We'll do that today.
+7:57
+And I know it's about calculus. Tend to flow, certainly counts.
+8:01
+But we will do we will build a neural network today in a couple of minutes.
+8:05
+Well, I'll tell you a few stories. First, I tend to I tend to tell people stories.
+8:10
+I mean, that's that's that's what I do. But we will OK. Some people are doubtful about them.
+8:14
+OK, well, that's interesting. So we will look into neural nets and we'll see how we can be less doubtful about them.
+8:19
+But again, we see that a lot of people are curious and a lot of people love neural nets, which is great, which is great.
+8:27
+So excellent.
+8:38
+Excellent. So thank you very much for taking part in the survey.
+8:42
+I hope that was interesting and insightful. And what we will what we'll look at now is indeed 21st century calculus.
+8:48
+So that's what the subject is today. It's 21st century calculus.
+9:00
+And so we have looked at the houselights. We have done this now.
+9:06
+I just wanted to say that you may have heard people say in the 21st century,
+9:13
+you may have heard Gilbert Strang, who is actually an author of the calculus textbook he made.
+9:18
+He said in his essay, Too Much Calculus. All the rest of mathematics is overwhelmed by calculus.
+9:25
+The next course might be differential equations, more derivatives, and the previous course is probably precalculus.
+9:32
+I really think it is our job to adjust this balance. We cannot expect others to do it.
+9:39
+We know the central role of linear algebra. It is much more than a random maths course.
+9:45
+Its applications touch many more students than calculus. We are in a digital world now,
+9:50
+but I would argue that we are in a post digital world and that is what that is what we will talk about briefly this morning.
+9:56
+So let us talk about calculus and why it is more important than ever in the 21st century.
+10:07
+So ancient accountants laid tables in columns in the sand.
+10:14
+Trying to help them do that sums it is thought that the impression left in the sand
+10:18
+when the pebble is moved to another location is the origin of our symbol for zero.
+10:24
+The word calculus has the same source, since it means a pebble in Latin.
+10:31
+Nowadays it means any systematic way of working out something mathematical.
+10:37
+We still speak of a calculator. So calculator also comes from calculus.
+10:43
+Also comes Latin word for Pebble when referring to the modern electronic equivalent of an ancient substrate.
+10:48
+That's just a quick request. So someone is not a mute and there is some background noise.
+10:55
+So can you guys mute yourselves if we are not talking or asking questions?
+11:03
+OK. Still still noisy. Still noisy, let me let me look into this.
+11:10
+How do we how do we. How do we move to people here?
+11:23
+Does this work actually mean to everyone, but I've heard that you'll also be built by yourself.
+11:32
+Okay, so let me. How do I meet everyone?
+11:40
+I don't know how to do that. OK. Ah, excellent, thank you very much.
+11:44
+Thank you very much. So what were we talking about? So you do feel free to ask questions, feel free to interrupt me at any time, right?
+11:54
+Just if there is noise I'd ask you to do to yourself and then just amuse yourself when you speak.
+12:02
+Yeah, OK. That's worth. So now now it's, I think, much easier.
+12:08
+Do you guys agree it's less noisy now? Can you guys hear me still?
+12:20
+Yes. Excellent, excellent, fantastic.
+12:27
+So we were talking about pebbles and calculators since the English mathematician Isaac Newton invented the differential and integral calculus.
+12:31
+The word is seldom applied to anything else. The this particular calculus, the one we're about to study, is all about differentiating and integrating.
+12:43
+Now, have you seen the Apple logo? Have you seen the Apple logo?
+12:54
+The logo of Apple Computer. Yes, OK, now, does it look like this?
+13:00
+OK, that's because that's the old Apple logo.
+13:15
+That's the original Apple logo, not the current millennial minimalist logo of today,
+13:19
+but the the original one that was designed by Ronald Wayne in 1976.
+13:28
+Some people say that Wayne was a third co-founder of Apple.
+13:32
+Some people say that. But the first Apple logo actually pictured actually pictured Isaac Newton
+13:38
+sitting under an apple tree and an apple dangling precipitously above his head.
+13:48
+And the phrase on the outside border, read Newton and mind forever voyaging through the seeds of thought alone.
+13:54
+It was William Studley, an archaeologist and one of Newton's first biographers, that relayed the story that's taught by Newton.
+14:04
+After dinner, the weather being warm,
+14:13
+we went into the garden and drank tea under the shade of some apple trees on the hill and myself amidst other discourse,
+14:16
+he told me he was just in the same situation as when formally the notion came into his mind.
+14:24
+Why should that Apple always descend perpendicularly to the ground, thought to himself,
+14:30
+occasioned by the fall of an apple as he sat in a contemplative mood?
+14:37
+Why should it not go sideways or upwards, but constantly to the Earth's centre?
+14:41
+So Richard is wondering if that Apple is going to fall. I'm wondering that as well, so that so will work.
+14:50
+But but in the meantime, I have another story to tell.
+14:58
+And that story is, in fact, a newspaper article which was published in 1958 in The New York Times.
+15:02
+The title of the article was New Naggy Device.
+15:12
+Oh, the poisonous apple.
+15:18
+Well, there is actually a connexion between the apple that fell on Newton's head and the apple of Alan Turing, but we'll talk about it another time.
+15:20
+New naggy device learns by doing psychologist shows embryo of computer designed to read and grow wiser.
+15:30
+The Navy revealed the embryo of an electronic computer today that it expects will be able to walk,
+15:41
+talk, see, write, reproduce itself and be conscious of its existence.
+15:46
+The embryo. The weather bureau's to two million seven 04 computer.
+15:53
+Learn to differentiate, not differentiate, but differentiate between right and left and 50.
+15:58
+After 50 attempts in the Navy's demonstration for Nuzman,
+16:03
+the service said it would use this principle to build the first of its Perceptron thinking machines that will be able to read and write.
+16:08
+It is expected to be finished in about a year at a cost of 100000 100000.
+16:16
+Dr. Frank Rosenblatt, whom you can see in this picture design of the Perceptron, conducted the demonstration.
+16:23
+He said the machine would be the first device to think about the human brain as two human beings.
+16:30
+Perceptron will make mistakes at first, but will grow wiser as it gains experience,
+16:36
+said Dr. Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory.
+16:43
+Buffalo Set. Perceptron might be fired to the planets as a mechanical space explorers now.
+16:49
+There was a commotion at the Four Seasons Hotel in Civil War 9th of March 2016, a motley crowd of computer scientists, mathematicians,
+17:00
+go grandmasters, correspondents and photographers have descended on the head to sell out of all places, was no stranger to such diversity.
+17:11
+But modern glass and steel structures coexist with grand historic palaces within the ring of mountains.
+17:21
+And yet the event had an air of uniqueness and timelessness about it.
+17:28
+Something special was about to happen. Everyone was waiting for one man to leave, settle, although some would call him Sandover Strong,
+17:33
+so he had just turned 33 years old just over two decades ago.
+17:44
+He was the fifth youngest to become a professional golf player in South Korean history.
+17:49
+Today, he had an added responsibility that very few would be brave enough to get to.
+17:56
+That goal was invented 2500 years ago in China.
+18:01
+It displayed by two players on a 92 by 19 grid of black lines.
+18:05
+Greenpeace's stones are placed in the lines, intersections or points.
+18:10
+One player uses the white stones and the other black. The players take turns, placing the stones and baker points.
+18:14
+Once placed on the board, stones may not be moved, although they are removed from the board.
+18:20
+If one or a group of stones are surrounded by opposing stones, in which case the stones are set to be captured.
+18:27
+When a game concludes,
+18:35
+the winner is determined to win a game concludes the winner is determined by counting each player surrounded territory along with capture stones,
+18:36
+comic points added to the score of the player with the White Stones as compensation for playing second.
+18:46
+So we see that someone actually was there and watched this light, which is rather amazing.
+18:53
+I agree that that's very nice. The event's uniqueness was not without two exceptions.
+19:01
+Something similar had happened in Philadelphia in 1996 and the New York City in 1997,
+19:07
+when Deep Blue and IBM Chess Computer played Garry Kasparov the world chess champion.
+19:12
+The 1996 game was won by Kasparov in 1997 by Deep Blue being the first defeat
+19:17
+of a reigning world chess champion by a computer under tournament conditions.
+19:25
+So today it is Saddle's turn to defend humanity's intellectual dignity and compared to chess,
+19:31
+Go has both a larger sport with more scope for play and longer games and an average,
+19:40
+many more alternative, many more alternatives to consider per move.
+19:46
+The number of legal board positions and go has been calculated to be approximately two point one times 10 to one hundred and seventy,
+19:51
+which is vastly greater than the number of atoms in the known observable universe,
+19:59
+estimated to be about one timestep to the property, despite its relatively simple rules, Go is extremely complex.
+20:04
+So subtle arrives, he has already won 18 world championships, he will defeat Al Thigo,
+20:14
+a computer programme developed by Google, deployed in a landslide, he predicts, some weeks before the match.
+20:21
+So before and indeed, that's an excellent documentary on YouTube.
+20:30
+I certainly recommend that you guys just watch it. Very cool.
+20:35
+So some weeks before the match, you won the Korean youngin title, a major championship.
+20:40
+There is every reason to be confident. The match starts at one p.m. Korean time and still is in control.
+20:45
+This is likely to be an easy game for him.
+20:54
+Then comes the games, one hundred and second, so Alpha Go makes its move, settle, examined the boards, the board, he mulls over his options.
+20:57
+The minute passes by. Two minutes.
+21:10
+Then. Until he finally responds, his confidence begins to evaporate.
+21:17
+OK, so the six classical simple machines were enumerated by Renaissance scientists and that they were the wedge,
+21:29
+the inclined plane, the lever, the wheel and axle, the pulley and the screw, and they date back.
+21:38
+So, for example, wedges were found amongst the oldest known old tools of Gonner, Ethiopia, and updated to about two point six million years ago.
+21:47
+Whereas the inclined plane, the heavy stones in Stonehenge, about 3000 to 2000 before current era,
+21:57
+are believed to have been moved and set in place using inclined planes made earth.
+22:07
+The ancient Greeks constructed a paved ramp, which was six kilometres long videocast to drag ships overland across the Isthmus of Corinth.
+22:13
+So these are pretty old machines. In fact, it was Archimedes who famously remarked, Give me a place to stand on and I will move the earth.
+22:24
+That was a remark about one of these machines, the lever. So he expressed thus his realisation.
+22:35
+What do you recall the ones on the top left? And the top right, so the one of the top right is the wedge.
+22:44
+The one of the top right is the wedge, whereas the one on the top left.
+22:56
+So how could you guys tell me what's the one of the top left? Scale, but what is the leader?
+23:05
+Right, so that's the lever which is used as a scale or can be used as a scale and the weighing machine.
+23:18
+So. So just to they are the wedge the incline plane, the lever, the wheel and axle pulley and screw those who were the first machines.
+23:26
+And it's interesting to look at the history of these machines, but I'm not going to go that deep into it.
+23:38
+Leonardo Da Vinci, better known as the painter Mona Lisa, was also an engineer fascinated with machinery.
+23:47
+He invented the Strawbridge, the automated Bobin, Wanda, the rolling mill,
+23:53
+the machine for testing, the tensile strength of wire and the grinding machine.
+23:57
+He preferred to keep some of his inventions a secret in case evil people use them for evil ends.
+24:02
+So early work on the machines was mostly empirical.
+24:09
+It was based on observation or experience rather than theory or pure logic.
+24:14
+But this was about to change. On 5th of July six thousand eighty seven, the humanity's understanding of machines was radically transformed.
+24:19
+Isaac Newton published his revolutionary work philosophy naturalist Principia Mathematica Princip's established the laws of motion,
+24:33
+which were henceforth to be known Newton's laws of motion.
+24:44
+And in the words of Isaac Newton, the Vulcan mechanic can practise what he has been taught or seen done.
+24:48
+But if he isn't an error, he knows not how to find it out and correct it.
+24:55
+And if you put him out of his road, he is at a stand.
+25:00
+Whereas he that is able to reason nimbly and judiciously about tiger force and motion is never at rest till he gets over every rup.
+25:03
+Newton's work was an upgrade on Aristotle's analytical and Galileo's experimental methods,
+25:18
+it introduced to the study of motion enough machines, the apparatus of infinitesimal calculus, the mathematical study of continuous change.
+25:26
+Calculus aims to study functions, processes that associate each element of the set a to a single element of A set B, for example.
+25:36
+For example, we have a function F of equals T squared.
+25:47
+That's a function dissociates each number T and two to another number two squared plus zero is associated to zero one with one,
+25:52
+two with four and three with nine. So we can plot this function.
+26:01
+In fact, let us do this in Python and we will be using some python in this course.
+26:06
+But it's not necessary for the examiner for the coursework. You don't have to use Python.
+26:12
+It's just a very powerful tool for understanding quite a lot of this stuff.
+26:17
+So, yes, it brings back Galileo's experimentation to mathematics, very powerful.
+26:22
+So let me perhaps let us plot this function, let us plot this function and let us understand something about it.
+26:31
+So there we go. OK, so I'm what I'm what I'm doing here, I'm going to create some point, so I'm going to pick 100 points,
+26:45
+starting with minus three, finishing with three, and they will be evenly spaced.
+27:02
+So I do pick lynch space from minus three to three and I take 100 of these points, then I compute the square.
+27:08
+So our function is just all of these points squared, right?
+27:17
+So I compute the squares. I import maths booklet.
+27:22
+What speciality, which is my maths booklet plotting library, and I produce a lot.
+27:27
+So who can tell me what this plot is called.
+27:34
+So who can tell me what this plot is actually called.
+27:40
+It's a quadratic function and the plot of a quadratic function is called a parabola, right?
+27:47
+So the function is a quadratic function. The plot is called a parabola.
+27:54
+OK, that's fine. So now we're going to use a little trick.
+28:01
+So we're going to use a little trick. So what we're going to do, we are going to.
+28:07
+What are we going to do? We're going to do this, we're going to.
+28:19
+And by the way, a ball flying through the air without a trace nutzoid.
+28:25
+It will fall to the ground under the influence of the earth's gravitational field.
+28:29
+The trajectory of the ball can be represented by the very function that we are considering in line with Aristotle's analytical tradition.
+28:33
+Newton's approach breaks a complex topic of substance into small parts in order to gain a better understanding of it.
+28:41
+So we consider a small change. Can you go see my mouse pointer?
+28:48
+Can you go and see my mouse pointer? Yes, excellent.
+28:54
+So a small change in time. Delta T. And the reason, what happens to F or this small change in time?
+29:00
+So the change in time is Delta T. We compute F a T plus Delta T. and subtract the effort T. So that's going to be Delta F,
+29:09
+so because our function is just to square,
+29:20
+this becomes T plus Delta T squared minus T squared divided by Delta T, then we unpack this expression here.
+29:25
+So we have T squared plus Delta to us to T Delta T plus Delta is what modesty squared.
+29:33
+And now what can we do. What can we do. We can. OK, T squared council's right, T squared council's,
+29:40
+and we can then divide everything through by Dr. T and we end up with this expression two T plus Delta T now
+29:58
+as Delta T becomes smaller and smaller and we approach a limit and we'll talk about limits a lot today.
+30:06
+So get ready. So I'm kind of preparing you for this discussion off limits, which will be rigorous, mathematically precise.
+30:13
+We'll talk about limits. We will figure out exactly what the limit is today as Delta T becomes smaller and smaller.
+30:21
+As we approach the limit, it vanishes and the rate of change becomes the derivative.
+30:29
+Right. So Delta F by Delta T becomes D.F. by DETI and we see that it is equal to T.
+30:35
+So the rate of change of F is proportional to T the constant of proportionality being equal to to this rate of change emerges as the gradient,
+30:44
+the slope of our current political graph. But okay. So any questions on this.
+30:54
+Any questions on this, by the way, feel free to ask me questions at any point in time.
+31:00
+Are we supposed to know people beforehand? No, but it's a good idea to learn it during this course.
+31:06
+Right. Um, excuse me. I'm sorry to drag you back.
+31:13
+Could you please go through the whole slide again on the debate?
+31:17
+Fire alarm is just messing up and I can't hear anything.
+31:21
+Oh, no problem at all. So in line with Aristotle's tradition and political tradition, what Newton did,
+31:25
+he broke down the complex topic or substance into small parts in order to gain a better understanding of it.
+31:32
+So we consider a small change in time. Delta.
+31:41
+So just from time to time to write from time to time to and and we look at the change in the function over this time.
+31:45
+Right. And that that change in the function is our Delta F, right.
+31:58
+That's the Delta F, so but let us write down what it actually means.
+32:04
+Right. The change in the function over the Delta T time interval is F.T. Plus Delta T minus F.T.
+32:08
+Do you guys all agree with this? So do you guys agree, sorry, say it one more time, please, sir.
+32:16
+The change in function right in the value of the function is F.T. Plus Delta T minus 50.
+32:29
+So that's the change in the value of the function. So time has changed by Delta T, so the function was.
+32:39
+F.T. here and then it's F.T. Plus Delta here, so we're just looking at this ratio,
+32:48
+we were looking at the ratio of the change in the value of the function as we move Delta T over time.
+32:56
+Right, divided by the delta itself, does that make sense?
+33:04
+Yes, it does. So we'll look at this in a lot more detail in this course.
+33:09
+I mean, this is just an introduction. I'm just throwing some ideas with you guys so so you can look at you can get a feel for the scores.
+33:15
+Right. But later on, we will look at this in a lot a lot of detail.
+33:23
+We will really understand this expression that is written here.
+33:27
+So don't worry if you are still hesitant about it, don't worry, we'll come back to it.
+33:31
+But our function is just a square, right? Our function, what looks like our function is just 50 equals C squared.
+33:37
+Right. So it's just scary stuff. So we might as well substituting what the function is doing.
+33:45
+This is first principle. Exactly.
+33:53
+So T plus Delta squared, that's 50 plus Delta T, so it's actually T plus Delta T squared minus T squared, which is F of T.
+33:55
+Do you guys agree. Do you guys follow up to know. Yes, yup, makes sense, divided by Delta T because we are interested in this.
+34:05
+What happens to the function divided by what happens to the time time goes by Delta T and the function changes as well?
+34:17
+OK, and now we can just expand the brackets here.
+34:25
+So we can expand the square and we obtain this expression here and notice that conveniently T squared cancels.
+34:31
+Can you guys see the T squared council's?
+34:40
+Yeah, so we're left with some Delta teams so we can divide through by the teams and we end up with two teams plus Delta team.
+34:47
+OK, agreed. So we'll look at this in a lot more detail.
+34:59
+We'll look at this in a lot more detail. And who can tell me what happens to Delta then?
+35:05
+Who can tell me so relax, let Delta t then to zero, right, we'll let as you said,
+35:30
+it approaches zero, it becomes smaller and smaller and smaller and in the limit.
+35:37
+And I'll explain exactly what I mean by in the limit. I'll explain exactly what I mean by in the limit.
+35:43
+So right now I'm talking informally, but in this course we'll be talking formally.
+35:49
+OK, so informally this Delta T approaches zero.
+35:55
+So this Delta F by Delta T approach is what?
+35:59
+What is it approach? What does Delta, FBI, Delta team approach as Delta T approaches zero?
+36:04
+Well, look at this expression here, it approaches to tea.
+36:11
+OK, so that is how you differentiate from the first principles, right?
+36:16
+So that approach is duty.
+36:21
+So as Delta T becomes smaller and smaller and as we approach a limit, Delta T vanishes in this expression and the rate of change.
+36:24
+And we have specialisation, by the way, we have this special notation.
+36:33
+Yes, it's Tuti. And this special notation is rather than writing Delta F divided by Delta T, we write D.F.
+36:37
+But when we go to the limit, write DFW.
+36:46
+Exactly. Tuti That's right. And we end up with a Soutine.
+36:50
+Okay, that's what we ended up with. Any questions on this.
+36:56
+Well, it's all very well to talk about it, let's actually look at let's use Python, let's use Python to show us what this looks like.
+37:04
+Let us, because it's all very well to talk about it, but let's actually see it, let's actually see it, let's see what this looks like.
+37:16
+So I'm going to use again matplotlib the library matplotlib.
+37:27
+So I produced the plot that that we have already produced, but then I'm going to animated.
+37:34
+Okay. You don't need to know how animated all just animated and show you how this works.
+37:42
+Okay, so I'm going to animate this and I'm going to.
+37:49
+Look. I have a video now. Can you guys see the video?
+37:56
+Yeah, what happens to the red line?
+38:03
+De. That's the horizontal line as Delta T turns to zero.
+38:09
+What happens to the red line? The hypotenuse of the triangle, what happens to it?
+38:16
+Can you guys get smaller and smaller? It also gets smaller and smaller.
+38:36
+But what does it approach? As Coy said, it approaches the tangent.
+38:41
+Look, it gets closer and closer to the tangent, to the curve.
+38:46
+Right, so, I mean, before it wasn't a tangent right at the beginning when it's large, right, it's not a tangent,
+38:52
+but as it gets closer and closer and closer, as Delta gets closer and closer and closer to zero, this line approaches the tangent.
+39:00
+Right. And D.F. Bugti, this ratio approaches.
+39:11
+Approaches. Approaches, the approaches, the gradient, right, so it approaches the greatest, who thinks this is pretty cool?
+39:20
+I mean, pretty cool stuff you can do with Python. So nice videos, nice visualisations.
+39:32
+There is the question. Thank you. There is a question, how can.
+39:42
+So the notebook I will share with you on materials along with the slides is just that I tend to share the slides after I have gone through them.
+39:51
+So can we enlarge the screen a bit? Yes, I think we can.
+40:02
+Sorry I missed your answer earlier. Are we supposed to learn by blood on our own in our own time?
+40:10
+That's correct, but I'm not going to be examining it.
+40:15
+I'm not going to be examining it. Yeah, but it's not a bad idea that will they will not I'm not teaching you programming.
+40:21
+You'll be taught programming in other courses. I'm currently just teaching you how to use Python as an experimental tool.
+40:30
+Okay. I'm just showing you how to use it as an experimental tool.
+40:39
+So I'll tell you how to how to view such notebooks and share the notebook with you, but I'll also tell you how to view the notebooks.
+40:45
+And for that, you need Jupiter, right? So this is what I'm using to display this notebook.
+40:54
+I'm using Jupiter. And my question. Yes, go on.
+41:00
+So from all the software used to display and do mathematics, do you prefer Jupiter notebooks in Python mathematical models or something else maybe?
+41:04
+Well, I like free stuff. Personally, Jupiter is three.
+41:18
+Mathematical motlop you need to buy licences for. So they're great as well, but I think if you get the licences from the college, that's great.
+41:25
+In this course, I'm kind of assuming that you have only access to free software.
+41:35
+Right. So mathematics is great, Matlab is great.
+41:40
+The reason I'm using Python is because Python is free. And what do you recommend Python overall?
+41:46
+I like both right. Or is very good for stat's. Right, Python is better for machine learning or is good for stats.
+41:52
+And Google collaborator is indeed a great place for running Python notebooks, so Python is very, very, very accessible.
+42:02
+So it's very easy to get hold of Python. So that's another reason why I'm using Python.
+42:12
+But I'm not I mean, I actually have used Mathematica, have used Matlab, I have used Octave.
+42:17
+But nowadays in the machine learning world,
+42:24
+most people use Python and I'm trying to teach you something that is probably the most universally useful thing.
+42:27
+OK, can you guys see how this triangle, this triangle, by the way, is just a visualisation of this formula that we have been looking at?
+42:35
+It's just a visualisation of the formula that we have been looking at.
+42:44
+Yes, we have code consolidates. Edit you can not just open it can even educated Igbos.
+42:48
+So it's quite powerful nowadays be as code, but you don't need this code.
+42:54
+Right. So I'll explain to you in a few minutes how to display these graphs, how to display these notebooks.
+42:59
+OK, let's go back. Newton's work.
+43:05
+Newton's work caused a massive, massive change in society, massive change in society.
+43:10
+So so that you can sort of understand what it's what it's what it did.
+43:20
+And you probably know this already, but l l just it's linked to the history of Imperial College, so I might as well might as well mention this.
+43:30
+George Smith said no one could deny that the science had emerged, that at least in certain aspects so far exceeded anything that had ever gone before,
+43:39
+that it stood alone as the ultimate exemplar of science generally.
+43:49
+The challenge to philosophers then became one of spelling out first the precise nature and limits of the knowledge that entered the science
+43:54
+and then how methodologically this extraordinary advance had been achieved with a view to enabling other areas of enquiry to follow suit.
+44:02
+OK, which historical period is pictured in this painting?
+44:13
+Which historical period is picture to this painting?
+44:21
+So I'm telling you what this is, this is Wentworth works for oil and steel manufacturers and exporters are in Sheffield, England, circa 1860.
+44:26
+So that is the Industrial Revolution.
+44:37
+That's the industrial revolution. So we'll talk about the Victorian age. Yes.
+44:41
+So Victorian era coincide well, overlapped with the Industrial Revolution and.
+44:44
+And this year. This here.
+44:54
+The Industrial Revolution. OK, let me go back actually a step let me go back a step.
+45:01
+Within the next century, the improved understanding of the laws governing motion and by implication, machines led to a quantum state.
+45:09
+Qualitative change, the industrial revolution. It began in Great Britain, which became the world's leading commercial nation by 18th century.
+45:16
+The first practical fuel burning engine was invented in 1712 by Thomas Newcomen.
+45:24
+Newcomen steam engine was improved upon by James Watt. In 1776, the Watt steam engine became the workhorse of the Industrial Revolution.
+45:29
+Wilkinsons precision war machine was used to produce Cossar and piston cylinders for its invention.
+45:37
+The British landscape, as you can see, was being transformed by the machines and the emerging industry.
+45:43
+Large factories were springing up all over metropolitan areas as manufacturing capacity exploded, aided by steam engines and copious supplies of coal.
+45:51
+In an 1838 speech in the House of Commons, Benjamin Disraeli referred to Britain as the workshop of the world.
+46:00
+And you know, the South Kensington, right? So you must be you must be now used to South Kensington.
+46:09
+Right. Exhibition Road. Right. And so, you know, the South Kensington campus of the College London is sandwiched between two streets,
+46:16
+Queen's Gate in the West and Exhibition Road in the east.
+46:25
+So do you know whence the name Exhibition Road is derived? Which specific exhibition is this referring to?
+46:30
+The great exhibition. That's exactly right, and this is the great exhibition, and first of May 1851, over half a million people marched in Hyde Park,
+46:46
+London, just across the road from the college to witness the opening of the great exhibition of the works of industry of all nations.
+46:57
+The great exhibition was organised by the civil servant Henry and by Prince Albert, husband of the reigning monarch, Queen Victoria.
+47:06
+Charles Darwin. Karl Marx. Michael Faraday.
+47:15
+Samuel Colt. The Writer. Charlotte Bronte.
+47:18
+Charles Dickens. Lewis Carroll. George Eliot. Alfred Tennyson.
+47:23
+William Thackeray were all amongst the guests. The exhibition was to become the biggest display of objects of industry from all over the world,
+47:29
+with over half of it given over to all that Britain manufactured.
+47:38
+And machines, machines were in the limelight amongst the exhibits, Frederic Bakewell demonstrated a precursor to today's fax machine.
+47:43
+The American Matthew Brady was awarded the medal for his daguerreotypes.
+47:54
+William Chamberlain exhibited what may may be the world's first voting machine and so on and so forth.
+47:59
+So we have massive change that resulted from Newtonian thinking,
+48:05
+the Newtonian cosmology of the mechanical universe promoted to drive to mechanised human activities at a large scale,
+48:11
+a drive which underlay the development of new machinery and the capacity to industrialise.
+48:18
+Indeed, it does not seem an overstatement to say that you don't need mechanics provided the intellectual basis for the first industrial revolution,
+48:24
+which in its two stages was almost wholly mechanical, brought together by a shared technical vocabulary of Newtonian origin,
+48:31
+engineers and interpreters like Bolton and what negotiated in some instances battled
+48:40
+their way through the mechanisation workshops or the improvement of canals,
+48:45
+mines, harbours. By 1750, British engineers could talk the same mechanical talk.
+48:49
+They could objectify the physical world, cease operations mechanically and factor their common interests and values into their partnerships.
+48:55
+What they said and did change the Western world forever. Then a second industrial revolution happened and that was effectively electrification.
+49:04
+See a painting here. So maybe someone could tell me what this painting is.
+49:14
+And electrification was led, if you like, by Michael Faraday, which was one, incidentally, that is Manifest Destiny.
+49:20
+Exactly. That is Manifest Destiny. And the painting is called American Progress by John Lucas.
+49:28
+And the woman is the personification of Columbia, personification of the United States, as you can see, she's carrying a telegraph wire in hand.
+49:35
+And yes, and incidentally, Michael Faraday, who was an initiator of electrification, was one of the judges of the Great Revolution,
+49:48
+which took place just across the road from Imperial College in Hyde Park down Exhibition Road.
+50:00
+OK, is that interesting? Did you guys know about this? This is just the history of your college as well.
+50:08
+Imperial College is quite intimately connected to the great exhibition.
+50:13
+But it wasn't just Faraday, it was Bekesi Ampere Cuke Wheatstone, Graham Crompton, Davy Petrie, St. Yablokov.
+50:20
+There were all heralding the new era of machines powered by electricity, the era of Thomas Edison and Nikola Tesla now.
+50:33
+But there was another revolution, which you can see here.
+50:41
+So are moving forward in history. And who can tell me which age is depicted here?
+50:45
+So this is the digital revolution, but which age were we in?
+50:52
+Or are we some people would say, oh, but what what age?
+50:58
+So someone said it was the victory. The Internet age, it's also known as the digital age, the information age, the digital revolution.
+51:02
+So if we look at the timeline for this, it's so roughly, as you said, 1960s, 1968,
+51:13
+the first message was exchanged that we had optical fibre, Satara computers, mobile phones.
+51:20
+Microsoft was founded in 1975. Apple was founded a bit later on.
+51:26
+It's actually earlier the 90s. Right. So I think we are now in a different age.
+51:31
+And that's my argument for studied calculus very, very, very, very carefully.
+51:36
+Right. So this is, if you like, the timeline of the information age up to twenty seventeen.
+51:41
+We are now in twenty twenty one. And what is happening in twenty, twenty one.
+51:48
+In fact, I would go back to what, what Marvin Minsky said in his Turing Award lecture.
+51:56
+Computer languages of the future will be more concerned with goals and less with procedures specified with it.
+52:05
+So you could if you think about Newton's machines, they were really very dumb machines, very simple machines.
+52:14
+There were an upgrade on the classical machines, but there were still you wouldn't call them intelligent.
+52:20
+Then you had computer programmes and now we live in an era of truly intelligent machines.
+52:29
+So this is unprecedented. This is something that, you know, it's it goes beyond the digital age into perhaps the post digital age,
+52:38
+computer languages of the future will be more concerned with goals and less with procedures specified by the programmer.
+52:50
+Could I say that again? It's cut off. OK, so we had dumb machines, the classical machines.
+52:59
+We had relatively stupid machines during the industrial revolution.
+53:06
+We had smarter computers during the information age.
+53:10
+And now computer languages of the future will be more concerned with goals and less with procedures specified by the programmer.
+53:16
+OK. Oh, the fathers of A.I.
+53:27
+So do you guys know these people? You guys know them.
+53:32
+So it's a good idea to know them, who can tell me, who can tell me, who can name at least one of them?
+53:41
+Jana Licorne. Young Licorne is on the left.
+53:49
+That we have Benja in the middle and the person on the on the right is Geoffrey Hinton.
+53:55
+That's right. So the.
+54:02
+Expansion, the rapid expansion of deep learning led to truly intelligent machines that could do truly intelligent tasks,
+54:09
+as we can see, for example, they can they can do groundbreaking scientific work.
+54:18
+For example, they could distinguish cats from dogs. That's one of the use cases.
+54:25
+Okay, that was that was a slight joke, but indeed it was a major competition organised by Google to distinguish cats from dogs.
+54:38
+And it's an easy task for a human being, but it's a pretty difficult task for a machine.
+54:45
+It turns out that that task was cracked and electronic trading.
+54:51
+So my background is actually in electronic trading.
+54:57
+And I have worked as a quant for many years, and that is where I used the mathematics that will be teaching this course for electronic trading,
+55:02
+and that's where a lot of machine learning is used. Alpha Field, Alpha Fold is very, very interesting.
+55:12
+Alpha Faulds. What a protein does largely depends on its structure.
+55:22
+A major goal of computational biology has been to predict a proteins three dimensional structure from its amino acid sequence,
+55:30
+the protein folding problem. Oh, OK.
+55:38
+The question is, what is electronic trading? It's using machines, including A.I. and Amelle,
+55:42
+artificial intelligence and machine learning to place trades and hopefully, hopefully, if you are successful, make money.
+55:51
+OK, that's what electronic trading is.
+56:01
+Rather than trading by hand what is known as voice trading, manually placing orders, it's using machines to place orders and hopefully profit from it.
+56:03
+OK, going back to Alpha fold the protein folding problem.
+56:17
+A solution to this problem could help accelerate drug discovery by replacing slow,
+56:23
+expensive structural biology experiments with faster, cheaper computer simulations.
+56:27
+It would also enable researchers to reduce protein function from genome sequences.
+56:32
+The protein folding problem students a grand challenge in biology for the past 50 years.
+56:36
+And that was cracked, largely cracked by deep, wide only recently using neural nets as well.
+56:43
+What I'm going to demonstrate is a slightly simpler task, but still quite challenging that of handwritten digit recognition.
+56:50
+That of handwritten digit recognition. So we'll go back to our python, right, so we'll go back to Python and we will do the following.
+56:58
+You will build your first neural net today in this course.
+57:09
+That's what we'll do. So neural networks,
+57:15
+we're going to tackle a classical machine learning problem and this hendrickx digit classification given an image and it's a very noisy image,
+57:21
+which, as you can see, it's it's drawn by a human. So they are not they don't really look the same.
+57:29
+Some of them are quite difficult to read, even for human. So the goal is presented with the with the pixellated.
+57:34
+Well, what would the image. Right. Represented by pixels to work out which digit it is.
+57:42
+OK, so each image in the MNM is a classical data set and this is a classical dataset used in machine learning.
+57:48
+So every image is twenty eight by twenty eight pixels and contains a centred greyscale
+57:58
+digit will flatten each 28 by 28 image into a 20 watt 784 dimensional vector.
+58:04
+A vector is just a sequence of numbers. Right. So a finite sequence of numbers.
+58:12
+So what sequence. OK, I don't want to use the word sequence.
+58:18
+It's, it's, it's a list of numbers. I'll use the word sequence today in a very different sense.
+58:22
+So we'll use the word sequence today a lot. Our output will be one of ten possible classes, one for each digit.
+58:30
+So we want to show the computer a picture and we want it to output zero.
+58:38
+One, two, three, four, five, six, seven, eight, nine. Any questions of this?
+58:43
+Any questions of this? So in this context, what is the vector, what is the vector, the vector, so.
+58:54
+OK, so let me show you this. This is a scalar 35.
+59:08
+Right, it's a single No. A vector will be something like this 35.
+59:18
+Seventy seven, minus five. That is a vector.
+59:27
+So it's. This is a three dimensional vector, it's just a list of three numbers.
+59:35
+OK, yeah, so the vector that we want the neural network to to produce is something like this zero zero zero zero zero zero one zero zero zero.
+59:44
+Yes, exactly. Like. And Haskell, does orientation matter?
+59:59
+Not for my discussion here. That's zero, one, two, three, four, five, six, seven, eight, nine.
+1:00:04
+OK, so watch which number, which digit does this vector encode in this example?
+1:00:13
+Which digit does this veteran code? Six.
+1:00:20
+Exactly. However, the neural network that we are going to build, that's lots of success.
+1:00:27
+The neural network that we're going to build will output something else, it doesn't know exactly what this digit is.
+1:00:34
+So it will say something like not went well, maybe not went to for this one.
+1:00:42
+Maybe not. Point one, maybe another, not one, not one, not but one since I was that six earlier corrected but.
+1:00:49
+You said that it was six, the other victor. How is that again?
+1:01:06
+Oh. Let me go back to. Because this is zero, this is one, this is two, this is three.
+1:01:10
+This is for this five. This is six. So it's in the six digit six index six index.
+1:01:22
+So is the index. Is not the index is six.
+1:01:31
+This is called one hot encoding. One hot encoding, so in code six using a vector of zeros and ones.
+1:01:35
+We encode six using a vector of zeros and ones.
+1:01:49
+Does that make sense? It's just a technical thing, right?
+1:01:56
+I mean, it's not super important, but that's something you will know you will learn in your machine learning course.
+1:02:00
+OK. So the photos are just pixels.
+1:02:05
+That's right. So this is what we do.
+1:02:10
+We take our data, there are thousand images and we split them into 60000 images for training and 10000 images for testing
+1:02:18
+because we don't want to use the same data as we trained the neural network for testing how well it behaves.
+1:02:31
+So we split it into a training set and the test set.
+1:02:37
+So what do we really care about? We care about how the neural network performs on the stuff which it hasn't yet seen.
+1:02:42
+So how performs on the test set? So this is what the images look like, right?
+1:02:48
+I hope this works. Oh. Let me just reload the libraries and let me.
+1:02:58
+Let me do this. OK. Does everyone agree that this is five?
+1:03:18
+Yes. OK, excellent. And it's also labelled so this is labelled data, so we're using supervised machine learning.
+1:03:28
+So well, we are telling look at this image, this image here that we have on the screen and this is five.
+1:03:36
+So we're instructing the machine. We are telling you this is five. This is four.
+1:03:44
+This is seven and so on. OK, so we have now we need to preprocessed our data a little bit, so what we're going to do,
+1:03:48
+we're going to normalise the pixel values initially between zero to one hundred and fifty five.
+1:03:58
+Push them into minus a half to a half, just so we normalise them, we transform them and we flatten them, so instead of two dimensional vectors,
+1:04:06
+we flatten them into one dimensional vector, just a instead of them being twenty five by twenty eight by twenty eight.
+1:04:15
+We have a single vector with seven, seven hundred and eighty four numbers.
+1:04:25
+OK, that's what we do.
+1:04:30
+So we do this, then we build a neural network with three layers, 64 neurones in the first layer, 64 neurones in the second layer and then the output.
+1:04:32
+We want these ten remember ten values which will tell us which of the digits this is.
+1:04:44
+OK, so we build our neural network.
+1:04:52
+We compile the neural network and compilation of a neural network is an optimisation procedure, and I'll talk to you about it in some detail.
+1:04:57
+And don't forget, this is a calculus course.
+1:05:06
+I know I'm showing you neural nets, but I'll tell you in a second why what we do this course is incredibly important for neural nets.
+1:05:08
+I now fit this neural network. I'm going to take five epochs to do this.
+1:05:20
+So I've taken five bucks to do this and now I'm going to evaluate it and I get 96 percent accuracy on the test set.
+1:05:41
+So let us stress this, so I'm going to save my model reloaded just in case, and I'm going to take five images from the test set.
+1:05:52
+And I'm going to predict predict, meaning just I'm going to look at these images and work out which digit it is.
+1:06:04
+So I get seven two one zero four and the correct answers are seven two one zero four.
+1:06:13
+So we have just talked the machine to read.
+1:06:18
+With ninety six point seven percent accuracy, who thinks this is very Michael?
+1:06:25
+Just more epochs always mean more accuracy. No, because you can be overfitting, you can be overfitting.
+1:06:34
+Right, so we have just taught the machine to.
+1:06:42
+To treat, OK? So you will learn a lot more about this.
+1:06:48
+In your career here at the Department of Computing, how many test images were used, only the ones showed?
+1:06:57
+No, we have used 10000 test images, so we have used 10000 test images.
+1:07:05
+So how does the average seven to one 04 show us the answer again?
+1:07:11
+OK, I just picked five of the digits. I just picked five of the digits over here from the test set and I've asked the machine to tell me.
+1:07:17
+Sorry. To predict.
+1:07:30
+I've asked the machine to predict what the what the values of these digits on the machine came back, back with seven to one, zero and four.
+1:07:34
+Became seven to one zero four, and I checked because I know there they have already been labelled, this is the so-called labelled data.
+1:07:43
+So I know what the labels are and these images and they are indeed seven two one zero four.
+1:07:52
+So I got them all correct. It got them all right.
+1:07:58
+So could you please show us to those five past images themselves?
+1:08:03
+OK, my computer format. Yes, let us look at them.
+1:08:10
+That's the first one. That's the second one, so you've got it wrong, actually, by the looks of it.
+1:08:28
+Because this is zero. No, this should be oh, sorry, this is strange, but, you know, this is wrong.
+1:08:44
+So this should be test images. To. One.
+1:08:49
+Zeira. Or so these are the images that it's actually processed.
+1:09:14
+Wow, that's pretty cool. Those. So that's what it has learnt to distinguish, so there are quite a lot of comments on the chat.
+1:09:27
+I mean, I wasn't able to catch up with all the comments, but the reason I'm showing you this in a calculus course is because the training
+1:09:37
+procedure from neural networks called back propagation is all about calcaneus.
+1:09:48
+Back propagation is a repeated application of the chain rule going back.
+1:09:55
+The neural net, right, and we will talk about back propagation towards towards the end of this course,
+1:10:01
+you will understand how neural networks are calibrated using back propagation.
+1:10:08
+Okay, so this is all about CalCars, hugely, hugely important,
+1:10:15
+not less important than linear algebra that you will study the second in the second semester back propagation, very, very important.
+1:10:21
+A crucial application of calculous. OK, so we have built our first neural network, we have learnt we have taught the machine to read.
+1:10:37
+And just just a few quick words.
+1:10:56
+About what kind of attitude? What kind of attitude would help with calculus?
+1:11:02
+And perhaps in order to. In order to really understand.
+1:11:09
+Yes, and I did flatten and I took a two dimensional picture and turned it and basically turned it into a one dimensional vector.
+1:11:24
+I mean, the data is the same.
+1:11:32
+I just moved it around is just easier for my purposes to just take a two dimensional picture, turn it into a one dimensional vector.
+1:11:33
+So how did Newton arrive at his amazing discoveries? When asked, he replied by always thinking onto them elsewhere, he explains,
+1:11:42
+I keep the subject constantly before me and wait till the first drawings open slowly, little by little, into the full and clear light.
+1:11:52
+In a letter to Dr. Bently, he says, If I have done the public any service in this way, it is due to nothing but industry and patient thought.
+1:12:02
+And towards the close of his life, he uttered his memorable sentiment,
+1:12:14
+I know not what the world will think of my labours, but to myself it seems that I have been.
+1:12:18
+But as a child playing on the seashore now, finding some people rather more polished and now some shell rather more agreeably variegated than another,
+1:12:24
+while the immense ocean of truth extended itself unexplored before me.
+1:12:34
+OK, operating agreements. OK, we enter an agreement with you guys, operating agreements that we stick with,
+1:12:45
+and we will make sure that while on this course we live by these agreements,
+1:12:55
+first agreement, respect the departments and colleges covid-19 policies because the schools will switch to face to face situation.
+1:13:01
+We all need to be very mindful of the current situation and respect the rules that have been set in place by the code,
+1:13:11
+by the college took when especially when we come to the life, training is only front to back.
+1:13:17
+Unless you're asking a question. Always, always, always be on time.
+1:13:26
+It's a fast moving course, attend all lectures, Q&A and empty sessions, all of them do all exercises to the best of your ability.
+1:13:32
+Front to back means I'm talking. You're listening. Unless you're asking a question, then you are talking.
+1:13:46
+I'm listening. So not amongst each other when you're in the room.
+1:13:52
+That means the lecturer is talking. You guys are listening or you're answering back by asking a question or you're answering my question,
+1:13:58
+but the conversation is front to back and not back to back.
+1:14:06
+When does this become in person? I think it's in your Silcott timetable.
+1:14:13
+I can't remember exactly. So I need to I need to look at the timetable to see when it becomes in person.
+1:14:19
+In fact, it looks like it becomes a person on the 25th, 25th of October.
+1:14:25
+So it becomes in-person on the 25th of October. I think it's mixed, actually.
+1:14:32
+I think that will also be a remote. I think it will be a mixed delivery in places and remote.
+1:14:37
+OK, if need be. Do some Pitofsky. I think you can still join in line if it's in person.
+1:14:45
+Practise what you are learning here. This is an intensive course, keep destruction's to a minimum focus of the course,
+1:14:55
+if you have a problem about something or with someone in discourse, talk only to someone who can assist you.
+1:15:03
+If in doubt, ask questions. If you're lost, tell me as soon as possible.
+1:15:11
+We don't want to wait for people to be really, really, really lost, if you are slightly lost, it's OK because we can help you.
+1:15:17
+We could bring you back on track. So the moment you think you are lost or you might be lost, you just might be lost.
+1:15:27
+Let me know. OK, to the teaching team, Professor Harper said a lot is the original author of the course,
+1:15:35
+so I'm inheriting his lecture notes and using them so slightly expanded, slightly expanded version of his lecture notes.
+1:15:46
+So I'm teaching calculus, whereas Chaklala will be teaching linear algebra next semester.
+1:15:57
+Konstantin Goosies, the teaching fellow who is helping administer and organise this course.
+1:16:05
+OK, that's the teaching team and also part of the teaching team are the graduate teaching assistants whom you will meet during the MMT sessions.
+1:16:14
+And they are Daniel Corellas, Blanka Luca Greenlighting, William Hunter, Imam Hussein,
+1:16:24
+Zephania, Paul, Chris, Francesca Prigioni, Carla Sagara, Punshon Shukla and Joe Stacey.
+1:16:32
+There are two timetable slots Monday, nine a.m. to 11 a.m., it's a two hour lecture,
+1:16:45
+Tuesday, nine a.m. to 10 a.m. is a one hour Q&A, followed by new material.
+1:16:50
+Both of the above time slots will be used to introduce new material.
+1:16:56
+Yes, and I will share the notebook with you guys. I'll put some materials.
+1:17:02
+In addition, you will have a further one hour timetable slot for your group's MMT session.
+1:17:10
+Please, please, please make sure that you attend all of these sessions. New examinable material will be introduced at any time.
+1:17:17
+And it is your job to process it. Coursework and exam, there will be four course.
+1:17:25
+The first one will be set tomorrow.
+1:17:33
+And will be due at 7:00 p.m. on twenty sixth of October, the second will be set on the twenty sixth of October and will be the 9th of November.
+1:17:36
+The third one will be set on the 9th of November and will be due on the twenty third of the
+1:17:47
+fourth one will be set at twenty third of November and will be due on the 7th of December,
+1:17:52
+the course which adds up to 25 percent of the course. Thus each of the four or six contributes five percent.
+1:17:58
+The final exam is responsible for the remaining 80 percent.
+1:18:05
+We are using a discussion for Class Q&A. This is the best place to ask questions about the course, whether curricular or administrative.
+1:18:11
+So there is a question, when is the final exam? So I need to look at the timetable.
+1:18:22
+Yes. So the final exam, I will check exactly when it is and I'll let you know.
+1:18:28
+I don't think the timetable has yet been released.
+1:18:33
+So, Ian, Ian's question, sorry, this is a mistake, I think it should say Thursday, sorry, it should say Thursday this year.
+1:18:43
+Should say Thursday, it's not Tuesday. It's Thursday. Sorry about that, Sir Ian, thank you very much for highlighting that.
+1:18:57
+So, in fact, I need to correct this straightaway. OK.
+1:19:06
+So I'll I'll correct this in the slides. So.
+1:19:18
+I'm very sorry, I'm completely, completely lost, it should be Wednesday.
+1:19:28
+Thank you very much. Thank you very much for correcting me.
+1:19:34
+Wednesday, not Thursday, not Tuesday, so it looks like I'm spreading confusion around me, so we could Wednesday, Wednesday.
+1:19:40
+OK, so let me just double check, look at the timetable and it is indeed Wednesday.
+1:19:50
+We are going to be using it, so if you have questions, post them on it and either myself or one of the teaching team will respond.
+1:20:06
+This is the best place to ask questions about the course, whether curricula or administrative.
+1:20:15
+You will get faster answers here from staff and peers than through email and search.
+1:20:20
+Before you post hard questions and answers, you find useful, answer questions you feel confident answering.
+1:20:26
+Sure. Interesting course related content to its stuff appears OK.
+1:20:32
+Python is the de facto lingua franca of data science and machine learning.
+1:20:38
+Don't worry, if you don't yet know how to programme, we'll use it mostly as a calculator and as an empirical verification tool.
+1:20:42
+We recommend that you download the anakonda distribution once installed, kick off the notebook.
+1:20:50
+Google how to do this if necessary and it's not examinable. I'm not going to be examining your python knowledge.
+1:20:56
+In for this course is mathematical analysis, a straightforward approach by Benmore.
+1:21:04
+There are other books, many other books that you can use to supplement the score.
+1:21:10
+So, for example, if you are rusty on foundational concepts such as set theory and proofs,
+1:21:15
+I recommend that you look at this particular book by Martin Liebich,
+1:21:21
+which is a concise introduction to pure mathematics metrics basis and anthropology are dealt with.
+1:21:31
+What was the first book called Mathematical Analysis A Straightforward Approach by Bilboa.
+1:21:41
+So I'm not mentioning this in the slides, but if you really want to practise, I recommend Shalom's outlines advanced calculus.
+1:21:49
+They're really good and have a lot of work problems. So that's a great place to practise.
+1:21:58
+OK. No other books in other two books by Benmore, the foundations of analysis, logic, sets of numbers and the foundations of analysis.
+1:22:07
+Dialogical ideas. I just recommended Shalom's outlines advanced calculus.
+1:22:20
+In general, our clients are really quite good. And yes, so OK, guys, let's let's dive into it.
+1:22:30

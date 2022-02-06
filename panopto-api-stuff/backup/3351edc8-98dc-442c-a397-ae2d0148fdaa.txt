@@ -1,0 +1,135 @@
+ID: 3351edc8-98dc-442c-a397-ae2d0148fdaa
+Title: 7.7 Arrays
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 28/02/2021
+So so far, we've been treating a heap as an abstract data type.
+0:01
+So we think of it in terms of these binary trees.
+0:06
+But how exactly is that to be implemented at the lower level?
+0:10
+And so a very popular implementation of HEAP'S is using arrays, and this works out very nicely.
+0:14
+And this is what the inventor of Heap's thought had in mind.
+0:24
+So what we're going to do is we can store the heap level by level in an array,
+0:28
+and it's technically convenient to start the array indexing at one rather than zero, as would be usual.
+0:33
+And then we can then mix the arithmetic work out very well,
+0:41
+because then the left and right children of node, I will just be at two I and two I plus one.
+0:45
+So we can easily find their positions and the parent node, we just take the floor of EI over two.
+0:51
+So that means we don't need any pointers to find our way around the tree represented in the array.
+0:57
+And it turns out that using this representation heap's or it can be carried out entirely in place like quicksort.
+1:05
+So that means that heaps all what has that advantage over merge sold which remember uses extra memory.
+1:12
+So let's see how this heap's as array representation works.
+1:19
+Let's take our original heap structure and what we do is we simply copy that out into the array going level by level.
+1:23
+So three nine 13 zero 12, four eight, etc. finishing with the last element to in the last position in the array.
+1:31
+So very simple. And then we can turn that as we did, into a max heap.
+1:41
+And then of course it will certainly be written out as an array just like this sixteen, 12, 13, etc. like that.
+1:48
+So that's the heap says Array representation. So how can we do heap thought using this array representation?
+1:59
+So let's have a diagram to illustrate. So we've got our array.
+2:11
+Is Ray. And what we do is we, first of all, turn this.
+2:22
+We basically view this. We turned it into a heap basically.
+2:28
+So now we'll turn it into a max heap, basically. So the whole array is a max heap.
+2:32
+And then what we do is, well, so there's so this element here is going to be the Maksym element.
+2:40
+OK, once we've turned it into a max heap. OK. And then what we want to do, remember, is to write this out into the array working from the top.
+2:46
+So this max element here should be transferred over into the right position like that.
+2:55
+There it is, X. And now the rest of this, we've got a blank here.
+3:01
+And then the rest of the heap like this. But ah, well, we move that over.
+3:09
+But then basically we should swap it with the last elements are here as the last element here.
+3:15
+And the last element has to move into this position here.
+3:20
+So we'll swap the two over. So this is the the old last element has moved over.
+3:24
+And now, obviously. So this part is now a smaller heap.
+3:31
+From here to here. Or at least it isn't a heap, because the last thing you need fixing, because this last element is out of position.
+3:37
+So we just fix that. We apply fixed max heat on this.
+3:46
+And now this is restored to being a heap. So now we've got.
+3:54
+So this part here is is is sorted here. That part of the list.
+4:01
+And then this part is the heat. And then this is the top element of the heat.
+4:08
+Here is the next one that needs to swap over into that position there.
+4:13
+And so this element here is is the last element will now move up to the root position like that and we start the process all over again.
+4:19
+So the general scenario is that we've got the arrays formed to portions.
+4:34
+We've got. So we've got sort of built up this end.
+4:46
+The top part of the sorted list, and then here we've got the heat like that.
+4:55
+So and we're indexing from one, two.
+5:01
+And like that.
+5:05
+So we've got the heap size here, which is initially and but heat size is the variable that tells us when the end of the heap is basically.
+5:07
+So it's all done entirely in place just by swapping elements around in the array.
+5:18
+So here is the scheme. We start with heap size equals N.
+5:25
+Well, we first of all build the backseat. Then said heap size, equal n.
+5:29
+And then we the invariant is that we've got a max heap in the first one to heap size slice of the array.
+5:34
+And then the remaining part is the top elements of the list being correctly sorted.
+5:44
+So while each size is greater, the mom, we swap one and each size over.
+5:51
+So we put the new element into the sorted list, decrement heap size.
+5:56
+And then we fix the max heap. And I've given the the bounce off the maxi from bond to each size, basically, so that we know what we're trying to fix.
+6:02
+Okay. Well, it should be clear enough how to draw it, right?
+6:15
+The fix smacks heap, but I've written it out here just to be explicit.
+6:19
+But effectively, this is just all fixed maxi routine, but implemented using this array representation.
+6:24
+So to find left and right some trees, we just take two times the root and two times the root plus one.
+6:33
+We see whether or not we have got a leaf, whether the heap is just a leaf, and if it's not,
+6:41
+then we see whether the the left, whether the right, some peep is is there or not.
+6:48
+And and if not, then obviously the larger one will just be the left one.
+6:54
+But if the right one is there, then I have actually favoured the right sub heap.
+6:59
+If the two keys of some trees are equal just because the right side peat might be slightly lower depths.
+7:05
+So we might get fewer swaps that way. Other comparisons and we find the largest upkeep and then we compare the roots and
+7:12
+with the larger upkeep and swap them over and then apply fixed maxi recursive.
+7:22
+So nothing new, basically.
+7:28

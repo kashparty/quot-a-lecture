@@ -1,0 +1,721 @@
+ID: 6343fb46-1da1-4529-9bbd-add800e7ca0c
+Title: L10 - Finite State representation of digital circuits
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Bjoern Schuller
+Date: 06/11/2021
+So welcome to introduction to computer systems, and today we will be having a lecture 10 finite state machine representation of sequential circuits.
+0:02
+Well, the story so far is that all circuits can be represented by a billion equations and vice versa.
+0:13
+It means that if you take a moment, if you have a brilliant equation, you can turn it into a circuit.
+0:22
+And if you have a circuit, you can turn it into the equation.
+0:28
+That is, sequential circuits in which the outputs are fed back into the inputs over time
+0:33
+have variables that appear on both the right and left hand side of the variables.
+0:39
+So you will see Q equals and records are simply not for Prime.
+0:46
+And on the other hand, side, P equals in brackets as in Q, not war crime.
+0:52
+Now what makes it special is that for one case, if our end as equal one, there is no unique solution for this problem.
+1:00
+Now, for sequential targets and interpretation of the baleen equations cannot be made without some model of time,
+1:09
+so we need to introduce time for this, and a simple time delay model allows us to analyse the behaviour of the RC flip flop with sufficient accuracy.
+1:16
+So you remember the Earth flip flop. Now we know this problem of definition, and we will need some time delay model to be able to handle that.
+1:27
+Now, however, we would prefer not to worry about time if possible.
+1:39
+So this kind of products and what we need time to describe time delays, but we would rather not have to worry about time.
+1:42
+Now we can avoid worrying about time by using synchronous digital circuits in such a synchronous circuit.
+1:52
+A bank of D-type flip flops acts as a barrier between the inputs and outputs.
+2:00
+So the detailed flip flop ends we will be seeing will be serving to give us a state and in such assumptions circuit,
+2:07
+we will be having input and depend on the state and the input, for example only on the state, which, however, will then also go to trigger the output.
+2:17
+The flip-flops are all triggered at the same time using a common clock, so we have a couple of flip flops put together.
+2:30
+What matters is that they are all triggered at the same time, and common clock means that they will all be wired to the same clock.
+2:38
+Now, using synchronous design techniques, the equation pair on R equals A and B or P.
+2:49
+And the second equation peoples and records A or B prime or not is interpreted as another.
+2:55
+You can see we're introducing these time variables. Here are T equals at the moment t minus one and B at the moment t minus one or p t minus one.
+3:04
+And similarly, if we go from here to down here, we will see that p t equals eight minus one or b t minus one point.
+3:18
+This time interval is measured by the system clock, which triggers the flip flops or the flip flops are all wired to the same clock signal
+3:29
+and the interval between T and ten minutes once or a discrete time interval is,
+3:39
+of course, the clock gives an interval sense of the fundamental duration of the clock.
+3:46
+Now, give me an additional conditions, we can always solve the equations to determine its good behaviour.
+3:57
+So again, if you know the initial conditions or what was the setting at the beginning and we can
+4:05
+solve the equations to determine the behaviour and know in the moment in time the why is.
+4:09
+Of the variables.
+4:16
+So using synchronous design, we can stick to building algebra, and the only thing we need to ensure is that the clock doesn't run too fast,
+4:18
+such as the actual physical hardware does not get into race hazards.
+4:27
+So maybe some of you have overclocked their machines at home, let's say.
+4:34
+And then you know that at some point the clock is too fast and you get into these race hazards.
+4:39
+So that's what we want to avoid here.
+4:45
+But assuming that it is not too fast, it can still trouble the algebra in synchronous design, science of synchronous circuits.
+4:48
+And we will be seeing that those in quantum circuits will be accompanying us for
+4:56
+the rest of the course until we actually really exciting part because with those,
+5:01
+we can meet up to the microprocessor, which we were recording at the end.
+5:06
+Now the outputs of each block of combinatorial logic must reach the final correct values before the clock paths and to change the circuit state.
+5:10
+That makes sense, right? The outputs of the blocks of the combinatorial logic must reach the final correct values.
+5:19
+Everything needs to be, let's say, settled before the clock, plus pauses arise and changes the circuit stage so everything is in proper order.
+5:27
+And then. We can give the next clock holding rising, actually whatever, we will be seeing different variants throughout the course.
+5:37
+So that was the story so far.
+5:50
+And now we go into finite state machines and any synchronous circuit can be modelled by a finite state machine and vice versa.
+5:53
+So remember, this is similar to what we said before, and the hardware can be described really in logic and in logic can be put into hardware.
+6:03
+Now we say any synchronous circuit can be modelled by a finite state machine and then finite state machine can be models by biasing from of small,
+6:12
+described by destroying a circuit. Finite state machine or as m for short and its most general form can be represented by these two equations.
+6:22
+We have the state at the moment T plus one sort of the next state equals a function of the current state as T and the current input T.
+6:33
+On the other side, the second equation addresses the output,
+6:46
+so the output and the next output equals a function of the current state and the current input.
+6:51
+Or still is state at time,
+7:00
+T and I t the input at time T and O T is the output at time T and now F and G number of functions implemented in combinatorial logic.
+7:02
+So we're talking about a synchronous circuit, but our functions are implemented in combinatorial logic.
+7:16
+And we will be having two machines as we call this.
+7:25
+In other words, description models for our circuits and the most common form of the finance machine FSM is called the mealie machine.
+7:30
+And what you can see here on the machine is that we have here the input, which is the clustering or collection of all the inputs.
+7:44
+Feeding into this first function, and if you remember the next stage and the next stage is the one after these flip flops, several flip flops here.
+7:55
+It's a function of the current stage, so we also need to feed back from near the stage.
+8:08
+And of the input, on the other hand side, the milling machine has some function of function for the output to variables, namely the state.
+8:15
+Current state and the current input.
+8:28
+So in other words, the output is a function of the current input in state and in the next state as a function of the current state here and the input.
+8:31
+Now again, boxes FMC or combinatorial circuits.
+8:41
+And as I hinted to already DEKA year, this box is a set of flip flops which saw the current state of the circuit as a binary number.
+8:45
+Now, how many states could you have as a single did you flip flop,
+8:58
+obviously two states and hence if you need more states, this will be a bunch of flip flops.
+9:01
+And we'll be seeing them. You have several design choices, how many flip flops to choose.
+9:07
+But just to give you a rough idea already.
+9:13
+Now, box of as set determines the sequence that the machine goes through because it is a function of the next day,
+9:16
+depending on the current state and the input, but hence it determines the sequence of the machine go through.
+9:25
+And this is called the state sequencing or input logic input logic,
+9:32
+because it's sort of on the input side and depending on the input, it will be deciding how to go through each state's box.
+9:37
+G. Back here determines its outputs, and hence it's called the output logic.
+9:47
+So this year will be an. Depending on the state progress and deciding when the actual output and then immediately machine,
+9:54
+it will not only depend on the state, but also on the input. No, the second option we'll be using is the war machine and war machine is a bit simpler.
+10:03
+And that is because it does not have the connexion between the inputs here and the output.
+10:15
+So the input variables here are not directly into the output logic here.
+10:21
+Rather than that, they only indirectly why are deciding in the next stage of an instance um and the behaviour of the output?
+10:28
+Now, the Moon machine is often preferred, and we will be using it in this course simply as it provides safer,
+10:39
+more robust design spikes present in the input variables are blocked from reaching the output here.
+10:47
+And we do not have a race hazard, potentially between the state change and the input changes.
+10:54
+So, for example, this could be a switch from the outside and somebody presses it during stage.
+11:03
+Change doesn't matter here because the output logic will not be affected directly by the input.
+11:08
+Why do we actually use the finite state machines, it gives us a way specifying exactly what a circuit should do.
+11:18
+We will be going to do well in this lecture in the next one to two examples and set menu for the ones who will be following this as a key tool for us.
+11:26
+Having designed the phone, it's a machine. We can then apply a design methodology to create the actual circuit.
+11:37
+Now this means that we can specify the behaviour of the circuit we desire or envision and visit with performance a machine we then have.
+11:44
+A design methodology also tend to create an actual piece of hardware that serves our purpose or fulfils our specification.
+11:52
+Now, the FSM or phone inside machines play a crucial role in computer science as a
+12:02
+modelling tool and as such would seem to be going towards doing a microprocessor.
+12:07
+And we will see that indeed there a key tool.
+12:13
+Now we'll be going through a couple of steps in designing our sequential circuit.
+12:18
+First of all, we need to determine the number of states required.
+12:28
+So if you have a sequence of events and we need to know how many subsequent events will follow before we go back,
+12:32
+potentially to the first one before we go round in circles.
+12:40
+Second, we will need to determine the state transitions and the most easy case we will go round in circles.
+12:44
+But in more complex cases that will also be looking into. Of course, we will sometimes Blanchard and skip whatever.
+12:51
+Third, we will need to choose the way in which the states will be represented so intuitively and in decimal numbers,
+12:59
+you could say, of course, we will count one two three four five.
+13:08
+But we will be seeing that for minimising and hence reducing the hardware needed to the minimum.
+13:11
+It might be more useful to not do that, but rather see for some other heuristics, we'll be going through.
+13:17
+Foals express the state sequencing logic as Boolean equations and minimise using CarMax or Karnow maps, which you're already familiar with.
+13:25
+So we gradually go, as you see from from the specification of what we want to have in these steps towards actually.
+13:34
+Having something sucked. So fifth and final, we will express the output logic, so remember four states and the output logic,
+13:46
+so for us to go through defining a state machine and then we go to the output side and do our output logic,
+13:54
+the D and the dependence of the next state on it also remember as equations and minimise again,
+14:00
+because after having building equations minimised, we know how to put this into hardware.
+14:10
+So now we will have a manual counter with a seven segment display.
+14:18
+Of course, you could use any kind of a number of numbers here we go through.
+14:25
+Of course, you could also come up to nine. Why could counting up to five or six only be useful?
+14:33
+If you imagine, have wrist worn watch a digital felt like very en vogue in the 80s, for example, when they first popped up.
+14:42
+And then you have the digit, for example, after a hour and your minutes can only go up to 60 Minutes,
+14:51
+so it will jump somewhat from five to two zero or depending on whatever you specify, it might go further.
+15:01
+So the whole circuit here will be our sequential calendar, but what you see is that on the output side,
+15:09
+it will have this digital representation of a decimal number here and that will be.
+15:14
+Output to control which of these bars here or let's whatever it is to look at which state showing the right digit at that very moment.
+15:23
+And here in the sequential culture, of course, we will obviously also have to have some states transition to go through counting up.
+15:35
+Manual counter can be enabled or disabled, so we have our input,
+15:45
+and this is our only input here really for the state machine, should we continue counting or should you hold?
+15:50
+So if you remember, first up, determine the number of states to go through these steps,
+16:03
+that supposedly specifications of a counter that comes in order from zero to five and apologies, it might be confusing beforehand and zero to six.
+16:11
+This is a little bit shuffled forth and back, but it doesn't really matter.
+16:19
+It shows that we have seen some number of states we go through coming up.
+16:24
+And of course, you could change it for any other number to coming up to.
+16:28
+So let's say we're counting up from zero to five like in your left hand side digit of the minutes on a clock.
+16:31
+And clearly, we will need six states to go from zero to five, which we will for the sake of simplicity, some jealous and zero to five.
+16:40
+And that, for again, the sake of simplicity means that state zero should be zero as displayed on our digital watch.
+16:49
+And if you remember, this would be the ultra box state.
+16:57
+One is one is displayed that would be the two right hand side and it is lit and so on and so forth to two to despite.
+17:01
+And you look. Now next, we specify the states fully.
+17:09
+We cannot specify more fully what outputs we want from the circuit and given that one bit output of logic,
+17:15
+one will illuminate one segment of the segments here.
+17:21
+So one of the segments here than the output is a vector or string, if you will, for example,
+17:26
+one one one zero one one one because we have seven segments here one to three horizontal bars and one two three four vertical bars.
+17:34
+Three plus four gives us these seven outputs here.
+17:43
+And if we want them from zero to six.
+17:48
+And the output side, then this will give you, um, several different um outputs here.
+17:58
+This string here will now display the digit zero, why? Because it says that the segments one to three, whatever, so um.
+18:09
+Zero. One and two years of pilot service here.
+18:21
+Three, however, this zero years should not be lit, so we're living out this one and the other one's four, five and six should also be lit.
+18:26
+Hence we have the ultra box lit for this string here or back to you transpose Vector and this one note.
+18:38
+Hence we would display a zero sum inside zero.
+18:46
+This would be our output and state one. We want to display a one, so we would just play four light zero year.
+18:50
+And lives with six here. So this year, then we're just playing one.
+19:00
+And all the other ones are not lit and stark hands. We see one.
+19:05
+OK, so we can continue to do that and specify and stay two.
+19:09
+We want to display to say three, one, two three and so on and so forth.
+19:13
+So we're counting up from zero to five.
+19:19
+And have our six states to go through that we have our output vectors specified for the different numbers we want to display from zero to five.
+19:23
+And remember, for an output vector, we have seven entries here for these seven segments and the number.
+19:35
+Now, why it conventional and war machine we ride this state, no, on the upper side here and the output on the lower side here.
+19:47
+So you're the Upper East Side is side zero and output a should be given instead of zero.
+19:56
+Next, one unique status statement one and ought to be should be given so this output, which, if you remember, was the one displayed on the watch.
+20:03
+Same for the remaining states here and that.
+20:14
+Next needs to be connected. And of course, we can't help, hence we connect that we go from state zero to one from,
+20:20
+say, one to three, two from stage two to three and so on and so forth.
+20:28
+So we're counting up and start cycles now.
+20:32
+This year is the input variable that was our switch to decide if you should keep counting or stop.
+20:37
+And this means that the input variable is zero. It means hold or stop counting, and this means we're all transitioning.
+20:44
+Remember from clock fundamental period to clock fundamental period.
+20:53
+We're just as we go through the state, remain in the same state.
+20:57
+However, if input is one so your button is pressed, say you would transition and count up from one state to the next.
+21:03
+Say to you in the sequence of adjacent states here.
+21:10
+By using this specification, we can now add the transitions where the transitions and their associates inputs.
+21:17
+So these were the inputs. One a.m.
+21:23
+You know, by that, we have a specification completely formalised and it's time to gradually move to coming up with the hardware to do that.
+21:28
+So designing the finite state machine diagram is a process of refining an informal specification into a formal specification of what will be built.
+21:39
+So we go from a with whatever sketched and kind of something to formal specification, which is more sketched completely and and more formalised.
+21:48
+From now on, there are some design choices to be made like, for example, how do we use the state, um,
+22:00
+numbers in binary representation, how many states we use and what not, but that actually we did here.
+22:08
+The task could be done automatically. From this point onwards.
+22:17
+So we're now learning how this is being done. But in fact, you can also do this automatically.
+22:24
+No, just a quick moment of refreshing our brains.
+22:34
+The problem break. If you wanted our calendar to count from zero to nine rather than from zero to whatever or five or six,
+22:40
+how many states would it need so that we can add up from zero to five in our concrete examples?
+22:49
+We had six states. How many would it move from zero to nine?
+22:56
+What would the finite state machine look like and how many flip flops would we need to represent the states?
+23:00
+No, we haven't even talked about how many to use for the six states.
+23:08
+But maybe you can already ask yourself. How many states will we need?
+23:13
+OK. Obviously, if we want to count up on up to 10 from zero to nine and 10 steps counting up, we would need 10 states.
+23:20
+So we're just adding a few more here six seven eight nine.
+23:32
+Obviously, we need to add more output variables here.
+23:38
+Vector is here. Hi, Jane. And we could use 10 flip flops, but we don't, and we want to be efficient on hardware costs,
+23:42
+money space on your board, it costs energy and you don't want that.
+23:51
+So hence we need for flip-flops. Why Ford? Because it said, was one flip-flop.
+23:57
+We came to two states and it's a binary thing. So it was two states.
+24:03
+Obviously, we could do up to four was really good to eight.
+24:08
+Eight is not enough was four. We can cover 16 states, so we need useful flip flops and we would then have six unused ones.
+24:12
+So. Moving to the state representation,
+24:22
+we have to decide how we are to represent each state as a bully and no one flip flop a state would be an expensive disability asset.
+24:28
+Three flip flops can be tough now, coming back to our coming up from zero to five.
+24:38
+There are three flip flops. Would suffice because we would then have eight states available at Max.
+24:44
+They can be tough as a three, but thought of sorry, has three with memory and there of could represent eight, states said.
+24:55
+So we need, however, to have a minimum of three because with two flip flops, you could only represent four states and none for six weeks.
+25:04
+So two states will be amused and we can't go with three flip flops.
+25:11
+Now the well is Q to Q1 and Q zero define the state.
+25:17
+So these are the two flip flops, if you remember to put sort of the flip flop you is the output side of the flip flop.
+25:24
+We have three flip flops to do our minimum six and told you we can represent eight
+25:31
+states and the values of each flip flops output side will then define the state.
+25:36
+So one design choice that we could go for is to represent the states as binary numbers.
+25:49
+I said we could choose one to proceed, but by the numbers, it's much more efficient, of course.
+25:55
+So we could choose 000 year for the flip-flops outputs of zero one and choose outputs should be encoded as they or that sounds intuitive.
+26:01
+We could next say zero zero one should be used for, say, five loops.
+26:11
+That doesn't sound so intuitive,
+26:16
+but we will see such assignment can make sense and said to be able to more minimise your comments later on and we will be seeing that.
+26:18
+And then I remember we have to amuse states so we could assign one to a zero one zero and one two one one.
+26:30
+You see, this is a possible assignment. We're using each state once a year, we're having our two unused ones.
+26:40
+But maybe. It's much easier and more straightforward and more intuitive if you do the obvious choice that makes life easier and intuitive,
+26:47
+and but potentially it's not the best and stand. Well, we have them just in college and.
+26:58
+Decimal state to billion, a number for that decimal.
+27:07
+No. And at the same time, it can already write this as midterms for the fall, as the budget max terms what we do as midterms now.
+27:15
+And zero zero zero means this is the midterm Q zero prime and Q1 and Q2 prime.
+27:26
+Or if you say Q zero, not in Q1 and Q2, not because they're all low or zero and not one,
+27:34
+meaning that stage one is then Q zero and Q1, not in Q2, not zero zero one and so on and so forth.
+27:44
+And we have the final status, the unused ones.
+27:51
+No, this is a good idea when answering some questions to go with the simple approach here to use the equity members for the decimal equivalent.
+27:56
+Why? Because if you mix up and shove land and do your own assignment,
+28:07
+we will have to go through any kind of appearing conservation and making our life hard, making it harder to to compare things.
+28:13
+So, um. And you risk to be confused at some point.
+28:21
+So probably that's even more motivating factor and.
+28:26
+This way, you're also keeping your life in particular in.
+28:32
+Dates and midterms, so each state is now defined by a brilliant equation, if you remember, we have not the same year as a midterm year.
+28:37
+And how do we turn that into a Baldini equation and by saying we have a variable?
+28:50
+I mean, it's a state. No, I. Be equal to one.
+28:56
+So as high as one, when the circuit is in its state, I.
+29:02
+And zero otherwise. So if we replace a year by zero, we can say as zero equals Q2, not in Q1 and Q2, you're not again going back.
+29:09
+Remember, this was exactly the condition. Eight zero zero zero zero or the insurance that.
+29:20
+Equally, we get stage one equals Kitimat and one of them, zero not.
+29:30
+This is what we wrote here as an intern for state run and so on and so forth.
+29:35
+So again, the states are now defined by Boolean equations, and we get these Boolean equations by the Minton's from the objects you flip flops,
+29:41
+outputs and our assignment in the shape of a table and the state variable is one if you're in that state or the circuit is in that state.
+29:48
+It is, however, zero, if not. Now, a couple of more questions, the output logic equations since the output depends only on the state.
+29:58
+Remember, media was more machine. And here we have the output logic only dependent on the state.
+30:08
+We can directly write down its Boolean equations.
+30:16
+Now, for example, we're looking at the segment one, the top segment here, so segment one is the top segment here.
+30:20
+It is illuminated when displaying the digits zero, two, three and five.
+30:27
+This is because we do not have six, seven, eight nine.
+30:35
+In our case, we're only counting up from zero to five. If you had six seven eight nine, it would also be good.
+30:40
+And those, of course.
+30:46
+So, for example, if not late in the display one, we're going into these two years, the two vertical ones and the white inside and so on and so forth.
+30:49
+Hence, we can ride oh, one.
+31:00
+So, um. This segment equals state zero or it stayed two or three or stayed five.
+31:06
+Because one year is the subsegment and 01 and you get the idea.
+31:20
+It should be true in those states.
+31:27
+And you do the same thing for any of the other all variables, for the other output variables you see and which states should that output be lit?
+31:30
+And you use it or because it is that those or those are the southern states.
+31:40
+Now, if you replace our state variables, if you remember this is what we did last week,
+31:49
+at least William equations and from state variables and dependency of the teacher
+31:55
+flip flops afterwards that we are substituting or replacing back from the states,
+32:00
+those we now have a direct dependency of the output to the D to flip flops outputs.
+32:05
+The states sequences in logic equations can be directly from the final definition model and said we use union variables,
+32:16
+sorry variables, and I equals one, meaning the next state is assigned.
+32:23
+We can write an equation for each state change as follows.
+32:31
+Next stage is say zero equals where Interstate five and the input is true, or we are in stage zero and the input is not true.
+32:36
+So I prime why? Because we're counting up and after five zero, in our case, becoming zero to five.
+32:49
+So the interview, no one says, keep counting. If you push it, it's one and it keeps coming if you do not push it.
+32:56
+We stop and do not turn up any longer.
+33:04
+Hence, if we are Interstate five and the input is true, we should keep counting and the next state that is zero.
+33:07
+In the other case, where the next three to zero, that is when we are already being in zero, but we shouldn't count.
+33:15
+So and it's not true. Same thing here.
+33:21
+Next stage should be one if the current state is zero and we should come up or the currency is one and we should not count up, etc. So.
+33:26
+Now, the equations for the inputs, for any given next day, you can find the lean equations for the inputs by looking at the state allocation table.
+33:39
+So the state allocation table, if you remember, is the state and it's a location for the queues and the TV queue flip up side.
+33:49
+For example, Kuta equals one when the stage is four or five.
+34:00
+So let's look it up. Cue two year. Is one if and only if the state has four or status five.
+34:07
+So. This means to.
+34:19
+Is and four or five did to flip flop goes from the input to the output from the letter Q, and this means that two is true.
+34:25
+The next stage should be four or five. And we can look the same way for the one.
+34:39
+One correspondent who won, and that should be the case of a mixed status two for the next two to three,
+34:50
+finally, the zero looking at Q zero and zero should be true.
+35:00
+Um, if any of the ones were Q zero zero, the next stage, so.
+35:05
+And one or two and three and four?
+35:13
+Again, we can substitute these and variables like you did before with state variables.
+35:21
+Yes, I know. And the next states of.
+35:28
+We first move from end to end, and I next day, two of you remember,
+35:35
+was that we are inside one and we should count up three points to or we are in stay two already and we should not count up so as not to.
+35:41
+That is here is substituting and to. Or in three means that we're not or substituting in three year,
+35:52
+and that was we're already in three and did not come up for and say two and we should come up.
+36:01
+Now with that next step could be to replace these as variables.
+36:08
+And then from these far, we again go down to the cues like we did before.
+36:12
+Hmm. So this is a Boolean equation for D one.
+36:18
+In a canonical form, so this is the canonical form equation for the first for the number one index flip-flop.
+36:22
+The other two ones, two and zero, can be found the same way, meaning that we then have the equation in economic reform for each of the flip flops.
+36:34
+Now, remember, we had two new states and they were designated don't care states,
+36:46
+if you implement the equations directly using the canonical form, they will have no effect because we draughted it on.
+36:53
+It's actually according to the Canada form.
+37:01
+However, to get the minimum representation, we will need to include them as dome terrorism or came about because if we use these economic reforms,
+37:06
+we will have a lot of vibrant, open hardware getting used.
+37:15
+So we use came up again to minimise this.
+37:19
+And once we do that, we will be using don't cares if you remember, and this can cause problems.
+37:28
+And we will be going through examples since the dome carers will have defined values in the final circuit.
+37:35
+If you remember, if you have a dog in care during settling in the camp, you can choose it as one or a zero,
+37:39
+which means Matron will have to check if the circuit changed in a way due to choosing one or zero.
+37:46
+That might be whatever. Get it stuck or not reach a state or like.
+37:54
+So a possible outcome of exploiting don't care, carers could look like this, we have our nice counter here going from state on zero to five.
+38:00
+Everything looks good here,
+38:08
+but we didn't care and say six and seven and use it in a way which ones and zeros that made the final circuit look like this.
+38:09
+Well, this means if you started up in stage six, it will never reach our counter.
+38:18
+If you set it up and say it's seven of them,
+38:24
+never reach our counter and you would have to assure on start up that you have reset or something to make sure you're starting on this stage here,
+38:26
+but that requires extra hardware and efforts. So if you state form an isolated meshing, we can try to pursue approaches,
+38:36
+see if a simple modification will fix it without increasing the size too much,
+38:49
+meaning not reaching close to the canonical form, which would be the worst in terms of size and not having to care about that in the design.
+38:54
+So we have sort of by introducing a modification and then see that we do not load it up.
+39:04
+Or the second alternative explicitly include the unused states in our finite state machine and redo the design.
+39:14
+Well, obviously the hacking is the quick and easy version of rather than explicitly go with the definition not only defined this part here,
+39:21
+but also find me a useful way where you go from six and seven.
+39:31
+So this could be one of the explicit locations where we make our mind up, where would we want to go from, say, six and seven?
+39:39
+And the obvious one is to move if you should start up and sit seven or six eight zero next and then calls regularly,
+39:47
+and it will never go back to the unused states.
+39:55
+So this is the most straightforward, obvious way to do this if you want to explicitly do this from the beginning.
+39:58
+But that is more effort during the design and moving towards equations and not as efficient.
+40:04
+Hence, we would usually probably try hacking.
+40:12
+Now we choose the best state assignment, the choice of state allocation can have a big impact on the size of the final circuit.
+40:17
+If the number of the states is small, we can try all possible locations, maybe on paper and paper and pen.
+40:25
+But with the computer and the software that we might have programmed to do so to go through all these combinations,
+40:33
+the number of ways you could allocate the aid possibilities is to the six states is fifty six.
+40:39
+So a number of ways we allocate aid possibilities of states to six states as fifty six.
+40:47
+Fortunately, we can eliminate many of these to avoid tediously repeating the design problems so
+40:57
+you can spread some efforts by looking at ISO morphs or ISO morphic assignments.
+41:03
+Mm-Hmm. Since flip flops usually always have complementary outputs, Q and Q 04 remember you have the input and prime,
+41:10
+and the output from the same circuit will result from complementing each column of our assignment by just not worrying.
+41:18
+Q But Q Prime, you would have the same kind of effect.
+41:27
+So the eyes are most here are formed by inverting columns and combinations of inverting and not inverting columns.
+41:32
+We get elegantly to wipe out some of the um of the fifty six potential alignments or assignments we would have because they are the same,
+41:41
+essentially just a different environment to cure to not.
+41:57
+And we can flip these columns around, so the first item off here is zero zero zero one one is turned into one one one one zero zero,
+42:04
+meaning that we would just have to wire Q not in rather than Q, and we leave the other two ones here unchanged.
+42:13
+That is an item of similarly we can t. So to invert column two, it's another item of doing the same thing or giving the same complexity of circuit.
+42:20
+And we could invert columns one and two.
+42:32
+And this last one, of course, we could two or three, three and one and so on and so forth.
+42:36
+So we can eliminate many of these combinations. However, for larger problems, as the number of states increases,
+42:40
+the use of exhaustive search becomes less attractive, and let's imagine why if you have 12 states,
+42:47
+we would need four flip flops with four flip flops, you can go to two to the force, which is 16, of course, which could represent 16 states.
+42:53
+We need four because due to the surge would only be eight. That's sufficient to include our.
+43:01
+So was four flip flops. The number of possible allocations would, however, be already one thousand eight hundred twenty.
+43:06
+Or is if you want to have 19 states, plus we would need five flip-flops to to two fifths being so two.
+43:14
+So a lot of states, unfortunately, that's due to the first six and then suffice for our 19 ones.
+43:24
+And the number of possible assignments would be greater than eight million.
+43:29
+And the larger problem wouldn't be feasible any longer for automatic methods unless we have a massive breakthrough in computation,
+43:34
+speed and efficiency. Hence, we have some risk rules for state allocation at hand,
+43:43
+and we will have two of them that should give good khanum minimisation for the sequence logic first, all those states that have the same next stage.
+43:51
+So all these states here two three four have the same next state, namely one.
+44:01
+For the same input. So they not only have the same next day, but they have it for the same input on one one year.
+44:08
+Should be given adjacent state assignments. So Edgerton means that we have only one flipping year,
+44:16
+so zero zero zero will turn into zero one zero as we flip on digital here and here, we flip another one to go to this next year.
+44:26
+So states that share the same next stage for the same input should have adjacent state assignments.
+44:35
+That's our touristik rules for state of the case number one.
+44:43
+Then we go to number two and for number two, we say the next states of a state produce by applying edges and import conditions.
+44:48
+Should be given adjacent state assignments. So here we have Edgerton input conditions here.
+44:58
+Mm-Hmm. Going from one to the next one. And we have adjacent state assignments again slipping just one digit year at a time as we go around here.
+45:09
+Of course, he could have slipped another one year, if you remember, so there's other ways to do this.
+45:20
+But the rule is that we have the adjacent. That concludes this lecture.
+45:25
+I hope you enjoyed it. And then the next one, we will be going to through doing a traffic light at an intersection with such an approach.
+45:33
+And I think that's going to be very thrilling and exciting already.
+45:41
+Who's counting up like on a ticket was already lost.
+45:45
+Thank you very much.
+45:50

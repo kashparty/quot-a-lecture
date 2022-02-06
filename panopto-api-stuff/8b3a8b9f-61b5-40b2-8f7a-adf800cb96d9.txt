@@ -11,7 +11,7 @@ which you want to provide a database for, and a common way to do this is to use 
 0:20
 And in fact, there are many, many dozens, in fact, hundreds of variants of air modelling that have been proposed.
 0:28
-Or you will class diagrams. You don't need to be able to map those €l.
+Or you will class diagrams. You don't need to be able to map those l.
 0:34
 M. diagrams into relational schemas and to then ensure that the relational schemas are a good design is
 0:40

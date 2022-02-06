@@ -95,7 +95,7 @@ So the first step is always an investment decision. But then this decision must 
 4:40
 And execution refers to feeling it by also there in the market, subject to conditions placed on the order by the client.
 4:46
-They will ask, for example, for a certain size or limit price. And with Álex, we handle exaction in a fully automated fashion.
+They will ask, for example, for a certain size or limit price. And with lex, we handle exaction in a fully automated fashion.
 4:57
 And it's quite a complex.
 5:06
@@ -127,7 +127,7 @@ Furthermore, we've been in this industry for a long time and we've gotten many i
 6:41
 and we like to share this expertise with our clients to give objective feedback and obtain differentiated solutions.
 6:48
-Álex can be used for many applications. I mean,
+lex can be used for many applications. I mean,
 6:57
 we've designed exaction algorithms that are pleading large orders into smaller ones to minimise the average exaction price of a given trading window.
 7:00
@@ -205,7 +205,7 @@ And the faster you can interact with the actions,
 11:23
 the quicker you can place a man or withdraw an order and thus implying that you increase the chance of getting executed at a better price.
 11:24
-And look, profits. We also need a distributed setup to ensure a global view across the multiple álex instances co-located with the exchanges.
+And look, profits. We also need a distributed setup to ensure a global view across the multiple lex instances co-located with the exchanges.
 11:34
 People are trading all over the world and risk is taken at the same time on multiple trading desks in the US, in Europe and in Asia.
 11:45
@@ -241,7 +241,7 @@ For example, you may have more conservative margins when you're working with a n
 13:21
 Or you can be less strict, restrictive with someone who has like like very solid financial statements.
 13:25
-And the last point is quite important as well, because we want to make it easy for banks to connect to Álex.
+And the last point is quite important as well, because we want to make it easy for banks to connect to lex.
 13:32
 Because you have, like way more bureaucracy in banks. So they are telling me that very often slow to make decisions.
 13:39
@@ -645,7 +645,7 @@ Uh, mostly we have. A pipeline that is like based on logs.
 36:48
 So we love a lot of things in.
 36:57
-In Álex and even in like all of our systems, we collect all these logs and we we ship we ship them to a Arctic search cluster.
+In lex and even in like all of our systems, we collect all these logs and we we ship we ship them to a Arctic search cluster.
 37:01
 And on top of this logs, when we're on top of gathering this house,
 37:11

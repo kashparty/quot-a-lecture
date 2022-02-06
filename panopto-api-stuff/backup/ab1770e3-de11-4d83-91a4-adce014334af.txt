@@ -1,0 +1,725 @@
+ID: ab1770e3-de11-4d83-91a4-adce014334af
+Title: jmbell - An Introduction to Unconscious Bias (Year 1)
+Category: COMP 1st Year General
+Lecturer: Jackie Bell
+Date: 27/10/2021
+Hi, everyone, I hope that you're settling into your degree. Well, so far, my name's Jackie.
+0:00
+I'm one of the senior teaching fellows within the Department of Computing. And today I want to talk to you a little bit about unconscious bias.
+0:05
+So this lecture will be just a short introduction to unconscious bias.
+0:12
+So some of the learning objectives that were covered today include introducing
+0:17
+the different types of bias and then how to spot your own understanding,
+0:21
+the importance of being aware of your unconscious biases and to learn how to apply
+0:25
+good practise around unconscious bias in both social and professional environments.
+0:29
+For the session, you'll need something to write with so there'll be some sort of interactive activity.
+0:34
+So pause the video where you can have a go at those and then and then replay the video.
+0:40
+Normally I would be doing this in a live situation because we've got such a large cohort this year I'm doing online.
+0:45
+So if you have any questions at all, please do not hesitate to contact me on the email address and he should be able to find me.
+0:51
+And you just say to my name and in the sort of college directory.
+1:00
+So these are limited objectives. So I guess I want to start with what is unconscious bias.
+1:06
+So take a minute to think about what is what do you think unconscious bias is now?
+1:11
+Throughout our lives, every conversation that we had,
+1:18
+every film that we watch that we ask to be friends, these are all influenced how we make decisions.
+1:21
+So based on our own individual experiences,
+1:28
+we'll have set informed impressions and stereotypes about people from certain cultures, educational backgrounds, gender or age.
+1:31
+We may have found ourselves in situations that only reinforce these stereotypes that we formed, whether or not we wanted to.
+1:39
+And a lot of this stereotyping happens subconsciously without us even knowing.
+1:46
+And this is what is known as unconscious bias.
+1:51
+So the Royal Society definition is this unconscious bias is when we make judgements or decisions on the basis of our prior experiences,
+1:56
+our own personal deep-rooted thought patterns, assumptions or interpretations.
+2:04
+And we are not aware that we are doing that.
+2:08
+So everyone at one point or another will have experienced some sort of unconscious bias, whether as a victim or the perpetrator.
+2:12
+And that's what we're going to talk about today.
+2:19
+So can you think of a time when you've made a snap judgement about someone that you later found out to be correct?
+2:24
+Alternatively, can you think of a time when you've made a snap judgement about someone that you've later found to be incorrect?
+2:34
+How did either these make you feel? So as I said before,
+2:43
+these snap judgements are based on experiences of the world so far and they are
+2:48
+the good news is that they can change over time depending on our experiences.
+2:52
+So I've got a short video for you to watch now, which explains unconscious bias in a slightly different way.
+2:58
+The unconscious mind is amazing, it can process vastly more information than our conscious mind by using shortcuts based on our background,
+3:07
+cultural environment and personal experiences to make almost instantaneous decisions about everything around us.
+3:17
+The snag is it's wrong quite a lot of the time, especially on matters that need rational thinking.
+3:26
+Here's a classic example of that in a book will cost one pound ten pence if the bat costs one pound more than the bowl, how much does the ball cost?
+3:34
+Most people, including over 50 percent of students at some of the world's leading universities, get the answer wrong and say ten pence.
+3:45
+The answer is actually five pence. Many of us choose ten pence without thinking.
+3:54
+This is because our unconscious mind uses instinct, not analysis.
+4:01
+So our unconscious is fallible, it's also biased,
+4:07
+it makes snap judgements of people we meet categorising them according to gender, social and other characteristics.
+4:11
+In milliseconds, we judge whether somebody is like us and belongs to our own group, these other people we favour.
+4:19
+So men might favour men, while women might favour women, however,
+4:27
+we can belong to different groups and we like to be part of an ethnic group that's powerful,
+4:32
+which could mean a woman favouring a man over a woman that's unconscious bias.
+4:38
+All of us have it and it colours our decisions without our realising.
+4:44
+So we hear there a little bit about ingroup in our group,
+4:51
+and that's just one of the forms of bias that I'm going to talk about a little bit more detail today.
+4:54
+So there are two main categories of bias. You've got your unconscious bias and you've got your implicit bias,
+5:01
+so unconscious bias of racial bias that we're unaware of and which happens outside of our control,
+5:07
+it is a bias that happens automatically and it's triggered by our brain making
+5:13
+quick judgements and assessments and assessments of people and situations.
+5:17
+These are influenced by our background, culture and personal experiences.
+5:23
+So an example of this is making unconscious assumption that when you go to see a doctor, for example,
+5:27
+they're going to be male or being surprised when you hear a female voice announce that they're the captain of the flight,
+5:33
+that you're on these sorts of things. Are you your unconscious biases now?
+5:40
+Implicit bias. On the other hand, we're facing the same area, but it questions the level to which these biases all unconscious,
+5:47
+especially as we begin to be made increasingly more aware of these biases.
+5:54
+So once we know that these biases exist, then we're responsible for them.
+5:59
+They become implicit biases.
+6:04
+So we need to recognise and acknowledge our biases and find ways to mitigate their impact on our behaviour and our decisions.
+6:06
+Now, unconscious bias isn't all, but it's what's helped our species survive for so long.
+6:15
+That good feeling that we get when something is dangerous for us, we're safe is to walk at night.
+6:21
+Whether we should be wary of a person that comes up behind us on a night out or anything like that.
+6:26
+Our unconscious bias is the first thing that kicks in and we rely on our subconscious to make decisions really, really quickly.
+6:32
+So if you were to do any Google search, for example, you'll find that on average we humans make thirty five thousand decisions per day.
+6:40
+So we really need our subconscious to do these, to make these decisions on our behalf.
+6:49
+Otherwise, we'll never get anything done.
+6:54
+Not all unconscious bias happens as a result of malicious behaviour, so sometimes biases happen by accident or come from a place of of ignorance.
+6:59
+So when YouTube launched its face app on Apple's iOS, for example,
+7:08
+five to 10 percent of videos appeared upside down because engineers had unconsciously
+7:13
+optimised the app for items which users hadn't thought about left handed users at all.
+7:19
+And so this is why it's important that throughout your degree you build your when you're working in groups,
+7:26
+you build your team to be as diverse as possible, especially when developing any new type of product.
+7:32
+So what this really tells me about YouTube was that in their team of developers, everyone was right handed.
+7:38
+And that's quite interesting because, in fact, about 10 percent of the population worldwide is left handed.
+7:45
+So think about this. Are you going to have plenty of opportunity to work in groups?
+7:52
+Having a more diverse group usually leads to a better outcome and will come onto that a little bit later.
+7:56
+Social activity for you now. So you might want to pause for a while, take some time to do this.
+8:03
+So I would give you a minute or so.
+8:09
+We were doing this in a live situation to write a list of 10 people who you really trust, but they cannot include members of your family.
+8:11
+So think about your friends, think about teacher, think about your doctor.
+8:19
+Think about someone you meet in the supermarket and you have a chat with all the time. Ten people who you think I would really, really trust them.
+8:23
+So write down the names of these people. You don't have to share them.
+8:31
+And of course, with doing this asynchronous so you don't have to communicate with anyone.
+8:36
+So take a minute to write down those those 10 things. And if you can't get 10, then I would say you need to get at least five.
+8:40
+OK, so only keep watching if you've written down all of your five or ten names,
+8:59
+so now I will give you a little bit more time to pause the video of this to complete the rest of these these columns.
+9:04
+So interestingly, on reflection, some of you might have started to notice a few trends.
+9:23
+So did you spot any similarities, any differences? Have you noticed that everyone in your list is the same gender, for example?
+9:29
+Are they all the same ethnicity or they all of the same educational backgrounds?
+9:38
+You might have found that you're unconsciously biased or implicitly biased to say in ages, ethnicities, educations, that sort of that sort of thing.
+9:44
+So take a minute to think about that. We were in a life situation that suggests talking to peers and but if you're if
+9:56
+you're on your own or if you've got someone to talk to even better about this, but have a little luck, it doesn't mean that we're a bad place.
+10:03
+And if all of our friends are white, for example, it may just be the area where we grew up, the friends that we made at school, those sorts of things.
+10:08
+But it is important to reflect on who is in your group.
+10:17
+That's all going to talk a little bit about now. So, as I said,
+10:22
+you might have discovered from your list that you've got a group of people that you trust who are all of a sort of similar characteristic.
+10:26
+These will be people in your group. So we've got a positive bias towards our group.
+10:33
+And on the other side, we've got a very negative bias towards our group so we can have an automatic dislike to people who are not in our group.
+10:40
+And this is really important to be mindful of when you're sitting in on an interview panel, for example,
+10:49
+maybe later on in your professional lives and all of you will go on to work in industry or, you know, maybe even develop your own companies.
+10:53
+And what you want to make sure of is that you're not being biased towards people who are more like you.
+11:02
+For example, interviewing graduates from Imperial, he went to the same school as you who grew up in the same area as you came from the same hometown,
+11:08
+like the same interests have the same access or family backgrounds.
+11:19
+So all of these things will mean that you'll naturally be more favourable to someone.
+11:22
+They fall in your group straight away.
+11:27
+So just be very careful that when you're making decisions about people who to work with you to hire, who to talk to,
+11:30
+that you're not being heavily biased by this idea of your of your own group and that you make a particular effort to speak to people and
+11:38
+get to know people and give opportunities to people who wouldn't necessarily be in your group and they may fall into your outgroup.
+11:46
+Piousness, however, can change over time, so this depends on any new experiences that we get, you know, the more mature that we get,
+11:56
+the more people that we know, the places that we travel to, they can all sort of change how our biases, how our biases are.
+12:03
+So stereotypes are also something that is quite interesting.
+12:13
+So we see them everywhere in films and books, in popular culture, magazines, media everywhere.
+12:16
+And they can be drilled into us so much that even if we don't believe in these stereotypes, they can still heavily affect our judgement.
+12:23
+These unconscious biases can lead to gender imbalances because a lack of diversity,
+12:34
+which is something that we see in computer science and in the tech industry as a whole.
+12:41
+So here you'll see some infographics, though only 12 percent of the UK's engineering workforce are women.
+12:45
+And there can be many causes for this, but we cannot downplay the negative effect that stereotyping has on our fields.
+12:53
+So stereotype in computer science is a male subject in developing an unconscious bias that men are better than women are computers,
+13:00
+and that can steer girls away from choosing the subject at such a level and ultimately
+13:07
+staying on past that degree into academia and in high positions in industry.
+13:13
+So one, of course, first here, we know that this stereotype that men are better than women is not factually correct.
+13:20
+But what we see around us, for example, more men than women and even in the department in leadership roles within engineering,
+13:29
+this can really heavily reinforce that view, that view of that stereotype.
+13:41
+So even if you don't believe it, you could start looking around thinking, oh, maybe as a woman, maybe I'm not as good as the men.
+13:45
+There's not many of me here, or maybe as a person of colour. This is not the career for me because there's not many of me here.
+13:53
+And these sort of stereotypes can start to play on ourselves, as I say, even when we don't believe them.
+14:00
+Now, I mentioned women in computing and people of colour and minority groups in computing because diversity in any field is extremely important.
+14:10
+And this is one of the things that I work on within the Department of Computing and White College.
+14:19
+So research has proven that increasing the diversity of leadership teams leads to more and better innovation.
+14:25
+So tech companies with mix management boards, for example, are more successful than those companies.
+14:32
+Then there's other companies who are not as diverse and they make more money, which I think appeals to a lot of you.
+14:38
+And you might want to be thinking about setting up start-ups and things in the future.
+14:44
+Having a diverse team is a very competitive advantage.
+14:50
+So, as I mentioned before, throughout your degree, you'll have plenty of opportunity to work in groups.
+14:54
+So later on in the year when you're working in these teams, carrying out your green projects projects,
+15:01
+I remember that this is a competitive advantage when you're choosing to work with.
+15:06
+It's hardly ever the strongest strategy to go for the team of people who all act and think in the same way that you do.
+15:12
+So it's important to remember that complex problems are best approached by teams with a variety of perspectives.
+15:20
+So there's lots of different ways that bias can sort of manifest itself and creep into our decision making.
+15:28
+And there's many different forms that this virus can take. And I mentioned before that this is more of an introduction to unconscious biases.
+15:36
+There's not enough time in the time that we've got to go through everything in detail.
+15:42
+But I was hoping that this would be a nice introduction to that. If you're interested, you can go on and you can learn more about the field.
+15:47
+So the first one that I think is really important is confirmation bias.
+15:55
+So many of you might come across confirmation bias before this is a form of cognitive bias based on your expectations and your experience.
+16:01
+So, for example, you believe that the earth is flat, you Google flat earth.
+16:10
+And the first thing that you see is a blog by another flat earth that completely agrees
+16:14
+with your point of view and strengthens the argument that the earth must be flat.
+16:19
+So because you've had this view convinced, you don't bother looking for any any more information,
+16:24
+you stop your research right there because your viewpoint has been confirmed, your bias has been confirmed.
+16:28
+And so this means that you never look for that other information to say that the earth is round.
+16:35
+You never read the information. Never speak to people who believe in that viewpoint.
+16:40
+So you might think that having an ever increasing number of flat atheists might not seem very damaging to society.
+16:45
+But in fact, if we think about confirmation bias throughout history,
+16:52
+we know that it can lead to things like mass genocide and hatred of certain people and cultures.
+16:56
+And so we really do need to be extremely careful with this sort of bias.
+17:01
+The more we educate ourselves on this and other types of bias, the better we will be as humans.
+17:06
+OK, so activity two, if you were to make a split second judgements, which the light blue dot would you say was that?
+17:15
+OK, so some of you might have seen this before, and if we let our unconscious decide for us,
+17:27
+it might say that the dots on the left is bigger when in fact they're both the same size.
+17:32
+This is known as the contrast bias, the contrast effect, and it's a technique typically used in sales.
+17:42
+So sales people, for example, will often use this by showing you a poor quality product alongside the one that they want you to buy,
+17:50
+which is probably out of your price range. And then they'll show you.
+17:58
+Yeah, something that is way beyond your reach. When you compare your ideal purchase with this, you're more likely to be evaluating prints.
+18:03
+So, for example, when I was at university, I worked in a cinema and I could very easily sell people to buy a large combo of popcorn.
+18:13
+And drink is very, very easy to compare. Oh, well, actually, you know, it costs only cost 20 pence more, but you get so much more popcorn.
+18:23
+Even though I knew frankly, in those cinemas, no one is eating that much popcorn and one film if they're by themselves.
+18:31
+But people want value, if they want the better product.
+18:38
+And you can use this contrast effect, as I say,
+18:42
+when you're sort of developing products or selling products and trying to get people to buy into what it is that you're doing.
+18:45
+So sometimes this happens to you and you don't even realise.
+18:53
+So, for example, you'll see here on the screen that there's a subscription.
+18:57
+And this comes from an example adapted from Dan Arielle's book, Predictably Irrational.
+19:04
+And have a look at this avid subscription for new scientists.
+19:12
+Almost all of us will agree that the best deal is the one where you get the print,
+19:17
+the app and the Web version of the magazine for just a fraction of the cost more.
+19:22
+But how many of us will actually use all of those platforms?
+19:27
+We probably won't. We probably just wanted, you know, the cheaper version.
+19:31
+But now that we've seen what you can get all of this, you're more likely to buy into the package, the better value package.
+19:35
+We don't have an inbuilt system of what constitutes value.
+19:43
+So we need people to show us what value is. And this is how we allow people to use this contrast effect on us when when selling us things.
+19:47
+And so Dan Ariely says, we focus on the relative advantage of one thing government of that, an estimated value accordingly.
+19:56
+So just something for you to be bit wary about it.
+20:05
+Just just be aware about. So a very common type of bias is groupthink, and we see this all the time,
+20:09
+and the reason I mention this is because I think it's really important when you're doing a great work to not fall into the trap of groupthink.
+20:17
+So this is when everyone is in a meeting, for example, and one person says, you know,
+20:25
+someone comes up with this idea and you all kinds of thinking that I'm not sure about that doesn't really sound quite right.
+20:29
+And then the first person to give feedback says, yes, I completely agree.
+20:36
+I think this is marvellous. I think we should go for it. I can't see anything wrong with this brilliance yet.
+20:40
+I'm 100 percent behind it. And so you're thinking. Wait, I didn't agree with that at all.
+20:45
+So am I wrong? Should I say yes now? Then the next person goes and they go.
+20:51
+Yeah, yeah, I think I agree as well, yeah, it sounds like a good idea.
+20:57
+Yeah, I'll I'll agree with that. I'll go. I'll go with it.
+21:00
+And then you're thinking, that's two people now, maybe I should just maybe I'm wrong, shall I just go with it?
+21:04
+I just agree. And so it goes like this across the whole table where ultimately you all agree on something that you don't think is right.
+21:10
+And so your group think is this social pressure for the consensus and can cause massive, massive problems.
+21:20
+So when working in your group, CELTA throughout your degree, please consider this and try not to let groupthink affect your work.
+21:27
+So this is honestly how so many people go along with something they don't agree with for so long and it doesn't tend to end well.
+21:34
+And you'll end up with a group that all kinds of says on their behalf, well,
+21:42
+we knew it wasn't going away, but they wanted to do this and I wanted to do this.
+21:47
+And we do not want that with you, with your group work.
+21:51
+So try not to let groupthink affect how you work in a group or in meeting or in committee and on a sports team, any of those things.
+21:54
+And one good way, a good form of practise for what you can do to combat this is if you in this sort of group set and we have to make a decision,
+22:03
+you could write down your thoughts on a piece of paper, sort of share them anonymously.
+22:12
+And then when you all sort of look out what it is and discuss the outcomes and
+22:17
+just have that open and honest discussion about what is written on the paper. And you don't have to put your name to that claim.
+22:23
+But you've you've given you what you've given your opinion anonymously.
+22:28
+OK, next activity, so I want you to read out loud, and it's OK because you're not home by yourself, read out loud the words and all on this slide's.
+22:33
+I'll give you a second to do that. So you reading the words?
+22:45
+OK, so you might find that easy, right? You mean the words the words are the same as the words are the same colour as the words.
+23:00
+So it's quite easy.
+23:11
+Now, I want you to do the exact same thing with the next slide, but this time you're going to be reading the colours rather than the words.
+23:12
+OK, so reading the colours rather than the words already. Now, for this one, you should have felt a different level of effort going into it,
+23:20
+and even if it was only small, so some of you might find this very easy,
+23:42
+some of you might actually have to concentrate a little bit more, even if this amount of effort was only small,
+23:45
+more if it was needed ultimately to stop your brain from being distracted by the redundant information.
+23:51
+We call this selective attention.
+23:57
+Your brain has a switchgear in that last task to pay attention to what was happening and what it really needs to do now,
+24:02
+attentional bias involves the tendency to pay attention to some things while simultaneously ignoring this.
+24:09
+So this could be as innocent as not hearing someone when you're really,
+24:18
+really concentrating on the task to not considering the opinions of your female colleagues or only listening to white colleagues and things like that.
+24:22
+So it can be very innocent. But then it could also be very serious if your mind is sort of if your brain is only tuning in to see and people.
+24:33
+So I've mentioned that attitudes are shaped by our culture of listening to conversations, reading stories, the media, et cetera.
+24:46
+So these are different ways that an unconscious bias can manifest themselves.
+24:55
+So our unconscious brain is constantly looking for patterns because it really wants to speed up that decision making process for us,
+25:00
+which is great when the unconscious brain experiences two things occurring at once.
+25:07
+So, for example, many male senior managers or many female nurses are brain begins to expect to see them together all the time.
+25:13
+It wants to make these patterns straight away so we can recognise the male he must be.
+25:22
+The manager are female. She must be the nurse, OK? And it doesn't mean they're right in any way.
+25:27
+But again, it's just our brain trying to speed up this pattern, these combinations.
+25:34
+So if we see something that goes against those combinations, we think it's sort of less normal and we begin to sort of challenge.
+25:40
+Oh, really? That there the pilot or that's she's she's the bus driver.
+25:48
+Oh, OK. And so if we ignore this or we don't challenge it, we don't accept it,
+25:53
+then our unconscious biases can lead to lazy stereotypes and really discourage discriminatory behaviour.
+26:01
+So, for example, this is Alexander Wilson.
+26:08
+Last year, she was trying to she's just trying to do a job.
+26:13
+And she got stopped on three separate occasions while she was trying to walk into a courtroom.
+26:16
+So upon arrival, a security officer asked for her name and then said you were on the list of defendants after meeting with a client,
+26:22
+trying to enter a courtroom to discuss the case with the prosecutor.
+26:30
+And another barrister sitting at the back of the court was told to go outside and wait to sign in with the usher for a case.
+26:33
+And then she was stopped the third time trying to enter the room again because she didn't have a lawyer.
+26:41
+So I'm sure you can see from the pictures that she was not the defendant.
+26:47
+And this was an example of a very lazy stereotype.
+26:52
+So assume that because Alexander was a person of colour, is a person of colour, sorry, she can't possibly be the lawyer.
+26:56
+So first impressions and stereotypes can be extremely unhelpful and exhausting for the people who are continuously targeted.
+27:09
+So just a few things to think about. Have you ever experienced someone making an assumption about you?
+27:17
+What do you think this assumption was based on? Could be could be your accents, colour of your skin, the way you dress.
+27:26
+Was accurate. And can you think of any examples of stereotyping that you've encountered, either professionally or personally,
+27:39
+if you haven't, you're either very lucky or you're using your attention by a signal of what's happening around you.
+27:49
+In other words, you're not really tuned into it. And finally, is there such thing as a positive stereotype?
+27:54
+Because, you know, students, staff, people ask us this all the time and the answer is no,
+28:01
+there's no although there is positive role modelling or positive actions when it's
+28:07
+called to encourage more people from underrepresented groups to pursue careers,
+28:12
+for example, by seeing someone like them.
+28:16
+So going out as a woman and talking about computer science to young girls and can be empowering for them and you will be role model then,
+28:19
+and that is positive action rather than positive stereotyping.
+28:27
+So you can't use somebody else as a positive stereotype. For example, it will be very wrong of me to keep highlighting a black colleague of mine,
+28:31
+for example, for how great they are doing in this field where they're underrepresented.
+28:39
+Are they great? You know, you should really go out and do a talk to a school to inspire more more black people.
+28:44
+That would be really wrong for me to do what positive action where you sort of choose to do that, to benefit others, to be role model.
+28:50
+And, um, that would be absolutely fine. So you might think that you are and, you know, the most unbiased person in the world,
+28:57
+that this session is not for you and that you know, you're the most perfect little angel.
+29:07
+But unfortunately, everyone is affected by unconscious bias. And even me as much as I try and work in this field.
+29:13
+There are occasions where it will creep in. And I have to remind myself, OK, this is my unconscious bias.
+29:20
+I have technology and I have to deal with it appropriately. So as humans, it's quite normal to have these unconscious biases.
+29:25
+So I don't want anyone to be watching this and feeling like a bad person. That's not what this is about.
+29:33
+It's about just learning and becoming more aware so that you can deal more professionally with these biases.
+29:38
+And, you know, we can all live in a sort of better, more happy environment.
+29:45
+So as humans, we like to categorise things, and this includes people putting them into boxes, making that make sense to us.
+29:49
+So this could be with your age, with your gender, with your ethnicity.
+29:57
+And this goes all the way back to the times of San Francisco and the brother of Charles Darwin
+30:04
+who came up with the concept of eugenics and looked for a way to try and categorise us all.
+30:08
+So we've always been trying to put people into categories and this ability to automatically and very quickly
+30:14
+categorise people according to social and other characteristics is a fundamental quality of the human mind.
+30:21
+Although we all like to think that way. Open minds is an objective.
+30:28
+We are heavily influenced in ways that are completely hidden from our conscious minds in how we view and evaluate those others ourselves.
+30:31
+So you cared about the different types of bias and how these impact our decisions and opinions of ourselves and other people.
+30:42
+And hopefully you'll leave this lecture with a motivation for exploring your own biases in more depth, but haven't done that.
+30:49
+What are the practical steps that we can take to reduce the impact of our biases and the biases of others?
+30:59
+So we can take action to change our behaviours, how we see people and perceive reality, how we react towards that people,
+31:07
+how receptive and friendly we are to people, to the different reactions that we have towards people and our people in our group.
+31:15
+Why is this? We should acknowledge that we should try to change it.
+31:22
+So this we might not even know that we do.
+31:27
+And so it's really important that you call out your friends or you ask for your friends opinions on this, because it's quite easy for us to go.
+31:30
+Why did you how come you you know, you just waved at them but you didn't wave at them or, you know,
+31:38
+I noticed that you were talking to both of them, but you didn't give them you didn't give her any eye contact the whole time.
+31:44
+What what was that about? So pulling, you know, pulling out these things for people who just might not know that they're doing this.
+31:50
+Which aspects of a person we pay attention to,
+32:00
+it's really important how much we actively listen to what people are saying and how much we comfort certain people in certain situations, for example.
+32:02
+So if a female friend is upset, you might put you on and you might give them a hug.
+32:11
+You might say, oh, you know how to talk and talk to me whenever you know that sort of thing.
+32:15
+What would you do this for your male friend? Would your reaction be different?
+32:22
+And if so, why? Why is that so just these little subtle changes for how you react with one gender to another?
+32:27
+For example, one group of people to another just have a think about this and challenge.
+32:36
+Why? Why is that? Is that based on a stereotype?
+32:42
+Is that just me being very uncomfortable with, you know, given a man joke or is this something something more than I need to challenge within myself?
+32:45
+Sometimes we become overworked, become tired wounds or a lot of pressure,
+32:58
+and the more that we try to multitask and cram things into our schedule, the more unconscious tries to help us.
+33:02
+And this can lead to even more bias.
+33:09
+So the need to reach a decision very quickly, especially when it's coming up to lunch at dinnertime, bioscan will kick in, then go very hungry.
+33:12
+So these conditions are when your biases are most likely to creep in.
+33:21
+So who aware of that?
+33:26
+We can compensate, make sure we get enough sleep, we have enough food and we have enough time to really make important decisions.
+33:27
+You can reduce the chance that your act of bias by taking your time to make decisions,
+33:38
+avoid multitasking when trying to make a decision about someone or something.
+33:42
+Avoid acting on your gut instinct or making a decision about somebody spends a bit more time to get to know people before you judge them.
+33:46
+Avoid making important decisions when you're tired. Question cultural stereotypes that seem truthful.
+33:54
+Don't take things at face value, especially when people say, Oh, I'd be really wary of them.
+34:00
+You know, they like this or they like that. Make these decisions for yourself.
+34:05
+We're all grown up so we can make those decisions. Don't let them impact how you how you view that person and be open to be open to seeing what
+34:09
+is new and unfamiliar and increasing your knowledge of other groups and other cultures.
+34:22
+You had a great place at in peril to find out more about the culture through societies, through friendship groups and things like that.
+34:27
+So use this to really expand your your awareness and your friendship groups and your knowledge, your knowledge of this.
+34:34
+And you can detect, as I said before, you can detect unconscious bias more easily in your and your friends than yourself.
+34:43
+So call out those biases when you see them. It's absolutely fine to do said.
+34:49
+The point is, this is not to agree with you think you're biased, and as I said before, I feel like a bad person anyway.
+34:56
+It's just to acknowledge your biases and act on them to reduce any impact that you thought they might have on your life or the lives of others,
+35:02
+both in your personal and professional worlds. You can also get to know your biases by taking an implicit association test.
+35:11
+So these are really many goods. And as many of these about this is I just want one really good example.
+35:19
+And it might be that you find got a slight bias to young people, for example,
+35:25
+or old people or people carrying a bit of weight or very thin people or very tall people, very small people.
+35:29
+So these tests give you some, you know, even more sort of categories for we might be biased.
+35:36
+It might not always be black and white. It might not you know, it might be something that you've never really thought of,
+35:45
+would be like, oh, wow, I'm really biased towards this group of people.
+35:51
+Why? Why is that? So these tests will make you find that a bit easier to identify those areas of easier.
+35:56
+So in summary, bias is something that is unavoidable.
+36:06
+However, as we've discussed, you can make an effort to acknowledge your unconscious biases and transform these into implicit ones.
+36:10
+Then you can work towards fixing these using some of the techniques that we've discussed.
+36:17
+And we'll we'll try to develop these as well throughout the year.
+36:23
+First step is to hold yourself accountable, question first impressions,
+36:28
+justify your decisions and ask for feedback from friends appears at the same time,
+36:33
+hold others accountable for the biases and actions to you might be the one to bring an unconscious bias to their attention, which would be great.
+36:38
+And people generally don't take offence. If you get told that you're racist, then you're going to be a bit upset by that.
+36:46
+But I think if you've if you've sort of watched this or you've learnt a bit more about unconscious bias,
+36:54
+it's a bit easier to take that constructive criticism and do something with it to change.
+37:00
+And if your friends are telling you they're the best people, you know you and they, you know, they mean it with all the right intentions as well.
+37:05
+So please don't be offended if someone calls out on some of these behaviours, but do take some effort to try to change.
+37:13
+So I have other ways that you can hold other people accountable,
+37:21
+so make them justify decisions so that both you and them know that they've made these decisions from a place that doesn't include bias,
+37:24
+maybe make these decisions collectively.
+37:34
+So remember your best practise to acknowledge and eliminate groupthink where possible creates a culture of calling out biases.
+37:36
+So become an active bystander at once, which an active bystander in the spring change.
+37:44
+You'll find out a few more ways about how you can do that without feeling bad or, you know,
+37:49
+having a lot of pressure on yourself to call out behaviours where how to call them out and to report instances of of bad behaviour, too.
+37:55
+So we'll do some of that in the spring term. And that will include everything around if you do see something uncomfortable.
+38:03
+You do have a duty to call it out. And it is much better if someone else calls out, then, you know,
+38:11
+someone have to sort of stand there and and sort of fight fight for themselves in an area that might not be very comfortable for them.
+38:16
+So the more that we all stand up for each other and call out these behaviours, the better.
+38:24
+and I'd also like you to write down three things that you're going to do as a result of today's landing.
+38:37
+So hopefully today you found that it's been a good introduction to unconscious bias,
+38:42
+we've introduced the different types of bias that I think you will come across in your degree.
+38:48
+As I said, there's many, many more. And it would be great if you had the interest to go read a bit more about these.
+38:52
+We'll touch a little bit more an active bystander in the spring term, but hopefully you found out how to sort of identify and spot.
+38:58
+So far, you've also learnt about the importance of being aware of your unconscious biases and how to apply
+39:04
+your practise to be able to combat these unconscious biases in both social professional environments.
+39:13
+So that's all for me today. And I hope that you've enjoyed this lecture.
+39:21
+Did you have any questions? You can contact me at any time, and if you have any feedback, it'd be great to hear about it.
+39:25
+And I look forward to seeing you in the springtime and I wish you all the best of luck for this time.
+39:32
+See you soon.
+39:37

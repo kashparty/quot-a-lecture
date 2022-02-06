@@ -319,7 +319,7 @@ Let's say that that's just our nil.
 18:51
 And we say, show our columns A's or, you know, X X's is and then you go, OK, well, I need to show the first element of the list.
 18:54
-But luckily, we have this show a constraint so I can. This X has sti……, so I can show that show a and not show.
+But luckily, we have this show a constraint so I can. This X has sti, so I can show that show a and not show.
 19:06
 It's okay. This is a con or columns constructor.
 19:17

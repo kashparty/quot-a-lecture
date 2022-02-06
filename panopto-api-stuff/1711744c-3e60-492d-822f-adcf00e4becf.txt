@@ -81,7 +81,7 @@ billion pounds of retail sales and three hundred thirty thousand orders per week
 3:46
 six hundred eighty thousand customers. And the orders are typically what you feed a family for, for a week or so.
 3:52
-So there's about 50 items in the order and they cost about £100.
+So there's about 50 items in the order and they cost about 100.
 3:58
 And if you've got some 300000 orders and 50 items in each, you've got to pick about 50 million grocery items every week.
 4:03
