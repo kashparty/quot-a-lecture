@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> {% block title %} {% endblock %} Seapan</title>
+    <title> {% block title %} {% endblock %} anaLecture</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     <a href="{% url 'seapanapp:q_list' %}">
-        <h1>SeaPan</h1>
+        <h1>anaLecture</h1>
     </a>
 
     <a href="{% url 'seapanapp:search' %}">Search</a>
