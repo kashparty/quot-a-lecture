@@ -12,9 +12,9 @@
     </a>
 
     <div class="NavContent">
-        <hr style="width: 100%;">
+        <hr>
         <p id="Search" href="{% url 'seapanapp:search' %}">Showing results for "{{query}}" </p>
-        <hr style="width: 100%;">
+        <hr>
     </div>
 </div>
 {% if results %}
@@ -26,10 +26,11 @@
             <img src="{% static 'images/resultButton.svg' %}">
             <div class="ResultTextHolder">
                 <p class="SmallText">{{q.preamble}}</p>
-                <a class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
+                <a style="text-decoration: underline;" class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
                 <p class="SmallText">{{q.answer}}</p>
             </div>
         </li>
+        <br>
         {% endfor %}
     </ul>
 </div>

@@ -30,7 +30,7 @@ a, p {
 
 h1 {
   font-family: var(--font);
-  font-size: 80px;
+  font-size: 70px;
 }
 
 h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -43,7 +43,7 @@ hr {
   background-color: var(--brown);
   border: none;
   height: 2px;
-  width: 22%;
+  width: 50%;
 }
 
 #root {
@@ -58,13 +58,6 @@ hr {
   background: var(--cream);
   text-align: center;
 }
-
-/* .Content {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-} */
 
 .SearchHolder {
   max-height: 100%;
@@ -128,11 +121,12 @@ hr {
 }
 
 .SmallText {
-  font-size: 25px;
+  font-size: 18px;
+  max-width: 95%;
 }
 
 .BigResultText {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .ResultTextHolder {
@@ -156,4 +150,18 @@ hr {
 .ResultsList {
   padding-inline-start: 0;
   width: 100%;
+}
+
+.VotingBox {
+  display: flex;
+  background: var(--cream);
+
+  border: 1px solid var(--brown);
+  outline-style: solid;
+  outline-color: var(--brown);
+
+  width: 13%;
+  justify-content: center;
+
+  border-radius: 30px;
 }

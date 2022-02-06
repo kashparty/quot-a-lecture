@@ -6,25 +6,47 @@
 
 {% block content %}
 
-<h2 class="QuestionHeader"> {{ q.question }} </h2>
-
-<div class="Answer">
-    {{q.answer}}
+<div class="SearchHolder">
+    <div class="NavBar">
+        <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+            <h1>Quot-a-Lecture</h1>
+        </a>
+    
+        <div class="NavContent">
+            <hr>
+            <a id="Search" style="text-decoration: underline;" href="{% url 'seapanapp:search' %}">Search</a>
+            •
+            <a id="Random" style="text-decoration: underline;" href="{% url 'seapanapp:l_list' %}">Lectures</a>
+            •
+            <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
+            <hr>
+        </div>
+    
+        <div class="Answer"> <i>Context:</i> {{q.preamble}} </div>
+    
+        <h3 class="QuestionHeader"> <i>Question:</i> {{ q.question }} </h2>
+    
+            <div class="Answer"> <i>Response:</i> {{q.answer}} </div>
+    
+            <hr>
+    
+            <div style="display: flex; justify-content: center;">
+                <div class="VotingBox">
+                    <a style="padding-right: 10px;" href="{% url 'seapanapp:q_upvote' q.id %}">👍</a>
+                    {{q.votes}}
+                    <a style="padding-left: 10px;" href="{% url 'seapanapp:q_downvote' q.id %}">👎</a>
+                </div>
+            </div>
+    
+            This was asked at <a style="text-decoration: underline;" href="{{q.to_url}}">{{q.timestamp.isoformat}}
+                (Panopto)</a> in
+    
+            <a style="text-decoration: underline;" href="{% url 'seapanapp:lecture_detail' q.recording.id %}">
+                {{q.recording.name}}
+            </a>
+    
+    </div>
 </div>
-
-<p>
-    <a href="{% url 'seapanapp:q_upvote' q.id %}">+</a>
-    {{q.votes}}
-    <a href="{% url 'seapanapp:q_downvote' q.id %}">-</a>
-</p>
-
-<hr />
-
-This was asked at <a href="{{q.to_url}}"> {{q.timestamp.isoformat}} </a> in
-
-<a href="{% url 'seapanapp:lecture_detail' q.recording.id %}">
-    {{q.recording.name}}
-</a>
 
 
 {% endblock %}

@@ -6,6 +6,22 @@
 
 {% block content %}
 
+<div class="NavBar">
+    <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+        <h1>Quot-a-Lecture</h1>
+    </a>
+
+    <div class="NavContent">
+        <hr>
+        <a id="Search" style="text-decoration: underline;" href="{% url 'seapanapp:search' %}">Search</a>
+        •
+        <a id="Random" style="text-decoration: underline;" href="{% url 'seapanapp:l_list' %}">Lectures</a>
+        •
+        <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
+        <hr>
+    </div>
+</div>
+
 <a href="{{ l.to_url }}">
     <h2> {{l.date}}: {{l.name}}</h2>
 </a>
