@@ -32,6 +32,20 @@ Search -
                 <input type="image" class="SearchButton" src="{% static 'images/searchbutton.svg' %}" />
                 <input autofocus class="SearchBox" type="text" name="query" placeholder="Enter query..." />
             </div>
+            <select name="lecturer">
+                <option value="all">All lecturers</option>
+                {% for l in ls %}
+                <option value="{{l.id}}">{{l.name}}</option>
+                {% endfor %}
+            </select>
+            <select name="category">
+                <option value="all">All categories</option>
+                {% for c in cs %}
+                <option value="{{c.id}}">{{c.name}}</option>
+                {% endfor %}
+            </select>
+            <input type="date" name="date_from">
+            <input type="date" name="date_to">
         </form>
     </div>
 </div>
