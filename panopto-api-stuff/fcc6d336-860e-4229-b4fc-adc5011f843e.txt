@@ -1,0 +1,1091 @@
+ID: fcc6d336-860e-4229-b4fc-adc5011f843e
+Title: L00 - Introduction
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 18/10/2021
+It is now OK, and we are live. And can you see the light day here?
+0:02
+Yes, OK, awesome.
+0:12
+All right, so welcome to Introduction to Computer Systems, and I've used Villanova and I'm one of the two lecturers were for this module.
+0:15
+The other is Bjorn. Let me see that we call.
+0:25
+So there's been a lot of what the college user name is enough.
+0:30
+For some reason, they always do this or that combinations.
+0:37
+You can find me on the directory and so many.
+0:41
+Well, it's Vilanova, I think Briony's and then Bjorn Schueler is going to be getting the second half of the of of this module.
+0:44
+So I probably already know you have all the schedules for each of the lectures in
+0:58
+Silcott and this means that there's in the calendar you will see two events each week.
+1:05
+The first one, which I think is on Tuesday, is the recorded materials and slides and notes for the lectures.
+1:15
+So those are going to be made available at the beginning of the week.
+1:24
+And the idea is that you are going to watch these materials and read through the slides on on your own.
+1:28
+And then we are going to be meeting on Friday for a shorter period of time for an hour and
+1:34
+a half in order to do a life Q&A like we are going to be doing today and also tutorials.
+1:38
+So the purpose of these tutorials is to give you examples, to reinforce the materials of the of the lectures and also it's these tutorials,
+1:47
+they're important because they are going to be practised for the same type of questions and you will see on the exam.
+2:00
+So it's really important to attend on these materials and also as part of the library.
+2:05
+And it's in the place where you can ask us questions about the material,
+2:12
+both of what's going on, what we are going into detail, but also from from previous classes.
+2:20
+So as I said, the advice here is to read and watch all the material ahead of time,
+2:26
+ahead of their life and tutorial sessions that we have on Fridays and then preparing questions that you have for them.
+2:33
+And we will do that later. First, I'm going to introduce discoursed.
+2:40
+So, uh, grading grading is going to be 85 percent for a final exam and at 15 percent for coursework.
+2:49
+Now for coursework, there's going to be three parts of the business that you have to present because one is in number two presentation,
+3:00
+and that's 20 percent of the coursework reading. Then there's combinatorial circuit design, which is 40 percent for the coursework.
+3:06
+And then there's a registered design, which is from the one of the latest parts of the of the course, which is another 40 percent of the coursework.
+3:15
+So basically, you will have to submit a short report, in some cases a circuit design with with the answers or fortunately,
+3:26
+you will have to do that through gate, which is a really old system that we are transitioning out of.
+3:36
+And it's quite. Yeah, it's not the nicest pastries, but that's what we have right now.
+3:42
+Um, so, uh, materials, as I was saying, they are going to be made available ahead of time.
+3:50
+That includes the lecture slides, the lecture notes, which are some, let's say, sort of summary, and also the recordings for those lectures.
+3:58
+Now, in terms of coursework, as I said, think you're going to have the hits that you have to fill in or the questions would say.
+4:08
+And also every week we are going to give you or made make available through the hits
+4:16
+for the tutorial programmes that you're going to be solving together in small groups.
+4:23
+And then you will have the option to discuss between yourselves and also with us those problems.
+4:27
+Uh, no. As I said, all the links are available here in scientia, this includes links to all the materials for the slides and whatnot.
+4:36
+You will also have a link to Panopto, as some of you are seeing on the on the comments.
+4:51
+Panopto is where we upload the recordings, where the lectures and I will also record.
+4:58
+So I will also upload the recordings for for the Q&A that we do before each of the tutorials.
+5:03
+It also has the links to X10, which is a forum that we use to to discuss the contents of the course.
+5:13
+The idea is that its time is much easier to use.
+5:23
+Rather than wait for a life concert, you can just ask a question on the forum and get used to that.
+5:29
+You can use this forum to ask questions, but also answer to each other so you can build an answer together in a much more interactive way.
+5:36
+And also both as the lectures and the ideas are going to be in there helping answer those questions before the life journey.
+5:48
+So you have you will have this to delivery methods for questions and answers, which is ask them and weekly like any any questions so far.
+5:58
+I hope that this link with Scientia answers the question of where all the things
+6:13
+that is in this Thanksgiving is your heart to everything else in all the module's.
+6:18
+Which I got to say, it's an improvement from from previous years where there were multiple services and you just had to know there are others.
+6:27
+This time we have this that works as a hub. OK, so there's no questions.
+6:35
+By the way, something we were discussing before, you should have received an email from EXTEN,
+6:44
+what I posted to notes regarding course organisation and also saying that you should take a look at the first three lectures.
+6:52
+If you please check, you'll receive the email because all of you should have and please check that you have access to them for this module.
+7:04
+So make sure that this module come for the forty thousand and one is available on the system and you have access to that forum.
+7:16
+If not, or if you don't have access to the lectures for some reason, post recorder or the AP, the materials or any of those things,
+7:28
+please contact us so that we will fix that as soon as possible, because that's your ability to access all that we are going to be doing.
+7:37
+Now, as you can see, we are virtual. That's because this is a since it's a pretty big class that it's as far as I remember, I beat over 200 of you.
+7:47
+We really cannot fit all of you in a room as we would usually do.
+8:02
+And as you may know, there are still some restrictions on how many people we can put in a single room.
+8:08
+Right now they are at 50 percent capacity. So we are going to be doing this life I.
+8:15
+It might be, and it's still not clear, an option to.
+8:24
+Do terms with face to face, but that's very unlikely with these with this module,
+8:31
+but will possibly happen with other modules that have let students in in one single take.
+8:42
+OK, so what is this course about, right, and for those of you who already watch the first three lectures you may have as like Knowshon,
+8:53
+or if you look through the syllabus, you might have a slight notion.
+9:02
+But let me kind of give you a very high level overview, like a bird's eye view of what this course is about.
+9:06
+So and this is taken I really like this way of presenting the course.
+9:15
+It's taken from Yale, a professor at Oxford. So ideally, we would have a problem.
+9:22
+I mean, we do have problems that we want to solve. And at some point we want to use when we are talking about computers,
+9:32
+we want to use electrons to do our bidding to solve this problem for us because that, well, they can work tirelessly like us.
+9:41
+So, of course, then the question is, how do we go from this high level problem?
+9:52
+This is what I want to solve to actually having the electrons do the work for us.
+9:59
+And of course, we cannot just tell electrons to do this for us.
+10:03
+We need tools to to tell those electrons what to do.
+10:07
+So you would say, well, that's exactly what computers are for, and that's only partially true.
+10:12
+Yes, computers are part of the picture, but there is a bit more.
+10:21
+We have to massage this problem into something that a computer can do.
+10:26
+So the first thing that we have to do once we have a problem is transform it into
+10:30
+an algorithm and you're going to have some courses that deal only with algorithms.
+10:37
+So the idea is that if we want to go from point A to point B, there's many ways that we have to do that.
+10:44
+And the idea of a good algorithm is that we will we want to find the most efficient way to solve that problem,
+10:51
+given that an algorithm, which is basically a series of steps.
+10:59
+And then, of course, you say, OK, great, I have the algorithm now I can use the computer, and that's almost true.
+11:05
+But we are missing one more step and that is the programme.
+11:14
+And of course, you are going to have plenty of courses in this degree that deal exactly.
+11:19
+With this programming in various languages.
+11:26
+Your first contact with that is going to be the activities that have tutorials and you're going to start learning with a few languages,
+11:31
+many of you probably or some of you probably already know some languages and you're going to learn new ones.
+11:42
+And then finally, we can say, OK, we have a problem and the computer is the one that is going to be taking this programme,
+11:51
+and somehow we will see how transform it into directions or orders for electrons to do what the programme says.
+11:59
+Now, the computer, of course, is again formed by multiple layers and we are going to see them in various levels of detail.
+12:13
+So first at the top between the programme and the rest, we will have the instruction set architecture, which is basically very, very,
+12:24
+very basic language for instructions to give instructions to the machine like
+12:33
+move available to a specific register if you don't know what the resistor is.
+12:41
+We will learn about it in this course.
+12:45
+Then this gets translated, as you probably all know, into ones and zeros, which is the only thing that the computer really understands.
+12:48
+And then below this I say, which is, let's say, the interface between programmes and the actual computer,
+12:56
+then it's all about how the computer is organised internally.
+13:04
+And that's what's called micro architecture, which is a kind of a high level description of how each of these A.S.A. operations are performed.
+13:10
+So, for example, we would have a connector and another with some memory and deal with that routeing
+13:21
+of information and addresses and data back and forth in inside this computer.
+13:29
+And finally, each one of these boxes that we see here in the micro architecture is internally built using circuits.
+13:35
+That is the first thing we are going to be or one of the first things we are going to be looking at in in discourse.
+13:42
+And finally, these circuits, we can very precisely translate them with physics into actually moving electrons around and doing all that is about them.
+13:50
+So that's that's this transformation, Heidi, on how we go into a problem, into from the problem, into having electrons do the work for us.
+14:07
+And these three layers that are as I said,
+14:16
+those are exactly what we are going to be talking about in discourse and we are going to be going from the bottom to the top.
+14:19
+So we are going to start with numbers and binary and decimal symbols and then move on to how to build
+14:28
+circuits so that they do what we want with these electrons and represent things that are meaningful to us.
+14:36
+And the second most, let's say a roughly the second half of the course is going to be the upper part,
+14:42
+the micro architecture, and how this micro detector is organised into operations that are part of the of the IOC.
+14:50
+So with this at the end of the course, you will basically have the knowledge to do to build a very simple computer that can take programmes and will
+15:00
+have will force the electrons to move around to to to execute the programme and give some sort of result.
+15:13
+Then, of course, in future modules, you will see it's just making this more complicated.
+15:20
+Well, reality is more complicated than what we are going to see here, but the basis is exactly the same from your reforms to your laptop.
+15:27
+It's all based on these very same things that we are going to be seeing in this course.
+15:38
+So, well, the question is, why do I want to know about computer design, the first and easiest answer is, well, because you want to design computers.
+15:44
+That's that's that's something you can be interested in. So in this case, there's instruction to compare systems,
+15:55
+this discourse here that gives that the basis to do that then is this is a topic that interests you.
+16:00
+You can in future years, you can do advanced computer architecture,
+16:11
+which is basically bringing you closer to what computers look like today, various types of computers.
+16:18
+And also there's custom computing so that it's a it's another way to to look at how to build computers.
+16:25
+In this case, you can build them yourself using programmable Harward, which we will very briefly learn about in future lectures.
+16:34
+But it could also be the case that you said, well, sure, this is what you'll have to do,
+16:44
+but that's not really what I'm interested in because I want to do something else.
+16:50
+I just want to use computers to solve a lot of problems. The design of the computer itself is not something that I'm interested in.
+16:55
+And, well, that's basically what obstruction is for, right.
+17:02
+Remember that transformation party? I want to write,
+17:06
+I want to think problems and transform them into algorithms and that into programmes and what lives under that I really don't care about.
+17:09
+I stop at the level of writing programmes and that's that's perfectly fine.
+17:19
+That's what abstractions are for.
+17:25
+So that you can focus on specific parts of the layer and not all of it, because having to do absolutely all of it is just too much for anybody.
+17:27
+But and that's the same as this example here is like, well, sure, I can write a car without knowing how the engine or fuel comes to work.
+17:38
+And that's the whole point, right?
+17:46
+We're going to be chemistry engineers to write a car that would be required to go like way too much to use everything that we use nowadays daily.
+17:48
+But the thing here is that even if your goal is not to design computers use, it's still very, very,
+18:01
+very useful to know the basics of how these computers are designed and how they internally work.
+18:08
+And that's because once you have a problem and you will have problems when you're dealing with programming,
+18:15
+especially when dealing with complex problems, you will need to know how to look inside, how to understand what's happening underneath.
+18:21
+So it's useful to know about computers.
+18:30
+And if you want to make your problems faster or if you want them to consume less energy or if you want to make them more secure,
+18:33
+or if you want to interconnect them more efficiently in these are all cases where you are not designing a computer, but knowing how it is internally.
+18:41
+Design is very helpful because you basically can then design programmes in a way that is conscious of what is happening underneath,
+18:52
+even though you are not designing what's happening on the. What do I do?
+19:00
+Well, I do exactly,
+19:06
+I go across the layers of weirdness in discourse across all three layers where where these correspondences I work between software and hardware.
+19:09
+Basically, I, I work on smart data centre infrastructures.
+19:21
+I work on machine virtualisation. I work on both software and hardware, secure systems.
+19:27
+I work on efficiency devices. And all of these have to do with both software and hardware and how they get in contact with each other.
+19:32
+So I basically work a little bit in each of them and look more specifically at how they can be called design.
+19:44
+So it is this is one of the reasons why I'm touching this, because it's quite central to the type of things I do,
+19:53
+even though what we are going to be looking at in this model is, of course, a lot more fundamental and basic than the kinds of things I do.
+20:00
+But it's basically built on these foundations.
+20:09
+But just as a reminder, and this basically finishes the intellectual lecture that we are going to be in your whole degree,
+20:13
+you are going to be looking at this basically at this transformation stock or this stack of transformation letters
+20:25
+going from the broken down to electrodes and specifically in all those modules that are related to computer design,
+20:33
+you're going to be seeing these three layers here at the bottom, which is where software starts and goes down to the electrons.
+20:43
+And for this degree, we are we are all going to be looking at very basic concepts of the physical part of the electron that's just in this module.
+20:55
+You see just the very basics to get an idea that links in back to your physics classes before entering the uni.
+21:08
+But that's about it. And with that, that's basically the end of the intellectual lecture.
+21:19
+So I don't know if you have any questions. Let's go first with whether you have any questions regarding the organisation of
+21:27
+the course and then we can go with any questions you may have with the lectures,
+21:34
+the actual lectures and. Yes, on.
+21:41
+So let me see, I please speak up,
+21:50
+I think you can mute yourselves and speak up any questions or write them if you if you prefer that and I will read them out loud.
+21:57
+I had a question about two's company multiplication.
+22:16
+OK, what do you need to do for an extension?
+22:21
+Why would it not work but by just multiplying it normally? So wait, let me bring up.
+22:25
+Do you remember? Just compliment you're talking about, right?
+22:31
+I have multiplication. Oh, yeah, yeah, that at the end of the hour, now that I see this, if you saw Mike made a really weird delivery of this joke,
+22:37
+which I wouldn't even call it a joke delivery, I think I think we're going to be good with this model.
+22:55
+Yeah, multiplication is here. So what was the question?
+23:03
+Oh, yeah, wanting to do an extension. Why can't you just multiply it normally?
+23:09
+So do you have an example that you're talking about?
+23:17
+Well, in the example that you gave, why would you need to do something central and why couldn't you just multiply them?
+23:20
+So what what is the specific example you're talking about? Yeah.
+23:27
+Of. You mean this part over here?
+23:36
+Yes. Why couldn't you just do zero zero one one one zero?
+23:43
+OK, so right.
+23:47
+So that is because if you look at these things with like with any regular decimal multiplication, you are going to be shifting at every step.
+23:49
+Right. The position you're basically it's cascading to the left at every digit on the on the right hand side.
+23:59
+So the thing is that since you this is the disturbance here are the ones you are multiplying.
+24:14
+This means that it's going to get left four times. So you really need to multiply it with something on the other side.
+24:23
+Because otherwise, a. There would be nothing.
+24:35
+That makes health. Um, yeah, sure, I guess.
+24:41
+Let me say there's some questions, Senator Levin is a.
+24:56
+Around how long will the recording materials be each week, so the recorded materials, I try to make them.
+25:01
+A relatively short and focus to specific topic, but you can expect them to be.
+25:12
+Between one on one and a half. Well.
+25:21
+Between one and two hours, I would say it depends.
+25:28
+Sometimes they go faster, sometimes they will slow more slowly because the complexity of the material changes depending on the topic.
+25:33
+But that's that's the the rough estimate. Not for intellectual, there is not for almost each lecture, but lecture three has no notes.
+25:44
+I already clarified that on them.
+25:57
+So please, if you Christina, if you don't have access to it, please tell us so that we can do their.
+26:02
+There are only two lectures for the first week that is not true.
+26:12
+There is, uh, there are three lectures for the for this first week.
+26:17
+OK. So, Ian, it's somebody else, another student also said, I am not sure why it's happening.
+26:27
+I will let me break it down.
+26:38
+So I remember to ask all the lecturer Northern Lights are in PDF format, so I have no idea why they are being downloaded without the proper format.
+26:40
+So is it is there somebody for whom this problem is not happening?
+26:53
+OK, it's basically the extension is disappeared, so you need to DPF extra work, but I don't know why there's no PDF extension.
+26:59
+After you download that, you need to add it by yourself. OK, that's I have no idea what that's happening.
+27:11
+Is there somebody for whom the extension is there?
+27:21
+I'm trying to figure out if this problem is for everyone or if it has to do with some software configuration.
+27:24
+OK, OK, so I will talk to the people in charge of the scientia and see if they can figure out what exactly is happening here.
+27:39
+All right, or slides from other other like there, slice our good hours, paedophile's taken by don't worry.
+27:52
+Oh, OK. So maybe it has to do with how I had loaded the files.
+28:01
+The problem with Scientia, it's maybe a problem from this site.
+28:09
+OK, I will I will double check that.
+28:13
+We'll talk to the people in charge, see if we can figure out what the problem is, and then I will worry if possible, I will react to the files.
+28:15
+So in fact, one of your slides was PIDF extension as often as not.
+28:24
+OK. OK. So let me send.
+28:31
+OK, let me go one by one.
+28:42
+I'm going to keep your question for the last, because the other ones that are more about cross organisation, I'm going to do those first names.
+28:48
+Where will the tutorial versions be? Had its own tutorial or.
+28:59
+So, of course, work. Is for sure going to be on Kate tutorial worksheets.
+29:08
+I am not sure if we will maintain them on Kate or if they will just be in scientia.
+29:16
+I need to clarify that with people who organised what what systems we have to use now, because those things have changed since last night.
+29:24
+Um. To not tutorials are not the ones to pick.
+29:34
+It is like a separate course, let's say I'm talking here about tutorial sessions for this module.
+29:42
+It's basically going to be a you're going to break into small groups every week of well, it depends on how many you are,
+29:53
+but it's probably going to be five to six people and you're going to work together to solve a set of questions.
+30:02
+Those are not great. It is all just so that you get first you get to know each other and work together because that's important,
+30:09
+but also because then you get to practise the same questions that you will have to solve in the exam.
+30:18
+Um. That's another one of what girls organisation at STEM Topics.
+30:25
+I think right now, one estimate there are four,
+30:37
+there's the two notes that I pinned about course organisation and there's two additional questions that I already answered.
+30:40
+So, OK, I'm going to jump back to, you know, I say.
+30:49
+What's the last thing? So.
+30:56
+The say is this layer in here and in the middle, and this is basically it, it's the.
+31:03
+And I'd say it's the.
+31:18
+A very simple set of instructions that that's what it's called instructions, and that is how the computer expects programmes to be written.
+31:22
+So, for example, this would be an example in Python, but the computer doesn't really understand Python or C or C++ or anything, really.
+31:37
+So, in fact, what you're going to have is a programme that takes your programme and transforms it into,
+31:45
+I guess, the instructions, which is the other thing that the computer understands.
+31:54
+And this is, in fact. Compiler.
+31:58
+This is. This is what a compiler does, which is translate your programming, your programmes in some programming language into these only language,
+32:05
+that single language that the computer understands, which is the instruction set architecture.
+32:19
+And of course, you can break it in a way that is kind of readable for humans like these, like move some numbering to register what this exactly means.
+32:25
+It's not necessary to know right now because we are going to go through it during the.
+32:36
+And what the computer really understands only is some binary sequence that is basically
+32:40
+the signals that are going to be fed into the computer to perform those operations.
+32:51
+I think you going to know more about what NASA is right now, because that's going to become evident on the second half of the on the course.
+32:56
+OK, so let me go back to the. Here.
+33:08
+All right. Um, do we need to know how to do multiplication of floats so.
+33:17
+All arithmetic operations with floats are explained not in the lectures, so that you know how to do them.
+33:28
+It's not the main focus of the course you need to know how to do these things because they can appear on the exam,
+33:37
+but it definitely is not the main topics of the day.
+33:46
+Of course, like all the. Floating point is necessary because you will find it everywhere and you need to understand it.
+33:49
+So make sure you do understand it and we're going to go through exercises that are the typical ones you will see on an exam.
+34:01
+But the flooding point is not the core focus of this of this module.
+34:12
+You will see that as we go through the contents, it will become much clearer.
+34:18
+OK, so you're asking why we need to normalise numbers?
+34:25
+Yeah. So remember that when we normalise floating point numbers, I think it's this slide deck or maybe it's the other one.
+34:29
+I don't remember. Maybe the other one. This.
+34:40
+Yeah. So remember that when we normalise.
+34:55
+Those numbers. Yeah, what you're basically saying is that there's an an implicit one point,
+35:03
+whatever is written and significant in binary, so it's one point zero one zero one zero one zero one one.
+35:20
+And that's exactly one point is implicit. And then the rest is written and significant.
+35:27
+That is what the normalised number is now. There is a special case, as you see on this table, where we can have the normalised numbers,
+35:34
+which means that this one point, whatever, is not implicit, it will be zero point, whatever comes next.
+35:45
+And that's going to be with a fixed minus 126 exponent.
+35:53
+Which is written in the binary floating point number with an exploding value of zero.
+36:00
+This is just how it's interpreted. Whenever the exponent exponent expert, the field on the binary presentation has a value of zero,
+36:06
+this means that significance is interpreted as that the normalised number,
+36:14
+which means there's no one point in whatever, is the significant implicit in there.
+36:23
+And the exponent is taken as a fixed minus 126.
+36:29
+Now, why is that? That is just so that we can have more and more representable numbers that are very, very close to zero.
+36:34
+And that's the way that the thunder defined. How does this handle.
+36:45
+Does that explain it?
+36:54
+And please pick up the microphone if you can, because otherwise I will have to scroll down on the chart and then lose the position of the question,
+36:57
+because I'm trying to please switch to the slide again.
+37:06
+Yes, this light. Yeah.
+37:12
+Uh, what what's the question? So when you talk about the normal.
+37:20
+So when you talk about the normal, do you mean that it can be like way more smaller?
+37:31
+Some say you muted by someone. OK.
+37:43
+OK, so it seems somebody here to me, please don't do that, because I didn't set controls on who can control what.
+37:50
+It's pretty open. Um. Had a normal life, no, as you saw on those lights, means that what you write on the binary representation is the spot here.
+37:57
+And this one point, whatever comes after is implicit in how we are interpreting the number so that.
+38:13
+And then, of course, we saw the explosion accordingly, so that it is one point,
+38:28
+something else in binary now the normalised means that it is not following this forward.
+38:33
+And instead, it would be. Zero point zero one zero one.
+38:42
+Something something in this case here instead of five, we would be right minus.
+38:49
+Well, you get the point, it's not putting it on the spot, but instead of five,
+39:00
+we would have minus 126 and that would actually be expressed on on this field over here as a zero.
+39:07
+So we can actually get a smaller number because we kind have something like zero point zero zero zero zero something.
+39:17
+And exactly. Exactly, that's that's the point. So if you remember at the beginning of talking about floating point numbers, there's this figure here.
+39:25
+So the idea is to have a range of responsibility that is very, very, very close to zero.
+39:39
+That's the point of the normalised numbers. That's why they are behind.
+39:48
+OK. So, yeah, OK, more not much numbers, I hope that this is clear how.
+39:55
+Oh. OK, so let's go with binary division.
+40:11
+I talked about I don't remember if it was a lecture or one or lecture to arithmetic's that lecture to write.
+40:21
+Oh, no, we lost the sidebar. Oh, my God, this is acting up.
+40:32
+OK. So we go back to.
+40:46
+OK, let me just close it, because it's safe when they open up again.
+41:04
+Yeah, I think, uh, so the thing is that.
+41:27
+Computers, of course, the multiplication, division, addition and subtraction.
+41:39
+You just need to know the basics that we cover here.
+41:47
+I. It's it's basically the same thing as you already know, only that it's slightly different,
+41:54
+as you saw from the multiplication, just because it's a binary number.
+42:03
+But it really you should really not worry about that because it's the same as.
+42:12
+Floating point numbers, you do need to to know how they work,
+42:22
+but you don't need to know perfectly well every single detail of every single operation that you could do with them.
+42:28
+I as far as I remember, previous examples are available to you and you will see the kind of questions that we're dealing with.
+42:40
+And in those previous examples, and you will see the kind of questions we deal with during tutorials and that's it.
+42:49
+That will give you a very good idea of where the the focus of the course is from.
+42:57
+So why not just compliment a superior than once compliment.
+43:07
+OK, so that's number one it.
+43:11
+So it's kind of a cascade of benefits.
+43:18
+So first with one compliment, the main advantage is that.
+43:25
+We can do a binary addition of both positive and negative numbers, and the result is going to be correct,
+43:33
+but like minus seven, plus one is going to be the representation of minus six.
+43:41
+And that's exactly what we want because we want our sequences, as you will see, to be as simple as possible.
+43:52
+Now, the problem with once compliment is that it has two values or two representations for the number for the decimal zero.
+43:57
+It just let's say plus zero nine zero, because it still has this symmetric range over here.
+44:07
+Now, with to supplement, we break this symmetry so that it nicely wraps around with all the numbers and
+44:18
+then we can use the addition very nicely with both positive and negative numbers.
+44:27
+Now, the downside or the thing that is probably less expected to use in is for the first time is that this range is asymmetric.
+44:31
+It goes from plus seven to minus eight. That's just how it works and that is perfectly fine.
+44:42
+I hope that clarifies it. I mean, it's quite arbitrary, but that's basically how it is because of all the advantages it has when we design circuits,
+44:54
+which this will become very clear once we start designing another one,
+45:05
+you will see why very perfectly white, just complying is very beneficial for from the centre because.
+45:13
+OK, so Richard. Yeah, I answered that question yet.
+45:24
+Mm hmm. OK, so, yeah, Hennesey is asking exactly what they're like.
+45:28
+Sure, we have two zeros, so why does it matter? The answer is that it matters when we design circuits.
+45:39
+And this is, of course, like some arbitrary reason I'm giving, you know, because we haven't learnt how to design those circuits.
+45:46
+But once we look at the circuits and as I said,
+45:56
+it will become crystal clear why to complement is the binary representation that computers actually used in real life,
+45:59
+like your phone uses to complement or to represent numbers.
+46:08
+OK, everybody is asking, why do floating point operate operations do not work in that journal?
+46:22
+I assume you mean in the operating system like Linux? This is definitely not something we talked about, but I can very briefly talk about it.
+46:28
+The reason is that regular numbers like non floating point and the floating point numbers,
+46:37
+the they use different arithmetic units and different registers like your recipe.
+46:46
+I don't know if you're aware of it, but has a special unit for flooding point and it has special registers for for.
+46:52
+A larger floating point numbers,
+47:04
+and now this is relevant because the operating system is the one that is going to be scattering all your various processes.
+47:09
+And in order to do that, and this is something you will see next year in operating systems or next or not, that's next year.
+47:18
+A year from now, you will see in operating systems, scheduling means that we have to save and restore systems.
+47:27
+And the reason why Carol doesn't use floating point is because saving and restoring
+47:34
+floating resistors is a lot more expensive than saving or restoring than,
+47:39
+let's say, normal non floating point resistors. So it basically tries to it avoids doing that by not using floating point operations
+47:43
+so that because otherwise it would mean that when we going to processes if I,
+47:51
+the operating system, Colonel, have modified their floating point registers and the user process they use, their application needed them.
+47:56
+I still have to like save and restore when getting in and out of the operating system.
+48:06
+And I want to avoid that just to be faster and therefore don't use floating points us as an operating system.
+48:11
+Colonel. Again, this is one of those things that is going to become way clearer a year from now once you start tinkering with operating systems.
+48:16
+And we will have to actually deal with with scheduling and switching processes,
+48:29
+which I know maybe sounds like jibber jabber to you, but you will be experts on it a year from now.
+48:35
+OK, I'm going through the questions, but. Overflown.
+48:56
+She was asking about. What creates an overflow?
+49:05
+Uh. That's letterer to.
+49:11
+I'm. So the way in which you phrase the question, so let me read it out loud to you,
+49:25
+want us to complement addition, create an overflow one two numbers with the same signs are added.
+49:35
+The answer is that it can produce an overflow, but it does not necessarily produce an overflow.
+49:42
+So as you can see here, both are negative in this case.
+49:49
+And one plus one. We carry one next, and this is an overflow brief, but for example, if we are adding to positive numbers,
+49:54
+which is not in this example, but assume seven plus six without the negative,
+50:11
+then if you do that, the addition, the month, you will see that, or if we had one or two,
+50:18
+for example, which is much easier, it would be all zero and one and then zero zero one zero.
+50:27
+Once you them is zero zero one one, which is plus three, and that's basically what one plus two would be.
+50:33
+There's an overflow and they have the same side.
+50:42
+So this note here is that these are the only cases when the signs are the same as the other cases where overflow can happen,
+50:44
+but it does not necessarily happen. Oh, and I see that Richard is exactly very obviously mention exactly.
+50:53
+That doesn't matter to sue. Where can we see the previous examples so.
+51:04
+Ay, I. To be honest, I think they are available,
+51:17
+but I'm not exactly sure if if they are officially available or this is just students from previous year passing them around,
+51:23
+what I can tell you is that the exercises we are going to be seeing.
+51:34
+Are our exercises from exams, I mean exercises from tutorials, what we are going to be doing in the Dorians is exercises, for example.
+51:41
+So if you're an attending tutorials and putting your effort into it, you're basically going to be training for four exams.
+51:50
+Oh, OK, I see that Michelle them a link that's exams, I see, OK,
+52:04
+so that that that's that's where I see the examples and that's where you also see them to.
+52:11
+Well, I. Least they did a really bad job with the lectures.
+52:23
+I hope this all will make a lot more sense after you went to lectures, as I said in the beginning,
+52:27
+please watch the lectures before Friday so that you can all come to the lectures
+52:32
+on Friday with questions prepared and ready to do the tutorials in groups.
+52:40
+So roughly as you see, we have an hour and a half every week on Fridays and tutorials will take around one
+52:47
+hour and the first half hour we will put it into doing queries or we will mix it.
+52:56
+But it is that roughly there's going to be a split of half an hour at uni and one hour of tutorials.
+53:05
+OK, is asking why we need to this car to carry out wandering, to supplement arithmetic and and take jobs as well, maybe because there's a pattern.
+53:24
+So, yes, the idea is if we have machines are fixed at design time, as you will see, we will store numbers.
+53:38
+We will not store usually arbitrary or the hardware will not store arbitrary numbers that Howard has a fixed size when the processor is designed.
+53:50
+And it could be four beats, it could be a beat, it could be 16, 32, 64, 128.
+54:01
+That's just how the machine is designed in the example of the overflow.
+54:08
+Mm hmm. This is a four bit number, so if the machine only has four weeks to represent numbers, we know that we need the fifth bit here.
+54:14
+But if the machine only supports for this, it is just dropped and ignored.
+54:28
+And as we will see later, it tells you that this will happen, but it's not as part of the results.
+54:33
+It's a separate signal that is sent to us so that we can do whatever we see fit.
+54:42
+So, yeah, the idea is that these things called the registers that we're going to see in the future is what sort of numbers.
+54:48
+And it's basically a sequence of of bits and that's fixed in size in this example.
+54:54
+It's for. So whatever goes beyond the floor, it simply cannot be stored in one of the registers that represents.
+55:00
+And yes, that that that you are exactly right, it leads to an error when we have an overflow,
+55:14
+it sort if I add minus seven, plus minus six and my result is plus three, that's absolutely incorrect.
+55:22
+It is also true, as I was saying, that when an overflow happens, we can detect it in our programme.
+55:33
+And then, I don't know, maybe throw in an error or inform the user or there's been an error.
+55:43
+I cannot do this specific operation, but we first have to take care of the computer, the architecture, the processor will tell us that that happened.
+55:49
+And and forget about it, like once it's till it's told us,
+56:01
+it's up to us to decide what we want to do so we can if we want to detect that
+56:06
+there's been an overflow and then we decide what it is that we want to do about it.
+56:10
+If we ignore it that there's been an overflow and just keep going.
+56:17
+Yes, the result is going to be erroneous.
+56:22
+And that actually happens in sometimes in scientific competitions like physics simulations on computers and whatnot.
+56:24
+If you take care of detecting overflows, all of a sudden your simulation of, I don't know,
+56:33
+some stars colliding will give something that is basically impossible because you had an overflow.
+56:39
+Luke is asking, what should we complete before next week's session?
+56:50
+So, like every week, what you should complete is watch through the lectures,
+56:56
+which includes watching the recorded lectures, reading through the slides,
+57:03
+which I'm presenting on the lectures, and also, if you want, for additional clarity, read through the notes, the lecture notes.
+57:10
+So that you can prepare questions for the life session on Fridays and also so that you are prepared to work together in solving the problems.
+57:21
+Also, in the case of the tutorial, there's going to be at least three more people, three days,
+57:34
+so all of us are going to be going around your workgroups and saying any questions you may have.
+57:42
+So it's not just going to be me so that we can go through all your questions more quickly.
+57:51
+OK, what's the question then, is Kate? OK, the normalised versus.
+58:00
+Is this a question about the specifics like that you're talking about?
+58:15
+If it is, can you please tell me what it's like? Is that. Let it slide, so it's in the part two of number, is it page three thirds?
+58:18
+It's like, OK, let me pull that one up. Yes.
+58:31
+All right, so how do we get this specific normalised ranges from minus 10 to the power?
+58:38
+Thirty three and all this. Uh.
+58:44
+Oh, let me see.
+58:54
+So that's basically because you have this explosion here, but remember, this explosion is in binary is for two to the power of explosion value.
+58:56
+Now, if we were to translate this into decimal base, that's roughly these numbers that you see here on these ranges.
+59:10
+Does it make sense now? Thank you. So. OK, so Xianjun.
+59:21
+Has a follow up of the Caribbean. No, that is not exactly what I said, what I said is that is the two numbers we are adding have the same sign.
+59:33
+We could have an overflow occurring, but not necessarily if there is an attribute,
+59:54
+there is an overflow that's like Kerry beat an overflow or I can repeat that is one is an overflow.
+1:00:01
+Does that clarify the other thing about Courbet's?
+1:00:11
+I'm sort of like a follow up to this question, because just on the side,
+1:00:17
+you said that they started the all of the most significant bittering to complement
+1:00:24
+addition is a normal occurrence and doesn't and doesn't by itself indicate overflows.
+1:00:29
+I'm a little confused about that. So do you have specifics like I was talking about some specific example?
+1:00:34
+Yeah, I believe it's the binary arithmetic slide and on slide 17 on page them.
+1:00:40
+Yeah. Thank you. Yeah. Huh?
+1:00:52
+OK, OK, that's I see you're talking about this, right?
+1:01:00
+Oh, no. It's the bottom one. Yeah, yeah.
+1:01:08
+So then carry on be. And is that this is what this card.
+1:01:13
+Right. This is the real deal, and we always discarded when story the final result, like, as I said, we truncated to.
+1:01:25
+I fixed number of people in this example is eight and the previous example were looking
+1:01:36
+at it was forbidden in the machines you use is probably going to be 32 or 64 bit.
+1:01:40
+But it's just some arbitrary number that is specified at the same time of the computer.
+1:01:46
+What the Kiriat we just discarded, but you have to remember that.
+1:01:54
+In some cases in zero, we are not breaking it, but implicitly, always is there, it's either zero or one.
+1:02:01
+So discarding a zero doesn't change anything.
+1:02:09
+It's perfectly correct. It's when there is a one.
+1:02:12
+That discarding it means that the result we got is not what we were expecting
+1:02:20
+with an infinite with a machine that could support an infinite number of bits.
+1:02:25
+Which, as I said, is never the case, I'm a physical machine, never supports an infinite number of its.
+1:02:33
+Does that clarify? I'm still a bit confused, so so I if we discard the carrier and and it's always a wild ride,
+1:02:42
+but it actually like it could actually be the role that they were discarding.
+1:02:52
+But the one. Yeah, so if we're discarding a zero, it's fine, nothing is wrong if we discard the one,
+1:02:58
+it means that we are losing information from the number we want to express and therefore we
+1:03:06
+are expressing something that is not what we wanted and that's when problems can happen.
+1:03:10
+OK, I think you because this this additional bit is always there.
+1:03:15
+You will see that in when we write circuits that carry out, it is always there.
+1:03:20
+It's only that we have to take care of that. If its value is one and if it's zero, we just don't care.
+1:03:25
+There's no problem. There's no overflow. OK, boom.
+1:03:31
+I think I went through all the questions you posted here so far, some of them, some of the texts I see here are answers to some of the previous ones.
+1:03:45
+If you have other questions, just. You speak up or write it down on the top whenever you feel more comfortable with.
+1:03:55
+I mean, this this first lecture is or is first time this is normal,
+1:04:12
+that it doesn't take the whole hour and a half because, well, we have less sometimes.
+1:04:19
+We're still ramping up research and I'm still getting confused about.
+1:04:25
+About Carol. OK, let's talk about Iraq, which, by the way, is a positive number plus 19.
+1:04:33
+No, they still have one and there's no overall is there a reason for that?
+1:04:44
+So you have a specific example of it. Can you tell me those like.
+1:04:55
+It's just as the previous slide about adding a positive number to a maximum.
+1:05:00
+But this is minus minus six, which is plastic's.
+1:05:12
+So six plus seven plastic's. I think he meant the Slive previously on.
+1:05:17
+Which will slide, but the slide you use to explain the explained you hint, hint this question about.
+1:05:27
+No, not that one, probably one one after one after this one.
+1:05:41
+Please tell me it's like numbers if you can, because otherwise it's difficult for me to keep track of all the various examples.
+1:05:49
+Because usually your questions are related to specific example, so it's easier if we can find a and talk about it with us right in front of us.
+1:05:56
+We can gather about maybe like. You one plus minus one of the highest bid may still have also.
+1:06:06
+I didn't hear you very well. So you're saying, for example, that plus one.
+1:06:28
+Plus minus one, yes. OK, so.
+1:06:33
+How do we represent those? We don't have such an example, but.
+1:06:43
+Yes, this is exactly the case, I mean. Yes, so I mean, for this one, we still have a current outage of one by steelworker's.
+1:06:52
+Her. So I mean, so I posted in the charts this picture of, I think the situation we're talking about.
+1:07:06
+OK, yeah, you can have a look at it. Oh, yeah, that's it.
+1:07:17
+Here we have a. Yes, so here we have discarded a one.
+1:07:28
+So, yeah, we're just a bit confused about what does this indicate?
+1:07:36
+I mean, it is an indicator of overflowed, but we are discarding a one which is different to what you have said.
+1:07:43
+It doesn't really matter if it exists called a zero, so.
+1:07:51
+Oh, yes, sorry, sorry, yeah, sorry for the confusion, this is this is because we are talking about here, this is perfectly fine in in in this case.
+1:07:56
+There's this is one of those cases where this cart is the thing to the.
+1:08:12
+And that's a perfectly correct the thing is that you will see that once we write circuits that deal with these kinds of operations,
+1:08:20
+they are specifically designed so that there's an output signal that is signalling us,
+1:08:29
+the programmers, whether we need to take care of an overflow or not.
+1:08:38
+And this is lot of time in this case.
+1:08:42
+Is it because of the fact that we're adding a positive number with negative numbers?
+1:08:46
+So it doesn't. Exactly. So we don't have the capability to carry out.
+1:08:50
+It's different. Yeah, that's because before I was talking about all of it.
+1:08:55
+Yeah. That's because the previous example examples I was using to show you there was no case like this, but.
+1:09:02
+Yes, exactly. So basically what I explained before in this case,
+1:09:09
+we are taking the last eight minus plus five and then we transform this into an addition of a positive and negative number three integration.
+1:09:16
+And this is a perfectly fine thing to do in this case, to discover.
+1:09:27
+And there is no. So just the confirm is if you have like addition of two numbers.
+1:09:35
+Is it the carry out big one? I feel like I pressed the wrong button when I was closing the figure.
+1:09:54
+Sorry about that. Um, let me.
+1:10:05
+OK, still recording. That's good. It didn't stop recording just because they left.
+1:10:10
+Let me share the screen again. OK, there we go.
+1:10:15
+So it's a question, yes, please go ahead. So just to confirm, if you add two numbers, which are of the same sign,
+1:10:24
+like two positive or negative and you get up, one is the carry out, that that always means overflow.
+1:10:36
+Right. Yes, exactly. That's the only case. So that's the only case in which an.
+1:10:41
+I carry out signals, an overflow is when the carry out is one and the signs are the same when the kiriat is one and the signs are different.
+1:10:50
+There's no overflow. We're sorry if we have minus one, plus minus one, we still have to carry the odds, but we still have our floor.
+1:11:04
+Yes, and that's a case where we are adding numbers with different signs in this case, the cabriolet number is discarded and it never means a little.
+1:11:23
+I mean, minus one plus. Minus one. With minus one, plus minus one.
+1:11:35
+What about that? That's minus two.
+1:11:49
+Yeah, I think that's why we represent that in periods.
+1:11:54
+We have one one one one and one one one one plus one.
+1:11:59
+Our long stick of. One in the car outside.
+1:12:03
+OK. Little promise that I.
+1:12:09
+Keir. Yes, I mean, one of my one plus one more one we still have.
+1:12:18
+Why are you doing? I think. So let me run through.
+1:12:27
+Let me run through it afterwards and then we'll post it on them.
+1:12:35
+OK, I'm going to write it down more clearly so it makes sense.
+1:12:39
+I think it's going to be easier than because I don't really have a blackboard here, so if you don't mind, I will do it right after the.
+1:12:44
+OK, OK, I'll admit your. Let me break it down.
+1:13:00
+I'm breaking it down to the. Don't forget.
+1:13:10
+So I'm I think I would also change those lights so that this is much clearer.
+1:13:30
+Any other questions? And we'll take that as a No.
+1:13:41
+Oh, I see that the government you're over writing something. Yeah, yes, I know that.
+1:14:15
+That's exactly right. But I will I will write it down in a clear and systematic way to clarify for everyone,
+1:14:25
+because I think that my differen, spread out partial answers just make the issue less clear rather than more clear.
+1:14:32
+So I'm going to write it down properly so that you have like a complete set of decisions when and how they are made.
+1:14:45
+All right. So.
+1:15:02
+Any other questions, we are ten minutes away from finishing. Yeah, OK, OK, all I'm going to make up for this whole overflow discussion.
+1:15:10
+I don't know if I will upload it as some as a new document in in scientia or I would just use them,
+1:15:31
+but I will make sure I sit down and put in a single place all the old.
+1:15:38
+Well, decisions are made regarding carry out the lawful because they are related, but they are not exactly the same thing.
+1:15:48
+I will clarify that because I really feel like I made it.
+1:15:56
+And this is a really complex when explaining here. And next week, we can talk about it again after you read the document.
+1:16:01
+See if you still have any questions or if everything was clarified.
+1:16:13
+OK. All right, so we are four minutes early, but we should be wrapping up if you have some final quick question.
+1:16:20
+We can hide now for yeah. Could you please mention again when the next week's lecture will be coming on?
+1:16:39
+Yes. So you have it on SOCAP? I think it's scheduled for Tuesday.
+1:16:52
+If you look at your calendar, OK, well, Leppitsch.
+1:17:01
+It appears they're, I think, officially scheduled for Tuesday at eight p.m. or six p.m. or something like that.
+1:17:12
+Honestly, I, I will most probably be uploading them on Monday, but maybe you see them on maybe some days.
+1:17:21
+If I need to finish some things, I will upload them to,
+1:17:35
+but no later or no later than than you have on the calendar and most probably earlier than that.
+1:17:39
+Yes, that's that's exactly right.
+1:17:55
+I'm going to make sure I write it all down together in a single piece so that it's clear for everyone, because that's that's an important concept.
+1:17:57
+But, yes, you're right. All right. But any other question?
+1:18:06
+I'm going to think that as a No. OK, so, uh, I'm going to stop recording.
+1:18:21

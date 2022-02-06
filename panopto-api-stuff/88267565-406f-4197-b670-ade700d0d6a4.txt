@@ -1,0 +1,149 @@
+ID: 88267565-406f-4197-b670-ade700d0d6a4
+Title: Kotlin - s2e1 - Intro to OOP
+Category: Week2
+Lecturer: Robert Chatley
+Date: 21/11/2021
+Now that we've written some programmes in Scotland in the next part of the course,
+0:05
+we're going to look into more detail at object oriented programming.
+0:09
+We've already seen how we can carry over a lot of the functional programming ideas from Haskell and use those in Scotland.
+0:14
+But Scotland also supports writing programmes in an object oriented style.
+0:20
+And in fact, we can use these two paradigms together in the same programme to harness both of their strengths.
+0:25
+Let's have a look at some of the characteristics of an object oriented programme.
+0:32
+We've already made use of quite a few objects in the Scotland programmes that we've written so far.
+0:38
+We've used strings, which are objects, pairs which are objects and lists, which are also objects.
+0:43
+In fact, almost all of the things that we use to represent data in our Scotland programmes are objects.
+0:49
+Each object has a particular type, and one of the key ideas of object oriented programming is that we create our
+0:57
+own types that are specific to the domain of the problem that we're solving.
+1:03
+If we were writing an application to manage the shipping of books from a warehouse for an online bookstore,
+1:09
+then if we wrote down a description of what our application had to do,
+1:15
+we probably use words like book or order, customer address and receipt by creating our own types in our code.
+1:19
+We enrich the vocabulary of our programming language so we can write our code in terms of books and customers and addresses,
+1:29
+rather than just strings, lists and people's. So let's look at how we define a type in Scotland type is usually represented by a class.
+1:36
+A class does two things. It defines a type which allows us to put objects into categories.
+1:48
+And it also provides a template for creating new objects. For example, we're doing some geometry and we want to define a type for circles.
+1:53
+We could create a class circle and then we can create a circle object just like we've created other objects.
+2:04
+As well as thinking of the names of all the things in our domain, we also need to think about what properties they have.
+2:21
+For example, a circle could be defined in terms of its centre and its radius.
+2:29
+So if we want to create a circle with its centre at six, eight at a radius of two, we might want to be able to write something like this.
+2:38
+But to be able to do this, we need to be able to specify that the cost has these properties and to be able to pass in these values.
+2:51
+We do that using what we call a constructor and we define it like this.
+3:00
+I had some round brackets after the class name.
+3:04
+And then in these round brackets, I'm going to define the parameters that we can pass in when we're going to construct a new circle.
+3:08
+So that's X, which means a Y, which then it and a radius, which will also say because I didn't.
+3:15
+So you'll see that makes the code down here compile.
+3:26
+But I also want to define some properties of a circle so that we can access these values from other parts of the programme.
+3:29
+So I'm going to add a class body and then I'm going to say that circles have a Property X,
+3:36
+which I'll define using the vowel keyword, which we've used before, but this is using it in a different context.
+3:42
+And I'm just going to initialise this property X with the X that we passed into the constructor.
+3:51
+So this is a different X. This one is a property.
+3:57
+This one is a constructor argument and we're just going to initialise the property with the constructor argument.
+4:00
+I'll do the same thing for why. And for the radius.
+4:08
+So this defines three properties, four circles, and we've initialised them with the values that we've passed in to the constructor.
+4:24
+This pattern is something that will do quite often. And so Scotland actually provides a nice shorthand to do this a bit more concisely
+4:35
+where instead of defining the properties and the constructor argument separately,
+4:43
+we can do them together so we can remove this part.
+4:48
+And instead, we just define the vowels inside the constructor.
+4:54
+And that has the same effect as the current to be right before I know that we have an empty class body.
+5:02
+I can remove it. So that's a neater way of defining two arguments and properties together.
+5:08
+Now that we've done this,
+5:18
+you'll see that we have access to the properties that we've just defined in the same way as we have access to properties from lists and strings.
+5:19
+So here's the radius. And here is the X on the Y of the centre.
+5:27
+And we could print some information about our circle.
+5:34
+Then if we make a second objective the same time, so we'd make a second instance, we can give it some different values.
+6:00
+And then we can print the second one. And we'll see that each of these holds its own state.
+6:14
+This works fine, but perhaps we could do something better.
+6:26
+There's an intrinsic grouping of X and Y, they go together and they're different from the Radius X and Y are coordinates that together to a point.
+6:32
+Let's change our programme to Model X y z by creating a point class.
+6:43
+And then we can change circles constructor to take a point rather than X and Y separately.
+6:52
+And now we can see that the properties of off circles have changed, so because we now have radius and centre,
+7:22
+we've got still the radius, which is the integer, but we have centre, which is now of type point instead.
+7:29
+And so if we make a vowel for this? Then we can see that centre has type point.
+7:35
+And if we look at centre and now centre has the X and the Y because we moved these into the joint class.
+7:48
+So let's recap what we just did. We wanted to write a programme that worked with circles.
+7:58
+And so we decided to create a type to represent circles in our code.
+8:03
+So we defined a close circle. And we gave it three properties X Y and the radius of type integer.
+8:08
+Then we created some instances of this class. Different objects that represented different circles.
+8:17
+So we created two objects, one where the properties took these values and the second with the properties took these values.
+8:24
+And so they represented different circles and could exist in the programme at the same time.
+8:33
+Then we decided to change the way that we were modelling our circles.
+8:39
+And we changed the way that circle class was defined so that instead of taking X and Y as separate integers,
+8:45
+we combined those into a new type we defined called point.
+8:52
+So we created a new cost for points, and we put the X and Y properties into this class,
+8:58
+and then we changed circle so that its centre property was up type points.
+9:04
+And then when we created our circle, the object that we created had two properties.
+9:09
+And to fill the first one, we created a second object of type point, which encapsulated the X and Y coordinates,
+9:16
+and then the first object references the second object in order to define its centre.
+9:23
+So hopefully that gives you an idea of defining courses and using them to instantiate objects.
+9:30
+And in the next section, we'll move on to looking at how we can define behaviour for objects as well as just properties.
+9:36

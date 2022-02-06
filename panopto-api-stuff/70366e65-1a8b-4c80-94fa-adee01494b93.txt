@@ -1,0 +1,221 @@
+ID: 70366e65-1a8b-4c80-94fa-adee01494b93
+Title: Kotlin - s3e1 - Arrays and the CLI
+Category: Week3
+Lecturer: Robert Chatley
+Date: 28/11/2021
+We've looked in some detail lists,
+0:07
+and one of the key characteristics that we've seen of lists is that they change size dynamically as we add and remove content.
+0:10
+So if we take this list and we add a new string to it, it will increase the size.
+0:17
+And if we remove the item, then we'll decrease the size again.
+0:22
+This is generally a very useful property to have in a data structure.
+0:26
+In some cases, though, it might be useful to have a different type of data structure where we know what the size is and it's fixed.
+0:30
+So in that case, we can use an array. In many ways, an array works like a list.
+0:37
+We were constructed in a similar way, and we can access elements in a similar way, indexed by numeric indices.
+0:43
+We can use the same square brackets notation to address a particular element,
+0:52
+and we can update particular elements also by using the square brackets notation.
+0:57
+But the aspect in which an array differs from a list is what happens when we try to access an element which is beyond the range.
+1:03
+So here, if we try to assign an element to index four, we'll see that that causes a problem.
+1:10
+The array won't dynamically grow to allow us to add an extra element.
+1:17
+Its size is set when we create it. In this way, the array is a more fundamental building block than a list,
+1:21
+and this can have some useful performance implications when we're writing lower level code,
+1:30
+and we'll see that we can also use it to build up other structures. But a lot of the time when we're programming, it's more convenient to use a list.
+1:34
+But if we do want an array, then here are a few pointers about how to create one.
+1:41
+We can create an array using an array constructor, and we need to specify the size of that array right from the beginning.
+1:49
+So here we have set this to be a five elementary from zero to four.
+1:55
+And we also have to provide a way of calculating an initial value for each of the elements in Qatar, and we do that by providing a function.
+2:00
+So here's a function that we've defined as a lambda, which just takes the index and produces the index.
+2:08
+So in this case, our array is just populated with the numbers that correspond to the indices.
+2:14
+So the numbers from zero to four. If we want to start with our already being, in a sense, empty, we could initialise it.
+2:19
+So regardless of the index, we always just put the number zero into the element if it's into right.
+2:29
+And if we did want to do that, then a more concise way of expressing it would be to do this.
+2:36
+So we just have a lambda, which ignores the index entirely and simply returns as a zero.
+2:40
+Sometimes you'll see more complex structures with arrays, for example, arrays of arrays or even arrays of arrays of a race.
+2:47
+And this can be useful when we want to make some sort of grid structure.
+2:55
+So maybe if you were making a board game and you had a fixed number of squares on the board
+2:58
+that you might want to model and you wanted to address those with rows and column coordinates,
+3:02
+then something like this might work well. So here we have an array whose elements are arrays of integers.
+3:07
+And if we want to put something in a particular elements, then we can use two sets of square brackets an address, first the column and then the row.
+3:14
+And here we address this particular cell and give it the value. Nine.
+3:22
+We saw before that one way to construct an array was to call the array of function
+3:31
+and to pass in the initial values in the same way as we would do with the list.
+3:35
+And if we do that, then you'll see that we get an array of type input in this case, and we have a lot of familiar properties and methods.
+3:39
+So we have a size property. We have a get method where we can get something at a particular index or indeed set it.
+3:46
+And we also have the ability to map over the array and transform the elements in a very similar way to what we would do with a list.
+3:53
+And that means that most of the time we might as well be using a list and we get the added benefits of being able to dynamically resize the structure.
+4:01
+But if we do change this to a list, then it's interesting to have a look and see how this list is implemented.
+4:09
+So one of the things we can do in intelligence is to right click and go to the declaration of pretty much anything that we're using.
+4:16
+So if I click here, this is the declaration of the list of function and we can look at how that's implemented in the standard library.
+4:23
+And you can see that if we pass in some elements, then we're going to call this method and I'll go to its definition.
+4:31
+And now we're getting into some classes that access the JVM. And you can see that we're starting to talk about arrays now.
+4:40
+I'll go in here. You can use a keyboard shortcut so you go to this definition and eventually we get into something that's now actually a Java class.
+4:47
+And so under the hood, we're using a Java class to implement our lists.
+4:57
+And that's an array list, and an array list is an implementation of a list which actually uses an array internally to store the data.
+5:02
+You'll find out much more about this next term when you look at different types of data structures and when we look at Java more specifically.
+5:11
+But this shows how we can use an array as a more fundamental building block, on top of which we build a more usable structure.
+5:17
+In this case, the list. So most of the time, you won't need to use an array directly in your code.
+5:24
+But if you do, then you've now seen the syntax in Scotland that allows you to do that.
+5:30
+One occasion when you will see a race being used is when we need to parse command line arguments into our programme.
+5:42
+You'll often use command line arguments when you're doing something like Unix command in the terminal.
+5:49
+So, for example, fine CD into a directory, then I'm actually running a programme called CD and I'm passing SLC here as an argument to that programme.
+5:55
+And that causes me to change directory.
+6:05
+Or if I want to look at some of the files in this directory that I can use a programme like that and then pass in arrays,
+6:09
+scanty collections, dot Katie. And that will give me statistics about both of those.
+6:15
+Or I could try a programme like head and I can pass in an argument minus and one.
+6:22
+And then I raised Katie and corrections to Katie.
+6:30
+So this is saying, let's take the head one line from each of these files and bring those out.
+6:33
+So in this case, I'm actually passing in four arguments to this programme.
+6:40
+So let's see how we would adapt our programme in Scotland to be able to accept arguments from the command line.
+6:45
+So to do that. All right, a new programme. And we'll give it a main function.
+6:57
+But I'm going to make a small amendment to the main function from what we've seen before and give it a parameter.
+7:10
+So this is a parameter that represents the arguments that are passed in from outside and the Typekit it has is a ray of string.
+7:18
+So when we start our programme and we pass in, these arguments will receive them packaged in an array,
+7:30
+and that helps us to deal with the fact that there might be variable numbers of arguments passed to the programme, as we've just seen.
+7:36
+So once we have this, I can say.
+7:43
+Something like this just to show that the programme is running and we passed in a certain number of arguments and then we could write to loop.
+7:54
+And just print each of them out. So if I run this programme in the inteligente in the way that we normally would.
+8:04
+You'll see that the programme runs and we passed in zero arguments.
+8:23
+So how do we pass in an argument to this programme?
+8:28
+Well, if we're running it in intelligence, we'll see that now that we've run it, we have a run configuration in this corner.
+8:30
+And I can open this dialogue box here, which gives me a variety of options for how to run the programme and one of the
+8:43
+options that I have his programme argument so I could type in something here.
+8:51
+And now, if I run the programme again using this option,
+9:01
+we're now passing in three arguments to the programme and those are received by the main function in the
+9:05
+array and we're able to see the size and to extract each of those elements from the array and process it.
+9:10
+Because these arguments are always strings.
+9:18
+One of the things that we might typically do in the main function is to convert those strings into other types,
+9:21
+or maybe numbers or maybe other objects representing things in our domain.
+9:26
+So the purpose of the main function is really to process the string arguments and
+9:31
+create something a little bit more meaningful for the rest of our programme.
+9:35
+As well as compiling and running our programme within intelligence, we can also compile it and run it from the command line.
+9:43
+Most of the time when you're writing coddling programmes, you won't need to do this because,
+9:52
+well, either work within the idea or you may be using some other framework that starts your code.
+9:55
+But let's see how we would do that if we needed to. So if I open up the terminal again, I'm inside the source directory,
+10:01
+so here I have our copy copying files, including the latest one that we've written.
+10:10
+And they've also previously installed on this machine the command line tools, including the codling compiler, so that's called Kopplin C.
+10:17
+Then I need to pass various arguments to the Scotland compiler to ask it to take our Scotland
+10:27
+source programme and convert that into some Java bytecode that we can run on the JVM,
+10:32
+as we discussed in a previous segment. So I'm to against parsing programme Katie.
+10:37
+That's the input to the compiler and then a few more options.
+10:43
+I'm going to ask it to include the runtime.
+10:47
+This means that the output of the compiler is going to be a totally self-contained unit that we can just run on its own on the JVM,
+10:50
+including any codling extensions that we might need. I'm going to pass an argument minus D and the name of the file that we want to produce.
+10:58
+And in this case, that's a jar file at Java Archive that contains Java classes.
+11:06
+Then we run the compiler and we see that we've now produced this jar file as the output of that compilation process.
+11:18
+And now if I want to run a programme because we now have a jar file with Java bytecode in it, I need to use the Java runtime in order to run it.
+11:28
+So I have the Java runtime installed. I can say that my programme is in a Java archive in a jar file.
+11:36
+That Jar File is programme manager. And then if I run that like this, we run our programme.
+11:43
+So that's finding our main function and invoking it.
+11:49
+And in this case, we passed no arguments. And in this case, I can.
+11:52
+Passing a number of documents. So that's showing a different way of compiling and running our programme,
+12:02
+which is turning it from cotton into source code into Java bytecode and then running it directly on the Java virtual machine outside of Insight.
+12:09
+And in this case, we can pass in command line arguments and they're packaged into an array.
+12:17
+We also saw how we could do that from inside intelligence by using the run configurations to set the
+12:22
+various options that we want and to provide the arguments to the programme when we run it within the idea.
+12:31

@@ -1,0 +1,93 @@
+ID: f07bfcb0-f154-41e7-a251-ae2d0148f9a9
+Title: 9.4 Metric TSP
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 14/03/2021
+I'm going to finish this section on complexity by looking at some further examples of empathy can be problems.
+0:01
+And we're going to look at two, namely the metric travelling salesman problem, MDT Aspey and the vehicle rooting problem with capacities, V.R., P.C.
+0:08
+The metric. Travelling salesman problem is the travelling salesman problem restricted into graphs which satisfy the so-called triangle inequality,
+0:20
+which is a work property of metric spaces.
+0:31
+Let's have a diagram for that. So we've got X, Y and Z then.
+0:36
+We'd like to know that the distance from X to Z here is less than or equal to the distance going from X to Y and then from Y to Z like that.
+0:51
+And you can see that that would be true in Euclidean space if these distances were just as the crow flies, for instance.
+1:03
+But that's a very natural condition for us to have in the travelling salesman problem,
+1:12
+because if it does not hold, then we would choose to travel from X to Z via Y rather than directly.
+1:16
+Why would we make this journey rather than going around via a Y instead?
+1:23
+And obviously we can convert that into a decision problem in the same way as we did for the travelling salesman.
+1:30
+And we'd like to show that the decision version is ENPI complete.
+1:39
+Well, the first part is to verify that it's in ENPI so we can define a protocol to verify Metrick travelling salesman.
+1:45
+And this one just cheques whether T is a travelling salesman tour of G, we with weight less than or equal to our budget.
+1:54
+B And that can obviously be checked easily in polynomial time.
+2:03
+Arguably, there might be a further cheque we have to do, which is that the weight function here actually does satisfy the triangular inequality.
+2:08
+But if we do need to cheque that,
+2:17
+then that can obviously also be checked in polynomial time perfectly easily just by going through all pairs or triples of X, Y and Z as well.
+2:20
+So the more interesting issue is that we need a known NDP complete problem D Brime such that D prime reduces to the metric travelling salesman.
+2:32
+Well, which ones do we know? Well, obvious one.
+2:43
+We already know that travelling salesmen itself is and B complete.
+2:48
+So why not try BAC reduction?
+2:52
+Well, it's a bit difficult because the metric driving salesmen, if you think about it, is a special case of travelling salesman.
+2:56
+So what have we got to do here? We've got to take an arbitrary travelling salesman, graph GW and convert it to a new graph.
+3:04
+G. W prime. Possibly a I suppose G could be changed as well.
+3:12
+Test aside, the triangle inequality. So it's not clear how to do that.
+3:18
+And even if we could do that. And no doubt we could in various ways. Then that would not necessarily ensure that we get the reduction property.
+3:23
+This if and only if statement to the bottom of the slide here, which says that we have a yes for travelling salesman.
+3:32
+If and only if we have a yes for metric. Travelling salesman on the new graph that we have constructed.
+3:41
+OK. So let's try a different tack instead.
+3:49
+Why not try another reduction from we've look, we've got our reduction from Hamiltonian path to travelling salesman.
+3:53
+Why not see whether we can convert that on into a reduction from Hamiltonian path to metric?
+4:00
+Travelling salesman. Well, let's recall how R reduction is defined.
+4:06
+If X Y is an arc of a G this unweighted graph, then we leave it in for G prime.
+4:13
+The weighted graph and we give it a weight of one to encourage using that.
+4:22
+OK, if x Y is not an arc of G, then we added in because we need a complete graph and we give it a high weight off to to discourage it being used.
+4:27
+Well, then, if you think about it,
+4:40
+our new graph actually does satisfy the triangle inequality because we have this property that for any any wait is between one and two.
+4:42
+So the they've met the minimum wage on the right hand side here is going to be one plus one, which is two.
+4:54
+And so therefore and the the highest wait on the left hand side is two.
+5:02
+And so we always have the triangle inequality. So we actually did a stronger thing.
+5:06
+We actually constructed an instance of metric travelling salesman when we were reducing Hamiltonian path to travelling salesman.
+5:12
+And we can conclude from that that Hamiltonian path does indeed reduce to the metric.
+5:19
+Travelling salesman.
+5:25

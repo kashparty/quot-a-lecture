@@ -1,0 +1,251 @@
+ID: 65ff242d-3e62-4bb4-8b3e-ae2d0148f961
+Title: 9.5 Vehicle routing problem
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 14/03/2021
+So I want to finish by talking about a problem which is much closer to real life problems.
+0:01
+The travelling salesman one is a slightly artificial problem,
+0:08
+but it is closely related to much more realistic problems, such as the vehicle rooting problem.
+0:11
+So that in that problem, we've got a depot, we've got some vehicles and we've got some deliveries to be made to various addresses.
+0:19
+So it's just like some supermarket wanting to delivery groceries or whatever.
+0:26
+And we want to find the smallest cost set of routes for the vehicle so that we can put the packages in
+0:32
+the various vehicles and get them round from the depot to the make the deliveries and back to the depot.
+0:39
+And with all with the smallest cost so we can model the network as a complete graph, just as in the travelling salesman problem.
+0:46
+So the nose will be the depot, plus the customer addresses.
+0:55
+And we can let the wait from X to Y be the cost of the shortest path from X to Y.
+1:00
+And this will satisfy the triangle inequality.
+1:06
+And then we can give the vehicles the capacity and ensure that the total size of the packages is transported on each trip is within the capacity.
+1:11
+And let's assume for simplicity that each vehicle performs at most one trip.
+1:20
+So we're just thinking about a day's worth of deliveries. Okay, so now we can state the vehicle rooting problem.
+1:26
+So this is a vehicle rooting problem with capacities.
+1:34
+And of course, this is the decision version of that problem, because the real problem is to find the ship the lowest possible cost set of routes.
+1:38
+But we just want to know whether we can do it within the budget because we are trying to show that this problem is ENPI complete.
+1:47
+So it has to be a decision problem.
+1:53
+Okay, so we've got a complete way to graph satisfying the triangle inequality and we've got a distinguished start node.
+1:56
+So let's draw a diagram. So here is our complete graph, so we've got a particular node, which will be the start node.
+2:03
+And then we've got other nodes. That's just. Cells.
+2:15
+Five nodes like that. OK, so we've got a complete way to to graph.
+2:21
+Like that with a distinguished start a. And we've got K vehicles which all start at the depot, each with the same capacity, see?
+2:29
+And we've got a set of packages which have to be delivered to some of those nodes.
+2:39
+So maybe we have to deliver packages to this node here, X1 and maybe X two and perhaps X three here.
+2:44
+And the packet, the packages. This will have size S1.
+2:55
+This will have sizes too in this size S3. Obviously the numbers will be much bigger in realistic example.
+3:00
+And we've got a budget B. So the question is, can we use our K vehicles.
+3:09
+And a sign that the packages to those vehicles and then deliver them to the customers subject to two things.
+3:16
+First of all, the total size of the packages on each vehicle has to be within the capacity of that vehicle,
+3:25
+which we assume this is the same C for every vehicle. They're all identical.
+3:31
+And secondly, whether the cost of those journeys, adding up the weight of the ox travel by each of the vehicles is within all total budget being.
+3:36
+OK, so that is the vehicle rooting problem with capacities.
+3:50
+And we'd like to show that this is ENPI complete.
+3:57
+And so let's use our usual method, and the first part of the method is to show that it's in ENPI so well, we just have to say that again.
+4:01
+You buy the usual guess and cheque method, less gas, an assignment of packages to the vehicles and itineraries.
+4:13
+So maybe here we've got two vehicles. And so let's say that vehicle one.
+4:19
+One gets. S one K.
+4:28
+Package for X one and vehicle to. To get S2 and S3, and then we just have to cheque that the these sizes all add up to less than the capacity.
+4:33
+And which is easy to cheque. And then we have also to guess a route for each of those vehicles.
+4:52
+So maybe X1 goes to the sorry vehicle, one goes to X1 and then back to the depot and maybe vehicle two,
+4:59
+we'll go to Xed X two and then two X three and then back to the depot.
+5:06
+OK. So that would be what we have guessed.
+5:13
+And then we just have to cheque that the total length of the journeys is within our budget.
+5:18
+So all of that can be checked in polynomial time.
+5:25
+So what about the ENPI hardness or then we need a deal prime, which is ENPI complete, such that D prime reduces to the vehicle rooting problem?
+5:32
+Well, travelling salesman would be the most obvious one to choose.
+5:45
+But recall that we have said that in the vehicle rooting problem, we've got the triangle inequality holding.
+5:49
+So it makes more sense for us to use the metric travelling salesman problem and reduce that to the vehicle rooting problem.
+5:56
+So how can we do that? So we've got an instance if the metric travelling salesman and we've got to turn it into a vehicle rooting instance.
+6:03
+So let's suppose that we've got are.
+6:14
+Metric. Travelling salesman problem here it might be.
+6:19
+And we've got five nodes here and we've got a complete graph satisfying the triangle inequality.
+6:23
+I should have put that one in on the original diagram there.
+6:33
+Okay. And the question is, how do I convert that in to an instance of the vehicle routeing problem?
+6:37
+And the way that I can do that is to just keep the graph the same.
+6:44
+And the the bound can be the same.
+6:53
+And then we can just map one node into the start node.
+6:59
+So let's make this one into the start node. Stoate.
+7:04
+There we are. And let's assign a package. We want to get.
+7:13
+We want to mimic a travelling salesman to to each of the notes. So let's give each part a package to each of the node setups.
+7:18
+He is S. S s. S okay.
+7:25
+And that will just be as equals one. Let's have a package and size one reach of the nodes.
+7:30
+Okay. And let's just have one vehicle. And it has got capacity.
+7:37
+And minus one. So that means that it can indeed get the packages to all of those nodes.
+7:46
+It's got the capacity for that. So that is we've now converted our original problem into an instance of the vehicle rooting problem.
+7:52
+And pretty obviously, this is a polynomial time construction. And so.
+8:03
+And the yes instance of the problem that we have created,
+8:11
+the vehicle rooting problem we've created means that it is possible to visit
+8:17
+all of the nodes at least once and get back to the start within the bound B k.
+8:22
+Notice that I say here at least once that there's a slight subtlety there because
+8:33
+the vehicle reading problem doesn't say that you have to visit everything. Exactly. Once.
+8:38
+It just says that we have to deliver the packages and get back to the start. OK.
+8:42
+So what we need to cheque is that a yes instance,
+8:49
+we have a yes instance of Mattrick travelling salesman if and only if our new construction here is a yes instance of the vehicle rooting problem.
+8:54
+Well, supposing that we did have a yes instance of Metrick travelling salesman, then you can start at the start.
+9:05
+No, let's say and you know, we'll do. But let's take the start node and visit each node exactly.
+9:11
+Once somehow and return to the start.
+9:17
+All within cost. Be. Well, you can do the same in our new construction graph because we haven't changed the graph.
+9:21
+So obviously you can indeed do that. And you do want to exceed the vehicle capacity because we've made the capacity of the vehicle
+9:29
+big enough to deliver a parcel of size bond to each of the nodes apart from the start.
+9:37
+So that part is is obvious. The left to right implication for the other way around.
+9:44
+Let's assume that we've got a yes instance of the vehicle rooting problem.
+9:51
+Okay. So you've got a route, some route starting at the depot which delivers packages to each node and returns to the depot within cost B.
+9:55
+So this is a travelling salesman to accept that we might visit a node more than once because we're not constrained not to repeat nodes.
+10:05
+But if you think about it, then supposing that we did have a route that may be visited,
+10:15
+let's say it visits this node here and then it goes around the other knows and
+10:23
+then it comes back to this node for the second time before going to the finish.
+10:28
+Well, then we can always cut that out. So if we have a tour, that's a different colour for this.
+10:33
+OK. Let's just move up here a bit.
+10:45
+Okay, so supposing we have a tour that goes around.
+10:50
+And. Goes around various nodes and then maybe comes back to this node here again.
+10:55
+So this was X and then we've come back to it from why again?
+11:06
+And then we want to maybe get on to from X to Z here and then carry on like that.
+11:11
+So maybe this is our route. We've gone round here. Put arrows on here.
+11:24
+And. So now we're coming back here instead of going from Y to Z directly, we've gone via X here and X was repeated.
+11:32
+So we want to eliminate that repeat.
+11:44
+But then we can obviously do that by just getting rid of these arcs here and just putting this one in here instead,
+11:45
+just going straight from Y to Z like that.
+11:56
+So and the point is that because of the trying, so we can always eliminate repeats because it's a complete draw off.
+12:01
+But the other point is that when we do eliminate the repeat by just sort of taking the shortcut going from White Z directly instead of going via X,
+12:09
+then we're not increasing the total cost because of the triangle inequality.
+12:19
+Hence, therefore, if we have a yes instance of vehicle rooting problem, we also have an a yes instance for the metric travelling salesman.
+12:25
+Right. So that showed that vehicle rooting from his be complete.
+12:38
+So we've now building up a little library of ENPI, complete problems.
+12:42
+So we started off with SAT, which was approved from scratch by by the Cook Lhevinne Theorem to be our first ENPI complete problem.
+12:47
+We had a reduction from SAPTA Hamiltonian path, which was a bit complicated, so I didn't actually describe it.
+12:56
+But that takes us from the world of logic into the world of Groff's unweighted graph.
+13:04
+In this case and then from there on,
+13:10
+we can now go to these combinatorial problems involving graphs with the travelling salesman problem, the weighted graphs.
+13:13
+So we got the metric travelling salesman problem is N.P. Complete,
+13:21
+which is a special case of the general travelling salesman problem, which is also N.P. complete.
+13:24
+And then we've got the vehicle routeing problem, which is a much more practical flavoured version,
+13:30
+and that we have a reduction from the metric travelling salesman rather easily.
+13:37
+And we've just described. Of course, there are thousands more problems and they are not just in the world of graphs and logic,
+13:43
+but there are also problems in terms of combinatorial problems,
+13:53
+things to do with integer programming, for instance, which is related to linear programming,
+13:58
+turns out to be enpi complete and lots of other interesting problems that we would like to solve.
+14:05
+Turn out to be empey complete. And of course, we're only talking about the decision versions here, Hamiltonian path.
+14:10
+That's fine. But Metric and travelling salesman and these other problems here are intrinsically optimisation problems.
+14:18
+We want the best route. But what we can conclude is that the optimisation versions of these problems are
+14:27
+actually intractable because of this ENPI completeness that we've shown here,
+14:36
+assuming that P is not equal to ENPI.
+14:41

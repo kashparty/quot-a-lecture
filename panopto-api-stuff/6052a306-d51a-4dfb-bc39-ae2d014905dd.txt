@@ -1,0 +1,185 @@
+ID: 6052a306-d51a-4dfb-bc39-ae2d014905dd
+Title: 3.4 Priority queues
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 31/01/2021
+So now I want to talk about an alternative implementation of Prem's algorithm using priority cues.
+0:01
+So first of all, let's see what a priority queue is.
+0:07
+So the idea is each item in the queue has got a priority key of X, which will usually be a natural number.
+0:11
+And this key will represent the cost. And so the idea is that we will not rather than removing items from the queue on a first come,
+0:21
+first served basis, we will remove the lowest key first.
+0:31
+That will be the highest priority, if you like. So we can have an abstract data type for priority queues and it will have the following operations.
+0:36
+First of all, we can create a queue. We can test whether the queue is empty.
+0:48
+We can insert an item X into the queue and we can find the the the the minimum key in the queue.
+0:53
+That's the get men queue that finds the X that has the lowest key.
+1:04
+And we can delete that element from the queue.
+1:11
+Delete. Men queue. Most interestingly, items that are already in the queue.
+1:14
+We can actually decrease their keys so that that means that they are more likely to be selected early from the queue.
+1:19
+So an item X in the queue can be given a new key, which will be lower than key of X was previously.
+1:27
+So now we can reformulate Prem's algorithm with priority cues.
+1:37
+So, first of all, let's create a queue. It will be empty. And then let's add all the nodes of the graph into the queue.
+1:42
+And let's give them a very high key infinity that can just be any number which is sufficiently large.
+1:49
+And they don't have a parent as yet because they haven't been added to the tree.
+1:58
+So we'll just set parent X equals some nil value and insert X into the queue.
+2:03
+So all all the nodes are in the queue, but they all have the same artificially high priority.
+2:10
+So that's the end of the initialisation.
+2:17
+And then we decide on our start node and we decrease the key of that to zero, which means that it will be the first to be selected.
+2:21
+And now we go into the main while loop while the queue is non-empty,
+2:32
+we get the main element in the queue F and we delete it from the queue and we put F into the tree.
+2:37
+So F is left the queue and has joined the tree. And now we go through all the neighbours of F for Y in adjacency list of F.
+2:48
+And if they're not in the tree, well then they must be in the queue.
+2:59
+And what we do is to see whether we can decrease their key.
+3:03
+So we look to see whether the weight from F to Y is lower than the current key that we have.
+3:09
+And if so, we decrease the key of Y two W of F y this better value.
+3:18
+And we said its parent to be F. So perhaps we can just remind ourselves of this diagram that we had before when considering premies algorithm.
+3:27
+So we're looking at this element. F it has the lowest key.
+3:37
+So we're going to be the next one to join the tree.
+3:42
+And so we set its parent to be.
+3:47
+Well what if it should be.
+3:51
+And which will be an element that's already in the queue.
+3:56
+And then we look amongst its neighbours. So this is the the for loop here.
+4:02
+And we see. Well, if you're not already in the tree, then we see whether we can improve your priority.
+4:07
+So in this diagram, there's two cases f double prime [INAUDIBLE].
+4:14
+We're still in the unseen region. And so has the key infinity.
+4:19
+So we can clearly decrease that to the weight of from F to F double prime.
+4:24
+F prime. Already has a non infinite weight.
+4:30
+A sensible weight. But we see whether we can improve that.
+4:34
+So it's possible that that that that weight of F Brime will represent its current best weight to connect it to the tree.
+4:38
+And we see whether we can improve that. And if so, we lower the key of F prime.
+4:48
+So let's see an example. Let's go back to our small example with the four nodes.
+4:58
+So we initialise by adding them all to the Q. The Q with key infinity.
+5:04
+So we're. This is the initial state of the keys. And then these are the subsequent states of the keys.
+5:10
+We then set node one to have key zero so that it will be first in the queue and leave the others as infinity.
+5:17
+Then we remove one from the Q and we look at its neighbours, which are two, three and four.
+5:28
+And we see whether we can improve the key. And yes, we can.
+5:35
+So we give them three, five and four representing the candidate arcs in the dotted lines in the second diagram.
+5:38
+Okay. And then clearly we're going to select two because two now has the lowest priority.
+5:46
+So we add this red line to the tree set.
+5:53
+And then we see, well, we can update or we can't update the key for four.
+5:59
+So that remains four. But we can improve the key for three from five to four.
+6:04
+So now we have these candidate arcs in the red dotted lines.
+6:10
+And now, in a sense, we have a choice as to whether to put three or four in.
+6:14
+But we've put we will put four in.
+6:18
+And so it leaves the tree. It leaves the Q joins the tree.
+6:22
+And then we see whether three can be improved. And yes, it can be improved to two.
+6:26
+And then finally, three is leifs the Q and joins the tree.
+6:31
+Well, what's the complexity analysis for this? Let's suppose, as usual, that we have N nodes and M arcs.
+6:41
+So the number of priority queue operations that we have to carry out is bounded as follows.
+6:47
+We have big go in inserts into the queue. That's right at the beginning of the algorithm.
+6:53
+We have to test whether they queue is empty. Bingo.
+6:59
+When times get the men from the queue big OSV end times and delete it from the queue.
+7:02
+Big OSV and times. So the most interesting operation is the decrease keys.
+7:09
+We have to look for each node. We have to look at all its neighbours along.
+7:15
+So we have to look along each arc. And so we can get a bound of Bego of em here.
+7:19
+And we can assume that M is greater than N as usual.
+7:26
+So. Okay. So the question then is how long do each of these operations take?
+7:33
+Well, we've treated the priority queue as a black box, so. And then it could be implemented in various ways.
+7:40
+And then we would get different answers as to how how long each of these operations takes.
+7:47
+But we're going to see a good implementation of priority queue via binary heaps later in this these lectures.
+7:54
+And for a priority queue of lenth capital n all these operations of log of capital n.
+8:01
+Apart from is empty and get men which are actually constant. So that means that if we add up the performance here,
+8:09
+given that our queue is bounded in length by smaller and the number of nodes, then we can see that we get Bigo of M, log N.
+8:20
+So basically it's the it's the decrease key operation, which is the is the thing that is the critical factor in estimating the complexity.
+8:30
+Because everything else is more than that, assuming that N is less than M as is usually the case.
+8:40
+OK. So which is better than classic brim with the candidate arcs, the first version we had all prim with priority.
+8:49
+Well, because the classic frame just depends on and squared.
+8:57
+And the number of nodes, the priority queue version looks at the number of arcs.
+9:04
+And so which is better depends on how many arcs we have compared to the number of nodes.
+9:09
+So if we have a sparse graph, not many arcs, let's say that M is less than or equal to N log N, then we can calculate that for the priority.
+9:14
+Q We just get N log squared n which is better than the fixed N squared cost of the classic Prem.
+9:24
+So Prem with priority CU's is better, as we might imagine, with not many arcs.
+9:33
+It has a better chance of being better. On the other end of the graph is dense.
+9:38
+Then the priority queue cost will be. All we can say is it's bound.
+9:42
+M is bounded by N squared. The maximum number of arcs.
+9:48
+And so we get big O of N squared log N for the priority queue.
+9:52
+Which is worse than the classic Brimm bigo of N squared.
+9:56

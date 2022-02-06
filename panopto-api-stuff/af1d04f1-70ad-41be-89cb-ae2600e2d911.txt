@@ -1,0 +1,269 @@
+ID: af1d04f1-70ad-41be-89cb-ae2600e2d911
+Title: 2.1.Gaussian_Elimination
+Category: COMP40017 - Linear Algebra (Spring 2021-2022)
+Lecturer: Chiraag Lala
+Date: 23/01/2022
+Hi. So in today's video, we will take a closer look at the Gorshin elimination method for solving a system of linear equations.
+0:01
+This is the gender, the form of the system of linear equations,
+0:11
+and we can represent the same system in a compact form using matrices and vectors like this.
+0:15
+Now, the idea behind Gorshin elimination is to simplify the system of linear equations by eliminating variables.
+0:25
+The same thing translates to making this matrix have zero entries.
+0:36
+We do this by using some operations which are called the elementary.
+0:44
+Rural operations. There are three kinds of grow operations which are acceptable.
+0:51
+Exchanging or swapping of the rules, if you just shuffle, if you just reshuffle the equations in the system, that doesn't change the system.
+1:01
+So the first is exchanging. The Rose.
+1:15
+Second would be to multiply a particular system of particular linear equation within the system by a scalar,
+1:22
+a non-zero scalar, because if you multiply the entire rule with zero, you are left with nothing.
+1:29
+So multiplying a rule with a non-zero scalar.
+1:35
+And the third row operation is that we can add or subtract any dual roles within the system.
+1:41
+Now, let's look at this in practise. This year, we have three linear equations with three unknowns.
+1:50
+This system of linear equations can be represented in a compact form using a matrix, which looks like.
+1:58
+This. Multiplied by the variables x, y z.
+2:10
+Equal to the constants, be one, three, seven and 11.
+2:20
+Now I get exchange route one and row two, and it will look something like this.
+2:28
+In the compact form, it will look something like this.
+2:37
+Note that when you perform elementary through operations like exchanging roars and multiplying it all with a skill or adding or subtracting roles,
+2:44
+you perform those operations not just on The Matrix, but also on the B reactor, the constant work which is on the right hand side of the equation.
+2:56
+Next, I can multiply the first stroke by a scale or two and subtract it from the third row, which will look something like this.
+3:10
+Rule three will be replaced by Rule three minus two times.
+3:22
+Rule one. This will result in three equations, which look like this.
+3:29
+The same operation in the compact form looks like this.
+3:43
+Next, we will continue to simplify this further notice that the third equation and the second equation are identical, except for the sign.
+3:49
+So I can replace the third row.
+4:00
+By simply adding the second row to it. This way, I will be left with only two equations, the third equation just disappears.
+4:06
+The same operation in the compact form that resulted in the third row becoming having zero entries.
+4:22
+He will now take a closer look at this matrix.
+4:33
+Because it is in a it is in a particular form, which is called a raw eagle on form.
+4:39
+A matrix is said to be in the Rockland form. If it satisfies two conditions.
+4:51
+Number one, if all the rules with which have only zero entries are at the bottom of the matrix,
+4:56
+for instance, this third rule is at the bottom of The Matrix.
+5:03
+It has only zero entries. The second condition is to have the pivot of any given room to be on the right of the pivot of the row about.
+5:08
+Pivot, therefore, to the first non-zero entry of a rule.
+5:20
+So a year. One for the second row and four for the first row are the pivot, as you can see,
+5:24
+the pivot of the second row is to the right of the pivot of the first row.
+5:34
+So we have simplified the system of linear equations using elemental operations such that the matrix,
+5:41
+the coefficient matrix here is in the rule epsilon form or RDF, in short.
+5:50
+But we can continue to simplify it further.
+5:58
+I can eliminate the why variable in the first equation, which is right about the pivot of the second equation of the second row.
+6:02
+So to do that, I will take the first rule and in the second rule multiplied by five and subtracted from the first two.
+6:13
+So odd one will be replaced by odd one minus five times, are you?
+6:26
+This will result in. For X.
+6:34
+Minus four Z. It was minus eight.
+6:40
+And why? Plus to Z.
+6:48
+Equals three. The same thing in the compact form looks like this.
+6:54
+I can simplify this further with one additional step where I change the coefficient of X in the first equation to one that is I,
+7:04
+I will multiply the first equation by one by four.
+7:16
+The first row multiplied by one by four odd one.
+7:20
+Replaced by one by four times one.
+7:25
+This way, we have simplified the system of linear equations to do equations which are x minus Z.
+7:32
+Equals minus two and.
+7:42
+Why plus two Z equals three?
+7:47
+And the compact form is one zero minus one zero one two zero zero zero times x y z.
+7:53
+Equals. Minus two. Three zero.
+8:08
+This matrix now the coefficient matrix is in a special form, which is called a reduced long form.
+8:14
+It is in the roll call on form, which you can see, but it's in a special form of produce through a clone where the pivots are one.
+8:23
+And the corresponding other entries in the columns of the privates are zeros.
+8:38
+These are all zeros. The objective of Gaussian elimination method is to.
+8:45
+Reduce the original coefficient matrix down to its reduced rate loan for.
+8:55
+After which these bigwigs correspond to the dependent variables and the other non private variables correspond to your free variables.
+9:04
+So in this case, this spirit corresponds to the X variable despite what GO responds to the why variable.
+9:15
+And these. The third column.
+9:24
+Which does not have a direct response to the SSEG variable.
+9:29
+So we will choose a Z variable to be the free variable.
+9:35
+This would become our free variable Z is the free variable.
+9:41
+Three variable. And X and Y now depend on it.
+9:48
+I can relate the two linear equations as. X equals.
+9:54
+Z, minus two. And Y equals minus to Z Plus three.
+10:04
+And to add to this, we can also include Z Equals Z, which is the free variable.
+10:16
+So all these three equations can be written as x y z.
+10:23
+The solution is of the form z.
+10:33
+Times. One minus two, one plus minus two.
+10:38
+Three zero. So the set of all solutions, there are infinitely many, many solutions in this case, the the set of all such solutions.
+10:49
+Is. Lambda Times one minus two one.
+11:03
+Plus. A constant minus two, three zero.
+11:11
+Such that lambda can be any. Really, no.
+11:18
+Because lambda corresponds to Z, which was the free variable lambda is the value taken by Z.
+11:25
+So the next time when you are asked to solve a system of linear equations eight x.
+11:31
+Equals B. Then all you have to do is construct this matrix consisting a.
+11:40
+And on and have this be reactor as well because of whatever operations you carry out on on air,
+11:53
+you need to do the same raw operations on the reactor, be as well.
+12:03
+From this augmented matrix, this, by the way, where you have merged the two and the coefficient matrix with.
+12:09
+The constant vector B, this is called the augmented matrix from this augmented matrix you will carry out.
+12:18
+Ro Elementi Ro operations. To then get a matrix in a reduced role, a on form, and there will be a corresponding transformation on B.
+12:31
+So I'll call that a new victor, see? And then from here, you will then find the gender's solution.
+12:46
+One interesting application of the Gaussian elimination method is that it can
+12:57
+be used to compute the inverse of a square matrix if that inverse exists.
+13:03
+So one way to think about a matrix is that it is a kind of a function.
+13:10
+So when we say that a system of linear equations looks like.
+13:16
+X equals B. In other words,
+13:23
+what we are really seeing is that there is some kind of a function is some kind of a function which takes X as input and output the B vector.
+13:29
+Now, if this system of linear equation has a unique solution, it means that we can have a function which which does the inverse of this process,
+13:42
+where you throw in the Vector B and output is your vector text, that inverse function looks like f inverse of B equals X.
+13:53
+And this inverse function happens to be a matrix, and that matrix is what we refer to as the inverse of a.
+14:10
+Now, to compute the inverse of a matrix using the Gorshin elimination method, we will do that using an example.
+14:18
+Now consider the Matrix with entry's one two three four.
+14:27
+We can think of this matrix as a function which operates on the input.
+14:36
+X1. And X2. And gives the result the output of this operation is the one and the.
+14:41
+If it's easier for you to understand what is happening, we can represent this as a system of linear equations as x one plus two x two equals b one.
+14:54
+And. Three x one plus four x two equals b Duke.
+15:10
+But I can then rewrite the two equations once again as X one plus two x two equals one time B one.
+15:19
+Plus. Zero times. B do.
+15:34
+And the second equation becomes three x one plus four x two equals zero times, b one plus one times B two.
+15:41
+In the compact form, this looks like one two, three, four times x one x two.
+16:00
+Equals one zero. Zero one.
+16:12
+Times. Be one. We do such matrices where diagonal entries are won and the non diagonal entries are zero.
+16:18
+It's called an identity matrix and representative using the symbol I.
+16:34
+Next, we can perform some element operations to get this symmetry.
+16:41
+This matrix into the reduced rate blonde form, and when we do that,
+16:47
+you will get x one plus zero times x two equals minus two times B one plus less one Benz B nine zero times x one.
+16:53
+Plus, one times X two would be equal to three by two times B one.
+17:19
+Minus one by two things we.
+17:30
+This. In the compact form. Is one zero zero one times.
+17:36
+X1 X2. Equals minus two, one three by two.
+17:47
+Minus one by two times. One.
+17:58
+We. On the left hand side, we now have the identity matrix.
+18:04
+And on the right hand side, we have what we will call the inverse of the original coefficient matrix or original matrix a.
+18:12
+This is inverse of. And we computed the inverse of E using the Gorshin elimination method.
+18:24
+To summarise, finding the inverse of a Matrix A would involve building an augmented matrix,
+18:34
+which consists of the Matrix Air and the identity matrix of the same dimensions.
+18:43
+And then using. Elementary row operations and the Gorshin elimination method.
+18:50
+You try and. Get it into the reduce road kill on phone.
+19:00
+Reduce rate on some of a would now be the identity matrix.
+19:05
+And what you get or you're on the right hand side would then be the inverse of the if using the element IT operations,
+19:11
+you are unable to get the identity matrix.
+19:24
+You are unable to reduce the matrix a down to its reduced role long form,
+19:29
+which should be an identity matrix if you're if you can't do that, it means that your original matrix is not inverted.
+19:36
+So that said, I think you have all the information that you need to solve the first MMP tutorial exercise sheet.
+19:45
+And I'll see you in the next class.
+19:57

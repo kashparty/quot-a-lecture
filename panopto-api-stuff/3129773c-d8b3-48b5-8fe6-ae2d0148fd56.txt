@@ -1,0 +1,225 @@
+ID: 3129773c-d8b3-48b5-8fe6-ae2d0148fd56
+Title: 7.6 Building a heap
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 28/02/2021
+So let's look at how fixed Max Heap works.
+0:01
+So what we want to start with is a heap structure age where the left and right some trees are heap's and then we have to make age into a heap again.
+0:04
+Why is that the setup we need. So let's go back to our Max Heep example here.
+0:15
+And remember, what we did was we got rid of the top elements so that that was removed.
+0:22
+So the 16 left. So that went out and into the sorted list.
+0:29
+And then obviously what we should do then is to move the two, which is the last element up.
+0:37
+So up to the root. So with that two is gone up to the top there.
+0:41
+So that two no longer exists. And now have our task is to restore the the property.
+0:46
+But notice that the left and right, some peeps, some trees are indeed Max Heap's because we haven't destroyed that property.
+0:56
+The only thing that's wrong is that this to up the top is not the maximum element.
+1:06
+So how can we restore that?
+1:12
+Well, the idea is that we're going to do swap the route with the greater of these two children, the roots, the values of those.
+1:13
+So in this case, obviously, we should swap with the 13. So let's do that so we can then.
+1:25
+A green pen for this, so this we can swap over the 13 and the two like that.
+1:34
+That's good because now we know the 13 must because 13 is the greatest of this and it's bigger than twelve, 13 must be the maximum element.
+1:43
+So this is now correct. The problem is that this is not right here because this is not the greatest element in this part.
+1:51
+This subtree here. But then all we have to do is just now apply fix Maxcy recursively again to this new region here.
+2:01
+And therefore, obviously, what we do is we just compare the six and the eight and we see that the eight is bigger than the six.
+2:12
+So therefore, we should move eight there and move the two down there.
+2:19
+But now this part here would need fixing again, but it's just a single leaf element.
+2:23
+So we don't need to do anything. So that's the essence of the fix Max Heap scheme.
+2:29
+If H is not a leaf, if it is a leaf, we do nothing.
+2:37
+Then we find the larger sub heap and then basically we see whether the root is bigger than that larger element.
+2:41
+It is. Then we're okay. Everything is fine, but otherwise we would swap the two over.
+2:50
+Which is what we did here. We swapped the other two and the 13.
+2:56
+And then we recursively well, the left the other SPF is fine.
+3:02
+We've done nothing to it. We need to not change it. But this one here, we need to land.
+3:06
+Let the root thing the third the. The two needs to filter down further.
+3:11
+So we recursively apply the fixed maxey to the larger sub heap.
+3:18
+Well, how long might that take?
+3:23
+Well, in general, the worst case would be that the the root element would have to filter its way all the way down to the bottom of the tree.
+3:25
+So if the tree has depth D fixed Maxey, we'll take it most to D comparisons.
+3:32
+Why is it too deep rather than deep? Because we have to do two comparisons each time.
+3:38
+Because we need to find out which is the left or right.
+3:45
+Some. With the larger root. So that's one comparison.
+3:48
+And then we have to compare the route with that larger element and then swap them over if necessary.
+3:52
+So it's one swap, but two comparisons, but well, with N Elements has got depth floor of log in.
+3:58
+So therefore, we can see that fixed max heat takes bigo of log n comparisons.
+4:07
+OK. Well, how about building a heap that does not necessarily have the partial order property that we want?
+4:15
+So here's the scheme for building a heap. If H is not only if obviously it has a leaf, we don't need to do anything,
+4:25
+then we're going to recursively build the left and the right some trees of the heap and then just apply fixed max heap to that.
+4:32
+So it's a divide and conquer algorithm. So we could have a look at an example for that.
+4:42
+Let's go back to Heap's that we haven't got the well here, we've got a heap structure, so we could copy that across.
+4:51
+So that's. Pace that in.
+5:15
+Okay, so what we want to do now is to turn that into a max heat, let's say.
+5:20
+So here is our structure for our procedure for building a heap.
+5:25
+So what we need to do is to recursively apply the procedure to each of the sub trees and then do the fix.
+5:31
+So let's. So these ones here are in.
+5:40
+These ones here are fine. Those are built the bottom level here or the leaf nodes solid just okay.
+5:47
+But now we need to apply the build max heat to this structure here.
+5:53
+So that means that we have to do fix on.
+6:01
+So we're looking at this one here, let's say, and we need to do a fix on this, which means obviously the zero and the 16 SWAPO.
+6:05
+So that becomes sixteen. And that will become zero.
+6:13
+OK. So now we've actually built this part of the heap.
+6:18
+Similarly over here. Well, this one's all right. So that actually has already got the Max EAP property.
+6:24
+And now we need to look at. So we need to now build this part here.
+6:32
+And it's about a different colour for that. So I'm looking to now build this one.
+6:38
+OK, well. Therefore, I need to compare the nine with the greater of these and swapping them over.
+6:46
+So that's going to now become sixteen. And the nine will move down to there.
+6:52
+And actually, we're now okay, this has actually got the Maxcy property.
+7:00
+This is a max heap. And so the 16, we're fine.
+7:05
+So this part is built. What about over here? We need to come to build this part here.
+7:09
+We need to compare the four with the six because the six is the greater spot.
+7:17
+Them over six. Four. Like that.
+7:24
+Now we need to compare the thirteen with the six and the eight.
+7:28
+And that's okay. So this part here is fine.
+7:32
+OK. And now we've got to compare the three with the 16 and the 13 wells, obviously the 13.
+7:38
+We go for the 16. So therefore the 16 comes out there and the three goes in there.
+7:46
+So this is now three. And now we still have to fix this part of the heap.
+7:54
+So that means that the three and the 12 will swap over. So that becomes three, becomes twelve.
+8:02
+And then the three and the five will swap over. So that becomes five.
+8:11
+And that becomes three. Like that, sorry, I got a bit messy in the end, but we've ended up with a max heap, which should be.
+8:15
+Basically, this one here, so that they get the 16, the 12 or 13 like that.
+8:31
+OK. So that is indeed.
+8:37
+So this Maxi I illustrated here on slide two 70 is in fact the one that I got by applying the building Max Heap scheme to the original structure.
+8:40
+Right. Well, let's. Analyse what's going on with built backs heap.
+8:55
+Well, let's suppose for simplicity, the end is two to the K minus one.
+9:05
+So the heap structure will just be a complete binary tree. So we have filled up the last level and the depth is K minus one.
+9:09
+So let's. Well, we want to do is to find the worst case number of comparisons for Build Max Heap.
+9:18
+So. We have a diagram just to illustrate this.
+9:24
+So we've got off we're building on Max Heap and we've got the.
+9:31
+To some trees like that.
+9:38
+So what do we do? We, first of all, recursively build the to some tree.
+9:43
+So this will be W of N minus one over to.
+9:47
+And this will be Dolia of N minus one over two for that.
+9:52
+Whatever that happens to be, and then we have to do the fix Max Heap as well, which involves.
+9:57
+So that's the non recursive work. So that is the log n work involved in swapping this route into the whichever subtree it has to be swapped into.
+10:05
+OK. So that means that we can just we just get W of N equals two W of N minus one over two.
+10:15
+That's the two recursive calls, plus the final work to do the fixing which is the to log in.
+10:25
+Well because this is a divide and conquer algorithm, we've now got this roughly in the form of the master theorem.
+10:34
+So we can apply the master theorem with a equals two. There's A and B equals two.
+10:40
+There is B and F and the non recursive work is to log in.
+10:46
+So we can compute the critical exponent, which is equals one.
+10:51
+And then we compare the end to the E in order with the log in, but end to the E is is higher than log N.
+10:55
+So therefore the work at the bottom level at the leaf node level predominates.
+11:05
+And we can compute that the W of N is order N by the master there.
+11:12
+So that's where all the good, because that means that the heap can actually be built in linear time.
+11:19
+OK. So let's now analyse heep sought as a whole.
+11:29
+So the first thing we do in Heap's or what is to build the heap, remember?
+11:35
+And that just takes us all terrain by the work on the previous slide.
+11:41
+And then we apply the heap sort scheme, which is a for loop over an element, because there's always a fixed number of iterations in each sort.
+11:45
+And the first thing we do is to get the maximum element out of the heap. But that's easy because it's just at the root.
+11:54
+So that's constant. They go one. And then we need to delete that maximum element and restore the heap.
+11:59
+So that's that using the fixed max heap routine. So that's big of log in.
+12:07
+And then that's it. So basically, all we have to do is add bigger of N plus N for the for loop iterations times bigger of log N.
+12:12
+So overall bigo of log N.
+12:24
+So I noticed the fact, even the fact that we can build the heap in in linear time didn't help us, particularly here,
+12:28
+because it's actually the work in the for loop that predominates the repeatedly having to fix the heat.
+12:33
+But anyway, so that's very good because that means that heap's or what is actually optimal for sorting by comparisons.
+12:40
+It gives us the same performance as merge sort.
+12:48

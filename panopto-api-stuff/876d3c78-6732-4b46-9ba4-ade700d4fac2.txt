@@ -1,0 +1,79 @@
+ID: 876d3c78-6732-4b46-9ba4-ade700d4fac2
+Title: Kotlin - s2e4 - Printing Objects
+Category: Week2
+Lecturer: Robert Chatley
+Date: 21/11/2021
+If you've tried printing any of the objects that we've created, you've probably noticed that they don't always print in a very useful form.
+0:07
+For example, with these two circles that we've made, I just try to print one.
+0:14
+Then you'll see what we get. So just Prince like this, which is just giving us the name of the type.
+0:23
+And this is actually the address inside the virtual machine where the object is stored.
+0:32
+Not really very helpful. Let's see how we can change this behaviour to get things to print better.
+0:37
+So what we need to do is to convert all of our objects into suitable string representations.
+0:45
+And in fact, we want to give the objects all the classes,
+0:51
+the capability to do that conversion themselves so we can ask an object to turn itself into a string so that we can print it.
+0:54
+And in fact, that's what's happening when we pass something to print line print line calls a special
+1:02
+method on the object in order to convert it into a string of any prints that string.
+1:07
+That method is called to string. All classes have a default implementation of two string, and that implementation does what we've just seen.
+1:13
+It prints out the type name and the address in memory.
+1:22
+What we'd like to do is to override that behaviour, to give a custom implementation for our classes.
+1:25
+Let's see how we can do that physical. So we define a method, and we call that method to string and it returns a string.
+1:32
+So this is going to be a string representation of any particular circle. And so we could say it equals.
+1:42
+Circle of radius, plus the radius.
+1:53
+So one thing you'll notice here is that we're getting a warning. And that's because there's an alternative way that we can make this stream,
+2:03
+which is perhaps slightly nicer, which is using what's called a string template.
+2:11
+And so that's instead of using plus to join strings together,
+2:15
+we can use a dollar and put the variable name inside the string so we can just say circle of radius, dollar radius.
+2:19
+This has been replaced with the value of the variable when the string is created.
+2:28
+There's something else we have to do to make this compile,
+2:35
+and that's due to the fact that there is this default implementation of to string for all causes.
+2:38
+If we want to override it, we have to explicitly say that we are overriding it.
+2:43
+And so we have to put the override key word in front of the fund in order to say this is an overriding behaviour and this is what we want to specify.
+2:47
+Let's try it out. OK, that looks better, so now we've got Circle of Radius three.
+2:56
+Let's also try to include where the centre of Assad claims. And here we can.
+3:08
+Do something like this that if we try this, maybe you'll guess what's going to happen.
+3:18
+When we print, the centre centre is a point, and Points has the default implementation of two string, which is just going to print it in this way.
+3:28
+So we also need to specify a two string for point.
+3:36
+Let's just copy this one. I'll paste it into here.
+3:42
+And maybe for a point we could just. Do something like this.
+3:47
+Now, let's go back and run it one more time. No, it's better.
+4:01
+And if we print. Both of our circles.
+4:10
+Then you'll see that they both print with the values that reflect their state.
+4:20
+So here we've seen implementing a two string method to override the behaviour of how things are printed.
+4:28
+And we've also seen how to use string templates to produce strings a little bit more neatly based on the values.
+4:34

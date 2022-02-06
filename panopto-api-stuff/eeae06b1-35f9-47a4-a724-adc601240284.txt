@@ -1,0 +1,347 @@
+ID: eeae06b1-35f9-47a4-a724-adc601240284
+Title: L04 - Boolean algebra and logic gates (part 2)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 19/10/2021
+Hello and welcome back to our fourth lecture, an introduction to computer systems, and as we were saying, we are looking at boolean algebra logic.
+0:06
+Now, remember that we just looked at some very basic logic, propositional logic rules.
+0:14
+And what we are going to be looking into now is how to use how to define an algebra for
+0:22
+boolean operations so that we can systematically think about this propositional logic.
+0:28
+So Boolean logic was invented or rather defined by George Bush in the eighteen hundreds,
+0:37
+as it was defined it as a way to perform calculations quickly and efficiently by making the notation of propositional
+0:45
+logic marcescens so that we have a very systematic approach on how to work with all these propositions.
+0:56
+And therefore, what we're going to be looking at is a series of operators and some very well defined semantics for them.
+1:06
+And as we will see this this basically describe its application onto binary operations that we just saw in prepositional.
+1:16
+So let's start with the fundamentals.
+1:31
+First of all, in order to make it shorter, instead of writing true and false, we are going to be writing one zero,
+1:34
+which is binary numbers, what we are going to later on be using with computers.
+1:42
+So remember, our values are one and zero. This just by convention.
+1:48
+And we are going to be replacing propositions which are the long phrases of what we're talking about by very simple letters or variables.
+1:54
+Again, this is just so that we will have shorter formulas to work with.
+2:04
+And then finally, we are going to be replacing the operate,
+2:11
+the basic operators that we just saw the knot or an end with these three models, three symbols down here.
+2:14
+So not is going to be this these Tegmark or mark at the end of a variable.
+2:22
+Then the order is going to be replaced by the symbol and the end is going to be replaced by this dot or also often used as a multiplication symbol.
+2:31
+And you will soon see why this makes sense.
+2:43
+And it's basically because it follows some of the very same algebraic operations that we already know from mathematics.
+2:46
+So the first thing we are going to do is simplify propositions into boolean algebra notation.
+2:59
+So remember, we had I think umbrella equals not the car and but forecast or raining.
+3:08
+So in this case, we're going to choose one letter, which is going to be you for taking the umbrella equals not take the car Seabright or not C.
+3:15
+And which is the dog W or R for weather or rain?
+3:26
+So now that we have this, we have to remember that there's precedence, like in in this algebra, like all the other algebra that we know.
+3:32
+So we have to take care of wingding looking after the precedents of each of the operators.
+3:45
+So the most the highest precedence is for the not operator.
+3:50
+So it's immediately applied immediately on the variable that it's next to.
+3:55
+Then the next operator with highest precedence is going to be the operator or the simple dot.
+4:05
+And finally, we are going to have the or of course, it's not written here, but equals would be the operator with the least precedent.
+4:12
+So that means now that we are looking at precedents that these.
+4:22
+One here is not the same as this other formula here because of the precedent.
+4:31
+So in order to write.
+4:38
+What we wanted before, we need to be using these parentheses to force the evacuation order that we want despite the presence of the operators,
+4:43
+because I remember in this case, if the president is higher, the equivalent of this one without parentheses would be C prime parentheses.
+4:56
+W parentheses. Ah, OK, great.
+5:09
+So. Now, let's look at the truth tables of each of these operators, and it's exactly the same that we already saw in propositional logic.
+5:16
+We have the two inputs and one output for an hour, and they work exactly as we already saw.
+5:26
+And of course, we also have a truth table for the nut, which basically inverts whatever input it gets and gets it impacted.
+5:34
+So given any boolean expression like this one that we were working with, we can calculate the truth table for every possible value of the inputs.
+5:47
+So, again, I remember like we already saw before for and variables, we are going to have to to the power of and possibility.
+6:04
+So in this case, we have three variables over here.
+6:15
+So this means that we are going to have eight possibilities for this one for a billion formula.
+6:20
+So this would be the table for it.
+6:29
+Again, remember that we can basically replace every simple operation like W or R here by one intermediate variable,
+6:34
+because we can do this replacements, which in this case it's shown as X1, and then we would have subprime showiness extra.
+6:48
+And of course, even though writing this partial results are intermediate variables down to and not necessarily is not necessary,
+7:01
+it's just a way to make the building the truth table much easier, because in this way,
+7:10
+we can just go step by step and keep building up until we have the end result.
+7:17
+So the first one we could do here, for example, is extol, which is basically separate and separate.
+7:23
+We just or not t we just invert the values very simply.
+7:29
+Then we take the other temporary variable, x1 four, which corresponds to our W and again,
+7:35
+of course whenever any of the input particles are or W are one, we are going to have a one in the output and otherwise we are going to have a zero.
+7:46
+And now that we have these two intermediate variables here in the truth table,
+7:55
+we are going to do the last operation which after doing the replacement's, is X1 and X2.
+8:03
+So again, whenever we see a one in both intermediate variables, we put in one and otherwise we put zero.
+8:11
+That's very simple, just following the rules that we already knew for the basic and or unknot operations.
+8:19
+So now let's look at how we can go further with manipulating this algebraic formulas and one of the main purposes,
+8:29
+which is one of the main purposes of having an algebra so that we can manipulate an expression,
+8:39
+usually to simplify it,
+8:46
+without necessarily going through every single one value with a truth table so we can perform higher level operations until we have a simpler,
+8:47
+smaller formula that is expressing exactly the same.
+8:56
+Now, what we're going to see is many of the different rules that we have for boolean algebra.
+9:02
+And we are going to start with some really some really simple rules.
+9:11
+So we have that, not a negating.
+9:16
+And again, that's equivalent to a because a double negation just cancels each other.
+9:20
+Then we have that eight and not a zero because something cannot be true and false at the same time.
+9:27
+And then we have that eight or not eight is always one or two because we we basically just don't care if if both true or false are OK with us.
+9:35
+And of course, we are not going to be showing it here.
+9:49
+But you can use tools that you can build a truth table to verify and prove that this algebraic manipulations are correct.
+9:52
+So let's see some more rules many of you will already be familiar with from school,
+10:04
+with algebra in maths classes, so we have that boolean algebra across the associativity rule.
+10:11
+So the parentheses we can, given the associativity given the presence of these operators,
+10:23
+we can basically break them in any order that we want as long as it's the same operation.
+10:31
+Also sometimes referred to as Gate Canongate or Gate, etc.
+10:38
+So we have that open parenthesis A and B, close parentheses I'm seeing is the same as A and over parentheses B and C,
+10:44
+close parentheses and the same applies for the OR operation.
+10:53
+Then we also have the commutative rule. So A and B is the same as may be an A and the same happens for A or B is the same as B or A.
+10:58
+And we also have the distributive rule that you've also seen in maths.
+11:10
+And remember I said this is one of the reasons why we are using these symbols for the
+11:16
+operators is because they follow these same algebraic rules that we already know from maths.
+11:21
+So A and B or C is the same, or as A and B or A C, and also as part of the distributive rule, we have the opposite order in the operators,
+11:27
+which you may be less familiar with, but is also a means that A or B and C is the same as A or B and A or C.
+11:43
+OK. Now, let's go on to some more rules that will allow us to simplify, because remember all these set of rules,
+11:56
+that core is that we're going to put them together so that we can play around, which is with different variables,
+12:05
+so that we are going to be generating formulas that lead us ultimately to a simpler formula, because the simplicity is,
+12:11
+the easier it will be to implement and also more efficient, which ultimately is what we want when building computers.
+12:20
+So some simplification rules here.
+12:29
+First one is the identity law, which says that eight and A is eight and A or E is also always a.
+12:34
+Now, whenever we have one or zero as part of a formula with too many rules, that usually results in simplifications,
+12:46
+so we would have a zero, that's always going to be zero because remember, it's something and false.
+12:57
+That's always false, then.
+13:05
+And similarly, whenever we have any one that's always going to be 8:00 because the one, we can just remove it right, right out.
+13:07
+And then similarly, we can do this with the operation.
+13:19
+So an eight or zero is always going to be eight and eight or one is always going to be one.
+13:24
+Now, remember that we can be doing replacements of operations,
+13:35
+we can basically build more complex formulas and formulas by replacing variables with another formula,
+13:41
+basically by composing more, more and more complex formula boolean formulas.
+13:52
+So in this case, we can also simplify these forever into zero, which is ultimately what we want to do with this simplification.
+14:00
+So remember that A and not A is always zero, so zero and something else, which is everything in this site is always going to be zero.
+14:07
+And that is the ultimate goal of this simplification rules to be able to do things like this,
+14:22
+which of course not do not always necessarily end up with zero,
+14:27
+because that would mean a circuit that has a fixed answer, not something that depends on inputs.
+14:31
+So let's see some more simplification rules here.
+14:38
+For example, we are going to be looking at one that involves more than one variable.
+14:44
+So you will have A or A and B, which results in A.
+14:52
+And of course, we can prove this, whether it is this rule is true or not,
+15:01
+by construct constructing a trust, a truth table, and that's going to tell us very easily.
+15:07
+Or we can also use direct proof by applying all the rules that we already saw.
+15:12
+So here we take this initial formula here.
+15:20
+Then if we apply the distributive law, we found that it is a one being.
+15:25
+Now, remember that we have the simplification rule with ones and zeros or one.
+15:32
+In this case, this can be won or being is always going to be won so that we can simplify this one out into one.
+15:39
+And finally, another simplification rule that we already saw is that a one is always going to be a.
+15:49
+So therefore, we proved that this rule is correct by construction.
+15:55
+Now, some more complicated rules that we are going to be using a lot, and this is the Morgens theory,
+16:05
+and it's one of the two most often used simplification rules, and they basically say that A or B, all of it negated is the same as not A and not B.
+16:16
+And similarly, we have that A and B obligated is the same as not A or not being.
+16:31
+So if you look at it, basically what we are doing here is that this not we are putting it, let's say,
+16:39
+inside the parentheses or removing the parentheses, and then we apply it to each of the variables inside.
+16:48
+And then we are changing, switching the operation between AWS and ends.
+16:56
+And of course, this does not necessarily have to be and B, it can be any boolean expression because we can replace them this A,
+17:05
+for something more complex and the same rules still apply.
+17:17
+We just need to keep packing and unpacking things as necessary.
+17:23
+And something important to remember is that this theorem that the Morganza Theorem also holds for basically and any number of terms.
+17:30
+So it can if we have, for example, here an example with three, that is exactly the same that we saw.
+17:42
+So basically, we're going to deduce that this theorem can be applied to any arbitrary number of.
+17:54
+Variables. Now, let's look at the principle of jollity.
+18:06
+And basically what it says is that every single bullying equation has a dual equation,
+18:15
+which is found by replacing the operator and with another and vice versa.
+18:23
+And this is exactly what we saw with the Morganstein. Remember that?
+18:29
+I was saying exactly that. We are taking not putting it inside and then flipping between ends and or in the formula.
+18:33
+So, for example. If we have this simplification rule, of course, rules can be confused with each other.
+18:47
+So what we can say is that every simplification rule has a dual form.
+18:56
+So here we have the simplification rule that we saw where A or A and B is always it's a dual equation would be,
+19:01
+as I said, by flipping the operators, we can say that a.
+19:10
+And A or B is always paid, and that would be the dual form.
+19:16
+And of course, I remember that here we have to add the apprentice's or records to maintain the evacuation order because in this case,
+19:23
+this is the highest precedence operator, the operator, and in fact, we can prove this in here.
+19:34
+So we start with a dual operator that we got from this investigation, ruled that we saw.
+19:47
+So now we got the dual simplification rule that we just derived from the duality principle.
+19:55
+And now we are going to prove that this is, in fact, correct.
+20:03
+So we start with a formula here and then apply all the different rules that we saw.
+20:07
+So A, an, A or B is the same as a an, A or A and B then any is we can simplify it out simply so we end up with these B over here,
+20:15
+which is A or A and B, and finally, as we already saw.
+20:33
+This can be written down as simply a.
+20:40
+So let's look at more roles that we can play together, and that is a complement equations.
+20:48
+So what we saw is that for every single equation or formula in Berlin,
+20:57
+we will also have a complement equation that we can find by negating both sides.
+21:08
+So if we start with what we had in the very beginning of this part of the lecture of you equals not C and W or R.
+21:16
+We can calculate the compliment equation, which would be not U equals, not C and W or R and all of it negated.
+21:28
+So let's look at how we go about it using the Morgens theorem.
+21:44
+So this is the complimentary that we just saw.
+21:52
+I know we are going to simplify it using the Morgens theorem.
+22:00
+So we basically applied over here, we take this external negation and apply the emergency room to get into this.
+22:06
+So remember, we have to look at the operators here and remember, again,
+22:19
+these are basically Knesset's of what we are negating is this part over here and not yet working with this.
+22:26
+We just live it as it is. So not seeing not negated.
+22:35
+So that ends up being seen. Then we change these operators here with the Morgens also and then get to the second part.
+22:41
+Then we can go over here again. And basically do the same, so w or are all of it negate it is equivalent to.
+22:52
+Over here is equivalent to not the you and not are saying propositional logic, what we are just saying here,
+23:04
+but computing this complimentary equation is saying I will in this one over here,
+23:14
+I will not take the umbrella equals I am going barkha or the weather forecast is good and it is not raining,
+23:22
+which of course once we replace it with a propositional logic construction, it may all of a sudden end.
+23:34
+It makes perfect sense that this rule is true.
+23:41
+So with these,
+23:46
+we have the basics to work through a boolean equations and the algebra to modify and simplify them and what we are going to see in the third part,
+23:47
+third and last part of the lecture is how we can take this knowledge and use it to build logic circuits,
+24:01
+which is ultimately what is going to allow us to build computers.
+24:09
+So we'll see on the next part, but.
+24:14

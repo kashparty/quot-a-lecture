@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             name='Recording',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('panopto_id', models.TextField()),
+                ('panopto_id', models.TextField(unique=True)),
                 ('name', models.TextField()),
             ],
         ),
@@ -28,6 +28,7 @@ class Migration(migrations.Migration):
                 ('question', models.TextField()),
                 ('answer', models.TextField()),
                 ('timestamp', models.TimeField()),
+                ('votes', models.IntegerField(default=0)),
                 ('recording', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, related_name='questions', to='seapanapp.recording')),
             ],
         ),

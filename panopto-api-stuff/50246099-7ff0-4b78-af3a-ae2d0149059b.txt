@@ -1,0 +1,277 @@
+ID: 50246099-7ff0-4b78-af3a-ae2d0149059b
+Title: 3.5 Kruskal's algorithm
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 31/01/2021
+So now I want to turn to our second minimum spanning tree algorithm, Chris Cole's algorithm.
+0:02
+Now, Prem's algorithm we saw had a greedy strategy. It always chooses the shortest candidate arc, pursuing the greedy short term advantage.
+0:09
+And remarkably, that turned out to give us optimal results. The algorithm is guaranteed to construct a minimum spanning tree.
+0:19
+But what about an even greedier strategy?
+0:28
+At each stage we just choose the shortest are not yet included anywhere in the graph, not just where it will extend the tree.
+0:31
+So we can choose the shortest arc, not yet included, except when that would give a cycle.
+0:40
+Obviously, we don't want to include it in that case. And this is Chris calls MSD algorithm.
+0:45
+So let's see that on our example. So starting at the top left, we have the same graph as in our previous examples.
+0:53
+So now we don't have a start node. We just select the shortest arc, which is this one at the bottom.
+1:03
+So we include that in our forest. And then we find the next shortest arc, which is this one at the top.
+1:10
+And we include that. So I call it a forest stronger than a tree.
+1:20
+Because these arcs are not necessarily connected. And in fact, we have to decide, are forest constructions so far consist of this component?
+1:24
+The one two. And this other component, the three, four, which are not connected, as you can see.
+1:34
+Well, we have to keep on going. So let's look at the arcs of lenth four.
+1:40
+And we conclude either. But let's put the left hand one in.
+1:44
+So we include this one. And now we look at the other one.
+1:48
+Should be include that. Well, that would cause a cycle if we did.
+1:53
+So we reject that one discarded. Similarly, we can't put this five in there because that would cause a cycle.
+1:57
+So then we have finished. Of course, we could always drop out early.
+2:04
+Once we know that. We know that once we've got N minus one, ARC's added.
+2:09
+Then we have got a spanning tree. So here is the scheme for Crystal's algorithm.
+2:14
+So we're going to construct the forest F. And we start off with F empty.
+2:22
+And let's set are to be the arcs of the remaining arcs of G which will initialise to all the ox of G while R is non-empty,
+2:28
+will remove the arc of smallest weight from R.
+2:40
+And if this R.K. does not make a cycle then added to F, then we'll add it to F and we keep on going until R is empty.
+2:43
+There are no more arcs to consider. So either they've been added to the forest or they've been discarded because they made a cycle.
+2:52
+And then finally we return F and F will in fact be a tree.
+2:59
+At that point it will be connected. So what we note is that arcs are added in increasing order of weight.
+3:04
+And so a possible implementation strategy would be to work on a list of arcs sorted by weight in increasing order.
+3:12
+OK. So what about correctness of this algorithm? It's not obviously correct.
+3:20
+I think it's fair to say so. There's something to prove.
+3:24
+So our correctness theorem says that if G is I connected weighted graph, then Chris algorithm constructs an M.
+3:27
+S t for G. While the press strategy is very much the same as for Prem's algorithm, the details are different.
+3:33
+But our overall strategy is to show that at each stage K of the algorithm, we have a forest F some K, which is contained in T prime, some M.
+3:40
+S t t brime of G. And I've written up the details in the lecture notes, but I won't cover them here to save time.
+3:49
+Well, OK. So but so far, I've just given a very high level scheme, it's not that clear how to implement Chris Goals algorithm in detail.
+4:00
+So what do we have to do for our implementation plan? We have to do two things.
+4:09
+We have to look at each arc in ascending order of weight.
+4:13
+Well, we could use a priority queue here that would perfectly that would suit our purposes extremely well.
+4:18
+All we have to do is add all the arcs into the queue and the keys will just be the weight of the weights of the ox.
+4:24
+So a priority queue is a very obvious choice to make here. And we've seen that we have nice implementations of the priority queue.
+4:32
+So that would work fine. Alternatively, we could just sort all the arcs in ascending order at the start using some sorting algorithm.
+4:39
+We'll talk about sorting algorithms later in the course.
+4:48
+Well, then that leaves the more interesting issue, which is checking whether adding the ark to the forest so far creates a cycle.
+4:52
+And here our strategy will be to use so-called dynamic equivalence classes.
+5:00
+Well, we've heard it. We know about equivalence classes associated with equivalence relations.
+5:06
+But that was just static. We had a fixed relation. And so we had a fixed set of equivalence classes which were partition the set.
+5:12
+So what we want to do is to say that nodes will be in the same equivalence class if they belong to the same connected component of the forest.
+5:22
+Constructed so far. So if we go back to our example.
+5:30
+Here we are.
+5:36
+So at this stage here, clearly wanting to belong to the same equivalence class and three and four do so, there are two appearance classes.
+5:37
+On the other hand, if we go back to the very start of the tree here, then nothing is connected to anything else.
+5:47
+So actually, we have four covenant's classes, one, two, three and four, just the singletons.
+5:54
+And here everything at the end of the algorithm. Everything is in the same equivalence class.
+6:00
+One, two, three and four are all within the same connected component of the Red Forest or actually tree as it is now.
+6:05
+So that's the intuition behind dynamic equivalence classes. So we'll map each node to the representative equivalence class and we'll say that
+6:17
+an arc X Y can be added if X and Y belong to different equivalence classes,
+6:28
+obviously, of X and Y in the same quadrants class,
+6:35
+then the arc X Y will create a cycle because there's already a path from X to Y in our forest constructed already.
+6:37
+And then the here is the most interesting part is once we add X Y,
+6:45
+which is going to be connecting together two different equivalence classes, then we have to merge those equivalence classes.
+6:50
+And that's exactly what we saw in our small example. We started off with fluorocarbons classes and then they get merged and we eventually
+6:56
+end up with just the one equivalence class of the whole set of notes that the graph.
+7:03
+So let's see that working on a slightly larger example.
+7:09
+Just to clarify, so I'm going to switch over on to the whiteboard for this.
+7:13
+So that's our graph. And we want to construct. We build on minimum spanning tree using preschool's algorithm and the dynamic courant's classes.
+7:23
+So let's see what we do. So so I've copied the graph over here.
+7:32
+And these are the nodes. ABC D up to H.
+7:40
+And in. And these are two Taine which Cronin's glassware in will choose a representative and I will choose the least letter.
+7:45
+So if the class was ABC, I would use a to be its leader, basically.
+7:53
+So these are the leaders or the designated representatives of each equivalence class.
+7:59
+So at the moment they're all separate. We've got eight equivalence classes because we haven't done anything.
+8:03
+So let's now go to the next stage.
+8:10
+So what are we going to do? I reckon we're going to look, I think we need a different colour for this.
+8:15
+Fred, I think that's better.
+8:24
+So the first one we're going to add is obviously the one here that's the shortest one through the C and the F are going to be joined.
+8:27
+So that means that F is now going to. Will we see we cheque, first of all, that C and F have different representatives.
+8:37
+So they're in different classes so we can actually join them together and then C remains the leader of that.
+8:45
+But now F has got C as leader and then everything else is just the same as before.
+8:52
+He's. G h.
+8:58
+Right. What's the next one? I reckon it's this one down here. That's the two.
+9:04
+So less than that in. So that mean because we can cheque that A and G have different representative.
+9:10
+So G is going to now have E is representative and everything else gets.
+9:18
+And change to a age like that.
+9:26
+So this is the current state of the leaders of the equivalence classes. Next one to go in is this one here?
+9:32
+Three. OK. Because again, we can cheque that B and H have different representatives.
+9:39
+So H will now change to have B as leader A, B, c.
+9:47
+E! So how many classes have we got now we've got one, two, three, four, five.
+9:58
+And then there's a repeat. So there's just five of them left now. Which is the A and the D on its own.
+10:05
+And then these other ones that are paired up. OK. So what's the next one?
+10:11
+I reckon it's four. And we notice that the sea has got Leader C and D got Leader D.
+10:15
+So we're okay to add that one in. Let's do it. So that means that Dino Getsy is a leader.
+10:24
+And we can see we. Cheque out all the others.
+10:32
+So what I'm doing when I'm filling this up is that so far we haven't seen an example, but we might have to adjust other people's leaders.
+10:39
+So no d moved over to have C as a leader. Anything else that had D as a leader would have to move to use C as well.
+10:48
+So we'd have to do multiple updates. That's why we have to go down the whole column and get it right.
+10:55
+So what's the next one? So we've got a five, I reckon. So let's add that because A and B have different representatives.
+11:00
+Okay, so that says that B is now going to get A is A leader.
+11:10
+And then we need to go down the list and adjust any BS inch to a.
+11:16
+So this one also changes. And that's what I mean about having to go down the whole list.
+11:25
+Now, what have we got? I reckon we've got A six here because B and C have different leaders.
+11:31
+Well, B has Leader A. And C, has Leader C. So we can actually merge those two together.
+11:38
+And so that means that now and he sees become a B.
+11:47
+So I have to go down the list, change all these into BS and then everything else is unchanged.
+11:53
+So now we're down to two of Garland's classes. Hang on, that's copyright.
+12:02
+What did I do wrong? I said that Tony CS become BS.
+12:08
+Yeah. Okay. And they're any. These sorry CS should have become a.
+12:14
+So I made a mistake here, so let's go back. That on again, sorry about that.
+12:22
+So now we're going to say that any season began not become a BS, but they are going to become A's.
+12:30
+So let's change all the CS into A's on the GS for that.
+12:36
+And then E becomes that this C becomes an A.
+12:41
+And the E is still a loan like that. Okay, so what's the next one to look at?
+12:47
+Well, it would say that we put in this. OK, there.
+12:52
+And now we look at the remaining arcs. What have we got? We've got a seven here.
+12:59
+But that joines two A's together. If we look at H and like that.
+13:03
+So this one, we can reject it. We're not going to use that one.
+13:08
+And then we've got an eight here and an eight here.
+13:13
+Well, that one there that joins together to A's, the B in the F.
+13:18
+Both have A as a leader. And this one here, the we're joining together two different things because this has leader E and that has leader A.
+13:23
+So we can do that one. So let's do that one. So this will be the next one to go in.
+13:35
+We've rejected that one. And that will in fact be our final one.
+13:40
+So that means that the E now gets the same leader as F.
+13:45
+So this turned into an A that turns into an A.
+13:49
+And then everything else is a and. Well, we haven't quite finished because we've got.
+13:52
+Oh, I should have eliminated this seven as well. And so then the ten and the eleven, we can eliminate them as well.
+14:00
+And the nine. Sorry I should have got to the ninth first. I think I would've done a better job here if I'd ordered all the arcs at the start of this.
+14:12
+So I'd probably better practise would have been to write down C, F and then the e.g.
+14:22
+And the B.H., etc., I like that.
+14:33
+I think I would have done a better job, more systematic job if we just write them all down in order at the beginning of doing this example anyway.
+14:37
+So now we've ended up with a minimum spanning tree and we've shown the dynamic equivalence class method.
+14:46
+But what we've seen is that basically we have to go through about N minus one stages here and we have to update and values here.
+14:56
+So we've got a sort of order N squared amount of work that we're doing.
+15:06
+So merging these equivalence classes and update it, well, it's not so much the we can cheque.
+15:10
+Whether or not there are two classes are different fairly easily. We just look up the leaders.
+15:17
+But then the merging,
+15:22
+that part is quite intensive because we have to do Bego of N steps in doing the merge because we have to go down the list and do the correct updates.
+15:23

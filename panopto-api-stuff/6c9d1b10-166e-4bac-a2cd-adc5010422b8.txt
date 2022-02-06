@@ -1,0 +1,1883 @@
+ID: 6c9d1b10-166e-4bac-a2cd-adc5010422b8
+Title: Lists II
+Category: Haskell
+Lecturer: Anthony Field
+Date: 18/10/2021
+Right. OK, so I'm going to make a start. Welcome back.
+0:17
+So we were looking at how to define functions over lists in Haskell and the way the trick to doing this is this idea of pattern matching,
+0:21
+which I actually introduced in lecture one.
+0:32
+And the idea is that we can now define functions with multiple rules rather than just having a single rule.
+0:34
+And the idea of each rule corresponds to a separate pattern on its input.
+0:40
+So, well, when we're looking at processing lists, for example, we know from out there,
+0:44
+we know from our previous discussion about lists that lists are formed from two constructors.
+0:50
+We take you back to the list of form from two constructors, the empty list and the little column, which we pronounce columns.
+0:57
+So if I pass a list to you as an argument to a function and you look look at that list and you inspect it, you will see one of two things.
+1:06
+You'll oversee the empty list or you will see a list of the top. Most of the others, you'll see an empty list of non-empty list.
+1:13
+So when we're writing functions to decompose lists,
+1:19
+the idea is that you pattern match on the list and we'll see different ways of doing pattern matching for different problems.
+1:23
+And the pattern matching serves to basically distinguish those two cases, the empty, non-empty cases, and also to name the components.
+1:29
+If the argument is a conde's using this little fella in here, then the pattern matching the side effect.
+1:37
+The pattern matches the name, the two arguments. So we started looking at some examples.
+1:42
+What I'm doing just to remind you, I'm going to go through these.
+1:46
+These are some of the more commonly used functions which you'll note will come to love.
+1:48
+So I'm going to show you one way in which they can be implemented.
+1:54
+It isn't necessarily the same way you'll find them in the prelude, but they make them like quite a nice little example.
+1:57
+I'm showing you how to write functions over lists. So that's where we were at.
+2:04
+So I showed you how to define null. So just to remind you what the pattern matching story was, here's the functional type signature.
+2:09
+So you're going to give me true for this 217 false. Otherwise, there's really only one way to do it.
+2:17
+Well, you could use it. You could use a gun, but I don't.
+2:22
+So if I've got an empty list and the left turns to remember the left hand side of an equal, there's always a pattern.
+2:28
+The right hand side of an equal is always an expression.
+2:33
+So if you see in your programme, if when you're evaluating the programme, you see the question, no empty list that will match this rule.
+2:36
+And if the list is non-empty, it won't match this rule. So if it matches, that will be delivered.
+2:45
+The answer true. And if it's not empty, we skip to the next.
+2:50
+So the idea of pattern matching, I'll say this here now we'll split it up again.
+2:54
+Again, the pattern map checking works from left to right within a rule.
+2:58
+In this case, there's only one arguments, but if there were two or three arguments, we we would try to match left or right.
+3:03
+And if they all match, then we commit to the right hand side.
+3:10
+And if we fail anyway, we just skip to the we set down the programme one line until we find the next rule.
+3:12
+So it's left to right, top to bottom.
+3:18
+It's extremely important you understand that, because if you don't understand that, you it's quite easy to make a mistake.
+3:20
+All right, so in this case, what if he's not if he fails to match the first rule and must now be the case,
+3:29
+the list was non-empty, which is bound to match the second one, in which case we're going to deliver the answer.
+3:35
+OK, so just writing the patterns out sort of routinely without doing any thinking about it, we might end up with this definition.
+3:40
+And then you start it and you think, wait a minute, I don't need either the X or the X is in the second.
+3:46
+Well, I just need to know that the list was not empty.
+3:52
+And if I got this ball, I know the list is not empty because if it was empty, I would have matched already with the first clue.
+3:54
+So we can, in fact, replace the. The second line or the second rule here, which is something says, no live any or all of this is false.
+4:01
+And in fact, why bother to make the argument at all? We don't we don't we don't need the money.
+4:08
+We don't need the X. We don't need the X. So you can actually replace that rule with that.
+4:13
+And that's the sort of idiomatic way of writing a rule where we we don't we don't care about or wish to name any other,
+4:17
+they argue, and towards components. Just use the underscore, then please don't use underscores and identifiers.
+4:25
+This is not idiomatic Haskell. So don't have a don't have a variable called.
+4:31
+Exploding eggs or something like that? Yeah, so the typical style in high school is that you can case so you begin each new word with a capital.
+4:39
+So that would be a better way of watching it if you really wanted that sort of identifier.
+4:49
+So don't use I don't use on this because I have a slightly I have my own reasons why.
+4:55
+And it goes on to a good idea in Haskell programmes. When we come to do our functions.
+5:00
+I'll explain that to you. Come back to that. All right.
+5:03
+Let's move on. So that was how we looked at head. So now it's similar.
+5:08
+You know, what do I do if I see an empty list where you can't take the head of an empty list is an error.
+5:12
+So in this case, we're going to throw our imprint a suitable error message.
+5:16
+And so assuming it's not empty, then I come down to this. Well, now it's running at the Patni do indeed they want to.
+5:21
+They are doing the I do need the head element here. So having a pattern matched, if the pattern matches succeeds,
+5:28
+then the head of the list will be called X and the terrorists will be called X is that's the side effect to the pattern matching.
+5:35
+So if I need the head on the right hand side, which I do here, I'm just referred to it by X so don't, don't use the will come back.
+5:42
+So I say don't use no head and tails as a substitute for pattern.
+5:48
+But ironically, when you're defining the head function,
+5:53
+you actually have to use pattern matching because there's no other way of decomposing this list.
+5:56
+You couldn't, you couldn't write head on the right hand side and the repercussions are entirely similar,
+6:01
+except when you take the tail of something in form X convex as you return the axis rather than the X semantics of tile.
+6:07
+OK, right. So I think that's where we got to. So I'll carry on then.
+6:15
+So here's another really useful function. How do we calculate the length of a list?
+6:19
+Well, let's just do what we know and love that takes a single list argument is polymorphic a list of any things that matter what the items are.
+6:24
+This will work the list of its list of floats, whatever. So ask the two questions instead of the list.
+6:32
+It's either your knowledge, what do I do? If the if the list is empty, you give me a problem which goes to the empty list.
+6:38
+What is it? Zero. There are no elements in an entity. So that must be right.
+6:45
+And you can see what I mean when I when I said hinted the other day that writing
+6:49
+because the functions on the list is actually much easier than writing, because it functions on numeric types,
+6:52
+because you list and that's sort of left left sided so that the head is of the left and in the table is the the other elements of the right.
+6:56
+So that pretty much every single time what we do is we pattern match on the list is not anything.
+7:04
+We write a pattern, something like this, and we notice that the pattern matches two is tonight in the head in the title.
+7:12
+So it almost every single time, I think almost routinely we're going to focus on the title.
+7:20
+So you almost do that automatically because there's nothing else you can sensibly do.
+7:26
+So I think what comes back, that's the length of the list I started with,
+7:29
+except just missing the fact that the next step is I'm one out, so lose the patch up.
+7:34
+The answer. I have to just put a plus one at the end and then.
+7:38
+But know you can obviously do things like, you know, what's the length of the list, one, two, three, four.
+7:43
+Well, what I've actually said is that, you know,
+7:48
+so you think of the pattern matching sort of decoupling the head, giving me the tail as a Red Cross on the tail.
+7:50
+And that gives me of course, that's going to give me three. That's the leap of faith when you're actually thinking about designing the function.
+7:56
+And now, of course, that's one out. So I just put the one back, you know, and you can see it's actually quite if you're stuck in the mud,
+8:01
+maybe go to the GHC command and control these things out. You know, just take the head of records and see some of the things you get or if not,
+8:09
+write it on a piece of paper, which is what I'll do on the virtual whiteboard in just a moment.
+8:15
+So that's the function. OK, so I'm interestingly here.
+8:21
+I don't need the X here, do I? So in fact that that's that rule that I could have written.
+8:26
+That rule is the length of I don't care, I just care that it's non-empty.
+8:32
+And I could say something as well and plus the length of one plus length.
+8:37
+The axis. If you can see that, so I would write that actually, because I mean, I can name the headaches, but I don't use it on the right hand side.
+8:43
+So therefore, that's that's what the underscore. All right.
+8:55
+Right, the next one is the function, so says says me, is something an element of a given list, so is one an element of this list?
+9:02
+And the answer is false. And if I ask if I put one anywhere in this list and I ask the same question again and the answer is true.
+9:12
+So the one could be anywhere, that one could be at the front. If there's more than one, one doesn't matter.
+9:20
+We we stop as soon as we find the first one. And if I put, say, a nine on, it doesn't matter where the element is.
+9:24
+So it could be at the end. We don't care. The function will just work.
+9:30
+So we should we shouldn't you should never have to say to yourself, very well, oh, if this is the thing I'm looking for, if there is a special case,
+9:34
+if it's on the end or the beginning or in the middle, you know,
+9:44
+the nice thing about doing this recursively is you just write down the rules and it'll work regardless of whether.
+9:46
+OK, so how do we write this function? Well, just think about the title, first of all, because I'm going to.
+9:52
+We pause the other day to think about these these type classes, these these contexts.
+10:01
+So just while we're at it, this is the only one of the functions I pulled out which actually has this this context.
+10:06
+Let's just you can now see what it says. It's it's you can be at something and a list of some things at the same time.
+10:13
+I'll just to see if I can find something in that list and if I can, the answer is true, otherwise it's false.
+10:19
+The answer must be a boolean. Then you think, well, is this polymorphic, you know, in the sense that it works for.
+10:24
+Absolutely. Anyi You think, well let's write the function and have a little look.
+10:30
+So ok, same. OK, now there's two objects. So the first thing here is the item I'm looking for.
+10:34
+I'll call that X. Why not. And the second, the second item is the list in which I'm trying to see whether I can find that X.
+10:41
+So if I, if I hit the list, if you ask me is the accuracy answers false.
+10:49
+And again, I don't need the X so I could replace this X with another school.
+10:55
+And that would be wouldn't change the meaning of the function.
+11:00
+So, all right, so let's supposing this painting doesn't match, it must be the case that the list is non-empty.
+11:04
+And the reason there are no restrictions there is because this is this is a variable burbles match anything.
+11:12
+So if it doesn't match the first one, it must the fails to match the first rule because the second argument wasn't empty.
+11:18
+So in that case, it must be something of the form y while away Gonzalez's very good name.
+11:25
+Right now, here comes the question.
+11:31
+Is X an element of the list which goes Y comes something with another with a list with what the head Y is in the title.
+11:33
+Well the answer is maybe. So don't worry about the whys.
+11:40
+Let's just look at the that the head, the y the thing at the head of this effort X is why the answer is true immediately.
+11:44
+So one way I could write this from mission is to go up onto the.
+11:53
+So let's come down here to one with one thing I could do here is I could say if if I say is Ellem is X and Y Y.
+12:00
+So what am I doing is to say, well, like it say if X equals Y problem and if X equals Y, then the answer is true.
+12:11
+I found it. And I don't care about the whys at this point.
+12:23
+I don't care whether there's 100 million more X in what I've found one and I can return true otherwise else because I'm not saying anything else.
+12:26
+OK, so the X with the why isn't what I'm looking for. That's just the way then.
+12:35
+This is because it's the tail. This is what we're going to do time and time some time again.
+12:39
+So I could like that and that's perfectly correct. But let me just put a little comment so I need to come back to it.
+12:43
+My programme Campell still. Could come back up here.
+12:52
+There's another way of writing it, isn't that because I can use your phone so always the one that gives me or is true if
+13:00
+either the arguments or both of them are true and it's only false if they're both false.
+13:10
+But so if instead I reply, I use that condition with eight shorter is more sarcastic.
+13:14
+And actually I'll give it. It's clear because what it says is X is an element of wakens was if either X or Y in which
+13:18
+case I an immediate return to true or and let's assume it isn't what X is an element of Y,
+13:26
+you know, what was it most read semantically exactly the way you'd expect it to.
+13:32
+So it's actually I think, rather nice at this point. But he has exactly the same as that function up on the top screen.
+13:35
+So that's why I think you should write it.
+13:42
+A couple of things to point out here.
+13:46
+One, right then this comes back to the question, is this function polymorphic or is it sort of constrained in some way?
+13:47
+So here I'm asking whether X equals Y and what is the type of X and what's the type of what?
+13:55
+It must be the same because I'm using X equals and they're both of like I want, so.
+14:00
+I'm using the equals function, and that suggests that the AI can be any AI so long as the AI is comparable under quality.
+14:07
+And that's what this contact is saying,
+14:17
+so the contact tracing is not actually a universally polymorphic function that I probably drew this diagram the other day.
+14:19
+You think it is a universe of of all types and we actually work for all day.
+14:25
+And in there, those demis, which are members of the ecology, this is the working class.
+14:31
+So this is a set of types in here, this is a type of t wasn, t t stubbles, list of buildings and so on, which we can compare.
+14:38
+And we discussed the other day there are some types out here.
+14:45
+Which are not comparable and remember what we once thought of type, we can create, it can't be inside.
+14:49
+What was that special case? What can we not compare for quality to the functions?
+14:56
+Functions. Somebody. Now, we've got a bit of a problem here is someone shouting because I cannot hear a vocals.
+15:05
+Hmm. Oh, yes, well, congratulations, teams is muted, my speaker both on teams, so somebody want to shout that again?
+15:23
+It was functio functions. Thank you very much. That would explain why I was getting silence on this.
+15:32
+I don't know what does that yeah. So anything, anything who's tight out here is something of the form to be that's a function type.
+15:41
+We'll see later the functions of first class citizens. And and that's the story of higher order functions.
+15:51
+We're not going to doing that today. Right. So that's why the time signature is the way it is in here.
+15:56
+It's so debateable provided I is a member of the working class.
+16:07
+OK, OK. And when you see that, that's why. All right.
+16:13
+One other thing I wanted to point out is that supposing the list here, this list like was supposing that's got a hundred million elements in it.
+16:19
+You might think it's OK with me, you might think, well, supposing at the head of the list I spotted X, supposing that's true.
+16:28
+In other words,
+16:38
+do I have to process the rest of the list to see whether there's an X in one of the when any of the other 100 million minus one elements?
+16:39
+The answer is no. This short circuits. In other words, this all has the property.
+16:47
+But if the leftmost argument is true, I stop immediately.
+16:52
+And the reason I can stop immediately is because I know from the semantics of
+16:56
+the all function that true anything can work true or anything in here is true.
+16:59
+So if I know that the first argument is true, I don't have to look at the anything at all and.
+17:12
+So in most language and languages have the short circuiting property.
+17:18
+It's very convenient because it cuts down ways to computation the Haskell when we
+17:22
+look at the definition of what actually comes for free because of lazy evaluation.
+17:26
+So when you come back to the magic whiteboard, you know, there's a there's a function.
+17:31
+There's an operator here. It's two arguments is one here and one in here. And we know that arguments are not evaluated.
+17:35
+Before you call the function, we first of all, call the function and then decide whether or not we need the arguments.
+17:40
+So the fact is, is this anything in here which could be a massive computation,
+17:45
+generating a massive boolean or a boolean from a massive data structure?
+17:50
+Should we say nothing's going to happen until the author decides it actually needs it?
+17:54
+And in this case, it doesn't need it because the first argument is to Russia for your question.
+18:00
+I want to go back to that, go back to the instance you Drew of the victim classes in Detroit that are not included in it.
+18:06
+I just wanted to ask you, if I'm mistaken,
+18:15
+thinking that a floating point is also not considered amongst the AQ classes because you can't compare them for quality or am I mistaken?
+18:17
+Which one, sir? So you decide on the functions can be compared because they're not part of the classes are floating,
+18:25
+but it's also part of those because they can be compatible. I just don't have the sound very good, so let me just reiterate this.
+18:31
+This is the set of all types. This is the think of think of the equal clause, introducing a set of types with certain properties.
+18:41
+In other words, the property here being that you can compare that under equality. So there's a set of types.
+18:49
+And so certainly we know that function types sit out here.
+18:53
+What was the other thing you were suggesting? A floating points floating point are now actually floating floating points.
+18:58
+You shouldn't you should never really ask whether, you know, if I've got two floating point numbers, X and Y.
+19:06
+Yeah, you can certainly do that. I mean, the proof is in the pudding, isn't it?
+19:12
+So I can say is four point five equal to six and put it on.
+19:17
+I if I typed typed it correctly and that's false.
+19:21
+So I can compare floating point and it's just that it's a dangerous thing to do because of rounding errors,
+19:27
+but actually that the programme will never stop doing that. You know, that's not its job.
+19:33
+It's your job to determine whether or not that's a safe operation.
+19:37
+So in other words, you can get it to give you true, because 4.5 isn't the point for.
+19:40
+But of course, you know that. What is this my come with works that is two equal to the square root.
+19:45
+Two squared false, yes, because of rounding errors so that that problem today with comparing what is left of the programme to worry about,
+19:53
+OK, I got to tell you, it's a good point. You might imagine it says, you know,
+20:05
+now I know this is risky and I'm going to stop you making mistakes by not allowing double's and float's to be members of the eco class.
+20:09
+But actually, that's that really is going that's not that it's not the type system's job to impose that dummy.
+20:17
+You've got a question.
+20:21
+I'm was just wondering, how do these functions terminate like they got to the last element and using the analyst using the alarm function,
+20:23
+how would it terminate the conflict?
+20:33
+Your question is here, OK?
+20:37
+Yeah, because eventually if you imagine this happening, so I start off with the one, two, three, four, one about let's do it, let's just do it.
+20:41
+This is great. A good thing.
+20:49
+But just as I said, if it if you ever stop having a thought experiment, don't you don't want to go straight to JHU and find out.
+20:50
+OK, so I say, what's the one, two, three is is is let's say five enrolment's one, two, three, Beatriz's three in a minute and the answer is.
+20:58
+OK, so how did that work. Well I remove the head.
+21:06
+And I said something like, is five people to one, you can actually do this if you really want and or at five to three and that gives me the fourth.
+21:11
+So then I know that's false. So so the court does that.
+21:21
+Yeah. And then obviously two isn't equal to the recursive call.
+21:24
+The next recursive call will do that and five is three. So the next recursive call will do that and that gives me false.
+21:29
+So that's, that's how it terminates. Yeah. And if it happens that if I ask the question is three an element of one to five, that gives me true.
+21:34
+And the reason why that gives me true is because I start after Iowa isn't a one, so it doesn't equal to one.
+21:44
+Three is negative one. So it isn't equal to two either side because then I get that.
+21:52
+And that's true because it's. Of this role, this bit, because then the X and Y matches that OK is thinking.
+21:57
+All right, let's move on then. So next function is The Break-Up, is that an old hand might be teams doing its thing.
+22:08
+All right, let's look at the indexing operation.
+22:20
+Now, this is this is the one that allows me to index into a list, so I call it right.
+22:25
+So the type signature says you give me a I guess the type the type is you give me a list of things.
+22:31
+I don't care what the things I list based and you give me an integer that is
+22:37
+an end and I'll give you the if that's and I'll give you the end of the list.
+22:39
+But just remember that we start at zero here. So T at zero.
+22:44
+B with capital t t o. Oh well if the index is too large we throw an error message and also if the index is negative,
+22:47
+we should throw a different error message so that you what you find is you rummage around.
+22:55
+The prelude is that when they were designing the prelude functions,
+23:00
+they had to make executive decisions about whether to throw error messages or whether to let things go.
+23:04
+We'll see an example of a variation of this in a minute.
+23:09
+But in this function, if the index is too large, if the index is beginning like it aborts the programme, because I guess there's nothing obvious.
+23:11
+It can't. You can't it's not obvious what to return. So it doesn't even try to guess.
+23:20
+Likewise, if you give it a negative index, it doesn't know what to tell, but actually gives you a slightly different message.
+23:26
+Now this the folks I'm going to say is deliberately not quite right and the quizzes to see how we might fix it.
+23:31
+So it looks OK. But let me just talk you through it. Look, a lot going on.
+23:38
+Let's begin with the first line.
+23:41
+A while back, somebody said, how do I can I define my Olympics operators like someone who wants in time to buy those will be built in.
+23:43
+Yes, you can. And this is how you do it. You put the name of the operator here, but you put it precedent's there.
+23:49
+Do you remember that every operator has a precedence under associativity. So what was.
+23:55
+You can probably find out. Tell me something about the plug. Tell me about give me information about the function over the plus function is what.
+24:02
+Well that's President six and this is L is not a one that tells me it's left associative.
+24:12
+And I say what. Tell me something about the power and function and that says, ah, that's got five presidents eight and it's right associative.
+24:20
+Yeah. So when you come to find these operators you use the word Excel for example.
+24:27
+Right. So if you leave the L and they are off, you just were infix immediate.
+24:33
+Doesn't have any associativity. Some operators that have that property, again, that's the question.
+24:37
+That's the name. And then you just like any normal function, except you have brackets around it to turn into a normal function,
+24:43
+says, OK, but at least when you're defining the types. So what is the type of plink here's the list of a 20 to a.
+24:48
+So I took a bullet right now so I could put these arguments in any of these rules in any order.
+24:56
+Feel free to discuss how to tidy this up in just a minute.
+25:05
+So just to just by way of variety, no particular reason why did this.
+25:09
+I'll get to put the non-empty list first, the patent first,
+25:16
+so you give me a non-empty this with the head and X is in the tail and you want me to index that position and what do I do?
+25:19
+Well, if there is zero, I can tell you the answer immediately is X.
+25:26
+Why is that? Well, because if you give me a list A, B, C, D and I say clink, clink it at zero.
+25:30
+Oh I know the answer straightaway. It's the head of the list.
+25:35
+And of course we just discovered that if I tried to do that, then I'd get an index to large error message.
+25:38
+I must remember to sort of somehow. OK, so that's one that's, that's, that's, that's kind of like the base case, the recursion.
+25:46
+Supposing it is positive.
+25:55
+All right, so I've got a non-empty list with the positive X, and I know I know it's not a zero and if it's positive, I've got to try again.
+25:57
+So what I'm going to do is I'm gonna check the Haddaway, which is the X, and I'm just going recurse into the tail.
+26:07
+But when I go to the if I'm looking for the if I come back to the white board, if I've got some list X one, X two.
+26:11
+Like zero here as well. Up to some extent, and I'm looking for the Kate element, so I want to index down to this little fellow in here.
+26:20
+Yeah, well, if I started with Kay being my index, well, and I know it isn't Kay isn't equal to zero.
+26:30
+I have to sort of throw that one away and then I have to recurse into the tail.
+26:37
+Well, if that distance was K, this distance here must be K minus one,
+26:41
+so I must remember to stretch subtract one from the index if I discard the head and push the recursion into the tile.
+26:47
+So that's why there's an end minus one in here. The thing is, you don't have to think about how it's going to do it,
+26:53
+you don't worry about unwinding the recursions stock or will tell you just think of it mathematically.
+27:00
+It's OK. I've got to think, unless the list is positive to the nonentities, well,
+27:06
+I'll just subtract one from the index and then eventually I'll find hopefully find the element.
+27:12
+Now, of course, if if you if you give it a negative index, then it throws this error message.
+27:17
+And so that's those are the three cases for the non-empty to equal their lesson because there are no other cases.
+27:23
+So the only other thing it could be is that the list I gave, it was empty. So now I think there's another rule because I'm using pattern matching.
+27:31
+This is this one rule here, which is all this law is the single rule for the politics and another rule for the empty case.
+27:37
+Well, you give me any list which is empty. I can't index it.
+27:46
+So I'm going to throw an error message, and that's that's that's where this thing pops. OK, Jinyang, you have a question.
+27:51
+Yes, when talking about the complexity, it seems I take Oh Unter like located at home if I told you that.
+27:59
+Yeah no this is that this is an artefact of lists.
+28:10
+You know, if you build a data structure, one element of time using Conde's or using some sort of construct,
+28:13
+a different languages have different mechanisms then I am well with a list.
+28:17
+Yeah. I have to trundle down the list. One element that the times to to actually get to the right index.
+28:22
+So in fact if I come to the whiteboard so I surely you can think of lists and Haskell has boxes and arrows.
+28:28
+You know, so the box contains the items in the hours contain a reference to the next item on the list, so there's really nothing else you can do.
+28:35
+If I want I want an element down here somewhere. I've got to trundle down one at a time and chase those points down,
+28:44
+which is basically just because precaution and pattern that you achieve the same effect.
+28:51
+Now, if you've done all the programming in other languages, in fact, you can do that in Haskell.
+28:57
+Well, of course, there's a thing called an array.
+29:00
+So Haskell has raised as every language and array is a contiguous block of memory rather than lots of little bits or glued together.
+29:02
+So an array of perhaps the elements are one, two, three, four.
+29:09
+It doesn't matter what they're called up to. N Well I can do the same thing with an eye to N, but the thing about arises because they're contiguous.
+29:15
+If you tell me that location is a bit like, you know, straight numbers in road, you know, well each house is 10 metres wide.
+29:24
+And if I know where the first time I see I can tell you where the ten houses,
+29:32
+I just use my tape measure so I don't have to sort of go knocking on the door saying, can you tell me where next door is?
+29:36
+And they say, yeah, it's just that way. And you can say where next door is, which is what you're doing with list processing this thing.
+29:41
+You don't have knock on doors. I know exactly where the ten houses because I got to take measure.
+29:47
+So, so indexing into arrays is a one. Constantine and indexing to any sort of list type structure, it doesn't matter about the language,
+29:51
+it's own, it's a fundamental problem was actually OK, no pun intended, if I want the.
+30:00
+But the point is that that I may want this one.
+30:06
+So however big my index is, that's how long it takes to rationally so you.
+30:12
+I just want to know where they are in, let's say, employees and a negative and.
+30:21
+You're very faint, but I'm going to come to a negative end in just a minute. I have not got a question to shout it out again.
+30:29
+Jinyang is an old hand. You've got your half hour down hand.
+30:35
+So the first line of the code, the infix, infix, one nine, exclamation, exclamation, the line is what?
+30:46
+Again, the president's. So is that like nine is the president's?
+30:53
+Yes. That's right. So is there like a scale for this?
+30:57
+I'm sorry if I am asking it again. Well, there's a magic table, so I'm looking at my high school book on my show, and I know it's got the table in it.
+31:04
+If you go to high school dot org, you'll find there there is a table I don't have it in.
+31:10
+I should always have this out. There is a table of all the operators, the private operators, whether associativity that precedence.
+31:15
+And you can see why. You can see why Haskell brackets things the way it does, because the president tells it how to bracket essentially.
+31:21
+So when you introduce your own operations, you can decide, well,
+31:31
+I want this to be buying more or tighter than I wanted to bind tighter than any other operator.
+31:33
+I'll give you a very high precedence or or the opposite, which I'll give it a very low precedence.
+31:38
+So, yes, I guess a good question is a big number of higher precedence.
+31:46
+You know something? It does depend on your programming language, but it has to be close if in doubt.
+31:51
+You can always ask you, what did I said? Tell me something about the that's a high precedence operator and that's got precedent.
+31:55
+Say it. Whereas something like Conde's what's the presence of columns that's much lower.
+32:03
+That's about a five. So some languages.
+32:09
+No, the number one actually is a higher. Is that right?
+32:13
+Yes. The first line is how you define an operator. So if you want to make an operator, this is how we started it.
+32:17
+Yes, yes. Yes. And the symbols, you're allowed to use these ones here.
+32:23
+So you've got to make your operators up from a finite set of symbols. OK.
+32:27
+Cooper's right now, I just want to look at this programme and is there any way in which we can.
+32:36
+Well, is there anything wrong with that? And I guess to answer that question, you probably need to play with let's just try this one.
+32:43
+What do you think that's going to do? That says index to large growing, but.
+32:57
+The question so this is my version, this is this because I'm using our version Isleta, our version, our version of this function, if I.
+33:07
+I'll just come out of G.H., you know, I'll go in and just this is the vanilla version of GHC if I ask the same question.
+33:16
+It's a dope is a different area, a different error message, right?
+33:24
+So. That means it's just something not quite right about this definition.
+33:28
+Can you see what it is and see how to fix it? I think it's have to do this because I'll show you sort of very interesting.
+33:35
+When we ask for a negative index for empty in the lower part of March, there are no conditions like that for zappy.
+33:45
+Yeah, yeah. So we need to produce a guide, I'm guessing. Yeah, well.
+33:54
+In other words, if I if I trundle down to this case because the rule about fails, then I guarantee this.
+33:59
+But there's not a thing here that said the expectation is there.
+34:04
+So I could put another guard in here that says if any is less than there are the negative index that was indexed to load,
+34:07
+but that would then be repeating code. But I can we can make it on the bottom.
+34:13
+Mhm. Yeah. But it's so empty and if we index all I guess the negative.
+34:17
+And so perhaps we'll do that. Let's just see if we can find the functional StreetLink, isn't it?
+34:26
+Whereas where is it? So let me, before I forget, do anything, let me come alone, make sure I've got the right tool,
+34:34
+because I basically what I'm doing is I'm reinventing the prelates to make sure I've got my full loaded up before I start testing it.
+34:41
+OK, so that this is the definition in the slides. So, yeah, the problem is that there's nothing here on this last line that checks for negative index.
+34:48
+Is that. So and so what I was saying, I could do something ghastly like this, I could say, OK, well, this is how to hack your way out of a crisis.
+34:55
+You just put another one in there. And then I'll just copy this.
+35:07
+Negative index otherwise and so on, but no on anything.
+35:14
+Now I've got two lines that the same material, so that clearly isn't what you want to be doing.
+35:23
+Sorry. Oh. So I've got my finger hit the.
+35:28
+Let's get rid of that, so I just forgot the much I'm on the laptop.
+35:37
+She's got the broken controller. So, yeah, so you don't really want to be doing the hacking that's just hacking out of a crisis.
+35:42
+But why don't we do this? Why don't we put that one up here? So that's and in fact, we can say, well, wait a minute, wait a minute.
+35:50
+It doesn't matter whether the list is empty or not empty, does it?
+35:57
+If I've got absolutely any list with a negative index, I want to print the error message.
+36:01
+So what I could do is say something like this, like I say, underscore within.
+36:06
+And I could say if and is less than zero, that's now cool once and for all, all the negative cases just out of the list is empty or not empty.
+36:15
+And if you're worried by the underscore the ontology of everything, I can name it if I want to.
+36:25
+But I don't ever need that the is on the right hand side, so if I could just do something like that.
+36:32
+So that's supposed to be negative index, isn't it? But so that's the message I want there.
+36:39
+So if I do lose the negative index, that's the one I want there.
+36:46
+So presuming I want that one summer as well to think about where that one goes, you just put that down the bottom, out the way to the time be right.
+36:52
+So at that point, I've got that so I can see now I can take I can take that away because I now know that if I come into the second rule,
+37:03
+it must be the case that the index it isn't negative, it's either zero positive.
+37:11
+So I now know I just need these two guards in here.
+37:15
+And I've got myself a total function for the police, for the case where I've got a no, Nancy, I'm on a. list.
+37:18
+So that's all good. So we're just missing the issue now.
+37:23
+Where I've got the index is too large and the index being too large is always the case where I end up with an end to list.
+37:26
+So an empty list with absolutely any index. It must be the case. Has it gone?
+37:33
+It's just put up there. Oh, so we've got something like that.
+37:38
+So that's actually. But.
+37:44
+That's probably the better way to write it. So, in other words, have one line of code to catch all the negative cases,
+37:50
+a line of code for the empty case, we say, well, if it's if it's any zero or positive.
+37:55
+I mean, just just to double check that control to write one.
+38:01
+So if I've got an entry level and I try to index that three, for example, I do.
+38:08
+I want that error message and somebody with zero. Next to large.
+38:14
+So that's a that's a rather nice refactoring, the nice of refactoring the programme.
+38:21
+So I've got any repeated lines of code and when I'm reasonably biased in my head and I come down to this third rule here,
+38:25
+and I know at this point that I know that the list is not empty.
+38:32
+So that pattern match will always succeed. And I know that the end is either zero or positive, too.
+38:35
+And therefore, I only have to test those two cases in order to to complete the definition of the function.
+38:42
+Good. But that's just.
+38:50
+She's just going to undo all that lot. So it's come down to where we were.
+38:56
+Oh, like you have a question.
+39:04
+Yes. Oh, see the function, the calibration line where you have brackets, double exclamation mark.
+39:07
+So if you put brackets around the neighbourhood, function does not indicate that function is inflect inflects function.
+39:15
+So the reason I've done this here, by the way, is this. This is an operation so that high school will now expect it to be used with its
+39:22
+argument sitting left and right a bit as in like just like you with the plus.
+39:28
+But it's just a little it's just a thing about Hasker. When you come to write the type signature for an operator,
+39:33
+you have to convert it into a prefix function before even before you're allowed to write the type signature.
+39:39
+We also use this feature all like our own functions.
+39:45
+Well, you wouldn't need to with any other function, would you? I mean, if you come and look at. Oh yeah.
+39:51
+Oh yeah. If you look at the hedge function. Right. There's no reason at all why you turn that into a if I put brackets round it would be much, much.
+39:55
+I don't know. You can try it yourself. Is that the centre.
+40:05
+Is that my investment tax are putting a bracket around the definition of a downturn rather than the name of the function?
+40:06
+I suspect it probably won't like it at all. OK, so you you've got a question of no, that's OK.
+40:11
+That's an old hat, right? OK, great question.
+40:21
+My question is, like a little bit more I want to know. Carry on.
+40:25
+Yeah. So so you can only put brackets around functions that are already defined in the Haskell.
+40:30
+Is that what you were saying?
+40:39
+So you used bracket, you kind of did this in the first session, so, you know, you can do like six plus seven, so yeah, you're right, yeah.
+40:41
+Plus is known to the system.
+40:51
+So but you can take any operator known to the system and you can convert into a prefix for people, but in brackets round it just turns into it.
+40:53
+So it turns out of into a prefix function. And so you can, you can use it like that.
+41:00
+OK, so it's exactly the same as soon as I got it. So I can say, what is a C?
+41:06
+I see the two and tells me a B or I can use it in its prefix form and I can say if you give me the ABC now and give me a chance to use it like that.
+41:12
+OK, but like C we like when you are redefining the function, would you redefine the function for this whole Haskell programme as well.
+41:25
+Well this one might not be defining it actually or not.
+41:39
+Oh, sorry. Right. OK, let me make one thing clear. So when you come look at this programme here, what I've done is, OK,
+41:45
+let me just say this might be speculated, but not at all for the day, I think, in order to read.
+41:51
+Yeah, you're right. I'm sort of redefining these functions just so I can illustrate them to you right now.
+42:00
+If I were to do that willynilly. And Haskett would say, but hang on a minute, there's already a function called you're redefining.
+42:06
+It would object to it. Oh, we would say some, because I don't know which one you mean.
+42:12
+So what I've done here is I brought the prelude in explicitly by saying for help, but I've hidden all the functions I'm about to redefine.
+42:16
+So this is a little trick to allow me to redefine all this without getting nine clashes.
+42:23
+So I could I possibly mentioned that earlier, but I guess I wasn't clear.
+42:27
+So from now on now I can define even length now without getting a stupid error messages.
+42:32
+But normally you would be able to do that. Yeah, if I all one minute.
+42:38
+Well, I haven't got this. I'm not going to have to put a prime on the end of the name, but so would do perhaps we'll do this.
+42:41
+One of them will break a short break anyway. So the last one before the break would be append.
+42:51
+And actually you've seen append already haven't we. So I'll give you some hints last week about and you might even have used it in the lab.
+42:57
+So if I've got a list like one, two through three and I've got another list for five, six, and I want to join the two together, can I use that?
+43:03
+No, because that's item list of item to list of items I've actually got to list.
+43:13
+So I have to use a function which expects to list and that's what the concatenation or the append function does.
+43:18
+So then you think to yourself, I'm going to write this function now. So it's a function of two arguments.
+43:24
+And again, it's an index operator, actually. Um, so the question is, which of the lists, if any, do I have to decompose in order to solve the problem?
+43:30
+When you think about it, you realise that that person becomes the whiteboard.
+43:41
+This might help a little bit. So I've got the two lists. Let me put these two lists, one, four, five and six.
+43:45
+And I've got a list. One, two, three. So initially, I've got to lists like that,
+43:54
+and what I'm trying to do is to join the I'm trying to build a list, which is the congratulation of the two.
+44:02
+So what I've got you've got to do is this I've got to you know,
+44:08
+I can't we can't once we got this list because lots of people could be looking at this list, they can't just change it.
+44:12
+If this was a C programme, I walk around and I probably take this pointer that you can see here and over and over write it with a pointed to that.
+44:17
+But we can't do that in Haskell because we're not allowed to change anything unless we're
+44:25
+absolutely certain it's safe and that that therein lies a much more complicated story.
+44:30
+And so we can't change it to what we're trying to do is try to create a copy of this list.
+44:35
+One, two, three, so I'm going to reconstruct this list up to this point,
+44:42
+but only to reconstruct the seconds, because having rebuilt this, I can then do the job any better.
+44:45
+So this is a new list which reads one, two, three, four, five, six.
+44:50
+And it doesn't matter how many people are pointing at the four, five and six or the one, two, three, nothing has changed for them here.
+44:54
+And just delivering you this new list, which reads one, two, three, four, five, six.
+45:01
+And this is one of the joys. So the thing about functional programming is if you've got these data structures and
+45:06
+you've got a team of people working on these data structure and you pass somebody,
+45:11
+the data structure, when they give it back to you, nothing will have changed.
+45:14
+They can't walk down your list and zapped the phone and replaced it with a 17 or something by mistake.
+45:18
+And that's the beauty of referential transparency. So so when we come to define the function, we actually never need to change the second.
+45:24
+So what we decide is right. I've clearly got to decompose.
+45:32
+The vastness of the type is listed by the list of items they so take to list today and delivers me a third.
+45:35
+So I only need to match on the first list. Oh, well, that should be easy.
+45:42
+Let's just write down the two rules. An empty list appended to Y's second rule anonymously list appended to wise.
+45:45
+And then you go back. What's the answer? Well, if I got an empty list and I felt it was just wise, there's nothing to be done.
+45:53
+I can immediately tell you the answer. That's the base case. If I got a non-empty list appended to the wise, what do I do?
+46:00
+Well, what do we always do in this situation? You can always do mechanically.
+46:08
+Now you say, well, let's just detach the head, but the head isn't there and I'm not going to recurse into the tails.
+46:12
+I'm going to put the tail onto the appendixes and the wise. And then I get back a list which has got everything except the X.
+46:17
+I've got to put the X back on the front using Conn's. And yeah, you could write, I could have written.
+46:24
+Yeah, but you know that that's exactly the same as.
+46:32
+So if you're just trying to add an element to the list on the left edge, you cons don't do this.
+46:38
+I mean, there are some situations when we would do this, but not not in something as simple and as straightforward as this.
+46:46
+OK, cool. Let's a little break and I'll come back and do whatever is next.
+46:54
+But don't say let's come back at five to so you can go out and make a cup of tea and then we'll have another break around the clock and we get the.
+47:00
+OK, I'm back. Can you hear me all right? Yep, thank you very much.
+53:05
+Let's carry on then sealable, what's next? We're going to take a drop next, so let's see what they do.
+53:12
+So if I have a list to list, the strings are easy because they're easy to write out.
+53:19
+ABCDs, what is take to take says if you the number.
+53:24
+I just give you the first three elements of that list and that gives me the ABC. Let's see if I.
+53:28
+So I take zero from that. OK, give me the first zero to that list will apply.
+53:33
+That must be the empty list. And then you think like we have this problem with negative numbers when we were doing the plink, the indexing function.
+53:39
+What happens when negative numbers now?
+53:46
+Well, the executive decision is just to return the empty list because that is a sensible thing to do if the index is zero or smaller.
+53:48
+So we've got to capture that case, I guess. What if it's too much?
+53:57
+What if I put in up a number too big? Well, again, and, you know, I'm just going to run out of elements eventually,
+54:03
+so I'll just give you back all the ones I can, which is the the list its entirety.
+54:09
+So let's see how we can define that. So I haven't put this on the slide. So you're going to have to concentrate and help me out a bit.
+54:15
+Maybe. So let's come to this. OK, all right.
+54:21
+Let's come to that better. Let's come down here and let's see if we can define the tape.
+54:25
+I won't copy the type signature, but now I haven't hidden the tape function.
+54:31
+So I'm going to to remember, you have to remind me if I get this wrong, I'm going to put a problem on the end of it.
+54:36
+So it's my own take function. So let's see.
+54:40
+So let's just say I said the first argument is some integer index.
+54:45
+Give me the first three elements of something. What happens if the list is empty with the list is empty?
+54:49
+That is just the interest, isn't it? So what I'm just doing is naive.
+54:55
+We'll see if we can optimise the technologist definition. Just a minute. Oh, wait a minute.
+55:00
+If and I don't need to name it, I can just use an underscore that will come to that in just a second.
+55:04
+Right. So I've got a non-empty this now. In other words, a pattern that looks like that that will only match if the list argument is non-empty.
+55:09
+Was the top rule only match if it's empty? So what do we do now?
+55:19
+Well, OK, let's just see if any is greater than zero. OK then.
+55:24
+OK, so when is bigger than zero? So supposing I want the first three elements that I certainly want the X, don't I.
+55:30
+So out pops the X and the rest of the list I get by taking using my prime primary function and
+55:36
+now I'm going to presumably cut them by one because I've only got one of the elements out.
+55:42
+So if I want to take the first three elements of ABCDE,
+55:47
+I bring out the I want the first two elements therefore over the C D what about you said so when I return to tell I must reduce the index by one.
+55:50
+Right, otherwise, so I'm just doing this naively and see whether we can optimise it.
+56:01
+What do I want to do? Oh, otherwise, I just want the engineers, don't I?
+56:06
+Because if any zero or negative, we decided from what I just showed you, that it was up should be the emptiest.
+56:09
+So. Well, look at that and think, well, the only way I can get a non-empty list out this this this rule is if you like,
+56:18
+then is if I've got an energy list with a positive index and in all other cases I want the empty list.
+56:27
+So one thing I could think about doing is dropping the otherwise.
+56:36
+Bringing those two down here, and in fact, I don't care at this point what those two arguments are.
+56:41
+So this is reasonable doubt that if I've got a non-empty list and a positive index, then I want to use the first rule.
+56:52
+Now, if either this pattern fails to match or the pattern does match, but I've got this God fails,
+57:00
+then I'll just drop into the next room and drop the no dropping index was a catchall because those two arguments will match anything.
+57:10
+So if it's not the case that I hit this rule with this God is true and therefore the pattern matches,
+57:18
+then I'm always going to return the empty list I thing that gives me the right behaviour, doesn't it?
+57:24
+So that's probably a better way to write it. OK, so let's just throw that out.
+57:28
+So taking zero from a list. Gives me the list.
+57:36
+Well, the negative number should also give me the activists, and it's only if I got a positive index like one out of about to.
+57:42
+And how about for the homeless?
+57:54
+What about a really big number? Excuse me, sorry for interrupting, but I think you should do take pride because we are testing the.
+57:58
+Oh. Oh, yeah. Yes. Good thinking. Let me just put the problem on there.
+58:05
+And that's a good test, actually. Let me go let me go through all of those again, putting the PRIMUM.
+58:12
+Yeah, looks right, doesn't it, because you can never prove a programme is doing it,
+58:18
+doing the right thing for a finite number of tests, but it's a you just do that one.
+58:24
+Thanks. All right, coming home is not a thing in other languages like Python, where if you call my way,
+58:30
+it'll get over time the last elements to a function in the oh, it might well do.
+58:42
+So be talking to that again. OK, so let's see if I got drop and it's got to be done.
+58:55
+So I don't want the X and I'm going to throw the X away, haven't I? So I can now do that.
+59:04
+That should be. No, I don't refer to the X as a tool. So presumably to that and all other cases, I think I just want the boxes back then to.
+59:09
+So let's try that. So I'm just going to go through this again and replace the drop with a drop from.
+59:24
+Let's write it. What about control?
+59:30
+We've got the right button. So let's come next with my zipper function.
+59:36
+Well, what do we what is it for action and without doing anything?
+59:43
+I do. I'm going to have to compose decompose both. Listen, I want to have anything if you think about it.
+59:49
+Well, if the first one is the reason I'm going to decompose and I've got I've got to
+59:55
+match the elements pairwise as I wander down both legs from left to right.
+59:59
+So I do in the each each in potential potential need each element of both lists.
+1:00:03
+So now my function must decompose two lists simultaneously rather than just one.
+1:00:08
+So why don't we write down all four cases? Because when I look at the two lists, I know that the two are either empty or non-empty.
+1:00:14
+There are two constructors to worry about. Therefore, if I got from decomposing to there are four cases,
+1:00:21
+I can just do this without doing any thinking I can do that, but that I'll put on one nine zip.
+1:00:25
+So that's empty, empty, empty, non empty. But that process recall that one comes was because it's my second argument and Zipp X is
+1:00:33
+non-empty empty and then I've got no on empty non-empty so I'm not doing anything then almost.
+1:00:45
+I'm not doing anything. I'm just typing and I worry about finding the right the function correctly in just a minute.
+1:00:54
+So whilst I'm here, let's just line up the equal sign because you know, your Utøya will get very upset if you don't.
+1:00:59
+Quite right. So right now we ask the question, how do I get to mentalists der Muskett?
+1:01:08
+So what's the type? I've got to get back a list of this. I've got to make a list of pairs so there's nothing to Zipp, so I must just get back.
+1:01:14
+The empty list appears. And similarly here, the empty list of pairs and here similarly the empty list of pairs because one of the lists has run out.
+1:01:23
+Essentially, there's nothing I can't I've got to stop at this point.
+1:01:35
+The only the only the only time and actually start forming elements is this one.
+1:01:39
+Oh, hang on. What's happened here? It's gone really slow.
+1:01:45
+OK, we're back. So now I got to form the X, comma Y, the first element of those two, and then how do I continue?
+1:01:48
+Well, we know how to tell you there's almost nothing else, nothing else I can possibly do about this,
+1:01:57
+because it is if the X is in wise, I think it's the case that.
+1:02:02
+Oh, no, Habi. Have hidden, didn't.
+1:02:10
+I have, and so I'm going to have to.
+1:02:16
+It's going to have to be really I don't think we really need this much, so I think really I don't think we really need this much.
+1:02:21
+We can only with me, though.
+1:02:31
+With me. I'll come back to you. Let me just finish what I'm doing right.
+1:02:35
+I've just got to rename the function because I actually when I tested the function on GHC,
+1:02:38
+I was using the built in already zip and I want to test it now using my zip.
+1:02:42
+So let's come down to here and I'll just zip prime just to make sure.
+1:02:47
+That I not reload it. Right.
+1:02:55
+OK, that looks like it's doing the right thing and I'll just let one of the lists run out and that's fine.
+1:02:59
+I get the right answer so that that cemented quickly. You're quite right.
+1:03:06
+Whoever was pointing out the the redundancy semantically is doing the right thing.
+1:03:10
+I would argue, but of course, we're back to the situation we had before, the UN says the emptiness in every case except the fault.
+1:03:15
+So what we could do instead is to get rid of all of these.
+1:03:22
+And just like zip it, prime, whichever name I've got, I don't care, the answer is the list.
+1:03:27
+If I'm going to do my slightly preferred way of learning these my oh, God, my preferred way of doing this actually is to lay them out like this.
+1:03:35
+And there's so I can reduce those falls into two. So in other words, the second rule is a joint,
+1:03:47
+if the reason I say this is to understand this is to remember the pattern matching and Haskell goes from left to right across a line,
+1:03:55
+and if it fails at any point or the guard fails, we simply drop down and then we try again.
+1:04:02
+It's left to right, top to bottom. So if I come to the second rule, I know it must be the case that one of the lists or both is empty.
+1:04:06
+And I know in that situation I must return the activist saying. An empty one of them is empty.
+1:04:16
+It is not an empty list come the end of the. How come it doesn't add an empty list?
+1:04:27
+The one did before we had four different cases, yep.
+1:04:39
+Three of the cases you add to the end now, three of the cases I know, those three cases I returned the emptily, I don't think I'm adding anything.
+1:04:44
+You know, if one of the list is empty, I don't care how we get there.
+1:04:55
+That could be the opening question. It doesn't matter if one of the list is empty. The answer is empty list.
+1:04:59
+Don't worry about how we got that. Got to that situation, OK? So here just to make sure I've got the right thing, yeah, that's obviously right.
+1:05:04
+And if we got the this one, that's obviously right. So just in case you're totally right about that, supposing I got supposing unzipping.
+1:05:13
+Let's go a singleton, this one, and I've got the singleton, this true, for example.
+1:05:23
+So how do I answer that one coming true? But I got that because I know what the programme is actually going to it's going to build
+1:05:30
+the last one so the pair won't come true and it's going to go to the one coming true.
+1:05:35
+This is what's going to happen at. So I'm going to glue that onto the result of zipping. I've Britain's zip rather than zip.
+1:05:42
+It doesn't matter is and is going to give that to those of zipping out the tail of these two because I'm going to recurse into the tail.
+1:05:48
+So if I, if I match that with X context is the X is the one, the X is the Nautilus and this only with the Y in the wolf boys.
+1:05:55
+So I'm just going to end up cursing doing that. Well what does it empty. Empty to zip.
+1:06:02
+Empty. Empty it was it empty. Empty of the interest. So that's exactly the same as if I had written one cometrue.
+1:06:06
+Down to the empty list, then their own Nixon.
+1:06:14
+Was a. m. Nixon. I think it's teens being weird.
+1:06:24
+It doesn't say I have my hand. No, no, no, it's a bug and I will report it, but I don't know what's doing it.
+1:06:29
+Kathy, that's probably as a freshman. Yes.
+1:06:36
+So if we had three inputs for zip, but we need to define eight different.
+1:06:39
+Yeah. In principle, you'd start off with eight rules, but then you'd realise that the only one that has the sort of structure is the structure.
+1:06:46
+Here would be the case where you've got three non-empty list.
+1:06:55
+I think in all other cases you wouldn't be able to do that because you've got to you then have to form a list of triples, wouldn't you?
+1:06:58
+So you must have at least one element in each of the three lists. So it would collapse down to just two rules again and rather elegantly.
+1:07:05
+And so I suspect that's an old hand. Yeah, OK, I should be when I point this out to you, the hand does disappear.
+1:07:14
+So I don't know what you're doing to make it disappear. I mean, if you're turning your microphone on and.
+1:07:24
+Don't worry, we'll get around it, we'll get it right. Well, what's the next function and the right thing?
+1:07:31
+So you've got to think a little bit harder about it. So this is what it does.
+1:07:37
+It does the opposite. It's like give you a pair of lists.
+1:07:43
+So how about this pair of lists and I what do I say it has to unzip?
+1:07:51
+Oh, I got one that takes a pair of lists.
+1:08:00
+You gave the arguments for a zip. Uh.
+1:08:06
+Should give double, right? Oh, sorry, no, no, sorry. Yeah, supposing I've got a.
+1:08:13
+What's the type that just pulled up a list of all the people probably can be confused.
+1:08:22
+Right. So I got a list of pairs, not a pair of lists.
+1:08:28
+I've got a list of pairs. Here we go. One comma, a letter I characterise.
+1:08:32
+I've got two with B. And let's just do one more.
+1:08:39
+I got three with more tedious typing these examples in here, right.
+1:08:45
+So what I wanted to do was unzip that, given me back the two lists, which wins. It will give me this list.
+1:08:50
+So therefore, I want the list of pairs, one to be three C.
+1:08:55
+But now that so let's try and write that control key and go down there.
+1:08:59
+OK, so here we are. Let's unzip now then.
+1:09:10
+The thing is, what about when I get an empty list? There's really only one thing I can meaningfully do.
+1:09:13
+If I unzip an empty list, I can only get back a pair of Los Angeles Times.
+1:09:18
+Let me just go and check the whole house.
+1:09:23
+The bin hidden on the. I'm just having a look. I have not hidden it, so therefore I will have to give it a try or I can go back in on holiday.
+1:09:28
+But this is carry on. Right? So if I give it the entry list, I must get back.
+1:09:40
+There's nothing else I can meaningfully do. I must get back the pair of empty lists.
+1:09:44
+So now the only challenges and this is where it gets a little bit, but it's really very simple.
+1:09:49
+When when you when you do things so suppose got now got a non-empty list of pairs consisting of Peak and the temptations to write down.
+1:09:55
+That's fine. So let's proceed along these lines. What am I going to do now?
+1:10:04
+So let's come to the whiteboard with that example. So if I've got the list of pairs one one with an eye, say with a B.
+1:10:10
+Three with a C, now you know what's coming, a pattern match this and the little pattern that says, well, I'll call that one P and this here.
+1:10:25
+Peace, because I'm using the shorthand notation because secret in here, there's a Konz.
+1:10:38
+That's right. You know what's going to happen? I'm going to recursively unzip this.
+1:10:43
+In just a minute. Let's see what I'm trying to get to.
+1:10:48
+I'm trying to get to this pair of lists one, two, three, and then the string A, B, C.
+1:10:52
+So when you know what will happen, when you win these slightly messier punches,
+1:11:05
+you'll get stuck in gutter when you get stuck right down a concrete example like this one.
+1:11:09
+So I'm just going to do what would what would I get if I unzipped the piece buttons at the top of the list?
+1:11:11
+This is the leap of faith thing. What does it do, says you can be absolutely any list of pairs and I promise to unzip it for you.
+1:11:16
+So without doing anything, you know why or how it does it,
+1:11:24
+just look at the contract on the tin and it says, I know this is going to give me this pair of lists to.
+1:11:28
+The three and the string B, C, that's I know it's going to do.
+1:11:35
+I don't care how or why. That's the contract. So now I've got in my hand the result, a precursor to the onset.
+1:11:41
+And I've also got this little fella in my hand, which is the one common.
+1:11:47
+And can you see that this thing is almost the same as this thing is almost the same.
+1:11:52
+It's just missing the one in the. So all I'm going to do is take the one and stick it on here and take the.
+1:11:56
+Stick it on there and then I get the rest I'm looking for.
+1:12:04
+So. Couple of things I need I need to name the two components of the results of the recursive
+1:12:08
+call because I need to dismantle it and put the one somewhere in the area somewhere else.
+1:12:16
+And I also need to name the two components of this papy.
+1:12:20
+So the temptation is to use something like First Effi, second appeal to extract the one in the eye.
+1:12:24
+And I told you, don't do this. It's not the way to do it.
+1:12:31
+What we should be using is pattern matching.
+1:12:35
+So when they come to write the function, I'm actually going to replace that thing with a pair like no one.
+1:12:37
+Because I know I don't need them in a minute,
+1:12:46
+because I've got to stick the axe on the front of the first or second spot in the one, the front, the second.
+1:12:47
+So the second challenge is when I make the recursive call, how do I extract the two components of what comes back?
+1:12:51
+Well, the answer is we use pattern matching. We've been doing this since almost lecture one lectured to it.
+1:12:59
+So I'm going to make the call to the tailor in here. There's my piece.
+1:13:05
+I just do that mechanically, so know there's nothing else I can be doing. This is look at the type.
+1:13:08
+At this point, I think of the type of guns it I know I'm missing and I've just spotted it,
+1:13:13
+it says it guns, if it's going to say, you give me this, I'm going to take a pair of lists.
+1:13:19
+So every time I call it every time I'm going to get back a pair of lists so I can match on it.
+1:13:25
+There's my pair of lists of excellent ones. It's going to put my prime on there, in case I forget, there's my recursive call.
+1:13:32
+Now, what did I do on the whiteboard? So this is my this is my ex's.
+1:13:44
+This is my wise. There's my ex. There's my wife.
+1:13:50
+So I got to put the X on the front of the X is the one up on the front of the wall and then I'm done.
+1:13:55
+It's all I have to do here is put the X X on the front of the X is the Y on the front of the wall.
+1:13:58
+It couldn't be easier. So the challenge is a couple things that challenge what I guess.
+1:14:06
+Then you got to remember, you can do pattern matching latencies when you're dealing with pairs.
+1:14:11
+You don't always need to dismantle the pair, but in this case, I do. Second thing is that I know I'm going to focus on the tail.
+1:14:15
+And, you know, this will always give me back a pair because of the type signature.
+1:14:23
+So therefore, as I need both elements of that, I can use again, use a pattern match.
+1:14:27
+And this is called an irrefutable pattern. This pattern match cannot possibly fail because of the type signature.
+1:14:32
+I'm only going to see pairs coming back.
+1:14:38
+So it is never going to say, oh, I couldn't match X is Bubis X, Y is against the type of the type check it tells me again.
+1:14:40
+And then the third thing is to assemble the answer I want, which is the X X is my once so I think I'll do my unzip.
+1:14:48
+So be able to do that. Let's reload the programme and let's see if I can replace now when I was testing my own zip that's doing the right thing.
+1:14:55
+And if I on that. Prime, that one don't oh, that was that was what I was meant to do, I meant to do that, didn't I?
+1:15:07
+Is that right? Listen to. Got it.
+1:15:23
+It's impossible to make a mistake if you if you say when you get stuck, get a piece of paper.
+1:15:35
+Oh, you know, one of the best programmes that I have had to teach.
+1:15:40
+And he said I never said one programme. I mean, even to this day, he always has a pencil and paper by his side.
+1:15:45
+He's not one of the leading Linux gurus and he always has a pencil and paper by his side just in case he needs to write down examples,
+1:15:52
+work something out. And with Haskell, it's great when you get stuff, write down a concrete example,
+1:16:01
+produce some rotting, rotting diagram like that, and suddenly it'll click in your head.
+1:16:04
+And this this thing here, this is this leap of faith, this idea that when you unzip recursively,
+1:16:09
+you know, don't worry about now just think what what is it going to give me back?
+1:16:15
+And then you think, oh, it's easy, but the one on the front and the eye on the front and I'm done.
+1:16:20
+So it's hard to imagine can be nasty. I mean, just the column and the tuple, I mean, I can guess the patterns as much as I ever need to.
+1:16:28
+Yes. In this case, I just want one level of I suppose here, only two, don't I?
+1:16:41
+Yes, because. Because what's the type of unzip it takes a list of pairs.
+1:16:44
+So, well, this thing matches on lists of things, yeah, that's what the Commons does,
+1:16:52
+and I happen to know that the of the head is always going to be a pair.
+1:16:55
+So it's quite convenient for me to match on that at the same time as I'm putting you on the list.
+1:16:59
+So so, yes, you're absolutely right. You know, if I knew that this thing was the why here, for example, if I knew that was a.
+1:17:05
+Another list, for example, or some other thing I could if I wanted to ask if that's another triple,
+1:17:12
+for example, I can imagine that if I needed to extract the elements of that triple.
+1:17:16
+You can you can nest away to your heart's content so I can extract as low as the top secret, make sure it's clear it's correct.
+1:17:21
+Yes, yes, absolutely. Yeah, absolutely.
+1:17:29
+And as I said, you know, because of the typesetters, this is also and this here is an irrefutable part because the items at the head of this listed,
+1:17:32
+it is not the items of the head of the list must always be pear's. Good.
+1:17:40
+Right then, so that sums it. So let's have a short break and grab a glass of water just in just two minutes.
+1:17:49
+Can you go back to the previous slide, please? So I leave it there.
+1:18:02
+That one, uh. The unzip function on.
+1:18:08
+So I think you take a break. OK, carry on, what's next?
+1:18:13
+So now we're going to look at the slightly bigger function,
+1:20:06
+we're going to start piecing together a couple of functions to solve, in this case, a sorting problem.
+1:20:10
+Right. So what does this function do?
+1:20:18
+So this function, let me just check I got this in my pocket, I think in my, um, programme somewhere we've got an insert.
+1:20:20
+Yeah. Okay. So this is the function we have on the screen, right.
+1:20:29
+So what does this function? This this is going to insert an item. I'm going to integers now.
+1:20:34
+So if I got an eye on a list of it, the idea is are going to insert this list here.
+1:20:39
+There's a precondition. This this the vinces ordered.
+1:20:44
+So what that means is if you if you call this function and this second argument is an audit, the function isn't going to do what it says on the tin.
+1:20:47
+So you must make sure the second argument, the second the is audit, what it does is going to put this in the right place.
+1:20:56
+So here's the idea. If I come down to GHC and I say, can you please insert the number four into the list?
+1:21:01
+One, two, four, six, seven, it'll put the four in the right place.
+1:21:07
+It doesn't matter if there are duplicates, so it may just be that the item belongs on the end of the list.
+1:21:12
+It doesn't matter if you put it in the right place or maybe it belongs to the beginning again.
+1:21:17
+It doesn't matter who was put in the right place. So they'll be saying to think about what happens if I try to place an item into an n t list.
+1:21:21
+But I must get back a singles in this one time, which gives you a clue as to the first one.
+1:21:28
+It's sitting on the screen there. So let's look at this one. So if you try to answer Notimex into an empty list, we just give you back a singleton.
+1:21:35
+So remember, that square bracket at some square brackets is always a single list, but the item to single, the single item list.
+1:21:43
+So that's that's straightforward. Now, what if it's not empty?
+1:21:50
+So if I try to insert zero into the list, one, two, three, you can say, oh, OK, the zero is kind of already in the right place.
+1:21:55
+I've simply got to put the zero at the front of the list and I'm done.
+1:22:02
+So if in general, therefore, if I've got a rule which says to insert X into a non-empty list.
+1:22:06
+At the head. If X is less than Y, then the X belongs to the left of that list, so I just wrote that.
+1:22:15
+Otherwise, what do I do? Well, otherwise way it's the X, the X doesn't belong on the left,
+1:22:23
+which case the Y is kind of in the right place and I simply got to push the insertion into the tail.
+1:22:30
+Obviously so in this situation, if you look at the GHC command,
+1:22:36
+if I replace the zero with a let's try a let's try it one, two, three, maybe put another three in there.
+1:22:40
+So in that situation, what what will happen runs on that thing, which I know is supposed to be one, two, three, three.
+1:22:47
+What will happen is that this one will be detached from that list. I stick the one on the front and I try to insert the three into the two three.
+1:22:52
+And I get the same answer here. And what's going to happen there?
+1:22:59
+Well, if you really want to do it, you should you shouldn't have to do this by now.
+1:23:03
+But then I'll just take the easy what the technology is going to do. It's going to decouple the head.
+1:23:07
+Put the head in here now, because I've already done the one and that's going to do that, she does the same answer each time one.
+1:23:11
+So unsurprisingly, now that case actually curacy, this test will fail.
+1:23:19
+But you could argue, of course, that. It is less than equal to what I should do the same thing.
+1:23:26
+This might actually save me one recursive call war that's going to save a few nanoseconds.
+1:23:32
+Let's do that. I'm not doing that to save time.
+1:23:36
+I'm just doing it because it might be it might be intuitively more obvious if I find the next in the world the same.
+1:23:40
+It doesn't matter which one pops up the comes out first all the way, but is the right answer.
+1:23:44
+OK, so let's see if we can just tweak this a little tiny bit. Right.
+1:23:52
+One thing you might notice is that.
+1:23:56
+Is that on the right hand side, so here I think the pattern matching on my endless argument and the side effect, the pattern matching is to.
+1:23:59
+Is the name, the head and the tail separately. And what I'm going to do on the right is I'm going to reassemble that very same list.
+1:24:09
+Now, that is a bit daft, as you might imagine. I'll give you a list. You pull off the head and tail.
+1:24:16
+You hold the two bits and you have the oh, please, can you put them back together again?
+1:24:21
+And he said, well, why the [INAUDIBLE] did you ask me to pull them apart if you want to put that together again?
+1:24:24
+So there's an element of redundancy in here. And this is quite common in Haskell.
+1:24:29
+And so the trick is to be able not only to do the pattern matching because I do indeed need to why I do indeed need the wise in this rule.
+1:24:32
+So I can't just underscores anywhere, but it is quite handy to be able to name the whole pattern and I wouldn't have to do that.
+1:24:41
+So you can do a thing with the pattern. You've got to think of yet another name when I struggled to find another name.
+1:24:48
+So perhaps I'll call it EST or Zed's or something or wise prima donna list and then I can replace this thing with list the case,
+1:24:53
+which just shows me reassembling the list I started with. But I'm still I'm still I'm still on both naming it and naming its individual components.
+1:25:03
+So I'm lost to. The other thing you can tidy up here is I don't need the brackets.
+1:25:11
+You know, I suspect you're probably doing this with you as you talk to your courage and every see things that are little irritations,
+1:25:19
+so we're always tightening up our programmes to. And I don't actually think in this case there's any particular need to line up the equal signs.
+1:25:25
+In fact, I would probably do that anyway if I were watching this programme. But so we end up with something like that.
+1:25:34
+OK, good. Just make sure I hadn't broken it. To see if I can set.
+1:25:41
+Yeah, looks like it's doing the right thing. OK, so let's move on to the next function.
+1:25:49
+So that's why we're building up to a sorting programme here. So I'm ignoring the top box, but in case you don't believe it, this is what happens.
+1:25:55
+Right? And so how do we turn this into a sorting programme? Let's let's use it to sort a list of things.
+1:26:03
+So this is now an unsorted list of things. And this thing is a socialist events.
+1:26:09
+So perhaps back to the magic whiteboard, if I'm going to I sort. Let's have a random two nine one four seven.
+1:26:15
+Three, five. How do I saw that? Well, there's lots of strategies for sorting.
+1:26:28
+I'm sure you probably studied some of these already.
+1:26:32
+So the idea here is that I just detach the two who got the two in my hand and I'm going to recursively sort that.
+1:26:35
+But that's all we ever do with lists, really. And again, it doesn't matter how, when or where we know.
+1:26:44
+Especially as we're watching the programme, we know we're going to get it right,
+1:26:53
+we're going to get that one three four four seven nine and all you got to do now is to work out where to put the two,
+1:26:56
+how to get the two in the right place. So now are you thinking that, oh, I've got an item.
+1:27:04
+And I've got an all ordered list of items, if only I had a function that ensures that items into order list of items since the order list events,
+1:27:12
+then I would be able to solve the problem. Well, the answer is, of course, we do have that function.
+1:27:20
+It's called being set. So to finish this up, having recursively sorted the tail, all I have to do is to insert the X in the right place in the.
+1:27:24
+So that's a classic sorting. So it's called insertion sort. So if I wanted to insert sort some this is something like that.
+1:27:34
+It will it will do what it says on the tin.
+1:27:47
+OK, now we did a small diversion and I want to think about complexity here.
+1:27:51
+So if. Well, let's just think on average, supposing supposing this list, I'm inserting it into his and here's my item,
+1:27:57
+here's a list of items, the Christian how many calls do I make to let's think about how many calls I make to the company.
+1:28:07
+We need to be able to count something so I can count the number of calls, but I don't need recursive call.
+1:28:14
+I'm doing one application becomes a function, so it's a good proxy for the cost of doing an insertion.
+1:28:20
+How many recursive calls or how many cons functions do I invoke to insert an item of the.
+1:28:26
+Yeah, on the list has got length and it's about half the length of the list on average, isn't it.
+1:28:36
+So that's about Enova to on average. So what I'm going to do now is I'm going to write up a mathematical function to work out the costs,
+1:28:40
+the complexity, the cost in terms of the number of Kohn's calls to do.
+1:28:50
+And I sort of an arbitrary unordered list.
+1:28:55
+And I'm just going to use the structure of the function itself to work out the answer.
+1:28:59
+So looking at that definition, so I sort of the list is the entity.
+1:29:03
+So if you give me an empty list, I can isolate it in essentially zero time or the one time, maybe something like that.
+1:29:07
+So that let's call it zero. I need zero invocations of the Commons function to sort an empty list.
+1:29:14
+So if I come to the magic whiteboard, I can have a function called T, which is just typically what we call it,
+1:29:21
+it's the sort of time, time taken to sort a list consisting of zero elements.
+1:29:27
+This is a mathematical function now, not a Haskell programme. Well, I can do that straight away without doing any calls to be for the function.
+1:29:31
+Right. So that sort of encodes what's going on here.
+1:29:40
+So what happens here, so if I have now got a list of length and say so if any is greater than zero,
+1:29:45
+how long does it take to see how many countries do? And it's thought that what do I do?
+1:29:52
+First of all, I sort the tale, which is N minus one elements. So let's come to the whiteboard.
+1:29:56
+So if any is bigger than zero, the time taken to sort a list of N with this strategy.
+1:30:02
+Well I insertion sort the tail. Well that's the time taken to do that.
+1:30:09
+I get from T and minus one. And then to finish it up, I insert X into the right place.
+1:30:14
+Well, that takes about Toyman over to, doesn't it? So I've got an innovative.
+1:30:22
+Right, so now you can not there are mathematical ways of solving these recounts,
+1:30:29
+relationship with the kinds of questions you'll be studying those next term to some extent at least,
+1:30:33
+I'm just going to do in a slightly ad hoc way until we spot a pattern. So I'm going to keep unfolding this.
+1:30:39
+So this is so I'm going to throw this thing in here. Right, so if I replace the evidence, then minus one, what do I get?
+1:30:43
+Well, I get T then minus two now plus and the end of our planet.
+1:30:51
+By the way, this thing stuck on the end and that would change the plastic if I replace them with an N minus one.
+1:30:57
+And then this becomes an A minus one over two.
+1:31:03
+So if I do one more thing I say to you and say, well, if I replace the end with an A minus two, this becomes T minus three.
+1:31:07
+Plus, and then there's pluses and a to over two, and then I've got this one and this one still left over.
+1:31:14
+So that's then minus one of its plus. And so every time I subtract one from the premiership to the big tea, I stick on an X Factor on the sum.
+1:31:22
+So what you can say that what I'm going to get is that the T of N. He's essentially got this structure, it's the sum of.
+1:31:33
+Well, I can bust as anyone as I over to if you want.
+1:31:41
+What is I do I go from zero, I guess, up to an.
+1:31:46
+Or another way of writing that is I can take the half out and I can just reverse because this because it's persistent,
+1:31:51
+can be I can reverse the situation if you like. It's probably slightly easier to write this like that, but it's exactly the same thing.
+1:31:58
+And what's this? This is a half of. And what's the some of the first 10 integers?
+1:32:05
+And then plus one over, I hear you shout, so this is an N plus one for.
+1:32:12
+Well, the dominant term there is the N squared, so when we're talking about the order of the complex,
+1:32:18
+the order, we're saying that this is of the order, which is of the order of N squared.
+1:32:23
+So if I draw a little graph of how long it takes to sort that, that's my own.
+1:32:29
+And this is my Telvin.
+1:32:34
+Then it's going to do and in squirty type of thing, the question is, can we do any better than that when we're designing a sorting programme?
+1:32:38
+So we'll see a solution to that in just a minute. Richard, question. So how did you write and why do I get the the second deal?
+1:32:44
+Oh, I took this thing here, so let me brackett's it.
+1:32:52
+And I the thing in brackets here here is just one expansion of ten minus one using this room.
+1:32:57
+So in other words, I replace this end with an A minus one. No, my question is, why have you written and do like how come it's not here?
+1:33:04
+Because that's the average time taken to insert an item into a list of like ten, because on average, the right point will be halfway through the list.
+1:33:15
+I don't know what elements I've got. I don't know what I'm inserting. So it's just an average.
+1:33:21
+Yeah. If I give you a completely arbitrary unordered list and I say,
+1:33:28
+please insert 17 into it or please insert K into it, you don't know in advance where the K belongs.
+1:33:33
+So you're going to have to wander through the list on average. So it could be a lucky the case at the beginning, you could be unlucky.
+1:33:39
+The cable on the very end on average is halfway through, isn't it? So this is just an average.
+1:33:43
+Right, thank you. OK, now you might think in the best case, this is this is the sort of average case in the best case,
+1:33:51
+these are the two things they could be there could be ones, couldn't they?
+1:33:59
+Because if it's every single time they happen to step along at the head of the list, the best thing I could do is replace that with one.
+1:34:03
+And then I get it would be a no in.
+1:34:11
+But that's a very contrived case, in fact, it must be the case when the list I started with is already ordered.
+1:34:16
+So when I look back, I was insert the item back at the front of the list, so in that very controlled,
+1:34:24
+very, very lucky situation, I would actually take order in time to store the list.
+1:34:29
+But then if you knew it was already even sold in the first place.
+1:34:33
+So typically, we don't know the order in which the items are presented with us, and therefore, on average, it takes an effort to end the worst case.
+1:34:36
+Of course, you might think about the worst case in the worst case. And that would be coming in, wouldn't it?
+1:34:44
+And interestingly, if I replace the activities within, it's still ordering squirt.
+1:34:51
+It's just a slightly different factor involved, but we don't get the whole.
+1:34:56
+We just take the half hour. OK, take twice as long in the very worst case.
+1:35:00
+But who cares about the dominant factor is the squid. Good.
+1:35:04
+All right, so let's finish up with one more sorting programme and see if I can get to the end and then we'll we'll stop until tomorrow.
+1:35:09
+So this is another functional medicine. And I know some of you have seen these things before, and it does,
+1:35:19
+but it doesn't hurt to see them written in Haskell because they fall out so beautifully and it's practically impossible to make a mistake,
+1:35:23
+except now I'm going to make a mistake and you can spot it. Right.
+1:35:31
+So let's start off with a function called Split at which says, what?
+1:35:35
+You give me an integer N and you give me a list and I'm going to index that list the position
+1:35:40
+and all the elements of the left come out here and all the elements to the right come out here.
+1:35:44
+It's a way of splitting a list into two at a specified integer index. So you think, wait a minute, he's just shown us how to take drop.
+1:35:49
+We can just take an X drop in X, and of course, that's going to do the right thing if you're not convinced by that.
+1:35:57
+So here's my list. Let's call a list X is something like that.
+1:36:04
+And I say, give me the take that. Supposing I want to split it to position zero one to an index three.
+1:36:12
+So I want to say, if I wanted to split it three, I'd say give me take three X and then drop three X.
+1:36:20
+This one I get that.
+1:36:29
+So what I want to happen is that that is the same as split at three X's, which gives me the same list so I could use I can draw the GOP taking top.
+1:36:30
+They're going to look at the list twice and that always seems slightly unsatisfactory. It's OK.
+1:36:42
+It's still ordering three days to take an X.
+1:36:47
+It still takes a roughly ordering time. It's just ordered to burn.
+1:36:51
+But, you know, if you can avoid two passes over the list, it is actually quite a good idea to remove that redundancy.
+1:36:55
+So what we're going to do instead is that. So just to see what happens here.
+1:37:01
+Plus, I'll come back to the magic white board if I have a list mentalist.
+1:37:10
+So this is index zero, but splitting it at one particular to split, especially one, two, three.
+1:37:21
+So I want to split at. Three that list.
+1:37:27
+Well, guess what we're going to do, so I'm going to match on this little fellow here.
+1:37:34
+I'm going to call that did I call it X? This thing I'm going to call accesories is my partner, you to name the head and tail.
+1:37:39
+Well, I guess what I'm going to do, I'm going to take the title and I'm going to split at.
+1:37:50
+You take that list to that position, too, because I find if I remove the head,
+1:37:59
+the split position is is is one one place shorter than it was before because I go on one you together.
+1:38:04
+So don't worry about how I think about the contract.
+1:38:12
+I know what it's going to generate. It's going to drive a pair of lists with the first one in this case is nine and six.
+1:38:16
+Is that right? And the second one is one and three and five.
+1:38:25
+So it's not totally dissimilar to the one that we just looked at. I know it's going to do that.
+1:38:29
+So now I think I've got this X, which is the two. And what am I going to do?
+1:38:35
+I'm trying to get the terrorists to nine six and one three five.
+1:38:39
+Oh, well, the one three five is intact and that one's actually fine. This one is not quite right because it's missing the X.
+1:38:45
+So what I got to do is take the two on the front.
+1:38:51
+So similar pattern to what I had before I recursively split, which is what I've just shown you.
+1:38:57
+I know that's going to give me the pair of lists, which I'm going to Lexis Nexis double points on my whiteboard, I guess.
+1:39:02
+But called that one X prime and this one connexion is double prime, and I'd call that one up your X font, right.
+1:39:11
+So all I've got to do is to have in mind the recursive call.
+1:39:19
+If I make recursive call is to stick the X back on the front of the X prise and then the actually double from state saying, yeah.
+1:39:23
+So the only time I wouldn't do that is if my index is zero, in which case I can stop straight away.
+1:39:32
+Because if I say split at. Zero on some list.
+1:39:38
+Then I know the answer straight away. I also know the answer straight away, forget an empty list.
+1:39:49
+What do I do? Forget emptiness, I must get back the Orientalists so it doesn't matter what is up here if I split an empty list at some position.
+1:39:56
+Then I must get back into this otherwise. Special case one equals zero, otherwise the recursive trick and again, when you get stuck with this,
+1:40:08
+just walk down a concrete example, as I've done here, and it should be clear why the the function I've just written is the right one.
+1:40:16
+OK, next function, I get you two loaded lists and I say, please, can you merge them for me?
+1:40:24
+So well let's have a think about that. If you give me two empty lists and asked me to merge them, I'm going to give you about the empty list.
+1:40:34
+If you give me an empty list and I'm not an empty list, I'm going to give you the non-empty list.
+1:40:42
+And bisymmetry, you give me in order to list, and then I'm going to give you about the non-empty list.
+1:40:48
+So you can see I can probably combine some of these rules just a moment.
+1:40:52
+And here's the interesting. I know they're all interesting. They're all just as interesting and just as important.
+1:40:56
+Here's the recursive case. If I've got to non-empty lists and I want you to merge them.
+1:41:01
+So the idea is, by the way, if I merge two order lists, like to force six, seven,
+1:41:07
+eight and merge that with, they don't have to be the same length, one to seven.
+1:41:14
+Then we get back on all the list. So the one comes out first, then the two, then the other two, then the fourth and the sixth and the seven seven,
+1:41:20
+so so I'll either pick an element of the first or the second list, depending on which is the smaller that will come out first.
+1:41:28
+And then I just focus appropriately into whatever list I used to form the head, if you like.
+1:41:34
+And when one of the lists runs out, I just returned the other.
+1:41:42
+OK, so that's guaranteed to give me back unordered list so you might think, is there some way I can perhaps optimise that?
+1:41:47
+So let's just come and see what we've got over here and see where the merge function is.
+1:41:55
+So there it is. There is always an obvious way to combine some of these rules in some way.
+1:42:01
+Well, I suppose I could combine the first two couldn't know it's almost not worth it, is it, Ruscio?
+1:42:16
+What would you do if you combine the first two or the first and third base?
+1:42:23
+Yeah, I mean, somehow it seems because I can only combine the first two.
+1:42:29
+How would I combine the first two? Like I say something like if I've got an empty list and absolutely.
+1:42:35
+Any thing here. Yeah. Like X is for example then I can return.
+1:42:39
+The X is currently in the second. Yeah.
+1:42:44
+And then I can get rid of the second one. But actually that's sort of destroyed the beautiful rather natural symmetry of the most second.
+1:42:49
+I can't do the same thing with the second one, so I think actually my inclination is to leave it as it was.
+1:42:56
+And do that. And then this live with that.
+1:43:04
+All right, so it doesn't much function, let's not put this together to form a user,
+1:43:10
+to merge sorting function, which looks like this, which looks like this.
+1:43:14
+Right. It says you give me that list and ask me to sort of say this is this is an unordered list events and this is not a list events.
+1:43:23
+So you give me that list. Oh, I obviously I have to tell you about the interest right now.
+1:43:31
+You give me nonentities now my strategy change compared with Isbin insertion.
+1:43:35
+So I'm going to take this list, which is unnoted. I'm going to calculate its length.
+1:43:39
+And divide by two. I'm going to split in two.
+1:43:46
+Ah, I hear some bells ringing when we wrote the powering function we got from ordering complexity to log in.
+1:43:49
+Instead of subtracting one from my power index, I split the index in two and square the answer to nine.
+1:43:57
+So some of the things going on here. With me, right, the difference it is going to last, but it's the same sort of idea.
+1:44:03
+So I take the list of countries like Dubai, divide that divide, divide the length by two.
+1:44:15
+So if it's got 20 elements, so I split the list to position 10, I guess, and I'm going to split up functions to do that.
+1:44:21
+And this is going to give me my to list those elements to the left of the split index and those elements to the right.
+1:44:28
+Now, watch this, so I'm not going to bracket the. What do I get with the bracketed term?
+1:44:31
+I get to lots of tea over and over, too, well to been over two is just following this rule again.
+1:44:39
+If I replace the evidence never to get to lots of what do I get?
+1:44:47
+Jennifer, to I guess I get to lots of to travel to becomes a tea and over four,
+1:44:55
+because the end is not an end of a two plus, I get five grand over for now because he has been replaced by another too.
+1:45:02
+So another bracket in there. So that puts the two inside. I've got four lots of turnover for.
+1:45:14
+Plus, and to this, two countries without forgetting to guess what if I went over to so you see the picture
+1:45:21
+every time I divide the argument to Capital T by two out pops if I went over to.
+1:45:28
+How many times do I have to take this number in divided by two oh, it's a log.
+1:45:36
+So this thing has got the order of log in steps. And in each of those Logan steps, I've got to over and over to well, that's said the old.
+1:45:44
+So this we say this is an order, order, order in Logan. So instead of having a function whose complexity was squared.
+1:45:55
+OK, not to scale. I've now got a function which is an log-in, which grows much more slowly.
+1:46:03
+So this is a much better sorting algorithm.
+1:46:09
+If I got very big lists, I'm not going to stop because you need to get your labs and you probably want to have a bit of a break.
+1:46:10
+And I'll pop down there in a few minutes when I'm talking to my desk and say hello.
+1:46:18
+So thank you very much. Bye bye. See you tomorrow. No, tomorrow.
+1:46:23
+Yes, tomorrow. So could you just explain the longboarding it just last.
+1:46:27
+How many times do I have to divide them by two before I get to zero?
+1:46:32
+Because each hour, each time I call it, I start with, I stop within, then it comes over to then it comes out of a before.
+1:46:37
+And if I keep going right. And I over 16 and 32 and I keep doing that until I hit the zero.
+1:46:44
+And it takes a long slog and steps to do the. I'll leave it with it.
+1:46:49
+We'll pick it up tomorrow. You can ask me again tomorrow about Paul overlap this with tomorrow's election.
+1:46:56
+Just thank you. Bye bye. Thanks.
+1:47:01
+Thank you, Tony. Thank you. Bye bye.
+1:47:08

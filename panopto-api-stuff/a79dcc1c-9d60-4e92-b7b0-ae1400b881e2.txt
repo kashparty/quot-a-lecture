@@ -1,0 +1,247 @@
+ID: a79dcc1c-9d60-4e92-b7b0-ae1400b881e2
+Title: K2J - 1 : Intro and Classes
+Category: KotlinToJava
+Lecturer: Robert Chatley
+Date: 05/01/2022
+Hi, everyone. This term, you're going to be programming in Java.
+0:04
+And so what we're going to present here is a series of short videos that make a transition from Kopplin into Java.
+0:08
+So the good news is that you already have everything installed on your machine that you'll need to do Java
+0:16
+programming because we can use exactly the same programming environment intelligently as we used for.
+0:20
+And you can even mix and match Kotlin and Java within the same project.
+0:26
+What these videos will present is for each idea that we had in Scotland how to write the same code in Java.
+0:32
+So not introducing any new programming ideas,
+0:38
+but just moving from one language into the other to show you how to do the same things in a new language,
+0:41
+then hopefully you'll be ready to move on to studying object oriented programming in more depth without master.
+0:48
+I'm working on some Java examples and labs. So what we'd recommend you to do is to work through each of these example videos and type up the code.
+0:53
+And then that should give you a kind of practical experience of writing Java getting used to the syntax,
+1:02
+and hopefully then you'll be ready to move forward for the rest of the term.
+1:08
+In this video, we're going to go back to the radar example that we wrote in Scotland,
+1:17
+where we were using circles and points together to build up a system where we could scan a
+1:21
+field of view for radar across the screen and detect which points were in view any time.
+1:27
+So in this example, what we're going to do is go back and rebuild that,
+1:34
+but in Java instead of in Cochrane and see how the concepts of the two languages map together,
+1:38
+we're not going to learn anything new conceptually, but we're going to see how everything that we did in Scotland maps into Java syntax.
+1:43
+We can write Java code in intelligence that we did with Colin.
+1:51
+And so you'll see that. When I create a new class, I have the option to create either a copying class or a Java class.
+1:56
+Let's start off by thinking about points. So just as a reminder, let's look at what the codling class looked like.
+2:05
+So we had a class point and a point had two properties for its X and Y coordinates.
+2:13
+So we would have had private Val X of type interest and a private Val Y of type end.
+2:21
+And then we added some more stuff into the class later on. Now one thing to remember, which I think will be helpful in making the transition,
+2:32
+is that this syntax that we write in Scotland to define a class and its properties is actually a shorthand.
+2:39
+And if we convert this and move these into the class body.
+2:45
+Then you'll see something where we define the class name the constructor and the properties,
+2:55
+and then assign initial values to those properties in three separate parts.
+3:01
+And this is what we'll see when we write it in Java. So for now, I'm going to delete this version.
+3:06
+And let's create a new job across. Again, I'm going to call it points.
+3:14
+And you'll see that when we create the drama class again, it's created inside a package, this is exactly the same as in Scotland.
+3:24
+It's a way of organising the code. The only rule here is that in Java, the package structure has to map to the directory structure.
+3:31
+So where in coupling, that's just advisory in Java? That's a rule.
+3:40
+And the other thing that you'll see different here is that this class is defined as public.
+3:44
+In Scotland, public is the default. And if we add the public modifier, then intelligible tennis that that is redundant and ask us to remove it.
+3:49
+But in Java, public is not the default. And so we should make our class public if we want it to be used elsewhere.
+3:57
+Then we want to add the X and the Y and a constructor to initialise them, so in Java,
+4:04
+we have what we would call fields which correspond to properties, and so we have private final integer X.
+4:11
+And so this is declaring a field which is private. It's final, which means that it's immutable, so that corresponds to a vowel property in Kopplin.
+4:24
+Its type is integer and it has the name X.
+4:34
+So we use integer rather than int. And I'll do the same for why.
+4:39
+Now you'll see that these are red. This is because they're not initialised.
+4:51
+So we've created a final field that can only be assigned once, but we haven't assigned any value to it.
+4:54
+So we need a constructor to do that.
+5:00
+And the way that we create a constructor is similar to an codling but rather than doing it in line with the class definition.
+5:02
+We're going to do it separately down here, so we're going to say that this is a public point and that's going to take an integer X and an integer Y.
+5:10
+And then in the body of this constructeur, what we'll do is to say that this X equals X and this Y equals Y.
+5:24
+So there are a few things to notice here that differ from Coffin. First of all, is how we express the parameters.
+5:36
+So rather than writing X Colon ends, we write integer X and integer Y.
+5:43
+In the body of the constructeur, in order that it's not ambiguous whether we're talking about the parameter X or the Field X,
+5:51
+when we're talking about the field, we prefix with this dot and when we talk about just the X, that's going to be the parameter here.
+6:00
+If the names weren't the same, then we could. Do away with this.
+6:08
+They stopped because that wouldn't be ambiguous.
+6:13
+But a standard pattern that you'll see is to have the same name for the field and the parameter and to set out the constructor like this.
+6:15
+The other thing that you will note here is that we use semicolons to separate lines of code.
+6:25
+So when we have separate statements, even though they're on separate lines, we have to end those lines with a semicolon.
+6:32
+So in Scotland, we don't need these semicolons, but in Java we do.
+6:38
+And if we leave them out, then you'll see that's a compiler error, so we need to put the semicolon in.
+6:41
+Now, let's see about adding some simple behaviour to our point.
+6:47
+So before we do that, I'm going to define a test for it.
+6:51
+So just in the same way as we had in Scotland, we've got sauce and test directories in Antennagate, we've got a package in our test folder.
+6:55
+I'm going to create a new job test pass. I'm going to call this point to test just as we would.
+7:02
+And then inside this class, I'm going to define some test methods, just as we did in cockpit, but with a few variations.
+7:11
+So first of all, our first test method is going to be tagged with Test from G-Unit just as before.
+7:18
+You'll see that imports from G-Unit just as we did before, and I'm going to write a method that's going to define our first test.
+7:26
+So first of all, it starts with public again because public is not default in Java.
+7:34
+And so in order to make a test method, we have to make a public method.
+7:40
+So we have to define it with the public key word. Then we defined the return Typekit this, which is void.
+7:43
+So in conclusion, we have a function that doesn't return anything. We just omit the return type or possibly talk about it as being unit in Java.
+7:50
+We have the type void, which is pretty much equivalent to unit, but we have to specify it explicitly,
+7:59
+and the return type comes before the name of the method rather than afterwards.
+8:04
+Then I'm going to give the name, and in this case, let's test that we can convert our point into a suitable string representation.
+8:09
+And I'm going to give the round brackets and add a block, buddy.
+8:20
+One other thing that you'll notice is that in Scotland, we can use the tactic notation to have our test name have spaces in it.
+8:26
+That's not possible in Java. So we just use a regular method name in camel case with each new word having a two letter.
+8:33
+So now let's write the remainder of the test. So a 30 course.
+8:42
+And we want to say, if we make a point at three four, maybe we should expect this string representation.
+8:49
+And two string is exactly the same as in Scotland, and then we'll just add our semicolon at the end to make this line compile.
+9:01
+We need to import assert equals, import it from GI unit, you'll see that adds another import line.
+9:10
+And then here we need to declare and create the object point. So this will be a little bit different in Scotland.
+9:19
+We would do something like foul point equals point three or four.
+9:24
+But we have a few things that we need to change here. Firstly, we don't have a vowel keyword in Japan.
+9:31
+We have a varkey Bennett, which works as the Cochrane Bark does.
+9:38
+And if we want to make something that is not reassigning equivalent to a vowel, then we would make a final vowel.
+9:43
+Then the other thing that's different is where in Scotland we would call the constructor like this in Java, where we want to make a new object.
+9:51
+We have to use the new operator. So we put that in front of the constructor call and then we're going to have a semicolon at the end.
+9:57
+Another form that you'll see very commonly, particularly in older Java code,
+10:05
+is that instead of having fine over here, it'll actually have the typed name.
+10:10
+So it'll say something like a variable of type point called point is assigned a reference to a new object.
+10:15
+So you can use either of those forms.
+10:25
+As you prefer, it's pretty much a matter of taste, but definitely in existing Java source code, you'll see this for quite a lot.
+10:29
+OK, now let's run our test and see whether it works. OK.
+10:40
+It fails, but this failure is quite familiar to us from our work,
+10:51
+where we see that it's actually printing the cost name and some object reference rather than the string that we wanted.
+10:55
+And so we need to define our own two string method to do what we want.
+11:02
+So let's do that in the body, of course, point. So in this case, we're going to define a method.
+11:06
+It's going to be a public method. So I'm going to define it as public. It's going to return a string.
+11:12
+So we put that next. It's called two string and this is the body in Java.
+11:17
+All methods have block bodies. It's not possible to define something with an expression body.
+11:26
+So every method will have a pair of prices and need to pretend something unless it's void.
+11:31
+So in this case, we're going to return a string and let's just make it up like this.
+11:36
+And then semicolon at the end. And now if we run tests again.
+11:49
+Now we're passing. So you've seen that we've created a class, we had to define that class as being public because that's not the default.
+11:56
+We gave it a name just as we would in Scotland. We defined its body embraces.
+12:06
+We defined two fields and these fields are fields of type integer,
+12:11
+and we define them as being private so that they're encapsulated within the class and final so that they are immutable,
+12:17
+the equivalent of bowel properties. So I'd encourage you to make your field's final wherever possible.
+12:24
+Then we defined a constructor, which will make us a new point, given two inches X and Y.
+12:31
+And in the body of the constructor, we assigned X and Y to the fields X and Y.
+12:37
+Note that we added semicolons at the end of each of these lines.
+12:43
+And then we added an instance method to string, which defines how to string behaviour is going to work.
+12:48
+And actually, one more thing we could do is to add an override annotation.
+12:55
+So in codling override is a key word,
+13:01
+and we have to specify that if we want to override some default behaviour in Java, we don't have to specify override.
+13:03
+It will do the right thing anyway. But it's a good convention to add this at override annotation if that's what you are doing.
+13:10
+One of the things that will happen now is that if I am trying to override the default implementation,
+13:18
+but I somehow misspell my method name, then it will tell me that we're actually not overwriting anything.
+13:23
+So if I don't have the annotation, we don't get the same check.
+13:30
+Then in our tests, again, we specify things pretty similarly to what we did before,
+13:36
+but we saw that when we create a new object, we have to use the new operator, not just a call to the constructor on its own.
+13:41
+And when we created a local variable, we put the type on the left hand side, or we could have specified it as final ball.
+13:48

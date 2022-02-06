@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Recording(models.Model):
-    panopto_id = models.TextField()
+    panopto_id = models.TextField(unique=True)
     name = models.TextField()
 
     def __str__(self):
@@ -23,6 +23,7 @@ class QuestionAnswer(models.Model):
     recording = models.ForeignKey(
         Recording, on_delete=models.RESTRICT, related_name="questions"
     )
+    votes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.question

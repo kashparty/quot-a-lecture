@@ -1,0 +1,177 @@
+ID: 0f1d6f48-e3cc-4802-a0e4-ae2d0148fbdb
+Title: 8.3 Tractability
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 06/03/2021
+The final part of the course is an introduction to complexity.
+0:01
+We're going to cover the idea of a tractable problem and the complexity classes, PE and entropy.
+0:06
+We'll look at problem reduction and ENPI completeness. So let's start with tractable problems.
+0:13
+So we want to identify which problems are tractable.
+0:22
+Another word for Traktor war could be feasible. What do we mean by that?
+0:27
+We mean efficiently computable. So we can compute them in a reasonable amount of time.
+0:31
+And we'll focus on worst case complexity. We want w n to be not too large.
+0:38
+Where N is the input size? So consider, for instance, sorting a list by comparisons.
+0:44
+We have seen that w n will be n log N is the best we can do.
+0:50
+Or B go off and log in. Where N is the list.
+0:56
+Length of the list. For instance merge sort. Gives us that complexity.
+1:00
+So we can agree. In that case the sorting is tractable. Since comparing two elements in a list can be done easily.
+1:05
+And we know that sorting is carried out every day for quite large lists.
+1:12
+So sorting is tractable. How about problems from graph theory?
+1:17
+Well, how about oil path? Given a graph G does G have an oil path?
+1:23
+Well, supposing that G has got N nodes and M asks the input size will depend on the representation of G.
+1:29
+So for instance, the adjacency matrix will have size bigger of N squared.
+1:37
+And the linked list Bego of N class M. And we know that by Euler's theorem that the graph has an oil path.
+1:43
+If and only if it has zero or two notes of all degree. Well,
+1:51
+so checking for an oil or whether an oil apart exists is tractable because we can just look for these nose of all
+1:55
+degree and count them by making a single pass through either the adjacency list or the linked list representation.
+2:02
+We just keep track of the degree count for the current node and the number of odd degree nodes that we've found so far.
+2:09
+So that can all be done. By contrast, the Hamiltonian path problem, does a graph have a Hamiltonian path?
+2:17
+Well, we have got an algorithm for that. A variant of the Bellman Health Corp algorithm solves that in time.
+2:24
+Bingo. In square two to the N, but that takes too long.
+2:33
+Because that's exponential time. So we don't regard that as tractable because as N gets large, then fairly rapidly,
+2:38
+it takes too long to compute, at least using the best solution that we know of.
+2:46
+So we can regard the Hamiltonian path problem as apparently intractable.
+2:53
+So let's make some definitions. A decision problem is a problem that has a yes or no answer.
+2:59
+And we've just seen two examples oilor path and Hamiltonian path.
+3:07
+So a decision on Problem D will say that it's decided by an algorithm, A if on any input, A returns yes or no,
+3:11
+depending on whether D of X holds for that, whether that input is a yes or no instance of the particular problem.
+3:20
+So an algorithm for deciding oilor path will return. Yes.
+3:31
+If the graph has annoyed a path and will return, no. If the graph does not.
+3:36
+We'll say that a decision problem day is desirable in polynomial time.
+3:42
+If it's decided by some algorithm that runs within polynomial time, which we measure in terms of the input size.
+3:47
+So what we mean by saying that a runs within polynomial time is to say that on
+3:55
+all inputs of size n a takes less than or equal to P of N steps for some P of N,
+4:00
+which is a polynomial in an. And we'll abbreviate Polynomial time to pully time or P time.
+4:07
+So what we've seen is that oil, a path is desirable in P time, fairly obviously from our simple minded procedure.
+4:15
+Just checking for notes about degree, but Hamiltonian path is apparently not.
+4:23
+I say apparently because maybe there's some algorithm, better algorithm that we haven't yet thought of.
+4:29
+I'm using D for problems, Wante for decision, in other words, rather than P, because P will be reserved to be the class of polynomial time.
+4:36
+Problems are complexity class for those problems.
+4:48
+Well, so we'd like to identify the notion of tractable problem with Paul, the name merely time algorithms.
+4:56
+And that is the content of the cook carp thesis, which says that the problem is tractable.
+5:07
+If and only if it can be computed within the know many, many steps in the worst case.
+5:14
+So in other words, W n is less than or equal to P event for some polynomial P of N.
+5:19
+And a more succinct way of expressing the Cook CRC thesis is that tractable equals polynomial time.
+5:25
+So according to this thesis, sorting a list is tractable because we have a polynomial time solution for it, as is oilor path.
+5:33
+That Hamiltonian path is apparently not. So I notice this as a thesis rather than a theorem is the difference.
+5:41
+Well, the theorem is something that you might hope to prove, but we can't really prove this thesis because it's relating an informal notion.
+5:48
+Tractability with something that's a lot more precisely defined, which is polynomial.
+5:57
+Lee many steps.
+6:05
+Now, admittedly, we haven't said exactly what we mean by steps here, but we can make that precise by using a particular computational model.
+6:06
+Whereas the idea of tractability is just something that we feel like will recognise it when we see it,
+6:15
+that we can compute something within a reasonable amount of time.
+6:20
+So we are saying something here by identifying this informal notion with this more precise notion.
+6:24
+This is a thesis that we can't really prove, given that we don't have a precise definition of tractability.
+6:32
+Apart from saying it's equal to polynomial time.
+6:38
+On the other hand, we might hope we might possibly disprove this by coming up with something that clearly is tractable,
+6:42
+but which can't be solved in polynomial time. So.
+6:48
+We've been talking about the event steps in a computation on input size N and but clearly input
+6:57
+size and computation step will have different meanings depending on the model we're using.
+7:05
+So, for instance, for sorting a list, we took an input size to be the number of list items and we counted comparisons
+7:11
+that ignoring other computation steps that might indeed be meaningful or costly,
+7:19
+such as swaps or copying or recursive procedure calls, etc.
+7:23
+When we solved oilor path, we measured input size, either using adjacency matrices or adjacency lists,
+7:30
+and the computation steps would involve inspecting the input and incrementing counters.
+7:38
+So there could be lots of different ways of measuring both input, size and computation step.
+7:43
+And we've tended to adjust that depending on the particular kind of problem that we're solving.
+7:49
+And that indeed is the style an algorithm analysis. But the nice thing is that it turns out that all reasonable models of computation
+7:56
+and all reasonable measures of input size give us essentially the same results.
+8:04
+And this is the content of the so-called polynomial invariance thesis.
+8:10
+And so the idea is that if a problem can be solved in polynomial time, P of N in some model,
+8:15
+then if we change the model, the problem can still be solved in polynomial time.
+8:20
+Just a different polynomial cue event, let's say. So we may get a different polynomial.
+8:26
+But the concept of polynomial time itself. Just saying there is some polynomial is robust.
+8:31
+And that's what the pull, namely invariance thesis says. If a problem can be solved in P time, in some reasonable model of computation,
+8:38
+then it can be solved in P time in any other reasonable model of computation.
+8:46
+So, for instance,
+8:52
+for sorting a list to a different model will be to take the sizes of the items to be sorted into account in measuring the input length and maybe
+8:53
+take into account the fact that comparisons can take different amounts of time depending on the sizes of the items and the length of the list.
+9:02
+So you still get the name many, many steps, but not necessarily they go and log in.
+9:10
+So we might change the polynomial, but we don't change the main result,
+9:16
+which is that the problem can be solved in peak time and is therefore tractable.
+9:21
