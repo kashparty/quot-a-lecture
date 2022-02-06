@@ -21,7 +21,7 @@ class UI:
         self.__username = StringVar(self.__window, "username")
         self.__password = StringVar(self.__window, "password")
         img = Image.open("PiracyNotice.png")
-        img.putalpha(10)
+        img.putalpha(50)
         img = img.resize((1280, 720), Image.BICUBIC)
         self.__piracyNotice = ImageTk.PhotoImage(img)
         self.__place_widget(Label(self.__window, image=self.__piracyNotice, bg=self.__bgCol),
