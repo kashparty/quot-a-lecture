@@ -3,7 +3,15 @@
 
 <h1> {{ q.question }} </h1>
 
-{{q.answer}}
+<p>
+    {{q.answer}}
+</p>
+
+<p>
+    <a href="{% url 'seapanapp:q_upvote' q.id %}">+</a>
+    {{q.votes}}
+    <a href="{% url 'seapanapp:q_downvote' q.id %}">-</a>
+</p>
 
 <hr />
 
