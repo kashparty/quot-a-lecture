@@ -23,7 +23,7 @@
         {% for q in results %}
         <li class="FormInner">
             {% load static %}
-            <img src="{% static 'images/resultButton.svg' %}">
+            <img src="{% static 'images/resultbutton.svg' %}">
             <div class="ResultTextHolder">
                 <p class="SmallText">{{q.preamble}}</p>
                 <a style="text-decoration: underline;" class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
