@@ -23,3 +23,12 @@ rm -r seapanapp/migrations/
 ./manage.py makemigrations seapanapp
 ./manage.py migrate
 python extract_questions.py
+```
+
+Generating files
+
+
+```
+python save_counts.py
+python extract_questions.py
+```
