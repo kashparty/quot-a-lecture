@@ -161,3 +161,4 @@ cython_debug/
 data.ms/
 meilisearch-linux-amd64
 .idea
+*.dat

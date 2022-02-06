@@ -14,3 +14,5 @@ We use black
 ```
 black seapan seapanapp
 ```
+
+You need to run `python save_counts.py`.
