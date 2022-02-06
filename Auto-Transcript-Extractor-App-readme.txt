@@ -1,0 +1,2 @@
+Requires Google Chrome browser and Chrome Driver (https://chromedriver.chromium.org/downloads)
+Rename to Chrome Driver to chromedriver.exe and place in folder panopto-api-stuff to run PanoptoWebScraperGUI.py (tested on version 97 but should work for other versions)
