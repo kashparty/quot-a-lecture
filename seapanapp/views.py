@@ -1,3 +1,4 @@
+from posixpath import split
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
@@ -5,10 +6,19 @@ from sentence_transformers import SentenceTransformer
 from scipy.spatial import distance
 from numpy import argsort, frombuffer, single
 from django.db.models import F
+import re
+from os import listdir
+from functools import lru_cache
+import pickle
+import nltk
+from nltk.stem import WordNetLemmatizer
 
 from .models import QuestionAnswer, Recording
 
 model = SentenceTransformer("distilbert-base-nli-mean-tokens")
+nltk.download("wordnet")
+nltk.download("omw-1.4")
+lemmatizer = WordNetLemmatizer()
 
 # Create your views here.
 
@@ -45,6 +55,77 @@ def search(req):
     return render(req, "seapanapp/search.html")
 
 
+def precalc_counts():
+    counts = dict()
+    files_dir = "panopto-api-stuff/"
+    filenames = [f for f in listdir(files_dir) if f.endswith(".txt")]
+    for filename in filenames:
+        file = open(files_dir + filename, "r")
+        for word in map(
+            lambda w: lemmatizer.lemmatize(w),
+            filter(
+                lambda c: c != "",
+                re.sub("[\n,.;@#?!&$]+", " ", file.read().lower()).split(" "),
+            ),
+        ):
+            if word in counts:
+                counts[word] += 1
+            else:
+                counts[word] = 1
+    return counts
+
+
+def save_counts():
+    file = open("PrecalculatedCounts.dat", "wb")
+    pickle.dump(precalc_counts(), file)
+    file.close()
+
+
+def load_counts():
+    file = open("PrecalculatedCounts.dat", "rb")
+    counts = pickle.load(file)
+    file.close()
+    return counts
+
+
+counts = load_counts()
+
+
+def heuristic(question1, question2):
+    value = 0
+    lem_question1 = split_to_words(question1)
+    for i in range(len(lem_question1)):
+        lem_question1[i] = lemmatizer.lemmatize(lem_question1[i])
+    lem_question2 = split_to_words(question2)
+    for i in range(len(lem_question2)):
+        lem_question2[i] = lemmatizer.lemmatize(lem_question2[i])
+
+    for word in lem_question1:
+        if word in lem_question2 and word in counts:
+            value += 1 / counts[word]
+
+    return value
+
+
+def split_to_words(inp):
+    return list(
+        filter(lambda c: c != "", re.sub("[\n,.;@#?!&$]+", " ", inp.lower()).split(" "))
+    )
+
+
+@lru_cache
+def get_inv_count(word):
+    files_dir = "panopto-api-stuff/"
+    filenames = [f for f in listdir(files_dir) if f.endswith(".txt")]
+    count = 0
+    word = "what"
+    for filename in filenames:
+        file = open(files_dir + filename, "r")
+        count += file.read().count(word)
+        file.close()
+    return 1 / count
+
+
 def searchres(req):
     query = req.POST["query"]
     query_encoding = model.encode(query)
@@ -55,7 +136,13 @@ def searchres(req):
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
         for r in results
     ]
-    ranks = argsort(similarities)[-10:][::-1]
+    importances = [heuristic(query, r.question) for r in results]
+    print(max(importances))
+    scores = []
+    for i in range(len(importances)):
+        scores.append(similarities[i] + 100 * importances[i])
+
+    ranks = argsort(scores)[-10:][::-1]
     sorted_results = [results[int(i)] for i in ranks]
 
     return render(
