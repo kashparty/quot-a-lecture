@@ -21,7 +21,7 @@ nltk.download("omw-1.4")
 lemmatizer = WordNetLemmatizer()
 
 #Question, preamble, answer
-COEFFS = [75, 25, 25]
+COEFFS = [300, 100, 100]
 
 # Create your views here.
 
@@ -105,7 +105,7 @@ def heuristic(question1, question2):
         if word in lem_question2 and word in counts:
             value += 1 / counts[word]
 
-    return value
+    return value/(len(lem_question1) + len(lem_question2))
 
 
 def split_to_words(inp):
