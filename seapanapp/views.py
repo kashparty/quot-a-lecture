@@ -123,7 +123,7 @@ def searchres(req):
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
         for r in results
     ]
-    importances = [coeffs[0] * heuristic(query, r.question) + coeffs[1] * heuristic(query, r.preamble) + coeffs[2] * heuristic(query, r.answer) for r in results]
+    importances = [COEFFS[0] * heuristic(query, r.question) + COEFFS[1] * heuristic(query, r.preamble) + COEFFS[2] * heuristic(query, r.answer) for r in results]
     print(max(importances))
     scores = []
     for i in range(len(importances)):
