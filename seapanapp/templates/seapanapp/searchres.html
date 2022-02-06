@@ -25,9 +25,9 @@
             {% load static %}
             <img src="{% static 'images/resultButton.svg' %}">
             <div class="ResultTextHolder">
-                <p class="SmallText">{Byebye this babye}</p>
+                <p class="SmallText">{{q.preamble}}</p>
                 <a class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
-                <p class="SmallText">Hello, this is really cool.</p>
+                <p class="SmallText">{{q.answer}}</p>
             </div>
         </li>
         {% endfor %}
