@@ -1,6 +1,7 @@
 from tkinter import (Tk, Button, Label, Entry, StringVar)
 from PanoptoWebScraper import main
 from PIL import Image, ImageTk
+from threading import Thread
 
 
 class UI:
@@ -51,7 +52,7 @@ class UI:
         widget.place(anchor=anchor, x=x, y=y, width=width, height=height)
 
     def __run(self):
-        main(self.__domain, self.__username, self.__password, show_browser=False)
+        Thread(target=main, args=(self.__domain.get(), self.__username.get(), self.__password.get(), False)).start()
 
 
 UI()
