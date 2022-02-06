@@ -145,8 +145,9 @@ def category_detail(req, category_id):
         "seapanapp/l_list.html",
         {
             "ls": ls,
-            "title": f"Lectures filed as: {c.name}",
-            "bartitle": f"{c.name} - Category -",
+            "name": c.name,
+            "prefix": "Lectures Filed As",
+            #"suffix": "Category",
         },
     )
 
@@ -159,7 +160,8 @@ def lecturer_detail(req, lecturer_id):
         "seapanapp/l_list.html",
         {
             "ls": ls,
-            "title": f"Lectures by: {lec.name}",
-            "bartitle": f"{lec.name} - Lecturer -",
+            "name": lec.name,
+            "prefix": "Lectures By",
+            #"suffix": "Lecturer",
         },
     )

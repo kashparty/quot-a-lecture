@@ -7,7 +7,7 @@ Search -
 {% block content %}
 
 <div class="SearchHolder">
-    <div class="NavBar">
+    <div class="NavBar" style="margin-bottom: 5px;">
         <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
             <h1>Quot-a-Lecture</h1>
         </a>
@@ -23,14 +23,13 @@ Search -
         </div>
 
     </div>
-    <br>
     <div class="SearchDiv">
         <form action="{% url 'seapanapp:search_res' %}" method="post" class="SearchForm">
             {% csrf_token %}
             <div class="FormInner">
                 {% load static %}
                 <input type="image" class="SearchButton" src="{% static 'images/searchbutton.svg' %}" />
-                <input autofocus class="SearchBox" type="text" name="query" placeholder="Enter query..." />
+                <input autofocus class="SearchBox" type="text" name="query" placeholder="Enter your burning questions..." />
             </div>
         </form>
     </div>

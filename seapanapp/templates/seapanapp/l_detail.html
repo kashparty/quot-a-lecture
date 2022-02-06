@@ -20,30 +20,46 @@
         <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
         <hr>
     </div>
+
+    <a style="text-decoration: underline;" href="{{ l.to_url }}"> <h2> {{l.name}} </h2> </a>
+    
+    <p> By: <a style="text-decoration: underline;" href="{% url 'seapanapp:lecturer_detail' l.lecturer.id %}"> {{l.lecturer}} </a>, {{l.date}} </p>
+    <p> <a style="text-decoration: underline;" href="{% url 'seapanapp:category_detail' l.category.id %}"> {{l.category}}</a> </p>
+
+    <hr>
 </div>
 
-<a href="{{ l.to_url }}">
-    <h2> {{l.date}}: {{l.name}}</h2>
-</a>
-
-<p>
-    By: <a href="{% url 'seapanapp:lecturer_detail' l.lecturer.id %}"> {{l.lecturer}} </a>
-</p>
-<p>
-
-    Filled Under: <a href="{% url 'seapanapp:category_detail' l.category.id %}"> {{l.category}}</a>
-</p>
-
-
-
 {% if qs %}
+<div>
+    <ul class="ResultsList">
+        {% for q in qs %}
+        <li class="FormInner">
+            {% load static %}
+            <img src="{% static 'images/resultButton.svg' %}">
+            <div class="ResultTextHolder">
+                <p class="SmallText">{{q.preamble}}</p>
+                <a style="text-decoration: underline;" class="BigResultText"
+                    href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
+                <p class="SmallText">{{q.answer}}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% else %}
+<div class="NavBar">
+    <p><i>Nothing was found :(</i></p>
+</div>
+{% endif %}
+
+<!-- {% if qs %}
 <ul>
     {% for q in qs %}
-    <li>{{ q.preamble }} <a href="{% url 'seapanapp:q_detail' q.id %}">{{ q.question }}</a> {{ q.answer }} </li>
+    <li>{{ q.preamble }} <a style="text-decoration: underline;" href="{% url 'seapanapp:q_detail' q.id %}">{{ q.question }}</a> {{ q.answer }} </li>
     {% endfor %}
 </ul>
 {% else %}
 <p>No Questions</p>
-{% endif %}
+{% endif %} -->
 
 {% endblock %}

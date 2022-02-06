@@ -1,20 +1,42 @@
 {% extends "seapanapp/base.html" %}
 {% block content %}
 
-{% block title %}
-{{bartitle}}
-{% endblock %}
+<div class="NavBar" style="margin-bottom: 5px;">
+    <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+        <h1>Quot-a-Lecture</h1>
+    </a>
 
-{% if title %}
-<h2>{{ title }}</h2>
-{% endif %}
+    <div class="NavContent">
+        <hr>
+        <a id="Search" style="text-decoration: underline;" href="{% url 'seapanapp:search' %}">Search</a>
+        •
+        <a id="Random" style="text-decoration: underline;" href="{% url 'seapanapp:l_list' %}">Lectures</a>
+        •
+        <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
+        <hr>
+    </div>
+    {% if name %}
+        {% block title %}
+        {{prefix}} - {{name}}
+        {% endblock %}
+        <hr>
+    {% endif %}
 
-<ul>
-    {% for l in ls %}
-    <li>
-        {{ l.date }}: <a href="{% url 'seapanapp:lecture_detail' l.id %}"> {{ l.name}} </a>
-    </li>
-    {% endfor %}
-</ul>
+</div>
+
+<div style="padding-bottom: 2px;">
+    <ul class="ResultsList">
+        {% for l in ls %}
+        <li class="ListInner">
+            {% load static %}
+            <a style="text-decoration: underline;" class="BigResultText"
+                href="{% url 'seapanapp:lecture_detail' l.id %}">{{l.name}}</a>
+            <i class="SmallText">{{ l.date }}</i>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
 
 {% endblock %}

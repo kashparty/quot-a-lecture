@@ -28,6 +28,10 @@ a, p {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--peach);
+}
+
 h1 {
   font-family: var(--font);
   font-size: 70px;
@@ -133,7 +137,7 @@ hr {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
 }
 
 .FormInner {
@@ -145,6 +149,26 @@ hr {
   outline-color: var(--brown);
 
   border-radius: 80px;
+
+  margin-bottom: 15px;
+}
+
+.ListInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background: var(--cream);
+
+  border: 1px solid var(--brown);
+  outline-style: solid;
+  outline-color: var(--brown);
+
+  border-radius: 40px;
+
+  margin-bottom: 15px;
 }
 
 .ResultsList {
