@@ -1,7 +1,11 @@
 {% extends "seapanapp/base.html" %}
+{% block title %}
+{{ query }} - Search Results -
+{% endblock %}
+
 {% block content %}
 
-<h1> Search results for {{ query }} </h1>
+<h2> Search results for: {{ query }} </h2>
 
 <!-- TODO: Dont dupe with index.htmlj -->
 

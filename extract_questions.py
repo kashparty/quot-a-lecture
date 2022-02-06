@@ -1,4 +1,4 @@
-from datetime import datetime, time
+from datetime import datetime, time, date
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from os import environ, listdir
@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 
 environ.setdefault("DJANGO_SETTINGS_MODULE", "seapan.settings")
 django.setup()
-from seapanapp.models import QuestionAnswer, Recording
+from seapanapp.models import Category, Lecturer, QuestionAnswer, Recording
 
 MIN_QUESTION_LENGTH = 3
 nltk.download("punkt")
@@ -32,7 +32,21 @@ def load_phrases(filename):
         metadata = lines[:5]
         lecture_id = metadata[0].split(": ")[1]
         lecture_title = metadata[1].split(": ", 1)[1]
-        recording = Recording(panopto_id=lecture_id, name=lecture_title)
+        lecture_category = metadata[2].split(": ", 1)[1]
+        lecture_lecturure = metadata[3].split(": ", 1)[1]
+        d, m, y = metadata[4].split(": ", 1)[1].split("/")
+        lecture_date = date.fromisoformat(f"{y}-{m}-{d}")
+
+        cat, _ = Category.objects.get_or_create(name=lecture_category)
+        lec, _ = Lecturer.objects.get_or_create(name=lecture_lecturure)
+
+        recording = Recording(
+            panopto_id=lecture_id,
+            name=lecture_title,
+            category=cat,
+            lecturer=lec,
+            date=lecture_date,
+        )
         recording.save()
 
         lecture_category = metadata[2].split(": ", 1)[1]

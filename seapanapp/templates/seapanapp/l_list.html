@@ -1,0 +1,20 @@
+{% extends "seapanapp/base.html" %}
+{% block content %}
+
+{% block title %}
+{{bartitle}}
+{% endblock %}
+
+{% if title %}
+<h2>{{ title }}</h2>
+{% endif %}
+
+<ul>
+    {% for l in ls %}
+    <li>
+        {{ l.date }}: <a href="{% url 'seapanapp:lecture_detail' l.id %}"> {{ l.name}} </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

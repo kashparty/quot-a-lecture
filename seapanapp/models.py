@@ -4,9 +4,33 @@ from django.db import models
 # Create your models here.
 
 
+class Category(models.Model):
+    name = models.TextField(unique=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class Lecturer(models.Model):
+    name = models.TextField(unique=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+
 class Recording(models.Model):
     panopto_id = models.TextField(unique=True)
     name = models.TextField()
+
+    # TODO: Their should be forein keys
+    category = models.ForeignKey(
+        Category, on_delete=models.RESTRICT, related_name="recordings"
+    )
+    lecturer = models.ForeignKey(
+        Lecturer, on_delete=models.RESTRICT, related_name="recordings"
+    )
+
+    date = models.DateField()
 
     def __str__(self):
         return f"{self.name} {self.panopto_id[:8]}"

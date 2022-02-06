@@ -1,7 +1,12 @@
 {% extends "seapanapp/base.html" %}
+
+{% block title %}
+{{ q.question }} - Question -
+{% endblock %}
+
 {% block content %}
 
-<h1> {{ q.question }} </h1>
+<h2> {{ q.question }} </h2>
 
 <p>
     {{q.answer}}
