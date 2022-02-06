@@ -20,7 +20,7 @@ nltk.download("wordnet")
 nltk.download("omw-1.4")
 lemmatizer = WordNetLemmatizer()
 
-#Question, preamble, answer
+# Question, preamble, answer
 COEFFS = [75, 25, 25]
 
 # Create your views here.
@@ -53,7 +53,8 @@ def lecture_detail(req, lecture_id):
 
 
 def search(req):
-    return render(req, "seapanapp/search.html")
+    ls = Lecturer.objects.order_by("name")
+    return render(req, "seapanapp/search.html", {"ls": ls})
 
 
 def precalc_counts():
@@ -119,11 +120,18 @@ def searchres(req):
     query_encoding = model.encode(query)
 
     results = QuestionAnswer.objects.all()
+    if req.POST["lecturer"] != "all":
+        results = results.filter(recording__lecturer__id=req.POST["lecturer"])
     similarities = [
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
         for r in results
     ]
-    importances = [COEFFS[0] * heuristic(query, r.question) + COEFFS[1] * heuristic(query, r.preamble) + COEFFS[2] * heuristic(query, r.answer) for r in results]
+    importances = [
+        COEFFS[0] * heuristic(query, r.question)
+        + COEFFS[1] * heuristic(query, r.preamble)
+        + COEFFS[2] * heuristic(query, r.answer)
+        for r in results
+    ]
     print(max(importances))
     scores = []
     for i in range(len(importances)):
