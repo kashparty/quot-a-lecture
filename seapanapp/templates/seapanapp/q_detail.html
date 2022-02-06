@@ -8,7 +8,7 @@
 
 <div class="SearchHolder">
     <div class="NavBar">
-        <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+        <a href="{% url 'seapanapp:search' %}" id="MainHeader">
             <h1>Quot-a-Lecture</h1>
         </a>
     
@@ -22,11 +22,11 @@
             <hr>
         </div>
     
-        <div class="Answer"> <i>Context:</i> {{q.preamble}} </div>
+        <div class="Answer"> {{q.preamble}} </div>
     
-        <h3 class="QuestionHeader"> <i>Question:</i> {{ q.question }} </h2>
+        <h3 class="QuestionHeader"> {{ q.question }} </h2>
     
-            <div class="Answer"> <i>Response:</i> {{q.answer}} </div>
+            <div class="Answer"> {{q.answer}} </div>
     
             <hr>
     

@@ -2,15 +2,13 @@
 {% block content %}
 
 <div class="NavBar" style="margin-bottom: 5px;">
-    <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+    <a href="{% url 'seapanapp:search' %}" id="MainHeader">
         <h1>Quot-a-Lecture</h1>
     </a>
 
     <div class="NavContent">
         <hr>
         <a id="Search" style="text-decoration: underline;" href="{% url 'seapanapp:search' %}">Search</a>
-        •
-        <a id="Random" style="text-decoration: underline;" href="{% url 'seapanapp:l_list' %}">Lectures</a>
         •
         <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
         <hr>

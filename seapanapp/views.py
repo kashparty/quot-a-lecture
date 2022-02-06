@@ -27,7 +27,7 @@ COEFFS = [300, 100, 100]
 # Create your views here.
 
 
-def index(req):
+def lectures(req):
     ls = Recording.objects.order_by("-date")
     return render(req, "seapanapp/l_list.html", {"ls": ls})
 
@@ -53,7 +53,7 @@ def lecture_detail(req, lecture_id):
     return render(req, "seapanapp/l_detail.html", {"l": l, "qs": qs})
 
 
-def search(req):
+def index(req):
     ls = Lecturer.objects.order_by("name")
     cs = Category.objects.order_by("name")
     return render(req, "seapanapp/search.html", {"ls": ls, "cs": cs})

@@ -8,14 +8,12 @@ Search -
 
 <div class="SearchHolder">
     <div class="NavBar" style="margin-bottom: 5px;">
-        <a href="{% url 'seapanapp:l_list' %}" id="MainHeader">
+        <a href="{% url 'seapanapp:search' %}" id="MainHeader">
             <h1>Quot-a-Lecture</h1>
         </a>
 
         <div class="NavContent">
             <hr>
-            <a id="Search" style="text-decoration: underline;" href="{% url 'seapanapp:search' %}">Search</a>
-            •
             <a id="Random" style="text-decoration: underline;" href="{% url 'seapanapp:l_list' %}">Lectures</a>
             •
             <a id="Admin" style="text-decoration: underline;" href="/admin">Admin</a>
@@ -31,20 +29,30 @@ Search -
                 <input type="image" class="SearchButton" src="{% static 'images/searchbutton.svg' %}" />
                 <input autofocus class="SearchBox" type="text" name="query" placeholder="Enter your burning questions..." />
             </div>
-            <select name="lecturer">
-                <option value="all">All lecturers</option>
-                {% for l in ls %}
-                <option value="{{l.id}}">{{l.name}}</option>
-                {% endfor %}
-            </select>
-            <select name="category">
-                <option value="all">All categories</option>
-                {% for c in cs %}
-                <option value="{{c.id}}">{{c.name}}</option>
-                {% endfor %}
-            </select>
-            <input type="date" name="date_from">
-            <input type="date" name="date_to">
+            <div class="FormParent" style="padding-bottom: 5px;">
+                <select name="lecturer" Class="Selector">
+                    <option value="all">All Lecturers</option>
+                    {% for l in ls %}
+                    <option value="{{l.id}}">{{l.name}}</option>
+                    {% endfor %}
+                </select>
+                <select name="category" Class="Selector">
+                    <option value="all">All categories</option>
+                    {% for c in cs %}
+                    <option value="{{c.id}}">{{c.name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="FormParent">
+                <div class="FormParent" style="width:49%">
+                    <label for="date_from" style="font-size: 15px;">Date From</label>
+                    <input class="DateSelec" type="date" name="date_from">
+                </div>
+                <div class="FormParent" style="width:49%">
+                    <label for="date_to" style="font-size: 15px;">Date To</label>
+                    <input class="DateSelec" type="date" name="date_to">
+                </div>
+            </div>
         </form>
     </div>
 </div>

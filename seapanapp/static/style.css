@@ -189,3 +189,27 @@ hr {
 
   border-radius: 30px;
 }
+
+.Selector {
+  width: 49%;
+  background: var(--cream);
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--font);
+  color: var(--brown);
+  font-size: 15px;
+}
+
+.DateSelec {
+  width: 20%;
+  background: var(--cream);
+  border-radius: 5px;
+  outline: none;
+  font-family: var(--font);
+  color: var(--brown);
+}
+
+.FormParent {
+  display: flex;
+  justify-content: space-between;
+}
