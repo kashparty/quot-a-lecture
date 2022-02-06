@@ -33,12 +33,12 @@ def load_phrases(filename):
         lecture_id = metadata[0].split(": ")[1]
         lecture_title = metadata[1].split(": ", 1)[1]
         lecture_category = metadata[2].split(": ", 1)[1]
-        lecture_lecturure = metadata[3].split(": ", 1)[1]
+        lecture_lecturer = metadata[3].split(": ", 1)[1]
         d, m, y = metadata[4].split(": ", 1)[1].split("/")
         lecture_date = date.fromisoformat(f"{y}-{m}-{d}")
 
         cat, _ = Category.objects.get_or_create(name=lecture_category)
-        lec, _ = Lecturer.objects.get_or_create(name=lecture_lecturure)
+        lec, _ = Lecturer.objects.get_or_create(name=lecture_lecturer)
 
         recording = Recording(
             panopto_id=lecture_id,
