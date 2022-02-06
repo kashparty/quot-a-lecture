@@ -2,13 +2,27 @@
 {% block content %}
 
 <a href="{{ l.to_url }}">
-    <h2> {{l.name}}</h2>
+    <h2> {{l.date}}: {{l.name}}</h2>
 </a>
 
+<p>
+    By: <a href="{% url 'seapanapp:lecturer_detail' l.lecturer.id %}"> {{l.lecturer}} </a>
+</p>
+<p>
+
+    Filled Under: <a href="{% url 'seapanapp:category_detail' l.category.id %}"> {{l.category}}</a>
+</p>
+
+
+
+{% if qs %}
 <ul>
     {% for q in qs %}
-    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    <li>{{ q.preamble }} <a href="{% url 'seapanapp:q_detail' q.id %}">{{ q.question }}</a> {{ q.answer }} </li>
     {% endfor %}
 </ul>
+{% else %}
+<p>No Questions</p>
+{% endif %}
 
 {% endblock %}

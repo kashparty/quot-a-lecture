@@ -7,7 +7,7 @@ from scipy.spatial import distance
 from numpy import argsort, frombuffer, single
 from django.db.models import F
 
-from .models import QuestionAnswer, Recording
+from .models import Category, Lecturer, QuestionAnswer, Recording
 
 
 model = SentenceTransformer("distilbert-base-nli-mean-tokens")
@@ -17,10 +17,8 @@ model = SentenceTransformer("distilbert-base-nli-mean-tokens")
 
 
 def index(req):
-    latest_qs = QuestionAnswer.objects.all()
-    context = {"latest_qs": latest_qs}
-
-    return render(req, "seapanapp/index.html", context)
+    ls = Recording.objects.order_by("-date")
+    return render(req, "seapanapp/l_list.html", {"ls": ls})
 
 
 def q_details(req, question_id):
@@ -40,7 +38,7 @@ def q_downvote(req, question_id):
 
 def lecture_detail(req, lecture_id):
     l = get_object_or_404(Recording, pk=lecture_id)
-    qs = l.questions.all()
+    qs = l.questions.order_by("timestamp")
     return render(req, "seapanapp/l_detail.html", {"l": l, "qs": qs})
 
 
@@ -52,7 +50,6 @@ def searchres(req):
     query = req.POST["query"]
     query_encoding = model.encode(query)
 
-    # TODO: NLP stuff
     results = QuestionAnswer.objects.all()
     similarities = [
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
@@ -63,4 +60,24 @@ def searchres(req):
 
     return render(
         req, "seapanapp/searchres.html", {"query": query, "results": sorted_results}
+    )
+
+
+def category_detail(req, category_id):
+    c = get_object_or_404(Category, pk=category_id)
+    ls = c.recordings.order_by("-date")
+    return render(
+        req,
+        "seapanapp/l_list.html",
+        {"ls": ls, "title": f"Lectures filed as: {c.name}"},
+    )
+
+
+def lecturer_detail(req, lecturer_id):
+    lec = get_object_or_404(Lecturer, pk=lecturer_id)
+    ls = lec.recordings.order_by("-date")
+    return render(
+        req,
+        "seapanapp/l_list.html",
+        {"ls": ls, "title": f"Lectures by: {lec.name}"},
     )

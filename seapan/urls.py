@@ -17,7 +17,6 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path, include
 
-app_name = "f"
 urlpatterns = [
     path("admin/", admin.site.urls, name="admin"),
     path("", include("seapanapp.urls")),
