@@ -12,9 +12,9 @@
     </a>
 
     <div class="NavContent">
-        <hr>
-        <p id="Search" href="{% url 'seapanapp:search' %}">Showing results for {{query}} </p>
-        <hr>
+        <hr style="width: 100%;">
+        <p id="Search" href="{% url 'seapanapp:search' %}">Showing results for "{{query}}" </p>
+        <hr style="width: 100%;">
     </div>
 </div>
 {% if results %}
@@ -25,7 +25,7 @@
             {% load static %}
             <img src="{% static 'images/resultButton.svg' %}">
             <div class="ResultTextHolder">
-                <p class="SmallText">Byebye this babye</p>
+                <p class="SmallText">{Byebye this babye}</p>
                 <a class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
                 <p class="SmallText">Hello, this is really cool.</p>
             </div>
