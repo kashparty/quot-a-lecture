@@ -1,4 +1,9 @@
 {% extends "seapanapp/base.html" %}
+
+{% block title %}
+{{ l.name }} - Lecture -
+{% endblock %}
+
 {% block content %}
 
 <a href="{{ l.to_url }}">

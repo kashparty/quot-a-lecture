@@ -69,7 +69,11 @@ def category_detail(req, category_id):
     return render(
         req,
         "seapanapp/l_list.html",
-        {"ls": ls, "title": f"Lectures filed as: {c.name}"},
+        {
+            "ls": ls,
+            "title": f"Lectures filed as: {c.name}",
+            "bartitle": f"{c.name} - Category -",
+        },
     )
 
 
@@ -79,5 +83,9 @@ def lecturer_detail(req, lecturer_id):
     return render(
         req,
         "seapanapp/l_list.html",
-        {"ls": ls, "title": f"Lectures by: {lec.name}"},
+        {
+            "ls": ls,
+            "title": f"Lectures by: {lec.name}",
+            "bartitle": f"{lec.name} - Lecturer -",
+        },
     )

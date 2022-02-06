@@ -1,6 +1,10 @@
 {% extends "seapanapp/base.html" %}
 {% block content %}
 
+{% block title %}
+{{bartitle}}
+{% endblock %}
+
 {% if title %}
 <h2>{{ title }}</h2>
 {% endif %}
