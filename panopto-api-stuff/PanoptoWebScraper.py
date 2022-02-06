@@ -16,6 +16,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
+from quickFixer import fix_file
 
 from datetime import datetime
 
@@ -66,11 +67,12 @@ def save_transcript(driver, video_url, date):
                                                                                          lecturer, date) + \
                  "\n".join(map(lambda e: e.find_element_by_class_name("event-text").find_element_by_tag_name(
                      "span").text + "\n" + e.find_element_by_class_name("event-time").text, captions))
-    file_path = video_id
-    file = open(file_path + ".txt", "w")
+    file_path = video_id + ".txt"
+    file = open(file_path, "w")
     file.write(transcript)
     file.close()
-    print("Saved to " + file_path + ".txt")
+    fix_file(file_path)
+    print("Saved to " + file_path)
 
 
 def convert_date_time(date_time):

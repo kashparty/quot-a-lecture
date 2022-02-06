@@ -4,7 +4,7 @@ files_dir = "panopto-api-stuff"
 filenames = [f for f in listdir(".") if f.endswith(".txt")]
 
 
-def fixFile(file):
+def fix_file(file):
     temp = open(file, "rb")
     data = str(temp.read().decode('utf-8', 'ignore').encode("utf-8"), "utf-8")
     temp.close()
@@ -14,7 +14,7 @@ def fixFile(file):
 
 
 for filename in filenames:
-    #fixFile(filename)
-    with open(filename, encoding="utf-8") as f:
-        f.read()
+    fixFile(fix_file)
+    #with open(filename, encoding="utf-8") as f:
+    #    f.read()
 
