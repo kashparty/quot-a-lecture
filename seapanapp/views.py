@@ -11,6 +11,7 @@ from os import listdir
 import pickle
 import nltk
 from nltk.stem import WordNetLemmatizer
+from datetime import datetime
 
 from .models import Category, Lecturer, QuestionAnswer, Recording
 
@@ -54,7 +55,8 @@ def lecture_detail(req, lecture_id):
 
 def search(req):
     ls = Lecturer.objects.order_by("name")
-    return render(req, "seapanapp/search.html", {"ls": ls})
+    cs = Category.objects.order_by("name")
+    return render(req, "seapanapp/search.html", {"ls": ls, "cs": cs})
 
 
 def precalc_counts():
@@ -122,6 +124,16 @@ def searchres(req):
     results = QuestionAnswer.objects.all()
     if req.POST["lecturer"] != "all":
         results = results.filter(recording__lecturer__id=req.POST["lecturer"])
+    if req.POST["category"] != "all":
+        results = results.filter(recording__category__id=req.POST["category"])
+    if req.POST["date_from"] != "":
+        results = results.filter(
+            recording__date__gte=datetime.strptime(req.POST["date_from"], "%Y-%m-%d")
+        )
+    if req.POST["date_to"] != "":
+        results = results.filter(
+            recording__date__lte=datetime.strptime(req.POST["date_from"], "%Y-%m-%d")
+        )
     similarities = [
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
         for r in results
@@ -132,7 +144,6 @@ def searchres(req):
         + COEFFS[2] * heuristic(query, r.answer)
         for r in results
     ]
-    print(max(importances))
     scores = []
     for i in range(len(importances)):
         scores.append(similarities[i] + importances[i])
