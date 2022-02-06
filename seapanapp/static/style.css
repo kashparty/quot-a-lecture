@@ -141,3 +141,19 @@ hr {
   flex-direction: column;
   justify-content: center;
 }
+
+.FormInner {
+  display: flex;
+  background: var(--cream);
+
+  border: 1px solid var(--brown);
+  outline-style: solid;
+  outline-color: var(--brown);
+
+  border-radius: 80px;
+}
+
+.ResultsList {
+  padding-inline-start: 0;
+  width: 100%;
+}
