@@ -1,7 +1,7 @@
 from datetime import datetime, time
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
-from os import environ
+from os import environ, listdir
 import django
 
 environ.setdefault("DJANGO_SETTINGS_MODULE", "seapan.settings")
@@ -24,7 +24,7 @@ def parse_timestamp(timestamp_str):
 
 def load_phrases(filename):
     phrases = []
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         lines = f.read().splitlines()
         metadata = lines[:5]
         lecture_id = metadata[0].split(": ")[1]
@@ -34,7 +34,7 @@ def load_phrases(filename):
 
         lecture_category = metadata[2].split(": ", 1)[1]
         lecturer = metadata[3].split(": ")[1]
-        lecture_date = datetime.strptime(metadata[4].split(": ")[1], "%d/%m/%y")
+        lecture_date = datetime.strptime(metadata[4].split(": ")[1], "%d/%m/%Y")
 
         timestamped_phrases = []
         for i in range(5, len(lines), 2):
@@ -107,8 +107,13 @@ class Phrase:
         question_answer.save()
 
 
-phrases = load_phrases("be689587-31aa-4495-9acc-ae3100d7e8aa.txt")
-questions = [phrase for phrase in phrases if phrase.is_question()]
+files_dir = "panopto-api-stuff"
+filenames = [f for f in listdir(files_dir) if f.endswith(".txt")]
 
-for question in questions:
-    question.save()
+for filename in filenames:
+    print(filename)
+    phrases = load_phrases(f"{files_dir}/{filename}")
+    questions = [phrase for phrase in phrases if phrase.is_question()]
+
+    for question in questions:
+        question.save()
