@@ -21,7 +21,7 @@ nltk.download("omw-1.4")
 lemmatizer = WordNetLemmatizer()
 
 #Question, preamble, answer
-COEFFS = [100, 25, 25]
+COEFFS = [75, 25, 25]
 
 # Create your views here.
 
