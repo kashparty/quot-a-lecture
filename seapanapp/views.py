@@ -1,3 +1,4 @@
+from functools import cache
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
@@ -8,7 +9,9 @@ from django.db.models import F
 
 from .models import QuestionAnswer, Recording
 
+
 model = SentenceTransformer("distilbert-base-nli-mean-tokens")
+# model = {}
 
 # Create your views here.
 
