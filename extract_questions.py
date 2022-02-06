@@ -36,20 +36,34 @@ def load_phrases(filename):
         lecturer = metadata[3].split(": ")[1]
         lecture_date = datetime.strptime(metadata[4].split(": ")[1], "%d/%m/%y")
 
+        timestamped_phrases = []
         for i in range(5, len(lines), 2):
             timestamp = parse_timestamp(lines[i + 1])
             phrase_texts = sent_tokenize(lines[i])
-            phrases += [
+            timestamped_phrases += [(timestamp, text) for text in phrase_texts]
+
+        for i in range(len(timestamped_phrases)):
+            timestamp = timestamped_phrases[i][0]
+            preamble = ""
+            question = ""
+            answer = ""
+            if i - 1 >= 0:
+                preamble = timestamped_phrases[i - 1][1]
+            question = timestamped_phrases[i][1]
+            if i + 1 < len(timestamped_phrases):
+                answer = timestamped_phrases[i + 1][1]
+            phrases.append(
                 Phrase(
                     timestamp,
-                    text,
+                    preamble,
+                    question,
+                    answer,
                     recording,
                     lecture_category,
                     lecturer,
                     lecture_date,
                 )
-                for text in phrase_texts
-            ]
+            )
 
     return phrases
 
@@ -58,30 +72,35 @@ class Phrase:
     def __init__(
         self,
         timestamp,
-        text,
+        preamble,
+        question,
+        answer,
         recording,
         lecture_category,
         lecturer,
         lecture_date,
     ):
         self.timestamp = timestamp
-        self.text = text
+        self.preamble = preamble
+        self.question = question
+        self.answer = answer
         self.recording = recording
         self.lecture_category = lecture_category
         self.lecturer = lecturer
         self.lecture_date = lecture_date
 
     def __str__(self):
-        return f"{self.recording.panopto_id}@{self.timestamp}: {self.text}"
+        return f"{self.recording.panopto_id}@{self.timestamp}: {self.question}"
 
     def is_question(self):
-        words = word_tokenize(self.text)
-        return self.text.endswith("?") and len(words) >= MIN_QUESTION_LENGTH
+        words = word_tokenize(self.question)
+        return self.question.endswith("?") and len(words) >= MIN_QUESTION_LENGTH
 
     def save(self):
         question_answer = QuestionAnswer(
-            question=self.text,
-            answer=self.text,
+            preamble=self.preamble,
+            question=self.question,
+            answer=self.answer,
             timestamp=self.timestamp,
             recording=self.recording,
         )

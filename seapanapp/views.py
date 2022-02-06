@@ -44,7 +44,7 @@ def searchres(req):
     similarities = [
         1 - distance.cosine(query_encoding, model.encode(r.question)) for r in results
     ]
-    ranks = argsort(similarities)[-10:]
+    ranks = argsort(similarities)[-10:][::-1]
     sorted_results = [results[int(i)] for i in ranks]
 
     return render(
