@@ -5,18 +5,39 @@
 
 {% block content %}
 
-<h2> Search results for: {{ query }} </h2>
-
 <!-- TODO: Dont dupe with index.htmlj -->
+<div class="NavBar">
+    <a href="{% url 'seapanapp:q_list' %}" id="MainHeader">
+        <h1>Quot-a-Lecture</h1>
+    </a>
 
+    <div class="NavContent">
+        <hr>
+        <p id="Search" href="{% url 'seapanapp:search' %}">Showing results for {{query}} </p>
+        <hr>
+    </div>
+</div>
 {% if results %}
-<ul>
-    {% for q in results %}
-    <li>{{ q.preamble }} <a href="{% url 'seapanapp:q_detail' q.id %}">{{ q.question }}</a> {{ q.answer }} </li>
-    {% endfor %}
-</ul>
+<div>
+    <ul class="ResultsList">
+        {% for q in results %}
+        <li class="FormInner">
+            {% load static %}
+            <img src="{% static 'images/resultButton.svg' %}">
+            <div class="ResultTextHolder">
+                <p class="SmallText">Byebye this babye</p>
+                <a class="BigResultText" href="{% url 'seapanapp:q_detail' q.id %}">{{q.question}}</a>
+                <p class="SmallText">Hello, this is really cool.</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 {% else %}
-<p>No results</p>
+<div class="NavBar">
+    <p><i>Nothing was found :(</i></p>
+</div>
 {% endif %}
 
 {% endblock %}

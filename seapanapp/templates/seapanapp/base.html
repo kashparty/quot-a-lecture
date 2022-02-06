@@ -8,17 +8,16 @@
     <title> {% block title %} {% endblock %} QuotaLecture</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
+    <link rel="alternate icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 </head>
 
-<body>
+<body class="MainBody">
     <a href="{% url 'seapanapp:l_list' %}">
         <h1>QuotaLecture</h1>
     </a>
 
-    <a href="{% url 'seapanapp:search' %}">Search</a>
-    <a href="/admin">Admin</a>
-
-    <main>
+    <main class="Content">
         {% block content %}
         {% endblock %}
     </main>

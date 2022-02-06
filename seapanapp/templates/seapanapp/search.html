@@ -6,12 +6,34 @@ Search -
 
 {% block content %}
 
-<h2>Search</h2>
+<div class="SearchHolder">
+    <div class="NavBar">
+        <a href="{% url 'seapanapp:q_list' %}" id="MainHeader">
+            <h1>Quot-a-Lecture</h1>
+        </a>
 
-<form action="{% url 'seapanapp:search_res' %}" method="post">
-    {% csrf_token %}
-    <input type="text" name="query" placeholder="search" />
-    <input type="submit" value="search">
-</form>
+        <div class="NavContent">
+            <hr>
+            <a id="Search" href="{% url 'seapanapp:search' %}">Search</a>
+            •
+            <a id="Random" href="/admin">Random</a>
+            •
+            <a id="Admin" href="/admin">Admin</a>
+            <hr>
+        </div>
+
+    </div>
+    <br>
+    <div class="SearchDiv">
+        <form action="{% url 'seapanapp:search_res' %}" method="post" class="SearchForm">
+            {% csrf_token %}
+            <div class="FormInner">
+                {% load static %}
+                <input type="image" class="SearchButton" src="{% static 'images/searchbutton.svg' %}" />
+                <input autofocus class="SearchBox" type="text" name="query" placeholder="Enter query..." />
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}

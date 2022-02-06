@@ -6,11 +6,11 @@
 
 {% block content %}
 
-<h2> {{ q.question }} </h2>
+<h2 class="QuestionHeader"> {{ q.question }} </h2>
 
-<p>
+<div class="Answer">
     {{q.answer}}
-</p>
+</div>
 
 <p>
     <a href="{% url 'seapanapp:q_upvote' q.id %}">+</a>

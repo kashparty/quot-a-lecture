@@ -28,38 +28,6 @@ class UI:
         img.putalpha(50)
         img = img.resize((1280, 720), Image.BICUBIC)
         self.__piracyNotice = ImageTk.PhotoImage(img)
-<<<<<<< HEAD
-        self.__place_widget(Label(self.__window, image=self.__piracyNotice, bg=self.__bgCol),
-                            1280, 720, 0, 0)
-        self.__place_widget(Label(self.__window, text="Part of the Quot-a-Lecture software suite", font=self.__fonts[3],
-                                  bg=self.__bgCol),
-                            520, 50, 150, 670)
-        self.__img = ImageTk.PhotoImage(Image.open("quotalecture.png").resize((150, 150), Image.BICUBIC))
-        self.__place_widget(Label(self.__window, image=self.__img, bg=self.__bgCol),
-                            150, 150, 0, 570)
-        self.__place_widget(Label(self.__window, text="Auto Transcript Extractor", font=self.__fonts[0],
-                                  bg=self.__bgCol),
-                            500, 60, 400, 0)
-        self.__place_widget(Label(self.__window, text="Domain: ", font=self.__fonts[2],
-                                  bg=self.__bgCol),
-                            160, 60, 45, 110)
-        self.__place_widget(Label(self.__window, text="Username: ", font=self.__fonts[2],
-                                  bg=self.__bgCol),
-                            200, 60, 25, 340)
-        self.__place_widget(Label(self.__window, text="Password: ", font=self.__fonts[2],
-                                  bg=self.__bgCol),
-                            200, 60, 25, 500)
-        self.__place_widget(Entry(self.__window, textvariable=self.__domain, font=self.__fonts[2], bg=self.__fgCol),
-                            500, 60, 250, 110)
-        self.__place_widget(Entry(self.__window, textvariable=self.__username, font=self.__fonts[2], bg=self.__fgCol),
-                            500, 60, 250, 340)
-        self.__place_widget(Entry(self.__window, textvariable=self.__password, show="*", font=self.__fonts[2],
-                                  bg=self.__fgCol),
-                            500, 60, 250, 500)
-        self.__place_widget(Button(self.__window, text="GO!", font=self.__fonts[1], command=self.__run,
-                                   bg=self.__altCol),
-                            200, 200, 900, 280)
-=======
         self.__place_widget(
             Label(self.__window, image=self.__piracyNotice, bg=self.__bgCol),
             1280,
@@ -70,17 +38,17 @@ class UI:
         self.__place_widget(
             Label(
                 self.__window,
-                text="Part of the QuotaLecture software suite",
+                text="Part of the Quot-a-Lecture software suite",
                 font=self.__fonts[3],
                 bg=self.__bgCol,
             ),
-            470,
+            520,
             50,
             150,
             670,
         )
         self.__img = ImageTk.PhotoImage(
-            Image.open("QuotaLecture.png").resize((150, 150), Image.BICUBIC)
+            Image.open("quotalecture.png").resize((150, 150), Image.BICUBIC)
         )
         self.__place_widget(
             Label(self.__window, image=self.__img, bg=self.__bgCol), 150, 150, 0, 570
@@ -174,7 +142,6 @@ class UI:
             900,
             280,
         )
->>>>>>> fe-polish
         self.__window.mainloop()
 
     def __place_widget(self, widget, width, height, x, y, anchor="nw"):
