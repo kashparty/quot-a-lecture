@@ -1,0 +1,1375 @@
+ID: 08b3e087-7349-4915-825d-adc500edd4ec
+Title: DM Oct 14 Lecture Recording
+Category: Discrete Mathematics
+Lecturer: Steffen van Bakel
+Date: 18/10/2021
+Let me see if the Dems comes back with the statement, let's trust stuff is happening.
+0:04
+Yeah. Good. Sorry about that.
+0:11
+They are so the notation with the hoop and the horizontal line through that element of and the rest of it is not element of.
+0:15
+And as we've seen. So this is a mathematical statement that is something you can check and you
+0:23
+check it by a second property B or you go through the list of all the elements.
+0:28
+The statement is true or false. It also doesn't hold.
+0:34
+And as we've seen, these things are mutually exclusive. So it is either an element is intercept or it is not.
+0:38
+OK, so we can have we have a statement between them, and sometimes this is because of the law school, the middle,
+0:46
+so we don't know which one is true now, but we don't we do know that they cannot both be true because they would be a contradiction.
+0:53
+Yeah, so what I will assume in this is in these lectures that every state has its own equal
+1:01
+relation and we will see that that equality sometimes has to be defined carefully.
+1:09
+It's not always automatically saying, well, it's I think it's equal to itself and nothing else.
+1:13
+And sometimes things are equal that you can write down differently now.
+1:20
+So this is an important thing to have. And sometimes I will use the equality symbol for equality within a set.
+1:24
+And if it's necessary, I will subscript the equals sign with the name of the set.
+1:31
+So they've been able to talk about. Good certain basic examples are, for example, you can list the set of all the vowels.
+1:36
+Yeah, so that's that's a pretty straightforward defined set.
+1:46
+The R you can also collect any number of elements you like, any type of guy.
+1:50
+So in this particular case, it's numbers and characters and strings all thrown together so they don't all need to be of the same type.
+1:57
+Yeah, you can have infinity large sets like seven actual numbers.
+2:06
+And in this course we start that with zero.
+2:12
+It's an important thing to know to remember that for us in here.
+2:16
+So this is not a universally accepted definition. Depends a little bit on who you deal with.
+2:20
+And by the way, you will see a lot of notation that I use in this cause.
+2:27
+I mean, how you write down mathematics depends almost completely on which country you're from.
+2:31
+And so you will have different notations in your in your backpack from the education that you've had.
+2:39
+And you will see that they'll use another notation here. I want you to use a notation that I use here.
+2:45
+So don't introduce symbols that we haven't discussed because then it becomes difficult for me to understand which saying.
+2:50
+OK, so we use these ellipses here to indicate that this is an infinitely large set and this is more or less saying, well, it is.
+2:59
+And you know how this goes. So you know how this continues.
+3:07
+We're going to do the same thing, for example, for the for the integers. So you start with the ellipsis on the left and the flips on the right.
+3:12
+Yeah. So it's just a way of describing this is not a mathematical definition, of course, because an ellipsis is not a mathematical thing.
+3:19
+Yeah. And there are ways in defining these threads precisely.
+3:28
+So that you have a very, very well, workable mathematical definition where you don't want to do that in the course
+3:32
+because it is a little bit too much to fit in the weeks that we have now.
+3:40
+But it's possible to define these without using the ellipsis.
+3:44
+ISIS said that you can express through a predicate, you can take to the collection all the prime numbers.
+3:49
+And of course, I've written this here in words,
+3:57
+but I can translate this into a mathematical expression that expresses exactly states if the numbers prime number or not.
+3:59
+OK, a very special set is the empty set now.
+4:10
+And we will I will come back to this particular set a little later, because it's a very crucial definition inside the context of set theory now.
+4:17
+So this is the set that is now. So do we use the the zero with the slash through it as a denotation for the empty set?
+4:28
+You know, you can you can use both. Excuse me. I have this question.
+4:37
+OK, if somebody has their mike, especially if your mike, unless I have a question, I can hear people talk, especially if you're Mike when you talk.
+4:42
+He's disturbing the lecture. OK, so if you sat there and we can, because the inner said we can put any object we like,
+4:54
+you can also put sets in sets and so we can have nested sets it all perfectly fine.
+5:05
+And as I've said before, the description so the set constructions saying, well,
+5:10
+if I take all the actions to satisfy a particular predicate, that creates a set as well.
+5:16
+And so, as I said, it has to be precisely defined mathematical formula.
+5:22
+Now, people worked with this approach to set theory for a bit.
+5:28
+And then there was a clever young man in in England, Bertrand Russell, and he said, well, actually, this is nonsense.
+5:32
+Yeah.
+5:42
+And it was quite, quite a shock was Gioconda was a very well respected German mathematician, and everybody believed that he had found the right thing.
+5:42
+But Bertrand Russell pulled out a counterexample.
+5:51
+He pulled out a set an object, let's say that you can write down as using that particular notation, but you cannot show that it actually is a set.
+5:54
+So this means that you don't you are not as free as you are as you thought you were.
+6:07
+When you write down sets, you have to be very, very careful. And I will give you that example.
+6:12
+And this is a mind boggling event, so I hope you will.
+6:17
+You'll keep up with me. So they said that Russell said, OK, if I can write down anything I like in between curly brackets, how about this one?
+6:21
+I define ah as the collection of all the sets that are not an element of themselves.
+6:32
+OK, well you can think about this particular definition itself, which makes sense or not.
+6:38
+And then you could say, well, for example, the collection of all the infinite sets, that's an infinite set itself.
+6:43
+So the set of infinite sets is an element of the set of the infinite sets.
+6:52
+OK, so that's good. And then you have the set of finite sets.
+6:57
+For example, there's already the. That's not a good example.
+7:02
+No, it's not it is it is a good example, so to set a finite set, for example, it's an infinite set, you know, so infinitely large set.
+7:09
+So the set of all the finance is not a finite set and therefore is not an element of the set of all the finances.
+7:18
+OK, so we have two examples, infinite set and finance that set aside this this particular predicate in two ways.
+7:27
+So Bertrand Russell says, well, take all the sets, like, for example, the set of all the fine sets Sowden together,
+7:35
+put them in this box if they are not an element of themselves, OK, well defined, go to control and therefore is a set up.
+7:43
+Now, Russell says, OK, this particular set itself is by definition III in itself or it isn't.
+7:51
+Yeah, it's one of the two. So I an element of disconnection or it is not an element of the collection not being the thing itself.
+8:02
+So we have an all stable now. Yeah. So we deal with this, all the statement through cases.
+8:11
+So that's the first case. The first case. Well OK, let's take the case that as an element of all.
+8:16
+Yeah. Then by definition it is, it fits this description here.
+8:23
+Yeah. So that means that it is not an element of itself.
+8:29
+So if I'd known about far, then it is not an element of itself but itself as are.
+8:36
+And therefore, if I an element of fire, then as an element of not a modern element of fire.
+8:41
+OK, when I click on my screen, do you see the little books pop up with the enlargement?
+8:49
+Yeah, OK, good. Which is much better than pointing.
+8:56
+So this means that, OK, so this is of course not. This cannot happen.
+9:00
+So we cannot have two cases of ours inside and ours not. And so that's a contradiction.
+9:04
+Yeah. So this case is nonsense. So geolocation work.
+9:08
+So now I say are not an R and therefore R is just said that does not satisfy this predicate,
+9:14
+so therefore it is an element of itself because if it doesn't satisfy, that is not an element of itself.
+9:22
+Gaymer Bylaws Committee Middle. We have that. It is an element of itself.
+9:29
+So if I is not an element of R, then as an element of R and again we have a contradiction.
+9:33
+So this now gives me a proof if you like.
+9:41
+I just says that if this is set then I have a contradiction.
+9:45
+Now, both cases lead to the same conclusion, therefore we have a contradiction.
+9:50
+So therefore, the assumption that we had has to be rejected.
+9:57
+There's only one assumption in this particular case,
+10:01
+and that is that that that thing that I define is a set and therefore it is wrong, cannot hold and therefore is not dissent.
+10:03
+So that particular thing is not said, which means that you cannot write down anything you like in mathematics.
+10:13
+Now, you cannot just freely write down a collection and saying this has to be said, no, you have to be very, very careful with how you define the set.
+10:19
+So. Allowing yourself to write something,
+10:30
+saying take all the objects that take to satisfy a predicate that is not a valid construction, but you have to do it.
+10:34
+You have to say what said you take these actions from you and this is what I write under now.
+10:42
+So the only thing that's allowed to say, well, if I have a set, then I can take from that said,
+10:49
+all the elements that satisfy a particular property and this operation will give me a new set.
+10:54
+OK, so it is now gives you the bootstrap problem, so you have to have a set before you can construct a set.
+11:01
+So how do you start defining sets? This is part of what is called the seminal Frenkel action scheme, not part of the cause.
+11:07
+But I just mentioned it. It's a very, very well crafted set of restrictions and definitions through some of them pop up through intercourse.
+11:17
+But for the moment, it's important that the thing that makes it all work is the saying that the empty set is a sense now.
+11:28
+So the empty collection that is by definition is set and then you're allowed to do a lot of things that we are going to discuss in the course.
+11:38
+OK, so go ahead. Earlier you said that the subset of of a finite set is infinite.
+11:46
+How is that? I have difficulty here. Let me let me look at my volume control, which is lying here somewhere, buried musicI Nocturnes.
+11:53
+Yeah, can you repeat, please, you said earlier that said containing all the subsets of a finite set is infinite.
+12:15
+Is that can you please. No, no, no, it's not what I said. I said to the set containing all the finances, that's an infinite set.
+12:23
+Because they're are many finite sets. OK, thank you.
+12:33
+No, no, no. Did the collection of all the subset of the finance editor find?
+12:37
+I said good. OK, so.
+12:42
+One of the things that we are allowed to do is to create subsets,
+12:48
+so the subset is a is a construction that allows me to create a new set from a set exist.
+12:53
+And this is normally done through the predicate construction.
+13:00
+And we have the subset notation.
+13:05
+So we have that we can expose that as a subset of B through this this horse iron with the the horizontal line underneath it.
+13:08
+So this this is expressed as being a subset of B. Yeah.
+13:19
+And this is defined as a predicate. So if I want to show that something is a subset of something else, I have to build the proof for this predicate.
+13:23
+And a predicate says that for all X in A we have that X is an element of B now.
+13:33
+So if X is an element of A and B for every element in A.
+13:39
+Good, so we get some some clear examples where the proof is very, very short is, for example,
+13:47
+a subset of itself is straightforward to show that have access in aid and DNA for every aid.
+13:54
+The following two examples are easy because they are finite.
+14:01
+You just go through all the all the elements and ensure that you on the other side as well.
+14:06
+That end is a subset of ZET, for example. So the integers are so denaturalised and subset of the integers.
+14:12
+That is something that you can only show if you have a precise definition of them both now.
+14:19
+But. So this is one of the things that the way we are working with numbers now is a thing that we just postulate now.
+14:24
+So we know that a proof exists. We're not going to do the proof, but we accept this as true.
+14:32
+OK, so a lot of the things, as I said about numbers in this course, we are not going to to show, we just accept the entry.
+14:38
+Said, for example, is a subset of all the all the other sets in particular.
+14:48
+In this particular case, he said one, two, two, one, two, five. But you can show because the predicate is satisfied.
+14:53
+Yeah. So for all X in A we have X's in B,
+15:00
+so all the elements in the end he said elements of any other said Y because there are no elements in it in the empty set.
+15:04
+So it holds for all the elements that are in the set, which is num num num.
+15:12
+So quantification works over antisense.
+15:18
+The subset of who said I would reject those statements, we've just gotten on that, so I'll no break for a little exercise,
+15:24
+I want you to look at this for about five minutes and I'll come back and I'll do the.
+15:34
+Sorry, Stefan, the gone off on the on the screen.
+19:04
+Yeah, and I'm switching to a screen can write about music, OK.
+19:08
+So this particular statement is formulated exactly in the language that I've suggested to you about truth.
+20:29
+So we should be able to do this precisely using the methods method that I've presented to you.
+20:39
+OK, so first of all, first step in this, I need to translate this into something that I can actually work with.
+20:46
+Yeah. So the the tendency is to immediately dive in and and tackle the problem.
+20:53
+But I strongly suggest that you, first of all, make it make it more explicit.
+21:01
+So what I need to show and now I am looking up the definition of what this symbol means.
+21:08
+Yeah. So if. For all X and sorry.
+21:13
+A. We have X and B and for all Y and B, we have Y in C then for all said in A.
+21:28
+We have said is in C, yeah, so now I have stated it and let me bracket these things so it is clear what the scope for the thing is.
+22:00
+So one thing that I wanted to observe is that I've sort of baked X, Y and Z here.
+22:11
+It makes no difference because the thing is, the I can change X into a W as long as I do that as well.
+22:16
+So I can rename all the all the variables that occur on the quantifiers.
+22:22
+Yeah. Good, so what I can.
+22:28
+So I have two assumptions, two assumptions.
+22:32
+Know I'm not going to repeat them, but you can repeat them there if you like, so this assumption one and this is something to now.
+22:40
+So for while actually we have actually maybe this some wrong and for why and why and see this assumption to know, I need to show.
+22:50
+So I do. This is supposedly for all the said in a.
+23:00
+We have. That is in. Now, look, the showing for step, that means that.
+23:08
+We have. To show that a site.
+23:19
+That if A is an element of a.
+23:29
+Then Asian and see for an arbitrary or any, if you like, arbitrarily a in for any arbitrary object that satisfies the precondition,
+23:34
+which is the part in the F for that, I have to show that it is.
+23:52
+OK, so so this is what I need to show. So let's start proving that.
+23:57
+So take anatomy today. OK, now I go back by the first assumption.
+24:01
+Yeah, by the first assumption. And what I called.
+24:08
+Using all. No.
+24:16
+We get that, so this statement says all acts in A Acces and B, so we have one thing that isn't a small thing.
+24:23
+So damn 8:00 a.m. it'll be OK.
+24:30
+Similarly, by the second assumption and again, using for all we get a can see.
+24:36
+Now, so here I say take yeah, so all you can say, assume the same thing.
+24:44
+I should have said that before.
+24:56
+Yeah, so we have assumed that as a and any and then we have shown it then by the two assumptions that we have DAFWA agent on the scene.
+24:59
+So if he's a.
+25:11
+Then Asia and the sea or so it is, the proof that we have today's announcement is an assumption and a conclusion and see so by definition.
+25:17
+Of subset, we have that no say that's too fast.
+25:35
+I miss his step dad, so by showing for all.
+25:41
+We have and when you show for all it becomes to the individual that you've picked,
+25:55
+your anonymous individual that you picked gets again replaced by available for all Americans, the answer or why not?
+26:01
+So that said, Set said in a.
+26:11
+We have that and see, so by definition, after sunset, we get that A is a subset of.
+26:17
+OK, so for me to show this property, you can think out loud and say, well, if an animal is inside and it is in B and C,
+26:37
+so then it just pogo sticks from A to B, C and therefore an advertising agency.
+26:46
+But it's the intuition behind the Binta, the proof,
+26:51
+the proof has to be very specific in all the details and use the steps that we are allowed to make, which is what they've done here.
+26:54
+Any questions? So can we follow the implied stuff like Axium X belongs to A implies, X belongs to be something like that to prove that that's true.
+27:09
+That's true. So the so I. So if you go back to the slides which are Concierto and at the same time.
+27:23
+Yeah. So slide 29. So the subsid definition has this statement for all X element that we have actually intended to be.
+27:29
+Yeah. This is the this is different from the implies.
+27:38
+It is. You can build an implies in this step, but you, you are not going towards an implied statement but you're going towards it is the statement.
+27:43
+So the thing that you want to prove and bracketing in here to make it explicit.
+27:55
+Yeah. So this one that. So this is the thing that you wanted to prove, because that is what small subset means.
+28:00
+So there is no implies in a definition, a subset. So yes, you're right in the sense that you could from following this step here,
+28:07
+say therefore I have an implied but it would it would not bring you in the right
+28:17
+direction because it wouldn't bring you towards the thing that you have to show.
+28:21
+You see the difference, yes, it's a different definition wise to imply it's to subside,
+28:27
+so I could know so but I'm trying to say is that the construction of the proof is decided by what you are proving now.
+28:36
+So the formulation of the relation, that is the definition that we are working towards.
+28:45
+There is no implied in there. So in this particular point, in the proof you could do and implies.
+28:51
+But it would lead you astray because you can't go from it implies to this definition.
+28:56
+OK, I got that. Thank you. OK, OK. The two blanks represent the two assumptions valid to repeat, please.
+29:02
+The two blanks represent two assumptions. The first and second one, what do.
+29:12
+So I have two assumptions here. The answer to A is A subset of B and B subset of C, and they are translated in between there and there.
+29:18
+So this is the first assumption and it's the second assumption.
+29:29
+So I've marked in that one and two. So there is no implies in there either.
+29:36
+Is that what you meant? So I said before, I did approve, I've translated the subsid symbol into the subsid definition.
+29:43
+Yeah. Does this mean the same thing? OK, thank you.
+29:57
+Anybody else? So, yes, I tried to use, like, prettified contradiction.
+30:06
+That's OK, that's the wrong path. OK, I understand that.
+30:16
+The thing is, I'm so proofer a contradiction is a is a is a valid mathematical tool.
+30:20
+D in this cause I am ninety nine point nine percent sure I would have to check all the details.
+30:28
+None of that proves that I do to show the results that we need for the cause.
+30:36
+I don't prove a contradiction. So that is a is a very tempting step.
+30:41
+But students almost invariably make a mistake when they tried it now because they, they, they are so.
+30:48
+OK, let me give you an example. What so I've seen this many, many times in exams.
+30:55
+So students are asked to show a.
+31:01
+Proof be OK. And then the students say, OK, OK, I scratch their heads, scratch and I don't know.
+31:07
+But, you know, we clearly can't be false, you know? So let's try this.
+31:13
+OK, so I assume. Not now,
+31:16
+and I hope to cause the solutions and start writing right and writing about what they
+31:22
+do and so therefore so there's a lot of stuff happening there and therefore be.
+31:27
+So then now I have a proof copy and they say, aha, this is a contradiction.
+31:36
+OK. And I swear to you, this is so, so common contradictions, so refuse.
+31:41
+Not B and B holds.
+31:56
+OK, now I hope you can all see what's wrong here in the sense that this is an example of a proof
+32:03
+that goes astray and then comes back and forgets what it's doing because in this bit here.
+32:12
+Pichon. Which means all the all, all everything else is completely unnecessary because beholds you have shown that beholds.
+32:22
+So this is what I saw again. So very rarely does a student come up with to prove a contradiction, which is not an example of this now.
+32:34
+So I strongly suggest that you do not try to take.
+32:42
+OK, so I'm getting confused.
+32:48
+So what's the problem here? I can't see that kind of going kind finish, can I finish?
+32:54
+I will never ask you to prove a property that needs a proof, a contradiction.
+33:01
+OK, so whenever you have an exam or a test or whatever, if you feel tempted by doing a proof of contradiction, you're on the wrong path.
+33:06
+OK, there was a question starting that are interrupted, could you repeat, please?
+33:17
+No. OK. May I ask a question quickly before you continue to Shusha, OK, so you never ask us to prove by contradiction,
+33:27
+what would you what would you say we should use as opposed to that?
+33:38
+It's called the direct proof.
+33:44
+So this the property beholds here is proven directly, so an indirect proof is saying that it should not be and therefore a contradiction.
+33:46
+There's an indirect proof because you haven't shown that people should have shown that no P is false,
+33:58
+which is, if you think about it, a different thing, you know, for mathematicians, etc.
+34:05
+But that's all it's all true or false. It's all binary. And therefore it's OK.
+34:10
+But the point is, what you have shown is that no P is false.
+34:15
+You haven't shown at least. Now, so I'd like you to do it, so for me, the proof should be the construction of the truth of the statement itself.
+34:19
+That's ideally the situation. Not everything can be done like that.
+34:33
+We have seen examples and you can find examples in the notes.
+34:36
+For example, they can need proof, a contradiction.
+34:39
+But in the context of the course, we are in a very safe area of mathematics where we don't need a particular proof to.
+34:42
+So for the like the bottom one, which you said you can prove by contradiction, so it would be better.
+34:52
+But then also what I wanted to observe is that in the attempt to prove peace through proof, by contradiction to student proof spee.
+34:59
+As a proof. So instead, we should take cases.
+35:10
+No, no, no, no, no, no, no, that's not what I'm saying is because, I mean,
+35:17
+this this particular example that I give you a sketch of a programme, we don't know what you have no idea what B is.
+35:21
+So how you would actually prove B, that's a different issue.
+35:27
+The point is, what I'm saying is students are assuming no.
+35:31
+B and then the only contradiction you can build from that is showing P.
+35:34
+OK, thank you. Yeah, I know when you're showing people show you're doing what you're supposed to do, you you ask the show.
+35:41
+OK, so the thing is, it's a it's a trap for me proofer contradiction is that it's very important in mathematics.
+35:50
+I mean, many, many things are strongly depending on it.
+35:58
+The whole foundation set theory used as proof of contradiction massively.
+36:03
+But it's it's not what we want to do here. OK, I'm going to switch back.
+36:08
+Switch back, I hope. Excuse me while we talk, I'm going to switch to my window back here.
+36:13
+OK, just please go ahead. Yeah. So you are not supposed to do which we should try not to use by contradiction on a more general basis,
+36:21
+but in that sense, how should we deal with the what not.
+36:31
+So for example, also not NFL very in Pru's for example,
+36:38
+you can sort of something is not true and you do that by showing not so you have assume chumpy,
+36:42
+you go to a contradiction and then you say aha, not be. That's fine, that's perfectly OK.
+36:49
+And you will, you will see those things happening. But the I'm trying to switch to Hinduja.
+36:55
+Yeah. So not, not as a valid role in the, in the, in the context of mathematics.
+37:04
+That's not the point is the proper contradiction is there is a sledgehammer.
+37:08
+Now it is, it is an escape. It's the it's edited because otherwise they can't do a lot of stuff that that's why it's down.
+37:13
+So, for example, just as an illustration. Yeah. So the you are familiar with the notion of continuous functions in mathematics.
+37:23
+I think you've all seen them for you any level, are you.
+37:32
+Yes. Yes. OK, good. So there are two definitions for that. One of them says that for every environment around the the the X,
+37:36
+let's say you can find an environment around F of X such that all the elements in one environment get to the other environment.
+37:46
+So there's one definition. Yeah. The second definition says every sequence that goes to X corresponds to a sequence that goes after effects such
+37:54
+that the element of the first sequence element limit or second sequence is the limit of the original sequence.
+38:03
+Yeah, so those two definitions are both valid and defined in continuity.
+38:11
+But these that these things define the same thing. You can only prove using proof of contradiction.
+38:16
+Now, so the moment that you take out the contradiction, you lose that those things are the same and they become different cetera.
+38:24
+So it becomes a mess. So it is a very, very strong, valid point, but only if you do really the mathematics, which one we are not doing here.
+38:31
+OK, but, sir, in the case of not Evie Evie, the how should we remove by removing the dead and not in some cases.
+38:42
+The yeah, so what I'm saying is that you should not have a proof that starts with a negative negative assumption.
+38:56
+So all the things that we do in this course, you can show by assuming positive assumptions is basically there's no need to go back to the calls, ok.
+39:05
+OK, OK, good.
+39:14
+So we've done that exercise and might add on my key point is no longer connected.
+39:19
+So, I mean, Cuba does not a single area, so when we you know,
+39:38
+so we have defined since we have defined subsets, we know that we have to be careful when we define assets.
+39:44
+So how can we express the two sets are the same?
+39:51
+Well, we use the subsid equality as relation for that.
+39:54
+So the equality between sets is defined by saying A subset of B and B's, a subset of it, then A and B are the same set.
+39:59
+So that means that formally proving the two sets are the same is a proof of both these statements.
+40:08
+So it's an end to both. OK, sometimes it's easy and you can check immediately.
+40:14
+Like, for example, this particular case, this at ABC and NBC are equal said only because they'll find a way to go through them, you know.
+40:22
+So this is an example where we have two objects that are identical but are not syntactically the same.
+40:31
+Yeah. And you can compare this to things that, you know from mathematics.
+40:38
+So three plus four, for example, is equal to seven. These are not the same string.
+40:43
+So they are not equal as expressions, but they represent the same value now.
+40:49
+So it's the same holds here for the set. You can write down the sets in different ways, but they represent the same thing.
+40:54
+OK. So as I said before, the when you are showing the senses equal, you have to show that they are included in each other.
+41:02
+So so to prove to make them. Can we build new sets out of other existing sets?
+41:11
+Of course, we need to be able to do that because we cannot just vote on anything we like.
+41:20
+We have to start from sense where we build new sets. And so I go back to the first slide.
+41:24
+So we have this curly bracket notation. I allow this as the definition for national numbers are all the all the numbers that are there.
+41:29
+So I can, for example, take also said collection sets.
+41:40
+Yeah, there. That's all fine. And we have to.
+41:44
+Yeah. So we I allow a predicate to be used to construct a subset of the existing set.
+41:49
+Yeah. And I can do this by writing this particular predicate which is a valid mathematical product and therefore on the set as well defined.
+41:57
+OK, so what are my basic set of constructors, the ones that I work with.
+42:07
+Well first of all is the union and you can see here that I'm using the pretty good notation, but I'm not collecting from a set now.
+42:13
+So this officially is not a well defined set because I'm only allowed to take a formal collection now.
+42:24
+But this is added to the definitions of said by saying no, OK, this is safe.
+42:32
+Now, if you have two sets, you can put them together. You get what you get.
+42:36
+We call a new set. So we we extend the family of sets by this operation.
+42:40
+OK, so this is what we call an action. We can also build the intersection and now I can select from Circle and just take the union,
+42:46
+and so it's all the elements in the union of the two sets that satisfy two predicates.
+42:58
+Yeah. Or one predicates to such action. And it's an accident that can be.
+43:03
+I can look at said difference and difference, says A without B.
+43:09
+This is how this is pronounced and so does the Brexit notation.
+43:14
+There are different notations in the literature. We use the backslash.
+43:19
+This is defined in all the states in the union that say, well, actually an element in a annexe is not an element of B, and so it's a bit odd.
+43:23
+B we can talk about the semantic difference between two sets of triangle notation is used to that.
+43:30
+And this is the union of A or B and B without A.
+43:37
+And I can go to disjoined if the intersection is the antisense Tergat Shenoy elements.
+43:44
+OK, so we can define the intersection in different ways, like, for example,
+43:54
+all the data collection of all the elements in edit an element of B and I can define the difference in a similar way.
+43:59
+So this is not the only way in which you can define the intersection and that difference.
+44:11
+But as I find, this is the most workable way because it's easy to manipulate if you want to try and prove properties.
+44:17
+These two definitions are valid, but they give more complicated proofs now and union isn't assumed to create the set.
+44:25
+It is by definition a new set, not because she's selected from a set.
+44:34
+Last slide before the break, so we take two sets, for example,
+44:43
+one three five seven nine and three, five, six, 10 and 11, and then the union is all these.
+44:47
+So you take A and B, you throw them together at them instead of twice, you kick one out.
+44:56
+And this is the stuff that you get the intersection just as the elements that are in a in the audience.
+45:02
+And B and by careful consideration, you can see this set three and five A without B is the the set A without the elements that are in B as well.
+45:08
+And we've seen antedates three and five. So those are the two that you take out and then you can do B without a discussion is six,
+45:19
+then in the 11 and then the Z difference between A and B is able to be Union B without.
+45:29
+And that gives you this particular set there. Good, we'll have a ten minute break.
+45:35
+To the previous slide, please. Thank you.
+45:57
+I'm so used to that. Hey, what's up?
+47:10
+I just want to ask a question about the is it the party gave us a yes or no.
+47:22
+What's up with it?
+47:34
+Yeah, the last two, I think it's the last one where it says not Pewaukee, where it says not pure at the end, how are we supposed to do that?
+47:36
+Q And flies, not pork chop. Yes.
+47:48
+What's your question, sir? Yeah, I'm just asking because he said earlier you wouldn't need to use contradiction.
+47:54
+So I'm just wondering is if there's another way to do that on.
+48:01
+It's off the top of my head, I'm pretty sure I can't remember which direction, but I think it is in this direction and what direction.
+48:10
+I mean, which implies which that you should lead. You do need contradiction for that.
+48:17
+Oh. Yeah, I'm fairly sure any contradiction for me, but I'll get back to you.
+48:24
+So, uh. OK, double check the point that you should earn equal protection for the.
+48:39
+Yes, sorry, you could use Laura Extra, and it's just tends to be equivalent to a lot of metal would be a good one.
+49:13
+OK, thank you. OK, I'm make.
+49:26
+Hi, Stephanie. Yes, please, can I ask a question about you say the contradiction, not in general, but it's still finding you excluded middle.
+56:25
+Yeah, but that's basically the same thing. OK, the because you can show the one implies the other the.
+56:38
+But it is especially the the OK, if you ask my personal opinion,
+56:48
+I think the law of exclusion will use an approved as a more elegant and shows more
+56:54
+understanding than aiming for a contradiction assuming that something is false.
+57:00
+They are, because, like I said, the the proves that we do it never needs.
+57:06
+I actually the law is of middle is going to be used in an exercise pretty soon.
+57:14
+Yeah, but yeah, OK, so let's say it like this.
+57:19
+Let's assume so. Although these are basically the same thing as a proof step, they're very different.
+57:22
+Assume that something is false, hoping to come towards a contradiction, to show that it's true,
+57:29
+that is to prove technique that is not used within the context of the course within mathematics, very, very prominent.
+57:34
+But here it is not. So to admit, we will use an inference.
+57:41
+Nice. Good. OK, so.
+57:47
+We've looked at the the definitions, some examples, so over this particular collection of properties.
+57:54
+So obviously the definition that we've had so we have to set constructions in terms of intersection,
+58:03
+Union said difference and and the way we have defined equality on sets.
+58:08
+You can now write down statements involving sets and and and these operators and figure out whether or not the true or false,
+58:17
+you know, so the creativity, if you try to attend this particular proof.
+58:27
+So you need to show that a Union B is a subset of B Union A and B Union A subset of A Union B.
+58:33
+So for the first one, you take an element in a union B and then you know that either in A or D and B.
+58:42
+Yeah. And now remember that last election I showed you that P or Q implies Q or P, so no, you can use that property here and saying aha.
+58:49
+But if I have a as an element of age,
+59:01
+an element of B then by the property to have shown we can state that Asian element of B or Asian and I mean tuffet and therefore Asian,
+59:04
+that would be Union A. Now so it is a case where the property that you've shown before makes you prove a little lighter.
+59:13
+The same holds for the for the statement of the section.
+59:22
+We've shown that one as well. These are all fairly simple proofs and what I want you to do now.
+59:27
+So these are all provable properties and all of these things have to be assumed to be true.
+59:36
+So not actions. What I wanted to do now is show property one and property two now.
+59:41
+So translate this statement into an end in your statement and then do the reasoning about
+59:50
+the end and all statement to come to the thing that you have on the on the right hand side.
+59:55
+OK, good luck. So would it be all right if I brought them the first part and then the second one on?
+1:00:00
+So I did see you repeat, please.
+1:04:57
+Would it be all right if you showed us how to do the first part and then we had the second one?
+1:05:01
+Not at all. Just so we know that we are on the right path. Yeah, OK, I mean,
+1:05:05
+I'm actually writing down the answer at the moment so I can stop screen behind
+1:05:11
+me and do that because this is themes and everything and theme sticks forever.
+1:05:18
+So I'll I'll reveal what I'm doing by scrolling.
+1:05:49
+Yeah, so the statement that we have to show is that A Union, B Union C is equal to A Union, B, Union C.
+1:05:52
+OK, so what I need to show this is first of all, so there's two subsets here.
+1:06:03
+So I need to show all elements in the left and set elements in the right and.
+1:06:09
+So if for all X, if X is an element of a union, then actually an element of the other and vice versa.
+1:06:14
+So I need to show to reverse this right now. So the two parts of this group always took part in inequality.
+1:06:22
+So but I do know as I take an individual, I take an individual that satisfies the left hand statement exit.
+1:06:30
+So so I did approve using X and then I realised I should have written A and in.
+1:06:40
+Yeah. So I take in a sense that it is a part as an element of that set.
+1:06:47
+Now I look up the union and the union says, well then it is an element of the first set or there's an element of the second set.
+1:06:53
+So I have that as an element of a or is an element of B Union C and dealing with it.
+1:07:01
+So the proof is by cases now.
+1:07:08
+So assume that as an element of a then a is or is an element of B by using or now so I can add any statement I like to that particular thing.
+1:07:10
+No using or so by definition, no Saudi.
+1:07:25
+OK, well, I've written down here is just nonsense.
+1:07:39
+OK, so by this statement is known or is known to be, I know by definition and therefore is an element of the union of A and B,
+1:07:44
+OK, now this statement is true with or I can add anything I like and I need to work towards the fact that it is and C as well.
+1:07:55
+So I had the statement. So I know that this is true by using, by showing or again I know that it is an element of a union B or A not X,
+1:08:04
+A is an element of C and therefore by definition of union an element of A union B union C, OK, so is one part of the proof.
+1:08:18
+So in case my element is in A then I have the property.
+1:08:28
+Now, I think alternative to the second part of the union was that the Asian element of B or C,
+1:08:35
+so I know that an Asian admitted B is not A C, and therefore I'm working with CASIS.
+1:08:44
+Yeah, so now my case is a bit of A of B then access to be or an element of A by the oral statement
+1:08:54
+and actually what I want to do some of to swap D because I need to do it like this.
+1:09:04
+So X is an element of A union.
+1:09:09
+B OK, now as before I add the C statement, ok.
+1:09:13
+So I follow the exact same steps as above I now get and this should be an area, of course, about this now a is an element of a union, the union, see?
+1:09:24
+Yeah. And the second part is, I assume there is an element of.
+1:09:39
+Amazing to see.
+1:09:48
+And now I can say that there's an element of A or B Union B or an amazing element of C by showing or so I know that A is an element of A union,
+1:09:50
+B union, C now. So in this particular case, disapprove hereby cases gets concluded by saying so.
+1:10:09
+Both branches have the same conclusion. So I know that A is an element of A union, B Union C Now I know this proof here has the same conclusions.
+1:10:23
+So A is an element of A and B union.
+1:10:36
+C No. And therefore I have shown this for over A now.
+1:10:42
+So if A is an element of a union and B and C, then A is an element of A union, B Union, C, OK.
+1:10:51
+They want part of the proof, the other part of the proof goes in the opposite direction and is very, very similar.
+1:11:10
+The only thing is that the decomposition and the composition of the overstatements is in a slightly different rhythm question.
+1:11:18
+So you go ahead and say, for when I'm doing the proofs, I wrote a Albie's and like the letters or and like ants everywhere.
+1:11:29
+Is that still acceptable? It's an undoing, Hezbollah, as in like in some places,
+1:11:37
+if you that the symbol union and the simple intersection by just used and in those places and all.
+1:11:43
+Yeah, so that is wrong. OK, the in-between sets, the the the union symbol is a set operator.
+1:11:52
+The world ends and or are logical operators, they are in between things that are true and false.
+1:12:01
+So do things that in between sets which are not true or false, should be said operators.
+1:12:08
+And those are the intersection and the union. OK, yeah, ok.
+1:12:13
+So I hope you see in this particular example that the proof steps come back, you know, roaringly.
+1:12:22
+Because it's so I mean, this is the construction of the proof using those steps.
+1:12:30
+There's nothing magical happening here. No guessing, no oracle involved.
+1:12:35
+Yeah, just just doing the doing the steps, so the only but I do realise, of course, that there is a certain element of creativity involved.
+1:12:41
+So you have to see how to do the proof before you can write on the proof.
+1:12:51
+And, of course, the seeing of the proof that that's a tricky bit because you don't always see it.
+1:12:55
+So what I do here now is that it's why I made it explicit. So I've translated the statement that I need to show,
+1:13:00
+which is this equality there into a logical statement, into a mathematical thing that I can prove.
+1:13:08
+So I have now made it into a statement it has for all acts and then more a statement.
+1:13:20
+So this is what you always should do when you when you are asked to show a particular property that involves things that are defined,
+1:13:27
+you first of all, go to the definition and rewrite that they need.
+1:13:35
+You have to prove using the definition so that it becomes something that is more tractable in terms of proof steps now,
+1:13:39
+because this property here by itself with the union and equals has nothing to do with the proof steps that we've seen before.
+1:13:46
+And it's to prove that these symbols are not part of the proof steps that we've seen.
+1:13:54
+So you have to translate it into something that is formulated in terms of the logical connectors which end or implies for all there exist,
+1:13:58
+not now and then you can do the same here. It's a simple way to prove that.
+1:14:08
+I'm not saying that this is the only way to prove that. I'm saying that this is a proof.
+1:14:13
+So we are not in competition of who has to show proof.
+1:14:20
+Now, so you might well have a show to prove I'm perfectly happy with that, I'm not disputing that at all.
+1:14:24
+What they want to do is what I so I've done a my proof is specifically following the structure of the thing that you have to show.
+1:14:29
+OK, yeah, so what you could do is send me your proof.
+1:14:39
+What is the platform that we use for these students, staff, communications, DiPiazza?
+1:14:46
+Are you suggested to use Beltzer for that? No.
+1:14:51
+And then Edstrom, is it? Oh, God Almighty.
+1:14:56
+In order to. No one wants my password. OK, I need to raise it on the platform.
+1:15:00
+Can I suggest to you that you submit your proof there so I can look at it outside of the lecture?
+1:15:06
+Because it's otherwise because it slows down things tremendously. So I'm very much interested in your proof and I will comment on it.
+1:15:12
+But what you've sent me to do that through the platform, you will be OK.
+1:15:18
+You will be anonymous, Danso and then I'll I'll comment. OK, yes.
+1:15:23
+I can also describe it very quickly. So it's like we can do it twice.
+1:15:29
+You said your definition of of Junia I mean because finally said that people are
+1:15:34
+still a war appears to be people are able to just say and finally we can regroup.
+1:15:41
+Is that possible? So you could yeah, OK, so could I use this here, so difficult to say this to get Casey my point of there floating.
+1:15:47
+Yeah, yeah. OK, so this is the so when I assume that as an element of a then I as a single extra statement there,
+1:16:04
+I translated it into a union because then again I have a single statement.
+1:16:13
+I remember that all my proof steps, they talk about P and Q, they don't talk about P that is composed of certain things.
+1:16:17
+So if you are if you are doing things in one goal rather than two steps, you have to make sure that you are allowed to do that.
+1:16:24
+So can you prove that you are allowed to use that step? So that's the thing that should just the alarm bell in your head.
+1:16:32
+So you might have found a shortcut, but it might not be a shortcut that fits the profile steps that have given you.
+1:16:38
+OK, we must assume that I already belong to be your fiancee and make her Girardet to pay bills, to be your epitaph, to say we cannot skip this day.
+1:16:45
+So they did. What I think you are trying to do is you trying to do it without the brackets and the brackets should be there.
+1:17:00
+But again, we're going into too much detail into it. I wanted to submit it so I can comment so we can move forward now.
+1:17:06
+OK, OK, good. So the the second one is very similar.
+1:17:13
+The I can do so before we continue, so the reverse of this statement.
+1:17:22
+So what I say to vice versa. So when you go back, it's a very similar statement you're analysing.
+1:17:30
+All this gives you cases.
+1:17:35
+You have an element in there or you have the element in A or B or you have an element and see if you have an end in A or B, the gang of cases.
+1:17:37
+And so what I do here is I very methodically build up the statement that I need to show.
+1:17:46
+Yeah. So all three cases finish with the same.
+1:17:52
+The same statement now, and you need to do the same thing where you go in the in the opposite direction,
+1:17:56
+so you're moving towards a an element of the union of A and B and C.
+1:18:02
+And so you have to be careful where you at yours. OK, then if you have to like that, you have to prove vice versa.
+1:18:10
+Do you have to, like, write each of these steps or is there some way you can, like, simplify it?
+1:18:20
+Because you've shown it once or sometimes. Sometimes you can.
+1:18:27
+Sometimes you can simplify it by for example, we will see proof that if you read the proof backwards, you get the proof in the opposite direction.
+1:18:31
+Yeah, we will have those occasions. In this particular case, it's not true because we have a different thing, what you can do, for example.
+1:18:38
+So but again, this needs writing down. You need to argue this is that you use the fact that you can sort the the components in an overstatement.
+1:18:48
+Yeah, so it has to do. Not even that. No, no, no, no, no.
+1:18:59
+In this particular case, though, is the path backwards is similar, but different from the path in the first direction.
+1:19:03
+Yeah. So in terms of answers for exams, I in this particular case, I would accept,
+1:19:10
+if you write down the proof in the other direction is similar, but for the fact that the order of the universe is different.
+1:19:18
+Yeah. So you can argue that the proof is similar, but you have to justify why it is similar.
+1:19:26
+Just saying to prove is similar. That is normally not going to work out.
+1:19:32
+Students make very bad guesses that way when they prove the opposite direction is very different and they're right to prove similar.
+1:19:36
+No, not true. Yeah. So you have to understand the proof going backwards.
+1:19:44
+And then in this particular case, I would say, OK, you've got to prove in one direction,
+1:19:48
+in detail I believe you can do to prove in the other direction as well, because you have observed that proof similar.
+1:19:52
+You understand what I'm saying there?
+1:20:00
+So sometimes you don't have to give the full answer in the other direction, but only if you can argue that you have basically already done it.
+1:20:02
+Yeah, OK, good. Because this this is explicitly only showing from left to right.
+1:20:11
+You know, this is not going from right to left at all. Now, this all this shows me this the set inclusion.
+1:20:18
+Yeah. So what I have here is the conclusion to this proof is saying so A union B Union C is a subset of A union B C yeah.
+1:20:24
+So this is not the equal equality at all. No.
+1:20:40
+So what we still need to do is this. But OK, so is there any need or interest in me doing the the second one.
+1:20:45
+Yes. Please, because I'm trying to understand how to use B intersection C.
+1:20:58
+OK, OK, OK, OK, good, good. OK, so there's always helpful if you even an exam,
+1:21:06
+you need to think that you need to show because if you make a mistake and copying that information, then I can see that you make a mistake.
+1:21:26
+Otherwise, you dive into the proof and then I go and see what a mistake is coming from.
+1:21:33
+By the way, another very, very important advice for all of you.
+1:21:39
+Make sure that you read the question. Yeah, I see too many students very, very quickly starting to answer the question.
+1:21:43
+And then I forget to come back to the question and see that there are two more things asked for that they don't reply to.
+1:21:52
+You know, you lose points. You know, if you give a partial answer, you get partial marks.
+1:21:58
+So please read the discussions carefully. OK, so we need this.
+1:22:03
+OK, first. So subsect, yeah, and so take us.
+1:22:07
+Let me try to be complete, so to show for all X in A, B, C, we have X and A, B and C. So this should be a union.
+1:22:21
+OK, so take an A in that sense.
+1:22:49
+Then X in an A or B and C by cases.
+1:22:59
+It's again, so I'm guided by the order. So X isn't a so assumed this.
+1:23:09
+So I need to go to AZ and acts as an element of the union would be intersecting the union, see, OK, so I need to show.
+1:23:19
+Yeah, that X is an element of the first set and actually the second set excuse me, I'm in a union B and X is an element of a union C.
+1:23:31
+OK, so this is a side remark for myself just to tell me what I'm doing.
+1:23:46
+So the first step you just let go.
+1:23:52
+OK, it's just that you've written take a as an element of stability, X or not.
+1:24:01
+No, no, no. So just the X is a variable and A is a unknown but concrete element.
+1:24:08
+Yeah. So OK, thank you. OK, that was not the question for the other one as well.
+1:24:16
+OK, OK, so I need to show this. How do I show this, OK.
+1:24:27
+Well, I need to show that it is an element of the union with B by showing all I have that Asian I'm A.
+1:24:32
+Or Asian, I mean to be so by definition of union A is an element of A or B.
+1:24:49
+Yeah. And similarly. You know, by showing or Asian and they or Asian, I meant to see so by definition of union as an image of a union, see.
+1:25:04
+Yeah. These both hold.
+1:25:20
+So a of a C intersection, so is B intersection A, C by definition of intersection.
+1:25:28
+Everybody happy? OK, so I'm allowing myself to see similarities between the reasonings and saying,
+1:25:48
+well, I'm doing the same thing, that I don't need to repeat everything. I just say, well, did I get this?
+1:25:57
+OK, so it is Longpont. And I saw this assuming an element in a and is this.
+1:26:02
+No. So that's gone. So the other assumption is there is an element of B and C and so by using or using N not.
+1:26:18
+So by definition of intersection definition of intersection X is an element of B and X is an element of C,
+1:26:34
+then by using or you have X is an element of am I doing this right here.
+1:26:52
+Yeah, I know that actually segment of A or X is an element of B and by using all along.
+1:27:02
+Acts as an element of a or accidental see by now so so acts as an element of a union
+1:27:17
+B and acts is an element and I'm using ecstasy and everything should be an idea.
+1:27:31
+Sorry about that actually element of a union C so X is an element of A union.
+1:27:39
+B in the S. The Union C.
+1:27:49
+You're very, very patient, listens, because I did a lot of things wrong here,
+1:28:10
+so there's always this should all be a scientist who you ought to do approve curriculum also teach myself.
+1:28:16
+Yeah, good. So I have now that a is an element of this particular set.
+1:28:30
+So I've got the same conclusion that. So the conclusion of this all proof is on.
+1:28:36
+A is an element of a union, B, intersection A, union C, so this is true.
+1:28:47
+So for all X, X is an element of a union P, intersection C and X is an element of a union P.
+1:29:00
+Sorry, you know, bad music, I'm just finishing this.
+1:29:26
+Yes, please. I have the question about the part where we assume that a day belongs to the intersection, see,
+1:29:38
+so here we say then by using or why don't we use it then by showing or because we want to prove this case.
+1:29:50
+OK, yeah. No, you're right. You're right. You're right. This is the wrong name, not just for this show and also in the next Lyonya.
+1:29:58
+I hear something beeping, he said, I said, no, I don't know what goes on.
+1:30:20
+OK, good. So they are so it is to move in one direction.
+1:30:27
+So we have to. So I right here, I have no idea.
+1:30:31
+I tried to narrow down this nonsense, so this should be the subsect.
+1:30:36
+OK, so the proof in the show, no,
+1:30:44
+you can't possibly argue that the proof in the other direction is similar because it's you start from a very different departure point.
+1:30:48
+No. So you really have to do to prove in the other direction as well.
+1:30:58
+It's it's the same technique. OK, any questions?
+1:31:04
+Question a question for last line of what we use is a subset of instead of equal because we have only shown if then yeah,
+1:31:16
+so we have shown that if Adam is in this set, then the element is in that sense, we haven't done the opposite direction.
+1:31:29
+Oh, so they need to go back or they can go back.
+1:31:39
+So I don't so, so explicitly showing subsid here.
+1:31:43
+And that's the only thing I'm doing, not and not showing quality at all.
+1:31:53
+So second part. Yeah, so the second part is shown to the subset relation in the other direction.
+1:31:57
+OK. So mistakes like these that I'm making here,
+1:32:14
+then using showing rather than using those are just slips of the pen in the sense that you
+1:32:18
+don't don't think that you are destroying your answer if you make a slip up like that.
+1:32:24
+You know, when I Mark, I very much look for a.
+1:32:28
+Do you understand what you're doing? Yeah, that's that's my main interest.
+1:32:32
+Have you understood what we discussed in the course that you pick up the techniques that are trying to show you?
+1:32:37
+And do you understand what you're doing and then you can slip up and there's no no damage done this perfectly.
+1:32:43
+OK, so for example, there are people who make a mistake when they copy out the formula and then I, I market looking at it.
+1:32:49
+If this is the question that they're trying to answer, are they still answering it the correct way?
+1:32:58
+Yeah. So the. The imam has everybody in the department.
+1:33:03
+We are very, very lenient benchmarking to make sure that we don't punish you too much,
+1:33:10
+but you have to be very careful and be sure that all these things that I've said,
+1:33:17
+that you understand what you're doing, that you have understood the techniques, etc., that you that you are really there.
+1:33:22
+You know, so this and this is only achieved by by hard work.
+1:33:28
+Unfortunately. Good.
+1:33:32
+Let me go back to the sleights. Or, you know, showing us from the other direction.
+1:33:35
+I'm not doing it, no, no, no, because this is the I mean, it's very similar.
+1:33:48
+The only thing is it's a different decomposition. If you understand what I'm doing here, I suggest you try for yourself.
+1:33:53
+If you are in doubt, put your answer on Piazzi and we'll have a look at it.
+1:34:02
+Yeah, we are pressed for time. We can't go through all everything in all detail,
+1:34:06
+but I hope that gives you enough detail for the first part so that you know how to tackle the second part.
+1:34:13
+Look pretty.
+1:34:20
+Good, I will skip this one, we'll start at the next election with this exercise is very nice and it comes back to the thing that we've just done.
+1:34:26
+No, no, not not yet. Not yet. OK, good.
+1:34:37
+So a way of drawing sets is used as Venn diagrams, and they're very nice because you can you can talk about it quite easily using a diagram.
+1:34:40
+The only problem is that they become an unreliable source because it depends on how skilled you are with pen and paper.
+1:34:52
+And that might not doing drawing as you'd say. You might make mistakes when you do that.
+1:35:01
+Yeah. So, for example, I cannot take two sets.
+1:35:06
+Yeah. And draw them on top of each other, make sure they overlap.
+1:35:10
+And then I can talk about the union, the whole area.
+1:35:14
+I can talk about the intersection which is just the area in the middle.
+1:35:18
+And I don't understand why it doesn't show my shading. I mean, on my screen, the shading disappears a bit.
+1:35:23
+It's annoying. OK, the you can take Togba said exclusion so a bit I'll be the area shaded on the left and
+1:35:29
+the I can talk about the difference and that's the everything but the intersection.
+1:35:42
+No. So that's all fine. It's very nice to, to draw and to make diagrams with but it's, it's dangerous.
+1:35:48
+So for Doucet's it's easy and have these all possibilities are there for three sets.
+1:35:55
+You can say, OK, I draw a third set on top and everything is still hunky dory.
+1:36:02
+But then how do you put the fourth set in there? So would you do this?
+1:36:07
+I now give you a few minutes to stare at this, and then I want you to tell me if this is the right diagram or not.
+1:36:16
+Is there any in the end, I would say the room, but your area around the country at the moment,
+1:37:11
+is there anybody in the in the student population today who thinks that this is incorrect?
+1:37:17
+Well, can you repeat your exact question, please? The exact question is on the on the on the slide.
+1:37:26
+There's no end to Section four and it need to be three D.
+1:37:34
+Yes and no. What do you mean there is no intersection and this clearly there because it was you know,
+1:37:41
+it's it's this area here is just indie and not B and C, OK, good.
+1:37:50
+Yeah. So there is no. So the the elements that are in a and indeed and not in C and not in B are not there.
+1:37:59
+OK, and similarly with B and C. Yeah. But you can also also make the following observation.
+1:38:08
+Being inside a set is a boolean as true or false, you know, so you can represent the receiver one the being inside B zero one being inside,
+1:38:15
+C zero one being inside dcom with four digits you can represent 16 different positions.
+1:38:26
+This diagram has only 14. Now, the to the missing are exactly the two that you just mentioned, you know,
+1:38:35
+so but what I wanted to say is that it's very tempting if you talk about four sets that you start with this example.
+1:38:48
+I say, well, OK, I'll just draw the Forcett on top and then I start thinking about what happening here.
+1:38:58
+And the point is that this diagram is wrong now.
+1:39:03
+So Venn diagrams are nice, too, but only in very simplistic situations, you know, drawing the correct.
+1:39:06
+So you can do this in 2D, but you have to make sure that you are basically in your basically drawing something like, oh, no, I can't do this here.
+1:39:13
+So you're basically drawing something here.
+1:39:24
+Yeah, so you have to you can't do a nice oval, you have to do something and the examples in the notes, the how to do it at four cents.
+1:39:28
+OK, so if the I should only be used intuitions only to check your insight,
+1:39:40
+it's never approved because you can make very easily a mistake and you don't see that you make a mistake.
+1:39:45
+Good. So some counterexamples against the statements that we have,
+1:39:52
+so you might think that you can freely manipulate a union intersection or end and or for that matter, because there's strong correspondence.
+1:39:57
+So, for example, is the statement the union of A and B and C is equal to the union of A and B and C, and the problem is no.
+1:40:05
+Yeah, so it is you have to be careful what you do that can easily give a number of sets that make a counterexample.
+1:40:17
+So if I asked you to verify if a particular property is correct, then if you think it's correct, you have to give me a proof.
+1:40:27
+If it is not correct, then you give a counterexample. So you take individuals for statements should hold.
+1:40:35
+But first, the statement doesn't. Oh.
+1:40:41
+Yeah, so it's the same kind of statement. So now I am put into brackets in the wrong way, I should have been better to use tuning them,
+1:40:47
+but it's so I reorganised the statement and again, there's a counterexample for that.
+1:40:59
+No. Good.
+1:41:08
+The. And I'm trying to think if I should pop into the next topic on which can to stop, I think it's best if I stop.
+1:41:14
+So I will I will come back in the next lecture to this property here.
+1:41:28
+Yeah, you can. So this is an example where we need the law to screw the middle.
+1:41:35
+So we tried to exercise for yourself. You take an element in V and then you add the information that the element is either in W or not in W.
+1:41:41
+Yeah. So you have a need or consideration and it gives you this particular statement.
+1:41:53
+There you. Yeah. So in this particular case, the equality between those two sets needs the law.
+1:41:58
+The school needs that an element is in W or not W good.
+1:42:07
+I have four minutes left for some, some final questions for today's lecture.
+1:42:14
+Anybody at all. Can you use the Morgens laws onsets if you prove them, if you prove them?
+1:42:20
+So it is basically. So give, give, give, at the Morgan Law, for example, what is the Morgan Law?
+1:42:33
+I like and B is equal to not A or not B and then not all that, OK, what is not for since.
+1:42:41
+The compliment. Have we talked about that yet?
+1:42:54
+No. OK, so they so I saw this particular problem is postponed.
+1:42:58
+But what you need to do there is that you can only use things that you have shown now.
+1:43:05
+So, for example, I've shown you that you can swap the order of the participants in an end statement, in an earlier statement.
+1:43:11
+So we don't have to prove that, again, this particular property that you want to prove now that you want to use.
+1:43:18
+Now you are you are postulating it. I haven't shown it.
+1:43:24
+You haven't shown it. And therefore, it's it's up in the air. So you can only use it after you have shown it.
+1:43:28
+Right. OK, yeah, so this means, again, these are the complement will be translated into not you're right,
+1:43:38
+but then you have a statement about end and or negation and you have to translate into another statement and the more negation.
+1:43:46
+And you have to do that after that is that you are permitted to do that.
+1:43:54
+And once you have the proof, then you can say and therefore on the level the sets, I'm OK.
+1:43:58
+And therefore and from that moment on, you can do it, but you have to prove it first.
+1:44:03
+So this is this is a a bootstrap election, so we only use stuff that we've shown apart from the stuff and basic basic arithmetic.
+1:44:11
+And assuming that's not in P is the same statement as X is not in P, E is not to be.
+1:44:26
+They yeah, so the the the X element with a slice through it, a it's the same as saying not X element A get your question.
+1:44:39
+Yes. Thank you. OK. And I think if you if we go back to the slides, we can even say that where is the.
+1:44:56
+So we say is an element of a now and write a note element of a when it is not.
+1:45:14
+Yeah. So they say, OK. Now, so a as a statement, as an element of the negation of that is not a amount of a which you can write as a not element A.
+1:45:22
+OK, I could have made it explicit on this slide. I think it's in the notes, it's in more details and I can't stress this enough.
+1:45:37
+I read the notes, read nods, read the notes. You know that you're in college now.
+1:45:46
+You cannot hope to pass this exam if you just start revising the weeks before the exam is not enough.
+1:45:52
+You have to constantly revise during term for all courses or topics.
+1:45:59
+It's too much work. Otherwise you will miserably fill your exams if you do it in a different way.
+1:46:04
+And so I have written the notes for that purpose.
+1:46:10
+So go through them, go through your notes and make sure that you revise and come back to the problems and ask me questions on Pianta.
+1:46:13
+I'm very, very available to everybody to help out.
+1:46:22
+Not as much during the lecture because there's no more press time.
+1:46:27
+But outside of the lectures, a lot of space to go into details which was reflective of problems that you might have.
+1:46:30
+Can I just quickly ask in the exams the stuff we can assume are in the notes and we don't we can't see stuff we've done in lesson on.
+1:46:39
+No, you can. You can. You can tell there's no distinction. It's like I sat at the exam.
+1:46:48
+Do you start from the notes, the slides, what I say and what I think know.
+1:46:54
+So that's all these things combined. That's the big knowledge supposedly supposed to know the in an exam.
+1:46:59
+I will ask you to prove things. And if I if you have the the freedom to use stuff from the knowledgeable,
+1:47:06
+normally say something like if you use things from the notes, please state explicitly what it is that you use.
+1:47:13
+But I might ask you to prove a thing that is proven in the notes and then you have to know the proof and repeat the proof.
+1:47:19
+Okay. Thank you. OK, that's it.
+1:47:27
+Thank you for your attention. Six o'clock, everybody's hungry, let's go eat.
+1:47:32
+Yeah, good. Goodbye. Thank you. Thank you.
+1:47:36
+Thank you.
+1:47:41

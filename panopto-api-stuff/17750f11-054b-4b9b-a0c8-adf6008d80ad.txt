@@ -1,0 +1,749 @@
+ID: 17750f11-054b-4b9b-a0c8-adf6008d80ad
+Title: L19 - A 32-bit Processor - Sequencing and Output Logic
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Bjoern Schuller
+Date: 06/12/2021
+Let it come to a final lecture lecture 19, the 32 bit processor, and now finally,
+0:01
+what is left to be done is to do the sequencing and output logic for the controller.
+0:08
+Now, if you remember, we you the data passes in this lecture,
+0:14
+we have now the manual process of put together with the memory, and we extended it a little bit.
+0:18
+We skipped the results register and row directly into memory, for example,
+0:23
+and we added these seven registers here on the left hand side with a multiplex that you
+0:27
+select which one is going to be fed into a or B registers which belong to the hardware?
+0:33
+Well, guys, we also have now this controller here, and that is the piece actually,
+0:39
+that we still have to do to connect everything and introduce the tape machine that executes the fetch and execution so I can.
+0:45
+He also specified an instruction set that is important for us to know how many cycles each instruction has and of course,
+0:57
+to give us a specification of what can be done and how it should be done.
+1:04
+So just if you remember, for example, we had load was a destination, registered an address with three cycles that you remember.
+1:09
+The lengthiest one was load indirect where we had a source underestimation register, which took four cycles to execute.
+1:18
+And some showed ones were like jump to an address or something of the programme,
+1:28
+kind of from the memory data register and in the operation, which was even shorter.
+1:32
+Basically with zero cycles, we had specified a 32 bit instruction register depending on the kind of instruction we had an up code,
+1:39
+always a 24 to 31, sometimes destination and source registers and address, depending on the kind of command.
+1:50
+Now, what we need to do, really is to design of a controller that guides us through these fetch and execute steps.
+1:59
+The controller sequence looks simple, but we have one problem what should the input signals be?
+2:06
+So we have the same machine that has to do three fetch steps and then these up to four execute ones,
+2:14
+and you can see the branch is back to fetch one, depending on the command.
+2:22
+It could back go back from fetch three already when inside the case, obviously inauguration, it doesn't need to execute something.
+2:26
+Then we have those was a single execution step, like the jump example and then up to four to be done and the load in direct case.
+2:34
+So but really, what is the input to this controller?
+2:46
+And we need to design a combinatorial circuit with one output.
+2:51
+See if C equals one. We continue to the next execution states.
+2:56
+But if zero equals zero, we have finished and can fetch the next instruction.
+3:02
+So in other words, we want to have the controller just have one input and that this is just kind of continue or not,
+3:07
+which we are used to already from our execution controller.
+3:12
+If you remember the state machine with the five execution in one idle state.
+3:16
+Similarly, here only that we do not go into an idle state, but we go back to fetch depending on the sea, and we need to do this combinatorial circuit,
+3:22
+which gives us the one input signal to this controller to decide whether we should go to the next state or go back to fetch one.
+3:32
+So if equals one, we continue to the next execution, say, but a sequel zero three have finished and can fetch the next instruction,
+3:46
+which means that C obviously depends on the instruction that we're executing and the inputs of this combinatorial circuit will be the instruction,
+3:52
+opcode bits and the state.
+4:00
+So in order to know whether we should go back, we need to know the instruction we're executing and which state we are being in.
+4:03
+Hence, this will be our combinatorial circuit here, and we have here cues to know the state Q zero one two.
+4:14
+Why? Because we need three bits to encode the over all seven different states here fetch one two three and execute one to four overall seven.
+4:24
+Hence, we will need three d time flip flops and go to state.
+4:34
+And then we have the instruction registered top eight bits that will be the input to a combinatorial circuit to then give us this variable C,
+4:37
+which actually then in the end is the input to this final submission.
+4:45
+And we will be using decoders heavily now because we need to be more functional and be more.
+4:52
+Problem solving. So we will approach this problem of designing this and the further steps functionally again,
+5:01
+making use of decoders or if your Memoji multiplexes, or if you remember binary to unwary converters, all the same thing.
+5:10
+And first one we will be using is to be decoding the instruction register top.
+5:17
+It's the top eight ones where we have the instruction of code.
+5:22
+So we need an eight to two hundred fifty six decoder to decode which instruction is currently being present.
+5:26
+So we decode the opcode, the top eight bits of the instruction register, and if you remember, of course,
+5:38
+the multiplex or binary to unmarried converter always has only one of its outputs being one at a time one of the other ones or zeroes.
+5:43
+So we really know which construction is being executed right now.
+5:51
+The input, of course, is that all these eight top bits from the construction register and the big advantage
+5:55
+is that we decode the input into which instruction is currently being executed.
+6:01
+So only one open line is non-zero for any input that indicates the instruction that is being executed.
+6:09
+Now we're looking at instructions with the same stage sequence and plus them,
+6:20
+so having a decode of the instructions, we can now consider them as binary variables in our design.
+6:24
+And of course, all instructions have the same stage sequence,
+6:30
+though different arithmetic functions we have done with zero execution one to three and only one was four, actually.
+6:33
+But you get the picture. We now try to cluster those,
+6:40
+which are the same number of execution steps because that is what matters now for our
+6:43
+C inputs to the control of Signal to let it know whether it should go back to fetch
+6:48
+one or continue along the line with the execution steps so we can implement simple
+6:54
+circuits for these Boolean variables and arithmetic functions from Boolean equations.
+6:59
+So, for example, we can cluster everything as X, which is add or subtract or end or exclusive,
+7:07
+or we can put together shifts as a variable from arithmetic shift left out of makeshift right or rotate right.
+7:16
+We can put together skips with skip or skip positive or negative, so we really have an ability and variable and we can,
+7:25
+of course, also put that into circuitry, as we can always do Boolean equations.
+7:33
+Next, we need to do the state assignments. We make the state assignments for the fetch and execute states.
+7:41
+Remember, we have seven states three fetch, four execute and said we will need three flip flops in this case, of course.
+7:48
+And we're using a suited state assignment here.
+7:57
+Let's not bother with details, we have one unused state also because we would have eight available and only need seven.
+8:01
+And, of course, the midterms here are coming from these assignments here, so zero zero zero here means,
+8:09
+of course, that the midterm is his and not Q1 and Q2, not same for everything else.
+8:15
+That's just what we always said.
+8:22
+Now we will also use a decoder here to decode which state we are in, to make our life easy and have another set of Bulleen variables.
+8:26
+So having defined our states and we can all use a three to eight decoder to give us one billion variable for each state,
+8:33
+that makes it very easy later on. And how do we do the assignment here?
+8:42
+Well, it comes from our state assignment table here.
+8:48
+So zero zero zero is the topmost output here by convention.
+8:52
+So this should be fetch one, whereas the next in line would be zero zero one,
+8:57
+which here is fetch three and fetch three is the next one here, then the next one and zero one one.
+9:04
+And so on and so forth. So the assignment here comes directly from this table here.
+9:16
+So now we have a harder line to tell us both the state and the instruction or group of instructions because we have these cluster
+9:23
+variables for several instructions to put them together being executed and we can use all these as Boolean variables in our hover design,
+9:30
+making it very easy not to come up with this C input to the controller because we can simply write
+9:38
+building equations to define when the finite state machine needs to return to fetch a new instruction,
+9:46
+or, in other words, when it meets return to fetch one F1, for example, we can go through a register transfer tables,
+9:52
+which we adds nicely, put together and find all the instructions that need exactly two execution cycles.
+9:59
+So the tables we are done in the last lecture and thus determine that the condition for returning from E two is E two.
+10:05
+So we are in execute two state and the command is being returned or shifts.
+10:13
+Remember, these are class of variables for arithmetic shift left, right and rotate.
+10:21
+Or move or jump in direct. Why?
+10:27
+Because in the tables, we can see that all those commands are finished off to execute to.
+10:30
+So if we are an execute two and we are executing any of these commands.
+10:36
+Then we should return and and because we say return means that the sea variable has to be zero.
+10:44
+We need to avoid it at the end. So if executed to a holds and one of these here holds, this would be one.
+10:51
+But in order to return, we do find that the seas should be zero. Hence we have the prime year at the end or we invert everything.
+11:00
+But the idea is clear I hope we introduce all these Boolean variables to make our life easy with the multiplexes,
+11:07
+and now we can write Bulleen equations to say when we should return.
+11:15
+This was one example from. And of course, we can go through the tables we specified last time and see for each execution phase,
+11:18
+which at commands or codes, and after that execution stage.
+11:28
+So we repeat the process for each state, whether the state machine can branch back to state of one.
+11:35
+And we get the following overall boolean equations. Here is our equation.
+11:40
+We just looked into four execute two. But we also have the case of no operation, which goes without any execution immediately back.
+11:45
+So the first one here is a three where off the first three were already returning to fetch one because the opcode was no operation.
+11:54
+In execute one, we have Skip's clear or jump as the ones that are finished off to execute one and execute two.
+12:03
+We already talked about execute three. We have compared Desmond decrements or increment compare ETS or indirect and load.
+12:10
+As the ones that are finished after three or so indirect or load, and finally, of course, you would have executed four.
+12:22
+But after execute four, we only now go back to fetch one. So no extra reason to to do something.
+12:29
+You know, to combine all these conditions, we're using ends here.
+12:36
+So see is. Accordingly.
+12:42
+The overall combination with ends of any of these conditions here.
+12:50
+With a bit of care, we can implement this directly in hardware, and we will get our secretary for this.
+12:57
+Now we designed the state sequence in logic, and we can use the usual way we do this.
+13:04
+First of all, we do right on our table, you know that we did the assignment already.
+13:11
+So this is coming from the earlier table here where we did the assignment in some way that is beneficial for us.
+13:16
+We didn't talk about this, but you remember from former lectures that the assignment does make an influence.
+13:23
+And we're now using this assignment.
+13:29
+And at the same time, we have now the extended version of this table where we have the input variable considered here.
+13:31
+See? And the next stage. So in the previous table, realities of the assignment, for the stage, for the binary assignment of the here.
+13:37
+But no, we also entered into this table, the input variable and the next state.
+13:46
+If C is zero, this means.
+13:54
+That during fetch we continue was fetching so from fetch when we go to fetch to fetch two to three,
+13:59
+but from fetch three already we would go back to f one because we do not execute.
+14:07
+So the input variable, if you remember, tells us if you go through executed, if we go back to fetch.
+14:13
+So in any other state which is executed, including a three even a scene and see a zero.
+14:18
+Of course, we go back to fetch one because this means that the current opcode is finished and it doesn't have more execution cycles, so we go back.
+14:24
+However, in the other case, continue sort of see imagine that continue as one means simply that we go through all these cycles.
+14:33
+So in the first three was continue or see as an input one,
+14:44
+we go on to execute one from one to two from two to three from three to four and ultimately, of course, from executed four back to fetch one.
+14:47
+Because then we are done because that's the maximum number of execution cycles we meet.
+14:56
+Remember also that we had one unused state each so independent of C.
+15:02
+Of course, we don't care about the next stage. OK, that's our big table, and from that, we put it into the camps.
+15:06
+We have done this repeatedly throughout the course and you can imagine how we do this.
+15:16
+We need to respect the input variable and the right state assignments and then fill in from this table to the camps for each flip-flopped zero,
+15:21
+one and two. And after our circling of once and John Kerry's attributes, note here that John Kerry's almost by an asterix.
+15:32
+We come up with our momentum based equations here for thirty one and zero.
+15:43
+Now India zero, you can see that we could simplify was an exclusive or if you wanted to, uh, to to summarise here.
+15:49
+Because we have here. Q one prime and Q to prime or Q1 and Q2 zero.
+16:01
+Did I say Q2? Sorry, Q1 Prime and Q zero prime or Q1 and Q zero fee pool Q two prime ad of a bracket.
+16:09
+So the three is replaced here by this exclusive. But remember that we have already have our multiplex are in place to multiplex or so we can.
+16:20
+Make use of the fact that we have the states explicitly decoded and more easily rewrite this year using our Boolean variables,
+16:31
+fetch one or fetch to or see and execute three four zero.
+16:43
+Similarly, here we're replacing buy or fetch one and use see here as well to make life easier.
+16:48
+So the final circuit done is easier or simpler than expected.
+16:57
+Remember, we have our instruction decoder wired up with the instruction register bits,
+17:02
+top eight bits such that we get our two hundred fifty six output lines for.
+17:06
+The different instructions. We also have our state decoder from the her flip flops here, such that we know on which side we are here,
+17:13
+we have our common and logic for giving us the key variable here.
+17:24
+And with the correct wiring up of what we just got here, we have our stage sequencing logic in place.
+17:30
+Of course, we need to check the drone carriers and to see if the secret will be safe at start up.
+17:42
+But it is, and we need to add extra hardware to make the process to do something particular start up and maybe also on a signal from a reset button.
+17:48
+So checking the drone cares is not a major issue here because we would at this kind of safety routine anyhow
+17:57
+to make sure that we know what's happening and sort of know that is our state machine for the controller.
+18:05
+But of course, now we also need the output logic, and this would be a huge combinatorial design problem.
+18:12
+Why we have the following inputs the states. If one of two up to for it and the instruction, at least the top 16.
+18:18
+Mm-Hmm. Why do we need more than the aid, because we also need the.
+18:32
+Instruction to to handle the multiplexes and so on, and you and shifter.
+18:39
+So the outputs are, on the other hand, side the clock controls C zero one two,
+18:45
+etc. The arithmetic function selection lines have zero of one, etc. and the multiplex and select lines.
+18:52
+In total, with the heads of 28 different combinatorial design problems for our outputs, each with 17 inputs.
+19:01
+And clearly, this is beyond the means of case maps,
+19:11
+so we need to think a little bit different than up to know we have been using the more finite state machine up to know.
+19:14
+If you remember, the more machine had no connexion between the inputs and the output logic.
+19:21
+So the input here in the more machine was only an input to the state machine.
+19:25
+But once we have the state, we only use the state.
+19:32
+So the output was only a function of the state,
+19:37
+not directly of the inputs of the input was not all wired up here such that this g function here was only dependent on the state.
+19:39
+And the state, of course, dependent on the input and the last state here, that was the moment it was safe home in terms of being safe and spikes.
+19:48
+But we now need to use the mealy machine and just see the big difference is that the input is also going directly into the function here.
+19:58
+So the output now is a function not only of the state but also the input.
+20:08
+And it is not possible to use some war machine sense in order to set up the process of correctly,
+20:15
+we need to know which instruction is being executed, obviously.
+20:19
+So if you want to have the outputs right for for the arithmetic function, select excellent multiplexes, for the select lines and so on.
+20:23
+Of course, we need to know the instruction that is currently being executed. And this means just depending on the states is not enough.
+20:33
+We need to know the input. Now, let's get started with the stop gates and the club gates signal 02 eight, maybe I want to remind us quickly in this.
+20:40
+Lay out these are the clock signals for the registers here on the free register a b
+20:52
+Kerry Control Programme code to address registered data register instruction registers.
+21:00
+So these clock signals and memory here we need to do know.
+21:06
+And we will again be using this typical gating circuit where we have the system clock and our respective variable for that respective register,
+21:16
+for example, to give for the memory address register gated with and then gate such that we use
+21:29
+the Falcon Edge because the rising arch has been used for the state machine.
+21:35
+We could also do it the other way around. Point being, we use one edge for the state machine and the other edge for the registers.
+21:42
+And then. This will be our clocks in at 11:00 and our case here, for example, for the memory address register.
+21:50
+Now, of course, we need to find this Boolean variable here and we will be doing this for the registers one by one.
+21:59
+So now we define first the memory address, register clock signal see more variable.
+22:06
+So we use the Bulleen algebraic and was our introduced variables to find the clock signals.
+22:11
+We look through the register. Sorry, yeah. Through the register transfer tables.
+22:18
+Again, we did in the last lecture to define our instruction set, and we look at all the places where the memory errors register is to be set.
+22:22
+And from that, we see that the memory address register is, of course, needed in fetch one.
+22:31
+Or an execute one, if it is a load or historical moment since right memory and the strategies that we need that followed in store or in execute,
+22:37
+you float in direct or store indirect execute to in this case because we needed to load also another register.
+22:47
+So that was an execute.
+22:54
+You know, I'm telling you this, but the best thing to do is also look through these tables yourself and see and find a little bit,
+22:55
+such as you familiarise yourself with the idea. What we really do is we go through the instruction set that we put together last lecture and see
+23:04
+in which case is which register used to come up with these early indications for the clock.
+23:12
+No, we don't care about registre contents, and that makes life easier at some moment in time,
+23:23
+so we need in practise the memory address at its edges register to be correct when we are about to load the memory data register.
+23:31
+So if you load the memory data register, we have to have the correct address and the memory address register.
+23:40
+But if you don't load the memory data register, we don't care what's in the memory address register so we can give it a clock pulse
+23:46
+and load random data on other times without disturbing the processor execution.
+23:53
+This allows us to simplify the equation for the memory address register because at some moments in some execution phases, we do not care.
+23:58
+So that makes it easier in the sense that we do not care which instructions actually execute it.
+24:09
+Because if it's not about load or store, but another instruction can still be loaded with something.
+24:17
+The memory address register that is. And we can simplify and just say or execute one same and execute two.
+24:24
+We don't really care if it's any other. Come on here. Then strategy prejudices loaded with something we don't care.
+24:32
+So intimately, this makes it pretty easy here, this boolean equation on the clock for the memory to register equals function.
+24:42
+Sorry, fetch one or executed one or execute you. And that is this little gating circuit here, just an old gauge for these three billion variables.
+24:51
+And then, of course, locating circuit has discussed. Next up in line is are the memory data register.
+25:01
+We do exactly the same again for this one of the other ones to follow.
+25:09
+We're looking, we're looking through the tables we put together to define the instruction set.
+25:13
+And from the register transfers, if you find that memory data register is used, of course, and fetch too.
+25:18
+Yeah,
+25:24
+because we want to fetch the data there or in execute too if we have a load instruction or an execute three if you have a load in direct instruction.
+25:24
+So the memory data register as loaded and fed to is needed in cycle three by the call instructions, so we have to be careful.
+25:36
+We do care that is still correct in that case,
+25:44
+so we cannot omit and load here because we need it to be correct for other instructions and particularly in this case here, but only.
+25:49
+Load Indirect uses the memory data register after executed three, so we can skip and load indirect because we don't care if it's another one,
+26:01
+this one, so we can simplify a little bit at least and skip and load indirect here, but remained was fed to or executed load or executed.
+26:10
+Three. Now we look into the registers, the programmable ones are zero, two are six.
+26:22
+And we have the opcode, then the destination register and then the source register defined in our instruction template.
+26:31
+So the register that changes the destination register is recorded in iBooks 22 22 in the present design, but we left with 23 optionally and empty.
+26:43
+So if you expanded the design to include 16 registers,
+26:55
+then the 23 would also be used and the condition of the destination register should change is again going someplace or instructions set tables.
+26:58
+It should change and execute for. Or execute three, if you have a load or it's one.
+27:09
+Or execute two and give them a call or call indirect in brackets or an execute one and clear.
+27:17
+Note that we introduced further Boolean variables here to summarise shifts simply left,
+27:25
+right and rotate shifting, and one is all one register instructions.
+27:31
+Again, we do this quickly here now because it's always the same principle to go through the tables and look where these things happen.
+27:38
+But I highly encourage looking at the tables yourself and doing this as an exercise.
+27:45
+Then we have the programme, a registered clocks, which somebody use a decoder to determine which register receives the clock pulse.
+27:53
+So from the. Bits that define our destination register you to know which one should get the
+28:02
+clock signal because so far we're treating it as a destination registered only,
+28:11
+but now we need, of course, to know which one to give a crap outside of those seven.
+28:16
+We use a decoder here and we have all three inputs bits here and then the clock signals outputs.
+28:20
+For each individual, one's individual, one gated by an end gate for each of those was system clock named.
+28:28
+It was C or just so the destination or just a clock signal, which we just defined here.
+28:38
+So this here is not enough, we need to know which of the registers exactly to give the clock falling edge,
+28:46
+and for this, we have this team multiplex here at it and using them here to only give one of those.
+28:57
+A clock full image now, of course, we would need a four bit decoder, not a three, but one if we expanded the design to 16 registers.
+29:05
+So here we have Nova three and we would need to expand it by one more to four.
+29:14
+So we have the clock signals now we go to the shift of function, select bits.
+29:22
+So we are using a simple four function shift shifter.
+29:27
+If you remember, we said we don't need the more complex one any longer because we have no high precision with 32 bit words.
+29:30
+So we don't need these cumbersome carry arrangements any longer for enabling higher precision arithmetic.
+29:37
+We are well catered for with our four function shifter.
+29:43
+Now, in most cases where data is routed through the shifter, we will no action.
+29:48
+If you remember if you need to go via the register into the memory, for example.
+29:51
+So we choose that to be the default. So the two shift as election bids here default zero zero is no action.
+29:56
+And then we simply specify a shift left right and rotate right.
+30:04
+With the other combinations remaining from the above table, we can easily determine the equations for the function.
+30:08
+Select bits if four equals arithmetic, shift, write or rotate.
+30:14
+This is simply the two once you, of course, and if three resembles, of course as [INAUDIBLE] or rotate right, which is the two one here.
+30:20
+Very similar you function select.
+30:35
+Now we have eight different options, as you do three bits, one remains on use default as the function zero and then we simply.
+30:38
+Give it a B minus A. A. B. A plus b exclusive or B A or B A and B and minus one note that we don't need B minus any longer because no,
+30:50
+we not only have a and B as registers, but we have these programmable registers and is good enough to have on this beano.
+31:03
+No. For this reason, this we can. Simply use the correct source and destination registers, we don't need both combinations here.
+31:11
+So we're simply signing here the default to be zero and assign some combination
+31:23
+here otherwise and go through these here to come up with these conditions.
+31:28
+What is, however, to be remarked, is that we say already when this is happening and.
+31:35
+A-minus is always happening and execute three.
+31:43
+In the case that we have subtract or compare a plus b again going through the tables, it's happening in three four decrement increments or at.
+31:48
+Exclusive will be for execution phase three and compare it will be executed three and four and be executed
+31:59
+three and end and finally minus one of the functions used to execute to in the case of decrement or compare.
+32:07
+So with this, we can directly write the function.
+32:16
+Boolean equations with the execute and command variables.
+32:22
+Now, let's look at the carry in bit.
+32:33
+The only place that one carries required in the current instruction set is if you want to increment and that is happening and execute three.
+32:35
+The default for the Korean bit will be zero and thus we can simply say.
+32:43
+Function five, the Korean bit is increment and three as the three, four, two zero, and that's the only condition where it is one.
+32:49
+It's a very simple. Note that we connected the Kerry output as an input to the controller.
+32:56
+We need to use it in our state sequencing logic for implementing skipped positive and negative instructions.
+33:05
+So if then kind of skip conditions first, doing some comparison to trigger the carrier and then skip on conditionally?
+33:11
+Now, the selection inputs are defined by the following three tables for the multiplexes.
+33:28
+Again, we go through the tables, look at the path and then we see. When this will be happening, so we need to.
+33:36
+See which register we're selecting or the bus and which path we're using your shift to a new programme, quantum models can be all right.
+33:50
+And finally, for us or incremental. So those are our selection bits.
+34:00
+Zero as one, as two, as four, as five to six and three, and it's critical once again back to the.
+34:09
+Layered. Mm-Hmm. So this is the multiplex here selection zero one two to select which register we choose.
+34:17
+Then we have these multiplexes here for the past year from a memory day to register with or without malls,
+34:27
+or from a view or from the shift or from the programme counter.
+34:36
+And that was selection three for the multiplex of whether we should take the programme
+34:43
+counter from this pause on dialect directory writing and to it or from the incremento.
+34:49
+So I'm skipping. So this is basically the selection that's we're talking about now.
+35:00
+And this is simply how we assign the different combinations.
+35:11
+The assignment basically two to choose. The right register pass.
+35:15
+So it's all possible. Now we go through the three things.
+35:22
+First thing is look at the registered transfer tables to determine when the different policies are selected.
+35:31
+And if you use, for example, select programme counter to mean the condition when the programme comes selected,
+35:36
+you find the programme contents selected and execute to.
+35:41
+If we have call or call indirect. The €L selected in execute one, if you have clear or in execute two or executed three,
+35:46
+if you have increment decrement or compare or and execute two three,
+35:58
+if you have to wear two of the Boolean variable, which becomes one,
+36:03
+would have to register the instructions being executed to another substitution of string.
+36:07
+If you wish to select, the pathway of the mask happens if you're an execute one and we have load or jumbo store.
+36:11
+If you remember those were the load store and jump direct instructions and they needed to go via the mosque to mosque the top, it's and executed one.
+36:19
+The mosque is also needed in exit three.
+36:31
+If you have called and the select memory data registers, a pass was needed and executed.
+36:35
+Three and the case of load or execute four.
+36:40
+So again, we're just going through the tables of the instructions that we defined.
+36:43
+Internal election bits as far as five and six, so using the unallocated selections as don't cares,
+36:50
+so these ones here we can simply replace by exes and don't care,
+37:00
+we simply get as four as equals, select a value or select and we are so basically where the select four is one in the table, that's the case for you.
+37:06
+We don't care here and MDR, and we don't care.
+37:20
+So this is how we come up with this. It's fine for equals select programme control, so it's fine if it's only one year where we care.
+37:24
+We do not care here or you're here. So that's fairly easy and same principle.
+37:34
+You're of course, a six. It's only one year for select models can select and be are we don't care here.
+37:38
+Registered selector,
+37:50
+we can find the conditions defining the register selected from the entries in the register transfer tables where A or B are loaded.
+37:51
+Sometimes the registered to be selected is the source register, so it's 16 to 19.
+37:58
+If you remember, sometimes that is the destination register.
+38:03
+It's 22 23. That is sometimes funny, also the internal US.
+38:07
+And we're just going through the tables again, see that source register needs to be selected and exit one if you have indirect or to remember,
+38:15
+these were the variables indicating the instruction Typekit and should use earlier.
+38:24
+Select bus needs to be done in next year two and one and select just initial register and select source for select bus.
+38:29
+Not. The individual selection is again done by multiplex.
+38:38
+Well, actually, they're not again proves the you said you might have picked a nominee to the
+38:45
+multiplex with an additional set of gates to impose the select bus condition.
+38:49
+So we use the multiplex a, you know, to go from the instruction.
+38:55
+Register your.
+38:59
+Why are these gates to have to select so conditions are respected and to select us equal in each and one as another condition here with the OK?
+39:03
+So basically, we're just putting this into secretary you. Now, the programme counter is last but not least,
+39:17
+and we get the conditions for it to be connected to the internal buzz from the registered transfer tables, and that is very simple.
+39:27
+In fact, one or execute one if you have call or indirect.
+39:34
+So how did we do? We put together our 32 bit processor.
+39:41
+You could make your wiring list by the components and actually tested.
+39:47
+So the components might cost some 200 to 300 pounds more than twice the price
+39:53
+of an Intel Core to process about the time when we first took the lecture,
+39:59
+we can get much more powerful processors now for this money.
+40:03
+And the clock could be set about 10 kilohertz 10 kilo hertz, not megahertz.
+40:08
+So we could do it a bit faster if you fabricated it on a single chip rather than buying the components and putting it together.
+40:15
+But we very, very far from the speeds we're used to.
+40:21
+So it looks like we had better considered a Mach two version straight away before we would go to the market with this.
+40:27
+What could we do to improve it? Well, the instruction format. It's the first point you start from.
+40:34
+Instructions are all 32 bit, but mostly the buttons 16 bits are empty.
+40:41
+If remember, we had been quite wasteful of many times. Most, of course, in the case of an operation and other one operation.
+40:45
+So we only use a top aides and do not use to station or a memory address bits, but also in other cases where we only have one register.
+40:54
+Of course, we were quite wasteful. And even with two registers, we left a lot of empty 16 bits.
+41:04
+This means that we are wasting memory space because we're fetching all the time.
+41:11
+So the two bits as bytes, we're not using 32 bit,
+41:16
+so we're wasting memory space and we also do many more fetch cycles than we need because if we could somehow pack more into that,
+41:19
+we would need to fetch less. So we could pack up the instructions on byte boundaries rather than word boundaries.
+41:28
+So by boundaries, every eight bits rather than word boundaries because the instruction have one bite eight bits.
+41:37
+And introduce some multiplexing hardware to load the instruction register correctly, depending on the instruction.
+41:44
+We know how much will follow it and what will follow it, whether it's the next instruction or data like the address in the memory.
+41:51
+We could also do a lot of magic improvements, we have three unused inputs on the multiplex,
+42:00
+so if you remember the selected on bus and we could do additional arithmetic hardware such as the 16 bit multiplier,
+42:04
+multiply the bottom 16 bits of a B to obtain a 32 bit result.
+42:11
+We could also invest into an incremental or a decrement.
+42:16
+Then we could optimise the data, passes additional multiplexes could help us reduce instruction cycles of many of our instructions.
+42:21
+And just as an example, we could have an additional multiplex such as select B,
+42:30
+so the B register independently from the register, which would read as many as three final instructions to two cycles.
+42:36
+The whole idea is reduce the number of instructions.
+42:44
+Yeah, and then we need less clicks, takes off the clock and through faster and having be selectable independently from a get,
+42:47
+many of the three execute cycle instructions down to to a data pass from the
+42:56
+registers to the internal bus would also reduce some instructions by one cycle.
+43:02
+And this would require an additional input on the bus,
+43:07
+select a multiplex and so might be considered and now turn it off to the additional arithmetic functions already discussed.
+43:10
+So we come to those, potentially at the same time as our current design.
+43:16
+And of course, we could be working on the combinatorial circuits on the hardware level.
+43:22
+That is the hard part. We want to have the minimum time delays and a lot of combination of logic circuits.
+43:26
+And this is partly a question of past links,
+43:33
+but it does also require looking at low level transistor models to calculate the time accurately and not running to raise hazards.
+43:36
+And that is the end of the course, we put together our 32 bit processor, and we discuss also to improve it,
+43:44
+and I hope you have a good appetite for computer architecture and other
+43:53
+lectures to follow where you will be learning much more how to improve on this.
+43:58
+But isn't it great? We really know what's under the hood of a conventional microprocessor from gate level upwards.
+44:02
+Well, it's not really the end of the course coursework to take the place of the first lap exercise of next term,
+44:10
+and you can do it as soon as you like, the instruction sheets will be on the course website or already.
+44:16
+There will be a revision session before the exam of the start of the summer term.
+44:23
+And please watch the court's website for the time and venue of this revision session.
+44:27
+And in the meantime, have a great break. Thank you very, very much for your interest in this course and hope you really enjoyed it.
+44:32

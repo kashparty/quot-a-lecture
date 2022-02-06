@@ -1,0 +1,87 @@
+ID: 875363e6-c5df-4737-b8ce-ae2d014904dc
+Title: 3.7 Path compression
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 31/01/2021
+So let's see how path compression works.
+0:01
+So the idea is that we want to find the route, the leader for our Node X. Look at this Left-Hand diagram and but it might be further down the tree.
+0:05
+So if it's not at the root, is not actually parent of X, then we're going to actually flatten the tree.
+0:17
+So we're going to move X and all these other elements we find along the path the root up and say
+0:25
+that they are actually direct children of the route rather than being further down the tree.
+0:32
+So that has the effect of flattening the tree.
+0:39
+So we have extra work done in updating the parents for these nodes.
+0:43
+But we do keep the depth of the nodes lower so that the future finds are faster.
+0:48
+So next time we want to do a find the leader for any of these nodes,
+0:53
+then we can find it immediately rather than having to go or all the way down, all the way up the tree.
+0:58
+And the nice thing about this Barthe compression is it combines well with the weighted union on size as we saw it,
+1:06
+because the size is unchanged by path compression.
+1:13
+Supposing that we had done the more obvious thing of doing weighted union on the depths so that we put the
+1:16
+lower depth tree appended to the larger depth than the depth would be affected by the path compression.
+1:21
+So that would it wouldn't play so well with the two.
+1:28
+That kind of weighted unit would not go so well with path compression.
+1:34
+So here is the recursive procedure for come see find a, which is for finding the route and doing the path compression in the same at the same time.
+1:39
+So it's a recursive procedure. So first of all, to find the route for X, we look at its parent Y if.
+1:52
+Why is the same as X, then X is the route. And so we just return the root and do nothing else.
+2:03
+But otherwise we apply C find recursively on Y and find the root.
+2:08
+And if that route is not Y then that means that X was further down the tree and so will set parent of X to be root.
+2:16
+So that has the effect of flattening the tree and moving the X up. So it's a direct child of the root.
+2:27
+And obviously the C find. We'll do that recursively for all the other elements along the path to the root.
+2:32
+So it's the the blue line, the blue parts, the highlighted parts.
+2:40
+Here are the parts that do the do these lines here that do the path compression.
+2:44
+And if you admit that then you just get the normal find. So comparing our various algorithms,
+2:51
+Chris Gall's algorithm takes them log in Prem with priority queue is implemented with binary heaps m log in classic briem and squared.
+2:59
+So which is better? Well, it's just because the Cresco on the brim with priority cues are just the same.
+3:09
+Then it's the same argument as when we were comparing the two versions of Brimm.
+3:16
+So if we've got a lot of ARC's so dense graph, then M is order N squared.
+3:20
+And so Chris Gold is a bit slower than the classic primp.
+3:28
+If you take sparse graphs where aim is bounded by bigo of an log n say then kruskal or preme with priority cues give better results.
+3:35
+Because aim is lower and we get bigger. Avam log n is order big IV and log squared n.
+3:47
+So that will be to be preferred. A final remark.
+3:55
+We have talked about priority queue is being implemented with binary heaps and we will see how to do that later in the course.
+4:02
+But they can also be implemented with the more advanced concept of Phippen, Archie Heap's and with Ferencz Archie Heap's.
+4:08
+We can do a bit better on the operations. All the operations are constant time apart from Delete Men, which is bigo of log in.
+4:15
+And if we were to implement them with priority queues using Fabián Archie Heaps,
+4:26
+we can get the complexity down to Bigo of M Plus and Log N, which is an improvement.
+4:31
+It would seem looking at the big O notation,
+4:38
+but in practise it might not be as good as it seems because the memory usage and constant factors can be high with the Fibonacci.
+4:42

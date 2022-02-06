@@ -1,0 +1,2341 @@
+ID: 25af7f15-051b-4dd9-bd9a-adb80157abf9
+Title: Basic types
+Category: Haskell
+Lecturer: Konstantinos Gkoutzis
+Date: 05/10/2021
+To confirm, thank you. Yes, that's lovely.
+0:04
+OK, so I think just just for the protocol, your liberty to use the chat on my experience of trying to monitor the chat in the past is it's
+0:09
+absolutely impossible to concentrate on what I what I need to say and read the chat at the same time.
+0:19
+So so feel free to chat amongst yourselves. Some of you you'll find a braver than others about putting your hands up and asking a question.
+0:25
+I mean by me. By which I mean just. Reading out the question on themes, so if you if you have a question, put your hands.
+0:34
+Are there two people have got their hands up now. Is that an old hand or is it a new hand?
+0:44
+Is there something you wanted to ask me? Tanya, you've got your hand up.
+0:48
+If you if any point you want me to stop and answer a question, you're very welcome to ask a question.
+0:57
+Put your hand up, ask the question, and I will answer it for you.
+1:05
+My experience last year, there was probably about 10 or 12 students who were quite happy to do that.
+1:11
+And the rest of the rest of the students wanted to remain quiet.
+1:14
+And that's fine. And so what we can do today, this is this is an online live session today.
+1:19
+I think the subsequent sessions will be similar.
+1:24
+If I can get you into a class or something like a catch up or a Q&A in the coming weeks, I'll I'll do that.
+1:28
+But I think we'll just start this way and see how it goes.
+1:34
+It went pretty well last year, I think. And the really nice thing about this year compared with last year,
+1:38
+you can get into the labs and you can't get in today because there are other things going on.
+1:42
+But I think on Thursday there is a timetable labs for you. So I hope to be in for some of those.
+1:47
+I have many other things to do this term, but I my intention is to come down to the labs and wander around just to see how you're getting on.
+1:54
+And there should be just enough room for you, I think I think not all of you will be comfortable sitting in a lot of just yet.
+2:03
+So we hope we got plenty of seats for those of you who do want to come.
+2:11
+So Constantinos will explain the logistics of that later in the week if he hasn't already done so in his lab lecture.
+2:14
+Right. So today we're going to be doing school, as you know.
+2:21
+And this year, you're going to be learning, oh, Josh, we've got a question,
+2:28
+you haven't got a question this you are going to be doing quite a few languages in the first year.
+2:32
+We guide we guide you through some programming languages. We kind of teach you.
+2:37
+I guess after that, it's really up to you to learn languages of your own back.
+2:41
+So what we're going to do in the first year equip you with all the sort of core knowledge you need.
+2:45
+You'll get to see all the all the big programming paradigms, the function of the object oriented, the imperative and the assembler and so on.
+2:49
+And we begin with functional, which is a slightly unusual choice.
+2:58
+You might think it's one of the one of the most paradigms programming. We'll say a little bit more about why we do that in a minute.
+3:02
+But we start with Haskell, and we're going to begin today with something very a very straightforward session.
+3:09
+So don't worry, if you if you've not programmed before, don't worry,
+3:16
+because I guess this first lecture is designed to help those of you who've never seen a programme before to get up to speed.
+3:19
+I guess one of the last things about Haskell is that in my experience, not many students have used it before coming to university.
+3:25
+So it's actually quite a nice well, that's not the reason why we do.
+3:32
+It actually turns out to be quite a nice level playing field because nobody's real or very few people are actually experts at Haskell when they start,
+3:35
+whereas probably quite a lot of you have written Python programmes or Java programmes or C programmes before,
+3:41
+and some of you may even have run your own software companies. Who knows? But I doubt whether you've written a lot of Haskell code.
+3:47
+Most of you will not have done so.
+3:54
+So you're going to be learning. Let's say we do Haskell with you, Kotomi, the Java, would you see?
+3:58
+And we do a similar programming. That's what that's the that's how we structured the material in the first year.
+4:04
+As I said after that, it's up to you to learn, learn languages and what you back.
+4:09
+So you'll get to learn things like and Python and Ruby or whatever else takes your fancy when you start doing project work probably next year.
+4:14
+OK, so why Haskell? Well, I would argue that certainly is one of the major modern programming languages.
+4:25
+It is, and it is probably the archetypal example of functional programming language.
+4:35
+There are a number of functional programming languages that will be clear what I mean by functional programming language in a minute.
+4:39
+Haskell is arguably the most.
+4:46
+Well, I'd be careful how we word this,
+4:50
+but yet Haskell is Haskell is arguably the most mature language in the sense that it has a large and growing user base.
+4:52
+It it is is it kind of designed by committee, but designed by a very smart committee and it's maintained by a committee.
+5:03
+It's a big open source project that anybody can contribute to, to the Haskell compiler, which is called GHC.
+5:10
+And what you'll be using in the labs is indeed still in fact,
+5:17
+there's an interactive version which began to be playing with today called the HDMI, the interactive version of GHC GHC.
+5:20
+I always think of the Glasgow Haskell compiler. Some people call it the glorious Haskell compiler.
+5:26
+It's the de facto compiler for Haskell. Sasko is a widely used language.
+5:30
+It's used in industry. It's a big topic in programming, language research.
+5:35
+I'm one of the reasons why it's a big topic in programming research is because of its type system.
+5:40
+Now, that won't mean too much to you if you've not programmed before what Haskell has an extremely rich and very beautiful type system.
+5:45
+And it's it's constantly being reviewed and looked at. And it's the subject of many topical research papers in programming languages.
+5:52
+So my job is to convince you I do hope I don't have to do too much convincing that Haskell is the most beautiful programming language in the world.
+6:00
+And I hope I may not seem like it when you start, but after four or five weeks of playing with it, it does.
+6:08
+I think I'm one of those students. It does. It does.
+6:15
+Thinking has been, if not the most, than one of the most beautiful programming languages in the world.
+6:17
+And as I go along, I try and give you some hints as to why I think it is the most beautiful programme in the world.
+6:23
+Perhaps by comparing it to some of the other paradigms, it's packed full of really interesting stuff.
+6:27
+Nothing gets into the language because somebody woke up on a Saturday morning and threw it into GHC doesn't work.
+6:35
+It goes through a very every change. The language goes through intensive scrutiny.
+6:40
+Intensive discussion takes years to get extensions and new language ideas implemented because it goes
+6:45
+through this committee of wise people who have been responsible for the language over a period of many,
+6:50
+many years. OK, so what's this functional thing?
+6:54
+What you'll get to learn what I mean by functional programming. If you go through one, don't.
+7:00
+One thing I certainly have you learn other programmes. You do your own research.
+7:06
+You'll see that lots of ideas in other languages and other systems and paradigms and libraries have come from functional programming.
+7:10
+You might have heard the Mac produce Google infrastructure for doing parallel computing,
+7:16
+cloud infrastructures, things like traits where the traits come.
+7:23
+We'll try to just take classes and programming and lambdas in Java, you know, first class functions.
+7:29
+But they came from functional programming, not necessarily just from Haskell, but from the power in general.
+7:37
+Generally, there's all sorts of other examples I could give you almost as we stumbled across them.
+7:42
+Perhaps I'll mention them in passing. So a really good place to look.
+7:47
+Actually, if I can just take you to India,
+7:52
+I have to admit my make sure I've got my I've got these no shortcuts and I have to
+7:55
+remember which ones are which I apologies picked the wrong one from time to time.
+7:59
+A really good place to start if you want to find out more who uses Haskell. Yeah.
+8:02
+How did it come about. And lots of online resources like tutorials and exercises and examples and so on.
+8:07
+References to books and papers go to high school dot org. Everything, including downloads of the software are there for you to enjoy.
+8:14
+So I suggest you all have a look at that in the coming days and rummage around and see what you can find.
+8:21
+I haven't looked at it actually a few months. I was probably thinking, I don't know about Twitter.
+8:26
+OK, so back to the slides.
+8:31
+I'm going to go through the slides in a minute and I'll just show you briefly where they are.
+8:36
+Just just to talk about pacing. I'm fully aware of the fact if I know me, if I'm in class, I would do a poll and get you to tell us,
+8:40
+all of you, by putting your hands up what sort of experience you've got.
+8:48
+I'm guessing that probably a third of you have done a bit of programming or not very much programming would classify yourselves as experts.
+8:51
+I guess about a third of you would say you I've done quite a bit of programming,
+9:00
+but I wouldn't necessarily be more than more than a little, but I wouldn't say I could become a commercial software.
+9:04
+And I think a third, you say you're probably quite experienced programmers and you probably think a really good programme is one thing I can tell you.
+9:10
+You're going to learn very quickly over this next two terms is that there's a whole bunch of things you didn't know about programming.
+9:17
+That you will know by, let's say, March, if not the summer,
+9:24
+every single student I've spoken to who comes in having had a lot of programming experience,
+9:28
+you can ask them after three or four months, have you learnt anything by coming here? And they go, oh, my God, yes, I thought I was a good programmer.
+9:33
+So I came here. And that's really good. That's pretty exciting.
+9:40
+It's just, I guess, to suggest that we're kind of doing the right thing.
+9:43
+So regardless of your background, you're going to learn a lot about programming and my hope.
+9:48
+And in about week five or six,
+9:52
+you'll all be up to about the same level in high school so that none of you will be disadvantaged by not having that much programming before.
+9:54
+So I'm going to pitch the pace roughly the middle of the class, the middle third, if you like.
+10:02
+Some of you may find you need to play catch up. And that's what the tutorial system is for.
+10:07
+You have weekly programming tutorials. You'll have you'll meet your undergraduate programming tutor on Thursday.
+10:12
+And there are lab sessions. There are helpers in the labs and endless numbers of helpers in the labs.
+10:19
+And if necessary, later on, we can organise special catch up sessions if that's necessary.
+10:24
+But there's loads of support if you need a little bit more help.
+10:29
+And for those of you who are absolutely on top of it and want to fly ahead and do all sorts of other things,
+10:31
+we're going to arrange there is a series of advance programming lectures which will come.
+10:36
+We'll probably start this week for because I need to get to a certain point before it makes sense.
+10:42
+And there are three or four weeks that this is that I can't cope with this.
+10:46
+So he threw the job away and we were in high school and there it is.
+10:49
+So how did so is one of the igby one of the country's largest employers of functional programming, high school programming experts?
+10:53
+And John, we see on the right, they used to work for him. John was also an undergraduate student at Imperial.
+10:59
+He graduated two years ago, I think was it three years ago, an extremely brilliant functional programmer,
+11:05
+did lots of work with me, did his project with me, got his project published.
+11:12
+I see a P, which is one of the top functional programming conferences, he's now doing a deal with one of my colleagues,
+11:18
+Nick Wu, and Shango is going to be giving some of the advanced programming lectures in around about week four onwards.
+11:23
+Just this term. We don't do functions. We don't do the advanced programming.
+11:29
+In the second term, we might be able to find the old slot, but basically there isn't a lot of space on the time table.
+11:32
+So you'll get to meet these two guys.
+11:39
+They're really interesting in their own rights and hopefully you'll be possibly able to set eyes on Shango physically because
+11:41
+he is obviously going to be working in the building on his Ph.D. So he might you might you might just see him in the labs.
+11:48
+Right. So that's that lot. And back to this. I'm almost at the end now.
+11:56
+So just what are we going to do? So in a minute, half an hour, we haven't started yet.
+12:01
+So in a minute,
+12:06
+I'm going to start going through the introducing you to the language and you will see there's a lab session scheduled for later on about four o'clock.
+12:07
+We should finish by then. And if not, it doesn't matter.
+12:14
+It's not the end of the work. It's a virtual lab.
+12:18
+Now, what are you going to do in the virtual between now and between now and the next election, which I think is on Thursday?
+12:21
+And what you need to do is to go to here, which is the materials website, which I'm sure you already have done.
+12:26
+I think this is the view. You see, if you click on the so if you click on the colour slides, you'll see what I'm about to show you in just a minute.
+12:33
+Those are the slides.
+12:40
+If you click on the exercises, then you see something like this and what you can do right now, immediately after this lecture, in fact,
+12:41
+the intention of these unassessed sheets is to get you started in the language that both,
+12:50
+by the way, the unassessed, these are things you do in your in your own time. In your spare time.
+12:54
+When did you feel like it? No one's going to mock them. But I will give you specimen's solutions to each of the questions as we go along.
+12:58
+So I'll probably hand out the solutions to set one probably next week.
+13:05
+And if I forget to put them up on CNN, can somebody just drop me an email to remind me and I'll do it straight away.
+13:09
+So what you what you want to do here is get to.
+13:15
+Let's say so, part of part of part of the reason for going through this exercise sheet is not just to reinforce what I've told you,
+13:19
+but actually to learn a few interesting things for yourselves.
+13:25
+And you'll do that by going through and answering all these questions and what you need to do by Thursday,
+13:28
+if you can if you don't have to do all of these, but do as many as you can, if you can get somewhere by about question nine by Thursday.
+13:32
+If not, you can pick it up at the weekend or whatever.
+13:41
+There's no great Bush this week and we'll be starting functions on Thursday whenever the next two are legislative.
+13:43
+All right. So so you won't be probably will struggle to answer the questions and functions until the next lecture.
+13:50
+Right. So that's where we are now, I'm going to go back to this and assuming we don't have any more disasters,
+13:58
+any questions before I have a little breather because I'm about to start talking to you about school and your questions about logistics, for example.
+14:06
+It's going to create a bit of real estate, my so we go good.
+14:21
+OK, well, well, here we go. So I guess your your your your academic life is in peril begins here.
+14:28
+So the first thing I was going to say, that's what we're going to be covering won't make any sense to you.
+14:35
+But just in case, when you come back to revise, you'll see that's what we've been doing.
+14:40
+There is a bunch of books which are. Highly recommend some of these very highly recommended, I think if you're going to buy one book,
+14:45
+I would suggest you buy Simon Thompson's books as one of my colleagues at the University of Kent.
+14:52
+And it's it's it's a very nice little introduction to a programme.
+14:57
+You sort of get you've got to where you need to be on this course. Oh, there's some questions.
+15:01
+Akash, do you have a question? It was at an old hand.
+15:04
+I have a question, yeah, I'm sure it's got a hand up as well. So if you those are old hands, but you should know no.
+15:10
+Good. I like what's going on here.
+15:17
+Can you try asking that question again, no. Oh, hello. Oh, hey.
+15:22
+OK. How was your question? I just want to ask how, like, the lobbies are going to work if they're like online,
+15:26
+like I was just going to stay here and just do the work on together. Yeah.
+15:34
+So so, Constantinos, to set these up, you have like virtual you've got a bunch of helpers.
+15:38
+Constantina, they should the information should be lying around somewhere.
+15:44
+I don't know what what he's given you, but if you go to the session at four o'clock,
+15:46
+I think there are sort of breakout rooms where you have a guy or you can ask them questions online as if it's if you
+15:51
+just put your hand up in the lab and there'll be a bunch of people who can come over and answer your question for you.
+15:58
+So I think the thing to do is log into that team session. And if you've got any questions about how that operates, then Constantinos is in charge.
+16:02
+OK, all right. OK, thank you so much. Good luck.
+16:09
+Good luck with that. Let me just get back to a more diverse so I can see hands up again with me.
+16:12
+Right. So I see two more hands up, Sophia, and should be to have a hand up.
+16:24
+Are they old hands, Sophia? I'm sorry, I'm shocked.
+16:29
+I do have a question. Can I just clarify?
+16:33
+Do you want us to do all of the exercises on the document by Thursday?
+16:37
+Oh, no, no. Do we do as many as you can? I mean, I, I think once you got the hang of it, you can skip over and go to the next question.
+16:41
+You can go back and do them later. Yeah, OK. But you have a look at the first few days do on Thursdays.
+16:47
+I'll go through, you know, sort of Delacroix's at the beginning.
+16:54
+I can just I'll just run through some of the things I think are the important things to take away.
+16:57
+Yeah. OK, we'll be covering some of those today anyway. But if ever I get get around to starting the lecture.
+17:00
+OK, ok. Syreeta, do you have a 15. I watched.
+17:06
+Oh that was you. I'm so sorry Sophia. Do you have a question. Yes.
+17:11
+This is sort of admen but how do you want us to address you in emails and personally.
+17:14
+Tony. Thank you. Yes, of course, I come up as Anthony, because that's the career that has been evident.
+17:20
+Tony is absolutely fine. No problem. All right, let's move on.
+17:27
+So if you're going to buy one book out by the Sun-Times and book, it's a great book.
+17:32
+Interestingly, Richard Byrd, who you can see on the second book there, he was my he taught me the programme when I was a student, believe it or not.
+17:35
+And he's still going. He's still above ground. Yeah, great guy.
+17:40
+I learnt a lot from him, particularly by Algorithm's, actually. Funny enough.
+17:44
+And there's a great book on real world. How could you want to do a will do which is apply Haskell to real world programming problems.
+17:48
+There's a nice book by these three guys which I recommend as well.
+17:54
+And I'm going get through this. There's loads of loads of other sources on the high school website.
+17:59
+I guess I mentioned to Paul who that one,
+18:06
+because it's quite a nice example of how to do multimedia processing animations and video media and stuff in a programming language like high school.
+18:08
+Right. So let's make a star. Otherwise, we're never going to get there.
+18:18
+So what we're going to do today is we're going to we're going to we're going to think it has been a little bit like a calculator.
+18:23
+We're familiar with using calculators.
+18:28
+So there's a thing called GFCI, which stands for the well, Glasgow, the glorious high school compiler, the interactive version thereof.
+18:29
+And you can follow it at once. You've got used to using the labs. One of my magic buttons, it will take us to GHC and that's what you'll see.
+18:37
+You'll see something like that. So as you go through the slides and you know,
+18:43
+you can you can just just what I what to recommend you did all of you do is if there's any
+18:48
+this sounds a bit weird to sit in front of and type stuff in and it'll all become clear.
+18:54
+The more the more you practise, the more you see, the more you experiment, the better you'll get, the more you'll understand if it is it.
+18:58
+And if you think, oh, I'll go and buy a book and read a book about programme, I become a good programme.
+19:04
+You'll learn nothing about programming, but you have to sit there and do it right so you can type expressions like these into GHC.
+19:07
+I don't know what I've just saw. You just make something up, you know, minus and yeah.
+19:17
+I think I'm seven. So that's, you know, I don't expect to be, it'll, it'll compute answers for you.
+19:22
+Just make things up as you go along. You might like to think how big it's Brackett's. It will come to that in just a minute.
+19:26
+Spacing is optional by the way, so you don't have to put spaces in.
+19:31
+But typically we put spaces either side of an operator just to make it nice to lay layout.
+19:34
+And I say, look, it just seems to make programmes look nicer and easier to understand if there's a space for the side of each operator.
+19:39
+So certainly don't do that. Don't do it. Space operator, no space either have no space or have one space.
+19:46
+Just be consistent. You know, the look and feel of a programming.
+19:53
+You know, when you stare at it, when you stare at the text is actually really important.
+19:57
+It's a really important skill to try and become good to observe good syntactic principles.
+20:00
+Good, good, good layout rules at least. OK, so what about for example, so there's a whole bunch of built in functions.
+20:06
+You'll discover the signs co-signs Tannen's hyperbolic variations as powering and so on.
+20:13
+One of the sine functions, S.A.M. I just show you this example because you'll see the application of the sine
+20:18
+function to twenty four point nine written two different ways and both are valid. Right?
+20:24
+So in mathematics, if you read a maths textbook pattern, let me just try out the magic virtual whiteboard to make sure that's working.
+20:28
+You can see the magic whiteboard, so enormous textbook,
+20:37
+you normally see an application for functions of X written like that, and that's perfectly valid, Haskell.
+20:40
+That is exactly the same as if I written that without the brackets and basically in general,
+20:44
+anything that anything anyway in Haskell is the same is the same as.
+20:50
+OK, so bear with me, I'm just. Out of a magic virtual white board, which has got to be short, that's not forgotten how to use that.
+20:57
+So that's exactly the same as I see. So so this round bracket notation is you say this is an example of what we see in
+21:05
+a minute is actually a shoe pulling mechanism and what the long and short of it,
+21:12
+there's no such thing as a one on one tuple of containing an item.
+21:16
+Is just the item. Right. So you can write the application of earthquakes either with or without the brackets.
+21:19
+It doesn't matter. It's just idiomatic in Haskell is that we don't put the brackets in.
+21:24
+So so it's preferred to write the application of sign, as it's highlighted here, not on not on the left.
+21:31
+It's not incorrect on the left. It's just that it's become apparent later on.
+21:37
+It is arguably a little bit misleading to put the brackets in. Right.
+21:41
+So you've got all the operators you'd expect additional application division signs caused by that.
+21:44
+There was a PARANG function which you'll get to learn about if you go through those unassessed exercises and so on.
+21:50
+All right. OK, so what about what did these.
+21:55
+I mentioned the word types before.
+21:59
+So in fact, if you go back there, you'll see that there are you can immediately say there's two types of numbers there on this whole numbers,
+22:01
+like two and three and four and things that look like real numbers, like twenty four point nine.
+22:08
+If that Haskell distinguishes those two, it distinguishes whole numbers from what are called floating point numbers, things like rails.
+22:13
+And so when you think of whole numbers, think just think for now int there's a thing called int,
+22:22
+which is the set of numbers that the language supports.
+22:28
+So if I come back to the whiteboard. You can think of it.
+22:34
+Being a set. Of values, things like zero and one and seven and minus 42.
+22:41
+And the important thing is, is a finite set because we use a finite amount of money to represent each end.
+22:48
+OK, so the whole idea of type's is fundamental to Haspel.
+22:54
+And I will argue with you that types are really what makes functional programming work.
+22:59
+There's a couple of hands up hands. You want to ask a question? I'm really sorry I haven't been to my and my bed.
+23:05
+OK, you. Do you have a question? I mean, yeah, I was wondering,
+23:14
+how do we get GHC if you go to the hospital at all and overexplain or when you were in the session at 4:00 or any of the lab sessions,
+23:20
+if you just put your hand up or male Constantinos or put best probably to put
+23:30
+something up on the on the Ed forum so that everybody can share the same answer.
+23:36
+Yeah. And they'll help you to show you how to install what I'm what I'm doing here.
+23:41
+By the way, I'm actually using the I have a very primitive version of JFC on this laptop.
+23:46
+What I actually do is I log into the college computers and I used to.
+23:52
+So what you're seeing me using here is actually on one of the servers in the labs.
+23:56
+So that's what I'd recommend you do, is to start with them.
+24:02
+And then later on, you can learn to build your own GHC implementation on your laptop.
+24:06
+OK, so I just put this question on that step. That's a great place to put it.
+24:11
+OK, OK, so it's there's a finite number of interest.
+24:17
+It turns out the smallest integer you can represent is minus that great big number beginning nine to ten.
+24:20
+And the biggest one is the other great big number, 92 90 to you everything.
+24:26
+Why is one in magnitude slightly different to the other? There's an eight on the involved in the 70s because you've got to represent zero somehow.
+24:30
+So you have to you have to borrow the zero from either the negative or the positive end of the spectrum.
+24:36
+OK, now there's another there's another type called integer. So so it's a finite and in fact on the on the lab machines, they're all 64 bit.
+24:41
+So you'll get the 64 bit representations shown here. There's another type, according to Jer, an integer is essentially unbounded int.
+24:49
+So what you'll learn very quickly about in this is that if I've got a number that there's
+25:00
+a powering function which you can learn about in the unassessed exercise sheets, which is that little up arrow thing.
+25:05
+So eight squares. Sixty four and eight times actually of 64.
+25:10
+Erm what you learn very quickly is that if I raise eight two quite a large Palek 127, that's a really very big number.
+25:14
+And if I were truly an int then this would just basically blow the machine up and you'd overflow your athletic capability capabilities.
+25:23
+The machine. Well it turns out that if I just type things as an integer, not an end, which means I can do that.
+25:29
+And that is considerably bigger than the larger 64 bit, you can represent it all, just work.
+25:37
+And the reason it worked is because it is taken there as an integer, not in it.
+25:42
+Now, it turns out we'll learn about this another time, but I can actually force eight to be an by doing that.
+25:46
+Yeah. Regardless of what I've written, just trust me, it's an end, not an integer.
+25:53
+And then I can just square it again. And of course I get 64 because if I write 127, say there, guess what, I get garbage.
+25:57
+Because the computer simply cannot cope with eight times, eight times, eight times eight hundred twenty seven times,
+26:06
+it's going to overflow the 64 bit representation and you end up with that with nonsense.
+26:11
+OK, so much more of that as you get to practise. So those are the whole numbers.
+26:16
+The things are a little of real numbers that they're split into two their floats and double.
+26:21
+So doubles have doubles at double precision just basically means you use twice as many bits and floats a single position.
+26:25
+But just basically think of them as floating point numbers. I think typically when I use doubles in the notes,
+26:33
+when I use when I use floating point real type numbers in the notes, I think I assume always assume that doubles.
+26:38
+I could be wrong. So and for the time being, just just think of them as being the same.
+26:44
+It's that one is just more accurate than the other. What I mean by accurate, by the way.
+26:48
+Well, let's let's have a think about what I mean by that.
+26:53
+So doubles any floating point number in a computer is represented by a sequence of one's nought.
+26:55
+So if I come back to the whiteboard, so let's imagine I've got a floating point number.
+27:02
+I don't know, supposing I've got one point two seven nine four anyway.
+27:08
+So this is represented by a sequence of bonds and notes and I have absolutely no idea.
+27:12
+I could work it out socially and there might be a sequence of bonds and notes that
+27:17
+goes like that and that might just correspond to one point seventy nine for the data,
+27:20
+it turns out. So if I draw a real line here of fact. So there's zero in the middle.
+27:25
+So over here I've got the smallest floating point number I can represent, it was on the previous slide under the biggest one.
+27:31
+So this number here might correspond to this thing just here.
+27:39
+Now, it turns out there's this whole number of it now.
+27:44
+Turns out the smallest change I can make to that number is to replace that zero with one.
+27:48
+If I do that, it might be I don't know, it might be that corresponds to that number there.
+27:52
+So the first thing you learn about floating point arithmetic on a computer is
+28:00
+that there's no way of representing any of the numbers in between here and here.
+28:04
+In other words, floating point arithmetic is approximate because it can only represent a finite number of values on the real line.
+28:07
+So you think, oh, my God, that's horrifying.
+28:14
+Yeah, every single computer simulation of colliding galaxies and aircraft wings and air flow through car engines.
+28:16
+So they're all wrong because they all use floating point of arithmetic.
+28:24
+But arithmetic is approximate. Okay. So you just have to learn to live with it and some people dedicate their lives to worrying
+28:29
+about this problem and thinking about how to make it better than it currently is.
+28:37
+Joshua, you have a question. Yes, I just wanted to know just Haskell support fixed size allocation, so, for instance,
+28:41
+changing how big the Muntasser is and things like that, not directly in high school.
+28:50
+High school just defaults to there's probably a library somewhere that does it.
+28:55
+I don't know. Okay. Yeah, I just got you. The first thing you learn about language is go go look at the lives of the people.
+28:58
+There's a huge number of libraries in high school for high school programmers and pretty much anything.
+29:06
+Well, I wonder if anybody in the library to do some extreme matching.
+29:11
+Yeah, of course. There's probably six or seven libraries and you don't find the one that's best for you.
+29:16
+So there might be well might well be one. Otherwise, no.
+29:20
+The certainly the base types just defaults to the I trebly default representation, if you're familiar with that.
+29:22
+Good. Right, next slide, so back in a second.
+29:30
+Sorry to interrupt. You're talking about a term called Floating Point Sematic, is that correct?
+29:35
+That's floating point. What I mean by that is I mean arithmetic using floats and doubles.
+29:44
+You know, for example, if I write, you know, one point three, four times,
+29:49
+eight point seven nine, that's an example of floating point with a very everything happening.
+29:53
+Now, what's interesting, actually, you can't tell me just by looking at what it thinks,
+29:59
+does he think the one point three, four is a double or a float or something else?
+30:02
+It turns out he thinks is a double, but there's nothing to give you that.
+30:07
+So the Haskell has these things called defaulting rules when it sees a number.
+30:09
+If you don't tell us anything like above, I said, oh, this really is an end.
+30:13
+Not an integer, so you can say, I really do want to win it if you just type eight, he thinks, oh well, I've got to make a decision.
+30:17
+Is eight an end or an integer or some other. So the whole number of things, right?
+30:23
+Yeah, it's a number. Yeah, it's a number. Come to that in a minute. It's a data type of.
+30:27
+All right, so bracketing is important to understand that, first of all,
+30:34
+how Haskell implicitly Brackett's things and to learn that if that isn't the bracketing you want, you've got to put the brackets in yourself.
+30:40
+So Haskell uses a number of the basically the normal rules of arithmetic, which are actually the sort of ones you'd be familiar with.
+30:48
+So, for example, you know, that plus has got if I come back to the virtual whiteboard, you know that plus has got lower precedent than multiplication.
+30:55
+So if I say four plus two times six, we know from the just the conventions of mathematics that that is sort of bracketed like that.
+31:03
+So where's my bracket? There it is. And so when we come back to the example here, you'll see, oh, two minus three.
+31:12
+So and the other thing is in Haskell, is that the most important of the tightest to about binding,
+31:20
+the tightest binding is when you say a prefix function application like sine.
+31:26
+So by the way, prefix means up with the name of the function before the argument.
+31:30
+Right. Whereas at infix function is where I put the symbol between its two arguments like that multiplication.
+31:35
+OK, so the first rule is that prefix function application binds more tightly than anything else.
+31:43
+So there's all automatic when you see that, you know that it's going to be evaluated as if there was a bracket in there.
+31:48
+And what you've got left are just minus multiplication divisions and so on.
+31:55
+And there are other conventions that language uses.
+31:59
+So, for example, we know that multiplication division five presidents have higher in importance, if you like, the addition of multiplication.
+32:01
+So that explains why the bracket thing happens that way.
+32:08
+And another convention is that is the multiplication division of what's called left associative.
+32:11
+So what does that mean if I come back to the. Go back to my virtual whiteboard, so if I've got a.
+32:18
+Be bop. See, there's two ways I can bracket that, I can bracket it that way and then that way, that's called left associative.
+32:29
+Or I can bracket it this way and depending on the operator. So, for example, if the operators multiplication, that's exactly the way brackets.
+32:39
+So what about the other way to do it that way? That's called right associative.
+32:46
+So there may be two different operators in here. And depending on the associativity defence, how they get bracket's, so operators are properties,
+32:52
+precedent's and associativity and part of the purpose of the first set of exercises to
+33:00
+get you to play with these and to learn what the precedences and sensitivities are.
+33:04
+Adaiah, you've got to question. Yes, so I was just wondering, do you ever get any postfix operations in high school?
+33:09
+Oh, no, that's an interesting one.
+33:19
+So it's another programming languages. You see postfix, you see things called districts where the operators split into two bits with three arguments.
+33:23
+You know, a topic is something, something, something.
+33:32
+Um, so, no, it's no, there are no perspectives, but there are some will come back and talk about when they talk about.
+33:37
+I'll show you how to define your own operations actually in a few lectures time and you'll see some examples of.
+33:43
+From particular left and right, so how you specified. Good question.
+33:49
+How could it so could you explain the infix and prefix one with. Sure, so.
+33:54
+Let's go back to the slided, perhaps this one here,
+34:02
+so Signe is an example of a Prefect's function because I put the name of the function before the argument here.
+34:05
+Whereas here, if I go to let's go to see.
+34:13
+If I write that the the function if because an operator, when the function symbol appears in between its two arguments like this multiplication here,
+34:19
+we call it in fixed function and in fixed function operators, they're synonymous. Yeah.
+34:29
+So infix means you put in between the two arguments, the three in the six, whereas prefix means you put it before the argument.
+34:34
+OK, thank you so much. You're welcome.
+34:42
+That's ethics function, always take two characters, one on the left and long right in fixed functions, always take two parameters.
+34:46
+That's right. Yes, exactly right. There's one there's a letter with the word document.
+34:55
+Hamzeh, you have a hand up as an urban renewal. This is a new one.
+35:01
+I was wondering if you could repeat the explanation for why floats are approximate with the bindery example?
+35:05
+Because I didn't really understand that. And so let's just quickly do that.
+35:12
+What I said was that all numbers in a computer represent well.
+35:18
+When he's talking about ints and doubles and floats, they're represented using a finite number of bits.
+35:25
+So, for example, 64 or 32 or 128 year.
+35:30
+So when you when you when you have any floating point number, let's talk about doubles.
+35:34
+So a double will be represented by a sequence of ones and noughts.
+35:40
+So if you've not if you've not done by any arithmetic before, don't worry, because you'll just be doing it next week with aplomb.
+35:44
+So so you might have a floating point number whose representation of something like this.
+35:49
+I'm just making up a sequence of numbers, and what I drew just now was the real line.
+35:57
+So I said somewhere in the middle of the line,
+36:02
+you've got the floating point numbers like zero point zero here and somewhere here I've got what did I say was
+36:03
+the smallest double double something to the power of minus 308 or something through minus something to 308.
+36:08
+And at this end, a similar number plus ten to this really.
+36:15
+The point is that any number like that corresponds to a number on the rail line.
+36:20
+So it might correspond to this number here. For example, it might correspond to I'm making this up.
+36:24
+One hundred and forty six point two nine one seven three.
+36:32
+Yeah. Now, the smallest change I can make to that number to make it into a different number, it turns out,
+36:36
+is to replace that zero with the one where there's a one to replace the one with the zero, and that would be might represent.
+36:42
+So I predicted that that might represent this number.
+36:50
+For example, that might represent one hundred forty six point two nine one eight two, for example, I'm just making this up.
+36:55
+The point being that there's no way of representing the numbers in between those two.
+37:05
+Because the only way I could do that is to have more bits and I don't have any more bits because I've used all 128 of them up.
+37:09
+Yeah, so tiny change is the smallest change I can make to the representation
+37:15
+corresponds to a jump in the in the in the numbers represented on the rail line.
+37:20
+Hence my statement, you know,
+37:25
+that all thirteen point arithmetic is approximate because if if the number I actually want to compute is that one in there, I can't.
+37:27
+No way to represent. Is that clear? Is that because we have a finite number of exactly.
+37:34
+A finite number of bits? We do not only represent a finite number of life flows, we cannot have something in between to exact state.
+37:41
+Exactly. Thank you. You're welcome. OK, so let's move on.
+37:52
+So. So that's practising so you can learn.
+37:59
+You'll learn in your own time about practising and Prestons and associativity and how it all works by going through those exercises.
+38:02
+So here's a really nice thing you can do and you can name things.
+38:08
+So I thought, let's do this in GHC rather than reading through the slides, which can be boring.
+38:12
+So you can know anything. So here's an example. I say let X equal. What's your favourite number today?
+38:17
+If I can type correctly, let's make X nine and say, what's X?
+38:23
+I was nine out of 10 so you can you can play these games on the in in the GHC
+38:27
+command line and it turns out you don't need to let us because quite forgiving.
+38:33
+If you just say yes, I assume you mean that actually kill nine but you can type an expression in like let and this is the whole point.
+38:39
+So here's an expression. Let X equal nine and then you say in and now here you can type any expression you want.
+38:47
+Oh, that's supposed to be an X, no, let's leave it as a C, just to teach you the names that really matter, you have to choose your own.
+38:55
+So let's see, Conine, in any expression here. I want like a hundred sixty seven hundred sixty seven.
+39:01
+Or it could be some function of C like on six A minus C one hundred fifty eight year.
+39:06
+So that that thing is going to let expression.
+39:12
+So I can name anything of any type, there's no way I can name I can name floating point numbers so I can say let's let X one point nine in X squared,
+39:16
+for example, are not pops something?
+39:26
+Now, here's the great thing and another thing you learn very quickly about how controversial Programme nine functions.
+39:32
+So what was the example on the slide? I can say leg was cost. Oh, my God, this is terrifying.
+39:39
+OK, well, I said is G is just another name for the cost function.
+39:45
+So rather than rising because of 89, for example, I could just write G of 89.
+39:48
+He says that want it was gee, I wonder what changes the cost function and just to reinforce the points about brackets,
+39:53
+you know, destroy the brackets are optional. You can be quite that if you want. It's just not idiomatic Haskell, but it does mean the same thing.
+39:59
+OK, so this is this this is your first introduction to what's called higher order functions.
+40:05
+So the idea that, you know,
+40:12
+numbers of first class things and floating point numbers are first class things and it turns out the functions are also first class.
+40:14
+And you can you know,
+40:20
+there are many things you can do with functions that you you can you can do with just the same way you can even pass the amount of other functions.
+40:21
+Obviously, you can't multiply. You can't multiply a function by six.
+40:27
+That wouldn't make sense.
+40:31
+And it gives you some ghastly message saying you've done something wrong, that the only thing you can do with the function is apply.
+40:33
+OK, right. So back to their. So that I think explains that you can choose any names you want.
+40:39
+And another thing you're going to learn very quickly about programming is choosing names is really hard.
+40:45
+And over the next 20 weeks of doing weekly tutorial exercises and getting the material,
+40:50
+you'll reinforce good naming conventions and good naming principles.
+40:56
+And people write articles about this stuff.
+41:02
+And there's nothing worse than trying to read a programme where someone's just chosen random names makes the programme impossible to read.
+41:04
+OK, Joshua, you got another question. Yes, so with this in operator to start discard the variable from memory.
+41:11
+Does it discard the variable so. So basically, what what's the point in the end, operator, because it doesn't just replace it in the expression,
+41:21
+I'm assuming it must define just the piece of syntax to say where the where the
+41:31
+definition like this thing where this ends and where the where the resultant begins.
+41:35
+Think of it that way, OK? It just makes it easier to pass the programme.
+41:39
+I think it's probably the longest if I just let it let F equals twenty four point nine at times
+41:43
+cause and without the N oh have I made a mistake if I missed a minus sign out minus F or something.
+41:48
+And so we will know.
+41:55
+So I guess it just helps, it helps tip.
+41:58
+Typically what you find the programming languages is that there is some syntax floating around somewhere which helps the other,
+42:01
+helps the programmer to express what they mean or it helps the compiler to parse the programme.
+42:07
+Nixon. Your next. When you say functions are first class, like, what does that mean and are there things in school that aren't first class?
+42:13
+Well, that's a good question. No, I'm that's the lovely thing about it.
+42:28
+So what can I do? Maybe this will make more sense. This will make more sense next in the next lecture.
+42:32
+But one thing I can do with. Well, I thought we've seen it already, and he said so so, you know, three, as I say, numbers of first class things.
+42:37
+Why is that? Well, because I can for example, I can apply a function to them. Yeah.
+42:46
+So that gives me that. Well, if I happen to have a function.
+42:50
+So what was what did I say.
+42:56
+What was I said she was caused by the way every time you closed down ghc you're going to be added to it forgets all the bindings of again.
+42:57
+So I didn't need to do that but I just said that was cause.
+43:05
+Yeah. So if I'm going to function, if the question is can I give it G if what I said is true function the first class then I should be
+43:09
+able to give G to another function so long as the function F is expecting a function as his argument.
+43:16
+It turns out that's exactly what you can do. Of course, it is making sense at the moment because I haven't defined what is.
+43:22
+So there's a bit of a delay on your thinking, because I don't know what it is,
+43:29
+but but if you did happen to have a function that was expecting a function which takes doubles the doubles, then it would all work beautifully.
+43:34
+That's what I mean by first class.
+43:40
+I don't want to get bogged down with a pregnancy because it's way beyond where we need to be an actually just just just dropping a hint unsolved.
+43:43
+So can you got to question. I can you hear me?
+43:51
+Yes, so you said the spacing and the train operators, so you say one plus one,
+43:55
+you can you don't need the space between one and the plus and the plus and the second one that also the case for cosine and sine.
+44:03
+Right, so maybe the question is, I right cause of seven to eight say it gives me that now if I missed the space out,
+44:15
+then he thinks there's a function called Cossette somewhere.
+44:25
+So the spacing is really important because, in fact, what you'll learn is that spacing means function application actually.
+44:28
+So when you see something in space, something, it means the application will function to something.
+44:36
+That's really what it always means.
+44:40
+Of course, I guess the exception is if I got if I put my weight in brackets, then it kind of works out that it's it's the same as cold space Speyside.
+44:43
+All right. So when I write something like that and it's just, you know,
+44:52
+people have different styles and different ways of writing things out and I say pick one and stick with it.
+44:58
+And I think most people like to see spaces around Operators' you just makes the programme look nicer.
+45:03
+So I think you should do that in your Yuko's will encourage you to do that.
+45:08
+So it was that you that was you saw. Yeah, that was me. I got a question.
+45:13
+OK, you hear me OK? All right, so see, when we go back to that in operator,
+45:20
+can I can I understand the operator as a way to simplify the simple fact, multiple lines of of of code into one single line.
+45:26
+I mean, yeah, I mean, so you can see. So I can say that I can do absolutely anything in here, any expression I want, huh.
+45:39
+And and I can say, OK, I'm having now, having defined what X is can be absolutely anything I say what I'm going to do with the X.
+45:48
+So I just decided I was going to do with the X is I'm going to take the X and I'm going to do something
+45:54
+with it and then do something else with it or whatever I can refer to as many times as I want.
+45:58
+Yeah. Or you can just play into multiple different lines of what you will come to worry about laying up programme.
+46:05
+This is just these are simple expressions which you can type into the command line.
+46:12
+So this is kind of not an issue for today. We'll come back to that. OK, you can shorten these lines within.
+46:15
+Oh, there's lots of ways we can rewrite the same thing differently.
+46:21
+I will come across. OK, ok. OK, we're going have a break in a minute because I think that's enough talking for just going to try to get to.
+46:25
+Let's just try and do the next couple. So we've seen based the basic type in it and we've seen double and float and I've
+46:34
+shown you integer just by way of an example are there are other base types as well.
+46:42
+It turns out that the base taqwacore, if I come back to the magic whiteboard.
+46:46
+So Chas just is the set of all printable characters. So what do we do with principal characters?
+46:50
+Will we typically turn them into strings and we print them on the screen with the right into a file?
+46:55
+So when you say a message that comes up on your computer, that's a sequence of individual characters being printed by your programme.
+46:59
+So things like the letter A is a character and the letter semicolon is also a character.
+47:04
+It turns out also that the letter representing the digit zero is also a character that sort of like one of the two things, it looks a bit like a.
+47:11
+So there is a distinction here. You've got to understand when I talk about the character.
+47:22
+Being the principle representation of the digit, too, I do not mean the number two,
+47:27
+that's a different type, that's an end, say, but some sort of number.
+47:31
+But if I put quotes around it, it's a your principle.
+47:36
+So back to this. We got Charles. And in principle, there's another set called Bull Bulls.
+47:42
+Really like about to be magic whiteboard bull is really simple.
+47:48
+It's a set with just two things false. True, that's it, nothing else.
+47:54
+And in fact, to say me writing out full control over the place,
+48:02
+I'll often just use F.A.A. if you see me using F.A., I just mean, it's just me being lazy.
+48:04
+I mean, concentrate. So it's really simple. There are only two values of type two.
+48:09
+This is the language we use. There are only two values of type one is called monistrol.
+48:15
+And turning that round, if you see true in a programme anywhere and you think, oh, what's the type of that?
+48:20
+The answer is it's a bowl. But if you see false, it's a bowl.
+48:25
+And if you see 13, it's not a bowl, it's some sort of numbers split.
+48:30
+Say Jingyan. You have a question.
+48:34
+Yeah, you saw something like the basic type. So it's like definition.
+48:39
+I just, I mean, I mean it's built into the language.
+48:45
+But you know, when you fire up the compar when in fact actually are those, those types are already in existence.
+48:48
+Later on we'll see that we can define our own types. So these are the ones that are lovingly built in for us, so I don't have to worry,
+48:53
+they're just there and associated with those types are all sorts of functions.
+49:01
+We're operating on those types of sports. And what about your integrity? Yeah, it's a built in.
+49:05
+So it's built in double float integer Charbel.
+49:11
+They're all they're all just there. So we don't have to worry about finding them.
+49:15
+They're all built in, if you like, to the language. OK, ok, good.
+49:19
+Right. So the next thing is let's talk about Bill just for a minute.
+49:25
+So once we got bolls and it turns out with pretty much everyone, with all types, there are functions that operate on board.
+49:28
+So we know that plus operates on numbers three plus seven is 10.
+49:35
+And what of what functions or what operators work with tools.
+49:39
+So there are a bunch of them. And the three you're going to most commonly in programming.
+49:44
+You your high school just they are not and I know and you'll see other ones in your logic,
+49:51
+of course, in fact, which I think you probably started that this morning,
+49:59
+you will come across things like Imprecation and what else would you do, I guess is exclusive,
+50:02
+because I know that there are other operations that will say, let's just go back to the magic.
+50:08
+What? If you see a function like not syntactically, we write something like not be as big as a bull, you know, for example, but not true.
+50:12
+And what does it mean? So when we say it's about meaning in programming language, we use the words semantics.
+50:27
+What is the semantics of how do I try to explain to you what not should do, given a boolean argument?
+50:33
+So you'll discover in your logic course, I'm sort of probably pre-empting that a little bit.
+50:39
+The one way to do it is using a truth table. So if I've got some some boolean B.
+50:43
+A little table, so I know the bullying can either be false or true and nothing else.
+50:49
+So the table tells me what to do with it. So not as we're used to it after the false to a true in the truth or false.
+50:55
+It just flips the flips the the pulling back to the other and so on.
+51:01
+OK, so you think, OK, that's not simple.
+51:06
+So for example, if you go to this example on the slide and not if you're taught, not falls into it, let's just do it.
+51:10
+Not false. You get true. And so if I say not true, and that's just the built-In semantics of not specified by the truth,
+51:18
+they were just doing it stuff, strutting its stuff, if you like. OK, now there are other operators, so there's one called and there's one Cawdor.
+51:27
+Let's go back to the magic whiteboard and see what they do. So not these operate on two arguments.
+51:36
+So supposing I got an A in a B. And because there are two arguments and each can be false or true, there are four possibilities or write them all out.
+51:42
+If you're not seeing this before, you'll soon remember, I'm sure, if you have seen it before.
+51:56
+What about Andy? And what about AOB?
+51:59
+This is the way I read and this is this is the end and this is all right.
+52:06
+So the rules are as follows and B is true only if both are true.
+52:10
+In all other cases, the answer is false. And AOB is true of either a true.
+52:16
+That is only false if they're both false. So you just get to memorise those will rapidly become very familiar to you.
+52:22
+So if you go back to the slides and look at the examples, you can type these in, you can probably just cut and paste.
+52:33
+This is a more magical thing here.
+52:38
+No comment on that, sorry terribly.
+52:46
+Oh, I see what's happened. I think it's the.
+52:52
+Oh, yes, yes, I discovered the other day the control key on my laptop is broken, so I get so much broken it won't even work with me.
+52:57
+Anyway, let's wait. Let's try some examples of what's true types of examples.
+53:07
+And you can say true and false. Is that.
+53:11
+And what about true and not true?
+53:15
+So what do you read? This is a piece of English. It is like a nonsense, doesn't it? You say true. Not true.
+53:19
+That's exactly what computers don't care. They just follow the rules. Right. So not true is false, true and false as false.
+53:23
+And up pops the false. So go away and play with these in your spare time.
+53:29
+You'll soon become familiar with. All right, so you can talk that bottom one in your leisure, OK, so that those are functions, consumables.
+53:34
+Oh, Michelle, you have a question. Yeah, I was just wondering, is there any order to the way Boolean operations are applied?
+53:46
+Is there any order if you have, like a long line,
+53:55
+and that's a good point and actually part of the answer sheets are designed to sort of you learn that for yourself.
+54:00
+So in just the same way that multiplication is more important than addition, it gets done first, given the choice.
+54:06
+The same applies to and and is deemed to be as high a precedence is more important.
+54:13
+That's more important. It has higher precedence than law. Yeah.
+54:18
+So the question is, given an expression with lots of operators in the middle brackets using those precedents,
+54:22
+precedents, rules, and if it can't decide if you just get A or B or C or D, just do it left associative, it turns out.
+54:27
+But you'll learn these things by playing with those on the set. OK, then.
+54:35
+So those are functions for consuming both. What about functions but generating them when it turns out there's a whole bunch of things,
+54:39
+like a quality, completely familiar things from mathematics. So is one equal to the only thing in maths?
+54:45
+I guess you might like that, you know, is one equal nine. So well, if I've got a maths textbook and I say, oh, such and such and such as true,
+54:51
+if X equals Y and mathematically that's the way you write it in a in a in high school, like many other languages, you have to distinguish.
+54:59
+That equals which turns out we thought we've seen it, haven't we?
+55:08
+This equals which defines something. This is let X be defined to be eight as opposed to the question, is X equal to eight.
+55:11
+All right. So that's why we used to equal the distinguished definition from equality.
+55:21
+So if I said let X be eight and I then ask, is X equal to eight, that is now a boolean expression,
+55:26
+which is generally true or false in this case, because the two of the same X is eight and going to give me true.
+55:33
+And you can do things like that so he can say is a bigger than nine false, you know, is nine less than or equal to nine?
+55:42
+What's the answer there? But it's true, of course. I mean, if I say is nothing less than nine ounces false and so on,
+55:52
+so there's a whole bunch of operators' you can very quickly get used to and you can start bringing them together, like in this example here.
+56:00
+Why my copy paste as well, let me just try it one more time. Oh, OK, it's working now.
+56:09
+All right, so if I do if I do cut and paste the Gotcher is this is this is nothing to do with has to do with cutting and pasting.
+56:18
+So it replaces the current single quote with a slightly different one, which Haskell doesn't understand.
+56:24
+So if I go loving, lovingly replacing them, then it does indeed correspond to the slides.
+56:30
+Just just a little gotcha when you are cutting and pasting stuff the. OK, all right, so let's get to the next slide and we'll have a little pause,
+56:35
+so so those are functions which those infix operations to generate boom know.
+56:47
+It turns out there are some prefix functions which also generate balls.
+56:54
+So let's think. Or even his. Did you what do they do? Let's go and actually play with them.
+56:58
+So even says is the number that you give me even a rod, in which case if you give me an even number, it's true.
+57:02
+If you give me an odd number, it's false. So similarly, I just turned around the other way, then that would just be so it's true.
+57:08
+And what about what else is digit? Was it was not.
+57:17
+Is the know. Oh right. Little another little gotcha here.
+57:22
+And you see this thing here. These aren't I'm just going to show you how to use digit.
+57:27
+It turns out that this digit isn't actually built into the prelude, which is the thing you get when you fire up GHC.
+57:34
+It's actually still somewhere else. And so it's just one module.
+57:40
+There is a module called DataDot Char. And if I'm going to use the if I want to use instead you have to import the data Dorchak module.
+57:45
+So this Garci piece of syntax actually does that. And so in fact if I just go back to my magic and I can here.
+57:54
+So now I can use this digit whereas I couldn't use it before. So what's the type of digit?
+58:02
+Let's go back to the example I gave so I'd give it a character and it's going to give me back true or false,
+58:08
+depending on where the character is, a digital technology character.
+58:15
+So if I give it a digit cash, like zero. Oh, yes, it's a digit.
+58:19
+You see what I mean? That's not the number zero. That's the character digit zero.
+58:23
+So if I took the if I took the the quotes away and says is zero digit, it says, oh, no, that's broken.
+58:30
+You can't do that because zero is not a character is digit expects a character and it will generate true or false.
+58:38
+And what was the other one. Just what would permit.
+58:46
+Izapa is upper case if you're doing text processing, these are really useful functions, so if Izapa.
+58:50
+Charles asked me whether a character was uppercase, lowercase,
+58:59
+so that's true because it is not the case if I give it a lowercase, I suppose, Hamzy question.
+59:02
+How were you able to use comparison operators with strings?
+59:13
+Later, towards the end of the session, we'll show you how to do that.
+59:18
+OK, thank you. But what I think is probably a bit of a pause in a minute.
+59:22
+Let's just say let's have a two minute pause, literally two minutes.
+59:28
+Just going to stretch your legs and get some fresh air, open the window and come back.
+59:32
+Alert and Bushy-tailed, I'm just going to turn everything off while I do the same thing myself.
+59:38
+Yeah, that's better, right? So let's move on.
+59:43
+So conditional. So when we write programmes, we often look at something and make a decision as to what to do next based upon what we're looking,
+59:49
+for example, is the number is going to meet people with MAKE.
+59:57
+For example, I might want to look at someone's salary, so I give this person a pay rise.
+1:00:03
+Well, if they're earning less than twenty thousand pounds a year, I'll give them a pay raise. So I make I make a judgement.
+1:00:07
+And then using a thing called a conditional some sort of some form of conditional.
+1:00:12
+For example, if they're earning less than 20000, I'm not getting the 2000 pay rise.
+1:00:16
+Otherwise I won't you know, these sort of things think this is a comment.
+1:00:19
+So in Haskell, there's a conditional expression's use this if then else syntax we've seen let something equal,
+1:00:22
+something in something that's a piece of syntax for defining but naming expressions and using those named expressions.
+1:00:30
+Conditional expressions are expressions for doing one of two things depending upon some condition.
+1:00:37
+So in the slide here, you see this thing now thing is called a predicate.
+1:00:45
+And the idea behind that is that you evaluate that first, and if it's true,
+1:00:51
+then the result of the conditional expression is the value of Q So Q is another expression.
+1:00:55
+And if it's false, it's ah. So you either get Q or are depending upon the value of P and P can only be true or false.
+1:00:59
+It can't be anything else. So here's an example.
+1:01:05
+And again, you would never write this, of course, but if you had something like that.
+1:01:11
+What's going on there?
+1:01:21
+Well, the predicate here is false, and the rule is that if if p then he was OK, it's false, then overturn the are where they are.
+1:01:22
+And that goes to and if I change the falls into a true, then guess what, I actually get the other one.
+1:01:29
+Of course you never write this. The predicate would be something generated somewhere else in the programme.
+1:01:33
+We, we wouldn't know in advance whether it was true or false. We make that decision dynamically at runtime I guess.
+1:01:37
+All right. So here's another example.
+1:01:46
+Now, I've chosen this example because I want you to look at that and there's something a bit, but there's a bit of a howler in here.
+1:01:50
+It's actually perfectly OK. I'll demonstrate. It's perfectly OK by going to the.
+1:01:56
+Come on, let's go. I've got this problem in my eyes just so I can should find a way to fix this.
+1:02:00
+I just discovered this morning that this plane would come first.
+1:02:11
+OK, so that's that's not consistent with the slide.
+1:02:15
+Now, the one thing I want to draw your attention to is so so the point about this is that the predicate could be absolutely any expression you want.
+1:02:18
+So long as it delivers true or false, in another words, it's the type that matters, not the expression used to.
+1:02:27
+Construct the construct, the object of that time, so absolutely any expression is the type that matters.
+1:02:36
+And likewise what the thing. What we discovered with letter is the thing after the end could be absolutely anything, right?
+1:02:41
+And we don't care what his type is because they let X equal something in something.
+1:02:51
+I don't care what the something is on the right hand side, so long as all the typed line up.
+1:02:54
+Now, in this case, I've got a little expression on the results and the result of the expression is this conditional if p then true as false,
+1:03:01
+and that's really rather horrid, can somebody think of a much nicer way of writing a P than was false?
+1:03:10
+Matthew. But is just right in the end, I can do even simpler than that.
+1:03:16
+So hang on. What's going on here? OK, so I wrote that, in fact, I'll do I'll try this.
+1:03:28
+What you do, if I do hope you get an error, it's the syntax are actually, Max, you have to go.
+1:03:34
+So I can help. Can you just sort of pay? If I don't know if.
+1:03:43
+And so I would say, if that's wise, that's right, yeah, so if you're right,
+1:03:52
+if P then true or just watch enough just to execute this, that's exactly the same as just writing P.
+1:03:59
+Why is that? Because, well, supposing P is true, the answer is or given it p then quotes are the P is true.
+1:04:07
+I'll give you Q Not true and it is false. I'll give you all that's false.
+1:04:12
+It's the same. So P is exactly the same as the P then.
+1:04:16
+True or false.
+1:04:20
+No, I absolutely guarantee you a large proportion of you will write something like this at some point and you will submit it for mocking by your Yuta.
+1:04:21
+And if I come back to the virtual whiteboard, if I can do this.
+1:04:30
+You write something like P, then, true or else false, there are other ways of committing the same cardinal sin,
+1:04:35
+and if I can learn how to do my colours on this and try that, if you wrote that this will happen when you get your programme back.
+1:04:42
+Well, something like this. But you'll get that and then you'll get minus 10000 marks,
+1:04:52
+because it is the number one cardinal sin as a in the programme, by the way, only to exercise the marked at 10.
+1:05:00
+So you might end up with a very large negative. The point is, don't do it right.
+1:05:06
+The point is just right, just right now,
+1:05:11
+a lot of you will do this and you won't realise you'll forget and you'll go sleep
+1:05:17
+and you'll see the minus 10000 or the minus 5000 sprinkled all over your script.
+1:05:22
+It's just part of the learning process. Joshua.
+1:05:26
+Yes, so you are talking about how that's the exact same, does high school not have a have any non types or undefined types done?
+1:05:30
+So you can, for instance, you define a variable to be a boolean and then that boolean be a null, for instance.
+1:05:39
+Yeah, we're going to we're going to be talking a lot more about exactly that later on, but not today.
+1:05:47
+And we're kind of no action. Yeah.
+1:05:52
+We'll come back to that another time. And not not that I. Catherine, you got a call maybe. Yeah, yeah, later, not today, Catherine.
+1:05:56
+Yes. So when you're comparing two characters, does it compare the ASCII code?
+1:06:03
+No, that's a really good question. Yes. So that's a great question.
+1:06:09
+If I'm comparing two characters, for example, I'm saying is a bigger than Z, you think, oh, well, how do I know whether that's true or false?
+1:06:12
+Well, actually, it's just going to use the standard dictionary ordering.
+1:06:19
+And of course, the quick way to do that is convert the eye into its what's called its ordinal representation.
+1:06:21
+So every character has a numerical code behind the scenes.
+1:06:26
+So Haskell simply uses that numerical code. And in fact, there's a function.
+1:06:30
+You discover this is a function called Now that I've got DataDot Char.
+1:06:34
+And if you come across the order function in another, you know, the programming language.
+1:06:40
+So every character has an ordinary value and the order function tells you what the secret encoding is.
+1:06:45
+And that's in fact it's ASCII or it's Unicode encoding.
+1:06:50
+It's an international standard encoding for characters and it's good to have standards in this case.
+1:06:52
+So what you're saying is a bigger than Z in that case, it's just asking whether the ordinal value of those two.
+1:06:58
+One is the larger the two if you're not asking a question.
+1:07:05
+Plus, you can just remember to bring your microphones because it's a bit disturbing for everybody else.
+1:07:10
+OK, you've got a question. Um, yeah, I mean, I'm just a bit confused as to what the function is doing here like that, Pickwell.
+1:07:16
+A great man said, and I quote, I don't care what the actual statement is doing, right?
+1:07:28
+So it's somehow muted because I meet I don't understand it muted.
+1:07:34
+It's emitted all, including myself. So I've been talking without. So what I said was, if you type letter X equals X plus one, it's completely clear.
+1:07:38
+The answer is ten years. Because this is not the actual substance you can explain, it's just substitution.
+1:07:45
+Exactly. So if I say pick it and say that's false, is it? If I said let people false, it's exactly the same stuff.
+1:07:52
+I've written this. It's a deft example. Oh, OK.
+1:07:57
+OK, just something like fly over the first and.
+1:08:03
+Yeah. It's sort of sort of like they said, they said these are mathematical variables.
+1:08:09
+So once I said X equals eight, X is eight forevermore. I can never change it.
+1:08:13
+We'll come back to that next time. Right, so I've talked about types, and it's actually quite a good opportunity now just to just as good,
+1:08:17
+not just to say a little bit more about types of do you have a burning question?
+1:08:31
+No, I just realised it's an old hand, is it? Yeah, yeah.
+1:08:39
+So when we say let's pick six in pee, that's a plus four with it.
+1:08:44
+Save the value six when we vote next time.
+1:08:52
+Or will it? If you say next Feagles. Are people sick people six in plus four.
+1:08:55
+So this is not a programme we're doing this. Come on. Is it easy to explain the context of a programme?
+1:09:05
+Because this comes down to a thing called scope for the in a nutshell, from this point on, every single time you say pee, you mean six.
+1:09:10
+OK, the you can never change, as I was P, I was a.
+1:09:23
+So that's why I was very confused, I think was because 19, for example,
+1:09:30
+if I say what's nineteen was page nineteen ninety nine never changes and I can read plus one as 20, but he is still 19.
+1:09:36
+So it's a mathematical concept of definition, not a sort of classical programming language reassignment, then I can't reassign the value.
+1:09:45
+Once it's got a value, that value is fixed forever, more so it's like a constant, more like a variable.
+1:09:55
+It becomes a constant. That's a good way of putting it. Exactly. Yeah. Great.
+1:10:00
+OK, let's move on. So it's a good time just to pause and think about Type's now.
+1:10:05
+So if I come back to so there's a thing you could say, let's just do it.
+1:10:11
+If I come back here, I can say, what is the type of let's pick something simple, like, oh, it's a ball.
+1:10:15
+You're not going abbreviates. Taiping is a bit turp just you can abbreviate that tells you the same thing.
+1:10:22
+So currently, you know, if you think, oh, what about the top of that thing,
+1:10:29
+it's just you can ask GHC will tell you she's completely brilliant because if
+1:10:32
+you give us an expression it will work out the type for you automatically.
+1:10:35
+Well, most of the time, we'll see some examples where it doesn't quite get it right, but that's that's the idea.
+1:10:39
+What's the type of the character was the type of that syntax?
+1:10:44
+That's a character. Hmm. Let me think.
+1:10:50
+Okay. Well, what's the type of aid that should be in, right?
+1:10:54
+Well, not quite, actually. So this introduces quite a rich idea in the Haskell language type classes.
+1:10:58
+And I don't have time to talk about is not the time to talk about thought processes.
+1:11:07
+I'm just going to just going to just show just introduce you to them. So you see the syntax.
+1:11:10
+When you see this sort of funny double arrow thing in here was my cousin.
+1:11:14
+When you see this arrow in here and what this really means is that, oh, well, P is any old type you like so long as it's UNAM, so.
+1:11:20
+This suggests that if he isn't in it, then numb is something bigger than in.
+1:11:32
+So maybe numbers represent sets of types that included.
+1:11:36
+So if I go back to the magic whiteboard, it sort of suggests there's a sort of universe of types, the set of touch called nums.
+1:11:40
+And in there somewhere, there might be some ends with my familiar zero one minus seven, so yeah, and that's exactly the way it works.
+1:11:49
+So it turns out that the Haskell type system is richly hierarchical and there are things,
+1:11:58
+school type classes and there are some type classes and some simple types and so on.
+1:12:02
+We'll come back to that and much more detail later. I just wanted to show you the syntax in case you because you will see this.
+1:12:08
+If you go to the G actually come online and you ask get what the type of the thing is like.
+1:12:13
+A number, for example, was in A.R.T. OK, some hands, Zack.
+1:12:20
+Thank you. I was just wondering, so it's possible they essentially generic, I mean, like interfaces.
+1:12:30
+Yeah, yeah. I don't want to because a lot of people have a programme because I don't want to get a long discussion about what they are.
+1:12:38
+But yeah, the distinction I just think Get Typecast is representing sets of types that share properties, for example.
+1:12:43
+None is the sets of no types that I can add and multiply and divide, etc.
+1:12:52
+Well, maybe not Dubai, but certainly add and multiply. So that's that's what it is.
+1:12:58
+It's just it's just a concept of sets of things which should be shared properties.
+1:13:02
+If you think traits in other languages that this is in this manner vulgar.
+1:13:05
+I don't want to I probably am going to ask answer every single question.
+1:13:12
+So perhaps if you if you just put your hand up, you've got a really burning question.
+1:13:16
+And if it's something you can go and look at later or ask me later, then perhaps we should do offline.
+1:13:19
+So my love is a burning question. Probably not appreciate you won't have a go, so we'll be covering this type classes in a later class.
+1:13:23
+Yes, in detail. Thank you. Don't worry.
+1:13:37
+Yeah, I think probably we should. I think there's a lot of hands up because you want to know more about type classes and I don't want to do it now.
+1:13:41
+So I think we'll probably move on. If you've got a question about something other than what you see on the slide that I'll have to go through.
+1:13:47
+Kathy, was it burning, was an old hand. Sorry, that's not until can you take your own hands down if you.
+1:13:57
+Great, thank you. Zach, there's one hand left from you, is it a burning question?
+1:14:04
+It's gone, OK, right, little example, I jumped ahead of myself in this one.
+1:14:13
+I'm going to defer discussion of that for just just the time being. All right.
+1:14:19
+So from I promise you will come back and do it, but there's little if you want to go and do a little bit of homework.
+1:14:23
+I'll let you in to think it's on.
+1:14:28
+Oh, I've lost the next year when I had to reboot the machine, I'd lost my little dog and there's a nice diagram amongst the if you look at it,
+1:14:33
+do a Google search on Haskell type class and you'll see there's a beautiful dog. I'm showing you all the relationships between all the classes.
+1:14:39
+You can see the the subclause plus relationship, but not not for today.
+1:14:45
+We'll do that another time. Let's move on. I'll come back to the example just a minute.
+1:14:50
+So what about what about data structures? What about grouping stuff together in a useful and interesting way?
+1:14:54
+Well, Haskell has this concept of tuples, and you can grouped together things of arbitrary types into Chappells to tuple three tuples, 40 presumably.
+1:15:01
+Want some examples at the bottom.
+1:15:10
+So, for example, supposing I wanted to represent the vector I in three dimensions, you know, about your unit vectors.
+1:15:14
+So you've got the IJA k axes in three dimensions.
+1:15:20
+So the unit back to one zero zero is a vector pointing one unit to the right on the x axis and no units in the in the other two axes.
+1:15:23
+So you think we're putting a programme to process vectors. I need to represent vectors.
+1:15:31
+The one nice way to represent vectors is a three tuples if in three dimensions or two tuples if it's a two dimensional Euclidean plane, for example.
+1:15:36
+All right, so two people, three tables of numbers might be useful to represent factors.
+1:15:45
+What about dates? Well, maybe internally to my programme, I've encoded dates using three numbers,
+1:15:49
+like two integers, representing the day of the month, the month in the year and the year.
+1:15:55
+So three, four, nine, two, and the third day of the fourth month of 1999.
+1:15:59
+Of course, there are many other ways I can represent dates, but that might be a quick and dirty work day.
+1:16:03
+What about positions on a chessboard? Well, maybe these five parts are in code.
+1:16:07
+That is a character and a number as a pair of things. And the nice thing about programming is we get to choose.
+1:16:11
+We get to choose what we think is the most appropriate representation depending upon the problem we're trying to solve.
+1:16:17
+And so there are probably infinitely many ways of representing positions on chessboards.
+1:16:23
+I don't know, there are probably two or three obvious ones in this might be one of the more obvious ones.
+1:16:27
+OK, so perhaps we'll just do some there, some examples here.
+1:16:31
+Let's just do this through the GHC. So here, for example, is a pair of numbers.
+1:16:37
+Maybe that's actually better in two dimensions. And what do you think about this?
+1:16:42
+That's true. True and false. Maybe this is a maybe I've done some experiment and I've got a pair of booleans.
+1:16:47
+I don't know, I could make something up with us. But to say what type of that is.
+1:16:53
+Well, the syntax for representing the type of a chip is exactly the same as the syntax we used for the values themselves.
+1:16:59
+So Truffaut's is is the value consisting of a pair? True and false.
+1:17:05
+What is the type that vector. That of that pair.
+1:17:10
+Sorry, it's the pair. The type Bulbul. So true, Izabel false, Izabel so so what's the type of the pair or false it must be a pair of balls.
+1:17:13
+So in fact I probably use that language directly on purpose. It's a pair of balls is a chapel, two balls.
+1:17:26
+And of course, I can have any type I want to be on. But the first thing might be.
+1:17:32
+The second thing might be a boolean. And Haskell is quite happy with that.
+1:17:36
+So there's no there's no restriction and there's no reason why the first element has to be the same as the second in terms of its type.
+1:17:40
+And I can confirm that by asking Haskell, what do you think the title of that is?
+1:17:47
+It's oh, it's a pair of the first things a child. The second one is a beaut, isn't it?
+1:17:50
+Clever. It's worked out for me. And of course, from what we know about numbers, we know that six is a non-profit.
+1:17:54
+OK, it's some type which is a member of this class.
+1:18:02
+You might think of it as an you know, an interest in it is an example of a number.
+1:18:07
+It's a subset of numbers, for example. But anyway, it turns out that the type are richer than just just internat case.
+1:18:11
+So if I got a pair, I know what's the type of that?
+1:18:18
+And Haskell will say, well, OK, I know that six is some sort of number and some sort of number,
+1:18:23
+but they don't necessarily have to be the same in terms of the types because they could be definitely subduct, for example.
+1:18:28
+So all he knows is that if I use the numbers of Islam, then six,
+1:18:34
+seven or six is of type A seven type B or provided they are members of the class that those to corresponding types,
+1:18:37
+then the pair, six or seven has type accommodate. So if I guess we know that single tuples, but just that's exactly the same.
+1:18:46
+So just just reinforce what I said earlier. Single people don't really exist.
+1:18:58
+They're just the same as the war item itself. So if you put a single triple bracket and you get the same thing.
+1:19:01
+All right, so that's tuples, so tuples that the lesson from that is that the objects of a chip or the members of a chip,
+1:19:10
+but there can be there can be any number of them. They get back to this one.
+1:19:17
+Supposing I've got AIDS and then I've got false on the other side, but I can have any number of items in my tuple.
+1:19:22
+The type is correspond corresponds to the types of the individual elements of the tuple.
+1:19:27
+So in that case, what is the type of that chip? Oh, it's a char followed by Bufalo by something.
+1:19:33
+There's something being a number followed by a ball, exactly as you would expect.
+1:19:38
+So Chiba's can be as big as you want, but they're finite. Yeah, I can't have an infinitely big cheapo, so because they're finite,
+1:19:43
+I can tell you you can specify exactly what the types of the individual elements of the Chibnall muscle.
+1:19:51
+You have a question. Why is Nancy RLC separated by the bracket?
+1:19:57
+And what it says is that this object here has that right there.
+1:20:03
+And you think, OK, I understand this like, but what's the seed? OK, we'll see.
+1:20:10
+Is any type that's a member of the class. OK, yeah.
+1:20:14
+So for the time being, really, frankly, when you see hole numbers like a you can just think of them as being int.
+1:20:19
+Yeah. And in fact. If I showed you a little trick earlier on, I don't want to you don't need to get bogged down in this today,
+1:20:25
+but I can actually force the type of cuts and I don't want it to be any old.
+1:20:33
+It's going to meet everyone again. I don't want I don't want to be any old. And.
+1:20:38
+Now, I want to specifically, to be honest, if you do that,
+1:20:45
+you see the difference is the sea now has been replaced by it because I've told it concretely, I really do mean it here.
+1:20:49
+I don't mean any old. No. And then you might think, well.
+1:20:55
+What else could I talk instead of that? Well, I suppose I could think of it as being a double as well.
+1:21:01
+Goodnight, because nothing wrong with that.
+1:21:05
+You know, well, I guess what I'm suggesting is that, you know, I can buy eight or eight point zero and it's the types that matter.
+1:21:08
+So, again, you just get to play with these things and you can see how it all happens together. Catherine?
+1:21:14
+Yes, does the equal grader sign just means an.
+1:21:21
+In a way. Oh, sorry, this one here, the equals greater song.
+1:21:29
+Yeah, this is called a context. I can come back and do a lot more of this later.
+1:21:36
+Maybe I'll be charitable for now, just say you think that's the type.
+1:21:47
+So you think, oh, I know all those things are concretise, I know what's this see?
+1:21:50
+And so you go back and you look at this is called the head to the left of the arrow here.
+1:21:54
+It's called a contact. Is it? I will see this. This means C must be actually called a constraint.
+1:21:58
+So given the constraint that C is a none, the type of that is Shihab or Seiple.
+1:22:05
+Child Pozible. Yeah. So, again, I don't want to get bogged down.
+1:22:10
+The reason the reason I raise this now, because when you start typing stuff into Gioachino, asking for the type of things, you're going to see this.
+1:22:17
+So you need to have some rough idea what's going on myself. Do you have another question?
+1:22:23
+Was that an old hand? It's an older.
+1:22:27
+OK, we're getting to the end because I want to finish as close to four as I can, and so that's tuples.
+1:22:36
+So tuple is arguably the simplest way of building a collection of objects from individual
+1:22:43
+objects or assembling a collection of individual objects together into one new type,
+1:22:48
+if you like. There's another way, another thing I can do, which is to list the list, correspond to sequences of things.
+1:22:54
+So rather than using round bracket notation in Haskell, when we're dealing with lists, we use square brackets, notation.
+1:23:01
+So in fact, that's the empty list. So think of it as a sequence with nothing in it and.
+1:23:08
+What about that? That's a sequence of numbers with just one number in the number one.
+1:23:17
+This is a sequence of two numbers. This is a sequence of three numbers, but that's the sequence of six numbers and so on you.
+1:23:24
+So the expression I've just typed in is, in fact, the value.
+1:23:32
+So when I when I type of concrete constant listing there, say what's the what's the value has to go where it goes away and evaluates it.
+1:23:37
+It's the same thing. So we call these normal forms, by the way, normal forms being things that can't be simplified any further.
+1:23:44
+And if there's an expression. Of course, it's going to evaluate the expression and replace the expression in the answer so that, in other words,
+1:23:50
+the thing I talked you wasn't a normal form because there was an expression that could be simplified.
+1:24:00
+So Haskell will faithfully go away and simplify it and it'll give me back to normal form.
+1:24:04
+All right. So lists those are lists, lists a seek represent sequences of things.
+1:24:09
+They're not set, so don't confuse them with sets in mathematics in particular.
+1:24:14
+There's an operator that will come across, I think, next week.
+1:24:19
+Well, I'll just give you a sneak preview of that operation.
+1:24:23
+If I've got something of one, two, three, four, five as a list, there's little operator which does indexing.
+1:24:26
+In fact, let me put it zero at the front because indexes start from zero. This is a this is the usual conventional programming languages.
+1:24:34
+So if I index that at zero,
+1:24:41
+I get zero enough index to the one I one if I index it for you four and if I give it a number that's too big, I guess an exception.
+1:24:42
+So you try to index the six elementalist that index to big sorry.
+1:24:50
+So you get a runtime exception. So go back to the slides average and I show you that is.
+1:24:54
+So here's some more examples and there is a list of booleans and here's a list of.
+1:25:01
+What's the specialist do, this one? Demonstrate a point here, let me just paste that into my magic wall thing.
+1:25:07
+So that is a list of what's whoa, it's a list consisting of precisely one element, which is a pair consisting of a number and the boolean.
+1:25:16
+So if I say what is the type of that rather than what's the value of that, it says, oh, it's a list.
+1:25:28
+Here's the types.
+1:25:35
+That is at the time that here's the list consisting of a pair, the first of which is eight, which is a number and the second of which is a book.
+1:25:35
+So in fact, in terms of values, that's a singleton list.
+1:25:44
+And in fact, this is something you have to get your head around very quickly, if ever I write that something.
+1:25:48
+That that always means a single, unless I know the unknown isn't defined here, get so square brackets without a comma loop.
+1:25:56
+So I pick a poem without a comma. It always represents a singleton list.
+1:26:04
+So there's a singleton list of numbers. There's a singleton list of buildings that has a singleton list of characters.
+1:26:09
+In fact, the three characters are actually represented using this double quick shorthand since I put a comma in there to do it.
+1:26:15
+So I didn't go back to one. If I put a comma in there. That's now a list with two items.
+1:26:23
+Yeah. So less but less.
+1:26:29
+Less than one or one square brackets, something square brackets.
+1:26:33
+But that comma is a singleton list. Myself as a pair, the same as a triple.
+1:26:36
+Yes, so, yes, a pair is a two tuple.
+1:26:46
+OK, I keep thinking, Catherine. Yes.
+1:26:50
+Does every thing in a list has to be the same type?
+1:26:56
+All right, let's move on. So, yes, list everything else must have the same type if I don't.
+1:27:00
+So what I can do with a cheapo I go back to where my cheap examples here.
+1:27:08
+For example, I can have a tuple where the first thing is a number and the second is a boolean, it's quite happy with that.
+1:27:14
+If I think about putting that in a list, well, there's a list with just if I try to add a second element to that list,
+1:27:21
+I've got to give it something at the same time. So a number followed by a boolean.
+1:27:29
+So that's a perfectly valid example of a tuple which has the same type as the the first thing.
+1:27:35
+So it's quite happy with that. And I can say, what's the type of that.
+1:27:41
+And it says waiting lists just as before as a list of pairs where the first item is Somayeh, which is a number.
+1:27:46
+The second one is a boolean. Now, if I try to add another element, which is not a pair like false it complaint's,
+1:27:52
+it says, wait a minute, you'll give me a list with two things at the same time.
+1:28:02
+And the third thing, which is going a different time, you can't do that. Everything in the list at the same time.
+1:28:05
+Now, here's an interesting question is on the slide, I think. Can anyone think of why this restriction exists?
+1:28:11
+Why why can tuples have arbitrary element types?
+1:28:17
+And why can lists why most lists all have the same muscle? Maybe they were created just for these three different purposes.
+1:28:22
+Yeah, that's true. They are creates particular purposes. There's a slightly more sort of mathematical explanation.
+1:28:32
+Agio, I think he were. First up, you want to have a go.
+1:28:38
+Your microphone might be muted or if not, Matvienko, Matthew, you have a bill next up, is it because Lissi commonly used for like sorting and stuff,
+1:28:45
+whereas tuples of like storing sallies, that's an operational explanation of how they used.
+1:28:55
+And that's correct. That's quite right. Yes. But actually, there's a quite concise Nexen.
+1:29:01
+Do you want to have a go? Thank. Next on the list, the. Bellagio, now you've come online going out with what's what's your explanation,
+1:29:05
+is it to do with the fact that you can implement functions on every item?
+1:29:13
+Yeah, that's kind of again, it's an operational explanation, isn't it?
+1:29:19
+So I'm writing a function on a list. If I pull out an arbitrary element, I want to know what type of object it is, don't I?
+1:29:22
+So what was different with tuples? I wonder why it's. Why is that not so good tuples, Larry?
+1:29:31
+I think you you're next on the list.
+1:29:37
+You won't have a go so that there is no way to specify the type of the least if it can contain elements of different types.
+1:29:38
+Right. Well, that's the problem isn't I can't have Haskell doesn't allow me to build a list of objects of different types.
+1:29:50
+That's true. Nixon, you know, I think he will probably skipped over.
+1:29:56
+Don't have a good. Because with a list, you can index it with a number and if you say if you pick a number that Haskell doesn't know,
+1:30:00
+it's still to know the type when you index it. So if one coming through indexing it, it's either going to be a number or two.
+1:30:11
+But I still won't know if you're getting a number. And that's that's pretty much I guess.
+1:30:21
+I think that's pretty much I think that that's a good that's a good reason.
+1:30:27
+So this example I showed you here with the and the indexing that was too large.
+1:30:30
+Something like that. Yeah. So this indexing operator here,
+1:30:37
+how on earth can I write down the type of that function if I've got no idea what type of object it's going to give me back?
+1:30:40
+I can't I can never define that function. It turns out we'll see what he has to define functions next time.
+1:30:49
+And because of that, you absolutely have to know what type of what you're going to get back from that.
+1:30:55
+In this case, I'm going to get back a number somewhere into into a double whatever, but over the top of the list.
+1:30:59
+So what's the difference with the tuple, I wonder? Well, give you a clue.
+1:31:06
+I can't write this function on a tuple I can't say, you know, one true character,
+1:31:11
+a seven false, and there isn't an equivalent thing which indexes that by.
+1:31:19
+Physician. Because. Well, I yeah, I can define such a function.
+1:31:27
+Turns out there is way I can define such a function. In fact, I'll tell you what there is.
+1:31:35
+It a function called first supply, so that, uh, it's interesting, so that's a sort of indexing function,
+1:31:40
+the one called Second and unfortunately there isn't one third for good reason to come until later, something like that.
+1:31:48
+So those first and second, they operate on pairs of things. One. So the point is that tuples of finite.
+1:31:54
+Right, because Chip was a phone, I can't have an infinitely better, cheaper,
+1:32:03
+and therefore Chip is a finer I can write down that type's using a finite thing to find out the types of a finite representation.
+1:32:07
+So any function which expects a cheap return with the type of the tuple and he's able to pull out the further,
+1:32:15
+you know, the type of the third element, the tuple.
+1:32:19
+Because it's a I can't have it in pretty big trouble, so I don't get the problem I get with Lisp, this arbitrary indexing thing.
+1:32:23
+So you think, okay, does that mean that this can be unbounded?
+1:32:28
+Oh, baby.
+1:32:33
+We're going to see in a minute this notation if I'll just jump into the next slide just to show you that that is the first one to ten point I that.
+1:32:35
+That is the infinite list of integers we'll go on for some time, takes a while to predict.
+1:32:44
+So I'm going to kill it, right. So can the Haskell programme generate.
+1:32:50
+Yes. Infinite lists? Can it manipulate infinite list? Yes, it can.
+1:32:55
+We'll see how we do that next week. So if I can if I can manipulate infinite lists, presumably I can go at any point to that.
+1:32:59
+Information has a finite bit of it. And yes, I can. So I have to know what the type of that finite bit is, don't I?
+1:33:05
+Yes, I do. How can I make that happen? Simple every time.
+1:33:11
+So in other words, with a list and they it must be finite, otherwise I can do nothing with it.
+1:33:17
+Right, there's a string of questions here, are these the suspect, these are old hands,
+1:33:28
+can you just take your hands down if they're old and see what the new question?
+1:33:31
+Dixon, do you have a fresh question? Uh, Laoghaire.
+1:33:37
+Now at next, fresh questions or Akash. No, well, I think we'll move on.
+1:33:51
+Take your hands down the old hands so that I gave you I don't give up.
+1:34:02
+What's your question here?
+1:34:09
+The. And have you seen before about lists?
+1:34:13
+They have to be taped, but it has to be the same type.
+1:34:18
+So you've got to watch people for each other and to do what you have to also be the same format.
+1:34:22
+So the example you had before. Yeah, that's a good question. Yeah, exactly.
+1:34:31
+So I showed you an example here, this one here. That's absolutely fine, because both of those tuples have the same type.
+1:34:35
+Yeah. Yeah. And I can have as many of those as I want. But I don't want to get bogged down in this.
+1:34:43
+There's a thing called replicate. So I can replicate 10 times that tuple.
+1:34:52
+Well, the nice thing about sitting down with GHC and just playing rather than following my slides is you get to learn about these things myself.
+1:34:59
+So all this information about what is replicate do don't. But try it.
+1:35:07
+Yeah. And it gives you that it repeats that it's given 10 times.
+1:35:11
+Yeah. So I can do that a million times. A thousand, whatever it is, takes a while to print it but it's quite happy with it.
+1:35:14
+And I say, well okay, that's not because kids can be arbitrarily big.
+1:35:26
+But the beautiful thing about it, they say what's it's type. It's finite.
+1:35:30
+I can just a small number of characters,
+1:35:36
+you could you could have a do the gene which was there and say a character and then the time be asked to be a no, then a boolean.
+1:35:39
+Exactly. So if I try, I try that just now. If I put and try to put a character in a boolean, it's going to complain like you can't make your types.
+1:35:52
+Now if I'm turning into a tuple. So now. Interesting. What's that.
+1:36:02
+That's a pair of two pairs. Now it's absolutely fine because she pulls contain can contain objects of arbitrary time.
+1:36:06
+So this one is what does it say? Oh, it says the type is a pair of two things.
+1:36:15
+The first one is got the type A ball and the second one's got the type.
+1:36:21
+Charbel, it's quite happy with that. So the final is a final value.
+1:36:26
+It's got a finite that type has a finite representation idea.
+1:36:32
+You've got a question. Yes.
+1:36:36
+So, yeah, my my wasn't working earlier, but I was just wondering in so in the examples you showed us, you kind of show us tuples with their nest.
+1:36:37
+So I was thinking, is it possible for this being less within nests?
+1:36:49
+Oh yes. That's a great question. I should have put this on the slide just to confirm. Yeah.
+1:36:54
+The nice thing about it would be madness and extremely infuriating if you designed a programming language.
+1:36:59
+Oh, you can have a list of numbers, but you can't have a list of pairs.
+1:37:05
+I mean, or you can have a list of numbers, but you can't have a list of list of numbers.
+1:37:07
+Of course, you can have a list of list of numbers that list type one in. So I can say what's the list of.
+1:37:12
+There's a list consisting of list a Singleton eight and the list.
+1:37:17
+Oh, I don't know, like nine. Good question. So that's OK.
+1:37:21
+That's, that's a list. But what's its type. It says, well, that's a list of list of days where reasonable.
+1:37:25
+OK, yeah, good question. I think on the slide somewhere.
+1:37:36
+So what what do you think the type of that is, by the way? Given what we at least can be used to build anything?
+1:37:40
+Well, actually, we just type it in and find, oh, it's a list of ways I can be anything.
+1:37:49
+Yeah, I'm Jinyang. So Conways and something like so far leans towards the layers of different layers at the same time.
+1:37:54
+But for Chuvalo, like from slurries off to different tufo.
+1:38:05
+I'm not quite sure what the question is, something like if I have a list of interests like the lyrics of one and another list of interests,
+1:38:12
+like let's have to, they are the same type. Exactly. Yes.
+1:38:24
+Yeah, a totally different type. And we cannot, like, have a general type to a specific.
+1:38:28
+So I can't do this. I can say I like the first item is a list of it's the second largest.
+1:38:35
+The second thing must be a list of things as well. Otherwise it's wrong because we're incredibly tight.
+1:38:39
+So I couldn't put a list of buildings in there because they will say, no, no, that's not right at all.
+1:38:43
+Oh, we can put two integers, right? Like we can vote.
+1:38:49
+Yes, we can have as many as you want. Yes, you can have.
+1:38:52
+You're not going to want to be so long as that is the types that matter, not the actual values themselves.
+1:38:55
+So it's I say you can do anything you like so long as the time to line up. That's the sort of that's the sort of the way we express it.
+1:39:00
+All right. We're going to move on because the amount of the clock now.
+1:39:06
+It kind of said there's a nice little shorthand for list of characters, it would be very tedious to have to type a handbag like that.
+1:39:11
+So high school, like most libraries as a shorthand notation. So so there is one thing.
+1:39:19
+It's not a gotcha. I'll just point out one thing. If I see his handbag, that's that's a strength.
+1:39:25
+If I was the type of handbag it says, oh, it's a list of characters.
+1:39:32
+And in fact, it turns out that there is a there's a thing called string.
+1:39:37
+Oh, excuse me, there's a thing called string, which Haskell does know about.
+1:39:43
+Well, when he reports the type of handbag it proposes to lift the curtain of the string,
+1:39:47
+string and string and lists of char are the same type, it turns out.
+1:39:50
+So I think I can foresee the type of this to be a string, you know, and it's quite happy with that,
+1:39:55
+but if I don't tell it, it's really a string, Sir William told Mr. Stringer.
+1:40:03
+I'll just assume it's a list of characters and it's sort of lazily he doesn't tell me that the string and list of characters are the same.
+1:40:06
+I find that quite annoying. I don't find many things in Haskell annoying.
+1:40:11
+I find that slightly annoying. There's probably a very good reason for it. But let's not get bogged down in.
+1:40:14
+OK, so I'll give you a hint about sequences, there's this beautiful arithmetic sequence notation.
+1:40:20
+I'm going to do it by example. Again, you just learn this by playing with seeing one dot dot and says, OK, give me the numbers.
+1:40:26
+One, two of the ten. Did you hear what I just said? Not exactly, I think that's one of those statements.
+1:40:31
+Yeah, there's one of them, and I said, if you don't want consecutive numbers,
+1:40:39
+you want to sicklerville the one you can put in something like that that says one three five.
+1:40:45
+So it works. It's basically subtracts the first the second number from the first works out the delta, if you like,
+1:40:50
+and it goes starting point Delta to Delta, three of the four Delta up to the maximum, OK.
+1:40:55
+And again, you go backwards so I can say ten, nine, eight, zero, and it'll do the right thing.
+1:41:00
+And as I said, if I just do something like that, it will generate the infinite list for me.
+1:41:09
+So this is the kind of thing the first your first introduction to Haskell's ability to process infinite data structures,
+1:41:14
+in this case, incrementalists. We'll see later how we can actually write functions over such infinite data structures.
+1:41:21
+How can I possibly write a programme to manipulate an infinite data structure? Watch this space.
+1:41:28
+Right. So let's go back to our slides.
+1:41:34
+Yeah. So I'm going to go and play with that. There's a couple more things I want to do.
+1:41:38
+I don't normally take this long, but we did have a technical hitch earlier on, so I'm going to get to the end.
+1:41:43
+So let's comprehensions again are going to link to read the slides. But there's a I don't know if you're familiar with Zarmina Frankel.
+1:41:48
+Such expressions in mathematics. I'm sure you've seen these before. You write something like this.
+1:41:54
+Give me the set of all X where X comes from some set s and there's some property of X, which I want to be true in order for it to be X to pop out.
+1:41:58
+So this is a this is a very nice way of writing, specifying a subset of some as such as buying some property P So Haskell has the same idea.
+1:42:11
+So but it's list focus. So rather than being sets with curly brackets in the mathematical world,
+1:42:20
+we use lists and I can say something like this and we don't have this symbol unfortunately on the
+1:42:25
+keyboard we're not straightforwardly so Haskell approximates it with that little symbol there.
+1:42:30
+And this s is a set, but in high school, working with the world of lists.
+1:42:37
+So one convention will learn next week when we started in this processing is something which looks like a plural X is,
+1:42:42
+well, some exercise, I guess, a list of things. So so let X be items from some list of things satisfying some property P of X, OK.
+1:42:49
+And of course you'll notice there's no ground brackets in here because idiomatically we normally miss the brackets out.
+1:43:00
+And Aspen, you know, women writing applications are prefix Punchinello,
+1:43:07
+predicates of predicates are prefix functions or expressions which generate booleans.
+1:43:12
+So if P is a predicate function and when I give it its argument, I think it's common to omit the the brackets.
+1:43:17
+So in other words, when you say a list comprehension, it's exactly the same idea as a set expression from mathematics,
+1:43:23
+except living in the word list rather than, says Gabriel. Sorry, I added, as you've already mentioned, this is a controversy to kill the control,
+1:43:31
+say that it was after which control to use because the other one is broken.
+1:43:44
+OK. All right. Thank you.
+1:43:48
+All right. Now let's go back. Let's just say some some some some last comprehensions in action.
+1:43:52
+Right. So how about this? Give me the list of what I'm going to change.
+1:43:57
+The list of Alé where aid comes from. Some list.
+1:44:01
+Oh, let's go one ten. And I want to know I was always less than seven.
+1:44:05
+Make sure I get my spacing nice and tidy so you can read the programme, ok?
+1:44:14
+Unsurprisingly, you get that subset is the function we've learnt called the functions on.
+1:44:18
+And even if they give me the even numbers in that set up, they pop here just one little gotcha.
+1:44:23
+You have to put this thing, by the way, I call Generator's.
+1:44:32
+So here's a list, this does generate the items on that list in sequence one, two, three, and treat each one in turn.
+1:44:36
+And for each one I say is it even is the odd one?
+1:44:43
+And if it is if it satisfies this predicate, then that number, that particular instance from that that list pops out on the left of the vertical bar.
+1:44:45
+So just think of it as a mechanism for generating sublist, if you like, using this as a as this predicate, as a filter.
+1:44:55
+And just one little gotcha is that you have to put the general when you have to define
+1:45:02
+the eyes or you have to define the things from the generators before you use them.
+1:45:06
+So I can't say that even though kind of looks like it means the same thing, actually,
+1:45:09
+that's going to give you an error because it says, OK, even I know what I give in some ways.
+1:45:15
+Yes. So there's a left to right edness about the way these things work.
+1:45:21
+So just to reinforce the left right edness.
+1:45:26
+So there's an example on the slide, so supposing I leave that blank for a minute, supposing I generate some X's from the list one to three.
+1:45:29
+And generate some wise from the list. Well, another list, which happens also to be one to three.
+1:45:38
+So what am I going to do with the axe and then while I at them together and oh I see, so I get one added to one, one to one or two to three,
+1:45:45
+and then to add it to one to eight to 12, actually, you can see the order in which they come out rather better if instead of adding together.
+1:45:54
+I actually just returned. The parents come away just so you can see and you can see the order in which the iteration happens now.
+1:46:02
+Yeah. So in other words, we go through this list first, so we pick a value X one and then we go through this list one, two, three.
+1:46:08
+So the one gets paired with one, the two in the street and the the Y generator.
+1:46:17
+And that explains the order you see in the resulting list. So if I come back to the magic whiteboard.
+1:46:22
+You can think about penetration space if you want, I can do Y here and I can draw X here, so I've got three values of X one, two and three.
+1:46:28
+Three values, right. One, two and three. So that list comprehension.
+1:46:38
+So like they pick a body of X one. And then that is why one to three is completely unconstrained.
+1:46:44
+OK, now go back and pick the next one of which is two and then go for the widest again.
+1:46:53
+O two, one, two, two, two, three, and then three.
+1:46:57
+One, three, two, three, three.
+1:47:00
+So that list got that list and I showed you how it you like a two dimensional rectangular in this case square iteration space.
+1:47:02
+In fact the order in which they traverse this Russian space does this doesn't it, if you think about it.
+1:47:09
+And so on. Now, what about this instead? Supposing rather than going from one to three here.
+1:47:15
+Supposing I go from one to X? So now we get a different set of output.
+1:47:24
+Why is that? Well, because the first time I pick an X is one. So what that is.
+1:47:31
+Why do I choose? One to one where there's only one element in the list, one doctor one, and that's one.
+1:47:36
+So now we go back into the next Colebatch, which is two now, which runs from one to two, so it's a different list is constructed for the generator.
+1:47:44
+Each time, depending on the value of X. So.
+1:47:52
+Back to the magic whiteboard, what's happened there is I've got the same iteration space on my x axis, one, two, three, indeed the same on my book.
+1:47:58
+The the the points we pick off different.
+1:48:08
+Now, once I get one to one, then we stop. Now X is two and then we run from one to two.
+1:48:11
+And then when X is three, we run from one, two to three.
+1:48:18
+So we get a here's a rectangular iteration space, if you like, in here.
+1:48:21
+We've got a triangular iteration space. And if you've written for before in other programmes, you'll be familiar with this concept.
+1:48:26
+So go away and play with that and have some fun in the.
+1:48:34
+In the next between sometime between now and Thursday, I think that's probably explained on the slide.
+1:48:39
+I think the last thing we did before functions is just the point. I think somebody asked me a question earlier on.
+1:48:44
+Which is about inequalities and inequalities on string's.
+1:48:50
+And if you want to play with that, just sit down and type some examples in is one, two and three less than four, five, six.
+1:48:56
+So I'm not going to stop. So are you hearing me OK?
+1:49:07
+There's lots of. People, I guess. There's lots of waving going on.
+1:49:13
+Because I'm near the end and just check my slides myself.
+1:49:22
+Why is the list of one, two, three smaller than four or five, six, right.
+1:49:30
+So here, let me let me let me let me stop the simple case, because I know that you want to go to your virtual obsession.
+1:49:35
+So if I write this. Good.
+1:49:44
+It's pretty obvious the answer is true because those two lists are the same, they are the elements are pairwise identical.
+1:49:50
+Yeah. What does that do that? So the question is,
+1:49:55
+what orderings is Haskell choose if I've got an aggregate data structure like a list or a
+1:50:02
+tuple what what what does it choose in order to determine the result of that comparison?
+1:50:06
+The answer is lexicographical. It's left to right.
+1:50:11
+So in that case, the answer is false. Simply by virtue in this case is the fact that one is is not smaller than one.
+1:50:15
+One is equal to one. So it doesn't matter what the other two elements are.
+1:50:23
+There can be zero and nine or it can be two and whatever, seven, eight oh oh sorry.
+1:50:30
+That's because I an. What have I got here?
+1:50:40
+One, two, three, so I realise I've got a different approach.
+1:50:46
+This is the inequality of with.
+1:50:50
+So what happens here is let me rephrase what I just want to say was want so in this case and if I start with something like that,
+1:50:51
+the question that is unequivocally true, because one is less than five.
+1:50:59
+So in other words, you think about this lexicographical, you think of it left or right, a bit like the dictionary ordering.
+1:51:04
+So I go from left to right through my elements to my list on this one is unequivocally justified.
+1:51:09
+Therefore, I can immediately determine the answer is true. And it doesn't matter what the magnitude of the other elements are to 1998 in there.
+1:51:14
+It doesn't matter. The answer is.
+1:51:23
+And it's a bit like the dictionary order you get in the dictionary now, the only question is which is why should done in this case?
+1:51:26
+Having looked at the first two, I can't decide because these two are the same.
+1:51:35
+So you wouldn't say it's false just because one is more smaller than one? Exactly, yeah.
+1:51:39
+So that point, I don't know yet. So now I'll go one place to the right and I'll compare the zero nine with the two eight.
+1:51:43
+So the answer to that is true by virtue of the fact that this zero is less than that.
+1:51:49
+So in other words, that expression, if you like, is exactly the same as asking this question.
+1:51:55
+I go to an item like that because I can't decide based upon the ones alone.
+1:52:04
+So, by the way, I'm just going to give me notes and say, OK, if I bracket's, it will actually give me.
+1:52:10
+You learn about this stuff when you go through the unassessed sheets, but I can do something like that.
+1:52:20
+All right. So the point about that is just looking at the one, I don't know.
+1:52:24
+OK, well, let's go and look at other elements and then work out the answer. We'll see how we implement this operation fact later on.
+1:52:29
+And of course, when we look at type classes, that is compared with one by one, like from the first, one by one.
+1:52:34
+So, in fact, if you go back and look at something like this,
+1:52:41
+if I got a word like that in a dictionary and I say, oh, does that appear before cat in a dictionary?
+1:52:44
+Yes, it does, because B appears before C and it doesn't matter what the other two letters are, whether they're bigger or smaller.
+1:52:50
+Boy, it doesn't matter once he's less to see the boy comes before cats in the dictionary.
+1:52:57
+You can make that judgement straight away. And what if it's a big and bigger if it's ambiguous?
+1:53:03
+Did you say I mean is big and the other is bigger?
+1:53:10
+Which one is smaller? OK, yeah. You have to make a decision what to do when you got something that big and bigger yet.
+1:53:15
+Remember to put the operator in. Yeah. So you've got to decide what happens when one list essentially.
+1:53:23
+So if you think about it, asking that question, oh look at the base column.
+1:53:29
+Decide I know what, let's compare, let's throw the bees away and ask the same question of that here.
+1:53:33
+And it says, OK, how did that work? Oh, I look at the two letters and I say, OK, the eyes of the same, I can't decide.
+1:53:39
+So therefore I'll ask the question again. And it says, oh, to the Jesus.
+1:53:46
+So I'll ask the question again, and it comes down to answering this question, is the empty list less than a Nonentity list?
+1:53:52
+And then you think, well, intuitively, what does a programmer was a user?
+1:54:00
+Would you expect the entries to be listed for? Course you would. And that's the reason why get true.
+1:54:03
+OK, yeah, but it's a different reason to the fact that one letter is more than another, it's to do with a run out of elements.
+1:54:09
+To the Prefect's of the of the other string that prefect's Suavi Smolla.
+1:54:19
+Yeah, you can you can cast this problem in terms of prefixes if you wish. But actually what's happening is it's going through picking up the train.
+1:54:25
+We're walking down the list one element of time until it can make a judgement.
+1:54:31
+And if one of them runs out, you know, if it goes the other way around, then and this one runs out.
+1:54:35
+So I've got some characters in there because it would give me false. Now I'm going to stop because we've run because of technical problems.
+1:54:41
+There've been lots of questions, but always in part important to answer the questions as we went through rather than rather than rush to the end.
+1:54:51
+So that's it for today. I'll see you again on Thursday. I think. I have a lovely afternoon.
+1:55:00
+You got a bit of time to do some virtual lab work. I will mail Constantinos and apologise for the fact you'll be late for his virtual lab,
+1:55:07
+but enjoy and I'll start the next lecture with a little summary of things I think you should learn from the unassessed sheet.
+1:55:14
+Great. OK, well done. Apologies for the technical problems, but we got there.
+1:55:21

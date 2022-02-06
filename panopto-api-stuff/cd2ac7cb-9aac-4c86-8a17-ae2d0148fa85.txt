@@ -1,0 +1,245 @@
+ID: cd2ac7cb-9aac-4c86-8a17-ae2d0148fa85
+Title: 9.2 NP-completeness
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 13/03/2021
+So we want to identify problems in ENPI which are unlikely to be in pain.
+0:03
+These are the hard problems in ENPI. So let's use our notion of reduction to try and get at these problems.
+0:10
+So we'll define a decision problem D to be enpi hard if for all problems.
+0:19
+D priming enpi we have D prime reduces to D.
+0:25
+So D lives above all the problems in n p.
+0:29
+So if we draw a diagram then we can draw.
+0:34
+Here is our class and pay.
+0:40
+Like that, I'll draw it like like semicircles downwards, closed, and we've got some other problem, which we say is enpi hard.
+0:43
+This problem D and what that means is that if we take any other problem, any problem within ENPI, then that problem reduces to D.
+0:53
+So D lies above all the problems in ENPI in terms of difficulty.
+1:05
+When I'm drawing a difficulty going up the Y axis,
+1:11
+here we go and notice that we're not saying the deal itself belongs to n p in the definition of ENPI hardness.
+1:15
+They could be harder. So we could have a problem here. That's far too hard.
+1:25
+This problem d might be much harder than any problem living within n p it might be sort of exponentially time,
+1:30
+exponential time, difficult, or it might even be undecidable, which is something that will be discussed in the second year.
+1:38
+Lecture's undesirability. Came.
+1:45
+But what we can't say about ENPI hard problems is that if DNP hard and D reduces to D prime, then D Prime is also enpi hard.
+1:50
+So we draw a diagram here. I have to change that.
+1:59
+Let's change that to the double prime here.
+2:03
+So D is above every problem within ENPI. But let's say that we have D prime here which reduce the D.
+2:08
+He reduces to D prime. So this problem is just harder than D.
+2:14
+Well then clearly D is above everything and enpi then D prime must be as well.
+2:19
+That's just a consequence of the transitivity of the Lessner equals.
+2:23
+Okay, well, now we can define the famous N.P. complete class.
+2:31
+We'll say that a decision problem is ENPI complete or NPC for short.
+2:35
+If D is in ENPI and D enpi heart.
+2:40
+So the NDP. Complete problems, all the hardest problems in ENPI, so if we change on diagram here a bit,
+2:45
+then let's stroll the the the set of NDP hard problems and let's try it with this upwards facing semicircle like that.
+2:53
+So this will be ENPI or odd. And if it intersects with ENPI than any problem inside here, a problem here, would they?
+3:04
+These are the ENPI complete problems. It's in this region of intersection between the green and the blue like that.
+3:17
+So there is a would be enpi complete problems.
+3:24
+So there is a promise that set up at the top of ENPI because they're above in difficulty, everything within ENPI.
+3:27
+So that's the definition of an MP complete problem. And.
+3:36
+Well, it's not clear from the definition that these enpi complete problems should exist.
+3:42
+Why should ENPI heart problems exist? Could the really be a single problem that is harder than everything within ENPI?
+3:47
+I mean, we've got potentially infinitely many different problems in ENPI.
+3:54
+Why should something be harder than all of them?
+3:59
+And even more remarkably, why should that be something that is harder than everything an MP and actually lives in ENPI itself?
+4:01
+It might be that you need to get right up to the some very high level of complexity before you can get a problem,
+4:09
+which is, as it were, which is harder than everything within NDP.
+4:15
+But remarkably enough, it was shown independently by Kocan Levin in 1971 that there are NDP complete problems.
+4:20
+And the first one to be shown to be ENPI complete is the sad problem, satisfied ability for propositional logic.
+4:30
+And the proof of that involves Turing machines.
+4:38
+And so it's beyond the scope of these lectures.
+4:42
+But once we've proved that, then we can show that many other problems are enpi complete by leveraging or bootstrapping from the Cook Lhevinne theorem.
+4:46
+So how can we show that another problem is enpi complete?
+4:59
+Well, we rather than doing it directly using Turing machines, as we would have to do for set, we can use our notion of reduction as follows.
+5:04
+So we have this what I'm calling a method here to show that D and be complete.
+5:14
+We show that it's CNN P. Obviously that is needed.
+5:20
+And we show that D prime reduces to D for some known and complete problem.
+5:25
+So let's have a diagram. Perhaps if I read your best, let's redraw our class of and P serves for that.
+5:31
+So here is an P k.
+5:44
+And then here is the class, the NDP hard part of NDP is in here.
+5:48
+So this is in P complete is up at the top of NDP.
+5:55
+This is O blue area is NDP.
+6:00
+And so what we've got is we've got some known NDP complete problems here, like for instance that we know is NDP complete by the Cook Lhevinne Theorem.
+6:03
+And we've got some new and we've got some other existing problem that's NDP complete D Prime is in the method.
+6:14
+And then we've got this problem that we don't know about, which is D.
+6:22
+So if we can, first of all, show that D belongs to NVP, which is obviously needed, and then to show the ENPI hardness,
+6:27
+we can show that D Prime, which we know to be ENPI hard or Empey complete reduces to D.
+6:36
+Then that will tell us that D already is also enpi hard and that is just a simple consequence.
+6:43
+The method follows obviously from what we've already said, which is that the NPR problem is all closed upwards.
+6:50
+This green area is closed upwards. So that's what we have to do.
+6:56
+Well, the first part here is normally pretty easy to show that the problem is in ENPI.
+7:02
+We've already done a few examples and there are some more in the exercises.
+7:06
+And the second part involves us thinking about some kind of way of connecting the two problems by reduction.
+7:12
+And that is a bit harder to do. OK, well, let's take as an example, Hamiltonian path.
+7:18
+Well, we have already seen that Hamiltonian path belongs to ENPI by guessing and verifying in polynomial time.
+7:26
+So we know that he belongs to ENPI. Let's write in Hamiltonian Path.
+7:36
+Yes, we are. You know, it belongs to ENPI. We need to show that it's ENPI complete.
+7:42
+We need to reduce some known and complete problem to Hamiltonian path.
+7:50
+Well, the only one we know at the moment is sad. That's the only one we've got from the truck LEVIEN Theorem.
+7:55
+We will have more. But that's the only one we've got at the moment.
+8:01
+So what we if we can show that SSAT reduces to Hamiltonian path, then we can conclude that Hamiltonian path is ENPI complete.
+8:04
+And it turns out that it is indeed possible to show that Sapt reduces Tamil Ternium path.
+8:14
+But it's quite a long and complicated reduction.
+8:19
+So I'm going to admit from these lectures.
+8:24
+But supposing we can show that, then you can see by our method that we have the two ingredients we want.
+8:27
+We've got the fact that Hamiltonian path is enpi by just guessing the Hamiltonian path and verifying the tattoos on Amul time.
+8:34
+And then we've got this reduction from the known enpi complete problem to the one that we want to show is ENPI complete the Hamiltonian path.
+8:43
+So the conclusion, if we did indeed do all this work, would be the Hamiltonian parties enpi complete.
+8:52
+So we now have a second ENPI complete problem. Okay, so.
+8:59
+I said that what we are trying to do is to identify problems that are intractable
+9:12
+and we're doing that by identifying the problems which are hard within ENPI,
+9:18
+the ones which are up at the top of ENPI, and we can make that precise in this proposition here.
+9:23
+So let's suppose that P is not equal to ENPI, which is normally believed then if a problem D is in ENPI hard, then it's not in P.
+9:32
+So let's try and prove that. I think another diagram might help, but it's much the same as the ones we've got already.
+9:45
+So let's. Drool here, we've got P.
+9:53
+And here we've got ENPI. And then we've got ENPI Hard and which.
+10:01
+Something like this with SAT, maybe in the intersection here.
+10:12
+OK. I like that as an MP. Complete problem. And so the green area is MP hard, right, as well.
+10:18
+OK. What we want to show is that ENPI heart does not intersect with P.
+10:30
+So if you show that a problem is ENPI complete, then then it must be intractable.
+10:36
+In other words, not in P. Well, the proof is very simple. So assume that P is not equal to ENPI and assume that DNP hard.
+10:42
+Suppose for contradiction that D was in P then we'll show that enpi is contained in P.
+10:53
+So take D prime in an P. We want to show that it's also in P.
+11:01
+To show this inclusion. Well what can we say.
+11:07
+D is in is enpi hard. So by definition of empey hard d prime reduces to D.
+11:12
+K. And so therefore D prime is in P.
+11:19
+Why is that. Because D is in P. We've assumed and P is down with closed under reduction so D Prime is in P.
+11:27
+So we've shown that NPC is contained in P. But we know the P is included in ENPI.
+11:35
+And therefore we have shown the P equals ENPI, which contradicts our assumption.
+11:43
+So therefore R we have a contradiction. So therefore D cannot be in P, which is what we want to show.
+11:50
+Okay, so, um. If we can show that a problem is in NDP complete, then we know it's intractable.
+11:59
+Assuming that P is not equal to NDP as is generally believed, and that gives us this diagram.
+12:09
+Of ENPI. So we've got all three regions here. We've got PDU attractable region down here.
+12:18
+And then we've got the NDP hard part of NDP and always the NDP complete problems up at the top.
+12:26
+And if P is not equal to MP, then what we've shown is that there's an empty intersection between the two.
+12:33
+So proving that something is empey complete is a proof that it is intractable.
+12:39
+And of course if B equals NDP, then everything would collapse together.
+12:46
+These three classes would just be the same, in fact.
+12:51
+Well, the interesting point from this diagram is that you've now obviously got a region in between and you might wonder what is in that region.
+12:55
+Well, it has been proved that if he is not equal to NDP, then there are problems in this intermediate region.
+13:04
+This is actually called NDP Intermediate, this middle region.
+13:11
+It's not so clear about real life problems that we're interested in because the problem that was created in the proof of
+13:15
+that theorem is are all the sort of theoretical thing that you're not that interested in except for proving the theorem.
+13:22
+But there are thoughts that there could be there could be problems in this intermediate region, such as a graph isomorphic.
+13:29
+Some would be a problem that some people think can be in this intermediate region,
+13:38
+because we know that it's in Empy, but we don't know that it's ENPI complete or that it's empty.
+13:43
+So therefore, it's reasonable to conjecture that it's in the intermediate region in the middle here.
+13:49

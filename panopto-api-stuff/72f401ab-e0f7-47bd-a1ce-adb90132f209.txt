@@ -1,0 +1,587 @@
+ID: 72f401ab-e0f7-47bd-a1ce-adb90132f209
+Title: DoCSoc - Introduction to Programming Utilities (1 of 3) - Q&A - macOS
+Category: COMP 1st Year General
+Lecturer: Konstantinos Gkoutzis
+Date: 06/10/2021
+Um, getting the computers running on your own computer and that kind of stuff and at the recommendation
+0:04
+would be to get it to get a VM of some kind or to use MapQuest as a command line directly,
+0:12
+which is, you know, again, that also has its own problems. But the VM would be my recommendation.
+0:20
+So you can do as I say, but then you run into all sorts of difficulties with light,
+0:29
+so if you want to edit code and you want syntax highlighting and you want your editor to be able to check for errors in your code,
+0:33
+that means that either you want to do that all on a loop through the SSA is going to be super slow,
+0:41
+or you'll have to have an installation of whatever children you're using on your own and local machine anyway to get all of that to work.
+0:48
+So virtual boxes, which you recommend for Mac? Mm hmm.
+0:56
+Mm hmm. What I'm going to go through today is the command line stuff that you saw and had to do that from Mac itself.
+0:59
+But yeah, a virtual box would be the way to go, um, for the basic commands that you saw on the, uh, in these first pictures.
+1:10
+And we won't run into many differences. The main differences will be basically you need to install something.
+1:19
+They'll give a script for you to install it somewhere and it just won't work on a Mac.
+1:27
+And it'll be super difficult to work out why, but.
+1:31
+So I've got a disk space on my computer.
+1:41
+Can I just booted off USB or is that going to be too slow to do anything useful if I installed Ubuntu on their.
+1:43
+And. It's been a while since I've used a USB boot, so I don't know, like what the speeds, uh,
+1:52
+for that are maybe on modern USB three, it's fast, but certainly in the past I would have been extremely slow.
+2:03
+Pretty painful. Thank you. On the one hand, I do have.
+2:14
+OK, so that's the first is the stuff about whether or not you should install Linux and what the situation for.
+2:41
+From is and the other option, of course, if you don't go down that road, is just to use my question is kind of NATO's, uh, toolchain.
+2:54
+And as I say, the main differences with this are kind of going to be smaller things that you won't
+3:05
+run into except when you're like close to a deadline and something isn't installing,
+3:12
+but the like the high level commands and so on. And it kind of looks are relatively similar.
+3:19
+So that's where that's all going to go through right now.
+3:25
+In. And one side, there's a question in the chat there, I don't have VM set up, should I have done this before?
+3:35
+Or you can do that whenever, but it's not necessary for this stuff.
+3:48
+Uh, and I'm, uh, unable to share my screen, to share the command line, so.
+4:03
+So who's the who's the host here? Which provider would you recommend with PVM for Mac and.
+4:21
+Yeah, I don't know about the M1 Macs yet, unfortunately for tailbacks.
+4:41
+OK, so somebody else has to use parallel instead of.
+4:53
+Yeah, I mean, people are still catching up with them, with trying to get support for the annual max.
+5:06
+OK, so the chairman's parallel. And.
+5:17
+So I'm still unable to share my screen, so.
+5:32
+Is it interest, is Oracle a virtual box, the same thing as virtual box?
+5:58
+And. Yeah, I think are. And how good of an idea is using M1 for computer science related stuff and.
+6:06
+It doesn't have a great support for all of the tools that you'll be.
+6:24
+Yeah, you're going to run into a lot of compatibility issues, which is unfortunate.
+6:29
+It will catch up in a few years time. But even then, because it's because it's a totally different architecture to what everything else uses,
+6:34
+it's going to be a lot less easy than than it currently is on the on the Internet.
+6:44
+OK, so until the I've messaged the host there to try and get stream sharing enabled, but until that happens,
+7:11
+I'm going to go through the that I'm going to look through the slides here and all the.
+7:18
+And different commands, so the. We heard reports that there are a lot of links to download.
+7:26
+Not sure which one to click. OK, so.
+7:35
+For. The virtual Boksburg Web site.
+7:44
+And the. Linked to click, could be the 10 hosts under six don't one, two, six platform packages.
+7:52
+Rudy. Yeah, it is free to install virtual box.
+8:07
+So. OK, so you I'm going to go through the rest of the slides now and see if any people have any questions on those.
+8:20
+And. So in terms of using the command line on a Mac, there is a an app for that built in which you can use at a terminal.
+8:42
+Um, and I seem I don't know, maybe I shouldn't assume,
+8:57
+but people are familiar with that and they have seen it before and used it for different things.
+9:01
+Um, it's a perfectly serviceable terminal app.
+9:06
+There are other options out there. I think Garfish is that is one and so on.
+9:11
+But the terminal is totally fine. Um.
+9:18
+On a modern macro, as the that's backed by zealous age, which is slightly different from previous things like Rousch and so on,
+9:22
+and the slides that were in the, uh, in the lecture that you.
+9:33
+The video lecture. Unfortunately, I'm unable to share my screen.
+9:38
+Oh, OK, I got the perfect. Sorry about that.
+9:43
+I've just come from.
+9:54
+Right now, I'm just going to take you through the comments that you saw in the video lecture and see how they work on the mock,
+10:06
+as I say, they're pretty much the same. So this is the terminal that we have here.
+10:14
+It is as LSH, as you can see, but you can ignore that stuff all pretty much pretty much works the same.
+10:18
+So we started a directory. We can allow us to list all the different things.
+10:26
+And if we go into a directory with the CD command, this is a change to make directory.
+10:31
+This goes into a directory. So I'm going to go into my developer directory. That's where I keep all my code and stuff.
+10:39
+And we go in here and to go up on directorate, it's AKHDAR.
+10:45
+So now we are back into the home directory indicated by the Tildy here.
+10:52
+So one developer. So mkdir makes a directory.
+10:58
+It's the same as right click new folder and then we can just CD into that here.
+11:06
+OK, so the other commands that we have are the allies, which lists all of the contents of the directory.
+11:14
+Now that doesn't show anything, but if we add the AI to it, it will show everything, including files prefixed by a dot.
+11:23
+So these are files that don't show up when you look at them in the finder.
+11:35
+But these are files that that exist in the same I.
+11:41
+And there are none in this directory and on MapQuest in particular, you'll have a decent discourse store on things like that.
+11:45
+If I was to basically indicate like an media information about the directory, like what was here and deleted and trashed and so on,
+11:54
+and which can occasionally mess with things I can get, but make sure to ignore them as much as possible and get.
+12:02
+To. And. Yeah, so that's a.
+12:21
+Does the basic OT inside the Puedes, the other and the icon that you need Puedes prince,
+12:32
+the working directory, the absolute pass to add to the current directory.
+12:40
+And. OK, so any any questions on that so far?
+12:48
+OK, so now we're going to be creating and destroying files so we have a touch and make their
+13:06
+our MCP and N.V. here and this idea of the doorbell doorbells being wrong for one sec.
+13:15
+So people do for one second. Sorry. Sorry about that.
+13:24
+The joys of working from home and OK, so let's move on to these next months, so touch the first one touch and creates an empty file.
+14:27
+But what it also does is it kind of updates the info on a file and in particular the meta information about when it was last modified and so on.
+14:42
+So what we can do here is we can touch cyl the THC.
+14:53
+Then if we Alanson the directory, we can see it there just like that.
+14:59
+OK, I've already shown you and mkdir.
+15:04
+And so cat is the other thing that will print the output of a file to the command line.
+15:09
+So what I can do here is I can put something in the file. And then if I can't control them, it'll print that to come out on, OK?
+15:16
+And next command is not.
+15:37
+The slide on Panopto and just anyone else have a link to that, I don't have I don't think the.
+16:00
+I think that I have is the same, probably. So if anyone else can answer that question.
+16:09
+Perfect. And.
+16:18
+So, OK, so next Monday's in arms, this is a command that deletes files and, um, you know, as with anything on the ground,
+16:32
+and this is more dangerous than the, uh, the gooey version of deleting stuff that you'll be familiar with and totally deleted.
+16:46
+It doesn't send it to the trash or anything like that.
+16:55
+Luckily, you do get kind of warmed in some scenarios when you might be deleting something that you don't intend to.
+16:57
+And if you try and delete it directory, so say we.
+17:04
+So we're in this directory called Demo and we're going to go up on directory and then we're going to try and remove it with this.
+17:10
+And it will let us do it because Demo is a directory and ah, it's for files.
+17:18
+If we go into demo though, when we remove all the text will get rid of it.
+17:23
+Just a few small things actually that I realised that I'm doing here.
+17:31
+So um, on the command line just to make things quicker.
+17:36
+There are a couple keyboard shortcuts that I have. So, for instance, if I push up my Iraqis, that will show me the recent commands that I did,
+17:42
+and then you can cycle through them like that when you type into the command line.
+17:53
+If you press tab, it'll autocomplete. So if I have touch, see and touch.
+17:59
+And if I don't want to tap one of those files onto the thing and I got a tip top, it'll autocomplete to the rest of the rest of my.
+18:15
+OK, the so the other scenario when ARM will stop you is when you don't have permission to delete a file.
+18:31
+So if you are a user and you're in a file owned by user B, it'll say you can do that and then the right username and password and so on.
+18:40
+And the way to override both of these scenarios is so first of all, if we want to delete the directory and everything in it,
+18:52
+we do R.M. that half an hour that was deleted and it will actually not be there anymore.
+19:01
+I mean, I don't know if you can see it, but. And the other one would be R.M. and they will try and force through the past any permissions issues.
+19:11
+And as with all of that on the command line, you can then kind of stack them up.
+19:27
+So R.F. it does. So the Rs4 recursively. So Arment RF does and delete the thing recursively and force through any emission issues.
+19:34
+So the last two months that we have here are S.P. and M.V.
+19:48
+And copies of and.
+19:57
+And the problem of these things as source goes first and the destination goes second,
+20:02
+so if we assume this directory, we see that we don't have anything.
+20:10
+So let's make this Father Texte again and copy father to file to the text and realise again.
+20:12
+We now have two copies and that copy copied the thing in the first bit to be the second, the location given by the second document.
+20:24
+And these locations, by the way, can be full paths here.
+20:35
+They're just in relative parts to the place we are in it.
+20:38
+The other one is M.V., which moves the file, and it kind of behaves like you would expect so M.V.
+20:44
+Now to that, and I move it from three decades to see the fall is no longer there and it's changed to.
+20:53
+OK, so. The pseudo echogram and mounded stopped before I do any questions on that so far.
+21:10
+All right, so an want so pseudo, you can think of it as wrapping the stuff that comes next, pseudo gives,
+21:30
+whatever command follows it and the permissions of the root to the user that has most permissions of overall with the machine.
+21:43
+There are some, for instance,
+21:55
+files and directories that are essential to the functioning of the system that a normal user isn't allowed to edit for good reason.
+21:58
+But sometimes you do want to edit those out. In order to do that, you need to write suitable for it.
+22:08
+So what I can do here is let's see.
+22:12
+So we're still here. If I write a pseudo, I then.
+22:16
+Move five three so far forward. Now, I don't actually need permission to do this, but I've put to go before the thing,
+22:21
+which means that I say do this as a route, then I just fast forward and it doesn't.
+22:32
+So the effect is same as if I've done it normally and but there are some operations
+22:39
+that you'll run into that that do require a pseudo in particular on Mac OS since,
+22:45
+I don't know, three or four hours ago. A bunch of stuff when it comes to installing now requires route privileges, which I wouldn't have previously.
+22:55
+It's something you should be careful of. It's not something that you should use kind of just because somebody else has to.
+23:07
+But you do need to do it. And if you want to install a lot of things, like, for instance,
+23:14
+I do think that it could be wrong and that's now but potentially does need to be installed.
+23:20
+OK, so. And the next thing. OK, and so the of things dangerous is if you do pseudo R.M. dash our rationale for it,
+23:28
+that will delete all of the files on your computer, which is obviously and no good.
+23:44
+OK, so next thing is an echo, so Echo isn't if you've used an.
+23:52
+Bruinooge, just like Python or really any normal programming language echo works like print.
+23:59
+It just takes whatever string it's given and printed out of the command line and.
+24:05
+It and, uh, yeah, see?
+24:12
+There we go. So I had to quote, be the exclamation mark there, but so, yeah, so, um, yeah, so that's what it does and.
+24:26
+And the next command is GRAP, which is actually super powerful, so it's for searching in files.
+24:40
+OK, so if we do what we have here, so. And OK, and then if we go into.
+24:51
+And then we go round.
+25:09
+OK, so what it does is it takes this string, goes through this file line by line and then prints out every line where that string occurs.
+25:17
+OK. And there's some, you know, extra.
+25:28
+Arguments you can. You can yes, and I'm sorry there's a question there in the chat.
+25:36
+Can you search for string's in a folder of files and you kind of look and that is first going to show you this argument.
+25:45
+So this will help the lines as they connect.
+25:53
+And. Or, uh, if we go, let's say something.
+25:59
+OK, so if you posit the argument are, again, that's for recursive and then that is for the search, all of the files in this directory and.
+26:23
+So what I came up with here is that you are right, and the argument that I passed here just means this directory.
+26:41
+And next question is, can you use regular expressions? And you absolutely can.
+26:51
+So, as I said, this is one of the most flexible and powerful tools that you will have kind of on the command line,
+26:56
+including regular expressions of people who have used regular expressions, you know, and regular expressions.
+27:04
+Basically, that's a very powerful way to, uh and.
+27:10
+Search for things on the or give search strings so you can get the string,
+27:17
+for instance, which has like search for any string which contains A or an E.
+27:22
+The hyphen and puts the line number that that string occurred on before the thing.
+27:29
+So if we're going to just to demonstrate all the text and I write another hello, this last line, then I do.
+27:37
+They say, again, it'll show us that health workers on line one of line three.
+27:52
+OK. Yeah, I want a dance with the.
+27:58
+Regular expression stuff quite yet, because that's a huge kind of audience, but then.
+28:08
+There are decent tutorials on how to do it online, and it's superscreen, so if you get a good handle on that stuff,
+28:17
+that will serve you really well to automate a lot of tasks, to make a lot of tasks easier.
+28:24
+So is the mine command short for manual, and that will give you information about whatever you supply,
+28:34
+go Minecraft and it tells you all of this information.
+28:45
+Right, and you can scroll through it and it gives you the argument.
+28:49
+So. Here, for instance, people are asking about and can use regular expressions,
+28:54
+and this is how you do it, you give the locus of your capitally argument one of the.
+29:03
+For some on Linux and MapQuest, this is one of the places where the two things kind of regular expression supported by default are different.
+29:18
+So it gives you all of the different flags that you can give to the command, it tells you how to use the command.
+29:30
+It's a super, super useful. OK, so go ahead of them from there.
+29:36
+And then finally, the last one that you have here is the dot slash, dot slash runs, whatever comes after it and.
+29:43
+So if we hadn't executable in this directory, we will be able to so run it by doing the.
+29:55
+The dots in front of it before we do that, that we will have to figure out.
+30:06
+Permissions. So.
+30:14
+So on Unix and on my as well, every file is given this kind of a set of permissions and along with it,
+30:27
+and that tells you what you can add to the file for from different perspectives.
+30:37
+OK, so. First, three characters are from the owner and three characters,
+30:44
+the user group in the last three characters for everyone else, so and they are in groups of three.
+30:52
+So it's an execute, read, write.
+31:00
+Sorry, Reid, right, executed first one tells you whether it's a directory or a file and what this what this does is.
+31:06
+So since this is me, since I'm the owner of the file, I can read and write it account, for instance.
+31:15
+Right. Unless L is the command that I used here to give me all of the different extra information on the files in this directory.
+31:23
+So I don't, for instance, have permission to execute the file.
+31:32
+So if I tried here. And I get information tonight, not air, it wouldn't make sense to try and execute it,
+31:35
+since it's just a text file and there's no there's no script to execute in there.
+31:43
+And. What I can do, however,
+31:53
+is I can add the ability to execute the file using the command and command post act will add the ability to for the execute permission to whatever,
+31:57
+if I'm interested in. And now so again, we see that in.
+32:11
+At the end of the execute excuse that they want that.
+32:20
+So let's get rid of it and add something else to point out is the way that this is implemented,
+32:27
+you can you can manipulate this using wise operations in order to get a specific kind of specific pattern of permissions.
+32:39
+So if you figure out what the bits are for each one that will enable you to change the operation.
+32:53
+So. And anything on that so far, I wasn't going to move on to package managers.
+33:01
+OK, so. So we have a question there, is this similar to.
+33:20
+Spanish And then how did you make the Fox studio again so similar to an expansion?
+33:30
+It absolutely is. In fact, so the show that McEvoy's uses is Zaetta stage.
+33:35
+But you there are very, very few kind of differences.
+33:45
+Differences are annoying. For instance, one of them is the particular syntax that gret except for regular expressions.
+33:49
+And the one is that some small tools are or aren't installed.
+33:58
+But the high level kind of concepts and the basic commands like LCD and the everything that I've shown so far,
+34:02
+in fact, other than grep, will work the same in boxes at will, and that is will work the same in the version.
+34:09
+And then how them make the file executable. When I use the Mod Command Mod Command, it sets to arguments.
+34:17
+The first one is this one here. And I said, plus X, which means that X executable permissions.
+34:28
+And then the second argument is the file that you're interested in changing. Yeah, and, you know, as I said, if there is some you know, if you.
+34:37
+We'll find out about this stuff, the first place to look is always the man command.
+34:51
+And that will give you an really in depth information on how it works and this stuff can be a little bit difficult to read sometimes,
+34:58
+but it's but it is a very, very detailed and in combination with some Googling and some stack overflow.
+35:09
+It's super, super. It's super doable. OK, so the next thing that we have here is DDM.
+35:17
+Package monitors. So you have a standard package managers for LYMErix,
+35:25
+the only thing that I'm going to point out here for is it for Mako's that I would recommend using if you're going to stay on that course,
+35:33
+is an homebrewed. So through homebrew, you can install basically all the things that you need.
+35:40
+It works relatively well and it keeps things up to date and it keeps things
+35:51
+kind of then siloed off and it handles dependencies in a in a sensible way.
+35:56
+And you can like for each individual tool, try and follow the instructions on how to install that tool in its own,
+36:02
+you know, from its own website or whatever. Generally speaking, homebrew is the more painless way to do things, especially for smaller things.
+36:09
+Yeah, so. So we have some, um, uh.
+36:21
+Advanced concepts on the command line, but I also have to get through GHC and so on.
+36:39
+So that's actually what I'm going to.
+36:47
+I jumped in the. And.
+36:54
+Yeah, so the. And since I only have about five minutes left, I'm just going to give you a very quick overview of installing Haskell and using GHC.
+37:11
+There are a bunch of different ways to install Haskell, as I said, and the one that I would recommend for for.
+37:28
+In 2021 and using Mako's, that isn't, and one is to use a GHC yuppy.
+37:40
+This will let you install GHC, this installed all this,
+37:53
+let you install the different things and it keeps the different versions managed in a sensible way.
+37:57
+It's the easiest way to do that. Second best way to do it, if you don't want to do that, is to use homebrewed just to install JHC from their.
+38:05
+So once you have GHC installed and you have.
+38:19
+A few different commands and one that I want to demonstrate here, most important, one of the most useful one for everyone is the GFCI.
+38:25
+And so this puts you into a high school, Reppel.
+38:35
+And which works the same way a normal rapper wouldn't kind the where you would expect it to.
+38:42
+There are some extra commands that you have.
+38:52
+Commands in this Reppel are done by a Colomba before the name of the command and different kinds of different single letter names.
+38:54
+So, for instance, Camonte gives you the type of something. So the true is a able.
+39:01
+And and then you also have command overload and so on.
+39:12
+And yes, that was very, very quick run through that last.
+39:20
+The. I spent. OK, so.
+39:26
+Last question there. So if we are on and won, we need to install homebrew on virtual box and know the idea for anyone would be a virtual machine.
+39:36
+And I think other people were recommending parallel parallels or other for the.
+39:48
+Yes. Parallel for the virtual machine. I think that's correct.
+39:55
+Yeah. Perfect. And with the virtual machine for Mac, what was the VP recommendation for Intel Macs?
+40:03
+I personally am virtual, OK, but if other people have other recommendations, that would be.
+40:13
+And. So you recommend not using MapQuest at all and just using a VM and yeah,
+40:44
+that is the that is the recommendation if you can use a VM on your own machine.
+40:57
+I mean, it's up to you at the end of the day. But absolutely, the recommendation for us would be to use a virtual machine.
+41:01
+It is. And it'll save you a lot of headache and especially an.
+41:09
+The kind of stuff that that makes for very difficult to fix bugs later on.
+41:15
+I mean, using an A13 mark right now, we're trying to upgrade.
+41:29
+What's what what do you mean by an A13 Mac, a MacBook Air, 13 inch or an.
+41:38
+A 13. Chip.
+41:50
+Oh, well, if. OK, yes, that is.
+41:54
+Yes, that's another one of apples and oranges.
+42:02
+Well, they don't have the same issues as one. Yeah, so so if you want to upgrade to and then why not go ahead because you'll be facing the same issue.
+42:06
+Yeah, homebrew, what is no homebrew is a package installer comparable to what's it called to get on Linux.
+42:18
+But if it's relatively easy to use and if you are on a Mac and I would recommend
+42:30
+installing home brew anyway because you're going to need it to because if you know,
+42:34
+if anyone says he sends them stock over florins or something, oh, you need this command line tool to do this.
+42:38
+A homebrew is how you should be installing it is much safer.
+42:44
+The parallels are parallel, apparently parallel was the one that was recommended with Noize at the end.
+42:53
+Oh, sorry. Somebody else asked him, why don't we use stock and there's kind of a complicated.
+43:08
+Difference between stock and Kabalan and and all of these different things and
+43:20
+stock works great for if you want to go off and kind of do your own stuff.
+43:26
+It's a really good option. But the coursework that you'll have here I don't think relies on it, so.
+43:33
+Yes, it's powerful and quite a clean system, if you are going to that,
+43:42
+but if but I don't think we'll be using any heavy dependency management or anything like that, so we don't need to use it.
+43:46
+I'm planning on upgrading my Mac. Would you recommend buying an Intel Mac rather than an M1 Mac and.
+44:09
+No, probably not. I'm also planning to upgrade and I'm planning to upgrade to an M1 since they look a lot better
+44:19
+than what exists currently and I think the intel ones that are currently at are pretty outdated.
+44:26
+Yes, we're getting some recommendations. And the other thing I want to recommend just for high school and.
+44:36
+And it is a paid app called Haskell for Mac.
+44:50
+And it's in the App Store and it's not essential.
+44:55
+You'll need it for the course or anything like that, and you can use it as an editor.
+44:59
+But but if. You want a very nice kind of the environment with a Reppel next to it,
+45:03
+comparable to and playgrounds for Swift or something like that or Lightroom as well, I've seen it's a really good system and it really helped me.
+45:12
+We're in a hospital, so that's a recommendation if people want.
+45:24
+An extra programme to help them learn and get to grips with jail sentence.
+45:30
+No, it's called Haskell Fremont. It's a very weird name.
+45:38
+OK, so we are out of time. Are we out of time?
+45:58
+Yep, I think so. OK.
+46:05
+Perfect, so I'll leave it there and our next Q&A is tomorrow morning,
+46:12
+and then I will actually I didn't realise how many people are going to be on and and and on.
+46:18
+I'll try and figure out what the best approach for that is, because I'll get back to you with that.
+46:23
+Thanks very much, everyone. And I think we can finish their. Thank you very much.
+46:32
+OK.
+46:41

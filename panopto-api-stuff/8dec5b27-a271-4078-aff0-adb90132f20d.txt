@@ -1,0 +1,579 @@
+ID: 8dec5b27-a271-4078-aff0-adb90132f20d
+Title: DoCSoc - Introduction to Programming Utilities (1 of 3) - Q&A - Linux
+Category: COMP 1st Year General
+Lecturer: Konstantinos Gkoutzis
+Date: 06/10/2021
+Amy. I might have to.
+0:45
+Jamie, OK, yeah, there's lots of echo now.
+1:00
+Angulated. Like feedback, feedback.
+1:07
+And. Right there with the.
+1:19
+Is it echoing from your voice or. The.
+1:28
+I'm not sure. And so the problem is, is that my mike died on my desktop.
+1:35
+So I'm using my tablets, my. Desktops already, so I that they're just going to pick up the desktops here.
+1:45
+As long as it's fun when you need it, then I guess go with that.
+1:58
+It looks, but I'm not hearing an echo from you when I talk, when I hear my own.
+2:10
+Yeah, that's why I expect that's just going to be an artefact of how I'm going to accomplish my
+2:19
+speakers through my tablet because I'm already doing something dodgy enough to get this to work.
+2:27
+I literally have a server running on my tablet like features connected to the webcam and audio.
+2:35
+Yeah. It's pretty. Out of this mostly being muted and it will be OK, fine, it's fine now, I don't hear it anymore.
+2:43
+So now that it's not the worst thing in the world.
+2:59
+OK. Chattanooga. He looks great as well.
+3:09
+You to screech, Eric, I'm sorry, but if you can just.
+3:23
+I did try it. What?
+3:35
+But you can also say that. So if there are links because one of them.
+3:43
+Is for me, which is going to be Windows smashed Linux version of this and a computer, you won't be able to live in country this year previously.
+3:54
+Just get me that. So, yeah, if you it's 11 a.m. it's time to stand up and it's not taxed.
+4:08
+So if you if you will not use that, you probably go to a little later on at the same time, we will be stuck in his room.
+4:19
+There might be a delay in the other room because the other house, as it is said, said it's.
+4:28
+Wow. Well done, best prepared. That's the.
+4:44
+You should prepare for anything. Uh, yeah, this thing is the quality on this thing, by the way, the sweet cherry.
+4:51
+For me, it's fine if anybody has issues. That because this is quite a high resolution, are two small.
+5:02
+They can try and make it the country that again.
+5:14
+The text. Is that enough?
+5:21
+Yeah, should be fine. OK, well, make it even bigger and then remember how to make it smaller again.
+5:28
+It applies to all of them. No. So I think we'll wait a few more minutes for people to be able and now.
+5:39
+Let's get it on. Yes, I just introduce myself.
+5:59
+In the meantime, I'm Jamie.
+6:14
+It'll probably be seeing quite a fair amount of people this year and next year and then from Thursday, one up just disappear off the.
+6:17
+But I'm a GTA, which means I'm a graduate teaching assistant and I help on the on the first year and second year main website.
+6:27
+So let me ask my credentials for that is quite good.
+6:40
+I've been a student at high school now for three years and I've been using Haskell for up to three or four that.
+6:44
+So I can try and the noise cancelling, we can hope everyone starts really and yeah,
+6:55
+I'll also be helping out on the operating systems and co-pilots stuff next year.
+7:04
+Do I sound robotic? Put down the noise cancelling.
+7:12
+It's what I can do. I can switch my audio. So not.
+7:25
+During an. That is not the.
+7:32
+Not really so, but the best thing we're having a technical difficulty with using the same can and.
+7:48
+Well, I don't think I can get any less robotic,
+8:03
+maybe it's just me and some of the bush sounds like the most Catholic and so they should be anything affecting my voice at such.
+8:06
+But, um, yeah.
+8:17
+Was cutting back on it. They start drilling again, which been enjoying style.
+8:24
+You can still understand what I'm saying, even if I sound a bit weird. So on the left side.
+8:34
+Apologies for the late. Uh uh.
+8:53
+I think we can start this discussion because there seems to be more people throwing me me.
+9:20
+Will, let me take the floor. Would you be using your job opportunities, Mark?
+9:29
+Well, if you do particular, Mac, you're probably going to be using Linux so you can just stay here.
+9:37
+Um, so, yeah, this system works for if you have an actual Linux installation or you're using Windows and you want
+9:43
+to quickly talk over the options that you have there and what I'm using and what was being quoted,
+9:53
+I think it's being recorded now. This is all the right.
+10:00
+I definitely am. OK, so I think it is recording and hopefully the listener can figure out what's what's the difficulties with the microphone.
+10:15
+But for now, there's not much difference between Mac and Linux for this stuff.
+10:32
+So you can follow along here and straightforwardly just try stuff out of your machine as you're doing it.
+10:39
+And I think it will become a bit more important to the next session anyway.
+10:46
+That's when they'll start to sort of diverge a bit more. So for now, you'll probably be fine here.
+10:50
+I can I can handle all your requirements, so.
+10:56
+Basically, at the moment, as you can see, I am a witness, this is a Windows machine,
+11:02
+though, because the muscles what I'm using here is the Windows terminal.
+11:11
+And you can notice probably I've got a bunch of different options here, so I've got the normal Windows command prompt.
+11:16
+That's what you're probably used to seeing if you type C and D.
+11:24
+And I've also got these Linux ones so abundantly OK, which is the first one I made.
+11:29
+So what I'm using is called the Windows subsystem phonetics.
+11:35
+Lots of code of USL, specifically two.
+11:41
+Now what that means is I'm basically I got windows to stop this built in letters kernel and it sort
+11:46
+of allows me to use Linux within Windows without needing to duplicate or run a virtual machine.
+11:56
+So it's really fast and it's sort of very compatible with windows.
+12:01
+So that is my recommended way of doing things.
+12:09
+You could use Windows and Linux just like you can put Mac in the next, but is much easier to set up and deal with.
+12:11
+From what I remember yesterday, I think these days Microsoft has made the situation seamless and you can basically just run out
+12:23
+that stuff and install on a on administrator command prompt and it will start the process going.
+12:32
+And there is instructions online about how to do that. But it is difficult and it's it's how I recommend we do things.
+12:39
+Now, the caveat at the moment is that we don't have any DIY applications in Windows and Windows 11 because this is out as of yesterday.
+12:48
+But if you haven't received the update,
+13:03
+it might take some time to be an update from those 10 this month that will enable graphical user interface was that they don't have Windows 11 yet.
+13:04
+So what that would mean is you can actually run Linux programmes as actual
+13:16
+Windows and Windows at the moment instead of restricted to the terminal box,
+13:22
+which people still talk about tomorrow. So, Adam, so what is the next Linux is is a kernel and there are many operating systems built on top of it.
+13:29
+The one we recommend is unta. That's the one Microsoft will definitely install for you when you do WSO if you do that yourself.
+13:41
+So inside this world, which you can see from this very small penguin here, I'm working on the next.
+13:48
+So everything I type inside this box is equally applicable to Linux as it is Windows.
+13:54
+So so this will probably look familiar to you two terminals if you've got the TO installed, probably the same colour scheme.
+14:00
+Are there any questions about that at this point? So even if black.
+14:12
+Is that OK, if you're watching this and yes, most of the commands work similarly on Mac and Linux,
+14:19
+that would not be true if I were just using plain Windows.
+14:29
+But thankfully, I'm not I would not recommend, by the way, that anyone knew just plain windows to do any programming on.
+14:32
+It is a nightmare. So this is the best solution here.
+14:37
+So you'll be able to follow along with most of the basic commands and stuff.
+14:42
+And you can hop over when you when it's ready. And hopefully that will be fine.
+14:46
+Would it be best for us to, like, log onto the computer and then like you from Linux over there, if we don't have it installed on our own computer?
+14:55
+Yes. If you don't want to install it yourself. And like I said, it's very straightforward.
+15:05
+It's very easy. Yes. You can access the school computers to do that stuff.
+15:09
+I won't talk about that a bit more tomorrow and how to work on effectively.
+15:16
+But yeah, essentially you'll be limited to using come on line text editors and stuff unless you're using voice code.
+15:22
+That's that's the story for tomorrow. You can definitely do that. And I will show you how to do that as well today.
+15:31
+I basically just want to start off with is just handling a bunch of the Linux commands and familiar with how it works.
+15:39
+This will be true equally if we're running on this machine here or any other Linux machine, which includes the lab machines.
+15:49
+So I'm going to get started by just familiarising ourselves with where we are.
+15:58
+So at the moment, the way these things usually work is it tell me who I am,
+16:06
+what machine this happens to be called Leviathan and what direction I'm in at the moment.
+16:11
+The directory is called it's the whole directory.
+16:16
+The command on can help tell you where you are. So the directorate is also known as forward slash home.
+16:21
+So if I were to go there with KDDI, it takes me to the exact same place.
+16:32
+So that is just where I am now.
+16:37
+KDDI dot com. It's going to take me to the same place as well.
+16:42
+So basically stands by wherever you are at this moment in time, you can also get hired by details.
+16:45
+So the other special one I want to quickly show is not.
+16:53
+So that takes you back up to directory.
+17:01
+So at the moment we're at home slash GMT dot dot is just going to be home and lo and behold, dot dot ends up going to the home.
+17:03
+And I can sit back and Jamie and the was to tilt, so I'm sorry to interject for a second.
+17:16
+The mcauslan should be up. It's in the chat.
+17:24
+If somebody could kindly circulated it to the other first year students.
+17:28
+If you have a group chat, I would be nice. I'm sorry for their service issues.
+17:32
+Yeah, that's cool.
+17:41
+So just the basics of moving around. Now, another group commander, how about how else?
+17:47
+Let's start with the list, it tells us what files and folders are found in our current directory.
+17:55
+Quickly, do as I am going to fill my background with black.
+18:05
+Maybe we can easily see this. So these things in blue are going to be basically in my folders and then the things in the files I have in here.
+18:12
+So essentially there are a few more of them.
+18:23
+You can use that a you can. I've also got a bunch of stuff that starts with dots.
+18:27
+So the conventional index is that these are hidden, hidden files just for cleanliness,
+18:32
+sake, debate and bunch of stuff that you don't need to be too concerned with at the moment.
+18:39
+And so if I go out to home and I do, unless we can find out that the only place I can go to in here is called Jamy, which is my home folder now.
+18:46
+Is it like this? Yes, I like the idea. I think that's the one anyway.
+18:59
+So I just want to quickly illustrate this is a bit special because it has access to the entire windows fastest.
+19:06
+Yes, that's exactly what I was about to say. So this is where we are at the moment, is inside the Lenox filesystem.
+19:17
+They asked. They're kept separate and now in like windows you'd say something like C, drive forward, slash, blah, blah, blah, blah.
+19:26
+And so they have a special, special way mentioning this, and it is via slash and then T stands for Mt.
+19:35
+So now to drive C or F or whichever one of the poorest people.
+19:45
+So it's actually.
+19:52
+I think so, yeah. That is my actual windows directly into my afterlife.
+19:57
+So that's how you can, you can get to the windows folders. If you want to get the Linux for the Windows, you get to go via the Windows Explorer.
+20:07
+Basically Windows separates them happily via network drive, basically.
+20:19
+The thing about those programmes inside it by using E so I can actually open that in Windows Explorer by doing XY dot.
+20:26
+And this is the same thing that we saw before. That's the same, the same files and things.
+20:40
+And you can see basically how this has worked as it's mapped to this network drive WSO about to add preconceive.
+20:48
+That's probably a bit small, but I can't really do anything to increase that font size.
+20:58
+And basically you can access it completely normally via via this stuff in here.
+21:02
+So this is how you would get around the file system when Windows seven plans for you automatically,
+21:11
+when you'll be able to use a mix file browser instead, which will directly to it.
+21:16
+And why is the homes left rather than homes,
+21:24
+largely because there are multiple people and I think they've just chosen to to just call them homes because everyone lives there.
+21:28
+And so this is really what you need to know about the interaction between windows and doors.
+21:39
+You can open these files in the two.
+21:44
+So what I'm going to do is I'm going to switch to a fresh place is one I prepared earlier post docs.
+21:48
+OK, that looked like them cheekily. It's actually Stoeckle Jamie.
+21:58
+That's fine. So this is a fresh version of Atlanta and it's so fresh it doesn't even have GHC in it.
+22:02
+So yeah, this is about as fresh as you get and illest nothing.
+22:12
+This is a clean slate. Actually, there is a few things in here, but otherwise it's basically a free flight,
+22:17
+so stop demonstrating some of these commands and play around with them interacting with Windows and Linux to show that it can be done.
+22:29
+So I used to command it, touched the touch, basically do much better.
+22:39
+Firewall doesn't exist. It will make it so if I touch Hollowell dot text, nothing, nothing actually happens.
+22:45
+But you will see that HelloWallet text now exists in my home directory and there it is in in the windows and the windows thing here.
+22:55
+So there it is. It is a completely empty text file.
+23:08
+So I'm just going to put something in it on windows just so that that can be done.
+23:13
+So how can I see what's inside this file? So there was a few different options for this on Linux.
+23:18
+So one of them is Cat. So Cat had a lot of text.
+23:24
+It's just going to put the whole thing into the terminal.
+23:28
+And I can also use less and less basically would allow me to sort of scroll through a bit more controlled.
+23:33
+Obviously, the entire file fits in one line here, so it doesn't really make a difference.
+23:43
+So that's roughly how you can print out files.
+23:50
+There's also text editors I recommend no matter what I do, you may have to install that or not.
+23:55
+Something comes by default just to uninstall it and so is my go to text editor the terminal stuff,
+24:02
+because it's a bit less appreciative than they will Emax.
+24:11
+But but I can edit the files on this command line and if I go back and open them up, they have been changed so the two can interact with each other.
+24:16
+And that's what I want to cover all the interaction between the two of them that yeah, well, I try guess nothing comes up.
+24:29
+So if you try and I said nothing comes up, that's because you don't have any files yet.
+24:37
+And so if I remove Hanawalt text and I do ls there is just nothing there that NSWRL tells me.
+24:42
+There's absolutely nothing to see in here at all.
+24:55
+I love that they will tell me that there actually really is two things, but they're hidden by default.
+25:00
+So what is this command, what is it like because before I doing stuff and I could see these things so I left us.
+25:07
+L-A also tells you a bit more information about about the things that you can find in this folder, including when they were last modified,
+25:13
+how big they are, who made them, who owns them, various things like that and the access permissions.
+25:26
+So I think that there's a good description of this on the on the accompanying slides for this lecture roughly.
+25:34
+You know, they're talking about who can read and write them, execute them, various various other things.
+25:42
+So that going be important, the, you know, protecting your unfortunately users.
+25:49
+So where were we? So let's touch.
+25:58
+Let's touch. Hello again. So then we got to realise now how a lot of that text exists again and there isn't anything in it, so it's completely empty.
+26:02
+So what I want to show now is how we can manipulate these files.
+26:18
+So I'm going to demonstrate them died.
+26:26
+So EMK dynamic's directories, names, logging stuff is hard, isn't it?
+26:34
+OK, so this is a directory called Text Files here.
+26:45
+It's hard to know it's a directory. So what if I wanted to move this inside here?
+26:51
+Well, one way you could do that is opening the Windows Explorer in this thing and moving it manually.
+26:59
+So if you wanted to buy that cat and otherwise, there are a few commands for manipulating these things.
+27:07
+So someone's on. Where are the slides, when are they going to be hosted? OK, let's you could probably ask the.
+27:17
+So Cosentino should have somehow given you access to the notes for this scenario, like typed notes rather than slides, is just a demo of this stuff.
+27:25
+And then that's. Little. I don't I don't actually have access to what the first year students see, so.
+27:36
+If the notes haven't actually been provided, then.
+27:46
+I guess I put it in little chat. Yeah, I think the recording should go up on Panopto as well, right?
+27:52
+Yeah. So the recordings I'm currently recording and later I will I will coordinate with stuff like that.
+28:03
+So that should be fine. Yep.
+28:11
+And so I believe that I could find their way somewhere eventually.
+28:16
+OK, so what we did, we were moving things around so and so there are three demands of note.
+28:22
+Yeah. One is all we've already seen that the league statement stands for remove the other one is C that stands for copy.
+28:31
+This will physically make copies. So we'll see that in a minute. And M.V. start to move, physically move things around.
+28:43
+So what I'll do is I will move out of the text into text files.
+28:51
+And if I don't, there is nothing here. If I text files had a lot of text.
+29:00
+Is that now you can also you move to printing things.
+29:07
+So if you move hello, I'll text into text, you know, just feed off.
+29:16
+Text is not the file in there. Hello. Jobs have disappeared and I can also do that when I'm not in the directory as long as I'm sort of specifying.
+29:24
+So that's the way this works the other way around.
+29:37
+Let me make this too.
+29:41
+Oh, so the way this works is if you just sort of specify directories, the second element, it just gets violated without changing its name.
+29:46
+If you give it a different filename, it will move it there and rename it.
+29:57
+And what happens if you move the file into an existing file? Well, let's try it out.
+30:02
+So let's make a new file in here.
+30:08
+I'm just going to pop some stuff in it. I'll talk about text editors next time.
+30:14
+So don't worry if you don't know how I just did that, I'll talk about that in the next session.
+30:22
+Also, there's an edit, the text files text.
+30:32
+So they both contain different things, so the text contains just one and text files, all the text contains just two.
+30:40
+So what happens if I move that into the part of text?
+30:52
+Wow. Federal tax is now disappeared.
+31:00
+And if I cut that, we got text one, so replace it.
+31:05
+So be careful with that. They didn't ask for permission before we did this so that you have to be a little bit careful.
+31:11
+So what about some deep sleep would allow me to take that text and put it into this directory.
+31:18
+And now we have the text in here and another text within our rights that doesn't delete the original one.
+31:29
+It removes it as well. This can also rename things.
+31:38
+And so if I do the text through the text city, we got both of them and they'll have identical contracts, contents.
+31:41
+So I've thought of how to manipulate these these files or the command line.
+31:56
+So like I said, you know, we can equally do these things in Windows Explorer or in the actual Linux file manager when that's available to us.
+32:02
+I think this month. Sometimes this month, Windows will update and you'll be able to just access your Linux file system over the next file Explorer.
+32:14
+That, yeah, you know, it works the same way as it does out here, and I can relate to this and they will contain that one.
+32:26
+So, you know, you can you can do things like windows, obviously, during the next year, just going to be the next flight explorer.
+32:37
+So few other important things. So one of them, you're not going to be able to put on the lap machines.
+32:46
+So everything we've seen so far, we can tell that machines there's an important come on Sudan and it basically elevates your rights and privileges.
+32:55
+Obviously, you can't you and she will show you what it says so that you don't have to do it yourself a bit later than necessary into one of them.
+33:05
+And so it is quite useful if you need to steal stuff.
+33:16
+Sorry to interject again. I think the Zoome call will automatically add because it's a free account, so.
+33:21
+When it ends, just rejoined back. Yeah, but, uh, no, I'm not sure if they if they still do that,
+33:31
+maybe that's force forcefully and I want everyone to join them again and we'll continue.
+33:40
+So I stood out and I told to basically do things that otherwise you wouldn't have been allowed to do.
+33:48
+A couple of this include installing stuff. So the way to install stuff is to act.
+33:54
+So let's see what happens. One installed. Why don't you do subjects in Salt Lake not found?
+34:01
+OK, so make it something you'll be using for see, it's down the line that it's convenient because it's not been installed.
+34:13
+And usually if you come on, that you don't have installed limits will often tell you where to find it.
+34:21
+Sometimes it doesn't quite to work out what you want it. Sometimes it can just give you these commands.
+34:28
+So we do this and run it up.
+34:33
+I'll be asked to enter my actual department as it will install some stuff at this point.
+34:39
+Make now works. So that's how you basically install stuff in Linux.
+34:48
+You can install stuff on the machines in that same way. But yeah, that's probably how the system works.
+34:53
+Could you just repeat the installation? But yeah, that's fine.
+35:00
+I'm just going to get rid of some of that junk.
+35:04
+Wow, it's going to get rid of that junk. That's fine.
+35:13
+Yes, the installation part was sort of wrapped in Salt Lake,
+35:24
+so the syntax for this command still don't allow you to do Administrative Things Act, which is the package manager for.
+35:30
+But yes, Sutherlands mentioned it depends on the district. It absolutely does.
+35:37
+So for a bunch of which is the one we recommend using its APT and others have different different package managers,
+35:42
+installers saying that this is something you want to actually go ahead and install.
+35:51
+Make is the name of the tool or package, what's at the end.
+35:55
+So act as a package manager. So basically the way it works chooses to do things because they have these large repositories for pre pre-built binaries.
+35:59
+And Act is one of these sort of big places.
+36:11
+So you basically ask out how to install make plays and it's like, well, here's the binary for make and it does all the necessary setup.
+36:15
+Is there a way to make every command you do? It's provided to the studio every time.
+36:26
+Yeah. You can either sue to get into a single user.
+36:31
+I think if you the good thing is, is that when you do see the once in a session, you enter your password.
+36:34
+Every time you do start ups, you don't see how you can add your stuff into a super user that is like safer to use, hopefully.
+36:42
+And installing a bunch of crap,
+36:57
+so so something that's quite important then the fact is actually it doesn't have the most up to date things by default every
+37:00
+now and then you want to consider up to date and that will go and fetch the most up to date package lists from from the to.
+37:08
+So it's basically going to a place which has all these things, and that means that you get the most up to date information.
+37:23
+Then if stuff upgrading it will tell you to sort of upgrade.
+37:34
+In my case, it's going to wait until this is done, but in my case I'm already up to date.
+37:39
+So this will basically do nothing. And as you can see, you can't run apps updating or installing twice at the same time.
+37:46
+So I do have to wait for this one to finish, which might take a while.
+37:54
+So I'll just leave it running. So, yeah, that's pseudo.
+37:59
+So this is useful for your machines on the lab machines. Stuff's already installed in.
+38:04
+Not going to need to do it yourself. And so.
+38:08
+So everything I really wanted to come would act as well. So what's the difference between acting out?
+38:17
+Get a good question and get is just old. I think it's a legacy.
+38:23
+And so I think they're apt to just more up to date.
+38:29
+I don't think they usually just will work and I tend to favour at primary because I'm lazy.
+38:34
+I don't want to take the task. And it it's like.
+38:42
+How do you deal with those either through cell or something like mock up shadows and still run in windows?
+38:46
+But I recommend using a cell. I don't recommend using the the Windows terminal, which can be installed by the App Store Windows seven.
+38:56
+It's just nicer and it keeps everything in one place. So I got everything I need.
+39:09
+You don't start that sort of.
+39:14
+I think something is also worthwhile demonstrating is pipe commands as well.
+39:20
+So what do we got here? We got some tax cuts. What can you install the cell?
+39:26
+Where can you find the install instructions and think if you just Google for installing a cell, that will be a matrix.
+39:31
+But that one that docs dot Microsoft in thought up your cell.
+39:38
+How do you use that when, say, into the lab machines, I will show that in a bit.
+39:44
+It's just like, no. You just need to get that first.
+39:50
+So I'll just demonstrate these biting plants and then we will go over to the machine and see what the difference is with that.
+39:54
+Started at the.
+40:04

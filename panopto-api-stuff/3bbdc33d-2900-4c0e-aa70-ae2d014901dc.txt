@@ -1,0 +1,141 @@
+ID: 3bbdc33d-2900-4c0e-aa70-ae2d014901dc
+Title: 5.5 Optimality
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 14/02/2021
+So now we're going to show that binary search is actually optimal for searching an ordered list.
+0:02
+So how can we do this? Well, we have to argue about all possible search algorithms, including ones that we haven't even thought of.
+0:09
+But we know that any possible search algorithm, A can be represented by a decision tree because basically the algorithm has to do decide
+0:18
+where which comparisons to make on the list on the basis of the information that it has.
+0:27
+And the information that it has is just whether X is in that position in the
+0:33
+list and or whether X is greater than or less than that element in the list.
+0:37
+Well, to be a correct algorithm, the tree must have at least an nodes and the tree will be binary because basically each comparison you do,
+0:45
+it gives you three possible outcomes,
+0:55
+one of which is that you found the element at that position or else that you the element will be to the left of it or to the right of it.
+0:59
+Now, obviously, it would make no sense to go further if you have found the element because you're just making the algorithm work, do unnecessary work.
+1:08
+So we can assume that the algorithm stops at that point.
+1:17
+So that gives us the binary tree structure, as we've seen for our four binary search and indeed modified linear search.
+1:20
+So. But we know that the tree has got it at least, and nodes.
+1:30
+And so that means that we're going to have to have a certain depth to the tree.
+1:35
+And we need to work out what the depth is. So let's think, for instance, about N equals eight.
+1:41
+We need at least eight nodes in our binary tree and space.
+1:47
+We're trying to keep the death as low as possible. Well, at that zero, we can put one node.
+1:52
+Then we can put two at depth one for at depth two.
+1:57
+But that only gets us up to seven. So that means that one node has to go down on two depth three.
+2:01
+And therefore, the depth of the tree has to be at least three.
+2:09
+Well, but. So that's all lower bound argument.
+2:16
+We can now say that binary search is indeed optimal. In the case of N equals eight, because binary search has used depth three.
+2:21
+And we can't do any better than that because we need to have at least eight nodes in our binary tree.
+2:32
+So that's optimality for any equals eight. But of course, we want to generalise that and say that binary search is optimal for any value of N.
+2:38
+So let's think about the relationship between the depth of a binary tree D and the number of nodes, and we can prove the following.
+2:47
+If a binary tree has depth D, then it has less than or equal to two to the D plus one minus one nodes.
+2:59
+And we can prove that very easily by induction on the depth. So this is not induction on trees.
+3:06
+This is induction on the on depth. That's a simple mathematical induction base case D equals zero.
+3:11
+Well then we can compute that two to the zero plus one minus one equals one.
+3:18
+And indeed, that's the maximum number of nodes that you can have the depth.
+3:25
+Zero. Just the one node. So if the induction step, let's assume that it's true for depth D and look at a tree of depth D plus one.
+3:29
+Well, there's two kinds of trees.
+3:39
+We could have one is where we have two sub trees dangling down from the root node or the other one is where we just have the one.
+3:41
+But obviously if we're trying to maximise the number of nodes, then we're more interested in the left hand case.
+3:50
+So what can we say? We've got two children here.
+3:56
+These some trees. I've drawn them just as triangles, but they have depths less than or equal to deep.
+4:00
+And therefore, we can apply the induction hypothesis to say that the number of nodes on each of
+4:08
+these two triangles is less than or equal to two to the deep US one minus one.
+4:12
+So if we're going to maximise the number of nodes,
+4:17
+then we can say we've got one root node plus two to the D plus one minus one from each of the children.
+4:20
+And just by arithmetic, that gives us two to the day plus one plus one minus one, which is what we need to cheque the induction step.
+4:29
+So we've proved the proposition. And now we can argue about the M.A. of fine research.
+4:38
+So the three four algorithm A has at least anodes in it.
+4:47
+And if the depth of that is deep, then we know by the previous proposition that urn is less evil to to the D plus one, minus one.
+4:54
+But think about the worst case performance of Algorithm A that is just D plus one, because that would be the number of comparisons in the tree.
+5:05
+I'm omitting the fail nodes, incidentally. I'm just talking about the comparison nodes here.
+5:18
+So the worst case performance of A is D plus one.
+5:23
+But then we can simply rearrange this inequality's star here and get the deeper spawn is greater or equal to log of N plus one.
+5:28
+Just taking logs and in fact, of course,
+5:39
+deep us one must be great and are equal to the ceiling of log of N plus one because D plus one must be a whole number.
+5:43
+Well, then that's looking fairly similar to what we got for binary search, but not quite identical for binary search.
+5:51
+We got w n equals one plus flaw of log N.
+6:00
+Now we're saying that the lower bound for any algorithm for searching a and ordered list is sealing of log of N plus one.
+6:04
+Well it turns out that you can actually show that these two expressions are equal.
+6:14
+And I put that proof in the lecture notes. It's just a better basic arithmetic.
+6:21
+And in that case, therefore, the worst case performance of binary search is actually equal to the lower bound that we've got.
+6:27
+My reasoning using decision trees over all possible algorithms.
+6:34
+So any algorithm must do is at least as many comparisons in the worst case as binary search.
+6:41
+And therefore, we have shown that binary search is optimal for searching and ordered list.
+6:47
+So we could represent that. Go back to our diagram. And here is in the red region are all possible algorithms for searching and ordered list.
+6:54
+We've got modified linear search. Not so good. Worst cases and we've got binary search.
+7:05
+Very good. Worst case is log in, roughly speaking.
+7:13
+And we've got our lower bound argument that says you can't go into this screen region here.
+7:17
+And the green region is is basically says that you have to do at least that amount of work that we computed on the previous slide.
+7:23
+And it turns out that the worst case performance of binary search is actually just equal to that lower bound.
+7:32
+And therefore, obviously, there might be other search algorithms we haven't yet discovered.
+7:39
+But none of them is going to do any better than binary search.
+7:44
+And binary search is optimal because no algorithm for search can go into the green region below here.
+7:47

@@ -1,0 +1,939 @@
+ID: 19b1d23f-7a41-447a-82d7-acca00ee0924
+Title: Synthesized ACI Talk Feb 2021
+Category: AY20/21
+Lecturer: Tom Curtin
+Date: 09/02/2021
+Yes. There we go. Okay. Excellent. So welcome, everybody, to this afternoon's applications of computing in the industry seminar.
+0:02
+We've got a very interesting topic for you today, which is all about privacy in machine learning and other data pipelines.
+0:10
+Our speakers are going to be Nikolai Boldon, who is the founder and CEO of Synthesised.
+0:23
+And he's got a PSTN machine learning from the University of Cambridge.
+0:32
+And we will so very happy to have Rob Taylor, who actually has appeared in high energy physics from Imperial.
+0:35
+There we go. Where he was looking at A.I. algorithms to search for dark matter in the universe.
+0:45
+So that sounds very exciting.
+0:51
+So, yes, Nicolay, Rob, I'd like to invite you to take it away.
+0:56
+We're looking forward to this. X ray lemonde. Pleasure.
+1:00
+Pleasure to be here. Thanks for having us. Yeah. Yeah, in terms of the.
+1:05
+Well, the focus of the public debate of the presentation today,
+1:13
+so we're going to be talking about the so-called modern day architecture and practical implementation of ethics and policy data pipelines.
+1:17
+Now, this session is meant to be interactive. So if you have any questions,
+1:26
+please feel free to interrupt us and then we'll be very happy to don signing and you'll write any of the questions you might have.
+1:29
+I'm Nicholas, I'm the CEO and co-founder at Synthesised currently, well, looking after the product that synthesised and those strategic partnerships.
+1:39
+My background is fairly technical, so happy to delve into any technical discussion we may have today.
+1:48
+So I did my beer study at Cambridge, spend some time at Stanford,
+1:53
+used to work for a hedge fund from New York before we started the company with a microphone, though, about three years ago.
+1:55
+I'm joined by Rob today, Andropause and the manager near its synthesise and told SPG from Imperial College London as well.
+2:03
+Well, I guess the reason we actually wanted to come and give a talk is we continue to keep strong ties with academia and also, well, both of us.
+2:12
+Robin, I was responsible for the product design and really happy to share some of the recent work we've now we've done and synthesised.
+2:22
+So we founded the company in 2018 on the vision of an important world where progress isn't embedded by incomplete data.
+2:33
+And we believe that progress is actually impossible without data, without data being complete.
+2:41
+The well, the company is founded on the mission of to empower any data scientists, senior village,
+2:47
+near and best engineer with high volumes of high quality datasets, such state compliance with regulations and lot of duties,
+2:53
+the so-called decentralised data platform powered by machine work so that we can enable our partners
+3:00
+cell clients to maximise the value of the data and stay in compliance with the regulations.
+3:06
+We specifically specialise in sensitive data and we solve the problem of working with data safely and sharing the true essence of data.
+3:12
+The company right now has about 20 people,
+3:20
+so we keep while we continue having strong ties with the academia and Duke University, Cambridge and Puto, UCL, Oxford.
+3:24
+And also industrial partnerships with Microsoft, Deutsche about great gain and a number of fronts.
+3:31
+The well growth of the company we've been growing over the last three years,
+3:38
+stressed capital in the UK and Europe and looking to expand to the US later later this year as well.
+3:42
+So the problem itself is the problem of the well, as we've seen this,
+3:53
+that we've seen the massive explosion of structural data in the last two years, which has led to the problem of sharing the true essence of data.
+3:58
+And what you mean by that is that even though the complexity of data has increased, the information we should convey can based hasn't.
+4:06
+And while we have a number of technical people in the in the audience, so well, here we are talking about, for example, bioptic picture, I guess.
+4:15
+Well, dimension and complexity of data as well. And this result of that organisations can't really identify can pinpoint the true value of the
+4:23
+data with 65 percent of data data's value being utilised according to a number of recent status.
+4:31
+And even if they did, they still struggled to share it, even in of the data.
+4:38
+As a result, we've seen a number of data breaches and fines in the past with one of the largest
+4:42
+privacy claims filed in the U.K. a couple of years ago for British Airways,
+4:48
+losing about, well, exposing the data of over 400000 people customers in 2010 2019.
+4:53
+Well, when they do a shared product, teams, data scientists,
+5:03
+engineers still waste over 60 percent of the time to manually create less than 20 percent of possible test cases.
+5:06
+So this is the problem I experienced myself. And, well, also had cameras.
+5:15
+And also while working with a number of partners and where I come from,
+5:20
+a fairly sort of technical background and been doing machine learning for over 10 years now.
+5:24
+And I remember in 2011, I used to well, I used to design the recurrently on networks with the new method and also see what the Ranum training
+5:28
+the network on CPUSA before these has to gradient descent and gyppy use became became to think.
+5:38
+And then about five years ago, I realised that there is some massive disconnect.
+5:45
+There is a massive gap in terms of what we have achieved in academia and what we could actually
+5:50
+deliver to the world simply because of lack of data infrastructure to really empower those.
+5:54
+Well, in the middle of research and development. So in particular while at Cambridge and also while working for a hedge fund that
+6:00
+was hard to essentially around and very sophisticated advanced projects involving,
+6:07
+well, some sophisticated, deep, deep lorenc and advanced machine learning techniques.
+6:13
+However, well, most of the time I spent Gelhaus, while more than 50 percent of the time was dealing with data engineers,
+6:17
+trying to get access to different datasets, trying to make sure that they have the right shape, they'd have the right structure for for analysis.
+6:23
+And as a result of that, so we realise that we really need to take a step back and try to understand,
+6:35
+try to solve the problem at the core of the entire development cycle before the kind of machine you're in comes into play.
+6:40
+And advanced data science as well. This as well as assessing the past as well.
+6:47
+A data governance is penetrating every continent, being penetrated, every content over the last couple of years.
+6:56
+So we have Judy Pyar in Europe Protection Protecting the privacy of personal data.
+7:03
+CCPOA Keepa was introduced in the U.S. in the last couple of years as well.
+7:08
+APB on Australia. L Gibi Biddy's in in Brazil as well.
+7:13
+At the same time, over 35 percent.
+7:19
+The flash organisations, according to Gartner, will be either sharing or buying data via data platform by 2020, though from 25 percent in 2010 to.
+7:21
+And well, needless to say,
+7:31
+over 90 percent of executives are really concerned about the impact on corporate reputation of data being used inappropriately.
+7:33
+According to a number of recent studies. So what about traditional approaches?
+7:41
+So we have seen a number of data platforms with data governance, data minimisation platforms,
+7:50
+and what unites them is that unfortunately that they no longer they no longer meat industry requirements.
+7:56
+And I'm going to explain why, but also. Well, I think what organisations and the stand is that they cannot really share sensitive data.
+8:04
+They cannot really collaborate on.
+8:15
+And they basically came up with a number of different techniques, a number of well, I would say products which may somehow circumvent the programme,
+8:17
+such as data governance, such as data minimisation, number of data garnered spot as well, which are available in the market right now.
+8:24
+So the eventually while essentially the lack the well, I would say the coverage, the understanding of the essence of data.
+8:31
+And also there is a massive effort needed to implement these solutions.
+8:40
+And essentially it exceeds the value.
+8:45
+But also what you've seen is that traditional approaches to data processing, data sharing, this cloud based on the fact that data is a snapshot.
+8:47
+It's a static object, whereas the we believe that.
+8:56
+Well, many companies believe that while the data management platforms of the future will understand that data is actually well,
+8:59
+it's a snapshot of a signal and signal. It's more fluid, more dynamic.
+9:08
+So there has to be a better way of reaching that signal and exposing it and sharing it internally and externally as well,
+9:11
+that any anonymization is another one type of platform said that it's an attractive solution to the problem of sharing sharing data.
+9:18
+And as we've seen and we're going to present to that as well, is that they can blame ization.
+9:28
+It's simply not safe with a number of studies published in the couple in the last couple of years,
+9:32
+also will exist in simulated synthetic data solutions.
+9:39
+So someone say if was shown quite, quite recently as well.
+9:42
+At the same time,
+9:47
+the industry requirements are really about decentralisation of the ownership and across independent while across the teams oriented around domains.
+9:48
+So companies really want to be efficient and really well,
+10:00
+and we want to make sure that they can run different projects without bottlenecks of dealing with the world as a kind of fact.
+10:04
+What I did in my career with different data engineers in a case by case basis, so that it really has to be a self-service on demand high.
+10:12
+Well, access to high quality SAFET data products available for research and development right now.
+10:20
+Of course, the entire system has to be compliant with both internal and external data governance and privacy policies and well, as a result of that.
+10:28
+So we understand that they can randomisation is not safe and not scalable.
+10:38
+And other approaches also essentially three data serve static object and I mean as coming from the email and stats background.
+10:43
+So we understand that database the is the container for the information it conveys.
+10:51
+And the problem is that the original date, they said fairly bad container.
+10:57
+And what you're going to present today is a different way,
+11:02
+a new way of essentially conveying that information and making sure we can optimise the way, how we how we share it, how we will.
+11:06
+How we collaborate on that. And we're going to show that that section, not only it's not only efficient,
+11:14
+but it's also actually much, much safer compared to the I don't have solutions which are.
+11:20
+Well, which are available in the market right now. And I'm going to hand head over to Rob to continue with the with.
+11:25
+We we're showing the ad we're showing a different way of solving the problem of sharing sensitive data.
+11:32
+Thanks, Nick. Yeah. So here are synthesised.
+11:40
+We believe we've created the data platform, which can solve the problems of sharing data in a privacy and compliant preserving manner.
+11:43
+So at its core, this is the architecture of our Dajarra Tightropes platform, and the centre of it is our deep generative model.
+11:54
+And this takes in.
+12:02
+Raw data and data requirements, such as functional mappings between columns or potentially conditions that you'd like that data to adhere to.
+12:05
+And then the generative model is trained on your raw data. The output is then high quality synthetic data, and it's important.
+12:15
+This then captures all of the correlations and hidden patterns within the original data.
+12:23
+And with that quality, we can then be ensured that the synthetic data has the exact utility as the original data.
+12:29
+And so it could be used in all downstream tasks such as model training, software testing.
+12:37
+And we are sure that this is done then within a privacy preserving manner.
+12:42
+So just simplifying it further. If you go to the next slide, Nicolay.
+12:47
+So a simple picture then is if we have a potentially sensitive data set with some personally personal identifiable information,
+12:51
+such as names, ages or unique identifiers.
+13:00
+Historically, this is very difficult to share this data, because you can easily identify some real people in it.
+13:05
+And so there's huge concerns about sharing this data with the synthesised platform that's going to get fed into our model.
+13:12
+And we'll gets output is synthetic data where there is no one to one mapping between the original and synthetic data.
+13:19
+So all the records are completely new and unique.
+13:25
+Individual, but fake people. And so you can be sure that this data uses them preserving the privacy of the original data.
+13:30
+So we can actually do a lot more with this generative model that we have than just privacy preserving.
+13:38
+So I just want to take a few moments now to just go through some applications of the synthesised
+13:44
+technology that can be used to improve your and our processes and data science pipelines.
+13:49
+So there's a few topics. This is data orientation, rebalancing and validation.
+13:55
+And a Nicholai would touch on Fanis later on. So in terms of augmentation, if you go to the next slide, the guy.
+14:00
+It's well known that augmenting your training data set with noise or extra samples can improve the performance model,
+14:09
+especially in computer vision problems. This is this is a well-known technique.
+14:17
+You can do the same thing with synthesised on normal cross-sectional sexual tabular data by augmenting your dataset with the synthetic samples.
+14:23
+So if you have a very small dataset, you could augmented the synthetic data to improve the variance and diversity of data set.
+14:31
+And what this does is it reduces the chance of overfishing of your models.
+14:38
+You then get better generalisability of your model and also you can improve the estimation of your model performance.
+14:42
+So this plot on the right is just an example of a model trained on the Japanese credit data set.
+14:47
+And in blue, we have the original data with as high variance in the area under the curve classification metric.
+14:53
+But what we can see is that you're open to augmenting with synthetic data,
+15:01
+we both improve the performance because now we have a much larger sample of training data.
+15:05
+And so the model is able to just capture that the patterns. And much more efficient way.
+15:10
+We can also reduce the uncertainty in our estimation of the AUC.
+15:16
+So we get a much better confidence in the performance of a model. So beyond augmentation is, of course, rebalancing, which is another big problem.
+15:20
+So most data sets, if you're doing classification, it's very unlikely that you're going to have perfectly balanced classes.
+15:30
+And this is a big problem. If you're trading any model, there are, of course, existing techniques to count, count to this.
+15:37
+But with synthesised is very easy to do. And you can also rebalance beyond just simple classes.
+15:42
+You can also up sample complex segments within your data.
+15:48
+So, for example, in this in this pile here, we're showing the results of Upsampling, a bank and data set.
+15:51
+We're trying to predict whether a customer will Chen from a bank.
+15:57
+And we could see the synthesised solution performs much better versus existing techniques such as smote or random oversampling.
+16:01
+So be on rebalancing is perhaps a topic which is less covered.
+16:11
+This is mono validation. I would synthesise you can improve the mono validation process quite significantly through our data scenario generation.
+16:17
+So it synthesised you can actually simulate hypothetical scenarios to study your model stability.
+16:27
+So, for example. Your model may be trained on a specific segment of a population, but over time,
+16:33
+if you have a model that's to put it in production, this population may shift the domain of your data.
+16:39
+It is no longer what it was once from the original training.
+16:44
+And so to study the stability and robustness of your model to domain shifts or population shifts,
+16:49
+you can create synthetic hypothetical scenarios within society synthesised to study the behaviour of your model under any scenario.
+16:56
+So, for example, he was looking at credit scoring data set where we have chosen to machine learning
+17:04
+algorithms to predict whether someone should be able to receive credit or not.
+17:11
+Naively, if you just take the original training set.
+17:18
+And look at the test performance of a UC and F. one school,
+17:22
+you may choose a neural network because on average, you know, weighted combination of these two metrics.
+17:27
+Performance better than the random. She's not to look, it's Gloria is where your population of your data changes.
+17:31
+So here we look at a five percent default rate and a 20 percent default rate.
+17:40
+What we can see is a neuro network actually performs much worse than the random forest.
+17:44
+So rainforest is much more stable to population shifts.
+17:49
+And so if you have a model which is deployed in production and is very sensitive to variance in your population, then.
+17:53
+It's you can use this technique of generating hypotheticals, hypothetical scenarios, to really choose the model which is best for you.
+18:01
+And then this basically increases your confidence and your model performance.
+18:09
+Thanks, Rob. And by the way, the session is meant to be interactive, so if anyone has any questions, please let us know.
+18:22
+But yes, our Rob has shown that essentially that he said a new way of working with that data safely, sensitive data safely.
+18:29
+And it's achieved by understanding that data is essentially a snapshot of signal.
+18:37
+Which of the information which it conveys. And by packaging that signal better,
+18:42
+we can unlock much more value from from that information and will be packaged by means over these so-called synthesised datasets,
+18:47
+which is the original title of this or this presentation.
+18:54
+Well, not only efficiency, but of course, I mean, when we work with the sense debate, I think it's important to clarify the.
+18:59
+The well to ensure that the processes are safe and privacy.
+19:07
+Privacy, preserving. And of course, I mean, that goes without saying that the privacy of personal data is that fundamental.
+19:11
+Right. And it's should be at the core of any data process of what you see, the sharing process.
+19:18
+So companies understand that they simply cannot share sensitive data.
+19:27
+They cannot collaborate on sensitive data. And people also well aware of this and also I'm not really comfortable with that,
+19:32
+exposing with getting the data exposed to different email models, software, software products and services.
+19:39
+And that's the dilemma, which is on the one hand, we want to ensure that we as society move and essentially develop innovative solutions.
+19:47
+But at the same time, we want to protect the privacy of individual of individuals.
+19:56
+And as a result of that, so different companies have tried to design some kind of data minimisation solution,
+20:02
+state government solution since that, as I mentioned. But according to recent studies, so those methods were shown to be unsafe.
+20:09
+And, well, there are two types of risks associated with the different, the minimisation techniques.
+20:18
+So the first one is the so-called identity disclosure risk, where it's possible to essentially identify while the personal well,
+20:24
+first on information of individuals survive this so-called how much need to tax background knowledge attacks,
+20:33
+skewness attacks and similarity attacks and many, many more.
+20:38
+And also, well, apart from the I guess, the identity disclosure,
+20:43
+that is a massive risk of this so-called that'd be disclosure when it's actually possible to, well, identify.
+20:48
+Well, understand a bit more about the statistical pattern of then data, and that can also lead to a massive data location, the massive risk.
+20:55
+One of the examples, which I'm sure many people have had their office, the so-called Netflix data challenge, the was a challenge published,
+21:05
+well organised about fifteen, fifteen years ago by Netflix to essentially design the best in class recommendation system.
+21:14
+So there are other hackathon. And they released the data set to the participants in the hackathon, which was meant to be anonymized.
+21:22
+And then about two years later, a group of researchers came up with their well,
+21:30
+with a way to identify the entire the entire dataset by essentially linking it back to the publicly available information found on the B website.
+21:34
+And over 95 percent of individuals who are simply identified, even though the data said it was meant to be completely anonymous.
+21:44
+And this topic has been obviously started a lot in the academic world and also in an industry.
+21:53
+And you're going to find quite a few, quite a bit of information out there about it.
+22:00
+Also, different kinds of synthetic vapour solutions and the so-called similarly,
+22:07
+the solutions solutions were shown to be unsafe as well and unsafe to work with.
+22:11
+And I'm going to briefly mentioned that as well. And your hybrid to answer your questions, if people have any.
+22:16
+And the way how are we? Well,
+22:24
+we found that a different way of ensuring that privacy of individuals is actually preceded by understanding that original data is only the container.
+22:27
+It's only the container for the information which is out there for the signal.
+22:38
+And unfortunately, the problem with the original data is that's a very bad container.
+22:42
+It leaks the well, the information about individuals.
+22:47
+So think about what a large sort of discarded dataset.
+22:51
+And typically you get over, say,
+22:55
+five hundred millions of records in that given sort of creates a dataset and all of them convey some some insights, some signal.
+22:57
+And that signal is less sensitive compared to the datasets which the data says we should convey, which carries that information.
+23:06
+And by understanding that.
+23:14
+So it's essentially possible to repackage the information which the data said keris, and essentially package it in the more privacy secure container.
+23:15
+And so we call it, well, they synthesise data.
+23:23
+The way it's done is a sweep in the computer science department by using the deep generative modelling techniques
+23:27
+and the way how the the the entire process works is that we essentially encapsulate the data while original data,
+23:35
+which is sensitive, which is which also has some issues with the quality as well.
+23:43
+So we encapsulate that entire signal. So we extract all the signals and then we repackage them much better come back.
+23:49
+Welcome back to the original data. By means of the different data products available through the through the platform and data product, as you know,
+23:55
+is essentially it's well, it's a new sort of paradigm in the kind of computer science street and data as well, essentially as a product.
+24:04
+Right. Which entails that the product also has some obviously purpose and those side ownership.
+24:13
+So we know, of course, that this famous saying from Ben Horowitz, that sort of from Marc-Andre,
+24:20
+some saying that software is ECD in the world and something that's become a as a service right now.
+24:26
+So we are really entering the new new world where data has become an SSRI with some data is in the world.
+24:33
+And not only that, but that does become an asset as a product.
+24:41
+And service is slightly different from a data product by injuries of.
+24:44
+Well, service also means that data products have some insights associated with them.
+24:49
+And this is all possible. And when you understand this, the data can be treated as a product, as a service.
+24:55
+It's essentially much. Well, you can understand the well, you you understand that.
+25:01
+You can convey the the quality and the the power of the information which data carries in a much in a much better way.
+25:07
+So what about bias? And when we when we release the the platform up about six months ago,
+25:19
+we realised that while we we founded the company on the vision of an empowered world where where well, progress isn't embedded by incomplete data.
+25:27
+And when you thought about what that actually entails is that it's not only about privacy,
+25:38
+but also it's a lot about the I would say they'd have been pure.
+25:43
+And when we think about what what it means. It also entails that we really have to be careful with that difference.
+25:49
+Well, I would say bad pattern's bad. I would say Skewness in data which it carries, such as, for example, bias.
+25:56
+And I do understand about a couple of months studying this problem and found quite a few misconceptions in the in the
+26:05
+industry and also realise that most of the war that had been done in this area was essentially quite theoretical.
+26:13
+And we really wanted to provide data, fairly sort of practical solution to the problem of data bias and discrimination.
+26:20
+So what we realised is that one of them is cancelable. What we saw is that one of the misconceptions is that fairness is a property of the male model.
+26:28
+Often the Mellops well product and hence companies need to ensure that the customer facing models model similar discriminatory.
+26:37
+And that's, of course. Well, that's of course, that, of course, makes sense.
+26:46
+But at the same time, we realise that I mean, a male models are trained to use in using some data sets.
+26:51
+Right. They're trained and tested using some data sets and also not only male models,
+26:57
+but also different teams like Mirken team sales teams, product teams get exposed to different data pipelines.
+27:02
+And that's you know, Amelle is essentially a trained to identify different skew.
+27:12
+And there's different biases in data and it uses it to achieve better performance.
+27:17
+So we realise that essentially the problem has to be solved at the core and the data pipelines,
+27:23
+as opposed to trying to achieve trying to ensure that the Mellops profit,
+27:28
+while they're Mellops product or platform is is, well, Complan to be the different Bias's sense.
+27:32
+Well, ethical, ethical use of data. And we realise that essentially the reason the reason being is that, as I mentioned.
+27:42
+Right. Even if we solve the problem for machinery models. So there is still a problem.
+27:49
+Well, the promise to exist in terms of the datasets by, as David said, has been exposed to the evidence.
+27:53
+So we really wanted to solve the problem at the core. And then you started essentially working on the so-called notion of data data bias.
+28:00
+And we studied the number of techniques. How to.
+28:07
+Well, what data bias means and and what discrimination means.
+28:11
+And one of the famous sayings and one of the famous questions is I get untold data sets biased.
+28:15
+And isn't machinery essentially used to to identify those biases and leverage them?
+28:23
+And then we realised that essentially there is a massive difference between discrimination and data bias.
+28:30
+So discrimination happens when the well, the bias is against the legally political debates.
+28:36
+And there is a number of them in the in the UK, US, European Union, other other countries as well.
+28:41
+And it's very important to to ensure that Amelle is not trained to identify them, leverage that that bias against legally protected applicants.
+28:48
+Okay. So we we understand what discrimination and data bias mean.
+28:59
+And then you might ask a simple question again.
+29:05
+We have a number of sensitive attributes in my life as I've kind of just remove them to make the dataset fair and biased and so unbiased.
+29:07
+And this result, the male models and other teams getting exposed to that data set also.
+29:15
+Well, essentially ensuring that the those models are fair and unbiased.
+29:21
+And unfortunately, it's not that simple. So here's an example in statistics.
+29:27
+Typical in oh, same obviously in large datasets.
+29:32
+There is a massive dependency between different attributes within within one dataset.
+29:36
+And even so here, for example, we have very simple example with the credit scoring dataset,
+29:41
+which Rob was also referring to, is that we might have nationality, location, age, income.
+29:48
+And unfortunately, even if one, we know that nationalities are legally protected, that remote.
+29:54
+And even if it's removed, unfortunately, can propagate into the rest of the agreements.
+29:59
+And essentially, the credit scoring model will be discriminating against the nationality through glycation idea.
+30:05
+So we found a new way of dealing with that data bias and discrimination, and it's based on the so-called data rebalancing, which Rob also mentioned.
+30:14
+And it's essentially consist of two very simple steps.
+30:25
+So the first one is that we have to be able to identify bias against illegally
+30:29
+protected attributes to the subgroups and groups are legally protected others.
+30:35
+And once once it's done. So we need to understand that data is essentially a signal.
+30:41
+And we need to be able to understand how to how to curate that signal by understanding high dimensional statistical properties, some that signal.
+30:45
+And what do we design? This so-called rebalancing, which is not only one dimensional, but it propagates across all the different dimensions.
+30:54
+And we found a way to quickly manipulate the structure of data,
+31:02
+to make it to make it unbiased and make sure that the teams who gets exposure to the to this dataset,
+31:05
+to this to those pipelines where those datasets will flow, that that those those teams can also essentially leverage.
+31:13
+Fair and unbiased datasets.
+31:21
+And essentially, what we realised is that this is it's actually possible to remove all the Skewness and all the other bias,
+31:24
+all the discrimination from the pipelines without actually losing too much too much value from the pipelines.
+31:33
+And we've done a number of studies and typically at big that just got in our payments data, you'll get over 700 columns in a kind of large dataset.
+31:39
+And the number of, I would say, sensitive attributes is fairly small.
+31:49
+And by essentially rebalancing them, it's still possible to maintain high fidelity of models which leverage that set.
+31:54
+But those sustain that compliance with that data regulations and also ensuring that the entire process is safe.
+32:01
+And privacy, privacy, preserving and and ethical, ethical as well.
+32:09
+I'm going to this is I'm going to stop here. So this is some of the references you would want to share.
+32:14
+So we've published a lot about the topics of data privacy, fairness, algorithmic biases.
+32:20
+The work Rob presented is also available on our website.
+32:25
+So we wrote quite a few white papers about data science applications,
+32:31
+how we can essentially leverage the fact that the data can be treated as a signal and how we
+32:34
+can essentially improve the stability and robustness of male models with with synthesised.
+32:39
+The platform was actually available on right now. So we given.
+32:46
+Well, please apply for access securest the link.
+32:51
+So just follow the link and just apply for the Firaxis. And I would love to would love to show you how it works in terms of the team itself.
+32:56
+So we actually grown quite rapidly right now in the U.K., Europe and increasingly in the US and hiring across a number of roles.
+33:04
+So we're hiring for the Amelle engineering positions. Also, we have a number of internships open.
+33:11
+And also, as I understand, it's, of course, a lot about building the entire infrastructure.
+33:17
+Well, essentially, 3D and data is a signal as opposed to the kind of static snapshot.
+33:23
+And we also are, of course, hiring. We'll have a number of full positions for data engineering positions, sort of for the engineering roles.
+33:29
+Please reach out to Morgan Head. Yeah, follow this.
+33:37
+So just use this email address. And I would love to. We'd love to have a chat with you.
+33:41
+But also, this session is meant to be interactive. So happy to you.
+33:45
+Yes. Insania questions you guys may have. All right.
+33:51
+Thanks very much. Nicholai Rub. Anybody got some question? I suppose I have a question on you on the machine learning rules.
+33:55
+That's OK to ask about. Yes, absolutely. I was just wondering, like I'm currently searching for work, just not myself.
+34:13
+So I'm wondering what sort of gets repository opened up.
+34:21
+And I've just finished a professional development certificate in machine learning and writing are in place.
+34:25
+And I'm just wondering what sort of projects would you be looking for to be impressed by?
+34:32
+Her role machine. Yeah, it's a little bit difficult.
+34:41
+Difficult to tell, so but I would love to love to read you the review of the work you've done in the in the around.
+34:48
+But overall so typically, we like to say that while we encourage our engineers to be well-rounded in three fields, such as well,
+34:55
+some basic statistics, machine learning and software engineering, but also it's very important to have some deep understanding on one of those areas.
+35:07
+And we can help with the well, with the rest.
+35:17
+So for us, it's very important that we be that all our people so actually invest in their personal growth as soon as we get someone on board.
+35:19
+We invest all our resources to make sure that people grow within the company.
+35:26
+And typically we will expect to be proficient.
+35:31
+Really good that at least one area and we can definitely help with the rest. Rob, do you have any any additional comments?
+35:36
+Now, I think you've you've covered most of them, I guess, in terms of personal projects,
+35:47
+maybe we get to see applications of generative bottling and an understanding of the.
+35:50
+We'll take note of that. A brilliant one, one thing I was wondering about is,
+36:00
+are there big differences between when you're dealing with alphanumeric data and then when you're dealing with graphical visual kind of data?
+36:06
+And I mean, you must be a much harder challenge to do privacy, preserving transformations and visual data, especially, for example,
+36:14
+for medical image applications, where you probably the you know, the quality of the MRI image probably plays a big role.
+36:24
+Right. So we specialise in, well, sensitive structured data sets.
+36:34
+Even though the techniques are actually quite,
+36:42
+quite similar to the I guess the technique is dealing with that with images, because so much can be also through.
+36:44
+So, of course, as we know, as soon as well, three dimensional kind of metrics.
+36:50
+Right. Then it's well. And it's essentially possible to treat it so well in the way how it restructure data as well.
+36:56
+But, of course, some. Well, I would say nuances. And of course,
+37:04
+there are some well tweaking that needs to be done in terms of the algorithms to
+37:09
+achieve sort of the right the right quality and the efficiency of treating images.
+37:14
+Yes. Right. So in terms of the policy, the techniques are slightly, well, quite different.
+37:19
+So here we basically have had to spend quite a bit of time on ensuring that we design the right metrics,
+37:25
+do well, I guess, evaluate the privacy of any output data.
+37:31
+And it's indeed used by what we are essentially the way how we do it is to be run different statistical linkage impacts on on the
+37:36
+output data and ensure that there is no way how we can recover the information about the individuals in the in the original design.
+37:44
+But for the iPhone four images. So those techniques, of course, need to be adapted because the nature of the at the X is slightly different.
+37:52
+Right.
+37:59
+Because essentially while here we really have all the information stored and in one structure data set, whereas with images it's easy to understand.
+38:00
+Right. So it can also be, I guess, depends on the time of type of images.
+38:11
+And also there can be a number of different variations how to present the same type of information in the in the image.
+38:14
+So it's just so slightly a slightly different lubricant. Yeah. Very interesting.
+38:21
+But we haven't we haven't studied the kind of privacy aspect of that just just yet.
+38:25
+Yeah. As I said, it depends very much what it's an image of a great image of somebody's space is much more identifiable than,
+38:32
+for example, like a skin lesion or something. Exactly.
+38:39
+Yeah. Good. Does anybody else, 70 fellow Christians. Yeah, I do, actually.
+38:46
+Hi. I'm from I'm part of the computational privacy team here at Imperial.
+38:52
+Thank you for your presentations. Very interesting.
+38:57
+My main question, I guess, is more like, how do you do you test for the privacy of your techniques?
+39:00
+I mean, synthetic data is a pretty big topic. Like, a lot of discussion has been had on the topic of this in the privacy community.
+39:06
+And as far as I know, like from a privacy perspective, the question, you know, the question of the privacy of this data is still very open,
+39:15
+like simply stating that, you know, you don't have the same individuals in the original data.
+39:24
+And isn't that data and you can do linkage attacked, obviously, because, you know, there are different individuals should be doing that is not enough.
+39:28
+And I think you mentioned at some point that there's a reason is gonna keep my topic.
+39:35
+Maybe you're mentioning that data privacy mirage may prompt certain process.
+39:38
+Exactly. Yeah. How does that like hope? What kind of a taxi you used to evaluate the privacy of your data of the day?
+39:43
+Yes. So we. You're right. So it really depends on the context and the what we mean by essentially privacy of a given data set.
+39:50
+And it does vary depending on the domain and depending on the context will be around the number of statistical linkage attacks.
+39:59
+And also a number of other sort of attacks. But essentially, the idea is to, in a way, try to identify the well, the well, destroy the.
+40:08
+So basically that's the hypothesis, right. Saying that I hate this.
+40:18
+We assume that this data set, this is privacy presumed.
+40:21
+And then let's try to do to prove that it's not right.
+40:25
+And we essentially around a number of number of attacks,
+40:29
+a number of deaths to try to link and explore some of the information in the original data set.
+40:31
+The it's unfortunately the answer is depends because the the privacy really the main specific and can be well, essentially for some data sets.
+40:38
+It's about those about the so-called tactical disclosure.
+40:49
+So it's the kind of given domain even disclosed in some of the, I guess, attributes which may not be well be II.
+40:52
+Right. So but essentially sensitive personal information is also considered quite, quite bad.
+41:02
+So it has to be quite a bit of customisation and understanding alignment on what privacy means in the in the given domain for a given company.
+41:07
+But yes, in general,
+41:15
+I we we definitely it's quite well known that synthetic data engineered always is not safe and it has to be treated well ethically.
+41:16
+Well I would say in with their view that with understanding about the scientific limitations.
+41:27
+Right. So just. And of course, I mean, you know, like a very simple example. Right.
+41:33
+So saying that the guy how are you if I have no fibreglass in my data set on defrayed able to do on them.
+41:36
+And they produce, then of course it violates privacy. If we agree on the notion of privacy that I would like.
+41:42
+So for that Bowdler that actually will identify that outlier violates privacy.
+41:48
+But that sort of depends on the domain. That depends on the specific on the specific company.
+41:52
+Right. And then because of that. Yeah.
+41:57
+So it's it's it's really can be can be onsets in general.
+42:00
+And of course, has to we have to go into like specific demands and specific types of specific types of datasets as well.
+42:05
+Yeah, that makes sense. Have you thought of maybe running a I don't know.
+42:14
+I don't know if you've heard of air cloak. So it started doing well.
+42:18
+They're doing like your Crovitz system or Eskild wrapper that provide, quote unquote, privacy for the underlying data.
+42:22
+If you thought of doing like some form of a competition where you open late your your system to researchers and people in the communities just saying,
+42:28
+hey, you can if we can find users in the data or do some kind of privacy leakage in a way that, of course, is yet to be defined.
+42:36
+Then you win the contest, gets money, that kind of stuff, is it?
+42:44
+We are not we're not interested in that. So be it. But I think for us, it's very important to work with the community,
+42:49
+essentially do what you're going to be doing is that you are going to be released and I'm given back to the community the work of that.
+42:55
+And so that's definitely the roadmap. But the just of the competition to.
+43:02
+It's not something we currently currently focus on.
+43:06
+OK. Thank you. Can anybody else get some questions?
+43:12
+Yes, I had a question on essentially. I don't know if how hard or easy this question is to answer,
+43:29
+but I was curious about if you could provide any kind of statistical guarantees with your generative process for your synthesised data,
+43:36
+because obviously that's what you're looking for. Right. With with any kind of synthesised dataset.
+43:48
+And you want to know if basically it's the same as your original.
+43:53
+But just with an itemised participant. So that's that's just if you could talk a little bit about that, I'm just kind of curious.
+43:57
+Sure. So do you mean these statistical guarantees in terms of the, I guess,
+44:07
+utility or in terms of the privacy or interest with the fairness in terms of the utility?
+44:11
+Yeah, sure. There is a number of tests which we which run,
+44:18
+and those are some of the I guess like well known and pretty recognisable in the in the academic communities and all such as
+44:23
+obviously the training different the male models in two different environments and ensuring that the results are similar.
+44:31
+Of course, using different cross-validation techniques, et cetera.
+44:38
+Then of course, there are some high order sort of statistics comparing the I guess the the two to different datasets,
+44:41
+ensuring that some of the hidden patterns which we are able to identify are similar.
+44:50
+And of course, I mean, so some basic tests are available as well, such as obviously one dimensional kind of patterns, one dimensional signals as well.
+44:57
+OK. So that makes. So it's it's pretty much like high level similarity tests.
+45:08
+Not so much like making sure that, for example, if you're running like if you're looking at, like, the averages of mileage or something,
+45:16
+you want to make sure, like, for example, the median is the same wars or stuff like that in your synthesising process.
+45:26
+So you don't do any like from like low level guarantees.
+45:33
+It's just like high level. It should be similar on high levels. Is that is that correct?
+45:38
+Not quite. So we also look at the insights from data and making sure that those are similar.
+45:43
+And those can be. And that's how actually I mean, the main specific. So it's.
+45:50
+Yeah. For say, in the insurance domain. So it's slightly different metrics in the Balkan domain.
+45:56
+It's against slightly different and but. Yeah.
+46:01
+So we make sure that we provide the customisable infrastructure for companies to design those metrics and ensure that the results are similar.
+46:04
+So that's kind of phenolic in product development. Similarly, I guess the privacy. Right.
+46:12
+So we we are not saying that, hey, we basically give you already a predefined solution.
+46:16
+Right. So we're giving it the framework you can use. And how do we also provide the guidance, how to use it?
+46:23
+And then it's, of course, up to you to to ensure that you basically use it in a kind of efficient and also privacy particular manner.
+46:29
+OK, sounds good. That makes sense. Thanks. Very good sense of trust, time for just one more question.
+46:42
+Maybe a last one from me then when it comes to the removing the the bias.
+47:03
+How dependent is that on the particular application and understanding the context in which the the data is going to be used?
+47:11
+And do you think that's something that you should have to get involved in?
+47:21
+For every one of your customers, or do you think that's something that better left to the customer to deal with?
+47:25
+Yeah, that's a very good question. Similar to privacy, we provide the infrastructure, we provide the framework and the guidance how to use it.
+47:32
+And it's up to them how they essentially eventually eventually use it.
+47:39
+And the reason being is exactly as you mentioned, that it's the problem is the main specific.
+47:44
+And in some areas, the bias may propagate quite heavily, what, very deeply into the rest of the data set,
+47:49
+whereas in some areas it's less so and different metrics still needed to eventually validate that that that aspect.
+47:56
+And but at the same time, of course, we do provide some automatic automatic techniques.
+48:07
+And Joseph, the bias of the notifications. So that's fairly automated and there are no customers customisation that needs to needs to happen.
+48:12
+But some of the kind of tweaking with regards to, I guess, mitigating that bias is treated them and specific.
+48:20
+So we basically intercept the. Yeah. If I go back to this slide, like here, for example.
+48:28
+So like the balance and I kind of value that through the fact that, well,
+48:36
+you OK, you win, we provide you a way to rebalance data, pay me to goodbye's.
+48:41
+But of course, I mean the way how how much of how much you enforce that kind of process really depends on the domain.
+48:46
+And we we only give you the two cents to be basically let people essentially do the work.
+48:54
+Right. So similar with our with our privacy rights. So we provide the tools and we let them do the do the work.
+48:59
+Right. And ensuring that, again, they get set up at the right level of understanding of what?
+49:05
+Of essentially fairness and the also the privacy for their specific domain, for their specific use case.
+49:12
+I think that's a very sensible approach.
+49:20
+Otherwise, you become bogged down in a in an in-depth analysis of of every one of your customers, which I don't think is going to be scalable at all.
+49:22
+So I think the approach just providing the tools and, you know, leaving the job to the customers is a very good one.
+49:33
+Excellent. All right. Has anything occurred to anyone else? Just as a last question, this is your last opportunity to ask.
+49:42
+I suppose that's going to add. Is there any way which you cheese around them states for another mazing your data so that you can.
+49:53
+Randomised to data and then randomise it shaking and so it's you back your original data set.
+50:02
+Or is that a bit of a security risk? Yeah.
+50:07
+There is definitely a massive, massive security risk going just to randomised and data and then just.
+50:11
+Well, trying to use some transformations of original data.
+50:18
+So minimisation and actually obfuscation method, some of them actually well known.
+50:24
+Well, essentially leverage different different transformation techniques.
+50:30
+And that's well known to be to be unsafe because it's possible, too.
+50:34
+Well, often possible to link the kind of some of the anonymized data with publicly available information.
+50:38
+And yet while they identify some of the personal information.
+50:46
+All right, lovely.
+50:57
+Well, I think that we have to end because we're out of time, but thank you very much, Nicola and Rob and Gina from the synthesised team.
+50:58
+It's been a pleasure to have you. Thank you very much.
+51:10

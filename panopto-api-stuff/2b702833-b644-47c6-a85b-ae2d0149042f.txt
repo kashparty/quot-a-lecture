@@ -1,0 +1,143 @@
+ID: 2b702833-b644-47c6-a85b-ae2d0149042f
+Title: 4.2 Correctness, PQs
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 06/02/2021
+So now I want to talk about correctness of Dijkstra's algorithm.
+0:02
+Well, the algorithm clearly terminates because we increase the tree each time we execute.
+0:06
+The while loop. So eventually we run out of new nodes to add.
+0:11
+So we we certainly can argue that it terminates. But why is it correct in terms of computing the shortest path to the finish node?
+0:15
+So we need to formulated invariant. Which is invariance or discussed in their reasoning about programmes course.
+0:24
+So here is our invariants need. We'll have three parts, so it's a reasonably complicated, invariant, but I think it's easy enough to understand.
+0:36
+So first of all, if X is in the tree or a fringe node other than start, then its parent is a tree node.
+0:46
+So if you're in the tree, then your parent is in the tree.
+0:54
+And if you're in the fringe, then your parent is in the tree because you're one away from the tree.
+0:58
+The second part of the invariant, if you were a tree node other than start, then distance of X is the length of the shortest path.
+1:04
+And parent of X is its predecessor along that path. So the tree is giving us the shortest path for any node in the tree.
+1:14
+And distance of X is the true distance of that shortest path.
+1:25
+So the most subtle part is, is item three.
+1:30
+And this says that if your F is a fringe node, then distance F is the length of the shortest path where all nodes except F are tree nodes.
+1:33
+So it's the length of the shortest path to the start.
+1:43
+If you're only allowed to use tree nodes in constructing that path apart from the fringe node itself.
+1:47
+And furthermore, parent of F is its predecessor along that path.
+1:53
+So it's not necessarily the true shortest path, but it is the shortest path, only using tree nodes.
+1:57
+If you're in the tree, we have the true shortest path. If you're in the fringe, then we have the shortest path.
+2:03
+Just using tree nodes. So when the programme terminates.
+2:09
+Well, finished will be a tree node. And therefore, by item two, we have indeed found the true shortest path.
+2:15
+So that gives us the post condition that we have found the shortest path from start to finish.
+2:22
+So what remains to show is that the invariant is established before we go into the wire loop.
+2:29
+So our initialisation code will set up the invariant to be true.
+2:34
+And secondly, that the invariant is maintained through the wire loop.
+2:39
+So if you do an iteration of the wire loop, if the invariant was true before you went did that,
+2:43
+then it will be true after you do that iteration of the wild and.
+2:49
+So I'm just obviously we have three things that have to be.
+2:54
+Well, I will say, well, they were met showing that anything is established that pretty easy.
+2:58
+And as far as maintaining the invariance concerned, I'll just show that.
+3:03
+Item two is maintained and met. The proof for one and three. Just to save time.
+3:07
+So OK. So let's suppose that Effy is added to the tree.
+3:14
+And that means, of course, by the code that F has the shortest distance amongst the fringe nodes.
+3:19
+So the path given by the out algorithm is just following the parent function from f back
+3:26
+to the start and inverting that we need to cheque that that really is the shortest path.
+3:36
+That's what we need to know because F has joined the tree. Everything in the tree.
+3:42
+We already have the shortest path, but now F has joined the tree. So we need to prove that we really have the shortest path.
+3:46
+So let's for a contradiction, suppose that we have a different and shorter path.
+3:53
+Capital P. Not necessarily using tree nodes.
+3:57
+Why should it have to do that? So here is our path in Red Path P.
+4:00
+From the start going to F, which is different from this path that we've found using the algorithm in the black.
+4:06
+Well, this path P has to leave the tree that at some point.
+4:14
+So let Y be the first node along the path P from the start, which is not in the tree.
+4:20
+And and it's it would leap across from X, which is in the tree to to Y.
+4:27
+Well by far in very in three distance Y is less than or equal to the distance from the start to Y using the path P.
+4:35
+Okay. Because this is a path, this path in red is a path from start to y.
+4:50
+Just using tree nodes as intermediate nodes.
+4:57
+So because of item three in our invariant we know that the algorithm has found distance Y to be at least as good as that.
+5:00
+Okay. But that tells us that the length of the whole path, the whole red path here is at least distance Y.
+5:09
+OK, but then distance Y is great and equal to distance F.
+5:19
+By our choice of F because otherwise we would have put Y into the tree rather than f on this iteration of Dijkstra's algorithm.
+5:24
+And therefore putting all of this together, we can see that P is at least as long as path F, it could be the same length.
+5:32
+But it's certainly not shorter. So that tells us that this is a true shortest path from F to the start, which is what we need to maintain.
+5:40
+Item two. I'll finish on Dijkstra's algorithm by showing you the version with priority cues, just as Prem's has a version with priority cues.
+5:52
+Then we can do the same for Dijkstra's algorithm. The code is pretty much identical.
+6:07
+We first of all, initialise an empty priority queue, put all the nodes in with key values of some large number, which I'm calling infinity here.
+6:14
+And then we add, we initialise we change the start node to have key zero so that it will be the first to be selected.
+6:24
+So then it will go into the tree on the first iteration of the while loop while finishes not in the tree.
+6:36
+So that part is different from Prem's algorithm. And there's something still in the queue.
+6:42
+Then we just do a get me in and delete me on the queue to find that fringe node F and we set
+6:48
+it to be in the tree and then we look at its neighbours and if they're not in the tree,
+6:55
+so therefore they must be in the queue. If Y is not in the tree, it must be in the queue.
+7:05
+And whereas in Prem's algorithm we would just compare the weight of f y with the key of Y.
+7:10
+This for Dijkstra, we compare key of F plus WFYI.
+7:17
+And if that's smaller than Ki of Y, then we decrease the key to be that new value.
+7:22
+So key here, of course, is just the distance. Function.
+7:29
+Well, the analysis of the priority queue version is very much the same as for Prem's algorithm.
+7:36
+So Dykstra, with priority queue implemented by Binary Heap's,
+7:42
+will be overall bigo of M log in, assuming that N is less than M, as is usually the case.
+7:47

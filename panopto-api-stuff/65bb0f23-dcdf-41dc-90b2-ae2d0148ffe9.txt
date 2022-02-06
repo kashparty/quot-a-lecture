@@ -1,0 +1,115 @@
+ID: 65bb0f23-dcdf-41dc-90b2-ae2d0148ffe9
+Title: 6.6 Average case
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 21/02/2021
+So now let's look at the average case and try and get a lower bound for that.
+0:01
+So let's first consider how we measure the average case.
+0:07
+And let's take our three thought example. Here is the decision tree.
+0:12
+There are six permutations. And in general, it's difficult to know quite what the probability distribution should be.
+0:16
+But for sorting a list, it seems natural to assume, unless we know better, that each outcome is equally likely.
+0:25
+And so that gives us probability of one six three each of these six outcomes.
+0:33
+And then we can easily compute just the weighted some to get the average case number of comparisons.
+0:38
+So let's just do that. We've got.
+0:43
+One six is from Asia. For each of them. And then we just put down for each outcome the number of comparisons.
+0:52
+So it's two plus and three plus three plus three plus three plus the right most one, which is plus two as well.
+0:57
+And so that is just adding that up. We get 16 over six, which is indeed two and two thirds.
+1:08
+Well, so that's that the interesting point here is that this is not much worse.
+1:18
+Less than the worst case, which is three comparisons. Let's now see how we can generalise from that.
+1:23
+So, first of all, we need the concept of total path length. So let's consider this different binary tree.
+1:32
+Again, it's got six leaves, but it's a bit more straggly and the depths are as shown.
+1:38
+So the average depth, we can just compute in the same way.
+1:46
+And it means just taking one sixth for the equal probabilities and then adding up the depths of each of the outcomes.
+1:49
+So let's define the total path, land for tree to be the sum of the depths of all the leaf nodes.
+1:58
+So it's just whatevers within these parentheses here.
+2:02
+So that's the total length. Well, suppose that that T is a decision tree for sorting a list of land.
+2:06
+N. Well then it should have N factorial leaves.
+2:14
+And let's suppose that the total path length is B and then the average case number of comparisons is just be over N factorial as we've seen.
+2:19
+Well the number of leaves is just fixed. The infector all we can't do much about that.
+2:28
+So what we to find our lower bound, we want to find a lower bound on the total path.
+2:33
+Lenth. And it turns out that the total paff length is lowest when the leaves are at roughly equal depth.
+2:37
+So let's define a tree of depth data to be balanced. If every leaf is either at maximal depth deep or it's a D minus one, just one below that.
+2:47
+And if a tree is unbalanced,
+2:58
+this proposition says that we can find a balanced tree with the same number of leaves without increasing the total path length.
+3:00
+We might reduce it, but we won't increase it. So I'm not going to prove this, but let's see how the the idea of the construction.
+3:07
+So here I have an unbalanced tree on the left because I've got leaves at depth D, D minus one and also D minus two here.
+3:15
+So to make this more balanced, I can move some leaves away from depth D and move them into the lower depth part of the tree.
+3:25
+So let's take this red leaf here and let's remove that and let's add it back here.
+3:37
+So it's gone from depth three to depth to. Well, that had the effect of destroying this leaf node here.
+3:46
+So let's add it back. So that means that now that leaf node has moved from depth one to depth two.
+3:53
+So adding up. We've got a net zero effect on the total path length.
+3:59
+So about this tree is obviously balance because it has depth three and all the leaves are at depth D or D minus one.
+4:05
+Well, you might also spot that we can do something else to this tree, which is that we can just prune away at this leaf node altogether.
+4:16
+And that has the effect of moving it from depth three down to depth, too.
+4:24
+So we can in that case, this is actual strict improvement in the total path length.
+4:28
+So with those kind of operations, we can actually balance up a tree without increasing the total path length.
+4:34
+OK. So when we're looking for a lower bound on the totem pole of land,
+4:44
+we can just consider balance trees because those are the minimal in terms of total path length.
+4:48
+But in a balance tree of depth day, what is the average depth of the leaf nodes?
+4:55
+Well, it must be between D and D minus one.
+5:01
+So therefore, the lower bound for the average case we can just take to be it just by taking the floor of log N factorial rather than the ceiling,
+5:05
+so we can just adapt our worst case analysis and say that any algorithm for sorting a list of N.
+5:20
+N must perform at least floor of log N factorial comparisons in the average case.
+5:27
+Well. So that gives us a lower bound on the number of comparisons needed in both the worst and average cases to sort of this depends n for instance,
+5:35
+for N equals 10, the worst case. A lower bound is 22.
+5:44
+The average case a little bit better. I've computed it exactly. Here is twenty one point eight four.
+5:50
+Though I would have said twenty one. Going on the previous slide and a good sorting algorithm would use not much more than this number.
+5:55
+So Insertions thought is poor because it uses forty five comparisons in the worst case for N equals 10.
+6:03
+And therefore we look for a better sort it better sorting algorithm.
+6:09
+And we will see that merge thought will indeed give us a much better, worse case performance.
+6:13
+Roughly in line with the lower bound that we have computed here.
+6:21

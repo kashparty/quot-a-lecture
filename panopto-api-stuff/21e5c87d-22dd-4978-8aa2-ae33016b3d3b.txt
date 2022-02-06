@@ -1,0 +1,133 @@
+ID: 21e5c87d-22dd-4978-8aa2-ae33016b3d3b
+Title: Induction over Numbers - 6
+Category: 1 - Induction over Numbers
+Lecturer: Sophia Drossopoulou
+Date: 23/01/2021
+When it come to our last part of the discussion of induction for numbers.
+0:03
+What we will do is we start with two cautionary tales, similar we will be proving things that are patently wrong.
+0:09
+And the aim is to find where the error is.
+0:19
+And afterwards, we will give a conclusion to the discussion of induction for numbers.
+0:23
+So here, I'm going to give you the proof that the sum of the numbers between that to an end is end times and plus one divided by two.
+0:30
+And this is quite surprising because at the beginning of this unit,
+0:42
+what we have shown is the sum of the numbers from zero up the N E's and dimes and plus one divided by two.
+0:48
+And it is definitely the case that these two terms are not equal.
+1:00
+But these two terms are equal. So there will be some problem in the proof and the challenges for you to find it.
+1:06
+And then I'm going to prove that Fibonacci always done an even number, which will also be a bit odd, peculiar, not odd.
+1:17
+It's going to be peculiar. It's peculiar because it will not show returns zero one one, two, three, five, eight and so on.
+1:29
+So there are a lot of numbers there that are not even.
+1:42
+But I'm going to give you a proof of that. So let's find them.
+1:46
+So here we see the roof scheme to show the property about the sum of the numbers in the base case, we have to show that the property hold up to zero.
+1:52
+And in the inductive step, we will take an arbitrary key.
+2:04
+We will assume the property haunts for K.
+2:08
+And we will store it homes for K plus one. No big surprise there.
+2:12
+And here is the proof in the base case. We want to show that the property holds for zero stole the sum of the numbers between two and zero is zero.
+2:18
+This is by definition of the sum and the zero times one divide by two.
+2:29
+Abuse may also zero down. And here is the step, so I start with some of the numbers between two N.K. plus one.
+2:36
+I break it down into the some of the numbers up the K and K plus why that's the definition of some.
+2:47
+Now, I apply the inductive hypothesis on the sum and dioxane this term.
+2:54
+And then I apply arithmetic. And then.
+3:02
+Then. So here is the proof in all its glory.
+3:05
+And you are invited to think where the error is.
+3:10
+The other example is the proof that the all Fibonacci numbers are even in the base case,
+3:20
+I have to show that the federal natural zero is either even in the in the in back of step here, I'm going to apply strong reduction.
+3:28
+There is now apply strong induction is to because Fibonacci is defined in terms of two predecessors.
+3:37
+So in the step I'm taking a K, which is arbitrarily I assume that the property holds for all predecessors of K.
+3:44
+And I'm going to show that it calls for K plus one. So this is the the proof schema.
+3:54
+The architecture of the proof. And now we're going to write the proof.
+4:01
+So. But not to all vote zero east, even because zero is even and this is a true.
+4:07
+I have taken the definition of even to be. It is a multiple of two.
+4:18
+And I love this month the people B also zero.
+4:23
+And then I in the step I take an arbitrary K, I assume that it holds for all predecessors of K and I want to show that a bunch of K plus one is even.
+4:27
+So how do I do it. I say that one notch of K plus one applies the definition of Fibonacci.
+4:40
+Then I apply the inductive hypothesis on Fibonacci of K on K.
+4:47
+I implied that inductive hypothesis on K minus one.
+4:54
+And I get that. In both cases, I get an even number.
+4:59
+And now that some of. Do even numbers.
+5:06
+So I get that this one is even and this one is even. And therefore, this one is even two.
+5:11
+So that some of proven members is even. And then. So, again, is that a matter of.
+5:17
+On Tuesday, we'll be discussing with you where the arrows away, you will also find the answers in the footnotes.
+5:33
+But I hope you we will have the opportunity and the fund to discuss it together on Tuesday.
+5:40
+The numbers. And that we have seen that the.
+5:46
+From the genetic induction principle,
+5:54
+we obtain the specific induction principally for each assertion and from each induction principle, we obtain the proof schema.
+5:56
+And it's important to separate the proof schema from the proof in order to be very clear.
+6:07
+What we want to do, what is given and what is to be shown.
+6:13
+Please do it. My experience is that quite often people do mistakes already up the proof schema.
+6:17
+And once you have made a mistake there, it's very difficult to recover from that.
+6:25
+From that point,
+6:29
+another reason why you should be writing the proof schemas is because in the exams you will be getting marks for having written proof schemas.
+6:30
+So here's mathematical induction. Here is a mathematical induction for the technique.
+6:45
+The difference is that we start our investigation at the numbers that are great.
+6:54
+They are created equal M for strong induction.
+7:02
+The difference is that that we are considering all predecessor between zero and K.
+7:06
+And then there is the adaptation of strong induction of weather.
+7:13
+Rather than look at between Zero and K., we look at between MLK and here in mathematical induction and strong induction.
+7:17
+The conclusion is that the property calls for all natural numbers for that technique and for the extend.
+7:27
+That strong induction of the conclusion is that the property holds for old numbers that are great that equal some and.
+7:36
+This concludes the discussion of induction of the numbers. Next week, we will be applying similar ideas when reasoning about Haskell data structures,
+7:45
+which are an example of something that has been defined by recursion.
+7:57
+Thank you.
+8:02

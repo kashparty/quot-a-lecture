@@ -1,0 +1,937 @@
+ID: 9a27d99f-b182-4404-8f15-acc300f636a4
+Title: Qube RT ACI Talk Feb 2021
+Category: AY20/21
+Lecturer: Tom Curtin
+Date: 02/02/2021
+If you can find something that you enjoy and that is also paid for, then it feels like you almost never work a day in your life.
+0:00
+It's just. That's the way to sort of find happiness at work.
+0:08
+And the other sort of piece that I would sort of share from these twenty five
+0:12
+years is that it's always a good idea to let unexpected data change your mind.
+0:16
+OK. So the first thing I wanted to say is just, you know, why do we overclock?
+0:23
+Why is this something that happens in the office? How is this something that's, you know, of any interest to a financial company?
+0:29
+Right. The interesting thing is it's just that to trade on the stock markets,
+0:36
+there's some very intense mathematical and technical challenges and we process huge amounts of data.
+0:41
+It's basically saturates any link we can get a hold of. We can fill that with incoming information to normalise and process.
+0:49
+We're always in a race to find the best deals first. And it's competition with an enormous number of people out there.
+0:57
+We're trying to do the same thing. So we have heavy calculation as well as I.
+1:03
+And then finally, we want to get our orders into the accused first rate.
+1:09
+So front of the line as soon as possible.
+1:13
+It's the problem is sort of like if you think about writing a box to buy tickets from a really sought after concert,
+1:16
+there's a lot of similarities there where you want to get your information as soon as possible, process it, make a decision and execute it.
+1:23
+So one of the things that really helps is if you have a P.C. that's capable of doing just a little bit more
+1:30
+calculation than your neighbour and pushing the envelope of the C.P.U with Intel is one of the things that we do.
+1:35
+So we care about microseconds at the macro level and then even nanoseconds can become important to us and things that we have to measure.
+1:43
+So you can start to see that there's some really interesting technical challenges here to measure
+1:51
+time on very fine levels of precision and to sort of coordinate this between multiple machines,
+1:56
+calculation, parallel. It's really quite an interesting computer science problem.
+2:04
+And overclocking. OK. So there's a slight difference between what we want to do for a sort of a work environment versus a home one, right.
+2:11
+So we share in common with like a gaming P.C. that we want to have the best stable core speed.
+2:19
+OK. So that's the most calculations that you can get out of a single core.
+2:25
+And we also are looking at what's called encore.
+2:30
+I'll get into that a little bit more briefly, but that's the speed at which, you know, different threads running on different chorus.
+2:32
+Talk to each other, read and write to the cash. Talk to the memory.
+2:40
+So it's kind of like the second part of the C.P.U that you overclock.
+2:45
+It's sometimes ignored in what you'll read on sort of gaming forums, but it becomes quite important for highly threaded applications.
+2:49
+So even when I'm doing like a setup at home for sort of gaming performance, I will still pay quite a bit of attention to the Oncor speed.
+2:57
+OK. So getting onto that.
+3:05
+I just wanted to show you what a ship looks like kind of physically, you can sort of see here that we have an eight core C.P.U.
+3:08
+And you see the individual cores are labelled. And then you can see like the cueing, the other core of the IO shared cache and memory controllers.
+3:17
+So when I talk about configuring the core speeds and multipliers, that's like the individual core, as you see exposed in the C.P.U.
+3:25
+When you're working on your system and Honokaa is going to be the speed of the cash cueing IO memory controllers and things like that.
+3:33
+There's some terminology gets a little bit confusing.
+3:44
+If you research online, you'll see it called a few other things like you can see uncommon system agent used almost interchangeably.
+3:46
+But realistically, when you get to the nuts and bolts, there will be a setting in the bias that lets you tweak the Oncor multiplier as well.
+3:55
+So, again, if you think of optimising the core speed, that's how fast one benchmark would round a single core.
+4:04
+So say we optimise for just the core speed. We can get like the best performance of Salek doing a calculation benchmark on a single car.
+4:11
+But if we look at uncaught, suddenly the speed at which all of these cars talk to each other for a heavily multithreaded
+4:21
+application that will improve dramatically as interlinks are sped up as well.
+4:26
+I talk about stability. It's very important to financials.
+4:33
+We don't just try to go blazingly fast as fast as possible.
+4:39
+We try to make it stable and stable, has kind of a technical definition that I like to use here.
+4:42
+You know, just as the example here, I've got a home system and all I five ninety six hundred K and I can get it to
+4:49
+boot fairly far into windows at five point three gigahertz before it crashes.
+4:55
+But obviously that would be no good for trading. We basically set a rule that says zero errors.
+5:01
+And to do that, basically we'll push it as far as we can.
+5:07
+That will pass a stability test. And the one I really like to use is a Mersenne prime calculator.
+5:11
+So Mersenne primes for the mathematically inclined is basically that the idea that it's powers of two minus one are prime numbers.
+5:18
+Is that conjecture? And a lot of them. It's true. Of a lot of them it's not.
+5:28
+So effectively, you take a known dataset with known solutions and you run computations to factor those primes.
+5:32
+And if you get the same answers as the known solution set, it's a pass.
+5:40
+If you get a different answer, that's very bad.
+5:45
+And, you know, on a gaming P.C., that might be a couple of pixels out of place on a trading P.C. that might be know incorrect order.
+5:48
+So we set a zero orders or zero errors threshold.
+5:56
+So practically speaking, that just means that you crank it up as fast as it can go and then just dial it back a bit.
+6:01
+When you get right down to it, there's not a huge difference between a gaming performance and financial performance, we may be.
+6:11
+For example, five point three, I can post that. And if I don't want to get liquid nitrogen inside my p.c case, I'll lock it down to about four, seven,
+6:17
+four, eight, and then, you know, 24 hours a day and I can run heavy load on it without any problems.
+6:24
+Some constraints. OK. So first of all, we need a CPA that lets us actually unlock the multipliers and make changes.
+6:33
+I'm showing you sort of some examples here. So there's an intel extreme chip.
+6:40
+They have X and K series. What's nice about these is that they haven't put any kind of configuration into us that force you to go at a certain speed.
+6:44
+They tend to be marketed to gamers. And we do use the same CPUSA use that you'll see in a gaming P.C.
+6:54
+So as an example here, I'm even showing you like a Republic of Gamers motherboard.
+6:59
+And you'd be surprised. But these are actually the same ones in the cases that we trade on.
+7:04
+The reason that these are really good for us, too, is the same reason that they're good for gamers.
+7:10
+And, you know, it can be some subtleties that are lost when you buy a cheaper motherboard.
+7:13
+But they put heat sinks over the voltage regulators and memory controllers and things like that.
+7:17
+And just generally speaking,
+7:23
+the motherboards a little bit more robust to deal with higher voltages and things like that might have better quality capacitors.
+7:24
+You can sort of go a little bit off into the weeds on expense on some of these,
+7:32
+because they put quite a bit of digital audio and other things that we wouldn't use for trading.
+7:37
+But, you know, still, generally speaking, high quality gaming motherboard is exactly what we're looking for when we do these.
+7:41
+I would say know just throwing this out there, there's a lot of vendors that make good ones,
+7:50
+but I've seen suits showing up in a lot of the commercial over corkers.
+7:54
+They seem to have good engagement with the community for doing things in Linux as well.
+7:58
+So, you know, no particular endorsement or anything, but they just seem to be out there.
+8:02
+The other constraint, too, is we're working against power and heat.
+8:10
+So when you're overclocking a c.p.u, you're basically adding power to it,
+8:13
+telling it to go facture and then trying to remove all of the extra heat that you've generated.
+8:19
+There are some limitations to this, obviously, like the motherboard, we'll start to warn you when you reach dangerous thresholds of voltage.
+8:25
+The CBO will start to crash when it gets hotter than a certain point and your cooling won't be able to deal
+8:34
+with the excess heat if you try to push it too far just to sort of throw this out there with Intel chips.
+8:39
+And, you know, the years I've been doing this, about 80 degrees centigrade is when you're basically starting to hit the red line on your tachometer.
+8:46
+So if you're monitoring your temperatures and you start to see 80 degrees, you're going to be riding your edge.
+8:52
+And I try to knock it back just a little from there for stability. OK.
+8:58
+So, again, just sort of different types of cooling. These are things you might all see on home systems, right?
+9:04
+The stocky tank looks like this one on the top left of this Google search. You basically see a simple kind of set of copper fins and a fan over it.
+9:10
+Then you can get all kinds of interesting things,
+9:18
+like liquid loops where you've got a basically a water block that goes over the C.P.U and then radiator systems to sort of keep that cool.
+9:19
+Hybrids of the above, you can see huge fans, enormous pieces of copper.
+9:28
+It's all quite interesting. Effectively, we use all of those.
+9:34
+So in the early days, it used to be we would build all of these systems from scratch and kind of now vendors do a lot of this for us as well.
+9:38
+So there's a lot of quite commercial advanced systems for this where the case itself might be a
+9:48
+giant heat sink that's attached to a liquid cooling system and then has enormous fans at the front.
+9:53
+So if you look at what we actually do in production now in a data centre, you'll see Iraq motor chassis like this one below from one of our partners.
+10:01
+And this has, you know, super high power fans that pull in from the front and exhale out the back.
+10:12
+And you'll be running this in a data centre with a rack mounted chassis.
+10:18
+The data centre is going to be humidity and temperature controlled.
+10:22
+So it's always cool. The air is kept fairly dry.
+10:26
+And again, we do things in politics instead of windows. It sort of lets us get right down to the brass tacks and sort of the bare metal effectively
+10:31
+so that we can do as little that we don't want as possible and as much trading as we want.
+10:40
+These things are also impractical in the home because they're, you know, unbelievably loud.
+10:48
+You get next to one of these things and, you know,
+10:52
+it'll peel the paint off the fan power on these things when they start up especially, it's just off the wall.
+10:54
+Incredible. Again, I'm just sort of underscoring that we really care about stability.
+11:00
+Right.
+11:06
+So it's a big deal if one of these machines crashes or if we get an incorrect calculation, it goes out of service and we make big changes to it.
+11:06
+We do all kinds of aggressive testing ahead of time to make sure that we know what the envelope is to.
+11:14
+I'm going to go through a kind of a practical basis now of how to approach overclocking.
+11:22
+You'll be able to see this as something that works for your home system as well as kind of what I do at work.
+11:29
+So a couple of mornings, I guess any time you go outside of the recommended settings and overclocking, just be aware that you can void your warranty.
+11:36
+You can kill a C.P.U. And I have killed a few in my day. And do you know what's going to spill wine on your carpet?
+11:47
+It's going to cause all kinds of problems.
+11:53
+So just approach it carefully and just make sure that you're methodical and that you sort of start slow and build your way up.
+11:55
+What I'm working on, one, I always keep notes.
+12:04
+I do things like take photographs of the BIOS settings in cases where I need to refer to it while I'm running a.
+12:07
+A lot of motherboards let you save profiles for all your settings, and it's a good idea to sort of build up slowly.
+12:15
+So the process that I use when I'm working on an overclock with a new chip is effectively.
+12:23
+I'll show you how I start here. I will fire up the machine and just see if it works.
+12:29
+I figured that I'm going to be going back to this several times.
+12:38
+So I want to kind of nail that down and sort of save it in position so that, you know, I'm definitely have a clean fallback.
+12:41
+You know, it's sort of like demoting a fish. You kind of want to remove all the things that don't help.
+12:53
+So I put up a simple OS. I don't run anything at the same time.
+12:56
+If I'm overclocking, it's going to be basically know the machine is built to just run tests at this point.
+13:02
+So I happened to the BIOS and I make sure that the power saving settings aren't, you know,
+13:09
+turning off power on me so that I'm not losing any of my possible power settings to this machine,
+13:13
+going to sleep or trying to save power or sort of green technologies. There's usually a setting that lets you set the memory timings,
+13:23
+a case where the default is going to be quite slow and you want it to be read the data from the memory and take that as the clock speed.
+13:31
+OK, so that shows up as X EMPY Extreme memory profiles and you can usually set that as a tuning parameter.
+13:38
+And I'll show you a concrete example shortly. Abe X.
+13:44
+Just to go here quickly, this is a bit of a tangent, but the vector extensions to the chips that are kind of post Broadwell.
+13:49
+So anything recent is going to have a V X as a capability.
+14:00
+And I disable it for the most part on an overclocked system because it has its own clock speed.
+14:03
+Maybe X is almost to be looked at like a code processor where it fires up extra parts of the chip and takes on extra power and generates extra heat.
+14:11
+So in Overclock has another setting, which is how much speed to disable when havey x instructions start.
+14:20
+There's even actually two of those now because that there's a V X, X two X 512.
+14:27
+And I'll I'm kind of glossing over this, but I'll show you some examples really soon.
+14:34
+Some motherboards also have some of their own custom settings that are worth Googling.
+14:40
+So just as an example, there's one called a souce multicore enhancement.
+14:43
+And what that is, is that when one one called Turbo's all of the course turbo to the same speed.
+14:47
+There's also some of them that will just lock it on the turbo speed.
+14:55
+So it looks like it's overclocked, but really it's just stopping you from saving power.
+14:57
+Anyway, the most important thing to do is to find a base condition. OK. So find this is where we're starting.
+15:03
+This is known to work. And I'm going to do my tests and just make sure that I have a clean baseline that I can refer back to.
+15:08
+So I will fire up something simple like core temp on windows and I will just cheque and see what my minimum,
+15:15
+maximum and load are using a little built in benchmarking tool. You'll see this all over the place.
+15:22
+Almost everybody who overclock some windows is going to be using this programme. It's a freebie.
+15:28
+It's out there and people post their screenshots, share things online, and it tells you effectively you can see this is my home system here.
+15:33
+Right? So it's running a forty seven multiplier on a old A5 chip.
+15:41
+And the my max temperatures are extremely low because this is very conservative settings right now.
+15:46
+You're seeing this is like hitting 60s. So realistically, I could go quite a bit higher on this guy.
+15:52
+It's just that I must have been running it on a hot day once and decided to keep it stable.
+15:57
+So the basic test, you know, make sure everything's OK as you turn on the machine, right.
+16:03
+And you'll see the power on self-test memory tests and things like that, and you boot through to the OS.
+16:07
+Generally, what I do is I'll run prime ninety five on Windows, which uses that Mersenne prime trick.
+16:14
+I was talking about where it's using known solution sets against your actual results on Linux.
+16:20
+It's called in prime. And it's the same code basically. So it's doing the same thing.
+16:27
+It's factoring Mersenne primes. You can find different flavours of it.
+16:30
+It has lots of interesting command line flags. If you want to test a V, X or without a V, X and things like that.
+16:36
+But, um, it's just a great way to get your your baseline.
+16:41
+OK, so you've run this thing, you've seen what your max temperature is and you know that it's stable.
+16:45
+The machine hasn't crashed. OK, good start. Now we can start doing some of the more detailed parts of the overclocking.
+16:49
+So I will show these slides after and those some links to the tools and things like that, too.
+16:57
+So you can see that the Merson utility's core temp CPC and things like that.
+17:01
+These are all a little utilities that exist sort of with equivalence on Windows and Linux.
+17:08
+Obviously, Linux is our focus. But I'm using some Windows examples because it might be more immediately accessible to people to try.
+17:13
+OK, so this is a picture of some Linux tests. OK. This is like the equivalent of what I was describing in Windows.
+17:23
+And you can see the top pane is a programme called Look Busy, which is just a C.P.U spinner.
+17:29
+And what I'm doing at the same time is monitoring temperatures in the high seven window,
+17:34
+which you can see the right hand column of that if it's legible. It might be a little small text.
+17:39
+Apologise for that. But I'm just trying to give you a quick demo that there are Linux tools for all these things.
+17:43
+And you can see that I'm running 100 percent load on the system with an artificial benchmark and monitoring temperatures.
+17:48
+OK, so the same basic idea I can give you now a detailed example of how we overclocked to a five gigahertz on an 18 core Kaskade like server.
+17:55
+So this is a real beast. It's a 10 980 extreme addition, Chip.
+18:06
+So these are quite costly. But the wonderful thing about using one of these in the server is you get 18 overclocked cores,
+18:12
+which is absolutely beastly state of the art on these right now,
+18:19
+like the newest chips in with the newest technology, you can get these guys up to about five point four.
+18:23
+Realistically, I probably run four point nine just to pass every single one of my tests.
+18:29
+There might be many of the chips will happily do five.
+18:35
+But I like to just standardise on what is kind of the worst case scenario just to be conservative.
+18:39
+So we have some variables that we're gonna play with a case of. There's voltage and the core multiplier.
+18:47
+That's the speed of the clock, basically.
+18:53
+So the raw gigahertz, then we have a cash multiplier and cash voltage setting the cash I was discussing earlier,
+18:55
+which would be like the Oncor, you know, any of the operations between individual cores talking to each other.
+19:02
+And finally, there's tweaks for the Meriem as well.
+19:09
+Basically, the speed that the memory runs out, plus the memories voltage and things like that tweak.
+19:13
+So here's my example. I've got this 10 980 XY and I'm basically setting my multiplier to 50 as my target.
+19:19
+And the voltage stock is one point three volts and the maximum is one point three seventy five.
+19:28
+And I go through the same thing with the Oncor, so I set the men and the max both to 32 for this default is 20.
+19:35
+So this is a really significant overclock for the Oncor speed.
+19:44
+Again, this is where you see some of the more amazing results with multithreaded applications.
+19:48
+It's sometimes, again, neglected on home overclocked, but it's always worth looking at.
+19:55
+Like sometimes you'll see people with the same frequency as you getting better frame rates and performance in a game.
+19:59
+And this could be one of the reasons for well optimised code that uses lots of calls on the system.
+20:05
+This makes a big difference. I've noticed that, you know, it's sort of gaming applications.
+20:11
+Some of the newest stuff in the last few years is only really just starting to take advantage of lots of extra course.
+20:16
+So this trick is starting to show more results in sort of the, you know,
+20:23
+the render rates and sort of the physics performance on some of the newer games. I'm bringing up baby X again.
+20:28
+OK, so this is a an interesting thing. It can be a bit of a killer. Basically, avionics doesn't overclock, at least not very well.
+20:35
+So what I do is I take the stock speed of the chip as my reference and that's what I set my offsets to.
+20:43
+So avy X negative offset of 10 and 512, offset of fifteen.
+20:51
+That's the safe way.
+20:56
+If you have code that uses a V X preventing it from frying and overclocked system, otherwise you'll just see crashes and systems heat up.
+20:58
+It's almost like but it is like a code processor, to be honest, like using advanced vector extensions like that.
+21:06
+It tends not to be in most commercial software because the binaries are shipped for generic S.P. use and they don't all support this,
+21:13
+although it might start to become a little bit more of an issue soon because most Intel chips do support it now.
+21:23
+Okay, so my test case was I set the default clock speed, installed an OS, went through the baseline like I was describing before.
+21:30
+Then I went back into the motherboards bios and set my memory just using the X and P tuner, which doesn't auto reset.
+21:37
+Then I set my main multiplayer and voltage and made sure to set my avy X offsets.
+21:45
+Again, I'm kind of banging on about this, but just be careful with a V x. And finally, I set the uncaught multiplayer and voltages.
+21:50
+Now each one of those steps has a test cycle where I boot into the system, run my Mersenne primes.
+21:56
+See if I have a crash. So, I mean, honestly, there's a lot of grinding and there's a lot of failure.
+22:02
+It's important that it does crash and that it does fail and that you do have some
+22:10
+things go wrong because otherwise you won't really find the edges of the envelope.
+22:16
+And it's a good idea to kind of approach it incrementally as opposed to trying to do a big target and then go backwards.
+22:20
+You generally have more than a few seconds when you've booted something to make a decision to shut it off before there's any harm.
+22:29
+And if you stick to this like 80 degrees centigrade temperature, like I was warning, you should be pretty safe to try these things.
+22:35
+I say if you see temperatures that are over 80, it's a good idea to shut down pretty quickly and then get more conservative.
+22:44
+But realistically, your system might not even crash when it gets into the 90s.
+22:51
+Some of the some of the crazier people out there will run a system that 90s and they can tolerate some more errors and things like that.
+22:56
+But that's about when you start to get dangerous to the chip.
+23:03
+And I'm also just saying, keep an eye out for some of the special motherboard gotchas, like if there's a flag,
+23:07
+like a souce multicore enhancement or any of their auto tuning things for like an automatic overclock,
+23:12
+it may set some things that you really don't want. So it's just a good idea to really research an.
+23:19
+We'll show you what it looks like a little bit in the bias for the specific machine. So here's a nice RGV he, us, us again.
+23:25
+When you hop into this thing, you'll see I've used the Overclocked Tooner manual here,
+23:34
+although it'll normally read SNP if you use memory timings to start.
+23:38
+I used the manual just because I was playing with some extreme voltage things here, but it's not really necessary.
+23:43
+You can see there's a whole bunch of settings here that we're kind of ignoring,
+23:51
+but some of the ones I've talked about is like the ATX instruction negative offset.
+23:54
+This tells me that my multiplier of forty nine for the target speed of the C.P.U has a subtraction of 10.
+23:58
+If we run normally V X subtraction of 15, if we run a B X 512 instructions.
+24:05
+So you'll see the individual coral drop from four point nine hertz to three point nine or three point four.
+24:12
+In the cases of Abia x ray V x 512. And that's the desired behaviour because that'll keep that car from overheating.
+24:20
+Generally speaking, there's a discussion I have with developers, too,
+24:29
+about whether or not compiling with or without a V X is going to make the most sense.
+24:32
+So overclocked with normal instructions may be faster than undercroft with a V x.
+24:36
+Usually I found that using normal instructions without Evvy X and overclocking outperforms using heavy X instructions,
+24:42
+but it gets complicated in their edge cases. So again, it's all stuff you can test.
+24:51
+Finally at the bottom, you can see these men and Max C.P.U cache ratios. That's the way that this motherboard refers to the Oncor speed.
+24:58
+So minimum is what you see at boot up. So the very earliest power on Self-test.
+25:07
+And that's basically in case the C.P.U test requires that its stock speed.
+25:12
+In this case, it didn't. So I just pinned them both at 32. The stock on this one is 20.
+25:18
+So that's a significant bump up in the speed that the cars talk to each other into the level three cash.
+25:23
+Just another screen here shows a few of the other things I'm doing. So there's voltage overrides.
+25:31
+And I said these to manuals and do offsets. They usually help you.
+25:36
+So you can see it in the details of the chip and of the motherboard manual.
+25:41
+I'll tell you what the means and maxes are. So in this case, it's colouring at yellow because I've edited it.
+25:46
+But that's actually the stock. In this case, pink or purple or whatever colour this is, is showing me that this is right at the edge.
+25:51
+I started to go into the red zone on my memory voltage. So safe voltages you incremented meant a quarter of a percent.
+26:00
+So you'll be like one point three to five would be my next increment from here and one point three five one point three seven five.
+26:08
+And that's really a small tweak, but it makes a big difference in stability.
+26:15
+So what I normally do is I'll bring the voltage up until it works and then I have a pass test.
+26:22
+I'll try knocking it back one more setting and sometimes just by a little tweaks because you want to
+26:27
+get the minimum amount of voltage that it's stable at and you're sort of optimising for heat that way.
+26:31
+If you think of the process of this, what you're doing is you're adding voltage, increasing the speed,
+26:38
+checking temperature, and then what you want to do is minimise that temperature while keeping the speed pegged at its top.
+26:44
+So you find stability and then you optimise or so you find the speed that it works at a max and then you
+26:51
+optimise for temperature controls by sort of knocking down the voltage until it starts to show instability.
+26:59
+You'll find the sweet spot. And this chip was a great one.
+27:05
+This exact machine here that we're looking at, at stock voltages over clocks like a dream, pushing it a little bit further.
+27:08
+I did actually get there. I did take this one over five. But again, for stability sake,
+27:16
+I sort of brought him in line with his neighbours so that all of our machines run at that same speed where it's stable on this chip.
+27:22
+Just to get into the you know, the test case here,
+27:33
+it shows kind of effectively what the Mersenne prime test is, right, as you take powers of to subtract one.
+27:35
+And then you do a factorisation to see if it's a prime number. And then the solution side is embedded in our test bench.
+27:41
+So prime on Linux, our prime ninety five on Windows, both do this for you.
+27:48
+And they're really nice though. They have different modes that will beat up your c.p.u.
+27:53
+You watch the temperatures and see if anything bad happens. You can see an individual thread crashing if it makes a calculation error.
+27:58
+So it just means that it try. You know, like, is this a prime number?
+28:05
+And then the factorisation came back with an incorrect factor based on the solution side and then that tritle crash for you.
+28:08
+So what I tend to do is, you know, four hours to that without any errors. That's a really good sign.
+28:16
+That usually tells me that this one's working. And then I'll try a nice betting and test for a final profile of 12 to 24 hours.
+28:21
+If I get a 24 hour run without any mistakes, I'm always tempted to try to tweak it up a little.
+28:30
+But eventually you find that edge. So, you know, in this case, it ended up being know, four point nine.
+28:34
+Yeah, there's all kinds of interesting tools you can use to say I've listed some of them here.
+28:45
+There's analytics, there's L.M. Sensors, which just shows you all of the motherboard built in sensors and the CPUSA temperature readings.
+28:49
+Another one called A7, Z or Z. I suppose if I'm anglicise ing, it's basically a Linux port of CPC, yousee,
+28:57
+and it shows you temperatures on each core hold states and all kinds of other interesting things.
+29:05
+And core temp on Windows was that app I was showing before.
+29:12
+And again, I've sort of. Yeah, fudging the numbers a little Mauffray here so you can see Eighty-three is maybe my softmax.
+29:16
+And 80 is closer to stable. If you see sort of eighty five degrees and up, stop your test.
+29:24
+Lower the speeds and voltage. Try again cause it'll crash.
+29:30
+Then like I've noticed that a machine running, you know, a decent low test is never going to stay stable continuously at that temperature.
+29:33
+Once you get into the 80s, it's just a matter of time till you see her. So that seems to be the magic number to remember for Intel chips.
+29:42
+I've got some resource guides for you here, too, so there's interesting ways that you can do this and Windows Time.
+29:52
+There's a nice guide from Intel that goes through a lot of the things I just described here.
+29:58
+And you'll be able to see some of these tools. You can also use this utility called their extreme tuning utility.
+30:02
+And you can do it live and change your settings on the fly in windows. Honestly, there's a way to do that in Linux, too.
+30:09
+And it's a bit advanced for the scope here. I'd have to show quite a few more tools.
+30:15
+But what's nice to do with that is you can do a lot of these tweaks quickly with a graphical application and you try to find what Intel suggests,
+30:20
+try to find what works for you. Happy medium. And then you can set those things into the bios to sort of canonise it and keep it configured.
+30:30
+It's nice with some of the motherboard ways, too, that have sort of built in tests for it.
+30:40
+This motherboard I was showing will even have an automatic utility. See if it shows on the top here, as he says, easy tuning Wizard F eleven.
+30:44
+If I press that, it basically starts running through a lot of those test cycles.
+30:53
+I described where it'll change. Change the voltage, change the locks be changed.
+30:57
+The Oncor run a load test and then see if the temperature hits a certain amount.
+31:01
+Now, it's actually opaque to me. I'm not sure exactly how ASUS does this, but you'll get a result, which is usually a conservative overclock.
+31:06
+And then you can look at what it does to all the settings in your bios and sort of use that as a basis.
+31:14
+But, you know, to do it the real way, it's fun to get hardcore and to cheque all these things and sort of tweak it with your own log,
+31:20
+book your own settings, and to start to get it to that point.
+31:29
+Motherboards have their own guides for the biopsy, which sometimes are less helpful than you'd like them to be.
+31:34
+Often you can find by searching what the chips on the motherboard is.
+31:41
+You can find a better guide for a different vendor. So sometimes, for example,
+31:45
+I'd use motherboards from another manufacturer and I would use the better manuals that were written by a Ceaser amici or something like that.
+31:50
+And then again, same lab. Right. So I'm using prime ninety five to create my load.
+32:01
+Testability, and I'm using my core temp utility to monitor my cooling.
+32:05
+So that's effectively the process I wanted to explain here and I wanted to take some time
+32:11
+to just mention that at Cube we're gonna be doing an industrial placement through Imperial.
+32:15
+And one of the really fun things about it is, is it will be directly working with some of this year.
+32:21
+So we have a performance lab and we trust our applications to see how we're doing for tweaking things for
+32:27
+speed involves hardware involved tweaking yoaz and involves quite a bit of optimisations in the code.
+32:33
+So for this particular role, I'll be one of the resources that will be from our programming team.
+32:39
+And just to kind of a quick commercial for Cube is just it's like I said at the very beginning,
+32:45
+we have a lot of nice overlap between work and hobbies.
+32:54
+So we tend to have a lot of people throwing out ideas, a lot of interesting stuff on whiteboards.
+32:56
+It's quite it's quite a lot of fun. I mean, really, I enjoy hacking and I enjoy kind of tweaking stuff.
+33:02
+And overclocking at work is really just kind of the cherry on the top. So we will have some follow up with that.
+33:09
+And you will be able to see that on the placements page when that becomes open.
+33:15
+And finally, I just wanted to open the floor and take questions.
+33:21
+There's a lot of stuff I could go back over and if anybody has a question that I could clarify or help out with, please.
+33:24
+I'm not sure of the processes, but let's open the floor if we can. Yeah.
+33:30
+Bernie, thanks so much. The than anybody got a question.
+33:34
+Either raise your hand or just type something the chaps or just chipin and speak.
+33:41
+Any thoughts about these final I think he's. Yes, I think so.
+33:52
+AMD chips are extremely good for core density. What we found is that you can get an enormous amount of processors running on
+33:57
+them and we would use that in a case for kind of compute like if we're running.
+34:05
+I'm trying to think if we're running long regression tests on something where we need to use lots and lots, of course.
+34:11
+The main difference in production trading is AMD chips.
+34:18
+The uncaught speed and the inter thread performance is where the intel ones really kind of show their their shine.
+34:22
+To be honest, like the new architectures they have have small rings where groups of six cores work closer
+34:31
+together and with optimisations you can get some pretty good performance out of those two.
+34:36
+The one thing I've noticed is that for overclocking speed, if you use Intel and especially that uncaught week, that's where they really shine.
+34:42
+That's where you see the biggest benefits. So Hamdiya are no slouch, but I think that Intel have been edging them out at the moment.
+34:49
+Chip variation? Yeah, chip variation is a big deal. I see that question in the chat.
+34:59
+So the ones I was showing that are like the extreme edition axis are the case.
+35:05
+Those are what they call pre bend. So when they're manufactured, they have different yields and different performances,
+35:10
+depending on kind of, you know, very small environmental changes and things like that.
+35:18
+And the fabrication process can make a big difference. You know, eight nanometres or whatever they're down to these days.
+35:22
+So those X and K chips are normally been. So that means that someone's tested them and that those ones perform slightly better.
+35:28
+Even even with the exact same c.p.u, they then get burned a second time.
+35:36
+So if you have a box of Intel 10 980 Extreme's and a vendor,
+35:41
+they might buy a dozen of them and use five of them where they actually put them into a machine and test them.
+35:47
+So like the black core server we're showing as an example, I think they've been something like 60 percent.
+35:53
+So there's about a 40 percent factor of ones that they don't use in their overclocked servers.
+35:59
+So, yeah, you can push it. It's some it's a good idea, too, like if you're buying for home,
+36:04
+one of the sources I've done is you can get pretested ones from over Puckers Dakoda UK and I've had really good luck with those chips.
+36:10
+They do what they say and they're very good at testing.
+36:18
+I see a question about i3 versus AI five, AI seven nine, nine different performances there, so it depends on hyper threading versus no eye patrolling.
+36:23
+The chips that we generally use are going to be the I9 series.
+36:35
+And again, that we turn off the hyper threading, but you get slightly more cash and some other nice things that make them attractive to us.
+36:39
+What stops you from reaching higher clock speeds? It's a good question.
+36:48
+So I have seen experiments with liquid nitrogen and they do go further with being
+36:53
+able to cool and kind of dissipate that heat and sort of that voltage shock.
+36:58
+I don't actually know what goes wrong with the chip.
+37:03
+It's an interesting question because of new play, more electricity than it's capable of dealing with,
+37:07
+I assume that the individual traces and things like that start to fail.
+37:12
+But how do you find the edge of the envelope is basically, you know, if you add extreme cooling, you can go faster and you can do that.
+37:17
+Staveley. There is a wall on some of the chips, and I think it's physical rather than, you know, a design consideration.
+37:25
+I think that what I've seen hitting some, for example, like in the Broadwell generation,
+37:34
+there was a there was a wall you would hit where some of the physical part of the chip,
+37:39
+some of a little adhesive would start to fail and you could run at high speeds for about a week or so.
+37:43
+But this little adhesive that was holding a layer of silicon together would start to fail and then the chip would go.
+37:47
+Because what would happen is it would loosen trap, more heat overheats to Cebu crash.
+37:54
+Eventually, it's all power and heat. So adding more power and taking away more heat seems to be the answer.
+38:00
+But practically speaking, liquid nitrogen and, you know, in an exchange data centre is probably something that they would say no to.
+38:06
+You'd laugh, but there are some extreme versions of these servers from vendors even that use compressors.
+38:15
+So we're talking, you know, basically a mini fridge inside a data centre.
+38:20
+You might have an eight server that's running effectively to you.
+38:26
+So you as RAC units, it's like the number of spaces in a data centre rack and an eight time server would be huge.
+38:30
+OK, question from Oliver, Sure about playing with titanium power, a nine in arm?
+38:39
+Yeah, I've overclocked arm chips, actually. I've done that. And it's interesting.
+38:44
+You get some really interesting results. It really depends.
+38:47
+So the chips that we use, we tend to use x 86 for our code.
+38:51
+I suppose if you start getting quite exotic with compute speed, you might be looking into, you know, field programmable stuff.
+38:58
+You might be looking at even doing stuff with a six or FPGA A's and things like that.
+39:05
+That's sort of the more exotic way of, you know, super speeding things.
+39:08
+But the really nice thing about sticking with X 86 is that the tool stack is very good.
+39:13
+We get an awful lot of people out in the world sort of doing Q8 for us in a way, like if you use GCSE,
+39:21
+you're taking advantage of the entire community that's crowdsourcing a bug finding for you.
+39:27
+The tools are outstanding as well, also just using all the different compilers,
+39:33
+GCSE versus the Intel compiler, for example, you can really get some great results porting to other machines.
+39:38
+Again, it might come back to that same thing where I socking Intel versus AMD, even the multi thread performance when we run those benchmarks.
+39:47
+That's where I tend to see the results. Better to know.
+39:54
+Like, you know, for example, I have an overclocked Raspberry Pi here at home that it's basically sitting in a case that's entirely a heat sink.
+39:58
+And the reason for that was just sort of tweaking that extra tiny little ounce
+40:07
+of performance out of it from running Fourcade video and stuff like that.
+40:11
+But yeah, I tend to try to find the edge on just about anything I put my hands on.
+40:15
+Yeah, I mean, have you tried looking at similar tweaking of your networking hardware and you'll feel this a software stack maybe?
+40:22
+Oh, sure. It's a it would be a topic for a whole other talk, to be honest.
+40:32
+But the performance guide that we use to tune the operating system is.
+40:35
+That's that's quite a long document. Network hardware is interesting and a lot of the ways.
+40:41
+Was that in my back? OK. I was just describing like an FPGA.
+41:42
+So if you're trying to put code onto one,
+41:49
+one of the things that you're trying to do is you try to find the path for all the gates in the logic sequence that's most efficient.
+41:54
+And that's a very tricky problem to solve. I was saying it's like the travelling salesman problem.
+42:01
+If you guys have ever used that. Basics of it is to say you have a salesman and you wanted to visit every city in the U.K. and find the optimal route.
+42:05
+So there's some ways to do speculative kind of guesses on, you know,
+42:15
+you can do like a theory where you say there's these trunks and if you go to these trunk routes, then you visit all the things that are near.
+42:21
+But maybe it's quicker if you just sort of have a zigzag approach across the country.
+42:27
+And what the FPGA software does is it just tries to brute force the problem
+42:31
+by creating as many possible paths for the logic to work through the gates.
+42:35
+And then it tries to find the most efficient one through brute force. So it's a different tweak, right?
+42:42
+You're not just looking for a raw clock speed and then for sort of throughput of standard compute loads or general purpose,
+42:51
+things like you can do in C-code. So. Sort of a non answer to tweaking network cards there.
+42:56
+But there's an awful lot of stuff to do there. Now, I actually I'm interested in terms of language.
+43:03
+They you. What what can you use to hook up the mountain for amendment?
+43:08
+So C++ is the most common. And again, that's not a 100 percent optimisation play.
+43:13
+I mean, if we really wanted to get down into sort of super optimising, you probably see people doing assembler.
+43:20
+And then if you really wanted to go a step beyond that, you might see some of this stuff being converted into Gates and things like that into an FPGA.
+43:27
+And honestly, where we are is there's an interesting Trade-Off between sort of time to market and speed.
+43:35
+So using a programming language like C++ and compiling that and tweaking the operating
+43:42
+system that's quite scalable is easy for us to keep that up to date and to test it.
+43:49
+Whereas if you start building out custom hardware or even writing your own instructions,
+43:54
+there's a lot more work to debug that to kind of keep the quality levels high.
+43:59
+So like a standard pipeline would be a development team working on code,
+44:04
+checking things and using get doing a test to build fairly often from an automated system.
+44:10
+We take it into a lab, we run it on real hardware, and we test micro and macro bunch of benchmarks.
+44:16
+So we might see, you know, from a messaging standpoint,
+44:22
+how many messages per second can this code layer handle by just trying to saturated with, you know, a super load?
+44:26
+See what's too much. And then record that information, cheque it against regressions.
+44:32
+And, you know, it's kind of a little bit of a more boring problem is to just do all the automated cheques.
+44:37
+But, you know, once you've done that, you use that as information defeat and you go back and you tweak your code.
+44:43
+And I would say that like the general level of quality that these guys work to is, you know.
+44:49
+Insanely high compared to even other financials I've been to.
+44:55
+It's one of the first places in my career where I walked in and I was able to say I'd like to try to do a test, build off of the main code.
+45:00
+And it worked the first time with the cheque out clean on my system.
+45:07
+Almost everywhere else I've been, there's been oh, well, you have to love this from here and oh, you need this library and this.
+45:10
+But having a clean layer checkout and good discipline with source code control is some.
+45:15
+That's much more of a big deal than probably the the language or the compilers that are used.
+45:21
+Do I think this little thing then? If students want to follow up questions and I wonder what's the best way for them to contact you?
+45:30
+I'll throw out an email address. You're quite happy to do that. So.
+45:39
+Oh, just put it in the chat, actually. Just make sure I'm getting it right before I press send.
+45:44
+Laugh at me for this. Yeah, I take the current day.
+45:58
+It is, yeah, I feel for you. I mean, I like answering questions and it's a subject that really interests me.
+46:06
+And it might be easier for me to post some links to guides and things.
+46:11
+You know, again, as always, be careful if that's your main system and things like that. Make sure that you're starting from a good ship.
+46:17
+That's got some, you know, some track record on it.
+46:23
+It's not something that I would try to dodge people from because it's a fairly broadly solved problem out there.
+46:27
+You can burn out S.P. use and you can have problems sometimes and it can be frustrating.
+46:34
+But, you know, just approach it with a cool head on a day when you don't have an assignment, do or something like that on your main P.C.
+46:38
+So back up. I'll be very brave and I'm being quite brave in presenting this from an overclocked P.C. as well.
+46:45
+So somebody was on the board. Now, all the burnt out C.P.U salvageable in some way.
+46:53
+So it's funny. What normally happens is, is when a c.p.u fails, the whole system goes black and it looks like nothing happens for a while.
+47:00
+So what's quite funny about it is there's a lot of the time. Give it an hour and it'll cool down.
+47:11
+And then you can get back into the bias and set the settings down a bit.
+47:17
+Actual damage to the C.P.U is somewhat rare. And I'm not actually sure what goes wrong.
+47:21
+It's probably something quite detailed, an electrical entire inside the chip.
+47:28
+But a lot of the times I've been able to get them working again, maybe at a slower speed,
+47:32
+possibly sometimes at a slower speed than they overclocked to before.
+47:38
+Like, I tried to tweak it extra and then I couldn't get it back to where it was stable previously.
+47:41
+Isolating cores is possible, but generally speaking, you have to be able to get into the bias to do it.
+47:47
+So depends if if you've damaged an individual core, I'm not even really sure how you could be certain which one it was.
+47:52
+A lot of the biopsies do have to disable individual cause. And to be honest, some of the different intel skews are just doing that.
+48:03
+You'll get a part which says it runs at three point two instead of three and has 10 cores instead of twelve.
+48:10
+And honestly, that's all they're doing is they just have set the bias defaults to disable, to cause.
+48:16
+Yeah, it's possible I mean, most of them that are burnt out are salvageable in the sense that they may still run that stock
+48:23
+speeds after you walk away from an hour if your machine goes through a black screen like that.
+48:29
+And then just give it another try and you could be surprised.
+48:34
+Number of times I've kind of sworn and smashed the table with my fist and both that I killed another one.
+48:37
+And it just was freeing to cool down. So that's brilliant.
+48:42
+All right. Well, thank you very much. Then I'm thinking of going out to stop there, unfortunately, because we're out of time.
+48:47
+But that was an absolutely brilliant talk. Thank you very much.
+48:52

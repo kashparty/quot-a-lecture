@@ -1,0 +1,43 @@
+ID: c252aa1c-88bd-4a03-b888-ae33016b3698
+Title: Induction over Numbers - 0
+Category: 1 - Induction over Numbers
+Lecturer: Sophia Drossopoulou
+Date: 23/01/2021
+Welcome. This week, we will be discussing induction of our numbers.
+0:03
+We will start with a mathematical induction principally,
+0:09
+which will ease the fine for any property P and the property to be the property of the natural number.
+0:11
+So B is a subset of N. And this property is given.
+0:17
+We have seen it perhaps at school already or the first time.
+0:25
+There is no thinking involved. We work with a property. It's given to us not from that property.
+0:29
+We can then derive a mathematical induction principally for some specific property.
+0:36
+Cue, for instance, this property. You could be the sum of the numbers from zero until N is end times and plus one divided by two.
+0:42
+Or something else. This we can take the principle for any property and derive it for a property.
+0:52
+And we don't need to think anything would just do some systematic work.
+1:01
+Then out of this we can derive approved schema for the particular.
+1:06
+The proof schema will say things like given this in this, I need to show that in that or I take some think arbitrary was a natural number.
+1:11
+I assume something. I need to show something. This is where we set up the proof.
+1:23
+We don't yet go and do the proof. We have seen already that there are these two different phases when we're trying to prove things.
+1:29
+We saw that already last week when we were working with happiness and friendship and happy dragons.
+1:37
+And now then there's a lost last step where given the proof schema, we derive the proof and we put some thinking into feeling some of the steps.
+1:44
+So what we will be seeing this week is this whole process and we will be looking at
+1:57
+more and more interesting cases of induction of a numbers which will also be looking,
+2:04
+distinguishing between the numbers or order number, starting at the particular value or even the negative numbers.
+2:09

@@ -1,0 +1,1105 @@
+ID: da64fdde-84eb-4511-81d9-ae0100fc5b9a
+Title: Ethics Q&A - 17 December 2021
+Category: Ethics
+Lecturer: Thomas Lancaster
+Date: 17/12/2021
+So I feel I'm on the day of the deadline.
+0:02
+17TH of December 2021, we've got a few hours to go, so we're going to have just a quick catch up with any last minute problems and questions.
+0:05
+Just to help you along the way.
+0:17
+But this is also your opportunity to to pick our brains, pick Blaze Brain in particular because we won't see as much of him during the rest.
+0:18
+We'll see much of you at all really played you and the rest of the programme.
+0:27
+Only a very useful person to know who has been vastly experienced across the computing
+0:30
+field that people often underestimate and the wider professional world as well.
+0:35
+Or just thinking when I mean, when are you invited to Boris's Christmas party last year?
+0:42
+No, no. But I wouldn't have gone anyway as I was doing this online because I consider the London Underground a petri dish.
+0:48
+Very sorry for anyone who had to use it recently. Yeah, yeah.
+1:01
+No, I just worked very well online. I think it's quite nice when people do need to get away a bit early for the end of terms.
+1:06
+Well, to have that flexibility. So hopefully it's well for everyone.
+1:13
+I've got two questions I can see in the chat, so I'm going to start off with those.
+1:17
+One of them is visible to everyone. One of them isn't so group leaders on Kate.
+1:20
+So we assign to a group leader for the purposes of choosing the project on the project portal.
+1:27
+But actually, Kate and the project portal are not connected in terms of who the groups are.
+1:33
+So you have to set these up separately, and I'm sure you figure that out by the complexities of Kate.
+1:39
+So actually, any member of the group can choose themselves as group leader on Kate.
+1:47
+It doesn't matter which one. So long as the names of the group members match the project portal,
+1:52
+then all your submissions will line up at the end of this process, so it doesn't matter which one of you chooses to be group leader.
+1:59
+Now, if if someone else in your group is already selected themselves as group leader, they will have to disband the group first.
+2:05
+And then the new group leader will set up the group again from scratch and select the other
+2:15
+three or so members of the group and then the other group members will have to then select.
+2:22
+They are in the group, so that is the process.
+2:27
+I can't do anything in terms of going into chaos and removing groups or anything like that because of how the system is set up.
+2:30
+I've got no power to go or do anything useful in Kate.
+2:39
+So if you need to change the group leader, you need to contact the group leader, get them to disband.
+2:43
+This is no Constantinos, as your year coordinator, may be able to do this.
+2:47
+But I definitely can't do this, and I can't guarantee that if you send a last minute message,
+2:57
+it Konstantinos that he will he will pick this up in time and be able to do anything because officially speaking,
+3:05
+I know he's on leave at the moment for that one.
+3:10
+So you asked if the question arises, a leader needs to leave in a few minutes,
+3:16
+walk back and left the deadline to get the leader now to go and very quickly disband the group and then have the new leader set
+3:20
+it up and then make sure the person who's going away clicks that they are in the group before either now or before the deadline.
+3:27
+So he says it's not possible for him to do.
+3:35
+Yeah, because the people in my group have already accepted, so it's not possible for me to disband because the delete button isn't shown.
+3:39
+OK,
+3:45
+so the main concern is the may actually be the additional stage that the people have been accepted after then select themselves from that group first.
+3:46
+So try that. The problem is that not everyone's mind right now, and our leader does need to go in a few minutes.
+3:55
+Oh, yeah, well, the good news. The good news is the leader has to go then the it is not a perfect mobile system,
+4:04
+but you can actually get onto a mobile phone as long as you're not stuck on a plane or something without any access to internet.
+4:12
+You can work around this one. And so I try that, but yeah, you need your group should all be still around and everything.
+4:19
+And I mean, and then the other part of this is if the group leader can still upload the files,
+4:31
+if the group leader does not have to be the one who uploads the video because you're just going to send somewhere else,
+4:38
+they've got to upload a text file with a link to the video and some that's that's small.
+4:45
+That's doable remotely. So you can work around most of these things, it's not perfect.
+4:52
+But it is doable. But yeah, the best solution is try and disband the group.
+5:01
+I feel very sorry for this. Look, if this is an extra problem you don't need.
+5:09
+But as long as I can see the video, then there won't be a problem. Yeah, it's nice.
+5:14
+It's not. I feel this is, unfortunately is one of these things that needs planning.
+5:20
+If somebody is going to be away for a few hours just before the deadline,
+5:25
+then they're quite hard to solve last minute, but try and trying to remotely try and disband the group there,
+5:29
+even even if you've got to do this on a mobile phone,
+5:38
+in the background while something else is going on while you get hold of the other group members.
+5:42
+So this one got five hours,
+5:48
+I think hopefully about to get hold of them and certainly the the signing to say
+5:51
+you're in the reformed group can definitely just be done on a mobile phone.
+5:57
+That's quite straightforward that if it really comes to it, the signing, the form to say you in the group,
+6:02
+you can do that after the deadline and you won't get your mark penalised for signing the form.
+6:12
+We'd prefer to know everything is is done and dusted today, but don't worry too much about that, but the deadline is definitely today.
+6:18
+All right. So the questions I've had to several questions.
+6:30
+For this, let's pick the the another direct one, one of the recorded videos we have keeps turning into a lower quality while exporting.
+6:38
+Is that all right or is a very high quality of the presenters video necessary and looked at while grading?
+6:46
+You know, we're realistic about these things. So it'd be nice if everything was in a similar quality throughout there.
+6:55
+But the one thing we don't want to happen is for you to suddenly change the
+7:03
+resolution at the same screen size as the video goes through that some people do,
+7:08
+or some people suddenly have a video where one of the presenters videos only takes up a quarter of the screen.
+7:13
+That looks really odd. It's the export is a slightly lower quality because that's all you can do with the technologies you have,
+7:20
+so we're not going to be too concerned about that one.
+7:26
+But if you can try and work out why that is,
+7:30
+then clearly it's going to be better to do that because there are generally ways to get around export problems.
+7:33
+But we're not grading you really on being an expert video editor, we'll make a bit of allowance for that one in the time available.
+7:41
+I think the first year we did this online, I was I was amazed.
+7:50
+The students living in different countries all over the globe could stitch group video together, and it looks so professional.
+7:57
+So I guess we're a little spoilt now expecting you to do this, but I appreciate that can be all sorts of problems.
+8:06
+Time, timezones, internet connexion problems and so on.
+8:13
+The only difference I'd make of asking you to do this is this is the way you're going to work in the future.
+8:16
+This is the future. So putting a bit of effort into doing this is a useful skilfully.
+8:24
+Yeah, and then related question, having fancy transitions between PowerPoint slides does not count as good editing, right?
+8:33
+Right. I mean, PowerPoint transitions in general.
+8:40
+Oh, there are very mixed views about how neat PowerPoint transitions are there.
+8:45
+I would not overthink this one. A PowerPoint transition is not editing anyway,
+8:51
+and editing might be when you cut between different presenters if you've recorded things
+8:57
+separately or if you're doing something slightly more interesting type of video.
+9:02
+But most of the time nowadays for PowerPoint presentations that I would say keep slide transitions to a minimum,
+9:06
+the last thing we want is to see a slides. It takes five seconds to load while there is a strange animation and it does a different section at a time.
+9:15
+That's my that's my opinion on that one. And transitions occasionally can look good.
+9:23
+But a lot of the time? No, they just don't work out so well.
+9:28
+If I see a lot of slide transitions, I'll be thinking, What are you?
+9:33
+What are you trying to distract me from?
+9:36
+And the second is that the transition take up is that filling things out because you didn't have enough material to fill and so on.
+9:39
+So there's a lot to be said for keeping it relatively simple, because that way you can include more content.
+9:47
+It's quite a short video in the end. Yeah.
+9:54
+And so nearly all the other question is I can see, including the ones that play, we'll see as well relate to the summary.
+9:58
+Yes. Now I will say in terms of the summary,
+10:03
+the information you've had from the Centre for Academic English is the definitive information because they are
+10:06
+the people who have set this as the assignment and they are the people who are marking this the assignment.
+10:12
+So make sure you stick to all of their guidelines for this one there.
+10:17
+And so the expectation of the summary 250 to 300 words plus you can also have
+10:25
+a separate reference list that we won't count towards the word count there.
+10:33
+And generally, we're expecting more 250 words, the 300 words.
+10:37
+But then you have the few spare words, which will include things like having a title, be a summary.
+10:43
+So yes, we will include that in the word count, because it keeps things simple.
+10:48
+We won't count the reference lists towards the word count. So there is a question do you need a title at the top of the summary?
+10:53
+And yes, you do, because it looks really odd if you hand in a document without a title of any form.
+11:01
+So I strongly recommend you include a title there. I would not have the title of your document research summary because that tells us nothing useful.
+11:06
+I would have the title of your document as being something related to the topic you've been working on.
+11:16
+It doesn't necessarily have to exactly match the title of the presentation.
+11:23
+That's fine. It doesn't have to necessarily match exactly how we phrase the original topic because
+11:29
+you probably refine things a little bit by now so you can keep the title short.
+11:35
+But yeah, you should have a title. Do you need your name?
+11:39
+I think, strictly speaking, you don't have to include the name in the documents because in theory, these are being messed.
+11:45
+Things generally marked fairly anonymously there, so you don't need to include a name.
+11:54
+However, it will make little or no difference whether you include the name or not, because I suspect people can see who you are.
+11:59
+And there's only so many people doing each project here.
+12:08
+And the people marking this research centre for academic English don't know any of you anyway,
+12:11
+so they shouldn't be biased when they mark this, which is one reason people say don't put names on on things for that there.
+12:16
+So, yeah, so I would just pick a name for neatness there, which is for most of you, it's two words.
+12:24
+So yes, it does use a couple of words up. I don't know if it's what the longest name we have or anyone.
+12:30
+I suspect nobody has a name, which is more than four words long this year than it does.
+12:36
+It can happen occasionally. But yeah, I would include a title and I would include a name and what file names you use for the summary.
+12:43
+Use whatever Brett has asked you to call this file.
+12:51
+There he is. Probably updated this since I put the the original brief together so that one I can actually see.
+12:57
+I can see a summary of ethical issue presentation short code that seems like a very long file name to me to try and upload,
+13:07
+but call it whatever you want. When when people market, they won't see the file name anyway.
+13:16
+So it doesn't really doesn't matter, particularly because it'll all get renamed on Blackboard anyway.
+13:20
+But that one? Right.
+13:28
+Reference lists, so let's think about how we are going to construct this document.
+13:33
+So let's have a. Let's have a look.
+13:45
+I've got too many things open, but let's have a look at word. So here is a completely blank word document.
+13:49
+So what are we going to have in this document we're going to have in a title for ethical case that we've been working on our ethical topic?
+14:07
+There. I can't I can't spell autonomous into chosen that one.
+14:17
+There we go. It'll come to us. Slightly play around with I should do it properly with styles.
+14:29
+The default ones in word are all quite ugly. All right, so what would we what would we write in our summary?
+14:49
+Or something? Something like that, I'm not actually going to do a proper summary or anything.
+15:23
+At this point, let me just play, just let me make you the co-host in case anyone tries to join John.
+15:32
+And then so fill out something, and then at the end of your document, you'll have a section called references,
+15:44
+which, depending on the number of words you got, is either going to be on the same page or the next page.
+15:53
+For that one. And then your list, your references, this you have so as one.
+16:01
+That's a completely made up journal, although I suspect there probably is one with something like that, so don't worry about this and.
+16:33
+You could write something like that. That would be a reference, that would be a citation.
+16:56
+Presumably, that paper would have to use words like that in it. There.
+17:00
+And that really helps, but the kind of things you'd have to think about would be just checking the Vancouver referencing guide
+17:07
+that that is in Vancouver format and it's completely accurately laid out for that one kind of a feeling.
+17:14
+They may use round brackets, rather square brackets, but I haven't got that open in front of me at the moment to.
+17:21
+To check that one. But that is the kind of thing that you would you would right that is not necessary, a very good example in terms of the word count.
+17:30
+I would just highlight that section and say I've already got 37 words there,
+17:41
+which I can say you might not be able to see it influenced you a screen resolutions, but it is down at the bottom here and word.
+17:46
+And if you use LibreOffice office as a word count option, a menu.
+17:52
+If you do this in Google Docs, you can say something similar and say That is my word count.
+17:56
+I would not worry about the eternity in word count.
+18:03
+It would be slightly higher than this because I'm sure it will include the reference section as well.
+18:05
+But the people marking this are smart enough to know and to go through that.
+18:10
+Your reference list here should only be sources you have referred to in the text.
+18:16
+So if you haven't referred to in the text, then don't put it in the reference list.
+18:22
+So you may well have read another 20 sources or web pages or news articles you don't need to refer to them.
+18:26
+Your presentation will probably have many more sources than you've used in this short summary.
+18:33
+Yeah. That and other type of questions related to that.
+18:39
+Yeah, so one question was about including eternity in word count, don't worry about that one too much.
+18:48
+However, a muted feel free to go ahead. Sorry, this urgent all group meeting needs to go now, except he can't disband the group.
+18:53
+Well, I can do I'm so I could do absolutely nothing to solve that problem on Kate because I am not a to administrator anything like that.
+19:02
+There. So if you can't get hold of the people in your group.
+19:13
+Then I suggest you try and get hold of Constantinos and hope that he is around, and maybe you can do something or he can connect with somebody.
+19:21
+Well, we have everyone in the group present right now is just that one of us.
+19:28
+We want to add one final thing to the accepts. Our group is going to be in a cinema at the time, so we can't add to changed stuff.
+19:32
+I'm. Well, your slides and your video, I hope you will match each other.
+19:43
+I would say that if it is a very minor update to the slide and you've made one tiny change on the slides, I wouldn't actually worry about it too much.
+19:52
+It is the ethic diagram. That's what we wanted to add.
+20:00
+And I think that's that's quite a big part. They submit the slides separately.
+20:05
+Someone's in a separate file. And I'll look at it separately as well.
+20:11
+VIDEO Would would that work? That would be that would be fine.
+20:19
+Yeah, thank you. Well, I'm asking Thomas if it's actually technically possible and I might need reminding.
+20:23
+I don't think you mean we'll be.
+20:34
+It plays happy to do that, then you can email the updated slides to him on this occasion.
+20:40
+Yeah, there.
+20:48
+But in general, if you try and do that for other modules, people will, you know, people won't accommodate, it will be will be accommodating.
+20:49
+Here is the first time you used quite there, but in general rules and these are things to to plan around.
+20:57
+Okay, thank you very much.
+21:07
+It's not the it's not the most helpful department if you have technical issues or if you haven't worked out when to do things.
+21:08
+I'll I just this is probably just a general warning that if you hand in your files at one minute light, then Kate will cap them.
+21:19
+Nobody will go in and overrule it, and you'll get a maximum like a 40 percent of you say your internet was slightly slow uploading on that day,
+21:27
+then people, the response you'll get back for most of the problems you should have started uploading two minutes earlier.
+21:36
+But. And yeah, so let me just check there, just check the other questions related to summaries and then we'll go back to other things.
+21:45
+So this one about how do you include the references? Is it superscript numbers in the text and corresponding references at the end?
+21:56
+So yeah, so this is the the kind of format on the screen, and you might have more than one reference.
+22:03
+In some cases, you might have any references.
+22:09
+It might depend, but I would try and have something in there just because it will give strength in your abstract to bits for that one.
+22:12
+There's a question about I think it was on and about should you include the references in a footer?
+22:22
+And I would say definitely not, because that just is not a format that we use in and on department for that one.
+22:28
+That. And your reference lists, so just as election code references is what I mean by a reference list.
+22:35
+For that one, if you directly reference something in a text and you give an exact quote, do you reference it?
+22:47
+Yeah, I mean, definitely, if it's an exact quote, then you you've cited another.
+22:54
+This is this is a citation. This is the reference at the end.
+22:59
+So, yes, the quotes you cite. If you've paraphrase something, then, which means writing it in your own words,
+23:04
+but it's translated directly back to an identifiable source, then you still put a citation with it as well.
+23:12
+But even if it's something which isn't particularly the it's a very general opinion that is heard all over this not one great source for it.
+23:25
+Then you don't usually need to to cite it.
+23:35
+So let's give. So something that you probably wouldn't need to cite.
+23:40
+Completely irrelevant to this fairly standard example that I mean, the Earth is round.
+23:46
+You wouldn't say that. And some people here will probably disagree and say it's not exactly round and and various other things.
+23:55
+Don't take me to task, which is a very quick example there, but that is just a known fact for that one.
+24:03
+What might you cite some other factors relating to the Earth, according to.
+24:16
+I don't know the exact numbers for that, but let's say you were you were discussing climate change or something and you had a definitive source
+24:40
+to back up your argument that then you would cite that source because that can be traced to somebody.
+24:48
+I mean, you might say something like the climate change deniers in general say the Earth is not getting warmer than as a very general statement.
+24:56
+You might know cited there, but if you want to. There's always something quite hard about exact science is there.
+25:07
+OK, so can your type, does your title have to be exactly the original title given to us?
+25:18
+No, it doesn't. No, you can.
+25:24
+You can play around with that title and phrase it in a way that makes sense according to what you've actually done and your summary.
+25:25
+That is fine. That and probably your title won't be a question.
+25:35
+That was just a very quick example when I was half thinking that I put on the screen store the bigger question.
+25:40
+Does your title include in your word count? Yes. Just a guess for your word count.
+25:46
+That section of the text is going to include in the word count there.
+25:52
+So really, I would think of it more as you're aiming for this to be 250 words and you've got a bit of space left over for your title.
+25:56
+Is it standard practise for abstract to include no references of paraphrase that question that got lots of not seen it?
+26:08
+Yeah. If you are writing and this is. And abstract for an academic paper would not usually include references you write.
+26:18
+That's why I phrase this as a summary for this. But.
+26:27
+This is this is one of the slight challenges of this being.
+26:36
+This section being taught and assessed by the Centre for Academic English.
+26:42
+They they they've used the term abstract. I prefer the term summary for this there.
+26:47
+And they've also mentioned citations. So therefore they mention you should use citations.
+26:52
+So really, it seems sensible that you should use some citations.
+26:58
+Yeah, yeah, it's a silly thing that if people have given a marking scheme a mention, certain things,
+27:04
+and it should at least do something to do with the things that have been mentioned.
+27:14
+But you're quite right that if I was writing an academic research paper for publication,
+27:21
+there would be an abstract section to that paper, which would not usually include references in the abstract.
+27:26
+There'll be references to the main text.
+27:33
+I guess the difference between this is what you're looking at is a standalone document that people may never see your presentation.
+27:35
+In fact, the paper mark marking this won't have see your presentation because it's being marked by a separate organisation.
+27:43
+So you want what you do here to stand alone, but with far fewer references than you would have in your main presentation for that.
+27:49
+So, yeah, it's it's different to these challenges with terminology that with like something
+27:58
+that came up in and the other people mentioned or I mentioned bibliography.
+28:03
+And you might find some documents that ask you to have a section called references,
+28:08
+but instead called bibliography and a bibliography can include sources that you've not cited them.
+28:12
+And you will find people, even academics that. Confuse the two for that one.
+28:23
+On MS word. Some words, autocorrect, American spellings, e.g. Peter Lyons with the Z or saver without a.
+28:33
+Will be marked down for using these spellings. I very much hope you will.
+28:41
+That's my answer there. But it's up to the centre for academic English because we are not writing for an American university,
+28:46
+we're writing for UK university, but that is probably my my bias in that one.
+28:52
+Speaking for this one. But yeah, please use UK spellings.
+28:57
+In fact, if people who work with American spellings is one of the main ways we determine that someone
+29:03
+else has done the work instead of the student and then go and investigate it in more detail,
+29:08
+because that's normally a big giveaway that either someone else has done it or it's been copied from American websites somewhere.
+29:13
+So use UK spellings because you're opening up a lot of work that needs doing that.
+29:18
+And so your solution for that one, incidentally, is change a word dictionary to UK English, not use English, so it stops correcting them for you.
+29:25
+It's actually quite harsh, but it's up to the centre for academic English.
+29:37
+A few years ago, I taught a course just to post grades just a Ph.D. students at the Technical University of Vienna.
+29:43
+And I said, I expect you to write this essay for me in British English rather than American English.
+29:51
+And they were students from all over the place. And they said, Excuse me, you know, I learnt English as a foreign language in Czechoslovakia.
+29:58
+How do I know whether I learnt to American English or British English? So it's.
+30:06
+It's an interesting one. I suspect what will happen if you hand in American spellings,
+30:13
+then someone in the centre for English will give you feedback and say you should be using UK spellings while you are studying in the UK there?
+30:22
+Well, I hope so. Well, I'm sure they will give you feedback.
+30:33
+I suspect they won't directly reduce mark, but I really find these these hypothetical type questions about what another part of Imperial will do.
+30:36
+Very difficult. Yeah. Well, how can we answer?
+30:47
+Yeah, yeah. So yes, I mean, this is what I did.
+30:52
+Yeah, just one of these things that it is an annoyance.
+30:58
+I mean, I've certainly had this when I've been writing for other places on surely has had this as well that if
+31:04
+we've submitted our work to an American research journal I want published by an American publisher,
+31:10
+they require us to use U.S. English there.
+31:15
+So it's a perfectly nice, just a standard problem of writing that you write for the audience that is that is out there.
+31:19
+And I've certainly yeah, this this book is the style guide for the first publisher.
+31:28
+I've published a book with covers all these details about how to spell things and so on.
+31:33
+It's nearly 200 pages long. And yeah, if you don't write it the way the publishing house wants it, then they'll just send it back to you.
+31:39
+So that's what it's like. Oh, sometimes they just go through your documents and they edit it all for you and change it into their preferred style,
+31:49
+which if you're not careful, then they can change.
+31:59
+The whole meaning of that was well intended corrections to your use of language so that one as well.
+32:01
+Think question here. If it's a direct quotation, would you leave it in American English?
+32:09
+Yes, you would, because that is fine, because that is the original words that we use, but it would be in quotation marks.
+32:13
+In that case, it's obvious it is someone else's words are not your words.
+32:21
+And maybe you can say it's just it is quite a tricky question because things like use of the Z spellings, they do happen in the UK a bit as well.
+32:26
+So they're not unknown that spelling how to spell penalised with a Z if you're interested, if you're actually gives the list of endings.
+32:35
+About thirty five. But again, if I needed to know I would look it up in that book the favour without a you,
+32:48
+that one does look very strange in UK English or if you talk about maths instead of maths,
+32:58
+that one looks really strange in the UK because maths has an s.
+33:06
+And I mean, maths is very hard to say. I don't know where that one came from.
+33:10
+Yeah. And if you then want all to go through all the choice of referencing and dealing with different,
+33:17
+very exacting formats, lookup API referencing and the Oh know the massive manuals I published,
+33:24
+it is literally a manual of several hundred pages about how to do references in their style and make sure you do everything correctly.
+33:31
+And if you're doing a different style of all, of course, humanities or social sciences or something like that.
+33:39
+And they say use API format that will drive you potty drives me partly because I write educational papers and quite often they use API best avoided.
+33:45
+If it's a direct quotation, leave it in American English. Yes, leave it in French.
+33:56
+If it's in French, yeah. Oh, this is in France.
+34:00
+What you might do is leave, which is the exact quotation, and then put your English translation afterwards or say roughly translated as yes,
+34:05
+like that roughly translated as follows and you may as well.
+34:13
+And then the other way of dealing with that one is to not include the French version at all.
+34:19
+But to paraphrase it in English with a citation and then make a comment that this is roughly translated from the French original.
+34:24
+That because that saves you a few words and I mean, words are difficult.
+34:35
+You're writing to 300 words. I, you know, we often write to as academics to three thousand words to 5000 words,
+34:40
+depending on the guidance from particular academic publication, and have a lot more stuff to cover.
+34:51
+So that is not you're really writing one very short chunk that's like writing six sections, each of which has a very short word count to them.
+34:55
+And you have to just get used to these kind of things.
+35:05
+And you'll even find this when you write your final year projects and you've got I think it's a page limit rather than a word limit.
+35:07
+Let's say for the sake of argument, you're only vaguely guaranteed 10000 words,
+35:15
+you will find it hard to cover all the work you've done in 10000 words.
+35:20
+There. So it is just just one of these things, so I try and make use of question.
+35:24
+Yeah. I'm not sure what exactly you mean, but if you mean, can we refuse to have our videos shown as examples to future students?
+35:34
+Yes, I think you have that right? Yeah, yeah, definitely.
+35:46
+You do not have to consent to your video being shared.
+35:51
+That is absolutely fine. This is for the people who would would be happy to do this or you've put a lot of work in and you think you've done something
+35:56
+really good and you'd like to make this available would probably only make about five of them available next year anyway,
+36:04
+because we don't overload next year's students for that. And I did put on the form as well the option that possibly letting the department share
+36:11
+some of these because the department often likes to share excellent student work.
+36:20
+But again, that is very much optional for that.
+36:25
+And if you look on the Palm YouTube channel, you'll see examples of previous student projects and group projects and everything.
+36:29
+People sometimes like to share these things because it presents you in a very positive light that your work is being showcased,
+36:35
+but it very much depends what you've done. And you may think this is our first group work we've done together.
+36:42
+There's mistakes in it that is not the best work where it's very good, but it's not the best thing we're going to do.
+36:48
+So we don't want to share it. That is absolutely fine as well.
+36:54
+So that one? So Blair may have accidentally disputed you when I was trying to let somebody in.
+36:58
+So if I did, then that was just to just to for on you.
+37:04
+Right? And on Kate, what I'm not sure about there, I think you can just leave that blank if you don't want to submit it.
+37:09
+But if for some reason Kate is saying you can't do anything unless you submit that file,
+37:23
+then just submit a blank file in its place as one of Kate's has got quite a few quirks.
+37:29
+That's why I've been having all these discussions today about setting up groups of disbanding groups and everything,
+37:35
+and this is very unusual for me to be the person who has to deal with any of this.
+37:40
+But it's just the way the timing is worked out. Blay and I are the first people who have had to deal with group work and Kate with you.
+37:47
+So. So I don't normally deal with all these questions.
+37:54
+It's normally Konstantinos who deals with them, who has a lot more rights to do things in the system than I do.
+37:57
+So we'll we'll do our best to answer these ones.
+38:02
+But unfortunately, Kate is a tool at the time it was produced, which I think was only about 10 years ago.
+38:04
+Even though you may look at it and think it was about 30 years ago for that one,
+38:11
+and our tech team and the department are in the process of developing a replacement for Kate,
+38:15
+which will be a bit more mobile friendly and ready for the future.
+38:20
+But we are a computer science department, and so therefore we have the problem of many computer science departments do that.
+38:23
+Everybody wants to develop their own technologies internally for students to use rather than use
+38:30
+off the shelf solutions that are probably a bit more user friendly and designed for robustness.
+38:35
+So you will see this and hopefully you'll be sympathetic because you're also a computer scientist,
+38:42
+but that's the world we live in for that one actually won't be long before you're the other side on this.
+38:48
+You're you're the people and the users or the financial advisors in your company complaining that
+38:55
+your online system looks a bit out-of-date and it's going to be up to you to write the new one.
+39:03
+So, yeah, I have some sympathy there, but it certainly looks out-of-date to me.
+39:08
+So, yeah, I'll give you. I'll give you another example.
+39:14
+So this week you have been using the new peer review system in the department,
+39:18
+which was developed last summer by students who there's the student, a scheme that you may have come across.
+39:22
+I strongly recommend if you're looking for a summer project that you look at either student shapers or you look at Europe,
+39:31
+the undergraduate research opportunities.
+39:38
+You can, of course, apply for internships externally, but they're slightly hard to get while you're in the first year.
+39:40
+I will probably be available to supervise Europe's student shapers in the slightly more educational side of things as well.
+39:46
+For that one?
+39:54
+But students last year, I think there are students at the end of the first year going into the second year, develop the new peer assessment system.
+39:55
+And like many students, they they did a good job, but they didn't spend as much time on testing as might be liked.
+40:03
+So there was an error earlier this week yesterday that you came across where I have to
+40:13
+upload the student IDs to set up groups using a slightly unfriendly format to do that,
+40:20
+which I did, and it looked like they were uploaded correctly and they were.
+40:27
+But unfortunately, some of these had an extra space at the end of the ID, and because I had an extra space, this was counted as a character.
+40:32
+And so user idea of the space is not the same as user I.D. with outer space.
+40:40
+And so it looked like you're in groups of three people inside groups of four people.
+40:46
+So that was what happened there, and I was interested.
+40:50
+And of course, what would you do if you were doing this kind of system and in a slightly more robust way as you would strip the spaces,
+40:52
+it was a space at the start or the end of a user ID or your report area and say this does not match the format.
+41:01
+So. So Yvonne, who you may know who leads your web?
+41:08
+Yeah, it's all probably our lead developer for a tech. We've got several people now working in that team,
+41:13
+as some of you may know him because he's also a personal tutor and has a group is also graduates of your course.
+41:18
+So in theory, he should be familiar with all of these things. That is a very nice person as well.
+41:25
+And he's Italian.
+41:31
+But if he met Yvonne, then he has corrected that, sorted out the bug, and I think he's put a fix in place to look for that problem in the future.
+41:33
+But I've also been a few little quirks with that system that appeared. So if you yourself spot a quirk, then let me know.
+41:41
+Let ADTECH know so we can correct it for the future. Then I'm just throw a positive note.
+41:48
+If I was a first year undergraduate doing computer science at Imperial.
+41:55
+I'd be hearing all this about that joke and thinking, Oh, target rich environment jobs for me.
+41:59
+Plenty of work for me. Yeah. The interesting thing about Ed Tech as well, some of you be very experienced programme is even before the course.
+42:06
+These systems are all open source with open source the department and I suspect you can't access the source outside of the department,
+42:15
+but they they welcome student contributions. So if you feel you would like to work on an additional feature,
+42:23
+so one of the systems over the vacation period and contact and ask if you can get added to it will be a GitHub repo.
+42:30
+And you can contribute. They still have to agree. The merge is to the the source code base and everything.
+42:40
+But there is the opportunity to say you look at the peer review system, you say, Oh,
+42:46
+I wish it would display something in a certain way that you could write a bit
+42:50
+a code to do that and you could submit that that would be more than welcome.
+42:54
+So many of our systems are set up like that.
+42:58
+So, yeah, that is set up, they review is set up like that, the newer type systems the system of the lecture notes is set up like that as well.
+43:04
+Kate isn't because Kate is is software is being retired, but you can definitely get involved with some of those.
+43:17
+If you feel you would like to do so. Good opportunity to support the department.
+43:25
+Get some experience. How about if your word count, including the references over the cap, could your result in your marks being capped?
+43:30
+So don't you don't need to include the references in the word count, we've determined that.
+43:40
+So everything up to references? Yes.
+43:44
+So the title, your name and the rest of the document should be no more than 300 words and the recommendation is over 250.
+43:49
+So if that happens, the very first thing you should do is go through the document and work out way.
+43:58
+If you use extra words, you can cut it down. So every way you've written something like global warming is a very big problem for society.
+44:03
+You can take out the word very I'd get rid of word because you don't need that.
+44:14
+And you could write that in a much better way. Anyway, that was just said top of my head example for that one.
+44:19
+My view is that you are being assessed against the important skill of being able to right to a limited word count.
+44:26
+I will fully say it is a tough skill to develop that word counts are tough and you won't be able to include every detail.
+44:35
+There will be loads of really interesting points you just can't make,
+44:45
+and you'll have to either cut some of them or just generalise that or find a way around it so you won't be.
+44:48
+So you want the capped essentially by submitting over the word count.
+45:00
+But I suspect you will get a slightly lower mark for going over the word count
+45:04
+than if you had edited it and managed to get this down to the word count.
+45:08
+Because that is one of the things that they are said to be academic is looking for these.
+45:16
+Is we right? I'll give you one example earlier about writing academic papers that many of you will do,
+45:24
+possibly in relation to finally a project or something like that there, as well as the paper itself, there will be the abstract.
+45:30
+The abstract will say something like maximum of 150 words, which is your summary is incredibly hard to do.
+45:37
+You submit a hundred and fifty one words. They will send it back and say this is no more than 150.
+45:43
+So. So it is perfectly common and nobles to do that.
+45:48
+They want to so rejected off the top of out of hand, but they won't accept it either.
+45:53
+And your deadlines are perhaps less strict. It may be you go to words of nobody will ever actually notice because people will just look and
+46:00
+they will see things where you have you have gone way over because from my own experience,
+46:10
+when you're marking and you have a lot of students work to look through and you want to give good feedback,
+46:15
+then you may slightly overlook some of those fine details about what counts and not spot it.
+46:21
+But it's very obvious if you're marking and it's the one you've marked,
+46:26
+everyone else is written still a certain amount of the page up and then the next one comes in and it looks a lot longer than you do.
+46:31
+Go and check that because it just looks odd. I gave a can I just say it may sound like we're being arbitrary and tough about this,
+46:40
+but being able to write short summaries that don't leave anything out is such a useful skill.
+46:50
+Such an important large skill. Get it now, even if you work in a cure.
+46:56
+In fact, especially if you work in a purely technical job, you know you will you will really need this skill.
+47:00
+And I'm just the Thomas's example going through and cutting out the berry to save a word and so on.
+47:08
+I promise you, you will be doing this in industry a lot.
+47:14
+It really is important. But in fact, the most senior people are the less they read.
+47:19
+So you have to get your points over in a very succinct crash.
+47:24
+You really do. Yeah. You write a report and that on the front of that, that 20 page report, you write an executive summary,
+47:29
+which essentially is like an abstract, but in the business world and anything really important.
+47:38
+You've spent a week slaving over this data and getting all the great examples and everything you really want people to see.
+47:44
+And then you find out your manager only actually read that first page. So you have to get everything really important across in that one page.
+47:53
+If they may get it 15 seconds. You know, it's it really is a useful skill.
+48:00
+Work at it. Yeah. And you used tricks that you don't need to do with this, but you're doing that one plus page you use.
+48:06
+You say, OK, this person is actually they've got to pay somebody to read a paragraph and you start to build sections
+48:13
+of it or you make it stand out in some other way just to make sure they've seen that one point.
+48:18
+So you want them to take a moment to make them say, you have put the work into this.
+48:23
+That's a the kind of things you do that.
+48:27
+And some are just going to add little side point to this.
+48:31
+You might think talking to us that Lee and I are incredibly best to insert your own expletive here, type people.
+48:34
+And we're giving you all a hard time and we're not being terribly helpful by
+48:42
+not bending the assignment to to do things in your preferred way of working.
+48:47
+I hope that isn't the case, but you're, of course, you're very entitled to make your own opinion.
+48:53
+We are actually very accessible and try and help out and try and answer questions.
+48:59
+It doesn't mean we do everything perfectly. I will quite admit that I doesn't mean I can't look back at the assignment brief that I gave you.
+49:07
+I think, Oh, I wish I'd slightly change the wording here because I don't do everything perfectly.
+49:12
+I do things with a limited amount of time as well as we all do.
+49:16
+So that's why we're having these sessions. We're answering emails when they come in and we're trying to help out there.
+49:20
+You will find that not everyone you meet in Imperial, any wider life is going to do this.
+49:27
+Some of them will just essentially say, we'll make you make your own judgement or they will answer your question three days later,
+49:33
+giving you a few minutes until the deadline when you can't actually do anything with it there.
+49:40
+So we are trying to help you use your judgement when necessary.
+49:45
+You will get it. We do consider the intent of what you're doing that you're trying to do the right thing here, there.
+49:49
+And we all overlook small mistakes. We won't overlook if you go away and you can't bother to write a summary.
+49:57
+How? That probably won't be overlooked because it will stand out and we have to do something about it because
+50:04
+that's the one of the hopefully that will not happen with anyone because you're all too smart for that.
+50:09
+Yeah, but you will definitely find you in future modules that the assignment brief is nowhere near as detailed as when we've given you.
+50:17
+So it doesn't actually tell you how you going to get the marks where you have
+50:25
+to go away and try and guess what the lecturer or the person market will want,
+50:28
+and they will. Probably they won't tell you because they don't want to be too constrained.
+50:33
+Horrible thing, but it happens there or they, as has happened in the give you a they give you a link to a downloadable software tool you can use.
+50:37
+And you find out that software tools stopped being maintained five years ago because of nicely updated incentives.
+50:53
+And you have to try and get this old tool working and they just say, go away, get on with it because that is the place they expect you to do,
+50:59
+because that is the the world of education they lived in, and that's what education they're putting in towards you.
+51:07
+So take from this do your best there.
+51:12
+Try and stick to the spirits of what people are looking for and realise that not everyone else will will do all the stuff that we,
+51:16
+we are doing for you. That and many, many stuff are brilliant.
+51:24
+They will, but I will not guarantee that across the board there are some people's interest.
+51:30
+Name in life is working on their research and the time they put towards a teaching is secondary.
+51:36
+You asked the question at the right. I'm in a lecture, you might get good answers that might be really helpful for you,
+51:41
+but they might not be able to put the time in outside of the lecture, I was there.
+51:47
+There is a question is coming in chat to me in the summer.
+51:53
+If your references websites do, you includes you are really normal black not underlined font as a hyperlink.
+51:56
+So traditionally at Harvard referencing, you just put this in the same text style as everything else,
+52:02
+so you don't underline it and you don't make it a hyperlink.
+52:09
+There. In practical terms, if it is a hyperlink, nobody, I suspect, will will mine too much for this assignment.
+52:14
+If you've left, it was a working hyperlink, but it shouldn't be left in blue or anything like that,
+52:24
+and it probably shouldn't be underlined or anything that looks different.
+52:31
+So any other anything else we can help you with, I know have we've covered a lot of things and it's been a bit of back and forth type Q&A session,
+52:41
+so hopefully you can extract the bits of the useful. To you, so question Yvonne.
+52:49
+Yvonne, about who even is there?
+52:57
+Yvonne is Yvonne Tucker ne.
+53:01
+Oh, I've seen that as a direct message to the person who asked that, so I'll send that to everyone.
+53:06
+There you go. Yvonne, which is written Oliver just but pronounced even that, and I think I've spelled his son correctly.
+53:14
+And as you may guess, by his name ending in a vowel that he is Italian.
+53:25
+I know their names and their vowels where the people aren't Italian.
+53:32
+And even graduated from the engine computing, I think, three years ago now, so has been through many of the things you did,
+53:36
+even did an ethics presentation at one point and had Blay there in the room as the visitor
+53:46
+tried to find out everything had been involved with us before I was on the module.
+53:53
+But Blay was on there and play is very nice.
+53:56
+We want to keep want about anything very tricky or difficult. So.
+54:00
+All right. All right, so fine, we will rent your clothes off in a minute because I think I was everything,
+54:08
+but let's just just very briefly remind you and if you're here and I'm sure you have done this also before seven p.m. today,
+54:14
+please upload the video to somewhere external, such as YouTube.
+54:23
+You can use a different preferred way of uploading your video if you want. But we'd like to be able to click on it and watch the video.
+54:28
+We don't want to have to download anything, please, that it can be completely unlisted.
+54:33
+It doesn't have to be visible to the world, and it's probably suggests you don't make it visible to the world.
+54:40
+We suggest that you don't make it visible to the world because all sorts of bad things can happen once you let people see and comment.
+54:48
+You can turn it. You can turn off.
+54:58
+Allow comment if you want people write nasty comments on on YouTube videos, even if the most innocent sounding video.
+55:00
+Yes, that's right. Yeah, because people have such differences in opinions about things.
+55:07
+So, yeah, so released. Yeah. Put your video up.
+55:14
+Leave plenty of time, if you can. It's not a last minute type task.
+55:20
+Chimney thing is going to go wrong, and then the group leader sets up the group.
+55:24
+OK, Kate, you all need to click.
+55:28
+If you're in the group to agree you're in that group and you've contributed to the work, upload a text file with a link to the video to Kate,
+55:30
+upload the slides to Kate as well and optionally upload the consent form which is there if you would, which is on C.A.R.
+55:39
+If you would like us to be able to share your video later, but it is not essential.
+55:51
+I don't think Kate will force you to upload that form, but if it does, then you can just upload a blank bit of paper or a blank file in his place.
+55:56
+As absolute sign of that on blackboards, you need to upload your summary, which is sent to record in English will work double check.
+56:05
+You can access Blackboard. You should. When you log onto Blackboard, you should see a list of modules on the first page,
+56:13
+which includes the Create module, and you should just click on that and find everything.
+56:20
+If it doesn't, then you really need to contact Brett at the Centre for Academic English because I can't directly edit that one,
+56:27
+but otherwise you can try and search and find it should be in the list.
+56:35
+Make sure you find the 2021 the module, not the 2020 version, because you are not enrolled in the 2020 version.
+56:41
+Only mentioned as a question came in to me earlier today as well for that one and then the final thing.
+56:48
+So it's a lot of things is the peer review system. Please do peer reviews as an embassy group, but it might.
+56:56
+If everyone has worked well, it'd be no issues just going to go in and choose a mark of five for the all and click submit,
+57:03
+and it will take you about a minute.
+57:10
+If there's any issues, then put some comments in so that when we go and look through this, that we could work things out.
+57:12
+If somebody in a group is not being seen, then clearly report that there because we don't want them to get a mark for work they haven't done.
+57:18
+Yes. I mean, I just realised what I said about not making it world readable, there are some good reasons for making it readable.
+57:26
+Apart from, you know, just by me, one of which would be so you can tell your, your friends, you know, your parents.
+57:36
+So your funding authority, what you've actually been doing proves that you've done some work.
+57:44
+It's just as Thomas said, there are people who specialised in writing nasty comments for reasons that I can't fully understand.
+57:51
+I don't think you should leave yourself open to that.
+58:02
+Yeah, you can go back and delete the comments, though amount them spam or anything afterwards there.
+58:06
+But yeah,
+58:12
+this is something nice that if you are applying for internships and you're developing a portfolio of work you've done in the first year at university,
+58:14
+you don't have that many great examples which you can share.
+58:21
+But this is something that, although it's not a technical example that might be interesting to share,
+58:25
+as might be saying, you've contributed to tech and what was bad, or it might be a side project you're working on.
+58:30
+So there are things that you might be a hackathon project. So there are things you can share.
+58:37
+So there are always these things are always useful. You probably can't just share your weekly Haskell work because that is not particularly
+58:41
+exciting in the way that an employee might think of as exciting as that one.
+58:50
+You'll also get your C project at the end of the year,
+58:56
+and we get some great we get some great projects like Ted to supervise a few of them at the end of the year,
+59:00
+but that's a bit too late if you're thinking about things to do during this comet this coming summer.
+59:06
+So that really is everything will be around for a bit.
+59:14
+I personally am going to be on email and until about 5:00 p.m. today, I may will be on a bit later, but I won't be sat in front of my email.
+59:19
+Quite the same because I have a few bits to do this evening, as people often do on the on the Friday night.
+59:35
+So I may look at some emails quickly on my phone. But what?
+59:43
+We have to deal with anything really tricky by email after that point there to try and make sure you're sorted as possible before then, please.
+59:45
+And yeah, we've really enjoyed what you've you've really enjoyed the interesting questions this year for that and don't feel bad if
+59:53
+you've asked referencing questions and things like that because of the kind of things that nobody would ever really tell you.
+1:00:03
+And that's why we're making the effort to to try and share these things and answer as well to do my best to be available by email.
+1:00:08
+But I have a lot to get on with. One student, I'd sent a long email about taking these things further and making a career in computing ethics,
+1:00:16
+and I just thought the way that this particular student could do that, which would be to join the BCS at this point.
+1:00:28
+So I'll just I'll just worry about that consideration in front of me.
+1:00:36
+You might want to consider joining the BCS you play, but you might be able to get a good deal as a student and it's a handy thing to have on your CV.
+1:00:41
+But first of all, you'll get a BCS email so you can contact people as an insider and ask you to basically play the networking game.
+1:00:50
+So I'm very interested in what you're doing. Can I have a chat? And then you're not just any student or BCS member.
+1:01:01
+You say that that's how these things work. Yeah, there's absolutely nothing wrong with being a student member of the BCS,
+1:01:08
+even attending some of the BCS meetings, a all of which are online at the moment.
+1:01:17
+And you can join remotely and doing a few things like that just outside the confines
+1:01:20
+of Imperial's a different set of contacts you make and experiences you get.
+1:01:26
+Most BC's special interest group meetings are open to anyone, you don't have to be a member,
+1:01:30
+so it's not all that's all there for you if you want to pursue it.
+1:01:36
+Yeah, yeah. They used to insist on giving you free food and things like that at the meetings as well.
+1:01:40
+A lot of the evening ones at the box and free wine quite often as well.
+1:01:45
+The ones I used to. Yeah, to go along to. So not just we're feeding you for free or anything like that, but there are these.
+1:01:49
+There are these bonuses. It's not quite the same online. You have to supply your own money watching the guest.
+1:01:57
+The guest speaker was to defeat the free every evening of the week as a steward.
+1:02:03
+If you joined only the start up activities that go on in the normal world around
+1:02:08
+London and everything like that of ambitious meetings and everything else.
+1:02:13
+And I'm sure people do, and I'm sure the list you can find online of where all these things are, you could attend that.
+1:02:17
+Yeah. So thanks for yeah, thanks for all your efforts.
+1:02:24
+We will look forward to seeing what you've done.
+1:02:28
+Thank you.
+1:02:33

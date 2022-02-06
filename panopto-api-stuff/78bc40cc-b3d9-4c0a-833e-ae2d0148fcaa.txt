@@ -1,0 +1,225 @@
+ID: 78bc40cc-b3d9-4c0a-833e-ae2d0148fcaa
+Title: 8.1 Top-down
+Category: COMP40008 - Graphs and Algorithms (Spring 2021-2022)
+Lecturer: Iain Phillips
+Date: 06/03/2021
+So I want now to return to dynamic programming, we've seen several examples already in the course,
+0:01
+such as the Bellmon held a call up algorithm for the travelling salesman problem.
+0:07
+And I'm not going to consider an example to illustrate two contrasting styles of dynamic programming, namely the top down and the bottom up solutions.
+0:12
+And we'll talk about memorisation to improve the time efficiency of the top down solutions.
+0:23
+So let's take an example. Here's the problem, given a string of characters.
+0:33
+S. Can that string of characters be split into words occurring into it in a dictionary?
+0:39
+So as a simple example,
+0:45
+here is a string of characters as equals w i n d o w n pretty obviously we can split that in to win and down or indeed whined and Owen.
+0:47
+And so therefore the answer is yes. This word can be split into words occurring in a dictionary.
+1:02
+But this string of characters here cannot, as far as I can tell, be split into English words.
+1:08
+So how could we solve this problem? Well, looking at all possible splits will take us too long because there are exponentially many possible splits.
+1:18
+So here's a top down so-called recursive solution to the problem procedure, DWB one.
+1:29
+So the first thing is we see is the word of lenth zero.
+1:37
+In which case we will say, yes, that can be split into words just by using an empty set of words.
+1:42
+That will say that's true. And otherwise, we want to split the word at one place and then cheque one heart,
+1:50
+the right hand half for being in the dictionary and cheque the left hand half
+2:00
+recursively to see whether we can break it up into words which are in a dictionary.
+2:07
+So let's have a diagram to illustrate that. So here is all word.
+2:11
+We can compete and like an array, if you like.
+2:21
+So we're index from zero up to the length of the string, minus one.
+2:26
+OK. And then we're going to slice it in two halves or to the left and the right portion.
+2:33
+So the right portion will start at index. I and that we can notate that as s I kolon using a python like slice notation.
+2:40
+And this left portion is everything up to I.
+2:56
+So we can write it like that. OK. It's the whole word is s so we're going to cheque the.
+3:00
+The right hand portion for seeing whether that's in the dictionary or not.
+3:08
+So that's it. Here we we look up, we've got a procedure in dictionary and we cheque that.
+3:12
+And then this left off. We're going to recursively call our WB one procedure on that part and see whether we can split it into words.
+3:21
+So that's the setup. Well, so we need as you to see in the procedure here, we need to I to take all values from zero up to lenth best minus one.
+3:35
+And so that will mean that we will have all a word, either the whole word if if I equals zero zero up to lengthiest minus one,
+3:48
+in which case we'll just be looking at the one character word here.
+3:59
+OK, so. So that's all procedure.
+4:04
+And if the recursive call,
+4:09
+if the right unfortune portion is in the dictionary and if the recursive call also returns true say the left half can be split into words.
+4:12
+Then we should return. True overall. And if we got through all of those possible splits and none of them gave true, then we should return false.
+4:20
+So I think this procedure is pretty obviously correct, which is one nice thing about programming recursively here,
+4:31
+that we can pretty easily get a solution and pretty easily see that it is correct.
+4:38
+So that's the top down recursive solution. And let's see how what the performance of that is.
+4:45
+What is the time? Complexity? We can measure the number of times that we cheque, whether substring is in the dictionary.
+4:53
+So if the word is a length zero, we just returns a true straight away.
+5:02
+So time is zero. If the word is a length and then we have any possible splits.
+5:06
+Each of these possible split positions. And then we say we have for each of those possible splits, we have a dictionary look up.
+5:14
+So that gives us an altogether. And then we have in the worst case, to go through all the possible recursive calls.
+5:21
+So a call for lenth zero. When I equals zero.
+5:31
+So the recursive call is just on event zero, up to N minus one.
+5:37
+So that gives us this whole summation here. So that is our recurrence relation for this.
+5:41
+We'd like to solve that. Well, it's a bit different from ones we've seen before.
+5:48
+But we can make it look a bit more familiar if we just write down W of one N equals.
+5:53
+In Los Angeles, mayor. And minus one.
+6:03
+Then we could we could look at w one of and plus one just to compare them.
+6:11
+And plus one last one was zero last.
+6:17
+Lastly, one of N minus one study, one of N.
+6:22
+So one more term there. Well, why not subtract those that we get?
+6:30
+And are you all of N plus one? Minus one.
+6:34
+And on the left equals one. Subtracting there.
+6:38
+Plus twenty one. And all right.
+6:43
+So that's already looking better. So Dhody one of em plus one equals one plus two.
+6:47
+Dominie one. And so we've got a real more compact recurrence relation here.
+6:54
+And I'll leave you to solve that one by repeated expansion.
+7:01
+And you can see that the answer will come out to be it. Every one of N equals two to the N minus one stage and on the slide.
+7:06
+Well, that's very bad because that's exponential. And it turns out, if you think about it,
+7:14
+the inefficiency comes from doing these recursive calls repeatedly for the same exactly the same recursive call.
+7:20
+So it's rather inefficient. We can show that on the recurrence of Lyrica recursion tree.
+7:29
+Sorry. So let's have a look at the recursion tree. And I've taken an example of a four letter string here.
+7:38
+So ABC D. And at each node of the recursion tree, I'm going to show the recursive core, which is on the left of the colon.
+7:47
+And the dictionary look up, which is on the right. So we start off with just the whole word here as a recursive call.
+7:58
+And then we've got four different recursive calls.
+8:07
+We can do because we've got four different split positions here. So here we just do we cheque the whole word.
+8:12
+And there's no recursive call. Here we cheque BCT. And recursively call our procedure on a etc.
+8:19
+And then. So the recursion tree unfolds with these different recursive calls.
+8:28
+And this gives us a measure of the amount of work.
+8:34
+Cause this is the complete tree, just for this example. And we can see how many dictionary lookups we do.
+8:39
+Which is by just counting up the number of nodes here, which gives us the two to the N minus one.
+8:44
+But what you notice is that these nodes in red, they're actually repeats.
+8:50
+This one here has already occurred. Higher up the tree in a different branch, admittedly.
+8:55
+And so is this one obvious thing is another repeat. And this one here has already occurred up there.
+9:01
+And this one here has already occurred there, etc.
+9:07
+So the ones in red are basically repeats in different branches of the tree.
+9:12
+And that's showing us quite dramatically the inefficiency in this algorithm.
+9:16
+And it will be much nicer if we could just cut off the tree after the first two levels,
+9:21
+noting that the further levels of the tree are just going to be repeating what we already did it admittedly in another branch.
+9:27
+So notice that the the way we or we execute this recursion tree is by depth, first execution.
+9:36
+So we go down as far deep as possible and as left on the left branch that we go down
+9:44
+here first and then we come down here and then we come down there and then like that.
+9:50
+So it's just like a depth. First search indeed is in a very close correspondence between depth, first search and recursive execution.
+9:55
+So by the time we get to these red ones, they will already have been computed earlier in our in our traversal of the recursion tree.
+10:06
+OK, well, so we can see what we should be doing here,
+10:20
+which is to avoid re computing things that we've already previously computed, let's use an associative array.
+10:24
+We will call Memmo so. And this technique is called memorisation to store the results from the previous recursive calls.
+10:32
+So we don't have to do that work all over again.
+10:42
+So all we need to do, instead of actually making the recursive call, we first of all see whether we've already got the results stored.
+10:44
+So we wanted to make a recursive Korn s up to but not including I.
+10:53
+So let's first of all see whether it's in there.
+11:01
+So if it's undefined, if Memmo is undefined for that value, then we will actually make the call and stall the value in in Memmo.
+11:04
+But on the other hand, if it is already stored in Memmo, then we don't need to do that.
+11:15
+And we can simply cheque the value without doing further work.
+11:22
+So this now means that we don't repeat the work for a recursive calls where we've already done it previously.
+11:29
+So notice that we didn't have to think very hard to do this.
+11:36
+We simply changed one line of code from up further up.
+11:40
+Find it. Here we are. We just changed that one line of code there for the recursive call and we just adjusted it to the blue lines here.
+11:45
+So this is a generic transformation that we could do on any recursive solution that we happen to have already devised.
+11:55
+So this is a sort of typical way of developing this top down solution is to, first of all, write down the recursive solution,
+12:03
+albeit rather inefficient, and then make it more efficient by adding in this memorisation.
+12:14
+OK, well, now the recursion tree is cut off at depth, too.
+12:22
+So the red nodes, remember those? These have all now been removed by the memorisation.
+12:25
+And so we can see that at level one, there are N nodes.
+12:32
+Level two, we get this summation here. I equals zero to N minus one of I.
+12:37
+And. But we know how to add that up.
+12:44
+And that just gives us. Therefore, if we add up the level one plus level two, we get this summation,
+12:48
+which is N times N plus one over two, which is a complexity of big order N squared.
+12:55
+So we have dramatically cut down from exponential to quadratic.
+13:04

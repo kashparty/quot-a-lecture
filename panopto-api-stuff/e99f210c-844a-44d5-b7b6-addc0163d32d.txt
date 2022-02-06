@@ -1,0 +1,149 @@
+ID: e99f210c-844a-44d5-b7b6-addc0163d32d
+Title: Kotlin Course Intro
+Category: Kotlin
+Lecturer: Robert Chatley
+Date: 10/11/2021
+Hello, everyone, my name is Robert Chatterley,
+0:05
+and I'll be teaching the next part of the programming course where we're going to start programming in Scotland.
+0:07
+So this follows on from Tony's part about Haskell, and we'll start to use some of those functional programming ideas,
+0:13
+but also transition into object oriented programming.
+0:19
+So this is just a short video to introduce some of the logistics about how the course is going to work over the
+0:23
+next few weeks and also to introduce some of the tools that you'll need to use in order to do Kotlin programming.
+0:28
+So if you look at your timetable, you'll see that for the upcoming weeks, there's no programming lecture scheduled for a Monday afternoon.
+0:36
+And instead, what we're going to do is each week give you the first part of the programming content as a series of short pre-recorded videos,
+0:44
+and we'll release these on Mondays so that you can watch them at any time during Monday before the lab session.
+0:52
+Then on a Tuesday, we will have a live online lecture on Tuesday morning, as you have been having.
+1:00
+And in this session, I will present some more programming material live and also be able to answer
+1:06
+any questions that you might have that arise from the pre-recorded material.
+1:11
+Then throughout the week, you will continue to have your regular lab sessions with help from the UTAS.
+1:16
+So those are Monday, Tuesday and Friday afternoons and you'll see that at the moment in the timetable.
+1:22
+There is a session scheduled for Wednesdays, but I'm not planning to use that session.
+1:29
+So in fact, we'll have just pre-recorded videos on Mondays and a life lecture on Tuesdays and then the lab sessions throughout the week.
+1:34
+So now let's take a look at some of the tools that we'll be using for our common programming.
+1:44
+So here we're going to look at the things you need to install if you want to get started with Kopplin programming on your own machine,
+1:49
+and then we'll look at how to start editing and working with the code, whether using your own machine or a machine.
+1:56
+So in order to work with him, we're going to need to install a couple of things.
+2:03
+And the first thing is a JDK, which is a Java development kit.
+2:08
+And that's because Kopplin is part of the Java ecosystem, and it actually runs on top of the Java runtime.
+2:13
+So there's a lot of options for JDK, but we can't recommend that you install an open JDK.
+2:21
+And if you go to open JDK Java Dot Net, you'll see there's a fair few versions of this.
+2:28
+And the latest available version is version 17, so we'd recommend that one.
+2:33
+If you work on a large machine, you may find that that has JDK 16 installed.
+2:38
+That's also totally fine as well.
+2:43
+If you want to install the JDK on your own machine, one of the easiest ways to do that is to go to this site, adopt him.
+2:45
+And then if you go there, you should find pre-built binaries for each platform.
+2:53
+And so here I'm using a Mac, and so it's detected. That gives me the option to download a version of JDK 17 for the Mac,
+2:58
+which I can then install once you've installed your JDK, if you want to check that it's working, if you open a terminal.
+3:06
+You should be able to type Java. See, that's the Java compiler that's version, and it should report something like this.
+3:13
+This shows that JDK 17 is installed on my machine.
+3:20
+So if you get something like this, then that's a good sign.
+3:23
+The other thing that we're going to need in order to work with Scotland effectively is an integrated development environment or idea.
+3:28
+And as Kotlin is a language that's developed by the company jet brains, and we're going to use their idea, which is called intelligent idea.
+3:35
+So if you Google for Intelligent Idea download, you should be taken to this page.
+3:43
+And if you go to the download page, you'll see there's a couple of options here.
+3:50
+There's the Community Edition, which is free for anyone to download, and that's absolutely fine.
+3:53
+That's the one that I'm using. But if you want to, you can also try the ultimate version.
+3:58
+This has a few little extras, nothing I think that you will need in order to work on the exercises.
+4:03
+But if you're working on very large projects, there are some extra features that might help them if you want to try that.
+4:09
+Normally, you'd have to pay for a licence for the ultimate edition, but you can get an educational licence as a student.
+4:15
+But I'll let you find out for yourselves how to get hold of one of those if you want.
+4:22
+Once you've installed intelligence, you should be able to open it up,
+4:26
+and I'll show you in the context of the first lap exercise, which we have prepared for you.
+4:30
+So here I've cloned the skeleton already from GitLab. You'll see if I go into it and have a look at the files.
+4:36
+I have this kind of structure. And so what we'll do is open, intelligent and import this project.
+4:44
+And I see the starting screen, I should just be able to go to open, navigate to where my own projects, huh?
+4:59
+And if I navigate to here and open this.
+5:10
+Then it should open up, and this would be the same if you were working on a laboratory,
+5:18
+you should find that intelligence is already installed on the lab machines.
+5:22
+So if you start it up, you've cloned your exercise repository somewhere and then you navigate that and open up there.
+5:26
+This should work fine. Sometimes it takes a few seconds for intelligence to import the project initially.
+5:33
+You'll see it's doing a bit of build and a bit of indexing. No need to worry about that.
+5:40
+And when everything's finished importing, you should have this kind of structure here,
+5:59
+and you'll see that you should be able to open the main and the test directories and in fact there should be a blue cocktail in directory.
+6:04
+This is where our main source code is. And also under test, there should be a green codling directory.
+6:10
+So blue is for kind of implementation code, and green is where our tests live.
+6:16
+So if we open up the tests for the first part of our web server exercise,
+6:22
+you can see here they're shown in the indicates where we can edit the code and also with tests.
+6:27
+Well, it should get a little green play button next to each one.
+6:34
+And that's how we can start to run these tests. So for example, if I run the first test, I can just click that here.
+6:38
+And we see the result of that is that we haven't implemented this, that's expected we've only just started the exercise.
+6:50
+And so if I was to go ahead and implement the solution for the first Test.
+7:00
+And then come back and run that test again. We should say that that now passes, it's green down here, but if I run the whole file,
+7:16
+that's going to run all of the tests and we can see that we've still got some work to do here.
+7:29
+We'll talk more about writing tests and adding tests of your own later in the course.
+7:34
+But hopefully this is enough to get you started importing the project into intelligent editing the codes,
+7:38
+running the tests and then proceeding with the exercise. I hope that you're looking forward to getting started with Colin.
+7:44
+So please look out for the first of the pre-recorded videos, which will be released on Monday,
+7:53
+and then we'll look forward to seeing you in the lab and in the live lecture on Tuesday.
+7:58

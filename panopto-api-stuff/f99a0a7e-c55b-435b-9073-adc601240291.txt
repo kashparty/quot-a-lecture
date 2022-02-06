@@ -1,0 +1,341 @@
+ID: f99a0a7e-c55b-435b-9073-adc601240291
+Title: L04 - Boolean algebra and logic gates (part 3)
+Category: COMP40001 - Introduction to Computer Systems (Autumn 2021-2022)
+Lecturer: Lluis Vilanova
+Date: 19/10/2021
+Hello and welcome to the third and last part of our lecturing boolean algebra and logic,
+0:05
+so remember that we just looked at the rules for simplifying equations,
+0:10
+using algebra, and now we are going to see how to translate these equations into actual circuits,
+0:16
+which is what we will use to build more complex computers.
+0:24
+So let's start with the what is the schematic representation of booleans functions when we translate them into circuits?
+0:31
+So remember, as we said in the previous parts, we have three basic boolean operations and R and not that we can,
+0:41
+of course, write very simply as boxes with inputs and outputs in the name of the function.
+0:53
+But typically when looking at circuit logic circuit schematics,
+0:59
+we will see that these three figures over here for and or not with their inputs on the left and outputs on the right,
+1:04
+although of course sometimes you will see them facing up, down or the other or to the left.
+1:15
+But that doesn't really matter. We know how to read them because it's quite clear that this is one side missing from these other.
+1:22
+Now, remember that a way to distinguish and an order which can sometimes be a bit confusing is that the author has this semicircle here,
+1:30
+which if you want to kind of remember the all the old letter in R and now finally,
+1:41
+interestingly, not a gate over here is just the circle, but in some cases when the knot is on its own,
+1:49
+we will proceed with this triangle here, which basically is going to help us reading which way.
+2:00
+The signal is troubling because it forms a kind of shape.
+2:08
+So I know that we have all these three basic gates.
+2:14
+The first thing that we are going to see is how we can compose the knot with the and Gore or Gates.
+2:19
+So as I said, the knot itself is only the circle.
+2:27
+So what we can do is just take the representation for and an hour and put a circle at the end so that we
+2:31
+can have not and not or which usually is also written as NAND and nor for the not on the actual name.
+2:39
+Interestingly, these men, Aynaw, are the most commonly used building blocks for most of the circuits that we are going to see.
+2:54
+And the reason why these gains are so common is that they can be very easily constructed from transistors,
+3:06
+which is what we are going to eventually be using to manufacture chips.
+3:15
+And one of the very interesting properties of this game is that none is what is called complete gate.
+3:22
+This means that only using naans we can express any boolean function, as we will see.
+3:31
+And this is why now it is also often referred to as the Universal Gate.
+3:37
+So let's see how we can actually build all these other games that we started with out of a single set of naans.
+3:44
+And first of all, we will see how to do or not, which is the simplest one, using knives.
+3:55
+Now remember that A is always going to be a.
+4:01
+So the way in which we can build the not is by simply feeding the variable or the signal into the two inputs of an and gate.
+4:07
+And which of Canongate, excuse me, so then we are going to have an a all of it negated, which,
+4:18
+as I said before, there's going to be equivalent to not a which is exactly what we wanted for the north gate.
+4:26
+So, OK, now let's look at how we can build an iron gate.
+4:37
+And what we are going to do here again is simply we have these Nant, so we all by having this first gate over here, we quassey have what we want.
+4:43
+It's the negation of what we've done.
+4:56
+So but remember now that negating something that is already negated is so not a not or not not a is equivalent to a.
+4:58
+So then we can simply feed a second gate over here in this diagram.
+5:11
+But to negate the output of the first.
+5:19
+Not so the end result is exactly what we wanted, which is the gate out of A and B as inputs but using the involution.
+5:21
+And now let's look at something a bit more interesting, which is how to build an operate using only NAND gates.
+5:33
+And for these, we are going to apply the Morgens theory.
+5:43
+So remember, with the Morgens we have that we can basically write a or being as not a and not be an all of it negated.
+5:47
+So in, uh, in that is exactly what we are doing here.
+6:03
+This is not a over here. This is the not being over here and here.
+6:08
+We do none of this, too. So the result is A or B.
+6:16
+Now, of course, if you want to know more. We just need to invert this with, again, another.
+6:23
+And by feeding this same result. Into a single Landgate.
+6:35
+And that would be the negation. Or not.
+6:46
+Operation. All right, it's always hard to build this basic against out of only using Nunc.
+6:52
+So now let's see how we can build more complex circuits because remember these gates and man or Noor,
+7:03
+all of them have only two inputs, but in fact, the equations that we already saw have many more inputs in in them.
+7:12
+So the way in which we are going to be doing this is the same way that we are going to equations we can put into this,
+7:22
+because we have that, for example. A or B?
+7:29
+Percy. Is equivalent to A or B. All of it parentheses.
+7:37
+We're seeing this is that exactly the same?
+7:44
+Thing that we can be doing with surrogates by basically cascading the gates the same way that we are nesting parentheses.
+7:47
+Because, remember, apprentices can be simply.
+7:57
+Replaced or substituted by some other internal variable,
+8:02
+which could be I just know that the these formulas do not correspond to what's in the circuit, in fact, what's in the circuit.
+8:07
+Let's see exactly what it means by simply going through it and building the equation, using what we already know from boolean algebra.
+8:17
+So let's start with the intermediate variable, i.e. over here.
+8:28
+And this is B and C or negated because it's not good that we have here.
+8:33
+And now we have that X is the end of a An I.
+8:40
+So then we basically substitute I over here and this is the equation that we get for X.
+8:46
+Now, if we apply the Maugham's Theorem,
+8:55
+what we are going to see is that the equivalent question here after simplifying with the Morgens is not A or B and A.
+8:58
+Now, of course, even though there's a parenthesis here, this can be limited because these are the highest higher precedence than or so, remember that?
+9:07
+And of course, we can build trust able to prove that this is correct.
+9:20
+And here we would do exactly as we already saw for each of the components, we break them down into smaller pieces.
+9:27
+And we run through all the variables and see the what is the.
+9:39
+Um, equivalence between the inputs and the surrogate acts that we built in the example.
+9:48
+So we saw a good bunch of gates, and they are good to build many things, but, uh,
+9:59
+now let's look at how many theoretically how many gates we could have in total.
+10:07
+And the answer is that we can have up to four one input gates and 16 to input
+10:17
+Gates is because that is to the power of two and two to the power of four.
+10:23
+So let's start with one input gates here.
+10:32
+That way we can do this very simply by building at the table with the input 011 and building every single possible altered combination,
+10:36
+which, of course, it's to do the power. Of two, because we have two possible values here, so we are going to have two to the power of two over here,
+10:49
+possible gates that could result in every possible combination here.
+11:02
+And we are going to need them to zero through three.
+11:08
+Now, if instead of just using zero and one combinations, we can instead build the equations that could represent this.
+11:12
+And what we are going to have very simply, is that the result of each of these four possible one input gains would be one gate here.
+11:24
+There is always zero. So it's a constant zero, a constant one, and also a gate that always returns the same thing at times as input.
+11:35
+And finally, the north gate that we've seen up until now.
+11:47
+So even though they are up to four possible one input gates, only one of them is really useful and the writers are not important.
+11:52
+So, no, we can do exactly the same for the two input gates and get every single one of the 16 possible gates we have here.
+12:03
+So again, like before, we have gates that have a constant zeros and output.
+12:13
+We have gates that have a constant one as an output.
+12:20
+These are less interesting, but we can also see.
+12:24
+We have the identity for one of the inputs, one that no matter what, because it's always going to be returning and then the opposite,
+12:29
+no matter what it is, it's always going to be returning with be again, not very interesting.
+12:39
+We also have these ones over here.
+12:46
+And then now we go into no, we get into the realm of the more interesting.
+12:50
+So we we have here the iron gate that we already saw.
+12:54
+We have the audit that we saw.
+12:59
+We have the. We have the land. And then we have two new gates that we haven't seen yet,
+13:03
+which is the X and an for the expense for exclusive that we are going to see just now in the next lights.
+13:11
+And then we have some odd gates over here that do are not that very useful.
+13:21
+So we don't even give them names.
+13:30
+So let's look at these exer and ignore, which would be the negation of the X or.
+13:35
+But before we go into that,
+13:44
+let's look at another really important circuit that is not part of this case because it's a more complex circuit with more than one gate.
+13:48
+And it's what you can think of as a control circuit that has two inputs,
+14:00
+A and B and one third input that it's usually called a control signal or the select
+14:06
+signal so that the overall circuit has an output that is defined like this.
+14:14
+If C is zero, the output is always going to be A and if C is one, the output is always going to be B.
+14:21
+So this is basically a digital suite because the control it or the switch the select with is always going
+14:31
+to be selecting which of the two inputs we are going to be having as an output and ignoring the other one.
+14:40
+And you will also see this often named as a multiplexing.
+14:46
+So let's see how we can implement these multiplexed, so as busy as we said,
+14:53
+we are going to have this KBE that is going to act as a control to either select the A or the B into the output.
+15:01
+Now, remember, the rules that we saw on earlier is that eight or zero is always going to be A and A or B is always going to be B,
+15:11
+and we are going to take advantage of that over here. So imagine now that C is one in here and A and B or whatever they are.
+15:23
+So if C is one here, then after the not, this is going to be zero.
+15:34
+This is going to be one. So now we have. The view over here on the.
+15:41
+Or here, and then therefore, we have that.
+15:48
+Eight and zero is always going to be zero and and on the other hand, we are going to have to be and one is always going to be me.
+15:52
+Now, if if we thought this with a zero, we are going to have exactly the opposite.
+16:05
+This one is going to be a always and this one is going to be always zero.
+16:13
+So in both in either case, one of them is always going to be a zero.
+16:17
+So what we can do to have this switching circuit is put in or here, because you'll remember that eight or zero is always going to be A and of course,
+16:23
+B or zero is always going to be B, and we are going to be using exactly that.
+16:36
+So that no matter which of the two inputs, A or B, we are selecting with C, we are going to be zero one out and keeping the other for the result.
+16:40
+And this is the way in which we are going to implement, in this case, a one bit multiplexed.
+16:53
+So now let's go back to the two gates that I said previously, one of the all possible to be the input combinations that we have.
+16:59
+We have these two new gates, which are the explorer and the explorer.
+17:08
+And again, as I said before, the X for exclusive.
+17:13
+So it's the exclusive or and the exclusive nor exhaustive next door.
+17:18
+And we are going to write them by adding an additional sign over here in front of what would usually be an order.
+17:23
+And they have a very simple form where basically the explorer is going to be one, whatever one.
+17:33
+And only one of the inputs is one, as you can see on this table.
+17:41
+And then the explorer, of course, is the negation of the Explorer.
+17:46
+So it's the opposite output on the trustable.
+17:51
+So now remember that we said that we can build any circuit from.
+17:57
+None gates. So let's look at how the universal and that can be used to construct an OR.
+18:07
+So we are going to start with the equation of the excerpt that we just saw.
+18:16
+A exurbia is not A and B or A and B now we apply the Morgan's theorem so that we are translating this.
+18:22
+Or here. Into. And then and we finally have an excellent implementation using only notes.
+18:36
+Now, if you break this down on paper while watching this, you can push for a bit and start writing it down.
+18:49
+And see what the resulting circuit and then question is whether this is the best circuit.
+18:59
+So let's pause for a second. You can post a video and try it out.
+19:07
+OK, so the answer is that, sure, of course, this circuit works, but is not the best one because it uses one too many gates.
+19:14
+The best surrogate to implement the expert is these other circuit now, of course,
+19:27
+first of all, why do we care about having less to implement the circuit?
+19:36
+Because, as I said, in the end, we are going to be using transistors to implement this NAND gates.
+19:40
+And the more transistors we have, the more space we are occupying on the chip.
+19:48
+And that is both expensive and also because we need more transistors.
+19:52
+And also we are going to be limited in space when building chips. So we have we want to have suggested that as small as possible so that we have we
+19:58
+can have other more other circuits to do other tasks that we also care about.
+20:06
+So, OK, we want to have. That's great. That's great.
+20:13
+Now I'm telling you that this one design here has litigates, but which you can see if you draw it down, you got five gates and this one has four.
+20:18
+So now of course, the question is how do we prove that this circuit is actually a correct Bolian function for the for the XOR expression?
+20:30
+One thing that we can do is proving it through, uh, logic, uh, equations,
+20:46
+we can start with the result that we brought down for the circuit right all the way down by substituting each of the parts in the circuit.
+20:55
+And then we basically apply the rules that we already saw with the Morgan industry activity.
+21:07
+And then we can finally simplify it and show that this is exactly the definition that we started with for the X or.
+21:12
+Now, another way that we can do this would be similar to what a tooth table is for,
+21:23
+and in fact, this is what many our engineers use when they talk about verification.
+21:31
+They have a surrogate. They know what it is supposed to do, how the output is going to be supposed to be defined in terms of the input.
+21:39
+And they run very multiple input possibilities and see that they actually fit the truth table.
+21:48
+So we can do exactly the same here with this circuit.
+21:56
+We can run each of the inputs for A and B on each input combination,
+22:00
+each one with a different colour, and see that each of them fits the definition of the truth.
+22:07
+Table of an example.
+22:15
+And this is also, let's say that are engineers way of proving that this circuit is correctly is currently implementing the XOR operation.
+22:16
+And with this, we've come to the end of this lecture, fourth lecture on Boolean Algebra and,
+22:27
+uh, and circuits, and I hope to see you on the next one, see?
+22:37
