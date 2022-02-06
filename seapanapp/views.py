@@ -1,5 +1,4 @@
 from posixpath import split
-from functools import cache
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
@@ -9,7 +8,6 @@ from numpy import argsort, frombuffer, single
 from django.db.models import F
 import re
 from os import listdir
-from functools import lru_cache
 import pickle
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -111,19 +109,6 @@ def split_to_words(inp):
     return list(
         filter(lambda c: c != "", re.sub("[\n,.;@#?!&$]+", " ", inp.lower()).split(" "))
     )
-
-
-@lru_cache
-def get_inv_count(word):
-    files_dir = "panopto-api-stuff/"
-    filenames = [f for f in listdir(files_dir) if f.endswith(".txt")]
-    count = 0
-    word = "what"
-    for filename in filenames:
-        file = open(files_dir + filename, "r")
-        count += file.read().count(word)
-        file.close()
-    return 1 / count
 
 
 def searchres(req):
