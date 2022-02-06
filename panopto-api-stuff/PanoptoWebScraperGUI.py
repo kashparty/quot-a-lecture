@@ -26,10 +26,10 @@ class UI:
         self.__piracyNotice = ImageTk.PhotoImage(img)
         self.__place_widget(Label(self.__window, image=self.__piracyNotice, bg=self.__bgCol),
                             1280, 720, 0, 0)
-        self.__place_widget(Label(self.__window, text="Part of the Quot-a-Lecturer software suite", font=self.__fonts[3],
+        self.__place_widget(Label(self.__window, text="Part of the Quot-a-Lecture software suite", font=self.__fonts[3],
                                   bg=self.__bgCol),
                             520, 50, 150, 670)
-        self.__img = ImageTk.PhotoImage(Image.open("quotalecturer.png").resize((150, 150), Image.BICUBIC))
+        self.__img = ImageTk.PhotoImage(Image.open("quotalecture.png").resize((150, 150), Image.BICUBIC))
         self.__place_widget(Label(self.__window, image=self.__img, bg=self.__bgCol),
                             150, 150, 0, 570)
         self.__place_widget(Label(self.__window, text="Auto Transcript Extractor", font=self.__fonts[0],
