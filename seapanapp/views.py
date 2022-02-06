@@ -1,9 +1,14 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.template import loader
+from sentence_transformers import SentenceTransformer
+from scipy.spatial import distance
+from numpy import argsort
 from django.db.models import F
 
 from .models import QuestionAnswer, Recording
+
+model = SentenceTransformer("distilbert-base-nli-mean-tokens")
 
 # Create your views here.
 
@@ -42,7 +47,16 @@ def search(req):
 
 def searchres(req):
     query = req.POST["query"]
+    query_encoding = model.encode(query)
+
     # TODO: NLP stuff
     results = QuestionAnswer.objects.all()
+    similarities = [
+        1 - distance.cosine(query_encoding, model.encode(r.question)) for r in results
+    ]
+    ranks = argsort(similarities)[-10:][::-1]
+    sorted_results = [results[int(i)] for i in ranks]
 
-    return render(req, "seapanapp/searchres.html", {"query": query, "results": results})
+    return render(
+        req, "seapanapp/searchres.html", {"query": query, "results": sorted_results}
+    )

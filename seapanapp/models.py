@@ -16,6 +16,7 @@ class Recording(models.Model):
 
 
 class QuestionAnswer(models.Model):
+    preamble = models.TextField()
     question = models.TextField()
     answer = models.TextField()
     timestamp = models.TimeField()
@@ -26,9 +27,6 @@ class QuestionAnswer(models.Model):
 
     def __str__(self):
         return self.question
-
-    def answer_start(self):
-        return self.answer[:100]
 
     def to_url(self):
         t = (

@@ -8,7 +8,7 @@
 {% if results %}
 <ul>
     {% for q in results %}
-    <li><a href="{% url 'seapanapp:q_detail' q.id %}"> {{ q.question }}</a>: {{q.answer_start}} </li>
+    <li>{{ q.preamble }} <a href="{% url 'seapanapp:q_detail' q.id %}">{{ q.question }}</a> {{ q.answer }} </li>
     {% endfor %}
 </ul>
 {% else %}
