@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> {% block title %} {% endblock %} AnaLecture</title>
+    <title> {% block title %} {% endblock %} Quot-a-Lecture</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
     <link rel="alternate icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 </head>
 
-<body>
-    <a href="{% url 'seapanapp:q_list' %}">
-        <h1>AnaLecture</h1>
-    </a>
+<body class="MainBody">
 
-    <a href="{% url 'seapanapp:search' %}">Search</a>
-    <a href="/admin">Admin</a>
-
-    <main>
+    <main class="Content">
         {% block content %}
         {% endblock %}
     </main>
