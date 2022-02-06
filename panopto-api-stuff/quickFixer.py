@@ -13,8 +13,8 @@ def fix_file(file):
     temp.close()
 
 
-for filename in filenames:
-    fixFile(fix_file)
+#for filename in filenames:
+#    fixFile(fix_file)
     #with open(filename, encoding="utf-8") as f:
     #    f.read()
 
