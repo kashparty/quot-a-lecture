@@ -20,6 +20,9 @@ nltk.download("wordnet")
 nltk.download("omw-1.4")
 lemmatizer = WordNetLemmatizer()
 
+#Question, preamble, answer
+COEFFS = [75, 25, 25]
+
 # Create your views here.
 
 
@@ -120,11 +123,11 @@ def searchres(req):
         1 - distance.cosine(query_encoding, frombuffer(r.encoding, dtype=single))
         for r in results
     ]
-    importances = [heuristic(query, r.question) for r in results]
+    importances = [coeffs[0] * heuristic(query, r.question) + coeffs[1] * heuristic(query, r.preamble) + coeffs[2] * heuristic(query, r.answer) for r in results]
     print(max(importances))
     scores = []
     for i in range(len(importances)):
-        scores.append(similarities[i] + 100 * importances[i])
+        scores.append(similarities[i] + importances[i])
 
     ranks = argsort(scores)[-10:][::-1]
     sorted_results = [results[int(i)] for i in ranks]
